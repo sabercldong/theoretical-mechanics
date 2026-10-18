@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-1.5,0)arc(180:0:1.5);\draw(0,0)ellipse(1.5 and .3);\draw[->](0,-.6)--(0,2.1)node[above]{$z$};\draw[->](0,0)--(2,0)node[right]{$x$};\draw[->](0,0)--(-1,-.8)node[below]{$y$};\fill(0,.56)circle(2pt)node[right]{$C$};\node[below right]at(0,0){$O$};\draw[dashed](0,.56)--(-1.85,.56);\draw[<->](-1.85,0)--(-1.85,.56)node[midway,left]{$3a/8$};\node at(1.1,.9){$a$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$OC=3a/8$\\[6pt]$\Downarrow$\\[6pt]$I_{Cx}=I_{Ox}-m(3a/8)^2$};
+\end{tikzpicture}

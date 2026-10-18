@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\fill[soft](-2,2)--plot[domain=-2:2,samples=60](\x,{.5*\x*\x})--cycle;
+\draw[thick,ink]plot[domain=-2.2:2.2,samples=60](\x,{.5*\x*\x});
+\draw[thick](-2,2)--(2,2)node[right]{$y=a$};
+\draw[->](-2.5,0)--(2.6,0)node[right]{$x$};\draw[->](0,-.3)--(0,2.8)node[above]{$y$};
+\fill[ink](0,1.2)circle(3pt)node[right]{$C$};
+\node[below]at(-2,0){$-b$};\node[below]at(2,0){$b$};
+\node[right]at(1.4,.8){$y=kx^2$};
+\end{tikzpicture}

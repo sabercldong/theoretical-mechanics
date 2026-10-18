@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=.9]
+\draw[thick](-1.6,-1)--(3.6,-1);
+\draw[fill=soft,thick](0,0)circle(1);\draw[fill=soft,thick](2,0)circle(1);
+\fill(0,0)circle(2pt)node[above left]{$C_i$};
+\fill(2,0)circle(2pt)node[above right]{$C_j$};
+\fill(1,0)circle(2pt);
+\draw[force](1,0)--(.15,0)node[midway,above]{$N_{ij}$};
+\draw[force](1,0)--(1,-.7)node[right]{$\tau_{ij}$};
+\draw[force](0,-1)--(.7,-1)node[midway,below]{$f_{ig}$};
+\draw[force](0,-1)--(0,-.25);\node at(-.6,-.55){$N_{ig}$};
+\draw[guide](0,0)--(0,-1);
+\draw[<->,muted](-1.35,0)--(-1.35,-1)node[midway,left]{$a$};
+\end{tikzpicture}

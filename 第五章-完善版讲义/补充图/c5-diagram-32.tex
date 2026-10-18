@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\draw[->](-.2,0)--(6,0)node[right]{$x$};\draw[->](0,-.2)--(0,3.5)node[above]{$y$};
+\draw[ink,thick,domain=.4:5.2,samples=90]
+ plot(\x,{.6+1.9*(\x-.4)/4.8+.3*sin(180*(\x-.4)/4.8)});
+\draw[guide,domain=.4:5.2,samples=90]
+ plot(\x,{.6+1.9*(\x-.4)/4.8+.9*sin(180*(\x-.4)/4.8)});
+\fill(.4,.6)circle(3pt)node[below=5.0pt]{$A$};\fill(5.2,2.5)circle(3pt)node[right=5.0pt]{$B$};
+\pgfmathsetmacro{\ybase}{.6+1.9*1.9/4.8+.3*sin(180*1.9/4.8)}
+\pgfmathsetmacro{\yvar}{.6+1.9*1.9/4.8+.9*sin(180*1.9/4.8)}
+\draw[<->](2.3,\ybase)--(2.3,\yvar)node[midway,left]{$\delta y$};
+\node[above]at(3.7,2.9){$y+\varepsilon\eta$};\node[below]at(3.8,2.18){$y$};
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+\draw[->](-3,0)--(3,0)node[right]{东};\draw[->](0,-.4)--(0,2.6)node[above]{天};
+\fill(-1.7,.4)circle(3pt);\draw[force](-1.7,.4)--(-.6,.4)node[above]{$u>0$};\draw[force](-1.7,.4)--(-1.7,1.8)node[left]{$F_{{\rm C},U}>0$};
+\fill(1.6,.4)circle(3pt);\draw[force](1.6,.4)--(.5,.4)node[above]{$u<0$};\draw[force](1.6,.4)--(1.6,-1.0)node[right]{$F_{{\rm C},U}<0$};
+\node[align=left,anchor=west]at(4,.5){东行：科氏力向上，支持力减小\\西行：科氏力向下，支持力增大};
+\end{tikzpicture}

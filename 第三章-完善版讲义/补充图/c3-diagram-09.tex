@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(P)at(3.192,0);\coordinate(A)at(2.445,2.052);
+\draw[thick](-.5,0)--(5,0);\draw[fill=soft,thick](O)--(P)--(A)--cycle;
+\draw[guide](O)--(2.819,1.026)node[midway,above left]{$h,\ z$};
+\draw[force](O)--(1.7,0)node[midway,below]{$\vect u$};
+\draw[->](O)--(0,2.3)node[above]{$\zeta$};
+\draw(.85,0)arc(0:20:.85); \node at(1.2,.18){$\alpha$};
+\fill(A)circle(2pt)node[above]{$A$};
+\node at(3.7,-.5){接触母线是瞬时转轴};
+\end{tikzpicture}

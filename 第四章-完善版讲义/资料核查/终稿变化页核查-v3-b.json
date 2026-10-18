@@ -1,0 +1,176 @@
+{
+  "status": "passed",
+  "fixed_pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/整册终校-v3.pdf",
+  "fixed_pdf_sha256": "09d64ac3bc6842daa8233e1ae36d51448dcadc29db1fc77fec650f369405ff70",
+  "total_pdf_pages": 85,
+  "inspected_physical_pages": [
+    31,
+    32,
+    34,
+    41,
+    46,
+    49,
+    50,
+    51,
+    52,
+    53
+  ],
+  "inspection_count": 10,
+  "render_scale": 1.5,
+  "digest_spec": "PyMuPDF page.get_pixmap(matrix=fitz.Matrix(.8,.8),alpha=False).digest.hex()，默认 RGB、annots=True",
+  "pages": [
+    {
+      "physical_page": 31,
+      "printed_page": 26,
+      "pixmap_digest_0_8": "b887b1f6225ad11625e62d3da38606d7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "70bbe0cf1cfdcfc57df31002e404c1963edca07aaba563d883da434b920d20bf",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "例 20/21、模型图 4.34 与原图 4.35 重排完整，题干题解相邻，页末图题与页码间距正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 32,
+      "printed_page": 27,
+      "pixmap_digest_0_8": "91cb8681bc98f356be076800309cd485",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "28a7d385b5311311d42322de2d1ab8145ce524e5e339410d2b8616e2831a2a07",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "图 4.36、4.4.7 与例 22 重排完整，脚注与正文分离，无溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 34,
+      "printed_page": 29,
+      "pixmap_digest_0_8": "051bed058344c5c966525d9568e5ed60",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "476e6c0c8dc431c5676d09a26779b21ff4e637ef615d9ea8dafb1342f99ec4ea",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "图 4.37/4.38 及稳定性推导完整，标题留距正常，无重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 41,
+      "printed_page": 36,
+      "pixmap_digest_0_8": "43421bec185af9d5e3b741ed30f40b66",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "c0bcd9cb31b3705b411442851b47f3b0e17f03bc3b16e1b0d8980501d2880550",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "图 4.46 和 4.6/4.6.1 标题、例 28 保持正常衔接，运动/反力公式未截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 46,
+      "printed_page": 41,
+      "pixmap_digest_0_8": "b9596b3ad6959751360895ee45f2a626",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "8dbe30b19329332b3f74a62f871056ce77aefe3d53585569db589c436e73429f",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "图 4.52 的 y 轴标签不再叠 ut，能量推导和地球自转开头完整，标题邻接正文。",
+      "issues": []
+    },
+    {
+      "physical_page": 49,
+      "printed_page": 44,
+      "pixmap_digest_0_8": "dbfce078a39bf1884d33394ba55b3880",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "200a93b1a125d6c71c360c478c1ff2067f07e7c6e3dd12ac39eec8c3c76bda1a",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "图 4.57/4.58 与例 33 完整，尾段正常转下一页，无图题分离或截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 50,
+      "printed_page": 45,
+      "pixmap_digest_0_8": "21fa668f0cd1bd2222fc701721bc7c16",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "841cfb567bad193ec363ddf08c4cd6da83fef7629888649532a454f1d57eb9cf",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "已实际确认 v2 三行孤立页消失：旧尾段后紧接 4.7.4、例 34 和 4.7.5/例 35；公式 4.31 与脚注清晰，分页异常关闭。",
+      "issues": []
+    },
+    {
+      "physical_page": 51,
+      "printed_page": 46,
+      "pixmap_digest_0_8": "b8311ccb9cf528a560f58a9363c967a5",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "308608bfc2c2b1e036f005f06aad95a85d01950557a6bd126fb501e9840ac1d1",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "例 35 的解释正常续排，图 4.59、潮汐小节和 4.8/4.8.1 开头完整，数学式无裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 52,
+      "printed_page": 47,
+      "pixmap_digest_0_8": "7aaecfc82030cdd576c884472fa84a67",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "2c0467d1c4e854d8160a85b22181aeb69d17b3197fce53eace2b277d4360b2ed",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "承接半球偏转说明，图 4.60/4.61、惯性圆标题和全部积分解齐全，底部两行未裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 53,
+      "printed_page": 48,
+      "pixmap_digest_0_8": "f8119d423d8d8eee025a4a6fb706bb08",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "d9e7ac52eb6255c45c69f163f2580f5dde4da91739cc82f3bac477091c11614e",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页检查分页、截断与重叠",
+      "notes": "惯性圆图 4.62/4.63、例 36 及信风标题和开头段落完整，无孤悬标题或重叠。",
+      "issues": []
+    }
+  ],
+  "issues": [],
+  "resolved_issues": [
+    {
+      "id": "isolated_tail_paragraph_page",
+      "previous_report": "终稿逐页核查-v2-b.json",
+      "previous_physical_page": 50,
+      "verified_in_v3_physical_page": 50,
+      "status": "resolved",
+      "notes": "旧尾段后已正常连排 4.7.4/4.7.5，不再单独占一页。"
+    }
+  ],
+  "scope_notes": "按父级变化清单仅重看指定 10 页；原图已在 v2 实看核验，未重复全章物理推导。其余页的像素一致映射由父级汇总。",
+  "reuse_rule": "本报告只对应以上 v3 SHA256；后续任何修改须按页面像素一致性或实际渲染复看核验。"
+}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](0,3)--(0,0)--(3.3,0);\draw(1,1)circle(1);\draw[->](0,1)--(.8,1)node[above]{$N_A$};\draw[->](0,1)--(0,1.9)node[left]{$f_A$};\draw[->](1,0)--(1,.8)node[right]{$N_B$};\draw[->](1,0)--(.2,0)node[below]{$f_B$};\draw[->](1.4,2.3)arc(60:130:.7);\node[right]at(1.8,2.4){$\omega_0$};\node at(1.5,1.6){$Q,r$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$N_A=f_B,\quad N_B+f_A=Q$\\[6pt]$\Downarrow$\\[6pt]$I_C\dot\omega=-r(f_A+f_B)$};
+\end{tikzpicture}

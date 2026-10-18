@@ -1,0 +1,2574 @@
+{
+  "reviewer": "c3_originals_c",
+  "scope": "第三章终稿交叉视觉核查：前段",
+  "pdf_path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学讲义-完善版.pdf",
+  "pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+  "current_file_sha256_when_report_written": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+  "pdf_total_pages": 218,
+  "physical_page_range": [
+    1,
+    72
+  ],
+  "printed_page_range": "封面、目录 i–iii、正文 1–68",
+  "method": [
+    "逐张查看9份八页总览，覆盖物理第1–72页",
+    "逐页放大43个正文图示页面及封面，检查68幅编号图及全部图题",
+    "对小字号模型图、复杂原图及第66/71页使用PDF 3倍局部渲染复核",
+    "对未含图页面辅助检查页底文本与标题相邻关系；以视觉结果为准"
+  ],
+  "overview_sheets": [
+    "sheet-001-008.jpg",
+    "sheet-009-016.jpg",
+    "sheet-017-024.jpg",
+    "sheet-025-032.jpg",
+    "sheet-033-040.jpg",
+    "sheet-041-048.jpg",
+    "sheet-049-056.jpg",
+    "sheet-057-064.jpg",
+    "sheet-065-072.jpg"
+  ],
+  "page_detail_reviews": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    14,
+    17,
+    18,
+    19,
+    21,
+    22,
+    23,
+    24,
+    27,
+    28,
+    31,
+    33,
+    34,
+    36,
+    38,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    50,
+    51,
+    54,
+    56,
+    57,
+    59,
+    60,
+    61,
+    64,
+    65,
+    66,
+    67,
+    68,
+    70,
+    71,
+    72
+  ],
+  "pdf_3x_detail_pages": [
+    6,
+    8,
+    14,
+    18,
+    21,
+    23,
+    24,
+    27,
+    28,
+    31,
+    33,
+    38,
+    43,
+    44,
+    45,
+    47,
+    50,
+    51,
+    54,
+    56,
+    57,
+    59,
+    60,
+    61,
+    66,
+    71
+  ],
+  "numbered_figure_count": 68,
+  "model_figure_count": 23,
+  "original_figure_count": 45,
+  "additional_cover_illustration_reviewed": true,
+  "figures": [
+    {
+      "key": "fig:lesson-c3-diagram-01",
+      "number": "3.1",
+      "page": 6,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p004-body-frame",
+      "number": "3.2",
+      "page": 7,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p005-base-frame",
+      "number": "3.3",
+      "page": 7,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p037-axis-polar",
+      "number": "3.4",
+      "page": 8,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-02",
+      "number": "3.5",
+      "page": 8,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p006-ferris-wheel",
+      "number": "3.6",
+      "page": 9,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p007-euler",
+      "number": "3.7",
+      "page": 10,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p030-infinitesimal",
+      "number": "3.8",
+      "page": 12,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-03",
+      "number": "3.9",
+      "page": 14,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p008-velocity",
+      "number": "3.10",
+      "page": 14,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p026-colored-turntable",
+      "number": "3.11",
+      "page": 17,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-04",
+      "number": "3.12",
+      "page": 18,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p010-turntable",
+      "number": "3.13",
+      "page": 18,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p011-inclined-top",
+      "number": "3.14",
+      "page": 18,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p012-hanging-disks",
+      "number": "3.15",
+      "page": 19,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-05",
+      "number": "3.16",
+      "page": 21,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p024-swing-disk",
+      "number": "3.17",
+      "page": 22,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-06",
+      "number": "3.18",
+      "page": 23,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p014-euler-angles",
+      "number": "3.19",
+      "page": 23,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-07",
+      "number": "3.20",
+      "page": 24,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p015-euler-steps",
+      "number": "3.21",
+      "page": 24,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p019-top-initial",
+      "number": "3.22",
+      "page": 27,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-08",
+      "number": "3.23",
+      "page": 28,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p018-earth-orbit",
+      "number": "3.24",
+      "page": 28,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-09",
+      "number": "3.25",
+      "page": 31,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p025-rolling-cone",
+      "number": "3.26",
+      "page": 31,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-10",
+      "number": "3.27",
+      "page": 33,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p026-crank",
+      "number": "3.28",
+      "page": 33,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p043-planar-rotation",
+      "number": "3.29",
+      "page": 34,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p047-arbitrary-axis",
+      "number": "3.30",
+      "page": 36,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-11",
+      "number": "3.31",
+      "page": 38,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p029-rotation-xy",
+      "number": "3.32",
+      "page": 38,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-1-p029-rotation-yx",
+      "number": "3.33",
+      "page": 38,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p002-force-system",
+      "number": "3.34",
+      "page": 40,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p003-sliding-force",
+      "number": "3.35",
+      "page": 42,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p009-spatial-reduction",
+      "number": "3.36",
+      "page": 43,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-12",
+      "number": "3.37",
+      "page": 43,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p008-transfer-pair",
+      "number": "3.38",
+      "page": 44,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p005-three-resultant",
+      "number": "3.39",
+      "page": 44,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-13",
+      "number": "3.40",
+      "page": 45,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p004-two-forces",
+      "number": "3.41",
+      "page": 45,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p004-two-resultant",
+      "number": "3.42",
+      "page": 45,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p006-parallel-opposite",
+      "number": "3.43",
+      "page": 46,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-14",
+      "number": "3.44",
+      "page": 47,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p006-parallel-same",
+      "number": "3.45",
+      "page": 47,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p007-couple",
+      "number": "3.46",
+      "page": 48,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-15",
+      "number": "3.47",
+      "page": 50,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p026-three-moments",
+      "number": "3.48",
+      "page": 51,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p018-skew-forces",
+      "number": "3.49",
+      "page": 51,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-16",
+      "number": "3.50",
+      "page": 54,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p016-rough-rod",
+      "number": "3.51",
+      "page": 54,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p019-concurrent-rod",
+      "number": "3.52",
+      "page": 54,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-17",
+      "number": "3.53",
+      "page": 56,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p017-right-angle-rods",
+      "number": "3.54",
+      "page": 56,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-18",
+      "number": "3.55",
+      "page": 57,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p020-smooth-corner",
+      "number": "3.56",
+      "page": 57,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-19",
+      "number": "3.57",
+      "page": 59,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p024-bowl-rod",
+      "number": "3.58",
+      "page": 59,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-20",
+      "number": "3.59",
+      "page": 59,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-21",
+      "number": "3.60",
+      "page": 60,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-2-p025-stacked-logs",
+      "number": "3.61",
+      "page": 60,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-22",
+      "number": "3.62",
+      "page": 61,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-3-p005-mass-element",
+      "number": "3.63",
+      "page": 64,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-3-p015-body-bases",
+      "number": "3.64",
+      "page": 66,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-3-p013-parallel-axes",
+      "number": "3.65",
+      "page": 67,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-3-p013-perpendicular-axes",
+      "number": "3.66",
+      "page": 68,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:lesson-c3-diagram-23",
+      "number": "3.67",
+      "page": 71,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    },
+    {
+      "key": "fig:orig-c3-3-p019-paired-symmetry",
+      "number": "3.68",
+      "page": 72,
+      "review": "整页放大核查图形、标签、图题和相邻正文"
+    }
+  ],
+  "pages": [
+    {
+      "physical_page": 1,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 2,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 3,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 4,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 5,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 6,
+      "overview_reviewed": true,
+      "figures": [
+        "3.1"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 7,
+      "overview_reviewed": true,
+      "figures": [
+        "3.2",
+        "3.3"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 8,
+      "overview_reviewed": true,
+      "figures": [
+        "3.4",
+        "3.5"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 9,
+      "overview_reviewed": true,
+      "figures": [
+        "3.6"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 10,
+      "overview_reviewed": true,
+      "figures": [
+        "3.7"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 11,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 12,
+      "overview_reviewed": true,
+      "figures": [
+        "3.8"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 13,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 14,
+      "overview_reviewed": true,
+      "figures": [
+        "3.9",
+        "3.10"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 15,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 16,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 17,
+      "overview_reviewed": true,
+      "figures": [
+        "3.11"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 18,
+      "overview_reviewed": true,
+      "figures": [
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 19,
+      "overview_reviewed": true,
+      "figures": [
+        "3.15"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 20,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 21,
+      "overview_reviewed": true,
+      "figures": [
+        "3.16"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 22,
+      "overview_reviewed": true,
+      "figures": [
+        "3.17"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 23,
+      "overview_reviewed": true,
+      "figures": [
+        "3.18",
+        "3.19"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 24,
+      "overview_reviewed": true,
+      "figures": [
+        "3.20",
+        "3.21"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 25,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 26,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 27,
+      "overview_reviewed": true,
+      "figures": [
+        "3.22"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 28,
+      "overview_reviewed": true,
+      "figures": [
+        "3.23",
+        "3.24"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 29,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 30,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 31,
+      "overview_reviewed": true,
+      "figures": [
+        "3.25",
+        "3.26"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 32,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 33,
+      "overview_reviewed": true,
+      "figures": [
+        "3.27",
+        "3.28"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 34,
+      "overview_reviewed": true,
+      "figures": [
+        "3.29"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 35,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 36,
+      "overview_reviewed": true,
+      "figures": [
+        "3.30"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 37,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 38,
+      "overview_reviewed": true,
+      "figures": [
+        "3.31",
+        "3.32",
+        "3.33"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 39,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 40,
+      "overview_reviewed": true,
+      "figures": [
+        "3.34"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 41,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 42,
+      "overview_reviewed": true,
+      "figures": [
+        "3.35"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 43,
+      "overview_reviewed": true,
+      "figures": [
+        "3.36",
+        "3.37"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 44,
+      "overview_reviewed": true,
+      "figures": [
+        "3.38",
+        "3.39"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 45,
+      "overview_reviewed": true,
+      "figures": [
+        "3.40",
+        "3.41",
+        "3.42"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 46,
+      "overview_reviewed": true,
+      "figures": [
+        "3.43"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 47,
+      "overview_reviewed": true,
+      "figures": [
+        "3.44",
+        "3.45"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 48,
+      "overview_reviewed": true,
+      "figures": [
+        "3.46"
+      ],
+      "detail_reviewed": true,
+      "result": "图题正向说明已修复并通过最终局部复核"
+    },
+    {
+      "physical_page": 49,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 50,
+      "overview_reviewed": true,
+      "figures": [
+        "3.47"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 51,
+      "overview_reviewed": true,
+      "figures": [
+        "3.48",
+        "3.49"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 52,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 53,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 54,
+      "overview_reviewed": true,
+      "figures": [
+        "3.50",
+        "3.51",
+        "3.52"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 55,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 56,
+      "overview_reviewed": true,
+      "figures": [
+        "3.53",
+        "3.54"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 57,
+      "overview_reviewed": true,
+      "figures": [
+        "3.55",
+        "3.56"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 58,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 59,
+      "overview_reviewed": true,
+      "figures": [
+        "3.57",
+        "3.58",
+        "3.59"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 60,
+      "overview_reviewed": true,
+      "figures": [
+        "3.60",
+        "3.61"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 61,
+      "overview_reviewed": true,
+      "figures": [
+        "3.62"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 62,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 63,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 64,
+      "overview_reviewed": true,
+      "figures": [
+        "3.63"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 65,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 66,
+      "overview_reviewed": true,
+      "figures": [
+        "3.64"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 67,
+      "overview_reviewed": true,
+      "figures": [
+        "3.65"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 68,
+      "overview_reviewed": true,
+      "figures": [
+        "3.66"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 69,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": false,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 70,
+      "overview_reviewed": true,
+      "figures": [],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 71,
+      "overview_reviewed": true,
+      "figures": [
+        "3.67"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    },
+    {
+      "physical_page": 72,
+      "overview_reviewed": true,
+      "figures": [
+        "3.68"
+      ],
+      "detail_reviewed": true,
+      "result": "未见必须修复的排版问题"
+    }
+  ],
+  "focus_checks": [
+    {
+      "physical_page": 66,
+      "figure": "3.64",
+      "result": "通过",
+      "detail": "原图及图题独立分行；前段run-in标题及正文没有与图片同排。y′下伸部分和撇号完整，坐标轴箭头、x′、z′可读；图题与页脚留白充足。"
+    },
+    {
+      "physical_page": 71,
+      "figure": "3.67",
+      "result": "通过",
+      "detail": "惯量椭球图、式q²I_n=I_*及图题完整；“本征求解的具体顺序”在图题后另起段，图文无重叠。3.5.5标题后带有完整正文，未孤悬。"
+    },
+    {
+      "physical_pages": [
+        23,
+        24
+      ],
+      "figures": [
+        "3.19",
+        "3.21"
+      ],
+      "result": "通过",
+      "detail": "原图欧拉角弧与正文正向约定存在差别；两图题均明确转动正向依正文右手定则，图3.19还说明角弧用于识别夹角。"
+    },
+    {
+      "physical_page": 65,
+      "result": "通过",
+      "detail": "PDF文本提取含数学字体私用字符，但目视矩阵括号等正常，没有缺字符空框。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "front-001",
+      "severity": "medium",
+      "required": true,
+      "physical_page": 48,
+      "printed_page": 44,
+      "figure": "3.46",
+      "figure_key": "fig:orig-c3-2-p007-couple",
+      "type": "原图与例题正向差异未在图题说明",
+      "observation": "原图上方 F 向右、下方 −F 向左，且标有 ⊗M，显示顺时针力偶；例16题干写“方向使物体逆时针转动”，正文主矩取 +Fd k。正文数学在其逆时针约定下正确，但图题没有说明原图展示相反情形。",
+      "suggested_fix": "保留正文推导与原图，在图题追加：图中为顺时针力偶；例16取两力反向后的逆时针情形。",
+      "status": "resolved",
+      "resolution": {
+        "pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+        "physical_page": 48,
+        "evidence": "图3.46图题已写明“图中为顺时针力偶，例16取两力反向后的逆时针情形”。整页与PDF 3倍局部渲染均确认文字完整、未溢出，正文 +Fd k 与逆时针约定一致。"
+      }
+    }
+  ],
+  "nonblocking_observations": [
+    {
+      "physical_pages": [
+        22,
+        33
+      ],
+      "type": "节前留白",
+      "required": false,
+      "observation": "第22页只列图3.17，第33页列图3.27–3.28，页下留白较多；均位于节前分页，内容完整、无孤悬标题或图题。",
+      "suggested_fix": "可保留当前版式；若以后统一压缩篇幅，可协调上页图示位置，但不应压缩讲解内容。"
+    },
+    {
+      "physical_page": 28,
+      "figure": "3.24",
+      "type": "原嵌入位图清晰度",
+      "required": false,
+      "observation": "地球轨道原图为低分辨率彩色位图，整页常规查看时细小季节标签较细；PDF 3倍放大后地轴、66°34′和23°26′等关键标记仍可辨。正文及图3.23提供关键几何对应。",
+      "suggested_fix": "无需重绘；若后来找到同一原图的更高分辨率嵌入媒体，可等比替换。"
+    },
+    {
+      "physical_pages": [
+        24,
+        33,
+        64,
+        66,
+        68,
+        72
+      ],
+      "type": "原图装饰残留",
+      "required": false,
+      "observation": "部分原图带源课件细边框、背景色条或极少量边缘像素残留；标签均完整，没有遮挡讲义正文或公式。",
+      "suggested_fix": "属于美观优化项。未来如再裁切，只移除确定无关的边缘装饰，不能截断坐标轴和符号。",
+      "final_followup": {
+        "resolved_pages": [
+          64,
+          66,
+          68,
+          72
+        ],
+        "remaining_original_observation_pages": [
+          24,
+          33
+        ],
+        "detail": "原模板彩色背景已改为白色，图形轮廓、线条、标签及图题完整；第24、33页少量边缘像素为此前记录的非阻碍项。"
+      }
+    }
+  ],
+  "summary": {
+    "required_findings": 0,
+    "resolved_findings": 1,
+    "visual_clipping_or_footer_collisions": 0,
+    "orphan_headings_found": 0,
+    "missing_glyph_boxes_found": 0,
+    "status": "最终局部回归核查通过；前段无待修复阻碍项",
+    "final_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+  },
+  "write_scope": "仅更新本核查JSON；初轮记录完整保留，未修改正文、图片、源课件、PDF或其他文件。",
+  "initial_full_review": {
+    "reviewer": "c3_originals_c",
+    "scope": "第三章终稿交叉视觉核查：前段",
+    "pdf_path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学讲义-完善版.pdf",
+    "pdf_sha256": "e6ef58f086c98636188419333db3753e37dc7e3ca74b725d1537c7657971b4a2",
+    "current_file_sha256_when_report_written": "e6ef58f086c98636188419333db3753e37dc7e3ca74b725d1537c7657971b4a2",
+    "pdf_total_pages": 218,
+    "physical_page_range": [
+      1,
+      72
+    ],
+    "printed_page_range": "封面、目录 i–iii、正文 1–68",
+    "method": [
+      "逐张查看9份八页总览，覆盖物理第1–72页",
+      "逐页放大43个正文图示页面及封面，检查68幅编号图及全部图题",
+      "对小字号模型图、复杂原图及第66/71页使用PDF 3倍局部渲染复核",
+      "对未含图页面辅助检查页底文本与标题相邻关系；以视觉结果为准"
+    ],
+    "overview_sheets": [
+      "sheet-001-008.jpg",
+      "sheet-009-016.jpg",
+      "sheet-017-024.jpg",
+      "sheet-025-032.jpg",
+      "sheet-033-040.jpg",
+      "sheet-041-048.jpg",
+      "sheet-049-056.jpg",
+      "sheet-057-064.jpg",
+      "sheet-065-072.jpg"
+    ],
+    "page_detail_reviews": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      14,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      27,
+      28,
+      31,
+      33,
+      34,
+      36,
+      38,
+      40,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      50,
+      51,
+      54,
+      56,
+      57,
+      59,
+      60,
+      61,
+      64,
+      65,
+      66,
+      67,
+      68,
+      70,
+      71,
+      72
+    ],
+    "pdf_3x_detail_pages": [
+      6,
+      8,
+      14,
+      18,
+      21,
+      23,
+      24,
+      27,
+      28,
+      31,
+      33,
+      38,
+      43,
+      44,
+      45,
+      47,
+      50,
+      51,
+      54,
+      56,
+      57,
+      59,
+      60,
+      61,
+      66,
+      71
+    ],
+    "numbered_figure_count": 68,
+    "model_figure_count": 23,
+    "original_figure_count": 45,
+    "additional_cover_illustration_reviewed": true,
+    "figures": [
+      {
+        "key": "fig:lesson-c3-diagram-01",
+        "number": "3.1",
+        "page": 6,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p004-body-frame",
+        "number": "3.2",
+        "page": 7,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p005-base-frame",
+        "number": "3.3",
+        "page": 7,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p037-axis-polar",
+        "number": "3.4",
+        "page": 8,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-02",
+        "number": "3.5",
+        "page": 8,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p006-ferris-wheel",
+        "number": "3.6",
+        "page": 9,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p007-euler",
+        "number": "3.7",
+        "page": 10,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p030-infinitesimal",
+        "number": "3.8",
+        "page": 12,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-03",
+        "number": "3.9",
+        "page": 14,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p008-velocity",
+        "number": "3.10",
+        "page": 14,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p026-colored-turntable",
+        "number": "3.11",
+        "page": 17,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-04",
+        "number": "3.12",
+        "page": 18,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p010-turntable",
+        "number": "3.13",
+        "page": 18,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p011-inclined-top",
+        "number": "3.14",
+        "page": 18,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p012-hanging-disks",
+        "number": "3.15",
+        "page": 19,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-05",
+        "number": "3.16",
+        "page": 21,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p024-swing-disk",
+        "number": "3.17",
+        "page": 22,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-06",
+        "number": "3.18",
+        "page": 23,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p014-euler-angles",
+        "number": "3.19",
+        "page": 23,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-07",
+        "number": "3.20",
+        "page": 24,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p015-euler-steps",
+        "number": "3.21",
+        "page": 24,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p019-top-initial",
+        "number": "3.22",
+        "page": 27,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-08",
+        "number": "3.23",
+        "page": 28,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p018-earth-orbit",
+        "number": "3.24",
+        "page": 28,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-09",
+        "number": "3.25",
+        "page": 31,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p025-rolling-cone",
+        "number": "3.26",
+        "page": 31,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-10",
+        "number": "3.27",
+        "page": 33,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p026-crank",
+        "number": "3.28",
+        "page": 33,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p043-planar-rotation",
+        "number": "3.29",
+        "page": 34,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p047-arbitrary-axis",
+        "number": "3.30",
+        "page": 36,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-11",
+        "number": "3.31",
+        "page": 38,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p029-rotation-xy",
+        "number": "3.32",
+        "page": 38,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-1-p029-rotation-yx",
+        "number": "3.33",
+        "page": 38,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p002-force-system",
+        "number": "3.34",
+        "page": 40,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p003-sliding-force",
+        "number": "3.35",
+        "page": 42,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p009-spatial-reduction",
+        "number": "3.36",
+        "page": 43,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-12",
+        "number": "3.37",
+        "page": 43,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p008-transfer-pair",
+        "number": "3.38",
+        "page": 44,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p005-three-resultant",
+        "number": "3.39",
+        "page": 44,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-13",
+        "number": "3.40",
+        "page": 45,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p004-two-forces",
+        "number": "3.41",
+        "page": 45,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p004-two-resultant",
+        "number": "3.42",
+        "page": 45,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p006-parallel-opposite",
+        "number": "3.43",
+        "page": 46,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-14",
+        "number": "3.44",
+        "page": 47,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p006-parallel-same",
+        "number": "3.45",
+        "page": 47,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p007-couple",
+        "number": "3.46",
+        "page": 48,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-15",
+        "number": "3.47",
+        "page": 50,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p026-three-moments",
+        "number": "3.48",
+        "page": 51,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p018-skew-forces",
+        "number": "3.49",
+        "page": 51,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-16",
+        "number": "3.50",
+        "page": 54,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p016-rough-rod",
+        "number": "3.51",
+        "page": 54,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p019-concurrent-rod",
+        "number": "3.52",
+        "page": 54,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-17",
+        "number": "3.53",
+        "page": 56,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p017-right-angle-rods",
+        "number": "3.54",
+        "page": 56,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-18",
+        "number": "3.55",
+        "page": 57,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p020-smooth-corner",
+        "number": "3.56",
+        "page": 57,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-19",
+        "number": "3.57",
+        "page": 59,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p024-bowl-rod",
+        "number": "3.58",
+        "page": 59,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-20",
+        "number": "3.59",
+        "page": 59,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-21",
+        "number": "3.60",
+        "page": 60,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-2-p025-stacked-logs",
+        "number": "3.61",
+        "page": 60,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-22",
+        "number": "3.62",
+        "page": 61,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-3-p005-mass-element",
+        "number": "3.63",
+        "page": 64,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-3-p015-body-bases",
+        "number": "3.64",
+        "page": 66,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-3-p013-parallel-axes",
+        "number": "3.65",
+        "page": 67,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-3-p013-perpendicular-axes",
+        "number": "3.66",
+        "page": 68,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:lesson-c3-diagram-23",
+        "number": "3.67",
+        "page": 71,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      },
+      {
+        "key": "fig:orig-c3-3-p019-paired-symmetry",
+        "number": "3.68",
+        "page": 72,
+        "review": "整页放大核查图形、标签、图题和相邻正文"
+      }
+    ],
+    "pages": [
+      {
+        "physical_page": 1,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 2,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 3,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 4,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 5,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 6,
+        "overview_reviewed": true,
+        "figures": [
+          "3.1"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 7,
+        "overview_reviewed": true,
+        "figures": [
+          "3.2",
+          "3.3"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 8,
+        "overview_reviewed": true,
+        "figures": [
+          "3.4",
+          "3.5"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 9,
+        "overview_reviewed": true,
+        "figures": [
+          "3.6"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 10,
+        "overview_reviewed": true,
+        "figures": [
+          "3.7"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 11,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 12,
+        "overview_reviewed": true,
+        "figures": [
+          "3.8"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 13,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 14,
+        "overview_reviewed": true,
+        "figures": [
+          "3.9",
+          "3.10"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 15,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 16,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 17,
+        "overview_reviewed": true,
+        "figures": [
+          "3.11"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 18,
+        "overview_reviewed": true,
+        "figures": [
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 19,
+        "overview_reviewed": true,
+        "figures": [
+          "3.15"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 20,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 21,
+        "overview_reviewed": true,
+        "figures": [
+          "3.16"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 22,
+        "overview_reviewed": true,
+        "figures": [
+          "3.17"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 23,
+        "overview_reviewed": true,
+        "figures": [
+          "3.18",
+          "3.19"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 24,
+        "overview_reviewed": true,
+        "figures": [
+          "3.20",
+          "3.21"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 25,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 26,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 27,
+        "overview_reviewed": true,
+        "figures": [
+          "3.22"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 28,
+        "overview_reviewed": true,
+        "figures": [
+          "3.23",
+          "3.24"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 29,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 30,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 31,
+        "overview_reviewed": true,
+        "figures": [
+          "3.25",
+          "3.26"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 32,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 33,
+        "overview_reviewed": true,
+        "figures": [
+          "3.27",
+          "3.28"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 34,
+        "overview_reviewed": true,
+        "figures": [
+          "3.29"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 35,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 36,
+        "overview_reviewed": true,
+        "figures": [
+          "3.30"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 37,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 38,
+        "overview_reviewed": true,
+        "figures": [
+          "3.31",
+          "3.32",
+          "3.33"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 39,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 40,
+        "overview_reviewed": true,
+        "figures": [
+          "3.34"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 41,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 42,
+        "overview_reviewed": true,
+        "figures": [
+          "3.35"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 43,
+        "overview_reviewed": true,
+        "figures": [
+          "3.36",
+          "3.37"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 44,
+        "overview_reviewed": true,
+        "figures": [
+          "3.38",
+          "3.39"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 45,
+        "overview_reviewed": true,
+        "figures": [
+          "3.40",
+          "3.41",
+          "3.42"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 46,
+        "overview_reviewed": true,
+        "figures": [
+          "3.43"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 47,
+        "overview_reviewed": true,
+        "figures": [
+          "3.44",
+          "3.45"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 48,
+        "overview_reviewed": true,
+        "figures": [
+          "3.46"
+        ],
+        "detail_reviewed": true,
+        "result": "需图题正向说明"
+      },
+      {
+        "physical_page": 49,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 50,
+        "overview_reviewed": true,
+        "figures": [
+          "3.47"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 51,
+        "overview_reviewed": true,
+        "figures": [
+          "3.48",
+          "3.49"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 52,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 53,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 54,
+        "overview_reviewed": true,
+        "figures": [
+          "3.50",
+          "3.51",
+          "3.52"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 55,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 56,
+        "overview_reviewed": true,
+        "figures": [
+          "3.53",
+          "3.54"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 57,
+        "overview_reviewed": true,
+        "figures": [
+          "3.55",
+          "3.56"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 58,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 59,
+        "overview_reviewed": true,
+        "figures": [
+          "3.57",
+          "3.58",
+          "3.59"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 60,
+        "overview_reviewed": true,
+        "figures": [
+          "3.60",
+          "3.61"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 61,
+        "overview_reviewed": true,
+        "figures": [
+          "3.62"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 62,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 63,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 64,
+        "overview_reviewed": true,
+        "figures": [
+          "3.63"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 65,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 66,
+        "overview_reviewed": true,
+        "figures": [
+          "3.64"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 67,
+        "overview_reviewed": true,
+        "figures": [
+          "3.65"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 68,
+        "overview_reviewed": true,
+        "figures": [
+          "3.66"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 69,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": false,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 70,
+        "overview_reviewed": true,
+        "figures": [],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 71,
+        "overview_reviewed": true,
+        "figures": [
+          "3.67"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      },
+      {
+        "physical_page": 72,
+        "overview_reviewed": true,
+        "figures": [
+          "3.68"
+        ],
+        "detail_reviewed": true,
+        "result": "未见必须修复的排版问题"
+      }
+    ],
+    "focus_checks": [
+      {
+        "physical_page": 66,
+        "figure": "3.64",
+        "result": "通过",
+        "detail": "原图及图题独立分行；前段run-in标题及正文没有与图片同排。y′下伸部分和撇号完整，坐标轴箭头、x′、z′可读；图题与页脚留白充足。"
+      },
+      {
+        "physical_page": 71,
+        "figure": "3.67",
+        "result": "通过",
+        "detail": "惯量椭球图、式q²I_n=I_*及图题完整；“本征求解的具体顺序”在图题后另起段，图文无重叠。3.5.5标题后带有完整正文，未孤悬。"
+      },
+      {
+        "physical_pages": [
+          23,
+          24
+        ],
+        "figures": [
+          "3.19",
+          "3.21"
+        ],
+        "result": "通过",
+        "detail": "原图欧拉角弧与正文正向约定存在差别；两图题均明确转动正向依正文右手定则，图3.19还说明角弧用于识别夹角。"
+      },
+      {
+        "physical_page": 65,
+        "result": "通过",
+        "detail": "PDF文本提取含数学字体私用字符，但目视矩阵括号等正常，没有缺字符空框。"
+      }
+    ],
+    "findings": [
+      {
+        "id": "front-001",
+        "severity": "medium",
+        "required": true,
+        "physical_page": 48,
+        "printed_page": 44,
+        "figure": "3.46",
+        "figure_key": "fig:orig-c3-2-p007-couple",
+        "type": "原图与例题正向差异未在图题说明",
+        "observation": "原图上方 F 向右、下方 −F 向左，且标有 ⊗M，显示顺时针力偶；例16题干写“方向使物体逆时针转动”，正文主矩取 +Fd k。正文数学在其逆时针约定下正确，但图题没有说明原图展示相反情形。",
+        "suggested_fix": "保留正文推导与原图，在图题追加：图中为顺时针力偶；例16取两力反向后的逆时针情形。",
+        "status": "已向父代理报告，待图题修订后局部复核"
+      }
+    ],
+    "nonblocking_observations": [
+      {
+        "physical_pages": [
+          22,
+          33
+        ],
+        "type": "节前留白",
+        "required": false,
+        "observation": "第22页只列图3.17，第33页列图3.27–3.28，页下留白较多；均位于节前分页，内容完整、无孤悬标题或图题。",
+        "suggested_fix": "可保留当前版式；若以后统一压缩篇幅，可协调上页图示位置，但不应压缩讲解内容。"
+      },
+      {
+        "physical_page": 28,
+        "figure": "3.24",
+        "type": "原嵌入位图清晰度",
+        "required": false,
+        "observation": "地球轨道原图为低分辨率彩色位图，整页常规查看时细小季节标签较细；PDF 3倍放大后地轴、66°34′和23°26′等关键标记仍可辨。正文及图3.23提供关键几何对应。",
+        "suggested_fix": "无需重绘；若后来找到同一原图的更高分辨率嵌入媒体，可等比替换。"
+      },
+      {
+        "physical_pages": [
+          24,
+          33,
+          64,
+          66,
+          68,
+          72
+        ],
+        "type": "原图装饰残留",
+        "required": false,
+        "observation": "部分原图带源课件细边框、背景色条或极少量边缘像素残留；标签均完整，没有遮挡讲义正文或公式。",
+        "suggested_fix": "属于美观优化项。未来如再裁切，只移除确定无关的边缘装饰，不能截断坐标轴和符号。"
+      }
+    ],
+    "summary": {
+      "required_findings": 1,
+      "visual_clipping_or_footer_collisions": 0,
+      "orphan_headings_found": 0,
+      "missing_glyph_boxes_found": 0,
+      "status": "1项图题说明待修改，其余前段视觉检查通过"
+    },
+    "write_scope": "仅写本核查JSON；未修改正文、图、源课件或其他工作文件"
+  },
+  "review_version_note": "初轮第1–72页全量核查原始记录完整保存在initial_full_review；当前最终版本依据初轮记录、影响页比较报告及本轮实际局部复核作出结论。未声称对新版本重复全量视觉核查。",
+  "final_regression_review": {
+    "pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+    "pdf_total_pages": 218,
+    "actual_reviewed_physical_pages": [
+      48,
+      59,
+      64,
+      66,
+      68,
+      72
+    ],
+    "method": [
+      "实际查看新成稿预览中的六个完整页面",
+      "从最终PDF直接以3倍渲染六页图示区域，逐一复核标签、线条、图题和页面相邻关系",
+      "读取终校影响页检查.json确认本核查前段的像素变化页仅为48、64、66、68、72；第59页作为导出异常修复额外复核"
+    ],
+    "impact_report_path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/资料核查/终校影响页检查.json",
+    "impact_report_facts": {
+      "unchanged_page_count": 196,
+      "changed_pages_within_original_review_scope": [
+        48,
+        64,
+        66,
+        68,
+        72
+      ],
+      "syntax_check_reported": "qpdf --check passed; PyMuPDF did not repair file"
+    },
+    "checks": [
+      {
+        "physical_page": 48,
+        "figures": [
+          "3.46"
+        ],
+        "result": "pass",
+        "checks": "图题明确原图顺时针、例16两力反向；F、−F、r1−r2、d、⊗M及箭头完整。图题单行在正文版心内，未碰正文、节标题或页脚。"
+      },
+      {
+        "physical_page": 59,
+        "figures": [
+          "3.57",
+          "3.58",
+          "3.59"
+        ],
+        "result": "pass",
+        "checks": "最终PDF直接3倍渲染正常，无导出异常。三幅图、三个图题、相邻正文及例22标题完整，Q、D、O、A、B、C、NC、NB、mg和c=BC等标签/线条可见，无裁切或异常遮盖。"
+      },
+      {
+        "physical_page": 64,
+        "figures": [
+          "3.63"
+        ],
+        "result": "pass",
+        "checks": "背景已白化。刚体轮廓、质元dm、r/p箭头、p=dm v、ω及其转动弧完整，图题与下方推导保持清楚间距。"
+      },
+      {
+        "physical_page": 66,
+        "figures": [
+          "3.64"
+        ],
+        "result": "pass",
+        "checks": "背景已白化。黑色x/y/z与蓝色x′/y′/z′、O、两组三轴箭头及刚体轮廓完整；y′下伸及撇号无裁切。图题独立成行，run-in标题和正文没有与图挤同行，页脚无碰撞。"
+      },
+      {
+        "physical_page": 68,
+        "figures": [
+          "3.66"
+        ],
+        "result": "pass",
+        "checks": "无关橙色色块已消失。薄片、外平面边框、x/y/z轴及三处转向弧均完整；原图图题、例23和3.5.3标题及相邻正文正常。"
+      },
+      {
+        "physical_page": 72,
+        "figures": [
+          "3.68"
+        ],
+        "result": "pass",
+        "checks": "背景色条已移除。蓝边框、成对质元、连线、x/y轴、(x,y,z)/(−x,−y,z)标签完整，图题与后续标题/矩阵公式没有碰撞。"
+      }
+    ],
+    "new_findings": [],
+    "resolved_finding_ids": [
+      "front-001"
+    ],
+    "conclusion": "通过。初轮唯一必须修复项已解决；本轮六页所有标签、线条、图题及版式完整。结合初轮全量核查与影响页比较，本人负责的前段无待修复阻碍项。",
+    "scope_limit": "本轮仅实际视觉复核所列六页；未重新检查后段。关于原图对象/媒体字节不变的源资产比较由父代理记录，本报告直接确认最终PDF视觉结果。"
+  },
+  "parent_final_equivalence_check": {
+    "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+    "previous_visually_reviewed_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+    "only_changed_page": 108,
+    "within_this_review_scope_all_pages_pixel_identical": true,
+    "evidence": "最终单页修订影响检查.json",
+    "note": "父代理核验：最终变更仅涉及中段108页，本报告负责范围的最终页面与实际已审版本像素完全一致。"
+  }
+}

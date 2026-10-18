@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(A)at(1.2,1);\coordinate(B)at(0,3.3);
+\draw[guide](O)circle(1.56);\draw[thick](-.2,2.5)--(-.2,3.9);
+\draw[thick](.2,2.5)--(.2,3.9);\draw[fill=soft](-.2,3.1)rectangle(.2,3.5);
+\draw[line width=1.6pt,ink](O)--(A)node[midway,below right]{$a$};
+\draw[line width=1.6pt,ink](A)--(B)node[midway,right]{$L$};
+\foreach \P in {O,A,B}{\fill(\P)circle(2pt)node[above left]{$\P$};}
+\draw[->](0,3.3)--(0,2.2)node[left]{$\xi$};
+\draw[->](0,3.3)--(.9,3.3)node[right]{$\eta$};
+\draw[guide](O)--(0,-1.9)node[below]{$+\xi$};
+\draw[->](0,-.65)arc(-90:39.8056:.65);\node at(.9,-.48){$q$};
+\draw(0,2.5)arc(-90:-62.4472:.8);\node at(.34,2.29){$\psi$};
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}
+\draw[guide](-.2,0)--(7,0);\draw[ink,thick](0,.2)--(1,.65)--(2,1.1)--(3,.85)--(4,.3)--(5,-.25)--(6,-.2);
+\foreach \x/\y in {0/.2,1/.65,2/1.1,3/.85,4/.3,5/-.25,6/-.2}{\fill(\x,\y)circle(3pt);\draw[guide](\x,0)--(\x,\y);}
+\draw[<->](2,-.65)--(3,-.65)node[midway,below]{$\Delta x$};\node[above]at(2,1.1){$u_j$};\node[above]at(3,.85){$u_{j+1}$};
+\end{tikzpicture}

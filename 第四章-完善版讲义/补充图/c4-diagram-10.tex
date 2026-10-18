@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.95]
+\coordinate(O)at(0,0);\coordinate(C)at(2.4,0);\coordinate(P)at(3.4,1.2);
+\draw[ink](C)circle(1.56);\draw[guide](O)--(C);\draw[force](C)--(P)node[midway,left]{$a\vect e_\rho$};
+\draw[force](O)--(P)node[midway,above]{$\vect r$};\fill[ink](O)circle(2pt)node[below]{$O$};\fill[ink](C)circle(2pt)node[below]{$C$};\fill[ink](P)circle(3pt)node[right]{$P$};
+\node[below]at(1.2,0){$d$};\draw[->](.7,0)arc(0:70:.7)node[above]{$\Omega$};
+\node[anchor=west,align=left]at(5.1,.8){$\vect a_C=-\Omega^2\vect{OC}$\\$\vect a_{P/C}=-a(\Omega+\nu)^2\vect e_\rho$};
+\end{tikzpicture}

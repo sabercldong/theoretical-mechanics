@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+\begin{scope}[x=.05cm,y=1.15cm]
+\fill[soft](10,-.2)rectangle(90,.2);
+\draw[->](0,0)--(98,0)node[right]{$\theta$};
+\draw[->](0,-2.35)--(0,.65)node[above]{$q=f/N$};
+\draw[muted,thick,dashed]plot[domain=10:90,samples=220](\x,{(3*cos(\x)-2*cos(10))*sin(\x)/(1-2*cos(10)*cos(\x)+3*cos(\x)^2)});
+\draw[ink,very thick]plot[domain=10:28.2516867,samples=60](\x,{(3*cos(\x)-2*cos(10))*sin(\x)/(1-2*cos(10)*cos(\x)+3*cos(\x)^2)});
+\draw[guide](0,.2)--(90,.2);\draw[guide](0,-.2)--(90,-.2);
+\foreach \a in {-.2,.2}{\node[left]at(0,\a){$\a$};}
+\foreach \a in {30,60,90}{\draw(\a,0)--(\a,-.06)node[below]{$\a^\circ$};}
+\fill[ink](28.2516867,.2)circle(2.3pt);
+\node[above]at(28.2516867,.36){$\theta_*$};
+\node[below]at(50,-2.42){全角度需求曲线};
+\end{scope}
+\begin{scope}[shift={(6.5,-1.6)},x=.12cm,y=24cm]
+\fill[soft](0,0)rectangle(20,.04);
+\draw[->](0,0)--(23,0)node[right]{$\theta$};
+\draw[->](0,0)--(0,.065)node[above]{$q$};
+\draw[guide](0,.04)--(20,.04);
+\draw[muted,thick,dashed]plot[domain=20:40,samples=160]({\x-20},{(3*cos(\x)-2*cos(10))*sin(\x)/(1-2*cos(10)*cos(\x)+3*cos(\x)^2)-.16});
+\draw[ink,very thick]plot[domain=20:28.2516867,samples=60]({\x-20},{(3*cos(\x)-2*cos(10))*sin(\x)/(1-2*cos(10)*cos(\x)+3*cos(\x)^2)-.16});
+\foreach \a/\b in {0/20,10/30,20/40}{\draw(\a,0)--(\a,-.002)node[below]{$\b^\circ$};}
+\foreach \a/\b in {0/.16,.02/.18,.04/.20,.06/.22}{\draw(0,\a)--(-.4,\a)node[left]{$\b$};}
+\fill[ink](8.2516867,.04)circle(2.3pt);
+\draw[guide](8.2516867,0)--(8.2516867,.04);
+\node[above]at(12,.09){首次越界局部放大};
+\end{scope}
+\end{tikzpicture}

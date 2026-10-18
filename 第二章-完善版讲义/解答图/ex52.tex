@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\fill(0,2.8)circle(2pt)node[above]{$A$};\draw[very thick](0,2.8)--(0,0);\fill(0,1.4)circle(4pt)node[right]{$4m$};\fill(0,0)circle(4pt)node[right]{$m$};\draw[->,thick](-1.8,1.4)--(-.5,1.4)node[midway,above]{$m,v_0$};\draw[<->](.8,0)--(.8,2.8)node[midway,right]{$L$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$mv_0L/2=I_A\omega,\quad I_A=9mL^2/4$\\[6pt]$\Downarrow$\\[6pt]$v_{\rm mid}=v_0/9,\quad J_{A,x}=-2mv_0/9$};
+\end{tikzpicture}

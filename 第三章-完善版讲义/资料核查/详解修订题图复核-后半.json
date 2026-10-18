@@ -1,0 +1,1986 @@
+{
+  "reviewer": "revision_training_qa",
+  "reviewed_at": "2026-10-17T18:09:11",
+  "scope": {
+    "examples": [
+      49,
+      66
+    ],
+    "exercises": [
+      1,
+      30
+    ],
+    "figure_count": 48,
+    "atlas_images": [
+      "工作文件/题图总览PNG/atlas-09.png",
+      "工作文件/题图总览PNG/atlas-10.png",
+      "工作文件/题图总览PNG/atlas-11.png",
+      "工作文件/题图总览PNG/atlas-12.png",
+      "工作文件/题图总览PNG/atlas-13.png",
+      "工作文件/题图总览PNG/atlas-14.png",
+      "工作文件/题图总览PNG/atlas-15.png",
+      "工作文件/题图总览PNG/atlas-16.png"
+    ]
+  },
+  "method": "实际通过view_image查看全部8张总览；对关键矛盾和穿字用PIL裁片放大3倍后再次view_image；逐题读取完整题干JSON和全部48个TikZ图源；仅为确定ex53正矩与tr29±能级约定读取对应正文，未修改主稿或题图。",
+  "summary": {
+    "figures_reviewed": 48,
+    "source_issues": 0,
+    "source_figures_needing_fix": 0,
+    "source_figures_passed": 48,
+    "atlas_only_issues": 0,
+    "high_severity_source_issues": 0,
+    "original_source_issues_resolved": 17,
+    "original_source_issues_partially_fixed": 0,
+    "new_annotation_issues": 0,
+    "solution_figures_reviewed": 48,
+    "solution_figures_source_fixes_pending_final_render": 0,
+    "solution_figures_new_required_edits": 0,
+    "solution_figures_passed": 48,
+    "all_required_fixes_remaining": 0
+  },
+  "priority_checks": {
+    "aircraft_ex58": "passed: 右手投影、θ方向和B所属平面一致。",
+    "free_top_ex60": "passed: C>A、s>0时L位于ω与e3之间；当前顺序正确。",
+    "free_top_tr23": "fixed_passed: 已标C>A、s>0代表分支。",
+    "zero_tilt_tr05": "几何fixed_passed；说明被竖轴穿过另列低优先级标注问题。",
+    "energy_sign_tr29": "fixed_passed: E_high/E_low、|ΔE|已正确。"
+  },
+  "issues": [
+    {
+      "id": "C3-TR05-ZERO-TILT",
+      "figures": [
+        "tr05"
+      ],
+      "scope": "figure_source",
+      "severity": "high",
+      "confidence": "high",
+      "category": "statement_geometry_mismatch",
+      "description": "题干限定θ=0，图仍画z轴与ζ轴分离、明确的非零θ弧及节点线N。该图直接回避并误示本题的欧拉角退化姿态。",
+      "recommended_fix": "画z=ζ重合；在水平面显示合角φ+ψ，说明节点线不唯一/不可单独确定，删除非零倾角示意。",
+      "sources": [
+        "题图/tr05.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "z=ζ已重合；画出χ=φ+ψ，θ=0几何通过。新说明文字穿竖轴另列。"
+      }
+    },
+    {
+      "id": "C3-TR29-LEVEL-ORDER",
+      "figures": [
+        "tr29"
+      ],
+      "scope": "figure_source",
+      "severity": "high",
+      "confidence": "high",
+      "category": "energy_sign",
+      "description": "图把E_+固定置于上能级、E_-置于下能级。正文定义E_+=−γℏB/2、E_-=+γℏB/2；对γ>0该上下顺序恰好颠倒，题干又未限制γ<0。",
+      "recommended_fix": "以γ>0为明确示例，上层标E_-、下层标E_+，间距标|ΔE|；另注γ<0时互换。或用E高/E低并直接列对应公式，避免±含义混淆。",
+      "sources": [
+        "题图/tr29.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "已改为E_high/E_low及|ΔE|，不再混淆投影±，通过。"
+      }
+    },
+    {
+      "id": "C3-EX53-DRIVE-DIRECTION",
+      "figures": [
+        "ex53"
+      ],
+      "scope": "figure_source",
+      "severity": "high",
+      "confidence": "high",
+      "category": "arrow_direction",
+      "description": "M1弧箭头按170°→70°绘制，为顺时针。当前绕绳几何提升C时，A顶部绳向左、B右侧绳向上，两轮均逆时针；主稿也明确逆时针为正且I_Aα1=M1−Tr1。图与正文的正驱动矩方向相反。",
+      "recommended_fix": "将A轮的M1弧箭头反向，画成逆时针。",
+      "sources": [
+        "题图/ex53.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "M1弧箭头已改逆时针，与提升正向一致，通过。"
+      }
+    },
+    {
+      "id": "C3-TR22-MIDDLE-AXIS",
+      "figures": [
+        "tr22"
+      ],
+      "scope": "figure_source",
+      "severity": "high",
+      "confidence": "high",
+      "category": "statement_vector_mismatch",
+      "description": "题干研究ω2=Ω的中间主轴转动，图中ω却从原点指向(.4,1.9)，明显靠近e3，且没有沿e2的主转动箭头，成为最大惯量轴附近转动的示意。",
+      "recommended_fix": "将主角速度画在e2轴上或稍偏离e2以示小ω1、ω3扰动；明确Ω沿e2。",
+      "sources": [
+        "题图/tr22.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "主角速度已改沿e2示意并标Ωe2，通过。"
+      }
+    },
+    {
+      "id": "C3-TR15-NO-CONTACT",
+      "figures": [
+        "tr15"
+      ],
+      "scope": "figure_source",
+      "severity": "medium",
+      "confidence": "high",
+      "category": "contact_geometry",
+      "description": "圆环与圆盘都悬在斜面上，轮缘和斜面有明显空隙，未体现题干的纯滚动接触。按源坐标计算，圆环中心到斜面距离约1.111而半径0.7，圆盘约1.054而半径0.7。",
+      "recommended_fix": "沿斜面法向平移两轮中心，使各中心到直线的垂距恰等于a；确保两轮与同一斜面相切。",
+      "sources": [
+        "题图/tr15.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "圆环与圆盘均与同一斜面相切，通过。"
+      }
+    },
+    {
+      "id": "C3-TR18-POINT-NAME",
+      "figures": [
+        "tr18"
+      ],
+      "scope": "figure_source",
+      "severity": "medium",
+      "confidence": "high",
+      "category": "point_label",
+      "description": "题干把当前接触材料点称为P，图沿用四点轮图，接触点却标A，且无P。",
+      "recommended_fix": "将底部接触点改为P；可删去本题不需要的B、C、D，或明确A=P。",
+      "sources": [
+        "题图/tr18.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "底部接触点已改P，圆心已标C；顶部重复C另列新问题。"
+      }
+    },
+    {
+      "id": "C3-TR20-RADIUS",
+      "figures": [
+        "tr20"
+      ],
+      "scope": "figure_source",
+      "severity": "medium",
+      "confidence": "high",
+      "category": "symbol_mismatch",
+      "description": "题干球半径为R，图中球内仍标m,r，混用了例57的半径符号。",
+      "recommended_fix": "将球内m,r改为m,R。",
+      "sources": [
+        "题图/tr20.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "半径已改R，符号一致；轮缘穿R另列新问题。"
+      }
+    },
+    {
+      "id": "C3-EX62-INITIAL-PRECESSION",
+      "figures": [
+        "ex62"
+      ],
+      "scope": "figure_source",
+      "severity": "medium",
+      "confidence": "medium",
+      "category": "initial_condition",
+      "description": "本题明确初始无进动、无章动，图却直接沿用定常进动陀螺的非零Ω弧箭头且未标时刻。读者会把该弧理解为所示释放初态已有进动。",
+      "recommended_fix": "若画初态，移除进动弧并写φ̇(0)=θ̇(0)=0、θ=θ0；若画一般后续时刻，明确注明，另列初始条件。",
+      "sources": [
+        "题图/ex62.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "已移除进动弧，标φ̇(0)=0，初态表意通过。"
+      }
+    },
+    {
+      "id": "C3-EX56-ANGLE-OVERLAP",
+      "figures": [
+        "ex56"
+      ],
+      "scope": "figure_source",
+      "severity": "medium",
+      "confidence": "high",
+      "category": "text_line_overlap",
+      "description": "30°文字中心(2.8,.25)几乎落在AB杆上，实际渲染可见杆穿过30°，属于单图源问题，并非总览超宽所致。",
+      "recommended_fix": "用B处小角弧表示夹角，把30°移到弧内且避开杆，例如下方或更左的位置。",
+      "sources": [
+        "题图/ex56.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "30°已移到杆外，与L虽接近但无穿字，通过。"
+      }
+    },
+    {
+      "id": "C3-TR07-TEXT-EDGE-OVERLAP",
+      "figures": [
+        "tr07"
+      ],
+      "scope": "figure_source",
+      "severity": "medium",
+      "confidence": "high",
+      "category": "text_line_overlap",
+      "description": "M_A=M_B=M_D=0一整行横跨三角形，两斜边穿过M_A和M_D附近字形。",
+      "recommended_fix": "把等式移到三角形外上方/下方，或缩小字体并放入足够大的内部空白区。",
+      "sources": [
+        "题图/tr07.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "等式已移至三角形外上方，通过。"
+      }
+    },
+    {
+      "id": "C3-EX50-TR18-D-LINE",
+      "figures": [
+        "ex50",
+        "tr18"
+      ],
+      "scope": "figure_source",
+      "severity": "low",
+      "confidence": "high",
+      "category": "text_line_overlap",
+      "description": "轮心的水平速度箭杆穿过右侧点名D；ex50、tr18共用这一布局，实际渲染均可见D被水平线贯穿。",
+      "recommended_fix": "把D标到右上或右下，或上移速度箭头并用另一位置显示轮心速度。",
+      "sources": [
+        "题图/ex50.tex",
+        "题图/tr18.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "速度箭头已上移，D无穿字，通过。"
+      }
+    },
+    {
+      "id": "C3-EX54-LABEL-COLLISION",
+      "figures": [
+        "ex54"
+      ],
+      "scope": "figure_source",
+      "severity": "low",
+      "confidence": "high",
+      "category": "label_overlap",
+      "description": "竖直支持力N_B的标注与圆柱内部Q,r标签重叠/挤接，渲染中N_B上标区域与Q下部接触。四接触力的方向本身正确。",
+      "recommended_fix": "把Q,r移到轮内更右上，或把N_B标签改放竖直箭杆左侧，留下明确间距。",
+      "sources": [
+        "题图/ex54.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "Q,r移至轮内右上，与N_B分开，通过。"
+      }
+    },
+    {
+      "id": "C3-TR10-COUPLE-TEXT",
+      "figures": [
+        "tr10"
+      ],
+      "scope": "figure_source",
+      "severity": "low",
+      "confidence": "high",
+      "category": "text_line_overlap",
+      "description": "力偶圆弧经过(a,0)坐标标签中的0/括号，实际渲染可见线条穿字。力偶逆时针方向和三个力的反例本身正确。",
+      "recommended_fix": "把力偶弧整体右移，或把(a,0)标签放在第三力作用点右下，避免两者相交。",
+      "sources": [
+        "题图/tr10.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "力偶弧已右移，(a,0)无穿字，通过。"
+      }
+    },
+    {
+      "id": "C3-TR08-LABEL-OVERLAP",
+      "figures": [
+        "tr08"
+      ],
+      "scope": "figure_source",
+      "severity": "low",
+      "confidence": "high",
+      "category": "label_overlap",
+      "description": "轮缘曲线穿过a,I_C中的a附近；圆心C与N标注也挤在一起，缩小时容易连读为CN。",
+      "recommended_fix": "将a,I_C移到轮外右上并保持与轮缘间距；把C改放圆心左上，N放法向箭头外侧。",
+      "sources": [
+        "题图/tr08.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "a,I_C移到轮外，C与N分开，通过。"
+      }
+    },
+    {
+      "id": "C3-TR08-CONTACT-GEOMETRY",
+      "figures": [
+        "tr08"
+      ],
+      "scope": "figure_source",
+      "severity": "low",
+      "confidence": "high",
+      "category": "contact_geometry",
+      "description": "轮中心到斜面直线垂距约0.846，半径0.9，轮缘略穿入轨道；f、N的共同起点(1.3,.65)也未落在斜面线上，接触点不统一。",
+      "recommended_fix": "以斜面单位法向精确定位轮心和接触点，使接触点同时位于轮缘及轨道上，并让f、N从该点出发。",
+      "sources": [
+        "题图/tr08.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "轮心、接触点与斜面相切，f/N从统一接触点出发，通过。"
+      }
+    },
+    {
+      "id": "C3-EX52-PHI-CIRCLE",
+      "figures": [
+        "ex52"
+      ],
+      "scope": "figure_source",
+      "severity": "low",
+      "confidence": "high",
+      "category": "text_line_overlap",
+      "description": "φ标注放在小圆左上轮缘处，实际渲染中φ的右下与圆柱轮缘相交；q与φ也较接近。接触几何本身基本相切，R−r关系无实质问题。",
+      "recommended_fix": "把φ放到O下方角弧的左侧或画明确小角弧；将q标在OC右侧且避开小圆轮缘。",
+      "sources": [
+        "题图/ex52.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "终验已把q改为外置OC=q，φ移离角弧，实际查看通过。"
+      }
+    },
+    {
+      "id": "C3-EX51-TR19-OMEGA-ARROW",
+      "figures": [
+        "ex51",
+        "tr19"
+      ],
+      "scope": "figure_source",
+      "severity": "low",
+      "confidence": "medium",
+      "category": "angular_motion_notation",
+      "description": "Ω标在A下方的直线向上箭头旁。该直线是平面内切向方向，容易被读成角速度矢量；题中Ωk应垂直纸面，或用绕O的逆时针弧表示转臂角速度。",
+      "recommended_fix": "改为绕O的逆时针弧箭头Ω；若保留该向上直箭头，应改标v_A=(R+r)Ω，并另示Ωk。",
+      "sources": [
+        "题图/ex51.tex",
+        "题图/tr19.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "Ω已改为绕固定中心的逆时针弧并标Ωk，通过。"
+      }
+    },
+    {
+      "id": "C3-ATLAS-EX55-EX56-OVERWIDTH",
+      "figures": [
+        "ex55",
+        "ex56"
+      ],
+      "scope": "atlas_layout_only",
+      "severity": "medium",
+      "confidence": "high",
+      "category": "atlas_resize_overflow",
+      "description": "atlas-10用统一4.6cm高度放大横长的曲柄滑块图，两图超出各自半页栏，导轨相互侵入且ex56右端超出画布。此问题由总览固定高度缩放产生，不能据此认定独立图或最终讲义同样溢出。",
+      "recommended_fix": "若总览要保留，使用同时限制宽高的缩放；最终讲义按实际插图宽度单独复看。",
+      "sources": [
+        "题图/ex55.tex",
+        "题图/ex56.tex"
+      ],
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "总览已限制宽度，ex55/ex56不再互侵或裁切，通过。"
+      }
+    }
+  ],
+  "figures": [
+    {
+      "key": "ex49",
+      "kind": "example",
+      "number": 49,
+      "title": "固定轻绳上退绕下落的圆盘",
+      "source": "题图/ex49.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed_after_final_recheck",
+      "note": "左侧固定绳、切点张力向上、重力向下，与题干一致。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "左侧固定绳、切点张力向上、重力向下，与题干一致。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-09.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex50",
+      "kind": "example",
+      "number": 50,
+      "title": "变速纯滚动轮的四点运动",
+      "source": "题图/ex50.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed_after_final_recheck",
+      "note": "四材料点方位与题干一致；D有速度箭杆穿字。",
+      "issue_ids": [
+        "C3-EX50-TR18-D-LINE"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "四材料点方位与题干一致；D有速度箭杆穿字。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-09.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex51",
+      "kind": "example",
+      "number": 51,
+      "title": "固定轮外侧的行星轮",
+      "source": "题图/ex51.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed_after_final_recheck",
+      "note": "外接圆相切，M位于+r e_t方向；Ω的直线箭头表意需更明确。",
+      "issue_ids": [
+        "C3-EX51-TR19-OMEGA-ARROW"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "外接圆相切，M位于+r e_t方向；Ω的直线箭头表意需更明确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-09.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex52",
+      "kind": "example",
+      "number": 52,
+      "title": "圆槽内圆柱的方程、反力与振动",
+      "source": "题图/ex52.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed_after_final_recheck",
+      "note": "q=R−r的几何关系基本正确，小圆相切误差仅坐标舍入量；φ压轮缘需移开。",
+      "issue_ids": [
+        "C3-EX52-PHI-CIRCLE"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "q=R−r的几何关系基本正确，小圆相切误差仅坐标舍入量；φ压轮缘需移开。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-09.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "φ已移开旧小圆轮缘，但新φ位置恰在角弧末端/OC斜虚线上；q现在与小圆顶部轮缘相交，实际放大裁片可见曲线穿q。",
+      "final_recheck_note": "实际查看终验总览后通过，上一轮4项问题均已消除。"
+    },
+    {
+      "key": "ex53",
+      "kind": "example",
+      "number": 53,
+      "title": "双轮提升装置",
+      "source": "题图/ex53.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed_after_final_recheck",
+      "note": "绕绳和张力T/S关系正确，驱动矩M1正向画反。",
+      "issue_ids": [
+        "C3-EX53-DRIVE-DIRECTION"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "绕绳和张力T/S关系正确，驱动矩M1正向画反。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-09.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex54",
+      "kind": "example",
+      "number": 54,
+      "title": "墙角圆柱的停止转动时间",
+      "source": "题图/ex54.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed_after_final_recheck",
+      "note": "左侧接触摩擦向上、底部摩擦向左，抵抗初始逆时针相对滑动；N_B与Q,r需拉开。",
+      "issue_ids": [
+        "C3-EX54-LABEL-COLLISION"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "左侧接触摩擦向上、底部摩擦向左，抵抗初始逆时针相对滑动；N_B与Q,r需拉开。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-09.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex55",
+      "kind": "example",
+      "number": 55,
+      "title": "等长曲柄滑块：基点法、投影法与瞬心法",
+      "source": "题图/ex55.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed_after_final_recheck",
+      "note": "等长两杆及45°支路几何正确；只有总览缩放超宽，不视为独立图缺陷。",
+      "issue_ids": [
+        "C3-ATLAS-EX55-EX56-OVERWIDTH"
+      ],
+      "initial_status": "pass_source_atlas_issue",
+      "initial_note": "等长两杆及45°支路几何正确；只有总览缩放超宽，不视为独立图缺陷。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-10.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex56",
+      "kind": "example",
+      "number": 56,
+      "title": "不等长曲柄滑块的加速度",
+      "source": "题图/ex56.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed_after_final_recheck",
+      "note": "OA45°、AB向右下30°几何正确；30°被杆穿字，另有总览超宽。",
+      "issue_ids": [
+        "C3-EX56-ANGLE-OVERLAP",
+        "C3-ATLAS-EX55-EX56-OVERWIDTH"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "OA45°、AB向右下30°几何正确；30°被杆穿字，另有总览超宽。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-10.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex57",
+      "kind": "example",
+      "number": 57,
+      "title": "球与活动板由滑动过渡到纯滚动",
+      "source": "题图/ex57.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed_after_final_recheck",
+      "note": "球静止、板初速向右、下支承光滑和相切关系正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "球静止、板初速向右、下支承光滑和相切关系正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-10.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex58",
+      "kind": "example",
+      "number": 58,
+      "title": "飞机转弯时螺旋桨点的速度与加速度",
+      "source": "题图/ex58.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed_after_final_recheck",
+      "note": "i径向外向右、j切向左下、k竖直向上的三维投影与右手轴组相容；θ从k朝+i，B位于i-k平面，未见轴手性矛盾。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "i径向外向右、j切向左下、k竖直向上的三维投影与右手轴组相容；θ从k朝+i，B位于i-k平面，未见轴手性矛盾。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-10.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex59",
+      "kind": "example",
+      "number": 59,
+      "title": "三根主轴转动的线性稳定性",
+      "source": "题图/ex59.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed_after_final_recheck",
+      "note": "三根主轴与惯量排序正确；通用ω扰动示意可用于三轴比较。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "三根主轴与惯量排序正确；通用ω扰动示意可用于三轴比较。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-10.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex60",
+      "kind": "example",
+      "number": 60,
+      "title": "给定惯量和角速度的自由陀螺",
+      "source": "题图/ex60.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed_after_final_recheck",
+      "note": "给定C=3>A=2、s>0，L应位于ω与e3之间，当前顺序ω—L—e3正确；图为定性示意，未按数值角度比例作图。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "给定C=3>A=2、s>0，L应位于ω与e3之间，当前顺序ω—L—e3正确；图为定性示意，未按数值角度比例作图。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-10.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex61",
+      "kind": "example",
+      "number": 61,
+      "title": "定常进动的两支角速率",
+      "source": "题图/ex61.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed_after_final_recheck",
+      "note": "重陀螺、支点O、质心C、向上竖轴和向下重力方向正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "重陀螺、支点O、质心C、向上竖轴和向下重力方向正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-11.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex62",
+      "kind": "example",
+      "number": 62,
+      "title": "只有轴向自转的倾斜释放",
+      "source": "题图/ex62.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed_after_final_recheck",
+      "note": "图沿用非零Ω一般进动示意，与所述释放初态缺少时刻区分。",
+      "issue_ids": [
+        "C3-EX62-INITIAL-PRECESSION"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "图沿用非零Ω一般进动示意，与所述释放初态缺少时刻区分。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-11.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex63",
+      "kind": "example",
+      "number": 63,
+      "title": "检验一个不能直接消掉的闭环积分",
+      "source": "题图/ex63.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed_after_final_recheck",
+      "note": "B沿+x、r向圆周、ds朝逆时针切向，符合题干积分方向。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "B沿+x、r向圆周、ds朝逆时针切向，符合题干积分方向。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-11.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex64",
+      "kind": "example",
+      "number": 64,
+      "title": "弱磁场中的经典轨道拉莫尔变换",
+      "source": "题图/ex64.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed_after_final_recheck",
+      "note": "中心势、带电粒子和恒定B示意与题干一致。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "中心势、带电粒子和恒定B示意与题干一致。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-11.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex65",
+      "kind": "example",
+      "number": 65,
+      "title": "各向同性谐振子对二阶项的检验",
+      "source": "题图/ex65.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed_after_final_recheck",
+      "note": "谐振子中心势与B轴标注一致，没有额外方向矛盾。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "谐振子中心势与B轴标注一致，没有额外方向矛盾。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-11.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "ex66",
+      "kind": "example",
+      "number": 66,
+      "title": "从给定陀螺磁比计算载频和脉冲时间",
+      "source": "题图/ex66.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed_after_final_recheck",
+      "note": "B0竖直、B1横向共振旋转分量的示意与参数定义一致。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "B0竖直、B1横向共振旋转分量的示意与参数定义一致。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-11.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr01",
+      "kind": "exercise",
+      "number": 1,
+      "title": "距离不变是否意味着相对位置矢量不变？",
+      "source": "题图/tr01.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed_after_final_recheck",
+      "note": "相对速度与AB垂直，距离不变条件的示意正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "相对速度与AB垂直，距离不变条件的示意正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-12.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr02",
+      "kind": "exercise",
+      "number": 2,
+      "title": "同样沿圆周运动的座舱和刚性轮辐有何区别？",
+      "source": "题图/tr02.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed_after_final_recheck",
+      "note": "保持方向的座舱及径向位置R的示意正确；径向连线可作为轮辐对比。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "保持方向的座舱及径向位置R的示意正确；径向连线可作为轮辐对比。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-12.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr03",
+      "kind": "exercise",
+      "number": 3,
+      "title": "能否直接把两个有限转角当矢量相加？",
+      "source": "题图/tr03.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed_after_final_recheck",
+      "note": "主动固定轴的两次π/2转动结果分别指向+x和−y；图中箭头与标签一致。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "主动固定轴的两次π/2转动结果分别指向+x和−y；图中箭头与标签一致。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-12.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr04",
+      "kind": "exercise",
+      "number": 4,
+      "title": "已知两点速度方向平行，能否必然找到有限瞬心？",
+      "source": "题图/tr04.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed_after_final_recheck",
+      "note": "两点沿x分隔、两速度沿y平行，符合题设代表性情形。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "两点沿x分隔、两速度沿y平行，符合题设代表性情形。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-12.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr05",
+      "kind": "exercise",
+      "number": 5,
+      "title": "欧拉角 $\\theta=0$ 时，哪些角仍可确定？",
+      "source": "题图/tr05.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed_after_final_recheck",
+      "note": "θ=0题却画成非零倾角，需重画退化姿态。",
+      "issue_ids": [
+        "C3-TR05-ZERO-TILT"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "θ=0题却画成非零倾角，需重画退化姿态。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-12.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "零倾角与合角的几何已修正；新“θ=0，节点轴不唯一”文字横跨z=ζ竖轴，竖轴穿过等号。",
+      "final_recheck_note": "实际查看终验总览后通过，上一轮4项问题均已消除。"
+    },
+    {
+      "key": "tr06",
+      "kind": "exercise",
+      "number": 6,
+      "title": "为什么轴向角速度不一定等于欧拉角自转率？",
+      "source": "题图/tr06.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed_after_final_recheck",
+      "note": "倾斜轴与进动示意方向正确；Ω、ω是对题干φ̇、ψ̇的通用示意符号。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "倾斜轴与进动示意方向正确；Ω、ω是对题干φ̇、ψ̇的通用示意符号。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-12.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr07",
+      "kind": "exercise",
+      "number": 7,
+      "title": "平面三点取矩为零为什么要求三点不共线？",
+      "source": "题图/tr07.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed_after_final_recheck",
+      "note": "三点不共线几何正确；矩为零的等式被三角边穿字。",
+      "issue_ids": [
+        "C3-TR07-TEXT-EDGE-OVERLAP"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "三点不共线几何正确；矩为零的等式被三角边穿字。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-13.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr08",
+      "kind": "exercise",
+      "number": 8,
+      "title": "有静摩擦的无滑滚动为何可以守恒机械能？",
+      "source": "题图/tr08.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed_after_final_recheck",
+      "note": "法向和摩擦方向正确；接触点、圆轮几何与标注需修整。",
+      "issue_ids": [
+        "C3-TR08-LABEL-OVERLAP",
+        "C3-TR08-CONTACT-GEOMETRY"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "法向和摩擦方向正确；接触点、圆轮几何与标注需修整。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-13.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr09",
+      "kind": "exercise",
+      "number": 9,
+      "title": "取矩中心改动时主矢和主矩怎样变化？",
+      "source": "题图/tr09.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed_after_final_recheck",
+      "note": "r_OP、r_OA方向及从A到P的位置矢量关系正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "r_OP、r_OA方向及从A到P的位置矢量关系正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-13.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr10",
+      "kind": "exercise",
+      "number": 10,
+      "title": "三力定理可以用于含一个独立力偶的物体吗？",
+      "source": "题图/tr10.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed_after_final_recheck",
+      "note": "三个非平行力与独立逆时针力偶构成的平面反例正确；坐标标签被力偶弧穿过。",
+      "issue_ids": [
+        "C3-TR10-COUPLE-TEXT"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "三个非平行力与独立逆时针力偶构成的平面反例正确；坐标标签被力偶弧穿过。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-13.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr11",
+      "kind": "exercise",
+      "number": 11,
+      "title": "细杆斜轴的方向惯量",
+      "source": "题图/tr11.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed_after_final_recheck",
+      "note": "过中心斜轴与杆夹角β及质心C正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "过中心斜轴与杆夹角β及质心C正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-13.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr12",
+      "kind": "exercise",
+      "number": 12,
+      "title": "球的平行轴惯量",
+      "source": "题图/tr12.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed_after_final_recheck",
+      "note": "偏置轴与中心z轴平行，垂距d、球半径a标注明确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "偏置轴与中心z轴平行，垂距d、球半径a标注明确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-13.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr13",
+      "kind": "exercise",
+      "number": 13,
+      "title": "均匀实心半球从球心移到质心，哪个惯量不变？",
+      "source": "题图/tr13.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed_after_final_recheck",
+      "note": "上半球、C在+z、质心高度3a/8与题干一致。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "上半球、C在+z、质心高度3a/8与题干一致。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-14.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr14",
+      "kind": "exercise",
+      "number": 14,
+      "title": "重根主惯量的主轴是否唯一？",
+      "source": "题图/tr14.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed_after_final_recheck",
+      "note": "轴对称惯量及横向重根平面示意正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "轴对称惯量及横向重根平面示意正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-14.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr15",
+      "kind": "exercise",
+      "number": 15,
+      "title": "均匀圆环与圆盘滚下同一斜面",
+      "source": "题图/tr15.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed_after_final_recheck",
+      "note": "两轮未与斜面相切，需修正接触几何。",
+      "issue_ids": [
+        "C3-TR15-NO-CONTACT"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "两轮未与斜面相切，需修正接触几何。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-14.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr16",
+      "kind": "exercise",
+      "number": 16,
+      "title": "物理摆悬点过质心时会怎样？",
+      "source": "题图/tr16.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed_after_final_recheck",
+      "note": "用h>0一般姿态研究h趋零的极限可接受，O、C和重力方向正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "用h>0一般姿态研究h趋零的极限可接受，O、C和重力方向正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-14.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr17",
+      "kind": "exercise",
+      "number": 17,
+      "title": "静平衡是否保证动平衡？",
+      "source": "题图/tr17.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed_after_final_recheck",
+      "note": "质心在轴上、杆斜于轴、双轴承的转子示意可作为非主轴反例。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "质心在轴上、杆斜于轴、双轴承的转子示意可作为非主轴反例。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-14.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr18",
+      "kind": "exercise",
+      "number": 18,
+      "title": "轮子匀速纯滚动时底部点加速度",
+      "source": "题图/tr18.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed_after_final_recheck",
+      "note": "接触点P未在图上出现；还沿用A及其余轮缘点，D存在穿字。",
+      "issue_ids": [
+        "C3-TR18-POINT-NAME",
+        "C3-EX50-TR18-D-LINE"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "接触点P未在图上出现；还沿用A及其余轮缘点，D存在穿字。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-14.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "底部P和圆心C已正确；顶部轮缘旧C仍保留，导致圆心与顶点同时标C。",
+      "final_recheck_note": "实际查看终验总览后通过，上一轮4项问题均已消除。"
+    },
+    {
+      "key": "tr19",
+      "kind": "exercise",
+      "number": 19,
+      "title": "外滚行星轮半径相等时转速比",
+      "source": "题图/tr19.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed_after_final_recheck",
+      "note": "外滚一般R,r模型正确，Ω直箭头应改为转动弧；题目标题强调R=r但题干是一般R,r，图也一般化，最终正文给出了R=r特例。",
+      "issue_ids": [
+        "C3-EX51-TR19-OMEGA-ARROW"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "外滚一般R,r模型正确，Ω直箭头应改为转动弧；题目标题强调R=r但题干是一般R,r，图也一般化，最终正文给出了R=r特例。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-15.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr20",
+      "kind": "exercise",
+      "number": 20,
+      "title": "光滑支承上的球板系统哪个量守恒？",
+      "source": "题图/tr20.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed_after_final_recheck",
+      "note": "球有初始向右速度、板初始静止和接触正确；半径r需改为R。",
+      "issue_ids": [
+        "C3-TR20-RADIUS"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "球有初始向右速度、板初始静止和接触正确；半径r需改为R。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-15.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "半径已从r改成R，但m,R标签更宽，右侧轮缘穿过R，属于修正后的新文字避让问题。",
+      "final_recheck_note": "实际查看终验总览后通过，上一轮4项问题均已消除。"
+    },
+    {
+      "key": "tr21",
+      "kind": "exercise",
+      "number": 21,
+      "title": "无外力矩是否保证角速度在空间恒定？",
+      "source": "题图/tr21.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed_after_final_recheck",
+      "note": "无矩、L常量与一般非主轴ω方向示意符合题意。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "无矩、L常量与一般非主轴ω方向示意符合题意。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-15.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr22",
+      "kind": "exercise",
+      "number": 22,
+      "title": "三种主轴中哪一根自由转动不稳定？",
+      "source": "题图/tr22.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed_after_final_recheck",
+      "note": "ω主方向应靠近e2而不是当前e3。",
+      "issue_ids": [
+        "C3-TR22-MIDDLE-AXIS"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "ω主方向应靠近e2而不是当前e3。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-15.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr23",
+      "kind": "exercise",
+      "number": 23,
+      "title": "对称自由陀螺的空间进动率",
+      "source": "题图/tr23.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed_after_final_recheck",
+      "note": "当前ω—L—e3顺序是C>A、s>0代表情形；题干未限定C/A，宜在最终图注注明代表分支，不能把这个顺序推广到全部参数。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "当前ω—L—e3顺序是C>A、s>0代表情形；题干未限定C/A，宜在最终图注注明代表分支，不能把这个顺序推广到全部参数。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-15.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "已加C>A、s>0示意条件，ω—L—e3顺序与该条件一致，通过。"
+    },
+    {
+      "key": "tr24",
+      "kind": "exercise",
+      "number": 24,
+      "title": "重陀螺有哪些守恒量？",
+      "source": "题图/tr24.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed_after_final_recheck",
+      "note": "重陀螺支点、质心与重力方向正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "重陀螺支点、质心与重力方向正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-15.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr25",
+      "kind": "exercise",
+      "number": 25,
+      "title": "高速重陀螺的慢进动率",
+      "source": "题图/tr25.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-16.png",
+      "status": "passed_after_final_recheck",
+      "note": "定常倾角、进动与轴向s的重陀螺模型正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "定常倾角、进动与轴向s的重陀螺模型正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-16.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr26",
+      "kind": "exercise",
+      "number": 26,
+      "title": "重陀螺回环轨迹的判别",
+      "source": "题图/tr26.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-16.png",
+      "status": "passed_after_final_recheck",
+      "note": "允许区间内K/P作为零进动位置的代表示意正确，横坐标未给数值不构成u范围错误。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "允许区间内K/P作为零进动位置的代表示意正确，横坐标未给数值不构成u范围错误。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-16.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr27",
+      "kind": "exercise",
+      "number": 27,
+      "title": "正、负陀螺磁比的拉莫尔转向",
+      "source": "题图/tr27.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-16.png",
+      "status": "passed_after_final_recheck",
+      "note": "Ω_L=−γB公式保留有向磁比，图无固定旋向箭头，兼容正负γ。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "Ω_L=−γB公式保留有向磁比，图无固定旋向箭头，兼容正负γ。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-16.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr28",
+      "kind": "exercise",
+      "number": 28,
+      "title": "共振角频率与普通频率的换算",
+      "source": "题图/tr28.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-16.png",
+      "status": "passed_after_final_recheck",
+      "note": "ω0=|γ|B、f0=ω0/(2π)标注正确；椭圆箭头只作代表旋向，未指定γ符号。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "ω0=|γ|B、f0=ω0/(2π)标注正确；椭圆箭头只作代表旋向，未指定γ符号。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-16.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr29",
+      "kind": "exercise",
+      "number": 29,
+      "title": "磁偶极能有额外半因子吗？",
+      "source": "题图/tr29.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-16.png",
+      "status": "passed_after_final_recheck",
+      "note": "E±固定上下顺序与正文投影符号定义不相容，需标γ分支并更正。",
+      "issue_ids": [
+        "C3-TR29-LEVEL-ORDER"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "E±固定上下顺序与正文投影符号定义不相容，需标γ分支并更正。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-16.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    },
+    {
+      "key": "tr30",
+      "kind": "exercise",
+      "number": 30,
+      "title": "磁场加倍时频率和理想翻转脉冲怎样变化？",
+      "source": "题图/tr30.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-16.png",
+      "status": "passed_after_final_recheck",
+      "note": "B0、B1和μ的共振示意正确。",
+      "issue_ids": [],
+      "initial_status": "pass",
+      "initial_note": "B0、B1和μ的共振示意正确。",
+      "recheck_atlas": "第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-16.png",
+      "remaining_issue_ids": [],
+      "recheck_note": "实际查看更新总览后通过，未见新增穿字。"
+    }
+  ],
+  "limitations": "本报告范围为例49–66及训练1–30的48张题图和48张解答分析图。全部已经实际查看并完成问题修复终验，范围内无未解决问题。本轮仅更新核查报告，未改主稿或图源。",
+  "initial_summary": {
+    "figures_reviewed": 48,
+    "source_issues": 17,
+    "source_figures_needing_fix": 17,
+    "source_figures_passed": 31,
+    "atlas_only_issues": 1,
+    "high_severity_source_issues": 4
+  },
+  "current_issues": [],
+  "follow_up_rechecks": [
+    {
+      "reviewed_at": "2026-10-17T18:15:55",
+      "result": "needs_minor_corrections",
+      "scope": "实际查看更新atlas-09至atlas-16全8图，重点复验原17项图源问题及总览超宽；对ex52/tr05/tr18/tr20等3倍裁片再次view_image。",
+      "actual_images_viewed": [
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-09.png",
+          "sha256": "a1c748c9c5393215bcfe063d6e9eab2f321ec847dfb842e71b61c1108d8484e5"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-10.png",
+          "sha256": "ef7d039d31918a161346bc7609a7f86c8220d1ccf1c75b701231352c08d0e248"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-11.png",
+          "sha256": "ff92a1db476076931c65f1b6d07a9b68f382959d83f3d5d82d098c436b1bb0b1"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-12.png",
+          "sha256": "a60dc7f356d6fc9ffda6bca1034af0e7445ce12ae4b9a18d2ea68dbbd26c2e4a"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-13.png",
+          "sha256": "c797d4d218b26acf9852c4e03bfef80af4f46eb7fc449804c99fc45b22fea0b7"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-14.png",
+          "sha256": "103d1f0b69348f7c8b73d6ca96e9d99ab8dd977e2128ac265725a677b40151ac"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-15.png",
+          "sha256": "4abbcc7732e905ebecbc9cee123fa3f0a97f859e8068a5aa2ca9718d9988caa8"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览复验PNG/atlas-16.png",
+          "sha256": "05468940d3b6d5781df269ed9562e5f7486655c26f38d8435b07a5c49e00ed88"
+        }
+      ],
+      "zoomed_evidence": [
+        "/tmp/c3-reqa-ex52.png",
+        "/tmp/c3-reqa-ex56.png",
+        "/tmp/c3-reqa-tr05.png",
+        "/tmp/c3-reqa-tr18.png",
+        "/tmp/c3-reqa-tr20.png"
+      ],
+      "original_source_issues_fixed_passed": 16,
+      "original_source_issues_partially_fixed": 1,
+      "atlas_only_issues_fixed": 1,
+      "remaining_source_figures": [
+        "ex52",
+        "tr05",
+        "tr18",
+        "tr20"
+      ],
+      "remaining_issue_ids": [
+        "C3-EX52-LABELS-RECHECK",
+        "C3-TR05-ANNOTATION-AXIS-RECHECK",
+        "C3-TR18-DUPLICATE-C-RECHECK",
+        "C3-TR20-R-EDGE-RECHECK"
+      ],
+      "conclusion": "原有高优先级物理/符号问题均已改正；剩4图的标注避让/重复点名需小修，无新增实质力学方向错误。"
+    },
+    {
+      "reviewed_at": "2026-10-17T18:29:50",
+      "result": "question_figures_passed",
+      "scope": "仅终验ex52、tr05、tr18、tr20，实际查看包含它们的4张终验总览。",
+      "actual_images_viewed": [
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览终验PNG/atlas-09.png",
+          "sha256": "ee2f143b70ca163aceb9e8a895519c8798b584591b1d295d229885d7acac2ac7"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览终验PNG/atlas-12.png",
+          "sha256": "a0b2b3f2acd1ad9fa1316e252f2698c5e4b75e7a5d20d6850005a76a0e00bdf5"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览终验PNG/atlas-14.png",
+          "sha256": "517a17f89a56ed0428c17a0ebff410969c79ac46c64293e1b590fc4ba4c5992d"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/题图总览终验PNG/atlas-15.png",
+          "sha256": "191e8e48d5f202c6af79b151251cda31aef96e065ccab396f140bec91587782b"
+        }
+      ],
+      "conclusion": "OC=q与φ外置、θ=0拆行说明、轮上只保留P/C、m,R外置左侧均已通过；题图未解决问题0。"
+    }
+  ],
+  "previous_recheck_issues": [
+    {
+      "id": "C3-EX52-LABELS-RECHECK",
+      "figures": [
+        "ex52"
+      ],
+      "severity": "low",
+      "category": "text_line_overlap",
+      "description": "φ已移开旧小圆轮缘，但新φ位置恰在角弧末端/OC斜虚线上；q现在与小圆顶部轮缘相交，实际放大裁片可见曲线穿q。",
+      "recommended_fix": "将φ说明与新角弧、OC虚线分开；把q放到OC右上方但完全避开小圆顶部。",
+      "evidence": "/tmp/c3-reqa-ex52.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "题图总览终验PNG实际view_image查看",
+        "note": "图中标注已移开、点名已统一，未见穿字。"
+      }
+    },
+    {
+      "id": "C3-TR05-ANNOTATION-AXIS-RECHECK",
+      "figures": [
+        "tr05"
+      ],
+      "severity": "low",
+      "category": "text_line_overlap",
+      "description": "零倾角与合角的几何已修正；新“θ=0，节点轴不唯一”文字横跨z=ζ竖轴，竖轴穿过等号。",
+      "recommended_fix": "用anchor=west把整条说明放在竖轴右侧并留间距，或移到图外。",
+      "evidence": "/tmp/c3-reqa-tr05.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "题图总览终验PNG实际view_image查看",
+        "note": "图中标注已移开、点名已统一，未见穿字。"
+      }
+    },
+    {
+      "id": "C3-TR18-DUPLICATE-C-RECHECK",
+      "figures": [
+        "tr18"
+      ],
+      "severity": "medium",
+      "category": "point_label",
+      "description": "底部P和圆心C已正确；顶部轮缘旧C仍保留，导致圆心与顶点同时标C。",
+      "recommended_fix": "删去本题不需要的其余轮缘标签B/C/D，或把顶部点改用其他字母。",
+      "evidence": "/tmp/c3-reqa-tr18.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "题图总览终验PNG实际view_image查看",
+        "note": "图中标注已移开、点名已统一，未见穿字。"
+      }
+    },
+    {
+      "id": "C3-TR20-R-EDGE-RECHECK",
+      "figures": [
+        "tr20"
+      ],
+      "severity": "low",
+      "category": "text_line_overlap",
+      "description": "半径已从r改成R，但m,R标签更宽，右侧轮缘穿过R，属于修正后的新文字避让问题。",
+      "recommended_fix": "把m,R左移后作为轮内标签，或整体放到球外右上并留间距。",
+      "evidence": "/tmp/c3-reqa-tr20.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "题图总览终验PNG实际view_image查看",
+        "note": "图中标注已移开、点名已统一，未见穿字。"
+      }
+    }
+  ],
+  "solution_figure_review": {
+    "reviewed_at": "2026-10-17T18:29:50",
+    "scope": {
+      "examples": [
+        49,
+        66
+      ],
+      "exercises": [
+        1,
+        30
+      ],
+      "count": 48
+    },
+    "method": "实际通过view_image逐张查看solutions-13至24共12张总览，并逐一读取48个解答图TikZ源。检查新增关系式的符号、约束、方向及计算结果；对照对应正文确认符号定义与适用条件；核对48题源码中的显式图号引用和SolutionFigure调用。",
+    "actual_images_viewed": [
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-13.png",
+        "sha256": "836399d8c6c92a8b046a3134d7b171ab122cff47f48883cd08cf2ef433754891"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-14.png",
+        "sha256": "ae7e5e9e066150d0820f4081de39943cbadf4848dc1c71077497a3f459d35969"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-15.png",
+        "sha256": "049356afeeacdbd0ac9ac3ec68215d481ed9558b8be4e267cbda594c556147d8"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-16.png",
+        "sha256": "036037964b3f1d1428dc245a4a702f49fdeb417e12a1ccc82d250d94fdfe5c1e"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-17.png",
+        "sha256": "064dba29e52ece90848d78aeab6b7a594764cf6645d103cd916c3321b17b1431"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-18.png",
+        "sha256": "e495680556d2bd5515fbac3fe24ff99ef460b3c60778f376d07e5c17c64c2aed"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-19.png",
+        "sha256": "c7d892328c8d324aa223a5d76fe038d0f0410731f8ccaeed25f4340258dfe2c3"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-20.png",
+        "sha256": "24762124b2c94f60278991731092d2a89c1b2693df2c3d0ee4011170f7bb627d"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-21.png",
+        "sha256": "af4ea898307ccb73dbcfbb3d8f8e89f55ef617441f6672df65b6a99aec37b150"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-22.png",
+        "sha256": "eafaa05e8d46a820004f36ce8cebc52d9ff5cbdcb50d126427fb218ed4f83214"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-23.png",
+        "sha256": "07dc65c16e881687f7fc93bad3415ce4fc19f76bff0e41487a1b045ab8ab785a"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图总览PNG/solutions-24.png",
+        "sha256": "b84447375027e90979b7ebe887dfccaa93b117c6604f25919ab992e8635f81e1"
+      }
+    ],
+    "result": "passed",
+    "issues": [
+      {
+        "id": "SOL-TR02-BASE-POINT",
+        "key": "tr02",
+        "source": "解答图/tr02.tex",
+        "severity": "low",
+        "initial_finding": "模型悬点标C、右侧与正文计算使用v_A，点名不一致。",
+        "source_resolution": "已把图中基点C统一为A。",
+        "status": "fixed_passed",
+        "final_visual_verification": "实际查看solutions-17：基点已标A，与v_P=v_A和正文一致；无穿字或裁切。"
+      },
+      {
+        "id": "SOL-TR14-ORTHOGONAL-CHOICE",
+        "key": "tr14",
+        "source": "解答图/tr14.tex",
+        "severity": "medium",
+        "initial_finding": "重根本征方程Iu=Au、u_z=0不能单独推出两本征方向正交；末式须说明是额外选择标准正交主轴组的条件。",
+        "source_resolution": "末式前已加“另选正交基”，正确区分本征方向自由与正交基选择。",
+        "status": "fixed_passed",
+        "final_visual_verification": "实际查看solutions-20：末式前已明确写“另选正交基”，清楚区分本征方向与正交基选择；文字和公式无重叠。"
+      }
+    ],
+    "additional_required_edits": [],
+    "visual_findings": "48图经初检及修复终验后全部通过；tr02基点名、tr14正交基条件的最新渲染已实际查看，无残存穿字或裁切。",
+    "content_findings": "除记录的基点名和正交条件表述外，未发现其他新增计算式符号、箭头或数值错误。例49约束号数、例53提升正向、例56角加速度、例57过渡时间、例60/61陀螺关系、例64拉莫尔二阶项、训练18材料点加速度、训练20冲量、训练29能级差均一致。",
+    "context_checks": [
+      "tr04有限瞬心分式按正文的w≠u条件使用；退化情况另有完整正文讨论。",
+      "tr21的A,A,C关系用于正文明确构造的轴对称反例。",
+      "tr26的K/P判据按正文P≠0且真实允许区间条件使用；P=0另有讨论。"
+    ],
+    "reference_source_check": {
+      "questions_checked": 48,
+      "all_explicit_refs_present": true,
+      "all_figure_calls_present": true,
+      "rendered_pdf_cross_reference_resolution": "not_checked_in_this_scope"
+    },
+    "figures": [
+      {
+        "key": "ex49",
+        "source": "第三章-完善版讲义/解答图/ex49.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-13.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex50",
+        "source": "第三章-完善版讲义/解答图/ex50.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-13.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex51",
+        "source": "第三章-完善版讲义/解答图/ex51.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-13.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex52",
+        "source": "第三章-完善版讲义/解答图/ex52.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-13.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex53",
+        "source": "第三章-完善版讲义/解答图/ex53.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-14.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex54",
+        "source": "第三章-完善版讲义/解答图/ex54.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-14.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex55",
+        "source": "第三章-完善版讲义/解答图/ex55.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-14.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex56",
+        "source": "第三章-完善版讲义/解答图/ex56.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-14.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex57",
+        "source": "第三章-完善版讲义/解答图/ex57.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-15.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex58",
+        "source": "第三章-完善版讲义/解答图/ex58.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-15.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex59",
+        "source": "第三章-完善版讲义/解答图/ex59.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-15.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex60",
+        "source": "第三章-完善版讲义/解答图/ex60.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-15.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex61",
+        "source": "第三章-完善版讲义/解答图/ex61.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-16.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex62",
+        "source": "第三章-完善版讲义/解答图/ex62.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-16.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex63",
+        "source": "第三章-完善版讲义/解答图/ex63.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-16.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex64",
+        "source": "第三章-完善版讲义/解答图/ex64.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-16.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex65",
+        "source": "第三章-完善版讲义/解答图/ex65.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-17.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "ex66",
+        "source": "第三章-完善版讲义/解答图/ex66.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-17.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr01",
+        "source": "第三章-完善版讲义/解答图/tr01.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-17.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr02",
+        "source": "第三章-完善版讲义/解答图/tr02.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-17.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "fixed_passed",
+        "formula_status": "passed",
+        "final_visual_note": "实际查看solutions-17：基点已标A，与v_P=v_A和正文一致；无穿字或裁切。"
+      },
+      {
+        "key": "tr03",
+        "source": "第三章-完善版讲义/解答图/tr03.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-18.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr04",
+        "source": "第三章-完善版讲义/解答图/tr04.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-18.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr05",
+        "source": "第三章-完善版讲义/解答图/tr05.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-18.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr06",
+        "source": "第三章-完善版讲义/解答图/tr06.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-18.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr07",
+        "source": "第三章-完善版讲义/解答图/tr07.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-19.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr08",
+        "source": "第三章-完善版讲义/解答图/tr08.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-19.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr09",
+        "source": "第三章-完善版讲义/解答图/tr09.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-19.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr10",
+        "source": "第三章-完善版讲义/解答图/tr10.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-19.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr11",
+        "source": "第三章-完善版讲义/解答图/tr11.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-20.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr12",
+        "source": "第三章-完善版讲义/解答图/tr12.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-20.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr13",
+        "source": "第三章-完善版讲义/解答图/tr13.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-20.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr14",
+        "source": "第三章-完善版讲义/解答图/tr14.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-20.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "fixed_passed",
+        "formula_status": "passed",
+        "final_visual_note": "实际查看solutions-20：末式前已明确写“另选正交基”，清楚区分本征方向与正交基选择；文字和公式无重叠。"
+      },
+      {
+        "key": "tr15",
+        "source": "第三章-完善版讲义/解答图/tr15.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-21.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr16",
+        "source": "第三章-完善版讲义/解答图/tr16.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-21.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr17",
+        "source": "第三章-完善版讲义/解答图/tr17.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-21.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr18",
+        "source": "第三章-完善版讲义/解答图/tr18.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-21.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr19",
+        "source": "第三章-完善版讲义/解答图/tr19.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-22.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr20",
+        "source": "第三章-完善版讲义/解答图/tr20.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-22.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr21",
+        "source": "第三章-完善版讲义/解答图/tr21.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-22.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr22",
+        "source": "第三章-完善版讲义/解答图/tr22.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-22.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr23",
+        "source": "第三章-完善版讲义/解答图/tr23.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-23.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr24",
+        "source": "第三章-完善版讲义/解答图/tr24.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-23.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr25",
+        "source": "第三章-完善版讲义/解答图/tr25.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-23.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr26",
+        "source": "第三章-完善版讲义/解答图/tr26.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-23.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr27",
+        "source": "第三章-完善版讲义/解答图/tr27.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-24.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr28",
+        "source": "第三章-完善版讲义/解答图/tr28.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-24.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr29",
+        "source": "第三章-完善版讲义/解答图/tr29.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-24.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      },
+      {
+        "key": "tr30",
+        "source": "第三章-完善版讲义/解答图/tr30.tex",
+        "atlas": "第三章-完善版讲义/工作文件/解答图总览PNG/solutions-24.png",
+        "source_exists": true,
+        "explicit_reference_count": 1,
+        "figure_call_count": 1,
+        "visual_status": "passed",
+        "formula_status": "passed"
+      }
+    ],
+    "final_recheck": {
+      "reviewed_at": "2026-10-17T18:34:13",
+      "scope": [
+        "tr02",
+        "tr14"
+      ],
+      "result": "passed",
+      "actual_images_viewed": [
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图终验PNG/solutions-17.png",
+          "sha256": "e058681a196a173c928135a1529985521c86f99b974997b4c4bc2d0e51f536a5"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/解答图终验PNG/solutions-20.png",
+          "sha256": "5f09c4e2798ad14f0d17f3fb1f0a3b6ad8f803bbf9f1b2fddc77fe3415d835bd"
+        }
+      ],
+      "notes": {
+        "tr02": "实际查看solutions-17：基点已标A，与v_P=v_A和正文一致；无穿字或裁切。",
+        "tr14": "实际查看solutions-20：末式前已明确写“另选正交基”，清楚区分本征方向与正交基选择；文字和公式无重叠。"
+      },
+      "new_scope_added": false
+    }
+  },
+  "result": "passed"
+}

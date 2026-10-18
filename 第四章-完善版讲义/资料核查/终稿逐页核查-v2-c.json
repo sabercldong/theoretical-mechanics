@@ -1,0 +1,534 @@
+{
+  "status": "passed",
+  "fixed_pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/整册终校-v2.pdf",
+  "fixed_pdf_sha256": "c57b205a4c462fb218270a3b776c1b453244fc114d0be93328af64fb9496bfa3",
+  "total_pdf_pages": 87,
+  "inspected_physical_pages": [
+    59,
+    87
+  ],
+  "inspection_count": 29,
+  "actual_render_scale": 1.5,
+  "digest_spec": "PyMuPDF page.get_pixmap(matrix=fitz.Matrix(0.8,0.8), alpha=False)，默认 RGB、annots=True；pixmap.digest.hex()。",
+  "figures_reviewed": [
+    "4.72",
+    "4.73",
+    "4.74",
+    "4.75",
+    "4.76",
+    "4.77",
+    "4.78",
+    "4.79",
+    "4.80",
+    "4.81",
+    "4.82",
+    "4.83",
+    "4.84",
+    "4.85",
+    "4.86",
+    "4.87",
+    "4.88",
+    "4.89",
+    "4.90",
+    "4.91",
+    "4.92",
+    "4.93",
+    "4.94"
+  ],
+  "blocking_issues": [],
+  "actual_visual_issues": [],
+  "pages": [
+    {
+      "physical_page": 59,
+      "printed_page": 54,
+      "status": "passed",
+      "pixmap_digest_0_8": "50df2989364b651c156dc5f1fb5aee67",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0cb2387fc440535fa107f2966ca481a1db6ee850f78df8f361b28447eeb3263a",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p059.png",
+      "notes": "南北半球洋流连接图 4.72–4.73 的岸界、箭头、冷暖色和图题完整，与文字的洋流分区相符，无相互遮挡。",
+      "issues": []
+    },
+    {
+      "physical_page": 60,
+      "printed_page": 55,
+      "status": "passed",
+      "pixmap_digest_0_8": "3e9e99358ffa5847e8e6a60f5e84564f",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "b12644678e4fe5386401dcc7bcb06546052134e60c188345e2c798f51dba4757",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p060.png",
+      "notes": "洋流表格列宽完整，地转平衡公式与图 4.74 的低压/高压旋向一致；脚注无截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 61,
+      "printed_page": 56,
+      "status": "passed",
+      "pixmap_digest_0_8": "cd0fcd3a8de0537f604886cc0bb21415",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "e098de1d64a9b859ded39c6e277c7d17fc34c5a70f2ef4db75b6c5527ff5d761",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p061.png",
+      "notes": "原图 4.75 外侧椭圆及全部流向箭头完整，图题明确原反气旋中心箭头错误应改顺时针；两张卫星原图 4.76–4.77 完整，例 37 排版连续。",
+      "issues": []
+    },
+    {
+      "physical_page": 62,
+      "printed_page": 57,
+      "status": "passed",
+      "pixmap_digest_0_8": "00465e0604ee9345ee746cf74af2bb20",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "c5dcf0004e2cb1f9ee437fedfbcf01af4124b7257c44fc8cb2eb3956113b4010",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p062.png",
+      "notes": "含摩擦风场图 4.78 的四种旋向清晰；地转近似、曲率项与梯度风方程分层清楚，公式编号和下方解释完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 63,
+      "printed_page": 58,
+      "status": "passed",
+      "pixmap_digest_0_8": "f63eab788d1b7607978a42bddf9db199",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "af9f43bf2baea3b4a983cbf5b4e0e32cbd92ff36e99d76e8ba902ac6bdc5bbfe",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p063.png",
+      "notes": "河流原图 4.79 及截面模型图 4.80 均完整，右岸定义、横向压力与水位差推导相符；无图题叠压。",
+      "issues": []
+    },
+    {
+      "physical_page": 64,
+      "printed_page": 59,
+      "status": "passed",
+      "pixmap_digest_0_8": "31cb5a702d14b59d63a043bca8e5c6c5",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "4701b5d4d03af3dac173d6b48154131ce9583575678a10c1dd3c24c8ac99ea2a",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p064.png",
+      "notes": "铁路支承力和尺度比较清晰，例 38 后开始落体部分；4.9 与 4.9.1 标题均跟随实质正文，方程组及说明完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 65,
+      "printed_page": 60,
+      "status": "passed",
+      "pixmap_digest_0_8": "8894b647a5e15e39929acaddc896c827",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "569b890dcccf2de4fe10b7db29fc37fd5a8db42425951bd9d4b93375964ada44",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p065.png",
+      "notes": "静释落体一阶偏东推导与图 4.81 的速度/科氏力箭头一致；例 39–40 及角动量解释完整，无孤立标题。",
+      "issues": []
+    },
+    {
+      "physical_page": 66,
+      "printed_page": 61,
+      "status": "passed",
+      "pixmap_digest_0_8": "37a4506527a2c8a78ade0518a8f6d121",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "46f7f1fac70d169cdbf523a072f3c25d6ac6cbf5d58844d64cc5938ff5fd8254",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p066.png",
+      "notes": "竖直上抛图 4.82 与负的返回位移相符；任意初速轨迹与落地时间修正公式排布完整，末式未越过页脚。",
+      "issues": []
+    },
+    {
+      "physical_page": 67,
+      "printed_page": 62,
+      "status": "passed",
+      "pixmap_digest_0_8": "21a2538095f452dd922b992715b889aa",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0ae6bb4c0862eef2f0175d8ad13e7d0a1a5ad5c11cab81743844b4c37ba1f2af",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p067.png",
+      "notes": "例 42 的落点时间修正、半立方轨迹与例 43 的实验拟合相接完整；公式和行间距正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 68,
+      "printed_page": 63,
+      "status": "passed",
+      "pixmap_digest_0_8": "cec0639ab3ce6379d3959c168261a06b",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "553356e73e7c425869db0ee1ad78e01fecc7b7081e9d33d7c623cf0c2d469717",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p068.png",
+      "notes": "常重力科氏模型的旋转算子、显式积分和二阶展开完整；长公式均在正文宽度内，物理适用边界明确。",
+      "issues": []
+    },
+    {
+      "physical_page": 69,
+      "printed_page": 64,
+      "status": "passed",
+      "pixmap_digest_0_8": "64136b369d2c392f3af52e4a03a82129",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "5fe26cc0a27d2b281996496c972c848d0d1148044e225dc2f8e60ac33e1edf67",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p069.png",
+      "notes": "先贤祠原照片 4.83 与实验版画 4.84 完整清晰，傅科摆线性方程与图题对应；文末引用脚注没有重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 70,
+      "printed_page": 65,
+      "status": "passed",
+      "pixmap_digest_0_8": "2fd656aa243fbce8d7c702e9cf910f46",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "41e4f04c3e82242cc633b5c9bd325bf4203a6112cf9f32672d5f339f12fb3b89",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p070.png",
+      "notes": "约束展开、张力阶次说明完整；原图 4.85 的刻度环和穹顶剖面无裁断，模型图 4.86 的摆长和水平方向清晰。",
+      "issues": []
+    },
+    {
+      "physical_page": 71,
+      "printed_page": 66,
+      "status": "passed",
+      "pixmap_digest_0_8": "c5ba11b17001498d1844ed8efe6530a2",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "d9e6350571c08398207e8db803929c9c8596c73c394ea2d50b2e9d2de207aaf6",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p071.png",
+      "notes": "地心/当地轴原图 4.87 的坐标、原图纬度和正文符号转换完整；复变量通解及例 44 开头无截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 72,
+      "printed_page": 67,
+      "status": "passed",
+      "pixmap_digest_0_8": "11fd4a3cf1f473895d23eb2b95c42c46",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "e3f938726806acfc94332f6fc3fdef49fc2ba97ca45689c58fe249c85ccd7956",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p072.png",
+      "notes": "例 44 实变量展开与慢坐标椭圆图 4.88 一致；进动正负、360度周期与无向轴重合时间明确，全部文字可读。",
+      "issues": []
+    },
+    {
+      "physical_page": 73,
+      "printed_page": 68,
+      "status": "passed",
+      "pixmap_digest_0_8": "91e09570d2e9811dcf9aa02fbe15283a",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "7d71ed977a8b1393657734d9e7efabb3c8813c759c76f75d9af4a910d3875fef",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p073.png",
+      "notes": "原轨迹图 4.89 圆周、公式完整，图题清楚区别原图ω0和正文ω0；摆球照片 4.90 与模型图 4.91 完整，无重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 74,
+      "printed_page": 69,
+      "status": "passed",
+      "pixmap_digest_0_8": "4d6088afddc49dba31d699fe21a72736",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "7751dbaf0c91426a0868a5d852e608202646f972bd24bd751d149d49aebfaaf6",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p074.png",
+      "notes": "巴黎/北京/极点数值、振幅包络换算与两个圆偏振模式分节完整；守恒式及阻尼小节有正文承接。",
+      "issues": []
+    },
+    {
+      "physical_page": 75,
+      "printed_page": 70,
+      "status": "passed",
+      "pixmap_digest_0_8": "e6981624a2fdedd94e9b1808f6545739",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "20c8bdd7fc633dffa4d03dcb8f6a8971cac679510df7de6dcfa68272c79020bb",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p075.png",
+      "notes": "实验流程图 4.92 与傅科肖像 4.93 完整；能量章标题、功率式和雅可比量说明排列正常，无孤立标题。",
+      "issues": []
+    },
+    {
+      "physical_page": 76,
+      "printed_page": 71,
+      "status": "passed",
+      "pixmap_digest_0_8": "35ff57ebef751fe36f54a21d4c4a686a",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "81a524c652da84c01382d87bc7a65e82064acf667d209264ace9baab23c7d383",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p076.png",
+      "notes": "雅可比量与惯性系能量恒等式、例 46–47 及变转速公式清楚完整；长公式未越界。",
+      "issues": []
+    },
+    {
+      "physical_page": 77,
+      "printed_page": 72,
+      "status": "passed",
+      "pixmap_digest_0_8": "bf4a49d7e58bf366bc324cd99144993a",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0a3357258455d81c606d32b10d4a82e7f0940250d09377afe30d7975a87cc023",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p077.png",
+      "notes": "拉格朗日量推导及双路径流程图 4.94 完整，框中文字与箭头无重叠；检查表续排到下一页。",
+      "issues": []
+    },
+    {
+      "physical_page": 78,
+      "printed_page": 73,
+      "status": "passed",
+      "pixmap_digest_0_8": "4e4b57967f7d18a163c96621cace63c3",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "a3c81f30aaf686163966e1300c6a0fd963dd6e150e715ccb05dcd3107eecb23f",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p078.png",
+      "notes": "承接检查表重复表头，前章定理连接与公式索引完整，公式长行均在栏内。",
+      "issues": []
+    },
+    {
+      "physical_page": 79,
+      "printed_page": 74,
+      "status": "passed",
+      "pixmap_digest_0_8": "76fc8c8d53712869ce9565d220e0c663",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "f95cc42a76015f0dffd0d47e3e6cd75dc88ae6806e5c8a061a8a9f6f10c86ff2",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p079.png",
+      "notes": "公式索引续表正常，自测总说明及自测 1–3 的题目和解答完整，编号顺序正确。",
+      "issues": []
+    },
+    {
+      "physical_page": 80,
+      "printed_page": 75,
+      "status": "passed",
+      "pixmap_digest_0_8": "c51348090eebacea9f8d6dd870517483",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0ab68cde3e45dafdc9ea3d5091c2106b65ce01e12b999cbd88d63b9e50eb98d7",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p080.png",
+      "notes": "自测 4–7 均包含题干与解答，变速静摩擦及临界双弹簧公式完整；无截断或重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 81,
+      "printed_page": 76,
+      "status": "passed",
+      "pixmap_digest_0_8": "34d110db8927f4dce0ddd7d722af4792",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "f0de2bc3c8e133d89600094d78dc5b08e6d7c48e7d51727dc90ce7c38d0e11b7",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p081.png",
+      "notes": "自测 8–12 连续，偏置摆和复摆数值/频率式完整；自测 12 势能展开之后的解释续于下一页，无内容丢失。",
+      "issues": []
+    },
+    {
+      "physical_page": 82,
+      "printed_page": 77,
+      "status": "passed",
+      "pixmap_digest_0_8": "87d19165494dd8e870086ef642003193",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "28fffe9c1f023bf72ee1d26726afca70d77288f840d298d364413c13c595ed54",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p082.png",
+      "notes": "自测 12 的三行收尾完整，说明非线性稳定和首个非零高阶项；本页留白较大已告知父级，未发现实际截断、错图或重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 83,
+      "printed_page": 78,
+      "status": "passed",
+      "pixmap_digest_0_8": "14a8a5c8791b58dbf2b9d97cb4b2ea49",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "e14a84c93e888b70cb36fd2c30a119a5629747ea5807f436ad676d209ecca6e0",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p083.png",
+      "notes": "自测 13–16 的有效重力、称重差、惯性圆与梯度风解答完整，公式方向与正文一致。",
+      "issues": []
+    },
+    {
+      "physical_page": 84,
+      "printed_page": 79,
+      "status": "passed",
+      "pixmap_digest_0_8": "db9463db3936bb921acd716f7307d50e",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "90d2814a74149ff0c5f93346fc555bcf66d536e011ef186c0944f84fd2d84e6b",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p084.png",
+      "notes": "自测 17–21 的落体、抛体与傅科摆初值检验完整，分组标题均有正文承接。",
+      "issues": []
+    },
+    {
+      "physical_page": 85,
+      "printed_page": 80,
+      "status": "passed",
+      "pixmap_digest_0_8": "01a38b34508ee8f7ada7ea3bf3f3c2e0",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "560ad638d853233aa2c945e3dda728e2d191e3b2f46de9cf86c08643208d1bef",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p085.png",
+      "notes": "自测 22–24 完整，惯性圆与进动周期之比、雅可比守恒条件表述对应正文，末尾提示块文字未越框。",
+      "issues": []
+    },
+    {
+      "physical_page": 86,
+      "printed_page": 81,
+      "status": "passed",
+      "pixmap_digest_0_8": "ae7575dd1a7c04f68619924cac99e482",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "b76e71361b036b61a01be8043e3eae9c41f2c8f7cd6280af9360d365315dd65d",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p086.png",
+      "notes": "原作业题号表完整；原图索引首段 20 条与整合清单对应，三列宽度合适，没有截行。",
+      "issues": []
+    },
+    {
+      "physical_page": 87,
+      "printed_page": 82,
+      "status": "passed",
+      "pixmap_digest_0_8": "6c832ef3c4319893b31b02d53291cc12",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "1e7d0d31e63349b5f53eac19ca3eb86a600a1aeb677155f484375704109e3cbe",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v2-59-87/p087.png",
+      "notes": "原图索引续页 27 条，含最新 c4-2 第16页当地轴图和全部傅科摆原图；表头、行文字及底线完整。",
+      "issues": []
+    }
+  ],
+  "index_validation": {
+    "total_numbered_captions": 94,
+    "caption_sequence_contiguous": true,
+    "original_figure_index_rows": 47,
+    "integrated_manifest_count": 47,
+    "index_figure_numbers": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      15,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26,
+      28,
+      30,
+      31,
+      33,
+      35,
+      39,
+      40,
+      42,
+      45,
+      47,
+      49,
+      50,
+      54,
+      55,
+      56,
+      57,
+      60,
+      63,
+      64,
+      66,
+      68,
+      70,
+      75,
+      76,
+      77,
+      79,
+      83,
+      84,
+      85,
+      87,
+      89,
+      90,
+      93
+    ],
+    "all_index_figures_have_captions": true,
+    "source_deck_page_pairs_match_integrated_manifest_in_order": true
+  }
+}

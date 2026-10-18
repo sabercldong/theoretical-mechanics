@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[->,gray](-1.8,0)--(2,0)node[right]{$x$};\draw[->,gray](0,-.2)--(0,2.5)node[above]{$y$};\draw[thick,domain=-1.4:1.4,samples=40]plot(\x,{\x*\x});\draw[thick](-1.4,1.96)--(1.4,1.96);\node[right]at(1.4,1.96){$a$};\draw[dashed](-.9,.81)--(-.9,1.96);\draw[dashed](-.65,.4225)--(-.65,1.96);\draw[<->](-.9,2.2)--(-.65,2.2);\node[above]at(-.775,2.2){$\dd x$};\node at(.8,.4){$y=kx^2$};\node[below left]at(0,0){$O$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\dd A=(a-kx^2)\dd x$\\[6pt]$\Downarrow$\\[6pt]$Y_C=3a/5$};
+\end{tikzpicture}

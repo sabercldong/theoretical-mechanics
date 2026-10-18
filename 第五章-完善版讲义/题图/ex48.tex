@@ -1,0 +1,6 @@
+% 径向动量对应径向速度，方位角动量对应横向转动；对哈密顿函数按固定动量求径向偏导才能得到离心项。
+\begin{tikzpicture}
+\draw[->](-.2,0)--(4.3,0)node[right]{$x$};\draw[->](0,-.2)--(0,3.2)node[above]{$y$};\draw[ink,thick](0,0)--(2.7,1.8)node[midway,above]{$r$};\fill(2.7,1.8)circle(4pt);
+\draw[force](2.7,1.8)--++(.998460,.665640)node[right]{$\vect e_r$};\draw[force](2.7,1.8)--++(-.665640,.998460)node[above]{$\vect e_\phi$};\draw(.8,0)arc(0:34:.8);\node at(1.1,.3){$\phi$};
+\node[anchor=west,align=left]at(4.8,1.5){$\vect v=\dot r\vect e_r+r\dot\phi\vect e_\phi$\\$p_\phi=mr^2\dot\phi$};
+\end{tikzpicture}

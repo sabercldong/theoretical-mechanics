@@ -1,0 +1,911 @@
+{
+  "report_type": "final_lecture_layout_visual_QA",
+  "generated_at": "2026-10-18T08:33:20.651507+08:00",
+  "baseline_pdf": {
+    "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/排版终校基准.pdf",
+    "sha256": "2e8702728845f7c1e9445b7454c5ea4bf292a443ead708d6110f2cdf7e1fd4a6",
+    "page_count": 172
+  },
+  "scope": {
+    "physical_pdf_pages": [
+      61,
+      120
+    ],
+    "page_count": 60,
+    "printed_pages": [
+      55,
+      114
+    ],
+    "overview_sheets": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "single_pages_opened": [
+      70,
+      73,
+      74,
+      78,
+      79,
+      102,
+      110,
+      112,
+      116,
+      119
+    ],
+    "focus": [
+      "标题及解答孤立",
+      "公式与文字溢出重叠",
+      "原图裁边",
+      "明显小字",
+      "异常大空白",
+      "页脚碰撞"
+    ],
+    "excluded": "数学和物理内容已单独审核，本次未扩展。"
+  },
+  "method": "逐张实际查看sheet11.png至sheet20.png，每张6页，共60页；对10个可疑/确认页实际打开pNNN.png；用基准PDF文本层字号核实图内普通文字，未把公式上下标视作字号缺陷。按父代理通知收束，不追加扫描。",
+  "summary": {
+    "pages_reviewed": 60,
+    "finding_groups": 6,
+    "affected_pages": [
+      70,
+      73,
+      74,
+      78,
+      79,
+      102,
+      112,
+      116
+    ],
+    "moderate": 5,
+    "minor": 1,
+    "critical": 0,
+    "conclusion": "未发现标题孤悬、正文/公式溢出重叠、原图标签裁断、页脚碰撞或异常整块空白；确认6组局部小字，涉及8页。此结论只绑定基准PDF，后续修复未在本报告中声称复验通过。"
+  },
+  "findings": [
+    {
+      "id": "B-layout-01",
+      "pages": [
+        70
+      ],
+      "printed_pages": [
+        64
+      ],
+      "example": "例40",
+      "figures": [
+        "5.141",
+        "5.142"
+      ],
+      "severity": "moderate",
+      "issue": "欧拉角条件图和分析图中的三角定义与三维投影说明明显偏小。",
+      "evidence": "实际打开p070.png；PDF文本层非上下标正文标签分别5.87pt、6.49pt。上方图5.140可读，问题限于后两幅缩图。",
+      "files": [
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/题图/ex40.tex",
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/解答图/ex40.tex"
+      ],
+      "scaling_cause": "题图右侧长图例将画布拉宽，再受QuestionStatement右栏.37\\linewidth约束；解答图左窗max width=6.2cm再次整体缩小。",
+      "minimal_fix": "将题图右侧图例移至几何图下方以缩短整体宽度；若仍不足，再按既有上下式解答图模板让模型占全宽。无需改变角度和几何。",
+      "status": "confirmed_in_baseline"
+    },
+    {
+      "id": "B-layout-02",
+      "pages": [
+        73,
+        74
+      ],
+      "printed_pages": [
+        67,
+        68
+      ],
+      "example": "例42",
+      "figures": [
+        "5.146",
+        "5.147"
+      ],
+      "severity": "moderate",
+      "issue": "半圆柱图的质心坐标说明及O/C/A/d/r标签偏小。",
+      "evidence": "实际打开p073.png和p074.png；非上下标图中文字分别5.96pt、6.41pt。原图5.148裁边与标记正常。",
+      "files": [
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/题图/ex42.tex",
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/解答图/ex42.tex"
+      ],
+      "scaling_cause": "题图at(3.6,1.5)处横向长坐标说明扩大包围盒；QuestionStatement.37\\linewidth及解答图max width=6.2cm缩小整个模型。",
+      "minimal_fix": "将质心坐标三行说明移到几何图下方，缩短包围盒宽度；保持坐标定义不变。",
+      "status": "confirmed_in_baseline"
+    },
+    {
+      "id": "B-layout-03",
+      "pages": [
+        78,
+        79
+      ],
+      "printed_pages": [
+        72,
+        73
+      ],
+      "example": "例44",
+      "figures": [
+        "5.153",
+        "5.154"
+      ],
+      "severity": "moderate",
+      "issue": "并列比较中的双弹簧模型实际上按上下堆叠排版，双弹簧图m、k、l、theta、x缩到约5pt，阅读困难。",
+      "evidence": "实际打开p078.png和p079.png；双弹簧内标签分别5.03pt、4.92pt；单弹簧约6.99pt、6.83pt。",
+      "files": [
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/题图/ex44.tex",
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/解答图/ex44.tex",
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/补充图/c5-equal-cart.tex",
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/补充图/c5-diagram-41.tex"
+      ],
+      "scaling_cause": "题图中两个模型先各resizebox{5cm}{!}，再上下放于y=1.5、-2；整图受LongQuestionStatement max height=4.5cm或解答图内部max height=4.4cm限制，发生二次缩小。",
+      "minimal_fix": "两个模型改为左右并排，可将各自宽度提高至约6cm并把标题放下方；保留单/双弹簧、角度和变量对应。现有外部宽度约13cm足以承接，不必提高整页高度。",
+      "status": "confirmed_in_baseline"
+    },
+    {
+      "id": "B-layout-04",
+      "pages": [
+        102
+      ],
+      "printed_pages": [
+        96
+      ],
+      "example": "例60",
+      "figures": [
+        "5.191"
+      ],
+      "severity": "moderate",
+      "issue": "题图相椭圆右侧四行说明与公式为明显小字。",
+      "evidence": "实际打开p102.png；非上下标文字5.67pt。下一页分析图5.192在总览中已明显放大，问题限题图。",
+      "files": [
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/题图/ex60.tex"
+      ],
+      "scaling_cause": "右侧at(3.5,.55)长图例和椭圆横排，受QuestionStatement右栏.37\\linewidth限制。",
+      "minimal_fix": "将四行说明移到相椭圆下方，缩窄包围盒；或者仅将该题切换LongQuestionStatement，不改公式。",
+      "status": "confirmed_in_baseline"
+    },
+    {
+      "id": "B-layout-05",
+      "pages": [
+        112
+      ],
+      "printed_pages": [
+        106
+      ],
+      "example": "例66",
+      "figures": [
+        "5.204"
+      ],
+      "severity": "minor",
+      "issue": "条件图右侧“共焦椭圆与双曲线/子午平面/绕z轴”说明偏小。",
+      "evidence": "实际打开p112.png；说明6.34pt。分析图5.205已清晰，未见裁切或重叠。",
+      "files": [
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/题图/ex66.tex"
+      ],
+      "scaling_cause": "题图含scale=.8几何与右侧at(3.8,1)说明，整体被QuestionStatement.37\\linewidth栏宽压缩。",
+      "minimal_fix": "仅将例66题干调用由QuestionStatement切换LongQuestionStatement，保持题图及解答图数学内容；或将说明移至图下。",
+      "status": "confirmed_in_baseline"
+    },
+    {
+      "id": "B-layout-06",
+      "pages": [
+        116
+      ],
+      "printed_pages": [
+        110
+      ],
+      "example": "例68",
+      "figures": [
+        "5.209"
+      ],
+      "severity": "moderate",
+      "issue": "题图两个相平面及“无阻尼/欠阻尼”说明明显偏小。",
+      "evidence": "实际打开p116.png；普通标签和说明均5.46pt。分析图5.210文字和箭头清楚，问题限题图。",
+      "files": [
+        "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/题图/ex68.tex"
+      ],
+      "scaling_cause": "两幅相平面以xshift=6cm横排，整体被QuestionStatement右栏.37\\linewidth缩小。",
+      "minimal_fix": "仅将例68题干调用切换LongQuestionStatement，使用既有横排两图；解答图无需改动。",
+      "status": "confirmed_in_baseline"
+    }
+  ],
+  "accepted_observations": [
+    {
+      "pages": [
+        110
+      ],
+      "note": "图5.201的题图说明约7.36pt，单页仍可辨；图5.202已清楚，未再列为残留。"
+    },
+    {
+      "pages": [
+        119
+      ],
+      "note": "原图5.215/5.216数值刻度较小，但曲线、轴名、鞍点说明和图题完整；作为保留的课件参考原图未判为应修项。"
+    },
+    {
+      "pages": [
+        76,
+        102,
+        106
+      ],
+      "note": "页尾解答开头带有完整解释句，后页衔接分析图；未出现只剩“解”或标题的孤悬。"
+    },
+    {
+      "pages": [
+        78,
+        81,
+        87,
+        96
+      ],
+      "note": "题干和条件图后留白服务于下页完整解答块，未发现异常空白页。"
+    }
+  ],
+  "page_records": [
+    {
+      "pdf_page": 61,
+      "printed_page": 55,
+      "overview_sheet": "sheet11.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "d4f00a470631586dd57465d3890a25f46641392aedf990716bbebb8d1fcdb065"
+    },
+    {
+      "pdf_page": 62,
+      "printed_page": 56,
+      "overview_sheet": "sheet11.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "56626c14bfcbc3be699a6417422be8a85ee6dcbefb27c0acc0dc94e35726dd52"
+    },
+    {
+      "pdf_page": 63,
+      "printed_page": 57,
+      "overview_sheet": "sheet11.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "c6a967aed9f196c0fc1300f0c880852a1cfcea406fc378b875e2d8ae353951cd"
+    },
+    {
+      "pdf_page": 64,
+      "printed_page": 58,
+      "overview_sheet": "sheet11.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "a90db156f631c17a49fc071400a8e80848900f60cfa6e7b7c7065430a923e56c"
+    },
+    {
+      "pdf_page": 65,
+      "printed_page": 59,
+      "overview_sheet": "sheet11.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "3fb66046bebd2591c773754540b8317d959a9f36da9ef7741da018f1b34e9ac7"
+    },
+    {
+      "pdf_page": 66,
+      "printed_page": 60,
+      "overview_sheet": "sheet11.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "271e0ea6fbaddc20822b70561c2a00ee0edb863d295505c397994ce8acbc8915"
+    },
+    {
+      "pdf_page": 67,
+      "printed_page": 61,
+      "overview_sheet": "sheet12.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "475a53337bfd1af1ab928f3c3412847fec8cc103c871b586e473c6a986da5b4f"
+    },
+    {
+      "pdf_page": 68,
+      "printed_page": 62,
+      "overview_sheet": "sheet12.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "838a961b090f0932c0ec8ab8315b97fe70f03723e9acd8d049c97db3d0cb8cf5"
+    },
+    {
+      "pdf_page": 69,
+      "printed_page": 63,
+      "overview_sheet": "sheet12.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "ffdc845e5e95403049d235dc066a35585873571c8ecdafc1d63070a6655ef30d"
+    },
+    {
+      "pdf_page": 70,
+      "printed_page": 64,
+      "overview_sheet": "sheet12.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-01"
+      ],
+      "png_sha256": "f731534f7d2dd4b9d9143223937756bcbffa8863905f14e140f84f0e01dc7f98"
+    },
+    {
+      "pdf_page": 71,
+      "printed_page": 65,
+      "overview_sheet": "sheet12.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "82303430f8a28548df126921af4b7599e5b8389512b507c66a356049eb9793ac"
+    },
+    {
+      "pdf_page": 72,
+      "printed_page": 66,
+      "overview_sheet": "sheet12.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "1482b599c1c9fff7680938eca757a21600464fe2cd3a1d96dc42762b0b40b7bc"
+    },
+    {
+      "pdf_page": 73,
+      "printed_page": 67,
+      "overview_sheet": "sheet13.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-02"
+      ],
+      "png_sha256": "ea015b6ed39a59eec4f71be71713f97a9727235c967cb851803670fc1e0e79ff"
+    },
+    {
+      "pdf_page": 74,
+      "printed_page": 68,
+      "overview_sheet": "sheet13.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-02"
+      ],
+      "png_sha256": "53f463c9eff12ead9579a7c3941deac6b6889c7f62ee75b4d737bfa656c1e20e"
+    },
+    {
+      "pdf_page": 75,
+      "printed_page": 69,
+      "overview_sheet": "sheet13.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "2e42cc0b1eb6aa6a44ff2160ddebf5fd1e5438ad2eec4d0c081a1f4de804c545"
+    },
+    {
+      "pdf_page": 76,
+      "printed_page": 70,
+      "overview_sheet": "sheet13.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "343e9d4b6d52876d232a15d70ab7b6f35ca764b25c813ba2dfbbdf040180d7e6"
+    },
+    {
+      "pdf_page": 77,
+      "printed_page": 71,
+      "overview_sheet": "sheet13.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "d8201c5b379b09dd8ec6f72146c821b39957ec6e30fb070db7727a0b71046fde"
+    },
+    {
+      "pdf_page": 78,
+      "printed_page": 72,
+      "overview_sheet": "sheet13.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-03"
+      ],
+      "png_sha256": "bbb0b8782b243d70f0355327e20fa408e2e3c9a44c1e95beee2eba1750399949"
+    },
+    {
+      "pdf_page": 79,
+      "printed_page": 73,
+      "overview_sheet": "sheet14.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-03"
+      ],
+      "png_sha256": "93628276ae59378fe6cf24836bf9bbb7e67ada1c81390e1432297718c7c671cc"
+    },
+    {
+      "pdf_page": 80,
+      "printed_page": 74,
+      "overview_sheet": "sheet14.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "98b41e5e9cabe4cf359930bf347317d4d6c14def1432c57f69c6028c39594cd0"
+    },
+    {
+      "pdf_page": 81,
+      "printed_page": 75,
+      "overview_sheet": "sheet14.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "e0171fe37f86fa6e0bf8965901bca7b8f31f9b6e2dfc6958b7f817f88dff14c3"
+    },
+    {
+      "pdf_page": 82,
+      "printed_page": 76,
+      "overview_sheet": "sheet14.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "ea426653a6de0303744ebe3910d04bee61c7b9578e321ecd8cbd97f3d2276187"
+    },
+    {
+      "pdf_page": 83,
+      "printed_page": 77,
+      "overview_sheet": "sheet14.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "865613d7579244cfc64125178e3e8cfda2cd5c92826570f8a3cb23fbeae82785"
+    },
+    {
+      "pdf_page": 84,
+      "printed_page": 78,
+      "overview_sheet": "sheet14.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "3dd16ff30a7ab7e08a7903911af06993451e1587827172c5fcd8e305cf2f50c2"
+    },
+    {
+      "pdf_page": 85,
+      "printed_page": 79,
+      "overview_sheet": "sheet15.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "a4ec2abfeee21ead5b325e80e13f1626768bd67a318e54ba282c56ba1497fa21"
+    },
+    {
+      "pdf_page": 86,
+      "printed_page": 80,
+      "overview_sheet": "sheet15.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "d3661f55343c8b604c685501ce513da2e14300e50585c672df86ba62dd26a59a"
+    },
+    {
+      "pdf_page": 87,
+      "printed_page": 81,
+      "overview_sheet": "sheet15.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "65bd25894419ca06609dfbad1b0a3c8221ae65fea77f8f8989f4907128544325"
+    },
+    {
+      "pdf_page": 88,
+      "printed_page": 82,
+      "overview_sheet": "sheet15.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "226afbb8ad59b19d0a13476ef48c46d3b995234a3bd8c07e56f0d80a8c0427ff"
+    },
+    {
+      "pdf_page": 89,
+      "printed_page": 83,
+      "overview_sheet": "sheet15.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "e8b5cb2b76a5bdc9806c6e4db12063517a40f160066ae1d841f43ca3d1a761ef"
+    },
+    {
+      "pdf_page": 90,
+      "printed_page": 84,
+      "overview_sheet": "sheet15.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "c1e6f9a1f3e91738d29d4c7e078aa3667651cb37fd825bbd585acb6456870da9"
+    },
+    {
+      "pdf_page": 91,
+      "printed_page": 85,
+      "overview_sheet": "sheet16.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "09dae8c0824473ad026217ff8c83be5fec20a27d059f241fef624ceeefb1dace"
+    },
+    {
+      "pdf_page": 92,
+      "printed_page": 86,
+      "overview_sheet": "sheet16.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "ea0a69aaf6ddb88064c087e75c658af4e1eb4b4eb0bee8db4d71dcaef5b45b72"
+    },
+    {
+      "pdf_page": 93,
+      "printed_page": 87,
+      "overview_sheet": "sheet16.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "47661a40e8a3fcf862ce400e3081195f65ba77bd29b3ddd4a024498a88e7070a"
+    },
+    {
+      "pdf_page": 94,
+      "printed_page": 88,
+      "overview_sheet": "sheet16.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "4c2682921277040bff121f67ff4a0eb7439bc1d2cd4e4b78e7ee86721378db9b"
+    },
+    {
+      "pdf_page": 95,
+      "printed_page": 89,
+      "overview_sheet": "sheet16.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "a9cca4fd7b5a9f230417d2d2a03ce70be28182eaff05d9b9d4672e78f83025bc"
+    },
+    {
+      "pdf_page": 96,
+      "printed_page": 90,
+      "overview_sheet": "sheet16.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "477241a78551af8094abd10519ef518b4d92a5f0949e6937d753beece9d525d3"
+    },
+    {
+      "pdf_page": 97,
+      "printed_page": 91,
+      "overview_sheet": "sheet17.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "d2a6ff8282c72a8ef86e4add483296f55dc43d732e7bccf952d3488fbf724ab2"
+    },
+    {
+      "pdf_page": 98,
+      "printed_page": 92,
+      "overview_sheet": "sheet17.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "06987f5c2d266f70610e634b5fee7cad8a18d5c5169f1d328ee84dd84e32ac8c"
+    },
+    {
+      "pdf_page": 99,
+      "printed_page": 93,
+      "overview_sheet": "sheet17.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "665c8ff2fb287722feee72efb2f82f47398c085ac7dbe9bf78865b8c0bdbeb46"
+    },
+    {
+      "pdf_page": 100,
+      "printed_page": 94,
+      "overview_sheet": "sheet17.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "63553431abf1326485e73329703838d3a0e4755a1cba065bf9f55d7d6667501e"
+    },
+    {
+      "pdf_page": 101,
+      "printed_page": 95,
+      "overview_sheet": "sheet17.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "3efd9bd5649d5117cb607c02f50a9936d2b637ff9a040df24d0a3ce06335d372"
+    },
+    {
+      "pdf_page": 102,
+      "printed_page": 96,
+      "overview_sheet": "sheet17.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-04"
+      ],
+      "png_sha256": "664207934e6b27d4e994c1ca09e0b71296d51e73f8a0525ddbfbcf431b422c17"
+    },
+    {
+      "pdf_page": 103,
+      "printed_page": 97,
+      "overview_sheet": "sheet18.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "51bd7e038ab4036fcd798ba0b4067e50fba85187b7c6a6476149696e744547a0"
+    },
+    {
+      "pdf_page": 104,
+      "printed_page": 98,
+      "overview_sheet": "sheet18.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "9140f7c30e5eadd9c00e1d78811ac252b8f5e11fd80d4ea5303a8d84117437ff"
+    },
+    {
+      "pdf_page": 105,
+      "printed_page": 99,
+      "overview_sheet": "sheet18.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "67a4afa6d808b11e833ea11a0982ea2a6952437356d92cec0c0fb6f0592bcd45"
+    },
+    {
+      "pdf_page": 106,
+      "printed_page": 100,
+      "overview_sheet": "sheet18.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "d1da6b6390dd1aae4e8a4445bd904af4c3c03dc7f3e2a6f71cd4d414cc3bf330"
+    },
+    {
+      "pdf_page": 107,
+      "printed_page": 101,
+      "overview_sheet": "sheet18.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "ead2668c8d0c24d6ab94e0f1966e82c52d36911ec202f0cea6eb1f510daaaefe"
+    },
+    {
+      "pdf_page": 108,
+      "printed_page": 102,
+      "overview_sheet": "sheet18.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "ba51c72a58b0bd5b82112fbb7d5c9f499d88178c4db2233f5f77addb9436379f"
+    },
+    {
+      "pdf_page": 109,
+      "printed_page": 103,
+      "overview_sheet": "sheet19.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "63e60a12d3fe6c3aef25c0ada52fd48ec7ed21b629a74dd34c03495e35e0c417"
+    },
+    {
+      "pdf_page": 110,
+      "printed_page": 104,
+      "overview_sheet": "sheet19.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "e443801ba98009743d70eb1b2e4592b283825d4a962b7b1a678f3c44d5f57691"
+    },
+    {
+      "pdf_page": 111,
+      "printed_page": 105,
+      "overview_sheet": "sheet19.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "6f7d85395b95fbc9b185894c08048e247939e87c2910c28003692cda2820ee80"
+    },
+    {
+      "pdf_page": 112,
+      "printed_page": 106,
+      "overview_sheet": "sheet19.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-05"
+      ],
+      "png_sha256": "56397e761b67c34cbf6ce055d6895666deb970d099ee2dd1eb8474ada704d4ac"
+    },
+    {
+      "pdf_page": 113,
+      "printed_page": 107,
+      "overview_sheet": "sheet19.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "1ef77434c83577b4d2453e20339120436bbbfca42e1a66774a0375ec17d65c74"
+    },
+    {
+      "pdf_page": 114,
+      "printed_page": 108,
+      "overview_sheet": "sheet19.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "58b6fd905fe1d3b679f2efb9c045efb4c26bc09a4b3dfec66633b44e3496906a"
+    },
+    {
+      "pdf_page": 115,
+      "printed_page": 109,
+      "overview_sheet": "sheet20.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "7be60206deca03e9b772e4d101f11d63b256c735596f598d53b4693930429b9b"
+    },
+    {
+      "pdf_page": 116,
+      "printed_page": 110,
+      "overview_sheet": "sheet20.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "finding",
+      "finding_ids": [
+        "B-layout-06"
+      ],
+      "png_sha256": "6e559aee0c40485aea2ea1660cc9fa7352d3efc0f100ab19442db0fb276b0387"
+    },
+    {
+      "pdf_page": 117,
+      "printed_page": 111,
+      "overview_sheet": "sheet20.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "629573913bdf0aee503ed2ff774d4d2d956e5f68518b44b2ac1fcaf52cc72c73"
+    },
+    {
+      "pdf_page": 118,
+      "printed_page": 112,
+      "overview_sheet": "sheet20.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "22681e9acba8bb92e1e91a09d454323549afec9c52196a7ad353b64cfff5ada3"
+    },
+    {
+      "pdf_page": 119,
+      "printed_page": 113,
+      "overview_sheet": "sheet20.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": true,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "3e58334b0aef0e54e2af2bb66917bd410a62be7d7a53d558692648589312eaeb"
+    },
+    {
+      "pdf_page": 120,
+      "printed_page": 114,
+      "overview_sheet": "sheet20.png",
+      "actually_viewed_in_overview": true,
+      "single_page_opened": false,
+      "status": "no_actionable_layout_issue_observed",
+      "finding_ids": [],
+      "png_sha256": "8a690da9286b6b67aabdbf89b111b744b51f85138aeba69e2ff5ff30627760c9"
+    }
+  ],
+  "source_sheets": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet11.png",
+      "sha256": "db1f54fc3feb0f56868d032936cd3ecfd9a0bff7178e8df7f374dcb2a5d19192"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet12.png",
+      "sha256": "7ec32550f439819421624a6d0afaa7e31b4ee88e226a8c43b174226a6877b06d"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet13.png",
+      "sha256": "3b95661c6f5dc0e81dd272eb6a1670ffe639dd64ec14716bbdc8aa1721632596"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet14.png",
+      "sha256": "35bc15919af09431950cb64fdcfefe31ddf3eee5734a72d50aa4bbac81369245"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet15.png",
+      "sha256": "06188d781a502e665bb6780a51a3b213c6c3ef98e086fe2b84294b9fe44a4cc6"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet16.png",
+      "sha256": "17af8c2b642b1bf5489b4f8ffaeb65ce68d6529a9bb0b38ccc77033060f2678b"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet17.png",
+      "sha256": "2a662507ee50438727dc12f8dc7ea82884cd398ffcaf4e2027e7834be0b115a6"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet18.png",
+      "sha256": "a191c9b3145fb55a428bf7e01c3d26891afa9d9562383883f07be5bf787bc3db"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet19.png",
+      "sha256": "06def55d73e8a436dcfd397bb955ed8ed714fe80a596de7749372f22e94ec2d9"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet20.png",
+      "sha256": "8e67e02f124b43bf73f46ae2fd376a0254cb3f31e6103d3636c2fa236b649ffc"
+    }
+  ],
+  "later_change_notice": "父代理在报告完成前通知已修改例40、42、60图例位置以及例44并排布局。那些后续变更未由本轮查看，以上问题保留为基准所见；由父代理负责变更页局部复验。",
+  "mutation_scope": "仅写本报告；未修改TeX、TikZ、PDF或预览图。"
+}

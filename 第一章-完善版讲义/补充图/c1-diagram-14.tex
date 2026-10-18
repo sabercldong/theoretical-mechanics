@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=1cm,y=1.5cm]
+\draw[->](0,0)--(8.7,0)node[right]{$\omega_0t$};\draw[->](0,-.6)--(0,1.3)node[above]{$x/x_0$};
+\foreach \t in {2,4,6,8}{\draw(\t,0)--(\t,-.035)node[below,font=\small]{$\t$};}
+\draw(0,1)--(-.08,1)node[left,font=\small]{$1$};
+\draw[ink,thick,domain=0:8,samples=160]plot(\x,{exp(-.25*\x)*(cos(.9682458*\x*180/pi)+.2581989*sin(.9682458*\x*180/pi))});
+\draw[muted,dashed,thick,domain=0:8,samples=100]plot(\x,{(1+\x)*exp(-\x)});
+\draw[ink,dotted,very thick,domain=0:8,samples=100]plot(\x,{1.1708204*exp(-.381966*\x)-.1708204*exp(-2.618034*\x)});
+\node[anchor=west]at(5.2,1.12){实线：$\gamma/\omega_0=0.25$};\node[anchor=west]at(5.2,.85){虚线：$\gamma/\omega_0=1$};\node[anchor=west]at(5.2,.58){点线：$\gamma/\omega_0=1.5$};
+\end{tikzpicture}

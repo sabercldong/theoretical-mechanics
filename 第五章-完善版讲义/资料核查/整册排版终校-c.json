@@ -1,0 +1,760 @@
+{
+  "report": "第五章整册排版独立终校（后 52 页）",
+  "reviewer": "revision_training_qa",
+  "time": "2026-10-18T08:31:18.110234+08:00",
+  "baseline": {
+    "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/排版终校基准.pdf",
+    "sha256": "2e8702728845f7c1e9445b7454c5ea4bf292a443ead708d6110f2cdf7e1fd4a6",
+    "pdf_total_pages": 172,
+    "hash_verified": true
+  },
+  "scope": {
+    "pdf_page_start": 121,
+    "pdf_page_end": 172,
+    "page_count": 52,
+    "printed_page_start": 115,
+    "printed_page_end": 166,
+    "actual_viewed_pdf_pages": [
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "checks": [
+      "标题或解答孤立",
+      "图文及公式溢出、重叠",
+      "原图裁边、缺字和小字可读性",
+      "异常空白"
+    ],
+    "limits": "仅按要求做版式 QA；不重审数学、不扩展题图模型。未修改主稿、图片或他人文件。主代理要求收束后不追加扫描，最终变动页由主代理核对。"
+  },
+  "method": "实际查看 sheet21 至 sheet29 全部 9 张接触校样，涵盖 PDF121–172；疑似标点、原图细字和跨页解答另看 pNNN.png 放大。",
+  "status": "baseline_review_complete_punctuation_fixes_delegated_to_parent",
+  "summary": {
+    "pages_actually_viewed": 52,
+    "baseline_pages_without_issue": 48,
+    "baseline_pages_with_display_punctuation_issue": 4,
+    "other_unresolved_layout_issues": 0,
+    "mathematical_review_performed": false,
+    "all_reported_issues_same_pattern": "展示公式后的标点遗留在下一正文段或独占一行。",
+    "parent_coordination": "PDF168/170 主代理已报告统一修复；PDF138/161 同类情况已及时汇总给主代理，最终实际变动页由其统一核对。"
+  },
+  "contact_sheets": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet21.png",
+      "sha256": "b077dcf5505d0b8ae3bc93f1b03426e5f51be07484618c1c85c379975d7458c5",
+      "pdf_pages": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet22.png",
+      "sha256": "0dbde6b1940f48f5ad285560816e47a90d8f419140e14078467c0b8ba6f22790",
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet23.png",
+      "sha256": "ef1e9a7935b38bcd6c86da9be3aee653a4fb80d32f5bfbe8ff31150bd6c26d10",
+      "pdf_pages": [
+        133,
+        134,
+        135,
+        136,
+        137,
+        138
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet24.png",
+      "sha256": "5036735ef9b7071d975f253157032dc21ba62c21ee465676f8e578c888ca58a1",
+      "pdf_pages": [
+        139,
+        140,
+        141,
+        142,
+        143,
+        144
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet25.png",
+      "sha256": "eb9da0ad520f09f07e55d3ea0b6f4233296c81ac0ff75a60bb94d5514e9fa2ee",
+      "pdf_pages": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet26.png",
+      "sha256": "015246f39e1e0e0b7454ccab012ad12ee1be37b3ac259eb14bd727d575611669",
+      "pdf_pages": [
+        151,
+        152,
+        153,
+        154,
+        155,
+        156
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet27.png",
+      "sha256": "1de4c9b7b247366b7674a0dd31b67c9a4095cf7731fe117a8f16fd848c95feca",
+      "pdf_pages": [
+        157,
+        158,
+        159,
+        160,
+        161,
+        162
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet28.png",
+      "sha256": "edde0e73f80eece8a370b3ffad114c94f8cebbaae64f00ed0dc89de0001999ad",
+      "pdf_pages": [
+        163,
+        164,
+        165,
+        166,
+        167,
+        168
+      ],
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet29.png",
+      "sha256": "2313c88348ef239fe5d794d50dabe7c7b96aa7d7fae3493d3b2635c743666485",
+      "pdf_pages": [
+        169,
+        170,
+        171,
+        172
+      ],
+      "actual_viewed": true
+    }
+  ],
+  "enlarged_pages": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p126.png",
+      "sha256": "abcda79592e8c9431c5d59307a03e143c2df79910c948bb2fb5ae502251fc16a",
+      "pdf_page": 126,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p129.png",
+      "sha256": "9cb76a5b987222ff51f80623799fde176c1bf5e87e797c8fb5625196432becaa",
+      "pdf_page": 129,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p130.png",
+      "sha256": "f02353d0c9a9631ed9669c13293426db4105841e12b20f0781e9ab46ba73b296",
+      "pdf_page": 130,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p135.png",
+      "sha256": "b4b039b4564fec744d9207f8cbf0fb9d4630789ad99c083cd3c0aa1ed2378d7d",
+      "pdf_page": 135,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p137.png",
+      "sha256": "030fa9620fe7862d46fbaa0a6ee201905264059b98d6fd8b4a24817c05f45fb6",
+      "pdf_page": 137,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p138.png",
+      "sha256": "a9b46a3df2ef48db3ab816c00b373520df78c352709df27cba9f1f5fe65dd22d",
+      "pdf_page": 138,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p161.png",
+      "sha256": "768c8a6fdac8295458fe26722fcd9979acbda40e6dd6fd1e06c53876446d6848",
+      "pdf_page": 161,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p163.png",
+      "sha256": "e8e5e0d62d2dfa210321e76c7b4240a6cf0270b272866b47c57180e10a57aa55",
+      "pdf_page": 163,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p168.png",
+      "sha256": "c3c9624d7f30350da22adabd8104f0f22d77ec5c16280a3a548e5117e2b0d8d3",
+      "pdf_page": 168,
+      "actual_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p170.png",
+      "sha256": "d58f6798f10e31bfc4b238618fdee1ef73be37c3351ad07fc3968c2bbd670daa",
+      "pdf_page": 170,
+      "actual_viewed": true
+    }
+  ],
+  "per_page": [
+    {
+      "pdf_page": 121,
+      "printed_page": 115,
+      "sheet": "sheet21.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 122,
+      "printed_page": 116,
+      "sheet": "sheet21.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 123,
+      "printed_page": 117,
+      "sheet": "sheet21.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "三幅相区原图构成独立插图页，底部留白属于图页安排，未发现缺页或裁边。"
+    },
+    {
+      "pdf_page": 124,
+      "printed_page": 118,
+      "sheet": "sheet21.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 125,
+      "printed_page": 119,
+      "sheet": "sheet21.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 126,
+      "printed_page": 120,
+      "sheet": "sheet21.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "放大确认图 5.227 的框、文字和箭头完整；源图标题末字换行属源图既有排布，本轮不判为新增裁切。"
+    },
+    {
+      "pdf_page": 127,
+      "printed_page": 121,
+      "sheet": "sheet22.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 128,
+      "printed_page": 122,
+      "sheet": "sheet22.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 129,
+      "printed_page": 123,
+      "sheet": "sheet22.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "放大确认能级与谱线示意标签及坐标边界完整，未见裁边。"
+    },
+    {
+      "pdf_page": 130,
+      "printed_page": 124,
+      "sheet": "sheet22.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "放大确认原始谱线及跃迁示意的细字可辨，未见缺字或越界。"
+    },
+    {
+      "pdf_page": 131,
+      "printed_page": 125,
+      "sheet": "sheet22.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 132,
+      "printed_page": 126,
+      "sheet": "sheet22.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 133,
+      "printed_page": 127,
+      "sheet": "sheet23.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 134,
+      "printed_page": 128,
+      "sheet": "sheet23.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 135,
+      "printed_page": 129,
+      "sheet": "sheet23.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "解答（1）有完整引导段，与下一页分析图接续；未见独立悬空小标题。"
+    },
+    {
+      "pdf_page": 136,
+      "printed_page": 130,
+      "sheet": "sheet23.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 137,
+      "printed_page": 131,
+      "sheet": "sheet23.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "放大确认高窄原图与十阶模态图的标记完整；未见新增裁边。"
+    },
+    {
+      "pdf_page": 138,
+      "printed_page": 132,
+      "sheet": "sheet23.png",
+      "status": "punctuation_layout_issue",
+      "issue_ids": [
+        "p138-display-punctuation"
+      ],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 139,
+      "printed_page": 133,
+      "sheet": "sheet24.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 140,
+      "printed_page": 134,
+      "sheet": "sheet24.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 141,
+      "printed_page": 135,
+      "sheet": "sheet24.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 142,
+      "printed_page": 136,
+      "sheet": "sheet24.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 143,
+      "printed_page": 137,
+      "sheet": "sheet24.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 144,
+      "printed_page": 138,
+      "sheet": "sheet24.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 145,
+      "printed_page": 139,
+      "sheet": "sheet25.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 146,
+      "printed_page": 140,
+      "sheet": "sheet25.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 147,
+      "printed_page": 141,
+      "sheet": "sheet25.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 148,
+      "printed_page": 142,
+      "sheet": "sheet25.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 149,
+      "printed_page": 143,
+      "sheet": "sheet25.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 150,
+      "printed_page": 144,
+      "sheet": "sheet25.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 151,
+      "printed_page": 145,
+      "sheet": "sheet26.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 152,
+      "printed_page": 146,
+      "sheet": "sheet26.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 153,
+      "printed_page": 147,
+      "sheet": "sheet26.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 154,
+      "printed_page": 148,
+      "sheet": "sheet26.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 155,
+      "printed_page": 149,
+      "sheet": "sheet26.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 156,
+      "printed_page": 150,
+      "sheet": "sheet26.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 157,
+      "printed_page": 151,
+      "sheet": "sheet27.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 158,
+      "printed_page": 152,
+      "sheet": "sheet27.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 159,
+      "printed_page": 153,
+      "sheet": "sheet27.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 160,
+      "printed_page": 154,
+      "sheet": "sheet27.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 161,
+      "printed_page": 155,
+      "sheet": "sheet27.png",
+      "status": "punctuation_layout_issue",
+      "issue_ids": [
+        "p161-display-punctuation"
+      ],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 162,
+      "printed_page": 156,
+      "sheet": "sheet27.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 163,
+      "printed_page": 157,
+      "sheet": "sheet28.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "放大确认题干矩阵右侧逗号与同一行内容相接，并非单独悬空标点。"
+    },
+    {
+      "pdf_page": 164,
+      "printed_page": 158,
+      "sheet": "sheet28.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 165,
+      "printed_page": 159,
+      "sheet": "sheet28.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 166,
+      "printed_page": 160,
+      "sheet": "sheet28.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 167,
+      "printed_page": 161,
+      "sheet": "sheet28.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 168,
+      "printed_page": 162,
+      "sheet": "sheet28.png",
+      "status": "punctuation_layout_issue",
+      "issue_ids": [
+        "p168-display-punctuation"
+      ],
+      "notes": "解答（1）有完整引导段，非孤立小标题；仅另列展示式标点问题。"
+    },
+    {
+      "pdf_page": 169,
+      "printed_page": 163,
+      "sheet": "sheet29.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 170,
+      "printed_page": 164,
+      "sheet": "sheet29.png",
+      "status": "punctuation_layout_issue",
+      "issue_ids": [
+        "p170-display-punctuation"
+      ],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 171,
+      "printed_page": 165,
+      "sheet": "sheet29.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "未发现标题/解答悬空、图文或公式越界重叠、原图新增裁边或异常空白。"
+    },
+    {
+      "pdf_page": 172,
+      "printed_page": 166,
+      "sheet": "sheet29.png",
+      "status": "passed",
+      "issue_ids": [],
+      "notes": "全书最后一页自然收尾留白，未见截断。"
+    }
+  ],
+  "issues": [
+    {
+      "id": "p138-display-punctuation",
+      "pdf_page": 138,
+      "printed_page": 132,
+      "location": "例 76 解答（2），u=A sin(k_n x) cos(ω_n t+δ) 展示式下方",
+      "observation": "后续一段以逗号开头（“，k_n=nπ/l，ω_n=ck_n……”），公式本身又已有句点，标点与相应句法位置分离。",
+      "recommendation": "将分隔标点收入展示式末尾，并使下一段直接以 k_n 开始。",
+      "parent_notified": true,
+      "final_fix_verification": "交由主代理统一标点规则和最终变动页核对；本报告不冒称已看修复后 PDF。"
+    },
+    {
+      "id": "p161-display-punctuation",
+      "pdf_page": 161,
+      "printed_page": 155,
+      "location": "训练题 5 解答续页顶部及（3）功率展示式下方",
+      "observation": "页首正文以逗号开头；显式功率展示式之后正文以句号开头（“。对球……”）。",
+      "recommendation": "将相应逗号/句号置于前一展示式末尾，避免标点留在段首或跨到下一页。",
+      "parent_notified": true,
+      "final_fix_verification": "交由主代理统一标点规则和最终变动页核对；本报告不冒称已看修复后 PDF。"
+    },
+    {
+      "id": "p168-display-punctuation",
+      "pdf_page": 168,
+      "printed_page": 162,
+      "location": "训练题 15 解答（2）矩阵展示式之后、（3）四顶点展示式之后",
+      "observation": "下一正文段分别以逗号（“，行列式1……”）和句号（“。两条水平边……”）开头。",
+      "recommendation": "把标点收入相应展示式末尾。",
+      "parent_notified": true,
+      "parent_fix_reported": true,
+      "final_fix_verification": "主代理已告知汇编器统一修复且编译完成，最终改动页由主代理核对；本独立报告保留实际看见的基准状态。"
+    },
+    {
+      "id": "p170-display-punctuation",
+      "pdf_page": 170,
+      "printed_page": 164,
+      "location": "训练题 17 解答（3），T、V 两条展示公式之间及 V 之后",
+      "observation": "T 展示式之后逗号独占一行；V 展示式后句号落在下一段开头。",
+      "recommendation": "将 T/V 合入 aligned 或将标点分别放在展示式末尾。",
+      "parent_notified": true,
+      "parent_fix_reported": true,
+      "final_fix_verification": "主代理已告知汇编器统一修复且编译完成，最终改动页由主代理核对；本独立报告保留实际看见的基准状态。"
+    }
+  ],
+  "accepted_observations": [
+    {
+      "pdf_page": 126,
+      "note": "原图图题的“命”单独换行是源图既有文本排布；完整图框及标签均在，未见新增裁边，不要求修改原图。"
+    },
+    {
+      "pdf_pages": [
+        135,
+        168
+      ],
+      "note": "跨页解答起始均附完整的模型说明段，未判为孤立标题。"
+    },
+    {
+      "pdf_pages": [
+        123,
+        172
+      ],
+      "note": "独立原图页和全书末页留白符合内容安排，未判为异常空白。"
+    }
+  ],
+  "final_statement": "指定 52 页已完成实际视觉检查；除已告知主代理的四页同类标点问题外，无其他未决版式问题。本报告绑定基准 PDF，不将尚未实际复看的最终修复写为独立复验通过。"
+}

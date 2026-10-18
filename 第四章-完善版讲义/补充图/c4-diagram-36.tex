@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=.92,every node/.style={font=\footnotesize},warm/.style={->,thick,draw=red!60!black},cold/.style={->,thick,draw=blue!65!black}]
+\foreach \xx/\title/\west/\east/\wc/\ec/\nc in {0/北大西洋/美洲/欧洲与非洲/墨西哥湾流/加那利寒流/北大西洋漂流,7.2/北太平洋/亚洲/北美洲/黑潮/加利福尼亚寒流/北太平洋流}{\begin{scope}[shift={(\xx,0)}]
+\fill[soft](-.35,.3)rectangle(0,4.7);\fill[soft](6.2,.3)rectangle(6.55,4.7);
+\node[rotate=90]at(-.18,2.5){\west};\node[rotate=90]at(6.38,2.5){\east};
+\draw[guide](0,0)--(6.2,0);\node[right]at(6.2,0){赤道};
+\draw[warm](.65,.85)..controls(.3,2.2)and(.6,3.3)..(2.25,3.65);
+\node[align=center,text width=1.9cm]at(1.65,2.2){\wc\\向高纬，暖};
+\draw[warm](2.25,3.65)..controls(3.3,3.9)and(4.3,3.9)..(5.4,3.8);
+\draw[cold](5.4,3.8)..controls(5.8,2.9)and(5.4,1.7)..(5.1,.85);
+\node[align=center,text width=1.7cm]at(4.55,2.35){\ec\\向低纬，寒};
+\draw[warm](5.1,.85)--(.65,.85);\node[below]at(3.0,.85){北赤道流：向西};
+\node[above]at(3.65,4.02){\nc};
+\draw[warm](1.2,-.55)--(5.1,-.55);\node[below]at(3.1,-.55){赤道反流：向东};
+\node[font=\small\bfseries]at(3.1,5.85){\title};\end{scope}}
+\draw[warm](4.591406,3.853906)..controls(5.0,4.5)and(5.3,4.6)..(5.7,4.9);\node[above]at(4.8,4.95){向东北分支};
+\draw[force](12.6,3.8)..controls(12.55,4.2)and(12.7,4.55)..(13.1,4.9);\node[above]at(11.6,4.95){向北分支};
+\draw[cold](.8,5)..controls(.8,4.35)and(1.05,4.0)..(1.6,3.45);\node[above]at(1.1,5.05){拉布拉多寒流};
+\node[anchor=west,text=red!60!black]at(.5,-1.5){红：暖流};\node[anchor=west,text=blue!65!black]at(3.5,-1.5){蓝：寒流};\node[anchor=west]at(6.5,-1.5){连接、尺度与颜色均为概略示意};
+\end{tikzpicture}

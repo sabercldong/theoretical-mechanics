@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=1.25cm,y=2.0cm]
+\draw[->](-2.8,0)--(3.0,0)node[right]{$\theta$};\draw[->](0,-.45)--(0,1.05)node[above]{$U_{\mathrm{eff}}/(mgl)$};
+\draw[ink,thick,domain=-75:75,samples=100]plot({\x/30},{1-cos(\x)-.125*sin(\x)^2});
+\draw[muted,dashed,thick,domain=-75:75,samples=100]plot({\x/30},{1-cos(\x)-.5*sin(\x)^2});
+\draw[ink,dotted,very thick,domain=-75:75,samples=100]plot({\x/30},{1-cos(\x)-.98*sin(\x)^2});
+\node[anchor=west,align=left]at(3.4,.55){实线：$\Omega/\Omega_c=0.5$\\虚线：$1$\\点线：$1.4$};
+\end{tikzpicture}

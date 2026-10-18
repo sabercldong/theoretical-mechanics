@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\draw[->](-2.3,0)--(2.5,0)node[right]{$q$};\draw[->](0,-1.7)--(0,1.8)node[above]{$p$};
+\draw[ink,thick](0,0)ellipse(1.9 and 1.152754);
+\draw[force,domain=0:28,samples=25]plot({1.9*cos(\x)},{-1.152754*sin(\x)});
+\node at(0,-2.15){无阻尼：封闭椭圆};
+\begin{scope}[xshift=6cm]
+\draw[->](-2.3,0)--(2.5,0)node[right]{$q$};\draw[->](0,-1.7)--(0,1.8)node[above]{$p$};
+% Exact damped solution: m=.6, gamma=.15, omega_d=1, omega_0^2=1.0225, q(0)=1.9, p(0)=0.
+\draw[ink,thick,domain=0:1440,samples=600]plot
+ ({1.9*exp(-.15*\x*pi/180)*(cos(\x)+.15*sin(\x))},
+ {-1.16565*exp(-.15*\x*pi/180)*sin(\x)});
+\foreach \a/\b in {45/72,410/442}{
+\draw[force,domain=\a:\b,samples=22]plot
+ ({1.9*exp(-.15*\x*pi/180)*(cos(\x)+.15*sin(\x))},
+ {-1.16565*exp(-.15*\x*pi/180)*sin(\x)});}
+\fill(0,0)circle(2pt);\node at(0,-2.15){欠阻尼：$p=m\dot q$，向内螺旋};
+\end{scope}
+\end{tikzpicture}

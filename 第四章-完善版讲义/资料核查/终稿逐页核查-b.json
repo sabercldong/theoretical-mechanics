@@ -1,0 +1,413 @@
+{
+  "review": "第四章整册终稿 v1 中段逐页独立视觉核查",
+  "reviewer": "/root/c4_model_qa",
+  "pdf": "工作文件/整册终校-v1.pdf",
+  "pdf_sha256": "18776e234c4eed66127dbbbdef95d6bdf7ba6ca6362adaa5e09ccd2625c36127",
+  "pdf_total_pages": 87,
+  "physical_page_range": [
+    26,
+    56
+  ],
+  "actual_pages_viewed": 31,
+  "status": "completed_with_local_revisions",
+  "scope": "全部责任页均实际查看 1.5x 完整渲染；重点核对新原图与图题/相邻公式、符号和方向、裁切重叠缺字、标题及例题分页与不必要留白。已有模型物理内容不重复全面推导。",
+  "digest_method": "PyMuPDF page.get_pixmap(matrix=fitz.Matrix(0.8,0.8),alpha=False).digest.hex()",
+  "pages": [
+    {
+      "physical_page": 26,
+      "status": "pass",
+      "pixmap_digest_0_8": "ad9a4b9fa8e4c87bd4b0a55586dc4e11",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p026.png",
+      "checks": "逐项移项、四种惯性力和离心势公式完整，提示框内容无裁切；4.4.1 与 4.4.2 标题后有正文。",
+      "issues": []
+    },
+    {
+      "physical_page": 27,
+      "status": "needs_local_revision",
+      "pixmap_digest_0_8": "9880d23f5d96f1ab9c170050f08fcd0f",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p027.png",
+      "checks": "原图 4.26 的 R 与正文 R⊥ 对应清楚，图和例 17 完整；例题结束后到页脚前约半页空白，下一小节被提前移到下一页，建议调整分页控制。",
+      "issues": [
+        "b-v1-01"
+      ]
+    },
+    {
+      "physical_page": 28,
+      "status": "pass",
+      "pixmap_digest_0_8": "12fbaef359957d5bf03e44a4f9b84278",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p028.png",
+      "checks": "欧拉惯性力正文、模型图 4.27 与科氏力小节完整，角速度及惯性力方向一致，未见截断/重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 29,
+      "status": "pass",
+      "pixmap_digest_0_8": "da6cbccb146c9a0576deaaa207f032ba",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p029.png",
+      "checks": "原图 4.28 的正角速度与同向角加速度约定已由图题明确，三个惯性力方向匹配；模型图 4.29 及例 18 同页完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 30,
+      "status": "pass",
+      "pixmap_digest_0_8": "d7745fc08763d81fb44ffdde21c159e4",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p030.png",
+      "checks": "反向皮带原图 4.30 的科氏加速度/惯性力相反，图题和 Ωc 记号对应；例 19 及后续段落分页自然。",
+      "issues": []
+    },
+    {
+      "physical_page": 31,
+      "status": "pass",
+      "pixmap_digest_0_8": "da30fa84a7124cb893bf8b6b4ab405f8",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p031.png",
+      "checks": "同向皮带图 4.31 与模型图 4.32 方向匹配，右下彩条为原生图像内容按要求保留；原图与两段弦线分析邻接，均无截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 32,
+      "status": "pass",
+      "pixmap_digest_0_8": "b6be56106a6ea676d05ee4aa48e52e16",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p032.png",
+      "checks": "飞行器上弯轨迹原图 4.33 与相反平动惯性力匹配；液柱例 20 和模型图 4.34 完整。原图固有像素较低，但标记可识别。",
+      "issues": []
+    },
+    {
+      "physical_page": 33,
+      "status": "pass",
+      "pixmap_digest_0_8": "1fd2743872c2b89aa2f2524e7714dd38",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p033.png",
+      "checks": "飞行器下弯轨迹原图 4.35、载荷例 21 与模型图 4.36 相接；脚注、图题和页码间距正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 34,
+      "status": "pass",
+      "pixmap_digest_0_8": "909bfa751c1a12d86f08fb8675ac06f1",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p034.png",
+      "checks": "真实摩擦力求解与相对平衡小节衔接正常；标题、例 22 及关键公式完整，无孤立标题。",
+      "issues": []
+    },
+    {
+      "physical_page": 35,
+      "status": "pass",
+      "pixmap_digest_0_8": "7ebbc5048e47492ea2dc80ebac6ae25f",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p035.png",
+      "checks": "轴上悬点例 23 与模型受力图 4.37 同页，倾斜分支条件及临界点小节完整，页尾公式未碰页脚。",
+      "issues": []
+    },
+    {
+      "physical_page": 36,
+      "status": "pass",
+      "pixmap_digest_0_8": "a582e58a226999646fe98367d1d58567",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p036.png",
+      "checks": "势能模型图 4.38、数值例 24 和偏置摆题目排列顺畅；原图 4.39 的角度及轴距方向正确，题干和题图同页，解答接下页合理。",
+      "issues": []
+    },
+    {
+      "physical_page": 37,
+      "status": "pass_with_advisory",
+      "pixmap_digest_0_8": "796b5f887cda3b6bef37cbc6c807579e",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p037.png",
+      "checks": "偏置摆解答、原图 4.40 和模型图 4.41 完整；源图三力方向正确但箭长未按相同比例闭合，建议图题说明“箭头仅示方向”，模型图已给出闭合平衡关系。",
+      "issues": [
+        "b-v1-02"
+      ]
+    },
+    {
+      "physical_page": 38,
+      "status": "pass",
+      "pixmap_digest_0_8": "f4421619072fe43fe4238926a64af67d",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p038.png",
+      "checks": "偏置摆单自由度和球摆二维扰动的新增详细推导连续，显示公式和说明均不裁切；段落跨页合理。",
+      "issues": []
+    },
+    {
+      "physical_page": 39,
+      "status": "pass",
+      "pixmap_digest_0_8": "9d2ce37f04c663281ba6ef28465e3835",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p039.png",
+      "checks": "二维扰动频率公式及极限讨论完整；复摆例 26 与原图 4.42 同页，x 向下、z 为铰轴、ξ 与 s 的对应由图题说明，解答接下页。",
+      "issues": []
+    },
+    {
+      "physical_page": 40,
+      "status": "pass",
+      "pixmap_digest_0_8": "1b0a19bb681fc9730a369a17d5dc32ad",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p040.png",
+      "checks": "复摆解答与模型图 4.43 相邻，离心合力作用点和力矩表达式一致；底部图题与页码留有正常间距。",
+      "issues": []
+    },
+    {
+      "physical_page": 41,
+      "status": "pass",
+      "pixmap_digest_0_8": "8c18887947cdc200279875b406233874",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p041.png",
+      "checks": "复摆极限检查、调速器反馈模型图 4.44、机构原图 4.45 及阻尼讨论完整；流体驱动/连杆调阀图文关系一致。",
+      "issues": []
+    },
+    {
+      "physical_page": 42,
+      "status": "pass",
+      "pixmap_digest_0_8": "cdf1fca69c9cba08de65d53dff1faaec",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p042.png",
+      "checks": "旋转液面例 27 和模型图 4.46 完整；4.6 标题、自由滑珠例 28 题干及解答起始未孤立，续页自然。",
+      "issues": []
+    },
+    {
+      "physical_page": 43,
+      "status": "pass",
+      "pixmap_digest_0_8": "f53e14d5e08c10587fa862e0c8163ec7",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p043.png",
+      "checks": "滑珠原图 4.47 的原坐标轴约定在图题中清楚说明，Ry 与重力相反、Rz 与 Fc 相反；模型图 4.48 和初值推导完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 44,
+      "status": "needs_local_revision",
+      "pixmap_digest_0_8": "409088cea1ad4bcad3cf832984fc2afa",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p044.png",
+      "checks": "双弹簧原图 4.49、例 30 题干及 k/ω 记号完整；源图右上可见孤立紫色竖条和两个黑点，为裁片边缘残余，应清理。",
+      "issues": [
+        "b-v1-03"
+      ]
+    },
+    {
+      "physical_page": 45,
+      "status": "pass",
+      "pixmap_digest_0_8": "4ac66e77b0c8e17f3622600f89ae5e4e",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p045.png",
+      "checks": "双弹簧三类解与侧向压力推导完整，原图 4.50 的左侧运动学科氏项和右侧科氏惯性力相反，图题说明充分；页底图题分成两行但无裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 46,
+      "status": "pass",
+      "pixmap_digest_0_8": "8d4fed44c22f9c96ee088fc04fdaa57e",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p046.png",
+      "checks": "双弹簧模型图 4.51、例 31 和摩擦阻尼讨论完整，反力由速度而非位置决定的图文条件一致。",
+      "issues": []
+    },
+    {
+      "physical_page": 47,
+      "status": "needs_local_revision",
+      "pixmap_digest_0_8": "9fc505dfa526b00126eeab92bd72c282",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p047.png",
+      "checks": "模型图 4.52 的 y 轴标签与上方 r=ut 中的 u 重叠，放大截图确认，需要移开 y 标签；轨迹方向和相邻能量公式正确，正文及小节分页无问题。",
+      "issues": [
+        "b-v1-04"
+      ]
+    },
+    {
+      "physical_page": 48,
+      "status": "pass",
+      "pixmap_digest_0_8": "fa8e065cce60614df582516d6bf74a11",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p048.png",
+      "checks": "当地基矢模型图 4.53、球形地球原图 4.54 与正文连续，东向纸内及 cosλ/sinλ 分解正确；图题与段落不重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 49,
+      "status": "pass",
+      "pixmap_digest_0_8": "ca63bce8cc3fdb97d66b717c02b374aa",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p049.png",
+      "checks": "地心/当地轴原图 4.55 的南东天对应和离心原图 4.56 的垂轴 R 含义明确；两个图与有效重力公式邻接，均未裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 50,
+      "status": "pass",
+      "pixmap_digest_0_8": "ad20ff5990d0824a248d6e8496a7d7b8",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p050.png",
+      "checks": "有效重力原图 4.57 经原资产放大核对，F、Ft、mg 三向量及图题一致；模型图 4.58 和例 33 数量级完整，源图固有低分辨率未新增丢失。",
+      "issues": []
+    },
+    {
+      "physical_page": 51,
+      "status": "pass",
+      "pixmap_digest_0_8": "fcb6061a9f3db087c7c2155a45147d7a",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p051.png",
+      "checks": "球形模型与实际重力近似式、例 34 和称重例 35 排列完整；页面较满但公式、脚注、页码之间无碰撞。",
+      "issues": []
+    },
+    {
+      "physical_page": 52,
+      "status": "pass",
+      "pixmap_digest_0_8": "22d7396e7d1059cd97bf438e706b641b",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p052.png",
+      "checks": "称重效应模型图 4.59 与式 4.31 方向一致；公转潮汐小节与数量级完整，未见大空白或孤立标题。",
+      "issues": []
+    },
+    {
+      "physical_page": 53,
+      "status": "pass",
+      "pixmap_digest_0_8": "f1c82f39f3e7f505e9f6cc830b68cdc1",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p053.png",
+      "checks": "科氏水平分量原图 4.60 的黑/蓝箭头与正文右偏规则一致，模型图 4.61 保留了南北半球说明；惯性圆小节正文和公式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 54,
+      "status": "pass",
+      "pixmap_digest_0_8": "59948a952a0eb41b73c6513045ba2e41",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p054.png",
+      "checks": "惯性圆模型图 4.62 与南半球原图 4.63 一致；原图 aC 向外而惯性力向内，图题明确区分，例 36 完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 55,
+      "status": "pass",
+      "pixmap_digest_0_8": "cc06876d92b3d501e2f68019478fd59e",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p055.png",
+      "checks": "赤道近地面气流原图 4.64 与模型图 4.65 吹向一致，图题说明虚线赤道和箭头去向，角动量讨论与图邻接合理。",
+      "issues": []
+    },
+    {
+      "physical_page": 56,
+      "status": "pass",
+      "pixmap_digest_0_8": "09f0a9492905c09eebb74ad48998f373",
+      "figures": [],
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "render_file": "工作文件/独立终校-b/p056.png",
+      "checks": "地表风带/三圈环流原图 4.66 可辨识且版权署名保留，模型图 4.67 与纬度/垂直流向一致；两半球气压带段落有足够正文后才跨页。",
+      "issues": []
+    }
+  ],
+  "issues": [
+    {
+      "id": "b-v1-01",
+      "physical_page": 27,
+      "severity": "minor_layout",
+      "required": true,
+      "summary": "例 17 后约半页不必要留白，4.4.3 被提前移到下一页。",
+      "recommendation": "调整小节前分页控制，使空间足够时接排。",
+      "parent_status": "父级已试改分页控制并反馈空白消失，等待最终固定稿复核。"
+    },
+    {
+      "id": "b-v1-02",
+      "physical_page": 37,
+      "figure": "4.40",
+      "severity": "caption_clarification",
+      "required": false,
+      "summary": "原图受力箭长不按三力闭合比例绘制，但方向正确。",
+      "recommendation": "图题加“箭头仅示方向”；不改原图。",
+      "parent_status": "父级已采用图题澄清，等待最终固定稿复核。"
+    },
+    {
+      "id": "b-v1-03",
+      "physical_page": 44,
+      "figure": "4.49",
+      "severity": "minor_asset_residue",
+      "required": true,
+      "summary": "弹簧原图右上有与图形无关的紫色竖条和两个黑点。",
+      "recommendation": "仅清除裁片中邻接对象残余，保留弹簧、块、坐标和转向。",
+      "parent_status": "原图负责代理已收到处理安排，等待最终资产。"
+    },
+    {
+      "id": "b-v1-04",
+      "physical_page": 47,
+      "figure": "4.52",
+      "model_asset": "补充图/c4-diagram-26.tex",
+      "severity": "label_overlap",
+      "required": true,
+      "summary": "y 轴顶部 y 与说明 r=ut 中的 u 叠印。",
+      "recommendation": "将 y 标签由 node[above] 改为 node[left]，保持轨迹/公式和图幅高度。",
+      "evidence": "工作文件/独立终校-b/p047-overlap.png",
+      "parent_status": "父级已记录唯一模型排版修订 node[left]，等待最终固定稿复核。"
+    }
+  ],
+  "other_findings": [],
+  "retained_original_artifact": "物理页 31 同向皮带图右下彩条是原始 JPEG 固有内容，按要求保留，不列为裁片残余。",
+  "previous_review_correction": "本轮放大视检发现 c4-diagram-26 的 y/u 标签重叠，先前模板图独立核查漏检；本轮 b-v1-04 为更正记录。",
+  "next_step": "对父级冻结的修订版比较逐页 digest，复核变动页和本报告四处事项；本报告不是修订版通过证明。"
+}

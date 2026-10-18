@@ -1,0 +1,78 @@
+{
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/编译/第二章-质点组力学讲义-完善版.pdf",
+  "pdf_sha256": "8d6f05755fa526311205e8d53f65b5514aa8ac710bb28c6d9cadded1c2c45b4e",
+  "page_count": 85,
+  "status": "pass",
+  "visual_scope": {
+    "overview_pages": "1–85，全部11张总览逐页检查",
+    "magnified_new_figures": {
+      "fig:lesson-c2-diagram-02": 7,
+      "fig:lesson-c2-diagram-04": 8,
+      "fig:lesson-c2-diagram-05": 9,
+      "fig:lesson-c2-diagram-06": 10,
+      "fig:lesson-c2-diagram-07": 11,
+      "fig:lesson-c2-diagram-08": 12,
+      "fig:lesson-c2-diagram-12": 17,
+      "fig:lesson-c2-diagram-14": 19,
+      "fig:lesson-c2-diagram-24": 33,
+      "fig:lesson-c2-diagram-26": 37,
+      "fig:lesson-c2-diagram-29": 42,
+      "fig:lesson-c2-diagram-33": 45,
+      "fig:lesson-c2-diagram-37": 49,
+      "fig:lesson-c2-diagram-39": 53,
+      "fig:lesson-c2-diagram-40": 55,
+      "fig:lesson-c2-diagram-43": 60,
+      "fig:lesson-c2-diagram-44": 61,
+      "fig:lesson-c2-diagram-45": 63,
+      "fig:lesson-c2-diagram-48": 67,
+      "fig:lesson-c2-diagram-49": 68,
+      "fig:lesson-c2-diagram-50": 70,
+      "fig:lesson-c2-diagram-52": 73
+    },
+    "magnified_render_directory": "/tmp/c2-final-figure-crops",
+    "method": "原PDF用PyMuPDF渲染，逐张视觉检查22幅新增图及图题上下文。"
+  },
+  "verified": {
+    "orphan_headings": "未发现页底孤悬章节/例题标题",
+    "clipping_or_overflow": "未发现正文、公式、图形或图题越界裁切",
+    "figure_text_match": "22幅新增图与相邻正文匹配，编号连续，普通图题无补充绘制标记",
+    "source_original_assets": "原图版86个原图文件（43份PDF/PNG配对）在完善版中全部保留且SHA256完全一致；31个OriginalFigure和12个OriginalPanel调用均保留",
+    "examples": 66,
+    "selftests": 24,
+    "unwanted_caption_phrase_count": 0,
+    "replacement_character_count": 0,
+    "friction_plot": "alpha=10deg、mu_s=.2正向首次越界28.2517deg，实线仅止于首次越界；原alpha→0+曲线与新增图同页保留且caption分清参数",
+    "strong_impulse": "Lambda4，两个轨迹截止tau=.890059，坐标x/l、y/l，球1/2标签及初态正确，图题说明原上球先落地",
+    "spring_velocities": "初值v1/v0=1、v2=0，关键刻度1、2/3、1/3、−1/3，周期2pi，曲线及图题正确",
+    "spring_effective_potential": "beta=.55、纵轴Ueff/Erel，转折点1与2.201225，能量线1，正确",
+    "scattering_branches": "lambda2速度圆同向两端点，精确30deg切线；角图17deg横线双根及最大角30deg，图文正确",
+    "rocket": "图只表示燃烧段，tL/tb=.5与tb明确，端点v/(gtb)=ln2−.5，正文与图题一致",
+    "rain_drop": "半径线性增长，箭头仅表下降方向的限定已写入图题",
+    "virial_boundary": "束缚D曲线围绕0振荡，已纠正非零均值问题",
+    "oscillator_energy": "T/E=sin²与U/E=cos²，初态动能0势能1，平均1/2，图例线型与归一化一致"
+  },
+  "not_claimed": "本轮为整合版视觉与新增图数学复核，不等于全书每道题均已逐步独立重算。",
+  "resolved_issues": [
+    {
+      "severity": "minor",
+      "physical_page": 12,
+      "printed_page": 8,
+      "figure_number": "2.11",
+      "old_figure_index": 8,
+      "description": "23a/55标签与水平切片线重叠；数值仍可辨认，但建议消除穿字线。",
+      "exact_old": "\\fill[ink](0,.83636)circle(3pt)node[right]{$23a/55$};",
+      "exact_new": "\\fill[ink](0,.83636)circle(3pt)node[fill=white,inner sep=1pt,right]{$23a/55$};",
+      "verification_after_fix": "重渲染PDF第12页，确认文字背景遮开切片线。",
+      "resolution": "已在23a/55节点加白色衬底，2026-10-13局部视觉复核确认截片线不再穿过数字，质心位置与所有物理信息保持不变。"
+    }
+  ],
+  "issues": [],
+  "final_local_recheck": {
+    "physical_page": 12,
+    "printed_page": 8,
+    "image": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/成稿预览/p012-fixed.png",
+    "result": "通过。白色衬底清楚隔开切片线与23a/55，图文排版正常。",
+    "unchanged_page_evidence": "已读取并核对资料核查/局部修正检查.json：仅物理第12页发生变化，其他84页像素相同，记录哈希与当前PDF SHA256一致。",
+    "scope": "本轮只重新视觉检查修正的物理第12页；全册85页总览及22幅新增图的全面视觉复核沿用前一轮，未宣称重新全册重读。"
+  }
+}

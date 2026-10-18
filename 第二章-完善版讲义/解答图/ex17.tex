@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-.5,2.3)--(.3,2.3);\draw[thick](-.5,0)--(3.5,0);\draw[dashed](.1,2.3)--(3.3,2.3);\fill(.2,2.3)circle(3pt);\draw[->](.4,2.3)--(.4,3.25)node[right]{$m_1,u$};\draw[->](.1,2.3)--(.1,1.25)node[left]{$m_2,w$};\draw[->](1,2.8)--(2.4,2.8)node[right]{$v$};\draw[<->](3,0)--(3,2.3)node[midway,right]{$h$};\node at(1.5,-.55){沟底：理想弹性反弹};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$m_1u=m_2w,\quad h=wt+gt^2/2$\\[6pt]$\Downarrow$\\[6pt]$t=u/g,\quad u^2=gh/(m_1/m_2+1/2)$};
+\end{tikzpicture}

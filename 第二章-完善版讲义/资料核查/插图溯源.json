@@ -1,0 +1,993 @@
+[
+  {
+    "key": "internal_central_pair",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 4,
+    "图号": "2.1",
+    "讲义印刷页码": "1",
+    "图题": "两质点的中心内力沿连线、等大反向；关于 $O$ 的内力合力矩为零。 原图 $f_{ij}$ 对应正文的 $\\mathbf F_{ij}$。",
+    "文件": "原图/internal_central_pair.pdf",
+    "sha256": "509ac93ff94fc122e501282131e930a926a2268adc400f8e45de283bc5cbb5ba",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      81
+    ],
+    "clip": [
+      522.0,
+      206.5,
+      688.5,
+      378.0
+    ],
+    "notes": "",
+    "PDF页码": 5
+  },
+  {
+    "key": "center_of_mass_coordinates",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 6,
+    "图号": "2.2",
+    "讲义印刷页码": "2",
+    "图题": "质心 $C$ 与第 $i$ 个质点的位置关系。原图 $\\mathbf r_C$ 对应正文的 $\\mathbf R$，$x_C,y_C,z_C$ 对应 $X,Y,Z$。",
+    "文件": "原图/center_of_mass_coordinates.pdf",
+    "sha256": "540e653eaf3409e4e3bfa3546291fc0c624a32f9b7bae4a5e0822c5ef6326ac8",
+    "source_method": "直接提取PPT内嵌位图或GIF原始帧；未裁切未重绘",
+    "frame_index_zero_based": 0,
+    "source_media": "ppt/media/image12.png",
+    "notes": "",
+    "PDF页码": 6
+  },
+  {
+    "key": "disk_two_holes",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 7,
+    "图号": "2.4",
+    "讲义印刷页码": "4",
+    "图题": "原圆盘上部挖去两相同圆孔；剩余部分的质心向下偏移。",
+    "文件": "原图/disk_two_holes.pdf",
+    "sha256": "1f3543f6f768c531ffc0a47867d85e172e63584ea45b41841ae33a1d7f47f91e",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      3
+    ],
+    "clip": [
+      38.0,
+      228.0,
+      111.5,
+      301.5
+    ],
+    "notes": "原图未标半径和夹角；正文 R、r、60 度几何条件保留，勿称图中显示质心位置。",
+    "PDF页码": 8
+  },
+  {
+    "key": "hemisphere",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 26,
+    "图号": "2.6",
+    "讲义印刷页码": "5",
+    "图题": "均匀实心半球及其坐标轴，半径为 $a$。",
+    "文件": "原图/hemisphere.pdf",
+    "sha256": "ae2baa701ef320d8dc13e316af012d40d78f91887d9277f89419411a5669a2d9",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      4
+    ],
+    "clip": [
+      539.5,
+      16.5,
+      714.5,
+      152.0
+    ],
+    "notes": "只有实心半球原图；厚半球壳和水平微元截面为旧图自绘内容，本次不保留。",
+    "PDF页码": 9
+  },
+  {
+    "key": "cone",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 27,
+    "图号": "2.8",
+    "讲义印刷页码": "6",
+    "图题": "均匀圆锥及柱坐标示意。原图 $z$ 从顶点向下，等于正文的轴向变量 $s$；以底面向上计的高度为 $h-z$。",
+    "文件": "原图/cone.pdf",
+    "sha256": "8f59263b0362b031432cc45a925b06bfc867036219ff0b3287d47fe3eb8ff89d",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      20,
+      24,
+      25,
+      26,
+      28,
+      29,
+      34,
+      35,
+      23,
+      31,
+      32,
+      36
+    ],
+    "clip": [
+      545.0,
+      42.5,
+      704.0,
+      208.0
+    ],
+    "notes": "旧图还含半圆截面和半圆锥，没有匹配原图，正文相关积分可保留。",
+    "PDF页码": 10
+  },
+  {
+    "key": "crank_slider",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 9,
+    "图号": "2.12",
+    "讲义印刷页码": "9",
+    "图题": "曲柄滑块机构与质心椭圆。原图转角 $\\varphi$ 对应正文的 $\\theta$；$F_x,F_y,F_N$ 为支承反力。",
+    "文件": "原图/crank_slider.pdf",
+    "sha256": "7894303fd1c59123c622ebf9cf7738db9280a7be66c9072c59a99cf3bb0e241b",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      46096,
+      16389,
+      16390,
+      16391,
+      16392,
+      16393,
+      16394,
+      16395,
+      16396,
+      16397,
+      16398,
+      16399,
+      16400,
+      16401,
+      16402,
+      16403,
+      16404,
+      16405,
+      16406,
+      16407,
+      16408,
+      16409,
+      16410,
+      16411,
+      16412
+    ],
+    "clip": [
+      5.5,
+      211.0,
+      322.5,
+      467.5
+    ],
+    "notes": "",
+    "PDF页码": 13
+  },
+  {
+    "key": "eccentric_rotor",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 14,
+    "图号": "2.13",
+    "讲义印刷页码": "11",
+    "图题": "偏心电动机的受力示意。$O_1$ 对应固定点 $O$，$O_2$ 为转子质心，$e=O_1O_2$；底部 $M$ 为支承力偶。正文按原图的逆时针方向取 $\\omega>0$。",
+    "文件": "原图/eccentric_rotor.pdf",
+    "sha256": "d503ab28bfcf7f246371a7bca72b5978e43578b8c7703b05e892672cb0361e96",
+    "source_method": "直接提取PPT内嵌位图或GIF原始帧；未裁切未重绘",
+    "frame_index_zero_based": 0,
+    "source_media": "ppt/media/image38.png",
+    "notes": "原课件后续分量公式按顺时针，原图ω箭头为逆时针。本讲义已将例10的r、P、dot P及Nx统一到原图逆时针方向，初始相位不变。",
+    "PDF页码": 15
+  },
+  {
+    "key": "cannon_velocity_triangle",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 17,
+    "图号": "2.14",
+    "讲义印刷页码": "12",
+    "图题": "炮弹相对速度 $V$、炮车反冲速度 $U$ 与炮弹对地速度 $v$ 的合成；$\\alpha$、$\\theta$ 分别为相对速度和对地速度的仰角。",
+    "文件": "原图/cannon_velocity_triangle.pdf",
+    "sha256": "fd52c97e5c7d3831fc19a93cf135faec03d712f3ace84aa76ecfcd47b8c165dd",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      64546
+    ],
+    "clip": [
+      547.5,
+      373.5,
+      705.5,
+      454.5
+    ],
+    "notes": "只有速度合成三角形，没有炮车实体原图。U 箭头朝左对应正文带符号的 U<0。",
+    "PDF页码": 16
+  },
+  {
+    "key": "sliding_support_pendulum",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 19,
+    "图号": "2.16",
+    "讲义印刷页码": "14",
+    "图题": "支座 $A$ 与摆球 $B$ 的速度关系。原图 $\\varphi$ 对应正文 $\\theta$，$v_A=\\dot X$，$v_B^{\\prime}$ 为摆球相对支座的切向速度。",
+    "文件": "原图/sliding_support_pendulum.pdf",
+    "sha256": "d2973136d7de375f6af80ee03359024f081d69e3c2b5e03d5964862f38e93e0b",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      27650,
+      27651,
+      27652,
+      27653,
+      27654,
+      27655,
+      27656,
+      27657,
+      27658,
+      27659,
+      24,
+      25
+    ],
+    "clip": [
+      502.0,
+      3.0,
+      693.5,
+      210.0
+    ],
+    "notes": "原图另有未连箭头的 v_r 字样，源课件保留如此。正文应继续使用 v_A 和 v_B 相对速度的分解，不把孤立 v_r 标签当成新增的极坐标径向速度。",
+    "PDF页码": 18
+  },
+  {
+    "key": "chasm_rebound_original",
+    "原课件": "理论力学-c2-1.pptx",
+    "原页码": 23,
+    "图号": "2.18",
+    "讲义印刷页码": "16",
+    "图题": "原动画末帧：蓝线为人的轨迹，红线为小球在沟底与人之间反弹的轨迹；两者保持相同的水平速度。",
+    "文件": "原图/chasm_rebound_original.pdf",
+    "sha256": "473e7e0b0f08c93330d1032d5e214095b4a32e84ff6247759c854401594b73e1",
+    "source_method": "直接提取PPT内嵌位图或GIF原始帧；未裁切未重绘",
+    "frame_index_zero_based": 60,
+    "source_media": "ppt/media/image68.gif",
+    "notes": "GIF 第 61 帧（从 0 计为 60），完整三周期原轨迹，无重绘；原图没有标出质量和 h。",
+    "PDF页码": 20
+  },
+  {
+    "key": "monkeys_pulley",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 6,
+    "图号": "2.19",
+    "讲义印刷页码": "19",
+    "图题": "轻滑轮两侧的猴子 $A,B$。$v_A$ 为 $A$ 对地向上速度，$v$ 为 $B$ 相对绳的向上爬速，二者含义不同。",
+    "文件": "原图/monkeys_pulley.pdf",
+    "sha256": "e13d512fc5ebf22ef39b53aeeeff05cef8da8e17d65fc9fe933f894f46eabd6c",
+    "source_method": "直接提取PPT内嵌位图或GIF原始帧；未裁切未重绘",
+    "frame_index_zero_based": 0,
+    "source_media": "ppt/media/image14.png",
+    "notes": "",
+    "PDF页码": 23
+  },
+  {
+    "key": "angular_momentum_decomposition",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 26,
+    "图号": "2.20",
+    "讲义印刷页码": "20",
+    "图题": "质心轨道角动量与内部角动量。原图 $\\mathbf r_C,\\mathbf P,J^{\\prime}$ 分别对应正文的 $\\mathbf R,M\\mathbf V,L_C$。",
+    "文件": "原图/angular_momentum_decomposition.pdf",
+    "sha256": "bd6f0662134d7982a3e77877ce7c91628a67bd0629bdb2e3c451cfdec4993ab9",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      7
+    ],
+    "clip": [
+      529.5,
+      207.0,
+      720.0,
+      395.0
+    ],
+    "notes": "",
+    "PDF页码": 24
+  },
+  {
+    "key": "projectile_double_ball_setup",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 8,
+    "图号": "2.21",
+    "讲义印刷页码": "20",
+    "图题": "刚杆双球释放前的初态与质心平抛示意。下球 1 受到水平冲量，原图 $I$ 对应正文 $J$；原图 $y$ 向下，与正文的纵轴方向相反。",
+    "文件": "原图/projectile_double_ball_setup.pdf",
+    "sha256": "58b2b704da8b8f9106b0c670e6106d1ce73bde5e26547dccd4836e32cc649932",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      4,
+      5,
+      8,
+      11,
+      12,
+      14,
+      6,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "clip": [
+      422.5,
+      15.0,
+      706.0,
+      284.5
+    ],
+    "notes": "原图 y 轴向下，与正文 y 向上相反；若插入此初态图，图题须明确这一点。",
+    "PDF页码": 24
+  },
+  {
+    "key": "projectile_double_ball_paths",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 9,
+    "图号": "2.21",
+    "讲义印刷页码": "20",
+    "图题": "双球的原课件轨迹：蓝线为下球 1、红线为上球 2，黑色虚线为质心；纵坐标向上为正。",
+    "文件": "原图/projectile_double_ball_paths.pdf",
+    "sha256": "1e831ecbda5527555cbfc88a8d5915a909cd1b411ba84b1f197aae4e1d9d87eb",
+    "source_method": "直接提取PPT内嵌位图或GIF原始帧；未裁切未重绘",
+    "frame_index_zero_based": 0,
+    "source_media": "ppt/media/image23.png",
+    "notes": "原课件使用 I=40、m=1、l=10，与正文 J=40、m=1、l=10 对应；该数值图不应再称自绘示意尺度。",
+    "PDF页码": 24
+  },
+  {
+    "key": "tidal_repulsive_double_ball",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 29,
+    "图号": "2.22",
+    "讲义印刷页码": "21",
+    "图题": "平方反比中心斥力下的双球。$C$ 为质心，$O$ 为力心；近端 $A$ 受力较大，合力不沿 $OC$。",
+    "文件": "原图/tidal_repulsive_double_ball.pdf",
+    "sha256": "06d328cfb287f043892554ee44bf4ab33b24480efc3553e56b10f7145ccff460",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      4,
+      18
+    ],
+    "clip": [
+      332.5,
+      24.0,
+      644.0,
+      175.5
+    ],
+    "notes": "",
+    "PDF页码": 25
+  },
+  {
+    "key": "active_internal_work",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 16,
+    "图号": "2.23",
+    "讲义印刷页码": "23",
+    "图题": "内力随相对距离变化的回路。原图 $f_{12},r_{12}$ 对应正文的 $f,r$，回路的有向面积给出一周期内力功。",
+    "文件": "原图/active_internal_work.pdf",
+    "sha256": "b9e8755065dce48422daf85a7328b1830632d41f6a2470d7dbc25765a9ad8473",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      28
+    ],
+    "clip": [
+      178.0,
+      193.5,
+      539.0,
+      435.5
+    ],
+    "notes": "",
+    "PDF页码": 27
+  },
+  {
+    "key": "gravitating_pair",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 17,
+    "图号": "2.24",
+    "讲义印刷页码": "26",
+    "图题": "两自由质点 $m_1,m_2$ 的相对距离为 $r$。",
+    "文件": "原图/gravitating_pair.pdf",
+    "sha256": "6dfa4196afb726e51e47c2000def7df0acfdac7f3cd7d945298097d9e52ab972",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      27654
+    ],
+    "clip": [
+      480.5,
+      156.5,
+      631.0,
+      318.0
+    ],
+    "notes": "原图有两个向内的作用箭头，未标 v1、v2 或质心；图题只描述两质点与距离，不称其展示速度分配。",
+    "PDF页码": 30
+  },
+  {
+    "key": "free_rotating_tube",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 18,
+    "图号": "2.25",
+    "讲义印刷页码": "27",
+    "图题": "一端绕竖直轴自由转动的水平细管及管内小球；$r$ 为球到转轴的距离，$\\theta$ 为管的方位角。",
+    "文件": "原图/free_rotating_tube.pdf",
+    "sha256": "36581e9dd5116f7159e154e31b4ea70087171781cb44b64eed128c7a2d012cc1",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      29699,
+      29700,
+      29702,
+      29703,
+      29704,
+      29705,
+      29706,
+      29707,
+      29708,
+      29709,
+      29710,
+      29711
+    ],
+    "clip": [
+      451.0,
+      139.0,
+      635.5,
+      311.0
+    ],
+    "notes": "原课件管质量 M 对应正文 M_t；原图是装置与坐标示意，未画管口绝对速度合成。",
+    "PDF页码": 31
+  },
+  {
+    "key": "smooth_floor_double_ball",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 32,
+    "图号": "2.26",
+    "讲义印刷页码": "28",
+    "图题": "光滑地面上的双球速度与外力；$v_1$ 向左，原图 $v_2^{\\prime}$ 为上球相对下球的速度，$\\theta$ 从竖直方向量起。",
+    "文件": "原图/smooth_floor_double_ball.pdf",
+    "sha256": "c912a7504a453544d7c778a897a17fcdb3d64909e54e842691d8e67d6f3f79fb",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      11,
+      32,
+      33,
+      35
+    ],
+    "clip": [
+      499.5,
+      17.5,
+      725.0,
+      210.5
+    ],
+    "notes": "",
+    "PDF页码": 32
+  },
+  {
+    "key": "static_friction_demand",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 35,
+    "图号": "2.28",
+    "讲义印刷页码": "29",
+    "图题": "原课件的带符号需求曲线。纵轴原标 $\\mu$，在本文应读作 $q=f/N$，不是非负的摩擦系数；曲线对应 $\\alpha\\to0^+$ 的极限。",
+    "文件": "原图/static_friction_demand.pdf",
+    "sha256": "4ca6e9742eedd70f24d54cd3e6b6a9118b0e351942a6626406b673a061e4c330",
+    "source_method": "直接提取PPT内嵌位图或GIF原始帧；未裁切未重绘",
+    "frame_index_zero_based": 0,
+    "source_media": "ppt/media/image65.png",
+    "notes": "正文须保留绝对值条件 |f|≤μ_sN；不能沿用原课件“负 μ”的摩擦系数解释。原位图不包含旧图的 ±μ_s 许可带，图题和正文不得称原图绘出该带。",
+    "PDF页码": 33
+  },
+  {
+    "key": "rough_floor_double_ball",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 33,
+    "图号": "2.28",
+    "讲义印刷页码": "29",
+    "图题": "下球暂时静止时的双球受力与上球速度。原图 $A,B$ 对应下球 1、上球 2，$f$ 向右为正，$N$ 为地面对下球的支持力。",
+    "文件": "原图/rough_floor_double_ball.pdf",
+    "sha256": "e0911e19e0ee3e384635f23da3eaa1d610afe133a46b114937fb0b0642d5d4c5",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      36,
+      37,
+      49,
+      50,
+      39,
+      58,
+      60,
+      61,
+      62,
+      63
+    ],
+    "clip": [
+      479.0,
+      298.5,
+      705.0,
+      491.5
+    ],
+    "notes": "",
+    "PDF页码": 33
+  },
+  {
+    "key": "upper_ball_impulse_initial",
+    "原课件": "理论力学-c2-2.pptx",
+    "原页码": 37,
+    "图号": "2.29",
+    "讲义印刷页码": "30",
+    "图题": "竖直双球系统的上球受到水平冲量；原图 $I$ 对应正文 $J$。",
+    "文件": "原图/upper_ball_impulse_initial.pdf",
+    "sha256": "69660421ae08537181f1f7dee1ffbfd33c9275b783917490b8b75bc6e8afb80c",
+    "source_method": "PPT对象隔离后LibreOffice导出；保留原图元和原标注",
+    "kept_top_level_shape_ids": [
+      9,
+      12,
+      14,
+      16
+    ],
+    "clip": [
+      451.0,
+      42.5,
+      711.0,
+      189.5
+    ],
+    "notes": "此原图只给初态，不能代替旧自绘图的接地—飞行—碰撞事件流程；正文相关方程保留。",
+    "PDF页码": 34
+  },
+  {
+    "key": "rough_rod_edge",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 19,
+    "图号": "2.31",
+    "讲义印刷页码": "35",
+    "图题": "轻杆两端载有等质量小球，右端悬空；虚线表示初始水平位置，$\\theta$ 为向下转角。",
+    "文件": "原图/rough_rod_edge.pdf",
+    "sha256": "98fe6bfb2f0472eff9a155b1d4c45fea59b8fa119819caf263236e12fbea608f",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      16
+    ],
+    "clip": [
+      297.0,
+      404.5,
+      519.0,
+      583.0
+    ],
+    "notes": "原图未画支持力和摩擦力，旧图题“法向力垂直于杆”需改为几何示意。原图theta与正文过程角theta相同；起滑时theta=alpha。",
+    "PDF页码": 39
+  },
+  {
+    "key": "two_body_cm",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 9,
+    "图号": "2.32",
+    "讲义印刷页码": "36",
+    "图题": "以质心 $C$ 为原点时，两质点位于通过质心的同一直线上。",
+    "文件": "原图/two_body_cm.pdf",
+    "sha256": "6a9c83b59475105ae108d35fe793f978db218ae549466e011f57d1e99d45a4af",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      22
+    ],
+    "clip": [
+      600.0,
+      103.0,
+      818.5,
+      304.5
+    ],
+    "notes": "原图标记 m1、m2、C、x、y 与正文相容；本图未直接标出相对位矢。可与 relative_vectors 配为一组。",
+    "PDF页码": 40
+  },
+  {
+    "key": "relative_vectors",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 21,
+    "图号": "2.32",
+    "讲义印刷页码": "36",
+    "图题": "两体位置、质心位置与相对位矢。原图 $\\vect r_c$ 对应正文 $\\vect R$，$\\vect r=\\vect r_1-\\vect r_2$ 由质点2指向质点1。",
+    "文件": "原图/relative_vectors.pdf",
+    "sha256": "dd9b71c84f3354de27104b52ca3cf820676ecce90688023fa4790d904360e0a8",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      5,
+      7,
+      8,
+      10,
+      12,
+      16,
+      17,
+      18,
+      20,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "clip": [
+      662.5,
+      101.0,
+      810.0,
+      224.0
+    ],
+    "notes": "蓝色相对位矢方向与正文一致；红色f表示2对1的相互作用力，此示意画的是斥力方向，不表示所有相互作用都排斥。可与 two_body_cm 配一组。",
+    "PDF页码": 40
+  },
+  {
+    "key": "sun_earth_orbits",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 5,
+    "图号": "2.34",
+    "讲义印刷页码": "39",
+    "图题": "两体椭圆运动的课件动画静帧：红、蓝虚线表示两体绕共同质心的轨道，黑线表示相对轨道。质量比例与坐标采用示意值。",
+    "文件": "原图/sun_earth_orbits.pdf",
+    "sha256": "8f887f2ac79fb3befebb25e6d104d3c97d2775179a3de08b4099ed315cf7db38",
+    "source_method": "direct_original_media_frame",
+    "frame_index_zero_based": 43,
+    "source_media": "ppt/media/image14.gif",
+    "notes": "原GIF第44帧/173帧，两体位置与连线清楚。图中质量比例不是实际日地质量比，不可把数值刻度当实际日地尺度。",
+    "PDF页码": 43
+  },
+  {
+    "key": "repulsive_approach",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 23,
+    "图号": "2.35",
+    "讲义印刷页码": "40",
+    "图题": "最近距离的课件几何示意：$\\rho$ 为冲量参数，$a$ 为最近间距。本题应将图中的路径理解为相对运动，不能把靶当作在实验室中固定。",
+    "文件": "原图/repulsive_approach.pdf",
+    "sha256": "9940aaa9fdbe3a2a66763e15d5a74da843b33af017f6c89a31c8b480507f6efd",
+    "source_method": "direct_original_media_frame",
+    "frame_index_zero_based": 0,
+    "source_media": "ppt/media/image50.png",
+    "notes": "源图沿用固定力心几何，入射方向由右向左，与旧重绘相反，但正文只讨论距离不受影响。O对应相对运动力心，m标签仍是原入射质点标签；正文动力学质量使用μ=2m/3。原PNG透明底按白底展示，没有重画。",
+    "PDF页码": 44
+  },
+  {
+    "key": "rod_impulse",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 11,
+    "图号": "2.36",
+    "讲义印刷页码": "40",
+    "图题": "轻杆双球受横向冲量后的初瞬：左为实验室系速度，右为质心系速度；带撇号的速度是质心系速度。",
+    "文件": "原图/rod_impulse.pdf",
+    "sha256": "5cf88ae21095462deb588115050bf606ab6d66a8561ce7acf8a906eaf415d48f",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      3,
+      37
+    ],
+    "clip": [
+      223.0,
+      195.5,
+      697.5,
+      342.5
+    ],
+    "notes": "球1在下、向右受冲量，与正文一致。源课件冲量记I，正文记J，图中未标冲量符号。原图未画任意时刻轨迹；可配 rod_impulse_tracks。",
+    "PDF页码": 44
+  },
+  {
+    "key": "rod_impulse_tracks",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 12,
+    "图号": "2.36",
+    "讲义印刷页码": "40",
+    "图题": "课件动画中的双球轨迹静帧：质心匀速平移与两球相对转动叠加，黑线为该时刻的连杆。坐标与质量比采用课件示意值。",
+    "文件": "原图/rod_impulse_tracks.pdf",
+    "sha256": "91c36fd842b40f7a599aa009e9de910e53c77f87bd31a6b018e19cc19674a8d7",
+    "source_method": "direct_original_media_frame",
+    "frame_index_zero_based": 25,
+    "source_media": "ppt/media/image36.gif",
+    "notes": "原GIF第26帧/101帧；比末帧更能完整显示黑色连杆和两球。该数值示意未给出质量/冲量参数，不对应正文任意指定数值计算。",
+    "PDF页码": 44
+  },
+  {
+    "key": "spring_impulse",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 13,
+    "图号": "2.38",
+    "讲义印刷页码": "41",
+    "图题": "等质量弹簧双球的初始运动：左为实验室系，右为质心系。原图左侧 $v_1$ 对应正文的初速 $v_0$，虚线表示初始弹簧方向。",
+    "文件": "原图/spring_impulse.pdf",
+    "sha256": "b8bff1510aece4451a74735690a8a4dfde91d0b15dae693021a8c23770b98f63",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      3,
+      30
+    ],
+    "clip": [
+      222.5,
+      233.0,
+      697.5,
+      380.0
+    ],
+    "notes": "替换旧33时必须删除旧有效势曲线图题。源课件没有对应有效势曲线；这两幅是同一道题的初态与质心系原图，右侧速度各为v0/2。",
+    "PDF页码": 45
+  },
+  {
+    "key": "spring_stick_before",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 24,
+    "图号": "2.39",
+    "讲义印刷页码": "42",
+    "图题": "第三个小球垂直于弹簧撞向球1。原图入射速度 $v$ 对应正文的 $V_0$。",
+    "文件": "原图/spring_stick_before.pdf",
+    "sha256": "6fb8762a50a1cbdc9de21b0847e5e49af877e10faf680673bb6a89221ccd72e8",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      9,
+      14,
+      15,
+      16,
+      17
+    ],
+    "clip": [
+      642.5,
+      290.0,
+      785.5,
+      481.5
+    ],
+    "notes": "球1在上、球2在下；原图速度向右，与正文未限定绝对水平方向相容。",
+    "PDF页码": 46
+  },
+  {
+    "key": "spring_stick_after",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 25,
+    "图号": "2.39",
+    "讲义印刷页码": "42",
+    "图题": "碰撞后入射球与球1粘连，组合体质量为 $2m$；球2质量仍为 $m$。",
+    "文件": "原图/spring_stick_after.pdf",
+    "sha256": "da2246079d71884806ead701e42a066e92a079f73a4873f27d37064ce45acff5",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      3,
+      7,
+      10,
+      11
+    ],
+    "clip": [
+      711.5,
+      132.0,
+      786.0,
+      299.0
+    ],
+    "notes": "可与spring_stick_before左右配图。箭头表示碰后初速度，并未标数值；应为正文V0/2。原图并未画最大间距3a，不可沿用旧图题暗示右图就是最大伸长。",
+    "PDF页码": 46
+  },
+  {
+    "key": "three_beads_string",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 22,
+    "图号": "2.40",
+    "讲义印刷页码": "43",
+    "图题": "中球 $M$ 获得向右初速度后，两端小球 $m$ 对称向中球后方靠拢；由左至右为初态、中间姿态与首次相碰前的姿态。",
+    "文件": "原图/three_beads_string.pdf",
+    "sha256": "a3899f58ec0746bd62d072c5bf76960eb5c924536c11a507a9108287009b8a62",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      51
+    ],
+    "clip": [
+      172.5,
+      126.0,
+      754.0,
+      258.5
+    ],
+    "notes": "符号/方向与正文一致。右图为碰前极限附近的示意，不表示已经粘合后的状态。",
+    "PDF页码": 47
+  },
+  {
+    "key": "string_peg",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 25,
+    "图号": "2.41",
+    "讲义印刷页码": "44",
+    "图题": "两球连绳接触光滑钉前后的几何关系。初始两侧长度为 $a$ 与 $3a$，运动中变为 $r_1,r_2$，满足 $r_1+r_2=4a$。",
+    "文件": "原图/string_peg.pdf",
+    "sha256": "616d5bae33882f6641cdd4af90568fb22a723f53de7ceecfadc06669d4e30b1a",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      28
+    ],
+    "clip": [
+      291.5,
+      121.0,
+      611.5,
+      268.0
+    ],
+    "notes": "原图球1在下/短侧，球2在上/长侧，与正文一致；图中拐点表示光滑钉，绳可滑动，不能解释为固定某个绳材料点。",
+    "PDF页码": 48
+  },
+  {
+    "key": "cm_scattering",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 15,
+    "图号": "2.43",
+    "讲义印刷页码": "47",
+    "图题": "质心系中的碰撞前后速度。原图 $v_1,v_2$ 表示碰前速度，$v_1^{\\prime},v_2^{\\prime}$ 表示碰后速度；图中 $\\theta_c$ 对应正文的散射角 $\\Theta$。",
+    "文件": "原图/cm_scattering.pdf",
+    "sha256": "46a4503268a585819f9ef8515d54ac605b716e7b9ba7733aab39e9229dbd8fea",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      5127
+    ],
+    "clip": [
+      364.5,
+      104.5,
+      569.5,
+      296.5
+    ],
+    "notes": "重要：此图撇号表示碰后，而正文其他位置撇号可能表示质心系；原图所有四个速度都在质心系。反向的是两体动量，质量不等时速度模不相等。",
+    "PDF页码": 51
+  },
+  {
+    "key": "scattering_frames",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 16,
+    "图号": "2.44",
+    "讲义印刷页码": "48",
+    "图题": "同一两体散射在实验室系（左）与质心系（右）的速度示意。原图大写 $V$ 表示实验室速度、小写 $v$ 表示质心速度，撇号表示碰后；$\\theta_r,\\theta_c$ 分别对应正文的 $\\theta,\\Theta$。",
+    "文件": "原图/scattering_frames.pdf",
+    "sha256": "cd764e4d9f5b642b0ee4f3d37dd61ea96605392952a89148f73360b7c6a54b0d",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      5
+    ],
+    "clip": [
+      103.5,
+      198.0,
+      428.5,
+      351.0
+    ],
+    "notes": "图不是重入射球速度圆，不替换旧39；作为一般角度变换示意新增。原图左侧靶的V2=0未画箭头。",
+    "PDF页码": 52
+  },
+  {
+    "key": "neutron_frames",
+    "原课件": "理论力学-c2-3.pptx",
+    "原页码": 18,
+    "图号": "2.46",
+    "讲义印刷页码": "49",
+    "图题": "等质量弹性散射的出射速度方向示意：质心系中出射速率不变，实验室系中速度由质心平移与相对运动叠加。",
+    "文件": "原图/neutron_frames.pdf",
+    "sha256": "c2b66fdc62e5e54d0a6f96045ddba25fe98718e245c8a30ca3def4c0a5ca8846",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      4,
+      6
+    ],
+    "clip": [
+      465.0,
+      216.0,
+      809.0,
+      523.0
+    ],
+    "notes": "图中箭头为原课件速度方向样本；不能仅从箭头疏密断言每单位立体角均匀。此图不对应重入射球双分支曲线，不替换旧40。",
+    "PDF页码": 53
+  },
+  {
+    "key": "hinged_rod_before",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 27,
+    "图号": "2.48",
+    "讲义印刷页码": "53",
+    "图题": "入射球撞向固定铰杆的中点；原图 $m_1=m$、$m_2=4m$，两段长度均为 $L/2$。",
+    "文件": "原图/hinged_rod_before.pdf",
+    "sha256": "588943104711710919f1c897bc36abb4285c872e343623e867b525e96522b01c",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      9222
+    ],
+    "clip": [
+      580.5,
+      274.5,
+      777.5,
+      561.5
+    ],
+    "notes": "原图明确为刚杆碰撞，未画柔绳替代模型；旧图题可在正文讨论差异，但不得声称原图同时画了柔绳。橙色细框是该图自带边界，并非课件模板。",
+    "PDF页码": 57
+  },
+  {
+    "key": "hinged_rod_after",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 28,
+    "图号": "2.48",
+    "讲义印刷页码": "53",
+    "图题": "粘连后的刚杆与铰轴反力方向。图中 $N_x,N_y$ 为铰轴作用力分量，其碰撞时间内的积分给相应冲量。",
+    "文件": "原图/hinged_rod_after.pdf",
+    "sha256": "6cc2d9b9949b53c59985f51ba3a84fe404282bacf526a6831fe8b714d643fc1b",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      10247
+    ],
+    "clip": [
+      610.5,
+      130.5,
+      789.0,
+      399.0
+    ],
+    "notes": "可与hinged_rod_before并列。N_x向左符合正文J_Ax<0，N_y向上为示意，不能据图推出竖直冲量非零。",
+    "PDF页码": 57
+  },
+  {
+    "key": "mass_accretion",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 3,
+    "图号": "2.49",
+    "讲义印刷页码": "54",
+    "图题": "主体在 $\\mathrm dt$ 内吸收质量微元 $\\mathrm dm$。主体与微元的速度 $\\vect v,\\vect u$ 均相对于同一惯性系。",
+    "文件": "原图/mass_accretion.pdf",
+    "sha256": "9e8caa308f77492e204994c181cbb9a9bf37f8557e95fed9353de6943903c613",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      13
+    ],
+    "clip": [
+      432.5,
+      298.5,
+      784.5,
+      451.0
+    ],
+    "notes": "图中合并后箭头方向仅为示意，未画外力；不能据方向断言零外力。与正文吸收模型相符，不能作为同时含流入/流出的完整控制体图。",
+    "PDF页码": 58
+  },
+  {
+    "key": "falling_rope",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 7,
+    "图号": "2.53",
+    "讲义印刷页码": "60",
+    "图题": "软绳上端下降 $h$ 后的形状；$l$ 为原绳长，下方为已停止的堆积部分。",
+    "文件": "原图/falling_rope.pdf",
+    "sha256": "bac8481d3851773d3348c665480a6660364d91f4700511f35303e29a63a72fad",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      17410
+    ],
+    "clip": [
+      105.0,
+      240.5,
+      397.5,
+      479.0
+    ],
+    "notes": "本图只给几何关系，没有支持力箭头。源页推导使用落点制停冲击力N，不包含已堆积绳重；正文区分Nimpact与地面总反力R正确，不能把源页N=2σgh当全绳总反力。",
+    "PDF页码": 64
+  },
+  {
+    "key": "sliding_chain",
+    "原课件": "理论力学-c2-习题课.pptx",
+    "原页码": 8,
+    "图号": "2.54",
+    "讲义印刷页码": "61",
+    "图题": "桌面上与悬垂链段的长度分别为 $l-x$ 与 $x$。",
+    "文件": "原图/sliding_chain.pdf",
+    "sha256": "cce2ace5743e1305a7c34f0edd97a793a2c450ab83a3b57d5866fc79996bc261",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      3
+    ],
+    "clip": [
+      604.5,
+      179.5,
+      795.5,
+      387.5
+    ],
+    "notes": "原图只给直角路径几何，未画保持路径的理想导槽；应保留正文导槽假设，不能据图默认为只受单侧桌角支承。源习题页底部离桌速率平方系数误为3/2，正文3/4正确，已去掉源推导正文。",
+    "PDF页码": 65
+  },
+  {
+    "key": "gas_wall_virial",
+    "原课件": "理论力学-c2-4.pptx",
+    "原页码": 15,
+    "图号": "2.58",
+    "讲义印刷页码": "67",
+    "图题": "容器壁面积元 $\\mathrm dS$、位置矢量 $\\vect r$ 与壁对气体的力 $\\vect F$；压力作用方向朝向容器内部。",
+    "文件": "原图/gas_wall_virial.pdf",
+    "sha256": "01dee756c5336af8614ea894065e3d1c8bda8809ef18b6488697fc37bab1206d",
+    "source_method": "original_ppt_objects_isolated; preserved_original_OLE_previews",
+    "kept_top_level_shape_ids": [
+      3
+    ],
+    "clip": [
+      642.0,
+      309.5,
+      825.5,
+      509.5
+    ],
+    "notes": "原图F是壁对气体的力，r从o向面积元，与正文 -P dS 约定相符；原图没有完整容器外形。",
+    "PDF页码": 71
+  }
+]

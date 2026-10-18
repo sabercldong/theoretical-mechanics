@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\draw[thick](0,0)--(5,0);
+\foreach \x in {1,4}{\draw[guide](\x,-1.2)--(\x,1.2);}
+\draw[force](1,0)--(1,1)node[above]{$\vect U_a$};
+\draw[force](4,0)--(4,-.7)node[below]{$\vect U_b$};
+\node[below]at(1,-1.2){$z_a$};\node[below]at(4,-1.2){$z_b$};
+\node[above]at(2.5,.25){两个校正平面};
+\end{tikzpicture}

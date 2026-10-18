@@ -1,0 +1,91 @@
+{
+  "checks": 11,
+  "all_passed": true,
+  "results": [
+    {
+      "name": "折杆总势能的一阶驻值",
+      "passed": true,
+      "residual": [
+        "0"
+      ]
+    },
+    {
+      "name": "半圆柱精确EL方程",
+      "passed": true,
+      "residual": [
+        "0"
+      ]
+    },
+    {
+      "name": "不等质量滑块摆的第四正则方程",
+      "passed": true,
+      "residual": [
+        "0"
+      ]
+    },
+    {
+      "name": "不等质量振型-1",
+      "passed": true,
+      "residual": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "不等质量振型1",
+      "passed": true,
+      "residual": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "质量归一振型内积",
+      "passed": true,
+      "residual": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "恒力HJ特性函数",
+      "passed": true,
+      "residual": [
+        "0"
+      ]
+    },
+    {
+      "name": "恒力HJ能量偏导",
+      "passed": true,
+      "residual": [
+        "0"
+      ]
+    },
+    {
+      "name": "圆盘轨迹入、出切线与盘面方向",
+      "passed": true,
+      "residual": [
+        "0"
+      ]
+    },
+    {
+      "name": "驻波两半波与幅度箭头",
+      "passed": true,
+      "residual": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "赤道运动法向加速度",
+      "passed": true,
+      "residual": [
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ]
+}

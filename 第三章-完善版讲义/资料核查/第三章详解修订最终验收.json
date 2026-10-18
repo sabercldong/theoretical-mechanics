@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "pages": 284,
+  "examples": 66,
+  "training_questions": 30,
+  "question_diagrams": 96,
+  "solution_diagrams": 96,
+  "explicit_solution_figure_references": 96,
+  "original_figures_retained": 117,
+  "body_diagrams_retained": 59,
+  "symbolic_and_numeric_checks": 49,
+  "compile_warnings": [],
+  "portable_source_compile_verified": true,
+  "all_portable_pdf_pages_text_and_pixels_identical": true,
+  "source_ppts_unchanged": [
+    "理论力学-c3-1.pptx",
+    "理论力学-c3-2.pptx",
+    "理论力学-c3-3.pptx",
+    "理论力学-c3-4.pptx",
+    "理论力学-c3-5.pptx",
+    "理论力学-c3-6.pptx"
+  ],
+  "visual_qa_reports": [
+    "详解修订题图复核-前半.json",
+    "详解修订题图复核-后半.json"
+  ],
+  "content_qa_report": "详解修订内容复核.json",
+  "pdf_sha256": "97f7822b05f7179ea2e818fa71870f193e58fc2c1f12e79ba5b408518d29d00f",
+  "source_archive_sha256": "71bed514c23b8d3c1ba6372aef047feb42fbff49a36fe150c961c1e8c4583bec",
+  "new_preference_implemented": "every question has a TikZ question drawing and a numbered solution-stage diagram with an explicit textual reference",
+  "final_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学讲义-完善版.pdf",
+  "final_source_archive": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学-完善版LaTeX源码及图片.zip"
+}

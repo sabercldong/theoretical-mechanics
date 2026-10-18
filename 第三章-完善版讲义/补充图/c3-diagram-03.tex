@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\draw[->,thick](0,-.5)--(0,2.7)node[above]{$\vect\omega$};
+\coordinate(O)at(0,0);\coordinate(H)at(0,1.2);\coordinate(A)at(3,1.2);
+\draw[guide](H)--(A)node[midway,above]{$r_\perp$};
+\draw[->](O)--(A)node[midway,below]{$\vect r_{OA}$};
+\fill(O)circle(2pt)node[below left]{$O$};
+\draw[force](A)--(1.7,1.2)node[midway,below,yshift=-2mm]{$\vect a_{\text{法}}$};
+\node[fill=white,inner sep=0pt]at(A){$\otimes$};\node[right,xshift=2mm]at(A){$A$};
+\node[align=left,anchor=west]at(3.6,2.15){$\vect v_A-\vect v_O$\ 垂直纸面向里};
+\draw[guide](3.55,1.95)--(3.08,1.33);
+\node[font=\small]at(1.6,-.85){纸面取为 $\vect\omega$ 与 $\vect r_{OA}$ 张成的平面};
+\end{tikzpicture}

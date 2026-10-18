@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\foreach \row in {0,...,4}{\pgfmathtruncatemacro{\last}{4-\row}\foreach \j in {0,...,\last}{\draw({.38*(2*\j+\row)},{.38+.65818*\row})circle(.38);}}\draw(-.5,0)--(3.6,0);\draw[->,thick](-.85,.38)--(-.38,.38)node[midway,above]{$F$};\draw[->,thick](3.9,.38)--(3.42,.38)node[midway,above]{$F$};\node at(1.5,-.65){第（3）问：底层侧推截面};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect f_{ij}=N_{ij}\vect n_{ij}+\tau_{ij}\vect t_{ij}$\\[6pt]$\Downarrow$\\[6pt]$\sum\vect F_i=0,\quad\sum\vect M_i=0$};
+\end{tikzpicture}

@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\draw[fill=soft,thick](-2.5,0)rectangle(2.5,.6);
+\foreach \x in {-1.6,0,1.6}{\fill[ink](\x,1.1)circle(.13);\draw[thick](\x,.97)--(\x,.65);}
+\draw[force](2,1.5)--(3.3,1.5)node[right]{$v_{\rm rel}$};
+\draw[force](-2.5,.35)--(-3.6,.35)node[left]{$U$};
+\node at(0,.3){$M$};\node[align=center]at(0,-.8){同时：同一末态车速\\依次：逐次更新共同质量};
+\end{tikzpicture}

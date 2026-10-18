@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[->](-.5,0)--(3.6,0)node[right]{$z$};\foreach \x/\l in {.6/a,2.6/b}{\draw[dashed](\x,-1)--(\x,1.6);\draw[thick](\x,0)--(\x,1);\fill(\x,1)circle(3pt)node[above]{$\vect U_\l$};\node[below]at(\x,-1){$z_\l$};}\node at(1.6,2){两校正平面};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect U_a+\vect U_b=-\vect U$\\[6pt]$\Downarrow$\\[6pt]$z_a\vect U_a+z_b\vect U_b=-\vect V$};
+\end{tikzpicture}

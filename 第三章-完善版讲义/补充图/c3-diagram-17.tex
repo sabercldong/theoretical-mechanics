@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\pgfmathsetmacro{\rodA}{2.5}
+\pgfmathsetmacro{\rodB}{1.8}
+\pgfmathsetmacro{\hangAngle}{atan(\rodB^2/(\rodA^2+2*\rodA*\rodB))}
+\coordinate(A)at(0,0);
+\coordinate(B)at({\rodA*sin(\hangAngle)},{-\rodA*cos(\hangAngle)});
+\coordinate(D)at({\rodA*sin(\hangAngle)-\rodB*cos(\hangAngle)},
+{-\rodA*cos(\hangAngle)-\rodB*sin(\hangAngle)});
+\pgfmathsetmacro{\cy}{(-\rodA^2*cos(\hangAngle)/2-\rodA*\rodB*cos(\hangAngle)-\rodB^2*sin(\hangAngle)/2)/(\rodA+\rodB)}
+\coordinate(C)at(0,\cy);
+\draw[thick](-1.4,.25)--(1.4,.25);
+\draw[line width=2pt,ink](A)--(B)--(D);
+\fill(A)circle(3pt)node[above left]{$A$};
+\fill(B)circle(2pt)node[below right]{$B$};
+\draw[guide](A)--(0,-3.7);
+\draw(0,-.9)arc(270:{270+\hangAngle}:.9);
+\node[left]at(-.12,-.85){$\theta$};
+\path(A)--(B)node[midway,right]{$a$};
+\path(B)--(D)node[midway,below]{$b$};
+\fill(C)circle(2pt)node[left]{$C$};
+\draw[force](C)--(0,{\cy-1.1})node[midway,left]{$(m_1+m_2)g$};
+\end{tikzpicture}

@@ -1,0 +1,11 @@
+{
+  "baseline_sha256": "eeb09fea31cbe39028ed4c1b3370ebaffe9f6bd90a59ad8bdab3426b95e6fb70",
+  "all_preexisting_text_preserved_before_listed_patches": true,
+  "existing_model_figures_preserved": 59,
+  "examples": 66,
+  "selftests": 30,
+  "original_assets_added": 117,
+  "documented_text_patches": [],
+  "numbered_equation_environments_before": 31,
+  "numbered_equation_environments_after": 31
+}

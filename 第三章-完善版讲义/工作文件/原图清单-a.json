@@ -1,0 +1,1024 @@
+[
+  {
+    "key": "c3-1-p004-body-frame",
+    "deck": "c3-1",
+    "page": 4,
+    "topic": "附着在刚体质心处的坐标轴",
+    "caption": "附着在刚体质心处的坐标轴",
+    "crop_rect_pt": [
+      439.3,
+      213.3,
+      709.3,
+      506.5
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p004-body-frame.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p004-body-frame.png",
+    "insert_after": "\\figend{位置由基点平移与本体姿态共同确定}",
+    "related_model_indices": [
+      1
+    ],
+    "notes": "PPT GIF 的初始代表帧；质心参考系。",
+    "source_media": {
+      "pdf_xref": 93,
+      "pixel_size": [
+        360,
+        391
+      ],
+      "method": "无损提取课件原有完整位图，避开邻近文字遮挡"
+    },
+    "sha256_pdf": "6ff97474cb358b079a80a94da2b78be184e18cd700a6893f9a4be1fc6fb3c7e3",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p005-base-frame",
+    "deck": "c3-1",
+    "page": 5,
+    "topic": "改选体内基点后的刚体姿态描述",
+    "caption": "改选体内基点后的刚体姿态描述",
+    "crop_rect_pt": [
+      452,
+      42,
+      701,
+      257
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p005-base-frame.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p005-base-frame.png",
+    "insert_after": "选择基点是计算手段，不会改变物体的真实运动。",
+    "related_model_indices": [
+      1
+    ],
+    "notes": "与第4页基点不同；保留原有 O 标记。",
+    "sha256_pdf": "6d53fd1326bef9b8b4c89511ff2302771c58257907fc1ed9a9ec3ad59bebd28c",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p006-ferris-wheel",
+    "deck": "c3-1",
+    "page": 6,
+    "topic": "摩天轮座舱的曲线平动",
+    "caption": "摩天轮座舱的曲线平动",
+    "crop_rect_pt": [
+      402,
+      130.1,
+      626.1,
+      396.3
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p006-ferris-wheel.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p006-ferris-wheel.png",
+    "insert_after": "\\figend{相同的中心轨迹可以对应平动或转动}",
+    "related_model_indices": [
+      2
+    ],
+    "notes": "仅以座舱始终保持竖直的理想约束解释曲线平动。",
+    "source_media": {
+      "pdf_xref": 157,
+      "pixel_size": [
+        609,
+        723
+      ],
+      "method": "无损提取课件原有完整位图，避开邻近文字遮挡"
+    },
+    "sha256_pdf": "e4643e1217f653e698d0b599ada1c67e79702e13a86ef04bdb05e6e88ae03a40",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p007-euler",
+    "deck": "c3-1",
+    "page": 7,
+    "topic": "欧拉与刚体定点转动定理",
+    "caption": "欧拉与刚体定点转动定理",
+    "crop_rect_pt": [
+      529,
+      280,
+      709,
+      518
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p007-euler.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p007-euler.png",
+    "insert_after": "\\subsection{定点转动的欧拉定理}",
+    "related_model_indices": [],
+    "notes": "课件原有欧拉肖像。",
+    "source_media": {
+      "pdf_xref": 204,
+      "pixel_size": [
+        755,
+        994
+      ],
+      "method": "无损提取课件原有完整位图，避开邻近文字遮挡"
+    },
+    "sha256_pdf": "653cb5b5d3be70ab6fa605b9c74195410dc8e8c4a230553ec4ef72b9be84df53",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p008-velocity",
+    "deck": "c3-1",
+    "page": 8,
+    "topic": "定点转动中位置、角速度与速度的相互方向",
+    "caption": "定点转动中位置、角速度与速度的相互方向",
+    "crop_rect_pt": [
+      430,
+      19,
+      715,
+      280
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p008-velocity.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p008-velocity.png",
+    "insert_after": "\\figend{相对速度垂直于转轴和位置矢量，法向加速度指向轴}",
+    "related_model_indices": [
+      3
+    ],
+    "notes": "",
+    "sha256_pdf": "032665c3e92abd153cc877ea43aa528fa303e5057a6519a6d8665ec5ad6afcfe",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p010-turntable",
+    "deck": "c3-1",
+    "page": 10,
+    "topic": "水平轴圆盘与转动框架",
+    "caption": "水平轴圆盘与转动框架：图中径向单位矢量 $\\vect i$ 对应正文 $\\vect e_r$",
+    "crop_rect_pt": [
+      526,
+      240,
+      700,
+      396
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p010-turntable.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p010-turntable.png",
+    "insert_after": "\\figend{转台转动和圆盘相对转动的矢量合成}",
+    "related_model_indices": [
+      4
+    ],
+    "notes": "图中柱坐标径向单位矢量与正文 e_r 对应。",
+    "sha256_pdf": "948bd2fec2ef5f80a275b1c14cb38be25054123467288ade6f8f2ab5159a6df1",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p011-inclined-top",
+    "deck": "c3-1",
+    "page": 11,
+    "topic": "倾斜自转轴与竖直进动轴：$\\omega_1$ 为自转角速率，$\\omega_2$ 为进动角速率",
+    "caption": "倾斜自转轴与竖直进动轴：$\\omega_1$ 为自转角速率，$\\omega_2$ 为进动角速率",
+    "crop_rect_pt": [
+      553,
+      14,
+      709,
+      244
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p011-inclined-top.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p011-inclined-top.png",
+    "insert_after": "\\example{倾斜轴陀螺的角速度}",
+    "related_model_indices": [
+      4
+    ],
+    "notes": "图中 ω1 为自转角速率、ω2 为进动角速率。",
+    "sha256_pdf": "086e5a674bb2c8df36b90bb794fbc1ce0c1a722418ee82e6188ff640aa00cb73",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p012-hanging-disks",
+    "deck": "c3-1",
+    "page": 12,
+    "topic": "悬挂杆端圆盘及两种轴线约束",
+    "caption": "悬挂杆端圆盘及两种轴线约束",
+    "crop_rect_pt": [
+      213,
+      199,
+      671,
+      431
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p012-hanging-disks.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p012-hanging-disks.png",
+    "insert_after": "\\example{悬挂杆端圆盘的两种约束}",
+    "related_model_indices": [
+      4
+    ],
+    "notes": "",
+    "sha256_pdf": "53fce8d772c847eccaad7f941d16991035cc9ef3b99f32092b95feb7009d1a70",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p014-euler-angles",
+    "deck": "c3-1",
+    "page": 14,
+    "topic": "空间轴、本体轴与三个欧拉角：角弧用于识别夹角，转动正向按正文右手定则",
+    "caption": "空间轴、本体轴与三个欧拉角：角弧用于识别夹角，转动正向按正文右手定则",
+    "crop_rect_pt": [
+      421,
+      8,
+      700,
+      222
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p014-euler-angles.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p014-euler-angles.png",
+    "insert_after": "\\figend{欧拉角的三个定义平面；从各正转轴端看向原点，按右手定则取正}",
+    "related_model_indices": [
+      6
+    ],
+    "notes": "原角弧含逆向复位画法，caption明确几何夹角与正文正向的区别。",
+    "sha256_pdf": "4be5677360275d393423ae043c62ee995915d03ccd95e6d413d712d2d295dfcc",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p015-euler-steps",
+    "deck": "c3-1",
+    "page": 15,
+    "topic": "进动、章动与自转的三步姿态构造；转动正向按正文右手定则",
+    "caption": "进动、章动与自转的三步姿态构造；转动正向按正文右手定则",
+    "crop_rect_pt": [
+      4,
+      277,
+      711,
+      510
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p015-euler-steps.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p015-euler-steps.png",
+    "insert_after": "\\figend{欧拉姿态的三步构造；虚线保留初始空间轴供比较}",
+    "related_model_indices": [
+      7
+    ],
+    "notes": "保留原课件三幅静态阶段图与相应角度名称；未采用上方动画初态。",
+    "sha256_pdf": "8ec9e6bf21d83a440acc9bb371b6a0185909e308ad7377e48fe9212d7df97ba4",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p018-earth-orbit",
+    "deck": "c3-1",
+    "page": 18,
+    "topic": "地球公转轨道、季节位置与黄赤交角",
+    "caption": "地球公转轨道、季节位置与黄赤交角",
+    "crop_rect_pt": [
+      251,
+      0,
+      710,
+      190
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p018-earth-orbit.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p018-earth-orbit.png",
+    "insert_after": "\\figend{理想地球模型中的轴倾角与质心轨道}",
+    "related_model_indices": [
+      8
+    ],
+    "notes": "保留PPT完整原位图。欧拉坐标的叠加说明由同节姿态图呈现，避免原课件浮动文本遮挡原图。",
+    "source_media": {
+      "pdf_xref": 554,
+      "pixel_size": [
+        522,
+        447
+      ],
+      "method": "无损提取课件原有完整位图，避开邻近文字遮挡"
+    },
+    "sha256_pdf": "d3ba3174f5fba17c698013b300ae48301838b5f5c3320f593df6cc495b965e10",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p019-top-initial",
+    "deck": "c3-1",
+    "page": 19,
+    "topic": "节点线与本体轴重合的一种陀螺初态",
+    "caption": "节点线与本体轴重合的一种陀螺初态",
+    "crop_rect_pt": [
+      449.3,
+      43.4,
+      661.1,
+      255.2
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p019-top-initial.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p019-top-initial.png",
+    "insert_after": "\\example{匀速进动陀螺的本体分量}",
+    "related_model_indices": [
+      6,
+      7
+    ],
+    "notes": "选择原静态节点线与 x 轴重合状态；此图仅说明姿态基准，正文初相位可另选。",
+    "source_media": {
+      "pdf_xref": 640,
+      "pixel_size": [
+        360,
+        360
+      ],
+      "method": "无损提取课件原有完整位图，避开邻近文字遮挡"
+    },
+    "sha256_pdf": "475792354fb9e7ce1ef5e4d7a6c95014bdc3568713dd5c6be66b445844bc00e5",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p024-swing-disk",
+    "deck": "c3-1",
+    "page": 24,
+    "topic": "铰接摆杆端的旋转圆盘与盘上标记点",
+    "caption": "铰接摆杆端的旋转圆盘与盘上标记点",
+    "crop_rect_pt": [
+      279,
+      274,
+      563,
+      539
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p024-swing-disk.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p024-swing-disk.png",
+    "insert_after": "\\figend{最低位置的摆杆、圆盘及计算轴组}",
+    "related_model_indices": [
+      5
+    ],
+    "notes": "原图为最低位置代表状态。",
+    "sha256_pdf": "4136041aeb426f248acf435f4d3c6cc1b54ec3590562fdc9258061d0be23dad3",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p025-rolling-cone",
+    "deck": "c3-1",
+    "page": 25,
+    "topic": "圆锥在水平面上绕固定顶点滚动",
+    "caption": "圆锥在水平面上绕固定顶点滚动",
+    "crop_rect_pt": [
+      387,
+      18,
+      630,
+      215
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p025-rolling-cone.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p025-rolling-cone.png",
+    "insert_after": "\\figend{圆锥滚动的轴截面与最高圆周位置}",
+    "related_model_indices": [
+      9
+    ],
+    "notes": "",
+    "sha256_pdf": "c843c66d095db619c751590961d47e535aad534745a4e70197e3a3335020360d",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p026-crank",
+    "deck": "c3-1",
+    "page": 26,
+    "topic": "曲柄与滑块：$\\xi$ 向下、$\\eta$ 向右，正文 $\\psi$ 从 $\\xi$ 量至本体 $x$ 轴",
+    "caption": "曲柄与滑块：$\\xi$ 向下、$\\eta$ 向右，正文 $\\psi$ 从 $\\xi$ 量至本体 $x$ 轴",
+    "crop_rect_pt": [
+      547,
+      199,
+      699,
+      458
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p026-crank.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p026-crank.png",
+    "insert_after": "\\figend{曲柄转角与连杆姿态之间由长度约束联系}",
+    "related_model_indices": [
+      10
+    ],
+    "notes": "图中滑块标记为 B，并非 β；正文采用右手正向 ψ。原PPT给出的负号与所画轴向不一致，正文已按统一约定处理。",
+    "nonfigure_trim_regions_pt": [
+      [
+        547,
+        199,
+        595,
+        235
+      ]
+    ],
+    "sha256_pdf": "df00ee95712875186ba48eaec844efeb42bd7ef14444b9f799316a63aec354d6",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p026-colored-turntable",
+    "deck": "c3-1",
+    "page": 26,
+    "topic": "支架上的圆盘及两根转动轴",
+    "caption": "支架上的圆盘及两根转动轴",
+    "crop_rect_pt": [
+      284,
+      265,
+      543,
+      418
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p026-colored-turntable.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p026-colored-turntable.png",
+    "insert_after": "\\example{转台上的水平轴圆盘}",
+    "related_model_indices": [
+      4
+    ],
+    "notes": "彩色实物模型式示意，与第10页线图相同模型但不同原图。",
+    "sha256_pdf": "6799ca38d586eaabb050c040433fb046370403417f5debd4ca15be566de6b5e1",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p029-rotation-xy",
+    "deck": "c3-1",
+    "page": 29,
+    "topic": "先绕 $x$ 再绕 $y$ 各转 $\\pi/2$ 后的姿态",
+    "caption": "先绕 $x$ 再绕 $y$ 各转 $\\pi/2$ 后的姿态",
+    "crop_rect_pt": [
+      76,
+      221,
+      280,
+      378
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p029-rotation-xy.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p029-rotation-xy.png",
+    "insert_after": "\\figend{同样两根轴与两个转角，交换次序产生不同姿态}",
+    "related_model_indices": [
+      11
+    ],
+    "notes": "原 GIF 选取第102帧（从1计数）的末态，保留课件坐标字母；GIF 的空间 x 轴朝左下、y 轴朝右。",
+    "source_media": {
+      "pptx": "/Users/dongxingxi/Downloads/理论力学/理论力学-c3-1.pptx",
+      "zip_member": "ppt/media/image102.gif",
+      "frame_index_0based": 101
+    },
+    "sha256_pdf": "7b40072c3fef5e5cec8590ba87201a42a55c59b9cb9b9de9cd2a45e05a7d92e1",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p029-rotation-yx",
+    "deck": "c3-1",
+    "page": 29,
+    "topic": "先绕 $y$ 再绕 $x$ 各转 $\\pi/2$ 后的姿态",
+    "caption": "先绕 $y$ 再绕 $x$ 各转 $\\pi/2$ 后的姿态",
+    "crop_rect_pt": [
+      423,
+      229,
+      630,
+      388
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p029-rotation-yx.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p029-rotation-yx.png",
+    "insert_after": "\\figend{同样两根轴与两个转角，交换次序产生不同姿态}",
+    "related_model_indices": [
+      11
+    ],
+    "notes": "原 GIF 选取第102帧（从1计数）的末态，保留课件坐标字母；GIF 的空间 x 轴朝左下、y 轴朝右。",
+    "source_media": {
+      "pptx": "/Users/dongxingxi/Downloads/理论力学/理论力学-c3-1.pptx",
+      "zip_member": "ppt/media/image103.gif",
+      "frame_index_0based": 101
+    },
+    "sha256_pdf": "e7469bac3fc2c9b61e977a475905ff6d978cdd79d998a4decba96e6c16a3c115",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p030-infinitesimal",
+    "deck": "c3-1",
+    "page": 30,
+    "topic": "无穷小转角与质点位移的几何关系",
+    "caption": "无穷小转角与质点位移：图中 $\\Delta n$ 表示无穷小转角矢量",
+    "crop_rect_pt": [
+      523,
+      249,
+      688,
+      510
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p030-infinitesimal.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p030-infinitesimal.png",
+    "insert_after": "\\subsection{无穷小转动与角速度矢量}",
+    "related_model_indices": [
+      3,
+      11
+    ],
+    "notes": "图中 Δn 对应正文无穷小转角矢量；Δr 的叉积等式按一阶近似理解。",
+    "nonfigure_trim_regions_pt": [
+      [
+        523,
+        493,
+        580,
+        512
+      ],
+      [
+        523,
+        457,
+        531,
+        494
+      ],
+      [
+        647,
+        508,
+        686,
+        513
+      ]
+    ],
+    "sha256_pdf": "00e251278cb642dbbaeec404db6748d15d061b54d0965a54472ba8f26c419d10",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p037-axis-polar",
+    "deck": "c3-1",
+    "page": 37,
+    "topic": "用极角和方位角指定一根空间轴",
+    "caption": "用极角和方位角指定一根空间轴",
+    "crop_rect_pt": [
+      470,
+      211,
+      674,
+      433
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p037-axis-polar.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p037-axis-polar.png",
+    "insert_after": "基点平移和轴组重选是两种不同操作，不宜混成一项“坐标变化”。",
+    "related_model_indices": [
+      1
+    ],
+    "notes": "图中 θ、φ 是普通球面角，不是全部欧拉角。",
+    "sha256_pdf": "68c85d3ea70d9a3ddc15393aae92596ad559750131df6c4801d3787c43d6ac72",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p047-arbitrary-axis",
+    "deck": "c3-1",
+    "page": 47,
+    "topic": "任意轴转动的几何步骤：图中 $\\theta,\\varphi$ 对应正文 $\\beta,\\lambda$",
+    "caption": "任意轴转动的几何步骤：图中 $\\theta,\\varphi$ 对应正文 $\\beta,\\lambda$",
+    "crop_rect_pt": [
+      483,
+      244,
+      699,
+      478
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p047-arbitrary-axis.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p047-arbitrary-axis.png",
+    "insert_after": "\\subsection{任意轴转动、生成元与不交换性}",
+    "related_model_indices": [
+      11
+    ],
+    "notes": "图中轴的球面角 θ、φ 对应正文 β、λ。原课件左側辅助虚线局部被文本遮挡，保持原有可见线段；轴方向、坐标字母与两角均完整。",
+    "nonfigure_trim_regions_pt": [
+      [
+        483,
+        260,
+        505,
+        299
+      ]
+    ],
+    "sha256_pdf": "3cdb4f40f35288e7be244179a9ead1b0827b0cbe079e1d4aef188c3ec15abf2f",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-1-p043-planar-rotation",
+    "deck": "c3-1",
+    "page": 43,
+    "topic": "平面内矢量的主动转动：初始角 $\\alpha$、转角 $\\theta$ 对应正文 $\\beta,\\gamma$",
+    "caption": "平面内矢量的主动转动：初始角 $\\alpha$、转角 $\\theta$ 对应正文 $\\beta,\\gamma$",
+    "crop_rect_pt": [
+      551,
+      0,
+      710,
+      134
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p043-planar-rotation.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-1-p043-planar-rotation.png",
+    "insert_after": "\\subsection{基本转动矩阵与欧拉矩阵}",
+    "related_model_indices": [
+      7,
+      11
+    ],
+    "notes": "原图 α 对应正文初始极角 β，转角 θ 对应正文 γ。",
+    "nonfigure_trim_regions_pt": [
+      [
+        551,
+        120,
+        613,
+        136
+      ]
+    ],
+    "sha256_pdf": "1ad3140b81f19aa2155e2b0a1320351c401f3253ec6767518223e29b344d26e1",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p002-force-system",
+    "deck": "c3-2",
+    "page": 2,
+    "topic": "分布在刚体各点的外力",
+    "caption": "分布在刚体各点的外力",
+    "crop_rect_pt": [
+      385,
+      68,
+      706,
+      315
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p002-force-system.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p002-force-system.png",
+    "insert_after": "\\subsection{整体运动方程与功率}",
+    "related_model_indices": [],
+    "notes": "",
+    "sha256_pdf": "8222e48f675df7fef31087573875d456b53528539d54b14b4619b96609964326",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p003-sliding-force",
+    "deck": "c3-2",
+    "page": 3,
+    "topic": "同一作用线上的力可在刚体上滑移",
+    "caption": "同一作用线上的力可在刚体上滑移",
+    "crop_rect_pt": [
+      425,
+      144,
+      708,
+      377
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p003-sliding-force.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p003-sliding-force.png",
+    "insert_after": "可传递性只判断刚体总体外部效果，局部应力和变形仍依赖实际施力处。",
+    "related_model_indices": [
+      12
+    ],
+    "notes": "",
+    "sha256_pdf": "70897d3bca60fd95ea7efdc78a265bba58ba1f3cc8552ad53700a16e9906cba3",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p004-two-forces",
+    "deck": "c3-2",
+    "page": 4,
+    "topic": "两个非平行力及其作用线",
+    "caption": "两个非平行力及其作用线",
+    "crop_rect_pt": [
+      22,
+      45,
+      310,
+      283
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p004-two-forces.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p004-two-forces.png",
+    "insert_after": "\\figend{先沿原作用线移至交点，再在交点合成两个力}",
+    "related_model_indices": [
+      13
+    ],
+    "notes": "",
+    "sha256_pdf": "513c75120206e56e4b144316f9b6c325132b8ceedc41f45fdd9ebf8a2d7317d2",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p004-two-resultant",
+    "deck": "c3-2",
+    "page": 4,
+    "topic": "将两力移至作用线交点后合成",
+    "caption": "将两力移至作用线交点后合成",
+    "crop_rect_pt": [
+      405,
+      45,
+      691,
+      279
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p004-two-resultant.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p004-two-resultant.png",
+    "insert_after": "\\figend{先沿原作用线移至交点，再在交点合成两个力}",
+    "related_model_indices": [
+      13
+    ],
+    "notes": "",
+    "sha256_pdf": "b5c0d920d4563c247aa1338dc02b105475c3598a384ebe622526457b0cbe26ae",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p005-three-resultant",
+    "deck": "c3-2",
+    "page": 5,
+    "topic": "三个共面非平行力的递次合成",
+    "caption": "三个共面非平行力的递次合成",
+    "crop_rect_pt": [
+      278,
+      282,
+      689,
+      510
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p005-three-resultant.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p005-three-resultant.png",
+    "insert_after": "因此对任意力系，应先用主矢和主矩记录信息，再决定能否用交点作图。",
+    "related_model_indices": [
+      13
+    ],
+    "notes": "第5页前两幅为递次作图中间状态，选取同时保留原作用线与最终合力的完整状态。",
+    "sha256_pdf": "eaff5a3e7095dd3a5865ca9cca09325e1bc49a33d1e06d5379bbc9a478a00fcf",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p006-parallel-same",
+    "deck": "c3-2",
+    "page": 6,
+    "topic": "同向平行力的合力位于两作用线之间",
+    "caption": "同向平行力的合力位于两作用线之间",
+    "crop_rect_pt": [
+      375,
+      54,
+      690,
+      251
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p006-parallel-same.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p006-parallel-same.png",
+    "insert_after": "\\figend{同向平行力的合力位置由总力矩确定}",
+    "related_model_indices": [
+      14
+    ],
+    "notes": "",
+    "sha256_pdf": "1da303fbe4df382408677688fc9e6bcd901a8cdd59cd17b7fdc6945f81d627ac",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p006-parallel-opposite",
+    "deck": "c3-2",
+    "page": 6,
+    "topic": "反向不等平行力的合力位于较大力一侧",
+    "caption": "反向不等平行力的合力位于较大力一侧",
+    "crop_rect_pt": [
+      382,
+      323,
+      698,
+      510
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p006-parallel-opposite.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p006-parallel-opposite.png",
+    "insert_after": "\\example{同向与反向平行力的合成}",
+    "related_model_indices": [
+      14
+    ],
+    "notes": "",
+    "sha256_pdf": "6e6074fe5ae5cb08189a3ed5790fd2ee0416234ddc348d43f9540070a18627dc",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p007-couple",
+    "deck": "c3-2",
+    "page": 7,
+    "topic": "等大反向的非共线二力构成力偶",
+    "caption": "等大反向的非共线二力构成力偶",
+    "crop_rect_pt": [
+      387,
+      137,
+      704,
+      281
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p007-couple.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p007-couple.png",
+    "insert_after": "\\example{扳手上的力偶}",
+    "related_model_indices": [
+      12
+    ],
+    "notes": "原图圆内 r1−r2 是两施力点位矢差，⊗ 表示力偶矩指向纸内。",
+    "sha256_pdf": "edeaebce57a45ce503fedce960cbfa8b376ad5a72089bacd2487b0510b745eb0",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p008-transfer-pair",
+    "deck": "c3-2",
+    "page": 8,
+    "topic": "在新作用点加入零力对，实现力与力偶的等效转换",
+    "caption": "在新作用点加入零力对，实现力与力偶的等效转换",
+    "crop_rect_pt": [
+      119,
+      81,
+      605,
+      255
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p008-transfer-pair.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p008-transfer-pair.png",
+    "insert_after": "\\figend{偏离作用线平移一个力时必须补上力偶}",
+    "related_model_indices": [
+      12
+    ],
+    "notes": "两辅助力作用在同一刚体上，应称零力对，不能称不同物体之间的作用反作用对。",
+    "sha256_pdf": "d81dbefa44b0d9a8da1033b43fa1a7d46c851d6b67a916f63d6b2b580f9d142a",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p009-spatial-reduction",
+    "deck": "c3-2",
+    "page": 9,
+    "topic": "空间力系移到同一中心时附加相应力偶",
+    "caption": "空间力系移到同一中心时附加相应力偶",
+    "crop_rect_pt": [
+      51,
+      240,
+      660,
+      455
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p009-spatial-reduction.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p009-spatial-reduction.png",
+    "insert_after": "已有自由力偶必须加入主矩；仅对作用力求叉积会漏掉直接施加的扭矩。",
+    "related_model_indices": [
+      12
+    ],
+    "notes": "同时保留原力系与约化力系。",
+    "sha256_pdf": "5a9562923af88c895330b8de097d9d63e8653b2d74a635a7cde9e691659fc30c",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p016-rough-rod",
+    "deck": "c3-2",
+    "page": 16,
+    "topic": "粗糙地面与光滑棱边支承的均匀杆",
+    "caption": "粗糙地面与光滑棱边支承的均匀杆：$P$ 为重量，$\\varphi_0$ 为临界倾角",
+    "crop_rect_pt": [
+      443,
+      90,
+      711,
+      326
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p016-rough-rod.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p016-rough-rod.png",
+    "insert_after": "\\figend{光滑棱边的反力垂直于杆，地面摩擦须由平衡求出}",
+    "related_model_indices": [
+      16
+    ],
+    "notes": "课件中 P 为重量，φ0 为杆与地面的临界夹角。",
+    "sha256_pdf": "a3c264957561a5427c8e8c39189c2048ecfb0190b6bdc6cb2b0c6534d905defd",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p017-right-angle-rods",
+    "deck": "c3-2",
+    "page": 17,
+    "topic": "直角刚接双杆的悬挂平衡",
+    "caption": "直角刚接双杆的悬挂平衡",
+    "crop_rect_pt": [
+      494,
+      9,
+      719,
+      300
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p017-right-angle-rods.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p017-right-angle-rods.png",
+    "insert_after": "\\figend{悬挂刚体平衡时质心重力作用线通过悬点}",
+    "related_model_indices": [
+      17
+    ],
+    "notes": "",
+    "sha256_pdf": "4d2da609085374fe2bd055dbb0a08876fb9f3fa477553f0aee781737cd6b6689",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p018-skew-forces",
+    "deck": "c3-2",
+    "page": 18,
+    "topic": "异面二力产生的主矩不能由单一反向力抵消",
+    "caption": "异面二力产生的主矩不能由单一反向力抵消",
+    "crop_rect_pt": [
+      69,
+      299,
+      538,
+      452
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p018-skew-forces.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p018-skew-forces.png",
+    "insert_after": "\\subsection{三力定理与静力学建模}",
+    "related_model_indices": [
+      12
+    ],
+    "notes": "左右分别是异面二力与把其中一力移至共同中心后的表示。",
+    "nonfigure_trim_regions_pt": [
+      [
+        69,
+        298,
+        115,
+        308
+      ]
+    ],
+    "sha256_pdf": "52a8ca6f8e2429c162d09b3ca4ca4529c15529e5ca516baa38822637a918acb0",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p019-concurrent-rod",
+    "deck": "c3-2",
+    "page": 19,
+    "topic": "利用三力共点确定地面反力方向",
+    "caption": "利用三力共点确定地面反力方向",
+    "crop_rect_pt": [
+      437,
+      102,
+      702,
+      334
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p019-concurrent-rod.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p019-concurrent-rod.png",
+    "insert_after": "\\figend{光滑棱边的反力垂直于杆，地面摩擦须由平衡求出}",
+    "related_model_indices": [
+      16
+    ],
+    "notes": "与第16页同一问题，增加三力交点及反力方向角 α。",
+    "sha256_pdf": "3377de94dee4e8458dbf73b42b59708fe8c88e01d0869c9f06fa2517afb8f1f6",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p020-smooth-corner",
+    "deck": "c3-2",
+    "page": 20,
+    "topic": "光滑墙面与棱边对杆的两种法向约束",
+    "caption": "光滑墙面与棱边对杆的两种法向约束",
+    "crop_rect_pt": [
+      480,
+      4,
+      706,
+      237
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p020-smooth-corner.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p020-smooth-corner.png",
+    "insert_after": "\\figend{两个光滑接触的法向方向不同}",
+    "related_model_indices": [
+      18
+    ],
+    "notes": "原图 OD=l；与正文同一几何。",
+    "sha256_pdf": "2190c20d7c717c4b4a64f1c7881744a4e469fc0ffeb209191e3c0c1d05a528be",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p024-bowl-rod",
+    "deck": "c3-2",
+    "page": 24,
+    "topic": "半球碗内杆的三力共点：图中交点 $A$ 对应正文 $Q$，$D$ 为杆中点",
+    "caption": "半球碗内杆的三力共点：图中交点 $A$ 对应正文 $Q$，$D$ 为杆中点",
+    "crop_rect_pt": [
+      502,
+      28,
+      716,
+      214
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p024-bowl-rod.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p024-bowl-rod.png",
+    "insert_after": "\\figend{碗杆的共点几何：径向线BQ、碗缘法线CQ与中点竖直线DQ}",
+    "related_model_indices": [
+      19,
+      20
+    ],
+    "notes": "原图 A 为三力交点，对应正文 Q；原图碗心 O 对应正文圆心，原图 D 为杆中点。第23页与本页为同一几何，取本页标注完整状态。",
+    "sha256_pdf": "c022c2d041109851e01dbe68f03986bbb11c3f236bd5fa6412cf2bf1a533a882",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p025-stacked-logs",
+    "deck": "c3-2",
+    "page": 25,
+    "topic": "受两侧夹杆约束的圆柱木材堆积",
+    "caption": "受两侧夹杆约束的圆柱木材堆积",
+    "crop_rect_pt": [
+      337,
+      0,
+      696,
+      185
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p025-stacked-logs.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p025-stacked-logs.png",
+    "insert_after": "\\figend{木材堆积研究题的几何模型}",
+    "related_model_indices": [
+      21
+    ],
+    "notes": "原图顶端夹杆铰接点贴近PPT页顶，保留完整页面可见范围。",
+    "sha256_pdf": "0d42d2209f4b25bd154fbe1a62ac8c0f98606f33ba95943fe8828fd1c4889149",
+    "visual_status": "checked"
+  },
+  {
+    "key": "c3-2-p026-three-moments",
+    "deck": "c3-2",
+    "page": 26,
+    "topic": "三个不共线取矩点的位置关系",
+    "caption": "三个不共线取矩点的位置关系",
+    "crop_rect_pt": [
+      429,
+      42,
+      700,
+      219
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p026-three-moments.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-2-p026-three-moments.png",
+    "insert_after": "\\figend{三点取矩法的几何非退化条件}",
+    "related_model_indices": [
+      15
+    ],
+    "notes": "图中 O1、O2、O3 对应正文三点取矩法的三个取矩点。",
+    "sha256_pdf": "13283997023925d5a6dead3bde7a18d140b21ae9d7603f9934095a3a82efdb4f",
+    "visual_status": "checked"
+  }
+]

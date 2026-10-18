@@ -1,0 +1,428 @@
+{
+  "report_type": "targeted_figure_visual_regression",
+  "generated_at": "2026-10-18T08:17:23.714334+08:00",
+  "scope": {
+    "figure_keys": [
+      "ex58",
+      "ex60",
+      "ex62",
+      "ex64",
+      "ex65",
+      "ex66",
+      "ex68",
+      "ex72",
+      "ex76",
+      "ex81",
+      "tr01",
+      "tr02",
+      "tr03",
+      "tr04",
+      "tr05",
+      "tr09",
+      "tr11",
+      "tr12",
+      "tr13",
+      "tr17",
+      "tr19"
+    ],
+    "figure_count": 21,
+    "atlas_pages": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      26,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35
+    ],
+    "page_count": 13
+  },
+  "source_pdf": {
+    "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/逐题图册.pdf",
+    "sha256": "e241ca813edf5defad695e06609213a867ca231a752c1065d92390589999a025"
+  },
+  "source_pngs": [
+    {
+      "page": 20,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/020.png",
+      "sha256": "bb715cea53d5e217e74179ce086169cf21d39361a58760e798a10baa271eb23a"
+    },
+    {
+      "page": 21,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/021.png",
+      "sha256": "0c7a3461bc6df516af15a807bbf17914da0d3462fdc9aadb326719dfc9e577d4"
+    },
+    {
+      "page": 22,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/022.png",
+      "sha256": "690171c4e02cfc3f49a05564fa2d740b20a15d3b5ccc119f7e80c2f8f90ab7c7"
+    },
+    {
+      "page": 23,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/023.png",
+      "sha256": "4e04d0ecc0e7c046c0a6ea90fda57f7845f0fc7c8fb7b807f577af65544afd82"
+    },
+    {
+      "page": 24,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/024.png",
+      "sha256": "244eb031e55e1452c75f9e9cbca6f35f34ae3c1f6bc4e48bce3c0b625a9afb6a"
+    },
+    {
+      "page": 26,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/026.png",
+      "sha256": "40b866f96d7283b0984b206ff9f1178a60472037c670dc250fba65987085abd2"
+    },
+    {
+      "page": 27,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/027.png",
+      "sha256": "2fb6e9f82060fc5e2e460a2df31fc706ec255e4c66eb4f9d05d3ace8cad3449e"
+    },
+    {
+      "page": 29,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/029.png",
+      "sha256": "877a0548091f37d562e18e19cc2f32a294bc2d243be30b4ef634297c24f505b3"
+    },
+    {
+      "page": 30,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/030.png",
+      "sha256": "e5362c69bbcdaf392aec6d471cc894f1fb2a7f13af6af43048e39b2eb17d6cfd"
+    },
+    {
+      "page": 31,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/031.png",
+      "sha256": "88036c9c01afab1d8188d669b565572e7bce8a57a8266bde091381e66ba00eb6"
+    },
+    {
+      "page": 32,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/032.png",
+      "sha256": "5a1f6ace2f8a3097f0a0d871926d25c9531f43f3c95386e410e5532a5835995d"
+    },
+    {
+      "page": 33,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/033.png",
+      "sha256": "c3938b619db7acfbf6bba64f085e73fa03b2e4e1e33370e5120ad479a39c9fdb"
+    },
+    {
+      "page": 35,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/035.png",
+      "sha256": "f034ae55cdbd1a2aefeabc670356f707a19a58a4a79661f121375f4b8dd4d92e"
+    }
+  ],
+  "method": "仅回归父代理指定的21幅此前报告过的图：实际查看13张修订版图册页面，对tr01与tr05用PDF局部4倍放大确认；字号在实际查看基础上通过PDF文字几何辅助测量。未扩展全稿审核，未改正文或资产。",
+  "summary": {
+    "reviewed_figures": 21,
+    "passed": 21,
+    "partial": 0,
+    "remaining_findings": 0,
+    "conclusion": "指定21图的修复项均已通过分轮复验，当前残留为0；本次最终局部回归仅实际查看最后五图的两张独立样张，确认tr05、tr01、ex65，不代表对完整PDF新增全量审核。"
+  },
+  "records": [
+    {
+      "key": "ex58",
+      "figure": "5.58",
+      "atlas_page": 20,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "采用X=√κq、Y=p/√κ圆坐标后，P角弧端点与径向线吻合。"
+    },
+    {
+      "key": "ex60",
+      "figure": "5.60",
+      "atlas_page": 20,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "上下布局后原图说明为10.50pt，相位文字清楚。"
+    },
+    {
+      "key": "ex62",
+      "figure": "5.62",
+      "atlas_page": 21,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "x、y轴已穿过振动中心，常数平移问题解决。"
+    },
+    {
+      "key": "ex64",
+      "figure": "5.64",
+      "atlas_page": 22,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "已实际看到无库仑力的新图；x/y轴与径向线分开，r、θ、P可辨识。"
+    },
+    {
+      "key": "ex65",
+      "figure": "5.65",
+      "atlas_page": 22,
+      "status": "passed",
+      "actually_viewed": true,
+      "notes": "已实际查看最后五图/01.png：绘图区范围缩短，ξ/η两族曲线保持正交关系；说明文字明显增大、完整可读，无重叠和裁切，字号问题解决。",
+      "previous_notes": "上下布局已完成，但4.4cm高度上限仍压小图内说明，实测6.47pt。",
+      "latest_regression_at": "2026-10-18T08:19:33.900176+08:00"
+    },
+    {
+      "key": "ex66",
+      "figure": "5.66",
+      "atlas_page": 22,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "说明与焦点标记清楚，主要文字8.47pt。"
+    },
+    {
+      "key": "ex68",
+      "figure": "5.68",
+      "atlas_page": 23,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "双相图增大，说明为10.50pt，闭合轨道及向内螺旋方向清楚。"
+    },
+    {
+      "key": "ex72",
+      "figure": "5.72",
+      "atlas_page": 24,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "长说明已精简，能级标签与跃迁关系可读；主要文字7.81pt、下标5.19pt，较旧版明显改善。"
+    },
+    {
+      "key": "ex76",
+      "figure": "5.76",
+      "atlas_page": 26,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "一个完整正弦周期，n=2、λ₂=l正确；A位于首波峰，节点对应0、l/2、l。"
+    },
+    {
+      "key": "ex81",
+      "figure": "5.81",
+      "atlas_page": 27,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "框内边距已增加，底行下标和左右公式均与边框分开。"
+    },
+    {
+      "key": "tr01",
+      "figure": "5.87",
+      "atlas_page": 29,
+      "status": "passed",
+      "actually_viewed": true,
+      "notes": "已实际查看最后五图/01.png：v位于横轴上方，横轴不再穿过字形，方向仍沿+x，问题解决。",
+      "previous_notes": "圆周、圆心、右向v、a、外法向n及δr均符合题设；v标签仍被横轴穿过。",
+      "latest_regression_at": "2026-10-18T08:19:33.900176+08:00"
+    },
+    {
+      "key": "tr02",
+      "figure": "5.88",
+      "atlas_page": 30,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "新x/y轴与R方向分开，旧R/x重叠已消除。"
+    },
+    {
+      "key": "tr03",
+      "figure": "5.89",
+      "atlas_page": 30,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "质量m在黑球上方，球面不再遮字。"
+    },
+    {
+      "key": "tr04",
+      "figure": "5.90",
+      "atlas_page": 30,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "m₂移到球右侧并留出空隙，完整字形可读。"
+    },
+    {
+      "key": "tr05",
+      "figure": "5.91",
+      "atlas_page": 31,
+      "status": "passed",
+      "actually_viewed": true,
+      "notes": "已实际查看最后五图/02.png：m移至黑球右下外侧，字形完整，与黑球留有间隔，遮字问题解决。",
+      "previous_notes": "m仍在黑球右下，左侧笔画仍被遮挡；已放大确认。",
+      "latest_regression_at": "2026-10-18T08:19:33.900176+08:00"
+    },
+    {
+      "key": "tr09",
+      "figure": "5.95",
+      "atlas_page": 32,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "外侧弹簧已增加固定墙，质量/刚度模型对应。"
+    },
+    {
+      "key": "tr11",
+      "figure": "5.97",
+      "atlas_page": 33,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "图中统一为f_q和P=p−f_q，旧b(q)已移除。"
+    },
+    {
+      "key": "tr12",
+      "figure": "5.98",
+      "atlas_page": 33,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "单相点水平运动图已标(q₀,p₀)、(q(t),p₀)及G=q−pt/m=q₀。"
+    },
+    {
+      "key": "tr13",
+      "figure": "5.99",
+      "atlas_page": 33,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "转折点文字移到横轴上方，横线不再穿字。"
+    },
+    {
+      "key": "tr17",
+      "figure": "5.103",
+      "atlas_page": 35,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "已同步改成n=2正确波形；A箭头和节点位置相符。"
+    },
+    {
+      "key": "tr19",
+      "figure": "5.105",
+      "atlas_page": 35,
+      "status": "pass",
+      "actually_viewed": true,
+      "notes": "实际轨道与赤道重合，z轴、P点、速度及θ=π/2一致。"
+    }
+  ],
+  "remaining_findings": [],
+  "review_history": [
+    {
+      "saved_at": "2026-10-18T08:19:33.900176+08:00",
+      "stage": "最后三处残留修复前",
+      "summary": {
+        "reviewed_figures": 21,
+        "passed": 18,
+        "partial": 3,
+        "remaining_findings": 3,
+        "conclusion": "原图文模型和主要方向错误均已修复；仍有tr05质量遮字、tr01速度标签穿轴、ex65字号未改善三处局部残留。其余指定修复项本轮通过。"
+      },
+      "remaining_findings": [
+        {
+          "id": "R-b-01",
+          "key": "tr05",
+          "figure": "5.91",
+          "page": 31,
+          "severity": "moderate",
+          "problem": "质量m仍被黑球遮住左部笔画。",
+          "evidence": "修订版031.png及修订PDF局部4倍放大确认。题图/tr05.tex仍使用circle(4pt)node[below right]{$m$}，没有额外偏移。",
+          "recommendation": "给m独立位置或足够xshift/yshift，使锚点移出球半径；与已通过的tr04处理一致。"
+        },
+        {
+          "id": "R-b-02",
+          "key": "tr01",
+          "figure": "5.87",
+          "page": 29,
+          "severity": "minor",
+          "problem": "速度v位于x轴上，横轴穿过字母，字母右侧又紧邻圆周。",
+          "evidence": "修订版029.png及PDF局部4倍放大确认。速度箭头沿y=0，末端node[right]仍在y=0。",
+          "recommendation": "将v移到速度箭头上方或下方，避开圆周，例如node[midway,above]；保留箭头沿+x。"
+        },
+        {
+          "id": "R-b-03",
+          "key": "ex65",
+          "figure": "5.65",
+          "page": 22,
+          "severity": "moderate",
+          "problem": "长抛物坐标图仍受max height=4.4cm限制，说明文字为6.47pt，字号问题未解决。",
+          "evidence": "修订版022.png常规尺寸下明显小于相邻图；PDFspan实测6.47pt，初版相应文字6.60pt。解答图/ex65.tex为max width=13cm,max height=4.4cm，瓶颈仍为高度。",
+          "recommendation": "缩短抛物线/竖轴展示范围以保留正常文字大小，或增大模型高度/把说明独立排版；保留ξ/η两族几何和对应。"
+        }
+      ]
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "R-b-01",
+      "key": "tr05",
+      "figure": "5.91",
+      "page": 31,
+      "severity": "moderate",
+      "problem": "质量m仍被黑球遮住左部笔画。",
+      "evidence": "修订版031.png及修订PDF局部4倍放大确认。题图/tr05.tex仍使用circle(4pt)node[below right]{$m$}，没有额外偏移。",
+      "recommendation": "给m独立位置或足够xshift/yshift，使锚点移出球半径；与已通过的tr04处理一致。",
+      "status": "resolved",
+      "resolution": "已实际查看最后五图/02.png：m移至黑球右下外侧，字形完整，与黑球留有间隔，遮字问题解决。",
+      "resolved_at": "2026-10-18T08:19:33.900176+08:00"
+    },
+    {
+      "id": "R-b-02",
+      "key": "tr01",
+      "figure": "5.87",
+      "page": 29,
+      "severity": "minor",
+      "problem": "速度v位于x轴上，横轴穿过字母，字母右侧又紧邻圆周。",
+      "evidence": "修订版029.png及PDF局部4倍放大确认。速度箭头沿y=0，末端node[right]仍在y=0。",
+      "recommendation": "将v移到速度箭头上方或下方，避开圆周，例如node[midway,above]；保留箭头沿+x。",
+      "status": "resolved",
+      "resolution": "已实际查看最后五图/01.png：v位于横轴上方，横轴不再穿过字形，方向仍沿+x，问题解决。",
+      "resolved_at": "2026-10-18T08:19:33.900176+08:00"
+    },
+    {
+      "id": "R-b-03",
+      "key": "ex65",
+      "figure": "5.65",
+      "page": 22,
+      "severity": "moderate",
+      "problem": "长抛物坐标图仍受max height=4.4cm限制，说明文字为6.47pt，字号问题未解决。",
+      "evidence": "修订版022.png常规尺寸下明显小于相邻图；PDFspan实测6.47pt，初版相应文字6.60pt。解答图/ex65.tex为max width=13cm,max height=4.4cm，瓶颈仍为高度。",
+      "recommendation": "缩短抛物线/竖轴展示范围以保留正常文字大小，或增大模型高度/把说明独立排版；保留ξ/η两族几何和对应。",
+      "status": "resolved",
+      "resolution": "已实际查看最后五图/01.png：绘图区范围缩短，ξ/η两族曲线保持正交关系；说明文字明显增大、完整可读，无重叠和裁切，字号问题解决。",
+      "resolved_at": "2026-10-18T08:19:33.900176+08:00"
+    }
+  ],
+  "final_local_regression": {
+    "checked_at": "2026-10-18T08:19:33.900176+08:00",
+    "figure_keys": [
+      "tr05",
+      "tr01",
+      "ex65"
+    ],
+    "source_pngs": [
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/最后五图/01.png",
+        "sha256": "f74677a70efcc9f383e6732408b48bf5811142aa54b8f2698d5262412103f8bd"
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/最后五图/02.png",
+        "sha256": "58e45821714a6aa6a33ebaef7d3c5c74ba42351a94b5ea3f4779ef96503c53ac"
+      }
+    ],
+    "method": "逐张实际打开两张最新独立样张，限核查指定3项；未回看旧36页图册，未扩展完整PDF范围。",
+    "results": [
+      {
+        "key": "tr05",
+        "status": "passed",
+        "actually_viewed": true,
+        "notes": "已实际查看最后五图/02.png：m移至黑球右下外侧，字形完整，与黑球留有间隔，遮字问题解决。"
+      },
+      {
+        "key": "tr01",
+        "status": "passed",
+        "actually_viewed": true,
+        "notes": "已实际查看最后五图/01.png：v位于横轴上方，横轴不再穿过字形，方向仍沿+x，问题解决。"
+      },
+      {
+        "key": "ex65",
+        "status": "passed",
+        "actually_viewed": true,
+        "notes": "已实际查看最后五图/01.png：绘图区范围缩短，ξ/η两族曲线保持正交关系；说明文字明显增大、完整可读，无重叠和裁切，字号问题解决。"
+      }
+    ],
+    "conclusion": "三项均已解决。等待完整PDF稳定后另行进行物理61–120页版式审核。"
+  }
+}

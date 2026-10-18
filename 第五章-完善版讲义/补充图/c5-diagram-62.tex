@@ -1,0 +1,7 @@
+\begin{tikzpicture}[node distance=.6cm]
+\node[draw,fill=soft,align=center](newton){位置与实际受力\\牛顿方程};
+\node[draw,fill=soft,align=center,right=1cm of newton](lag){约束与广义坐标\\$L$、广义力、拉氏方程};
+\node[draw,fill=soft,align=center,right=1cm of lag](ham){正则状态与辛结构\\$H$、正则方程};
+\node[draw,align=center,below=1cm of lag](act){作用量、变分与连续对称性\\运动方程与守恒量};
+\draw[force](newton)--(lag);\draw[force](lag)--(ham);\draw[force](act)--(lag);\draw[force](act)--(ham);
+\end{tikzpicture}

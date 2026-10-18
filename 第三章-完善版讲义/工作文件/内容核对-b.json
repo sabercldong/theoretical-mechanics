@@ -1,0 +1,828 @@
+{
+  "status": "passed",
+  "pages": [
+    {
+      "deck": "c3-3",
+      "page": 1,
+      "topic": "整体动力学、力系与平衡回顾",
+      "lecture_location": "3.4.1",
+      "notes": "整体外力、外矩与能量式已保留；本页为前节与惯量节的衔接。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 2,
+      "topic": "定点角动量、动能及惯量矩阵概览",
+      "lecture_location": "3.5.1",
+      "notes": "保留线性角动量与二次动能表达。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 3,
+      "topic": "质元速度及角动量三重积推导",
+      "lecture_location": "3.5.1",
+      "notes": "质元示意与第5、6页重复，选第5页较完整原图。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 4,
+      "topic": "角动量三个分量与惯性积定义",
+      "lecture_location": "3.5.1",
+      "notes": "正文逐分量展开，并统一实际矩阵元Iij与正惯性积Dij的区别。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 5,
+      "topic": "惯量矩阵与矢量角动量",
+      "lecture_location": "3.5.1",
+      "notes": "提取质元图；矩阵元素符号解释保留。",
+      "original_figure_keys": [
+        "c3-3-p005-mass-element"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 6,
+      "topic": "从质元功率形式得到转动动能",
+      "lecture_location": "3.5.1",
+      "notes": "正文由速度平方及混合积两条路线推导；几何图同第5页。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 7,
+      "topic": "转动动能的矩阵形式与展开",
+      "lecture_location": "3.5.1",
+      "notes": "三个交叉项及系数2完整保留。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 8,
+      "topic": "惯量张量定义与离散化小结",
+      "lecture_location": "3.5.2",
+      "notes": "连续积分与离散求和统一。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 9,
+      "topic": "正方体质心惯量直接积分",
+      "lecture_location": "3.5.6",
+      "notes": "提取质心坐标图；均匀质量、边长与二阶矩积分完整保留。",
+      "original_figure_keys": [
+        "c3-3-p009-cube-center"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 10,
+      "topic": "质心正方体的角动量、动能和任意轴惯量",
+      "lecture_location": "3.5.6",
+      "notes": "图与第9页重复；各向同性含义保留。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 11,
+      "topic": "顶点正方体的惯量张量",
+      "lecture_location": "3.5.6",
+      "notes": "提取顶点坐标图；保留直接积分和平行轴双重求解。",
+      "original_figure_keys": [
+        "c3-3-p011-cube-vertex"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 12,
+      "topic": "顶点正方体绕棱与体对角线的转动",
+      "lecture_location": "3.5.6",
+      "notes": "两方向的角动量、动能均覆盖；图与第11页重复。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 13,
+      "topic": "平行轴定理和薄片垂直轴定理",
+      "lecture_location": "3.5.2",
+      "notes": "两幅非重复几何图分别提取，正文注明质心条件及薄片条件。",
+      "original_figure_keys": [
+        "c3-3-p013-parallel-axes",
+        "c3-3-p013-perpendicular-axes"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 14,
+      "topic": "任意轴方向惯量与斜轴细杆",
+      "lecture_location": "3.5.5",
+      "notes": "通式位于3.5.1，细杆取向、sin平方关系在3.5.5；图中x轴杆对应正文z轴杆，caption说明。",
+      "original_figure_keys": [
+        "c3-3-p014-rod-direction"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 15,
+      "topic": "坐标轴变化、对角化与主轴定义",
+      "lecture_location": "3.5.2",
+      "notes": "提取两组本体轴图；主轴定义详见3.5.4。",
+      "original_figure_keys": [
+        "c3-3-p015-body-bases"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 16,
+      "topic": "惯量椭球的辅助坐标构造",
+      "lecture_location": "3.5.4",
+      "notes": "保留从动能二次型到椭球的推导，正文特别说明辅助坐标与量纲。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 17,
+      "topic": "主轴的法向几何法与代数法",
+      "lecture_location": "3.5.4",
+      "notes": "保留椭球主轴、法向、特征方向的联系。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 18,
+      "topic": "一般矩阵的本征值与正交化求法",
+      "lecture_location": "3.5.4",
+      "notes": "保留完整求解次序与简并子空间正交化。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 19,
+      "topic": "半周对称的成对质元与惯性积消失",
+      "lecture_location": "3.5.5",
+      "notes": "提取成对质元图；正文区分镜面对称、半周旋转与高阶旋转。",
+      "original_figure_keys": [
+        "c3-3-p019-paired-symmetry"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 20,
+      "topic": "由质量对称性判定主轴",
+      "lecture_location": "3.5.5",
+      "notes": "三种几何对称条件与惯性积关系覆盖；强调质量分布须有对应对称性。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 21,
+      "topic": "矩形与椭圆主轴例图",
+      "lecture_location": "3.5.5",
+      "notes": "提取原图；补充完整积分、变量代换及全边长与半轴定义。",
+      "original_figure_keys": [
+        "c3-3-p021-lamina-axes"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 22,
+      "topic": "瓶、镜像与四门塔的对称例子",
+      "lecture_location": "3.5.5",
+      "notes": "保留三幅课件照片/示意及原有水印；caption注明质量对称条件。",
+      "original_figure_keys": [
+        "c3-3-p022-symmetry-examples"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 23,
+      "topic": "定点角动量和主轴表示小结",
+      "lecture_location": "3.5.4",
+      "notes": "总结公式已在本节正文与节末检查覆盖。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 24,
+      "topic": "八分之一球的四问习题",
+      "lecture_location": "3.5.7",
+      "notes": "提取球体图；完整求解球心张量、角动量、动能、主轴及质心张量。",
+      "original_figure_keys": [
+        "c3-3-p024-octant-sphere"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 25,
+      "topic": "附加材料分隔页",
+      "lecture_location": "3.5.4",
+      "notes": "无新增学术内容，不复制标题页。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 26,
+      "topic": "附加材料目录",
+      "lecture_location": "3.5.2",
+      "notes": "主轴、原点变换、离散化及常见实体已分别纳入3.5.2、3.5.4—3.5.6。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 27,
+      "topic": "惯量椭球法向与梯度",
+      "lecture_location": "3.5.4",
+      "notes": "法向与径向平行条件保留；向量叉积形式避免坐标分母为零遗漏。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 28,
+      "topic": "顶点正方体的几何主轴求法",
+      "lecture_location": "3.5.6",
+      "notes": "正文第三法由矩阵与法向给出全部本征空间。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 29,
+      "topic": "正方体法向方程的分支分解",
+      "lecture_location": "3.5.6",
+      "notes": "完整覆盖Σ非零与Σ等于零两类，避免把特殊直线误作独立分支。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 30,
+      "topic": "几何主轴方向的选取",
+      "lecture_location": "3.5.6",
+      "notes": "原列简并方向不正交；正文已改成正交轴组并验证右手性，见源错误记录。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 31,
+      "topic": "本征方法的再次说明",
+      "lecture_location": "3.5.4",
+      "notes": "与第18页重复；方法保留而不重复排版。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 32,
+      "topic": "正方体特征多项式、重根及本征方向",
+      "lecture_location": "3.5.6",
+      "notes": "多项式、因式分解、齐次方程、正交单位基均完整推导；坐标图与第11页重复。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 33,
+      "topic": "主惯量与轴距平行轴核验",
+      "lecture_location": "3.5.6",
+      "notes": "正文第二法从几何轴距核验主惯量，简并子空间说明更完整。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 34,
+      "topic": "长方体顶点张量与3:2:1实例",
+      "lecture_location": "3.5.6",
+      "notes": "完整保留任意边长张量、数值矩阵及后续求根；几何图与顶点正方体图重复。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 35,
+      "topic": "长方体数值主惯量与方向",
+      "lecture_location": "3.5.6",
+      "notes": "正文给特征多项式、数值求根步骤、方向及回代核验。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 36,
+      "topic": "惯量张量的原点平移推导",
+      "lecture_location": "3.5.2",
+      "notes": "保留完整二阶展开与质心一阶矩消去。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 37,
+      "topic": "连续描述与狄拉克离散质量密度",
+      "lecture_location": "3.5.2",
+      "notes": "两种描述、δ函数积分性质及一致性保留。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 38,
+      "topic": "实心球惯量的体积分",
+      "lecture_location": "3.5.5",
+      "notes": "提取球心轴图，正文球坐标积分及迹的独立路线俱全。",
+      "original_figure_keys": [
+        "c3-3-p038-solid-sphere"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 39,
+      "topic": "球的任意轴惯量",
+      "lecture_location": "3.5.5",
+      "notes": "各向同性及单位方向向量投影保留。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 40,
+      "topic": "均匀实心椭球的变量代换",
+      "lecture_location": "3.5.5",
+      "notes": "保留雅可比、质量密度变换与全部二阶矩。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 41,
+      "topic": "椭球张量及长方体比较",
+      "lecture_location": "3.5.5",
+      "notes": "三轴惯量全列，正文特别区分半轴与全边长。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 42,
+      "topic": "半球与整球球心惯量的关系",
+      "lecture_location": "3.5.5",
+      "notes": "提取半球/整球几何组图，公式以半球质量m统一。",
+      "original_figure_keys": [
+        "c3-3-p042-hemisphere-pair"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 43,
+      "topic": "半球的质心与质心惯量",
+      "lecture_location": "3.5.5",
+      "notes": "源质心惯量式错误；正文已正确给出83/320、83/320、2/5并逐项推导。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 44,
+      "topic": "角动量与角速度不一定平行",
+      "lecture_location": "3.5.1",
+      "notes": "正文用本征方向解释平行条件，交叉矩阵元符号统一。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 45,
+      "topic": "长方体体对角线惯量：二阶矩",
+      "lecture_location": "3.5.6",
+      "notes": "完整的体积分与主惯量已保留；坐标图与第9页重复。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 46,
+      "topic": "长方体体对角线惯量：方向投影",
+      "lecture_location": "3.5.6",
+      "notes": "正文方向余弦与最终公式完整；全式需公共质量因子m，见源式排版问题。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 47,
+      "topic": "等边三角形三质点的惯量",
+      "lecture_location": "3.5.6",
+      "notes": "提取原图，保留逐质点求和、惯性积、本征值及质心独立核验。",
+      "original_figure_keys": [
+        "c3-3-p047-triangle-masses"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 48,
+      "topic": "正方体质心与顶点动能的柯尼希核验",
+      "lecture_location": "3.5.8",
+      "notes": "两定点能量与质心平动项完整，图同第9、11页。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 49,
+      "topic": "圆盘陀螺的动能",
+      "lecture_location": "3.5.8",
+      "notes": "提取GIF代表帧；正文用轴向系数1/4修正源末行1/2误写，另给质心分解核验。",
+      "original_figure_keys": [
+        "c3-3-p049-gyroscope-axes"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-3",
+      "page": 50,
+      "topic": "惯性平行轴与本体轴的坐标选择",
+      "lecture_location": "3.5.2",
+      "notes": "正文明确材料坐标、基矢导数以及两种速度表达。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 1,
+      "topic": "定点角动量、动能与动力学回顾",
+      "lecture_location": "3.6.1",
+      "notes": "承接3.5.1及3.4.1，保留进入定轴问题所需公式。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 2,
+      "topic": "定轴转动的固定点与固定方向条件",
+      "lecture_location": "3.6.1",
+      "notes": "提取三种定轴位置和“旋转同时轴向平移”的动画两帧；明确后者不满足固定点条件。",
+      "original_figure_keys": [
+        "c3-4-p002-fixed-axis-cases",
+        "c3-4-p002-axial-translation"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 3,
+      "topic": "定轴各点圆周运动与质心加速度",
+      "lecture_location": "3.6.1",
+      "notes": "提取含质元圆轨迹图；原公式标签采用PPT自带完整PNG兼容恢复。",
+      "original_figure_keys": [
+        "c3-4-p003-circular-path"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 4,
+      "topic": "定轴角动量在旋转本体基上的求导",
+      "lecture_location": "3.6.1",
+      "notes": "完整保留基矢导数、惯性积符号及横向矩；几何图是第3页去掉轨迹的重复。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 5,
+      "topic": "六个方程与一个定轴运动自由度",
+      "lecture_location": "3.6.1",
+      "notes": "正文完整六式同时保留，指出前五式用于约束反力。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 6,
+      "topic": "定轴能量及机械能守恒",
+      "lecture_location": "3.6.1",
+      "notes": "从功率、功和有向转角逐步积分。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 7,
+      "topic": "定轴方程、能量与约束反力小结",
+      "lecture_location": "3.6.1",
+      "notes": "公式和计算次序覆盖，含未知轴向反力分配的边界。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 8,
+      "topic": "复摆与小振动解",
+      "lecture_location": "3.6.2",
+      "notes": "提取悬点/质心/重力图；图l、θ分别映射正文h、q，完整初值和有限振幅解均保留。",
+      "original_figure_keys": [
+        "c3-4-p008-physical-pendulum"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 9,
+      "topic": "立方体绕地面棱倾倒：能量",
+      "lecture_location": "3.6.5",
+      "notes": "提取原几何图；正文补充回落分支及初始角范围。",
+      "original_figure_keys": [
+        "c3-4-p009-tipping-cube"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 10,
+      "topic": "立方体触地角速度与角加速度",
+      "lecture_location": "3.6.5",
+      "notes": "保留触地前瞬间结果，正文进一步给支反力和不稳定平衡讨论。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 11,
+      "topic": "有惯量滑轮：动力学解",
+      "lecture_location": "3.6.5",
+      "notes": "提取完整滑轮图，保留两张力、滑块与转动方程及无滑动约束。",
+      "original_figure_keys": [
+        "c3-4-p011-massive-pulley"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 12,
+      "topic": "有惯量滑轮：能量解",
+      "lecture_location": "3.6.5",
+      "notes": "第二种解法保留，同时保留功率、轴反力核验；原图与第11页重复。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 13,
+      "topic": "双轴承约束力与附加压力",
+      "lecture_location": "3.6.3",
+      "notes": "提取轴承受力图；N与正文R的对应、原点调整写入caption。",
+      "original_figure_keys": [
+        "c3-4-p013-bearing-forces"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 14,
+      "topic": "双轴承的合力三式",
+      "lecture_location": "3.6.3",
+      "notes": "质心速度/加速度与两支反力逐分量覆盖。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 15,
+      "topic": "双轴承横向力矩二式",
+      "lecture_location": "3.6.3",
+      "notes": "完整叉积展开和主动矩、总矩的区分保留。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 16,
+      "topic": "反力未知数及附加项定义",
+      "lecture_location": "3.6.3",
+      "notes": "正文明确轴向只决定合力之和；附加项由ω或α非零任一条件产生。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 17,
+      "topic": "动平衡的两个条件",
+      "lecture_location": "3.6.4",
+      "notes": "质心在轴上及固定轴为主轴独立说明，单/双平面校正均完善。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 18,
+      "topic": "倾斜薄盘轴承压力的模型",
+      "lecture_location": "3.6.5",
+      "notes": "提取转轴/主轴及反力图；图α对应正文β，N对应R。",
+      "original_figure_keys": [
+        "c3-4-p018-tilted-disk"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 19,
+      "topic": "倾斜薄盘与轴承压力的三维示意",
+      "lecture_location": "3.6.3",
+      "notes": "提取原图，右图为动画第一个代表时刻，用于解释方向随相位改变。",
+      "original_figure_keys": [
+        "c3-4-p019-tilted-disk-3d"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 20,
+      "topic": "倾斜薄盘反力方程",
+      "lecture_location": "3.6.5",
+      "notes": "保留合力、横向矩与惯性积求解，正文采用统一有符号矩阵元。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 21,
+      "topic": "转轴非主轴时如何求惯量",
+      "lecture_location": "3.6.5",
+      "notes": "主轴张量投影和坐标变换在本题及3.5.2完整保留。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 22,
+      "topic": "倾斜薄盘的惯性积",
+      "lecture_location": "3.6.5",
+      "notes": "完整变换推导；源圆盘主惯量中a/r符号混用已在正文统一为r。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 23,
+      "topic": "倾斜薄盘给定相位反力",
+      "lecture_location": "3.6.5",
+      "notes": "原给t=0结果，正文扩为整周期反力及各轴承真正最大值。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 24,
+      "topic": "附加压力与离心力偶模型",
+      "lecture_location": "3.6.3",
+      "notes": "提取原力偶示意，明确随体旋转参考系及B端平衡反力；源例几何重复图不再复用。",
+      "original_figure_keys": [
+        "c3-4-p024-centrifugal-couple"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 25,
+      "topic": "作业题号页",
+      "lecture_location": "3.6.5",
+      "notes": "无题干的教材题号3.10、3.13、3.14作来源记录，不虚构未知题目。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 26,
+      "topic": "附加材料分隔页",
+      "lecture_location": "3.6.5",
+      "notes": "无新增学术内容，不复制分隔页。",
+      "original_figure_keys": [],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 27,
+      "topic": "T形双杆：惯量与角加速度",
+      "lecture_location": "3.6.5",
+      "notes": "提取带原尺寸的载荷图；正文一般L及数值0.5m两形式都有。",
+      "original_figure_keys": [
+        "c3-4-p027-t-rod-loads"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    },
+    {
+      "deck": "c3-4",
+      "page": 28,
+      "topic": "T形双杆：质心加速度与轴反力",
+      "lecture_location": "3.6.5",
+      "notes": "提取加速度/反力原图；X_O、Y_O对应正文R_Ox、R_Oy。",
+      "original_figure_keys": [
+        "c3-4-p028-t-rod-accelerations"
+      ],
+      "review_method": "逐页视觉总览；所有拟提取图放大核查；对应LaTeX节与推导逐项定位"
+    }
+  ],
+  "source_errors": [
+    {
+      "deck": "c3-3",
+      "page": 30,
+      "issue": "两个列出的简并本征方向(1,1,-2)/sqrt(6)与(-2,1,1)/sqrt(6)点积为-1/2，不能作为相互正交轴组。",
+      "lecture_location": "3.5.6",
+      "resolution": "正文使用(1,1,1)/sqrt(3)、(1,-1,0)/sqrt(2)、(1,1,-2)/sqrt(6)，验证正交及右手性，并给出整个简并本征平面。",
+      "body_patch_needed": false
+    },
+    {
+      "deck": "c3-3",
+      "page": 43,
+      "issue": "源式把半球从球心移到质心写为增加Izz，并给出2/5、2/5、173/320，错误。",
+      "lecture_location": "3.5.5",
+      "resolution": "正文由z_C=3a/8及张量平行轴定理正确给出ma^2 diag(83/320,83/320,2/5)，图只取第42页的几何部分。",
+      "body_patch_needed": false
+    },
+    {
+      "deck": "c3-3",
+      "page": 46,
+      "issue": "最终分式排版的质量因子m只直接附于第一项a^2b^2，应作为整个对称和的公共因子。",
+      "lecture_location": "3.5.6",
+      "resolution": "正文写为m(a^2b^2+a^2c^2+b^2c^2)/(6(a^2+b^2+c^2))，保持量纲与置换对称性。",
+      "body_patch_needed": false
+    },
+    {
+      "deck": "c3-3",
+      "page": 49,
+      "issue": "最末动能式轴向项写为(1/2)ma^2(Ωcosθ0+ω)^2；薄盘轴向惯量为ma^2/2，因此动能系数应是1/4。",
+      "lecture_location": "3.5.8",
+      "resolution": "正文轴向动能采用ma^2/4，并用质心平动与相对转动再次校验。",
+      "body_patch_needed": false
+    },
+    {
+      "deck": "c3-4",
+      "page": 22,
+      "issue": "盘半径在题干为r，而主轴惯量矩阵中写作a；需统一符号。",
+      "lecture_location": "3.6.5",
+      "resolution": "正文全部使用r，同时明确实际矩阵元与不带负号的惯性积关系。",
+      "body_patch_needed": false
+    },
+    {
+      "deck": "c3-4",
+      "page": 23,
+      "issue": "给定相位的反力不能直接当作整个周期各轴承的最大压力。",
+      "lecture_location": "3.6.5",
+      "resolution": "正文给R_A、R_B的整周期矢量式、模平方及最大值G_A+|D|、G_B+|D|，两峰值相位差π。",
+      "body_patch_needed": false
+    }
+  ],
+  "patches": [],
+  "notes": [
+    "27幅非重复原图，全部作为新增图插入；原59幅教学模型图不删除。",
+    "c3-4第3、13页原始公式对象在LibreOffice中切成半字。直接采用PPT内嵌PNG后备标签，按原fillRect扩展确定位置与尺寸，不重绘符号。记录在原图核查-b/原始标签兼容记录.json。",
+    "c3-3第14页细杆图和c3-4第24页离心力偶图邻接公式交错；工作副本只保留原图对象再导出，避免无关文字残片。",
+    "c3-3第49页从PPT内嵌189帧GIF选第0帧，保留轴、节点及标签；c3-4第2页反例从50帧GIF选0/12帧，并保留同一画布说明轴向移动。",
+    "图题显式说明原图与正文的角度、坐标轴、距离、轴承反力字母对应，不依赖维护notes。",
+    "c3-4第25页只给教材题号，无题干，不增加编造的习题。"
+  ],
+  "figure_count": 27,
+  "baseline_tex_sha256": "eeb09fea31cbe39028ed4c1b3370ebaffe9f6bd90a59ad8bdab3426b95e6fb70",
+  "visual_review": {
+    "slides_reviewed": 78,
+    "final_figures_reviewed": 27,
+    "diagram_crops_complete": true,
+    "unrelated_text_excluded": true,
+    "original_source_ppts_modified": false,
+    "all_baseline_model_figures_preserved_by_scope": true
+  }
+}

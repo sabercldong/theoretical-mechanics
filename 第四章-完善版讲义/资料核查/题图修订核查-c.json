@@ -1,0 +1,575 @@
+{
+  "reviewer": "revision_training_qa",
+  "review_type": "independent_visual_qa",
+  "scope": "训练题1–24题图，与完整题干逐题比对；不复证旧解答。",
+  "inputs": [
+    "工作文件/完整题干.json: exercises 1–24",
+    "工作文件/题图校样编译/题图校样.pdf: 第6页第三图起、第7页、第8页",
+    "题图/tr01.tex–tr24.tex"
+  ],
+  "method": "使用PyMuPDF将实际校样PDF第6–8页按2倍渲染，逐页view_image查看；对tr03、tr06、tr19、tr21、tr24及跨行碰撞以4倍裁片再次查看，并读取全部对应TikZ源。",
+  "summary": {
+    "questions_reviewed": 24,
+    "figure_source_needs_fix": 0,
+    "source_pass_with_atlas_layout_issue": 3,
+    "pass": 21,
+    "source_issues_high": 0,
+    "source_issues_medium": 0,
+    "source_issues_low": 0,
+    "atlas_layout_issues": 3,
+    "dark_boxes_found": false,
+    "source_appendix_reviewed": false,
+    "figure_source_fixed_passed": 5
+  },
+  "issues": [
+    {
+      "id": "TR03-ORIGIN",
+      "question": 3,
+      "scope": "figure_source",
+      "severity": "low",
+      "category": "coordinate_label",
+      "description": "题干将具有惯性加速度的动原点记作 O′，图中的原点仍标为 O；t=0 水平朝向修正已正确体现。",
+      "recommended_fix": "将图中的 O 改为 O′。",
+      "source": "题图/tr03.tex",
+      "evidence": "校样第6页训练题3；/tmp/mechanics-training-qa-tr03.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "新校样4倍裁片实际渲染并view_image复看",
+        "note": "新校样原点已改为O′；t=0水平朝向及速度、加速度标注正常。"
+      }
+    },
+    {
+      "id": "TR06-ZERO-VELOCITY-ARROW",
+      "question": 6,
+      "scope": "figure_source",
+      "severity": "high",
+      "category": "initial_condition",
+      "description": "图用长度明显非零的向右速度箭头，直接标注 ẋ(0)=0。初始相对静止与非零箭头含义冲突，且图中 x(0)=a 已表明是在交代释放初态。",
+      "recommended_fix": "若画释放初态则删除速度箭头，将 ẋ(0)=0 作为普通注记；若画一般时刻，则箭头标 ẋ，并另列初始条件。",
+      "source": "题图/tr06.tex",
+      "evidence": "校样第6页训练题6；/tmp/mechanics-training-qa-tr06.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "新校样4倍裁片实际渲染并view_image复看",
+        "note": "速度箭头现标为ẋ；初始条件x(0)=a、ẋ(0)=0已另列为无箭头注记，语义冲突消除。"
+      }
+    },
+    {
+      "id": "TR19-TEXT-LINE-OVERLAP",
+      "question": 19,
+      "scope": "figure_source",
+      "severity": "medium",
+      "category": "overlap",
+      "description": "“东 x: ⊙”说明的“东”字被 g 的向下竖直箭杆穿过。坐标手性本身正确：北向右、天向上、东向纸外。",
+      "recommended_fix": "将东向说明右移或上移，或把 g 箭头左/右移，保持字形与箭杆间距。",
+      "source": "题图/tr19.tex",
+      "evidence": "校样第8页训练题19；/tmp/mechanics-training-qa-tr19.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "新校样4倍裁片实际渲染并view_image复看",
+        "note": "东x:⊙说明已移到右上，与g箭杆分离，文字完整。"
+      }
+    },
+    {
+      "id": "TR21-TOP-LABEL-SPACING",
+      "question": 21,
+      "scope": "figure_source",
+      "severity": "low",
+      "category": "spacing",
+      "description": "上方“水平投影，摆长 l”与竖轴顶端“北 y”几乎贴合，放大后两行仅有极小间距；缩小插入讲义时读起来拥挤。",
+      "recommended_fix": "将“北 y”放到轴顶右侧，或将顶部说明再上移约 0.2–0.3 cm。",
+      "source": "题图/tr21.tex",
+      "evidence": "校样第8页训练题21；/tmp/mechanics-training-qa-tr21.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "新校样4倍裁片实际渲染并view_image复看",
+        "note": "北y已置于竖轴右侧，顶部说明上移，两处留有明确间距。"
+      }
+    },
+    {
+      "id": "TR24-FORCE-LABEL-CROSSING",
+      "question": 24,
+      "scope": "figure_source",
+      "severity": "medium",
+      "category": "overlap",
+      "description": "动轴 e1 的斜线穿过水平力标签 F0 E_X，特别是 E_X 处，属于明确的线条穿字。力箭头保持惯性 X 正方向，与题意一致。",
+      "recommended_fix": "上移或下移力箭头及其标签，使整个标签避开 e1 斜轴。",
+      "source": "题图/tr24.tex",
+      "evidence": "校样第8页训练题24；/tmp/mechanics-training-qa-tr24.png",
+      "resolution": {
+        "status": "fixed_passed",
+        "verified_by": "新校样4倍裁片实际渲染并view_image复看",
+        "note": "F0 E_X箭头及标签已移到X轴下方；没有斜轴穿字，方向仍沿惯性X正向。"
+      }
+    },
+    {
+      "id": "ATLAS-TR09-TR12",
+      "question": 9,
+      "scope": "atlas_layout_only",
+      "severity": "medium",
+      "category": "overlap",
+      "description": "训练题9长虚线竖轴伸入下一行“训练题12”标题。单图内部无此碰撞。",
+      "recommended_fix": "若保留校样PDF，增加校样行距或限制统一图高；若仅交付独立题图/最终讲义，可忽略校样专属问题。",
+      "source": "工作文件/题图校样编译/题图校样.pdf 第7页",
+      "evidence": "/tmp/mechanics-training-qa-pendulum_overlap.png"
+    },
+    {
+      "id": "ATLAS-TR11-TR14",
+      "question": 11,
+      "scope": "atlas_layout_only",
+      "severity": "medium",
+      "category": "overlap",
+      "description": "训练题11长虚线竖轴伸入下一行“训练题14”标题。单图内部无此碰撞。",
+      "recommended_fix": "仅需校样排版加大行距或限制图高。",
+      "source": "工作文件/题图校样编译/题图校样.pdf 第7页",
+      "evidence": "/tmp/mechanics-training-qa-page7.png"
+    },
+    {
+      "id": "ATLAS-TR12-TR15",
+      "question": 12,
+      "scope": "atlas_layout_only",
+      "severity": "medium",
+      "category": "overlap",
+      "description": "训练题12长虚线竖轴伸入下一行“训练题15”标题。单图内部无此碰撞。",
+      "recommended_fix": "仅需校样排版加大行距或限制图高。",
+      "source": "工作文件/题图校样编译/题图校样.pdf 第7页",
+      "evidence": "/tmp/mechanics-training-qa-pendulum_overlap.png"
+    }
+  ],
+  "questions": [
+    {
+      "question": 1,
+      "figure": "题图/tr01.tex",
+      "atlas_page": 6,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "G沿固定X方向；动轴及Ω逆时针方向正确，未发现重叠。",
+      "issue_ids": []
+    },
+    {
+      "question": 2,
+      "figure": "题图/tr02.tex",
+      "atlas_page": 6,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "同心圆、半径a、相对ν与盘Ω的正向图示一致；带符号角速度可按箭头作正向约定。",
+      "issue_ids": []
+    },
+    {
+      "question": 3,
+      "figure": "题图/tr03.tex",
+      "atlas_page": 6,
+      "status": "fixed_passed",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "新校样原点已改为O′；t=0水平朝向及速度、加速度标注正常。",
+      "issue_ids": [
+        "TR03-ORIGIN"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "管在t=0沿X水平、u和AE_X同向；原点标记需改为O′。"
+    },
+    {
+      "question": 4,
+      "figure": "题图/tr04.tex",
+      "atlas_page": 6,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "惯性速率恒c和r(0)=0已列；向外阶段径向方向正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 5,
+      "figure": "题图/tr05.tex",
+      "atlas_page": 6,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "盘上固定距离a、径向和切向基矢正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 6,
+      "figure": "题图/tr06.tex",
+      "atlas_page": 6,
+      "status": "fixed_passed",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "速度箭头现标为ẋ；初始条件x(0)=a、ẋ(0)=0已另列为无箭头注记，语义冲突消除。",
+      "issue_ids": [
+        "TR06-ZERO-VELOCITY-ARROW"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "管端L、初位置a正确；零初速度的箭头标注有语义冲突。"
+    },
+    {
+      "question": 7,
+      "figure": "题图/tr07.tex",
+      "atlas_page": 6,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "双弹簧径向槽、两端k、位移x与Ω正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 8,
+      "figure": "题图/tr08.tex",
+      "atlas_page": 7,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "相对速度沿e1、横向反力沿正e2；可将箭头理解为有符号分量正向，未发现重叠。",
+      "issue_ids": []
+    },
+    {
+      "question": 9,
+      "figure": "题图/tr09.tex",
+      "atlas_page": 7,
+      "status": "pass_source_atlas_issue",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "轴上悬点、杆长l、从下垂线量θ正确；仅校样下一行标题碰撞。",
+      "issue_ids": [
+        "ATLAS-TR09-TR12"
+      ]
+    },
+    {
+      "question": 10,
+      "figure": "题图/tr10.tex",
+      "atlas_page": 7,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "轴外悬点A、偏心距a、从下垂线量φ及重力正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 11,
+      "figure": "题图/tr11.tex",
+      "atlas_page": 7,
+      "status": "pass_source_atlas_issue",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "均匀细杆用L,M标注，无杆端集中小球；仅校样下一行标题碰撞。",
+      "issue_ids": [
+        "ATLAS-TR11-TR14"
+      ]
+    },
+    {
+      "question": 12,
+      "figure": "题图/tr12.tex",
+      "atlas_page": 7,
+      "status": "pass_source_atlas_issue",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "旋转摆一般偏角示意，θ从下垂线量起正确；仅校样下一行标题碰撞。",
+      "issue_ids": [
+        "ATLAS-TR12-TR15"
+      ]
+    },
+    {
+      "question": 13,
+      "figure": "题图/tr13.tex",
+      "atlas_page": 7,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "北半球代表子午面、λ从赤道面量起、eU径向、eN切向均正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 14,
+      "figure": "题图/tr14.tex",
+      "atlas_page": 7,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "同纬度东西两车及相同速率U方向正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 15,
+      "figure": "题图/tr15.tex",
+      "atlas_page": 7,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "初位置在圆轨道北端，初速向东，圆心在南方，符合f>0惯性圆。",
+      "issue_ids": []
+    },
+    {
+      "question": 16,
+      "figure": "题图/tr16.tex",
+      "atlas_page": 7,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "低压中心、压强向外增加、V正向逆时针均正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 17,
+      "figure": "题图/tr17.tex",
+      "atlas_page": 8,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "释放高度h、初速零、东x与天z、g向下均正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 18,
+      "figure": "题图/tr18.tex",
+      "atlas_page": 8,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "从地面向上w0，初始水平速度零未被错误全速零注记覆盖，返回z=0正确。",
+      "issue_ids": []
+    },
+    {
+      "question": 19,
+      "figure": "题图/tr19.tex",
+      "atlas_page": 8,
+      "status": "fixed_passed",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "东x:⊙说明已移到右上，与g箭杆分离，文字完整。",
+      "issue_ids": [
+        "TR19-TEXT-LINE-OVERLAP"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "北向初速度v0及三维坐标方向正确；东向说明与g箭杆碰撞。"
+    },
+    {
+      "question": 20,
+      "figure": "题图/tr20.tex",
+      "atlas_page": 8,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "从高度h向东u0水平抛射、天z与g方向正确，无初始全速度零的矛盾注记。",
+      "issue_ids": []
+    },
+    {
+      "question": 21,
+      "figure": "题图/tr21.tex",
+      "atlas_page": 8,
+      "status": "fixed_passed",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "北y已置于竖轴右侧，顶部说明上移，两处留有明确间距。",
+      "issue_ids": [
+        "TR21-TOP-LABEL-SPACING"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "东向位移a及地面相对静止条件正确；顶部说明与北向标签间距过小。"
+    },
+    {
+      "question": 22,
+      "figure": "题图/tr22.tex",
+      "atlas_page": 8,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "λ=60°、傅科主轴与惯性圆均画顺时针，符合北半球；未发现重叠。",
+      "issue_ids": []
+    },
+    {
+      "question": 23,
+      "figure": "题图/tr23.tex",
+      "atlas_page": 8,
+      "status": "pass",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "双弹簧径向滑块系统正确；与该题雅可比量模型对应。",
+      "issue_ids": []
+    },
+    {
+      "question": 24,
+      "figure": "题图/tr24.tex",
+      "atlas_page": 8,
+      "status": "fixed_passed",
+      "reviewed": [
+        "physical_model",
+        "directions",
+        "coordinate_labels",
+        "initial_conditions",
+        "text_line_overlap"
+      ],
+      "note": "F0 E_X箭头及标签已移到X轴下方；没有斜轴穿字，方向仍沿惯性X正向。",
+      "issue_ids": [
+        "TR24-FORCE-LABEL-CROSSING"
+      ],
+      "initial_status": "needs_fix",
+      "initial_note": "水平恒力沿惯性X正向，旋转基矢方向正确；e1轴穿过力标签。"
+    }
+  ],
+  "limits": "这是题图校样审查；最终PPTX/PDF每题插图后的大小、正文流与跨页还须在最终成品上检查。校样跨行碰撞不等同于单图缺陷。",
+  "initial_summary": {
+    "questions_reviewed": 24,
+    "figure_source_needs_fix": 5,
+    "source_pass_with_atlas_layout_issue": 3,
+    "pass": 16,
+    "source_issues_high": 1,
+    "source_issues_medium": 2,
+    "source_issues_low": 2,
+    "atlas_layout_issues": 3,
+    "dark_boxes_found": false,
+    "source_appendix_reviewed": false
+  },
+  "follow_up_recheck": {
+    "scope": [
+      3,
+      6,
+      19,
+      21,
+      24
+    ],
+    "status": "passed",
+    "pdf_modified": "2026-10-17T17:07:04.042926",
+    "method": "仅复查这5图：读取更新图源，并将最新题图校样PDF的对应区域按4倍渲染后逐一view_image。未扩大核查。",
+    "resolved_issue_ids": [
+      "TR03-ORIGIN",
+      "TR06-ZERO-VELOCITY-ARROW",
+      "TR19-TEXT-LINE-OVERLAP",
+      "TR21-TOP-LABEL-SPACING",
+      "TR24-FORCE-LABEL-CROSSING"
+    ],
+    "notes": {
+      "3": "新校样原点已改为O′；t=0水平朝向及速度、加速度标注正常。",
+      "6": "速度箭头现标为ẋ；初始条件x(0)=a、ẋ(0)=0已另列为无箭头注记，语义冲突消除。",
+      "19": "东x:⊙说明已移到右上，与g箭杆分离，文字完整。",
+      "21": "北y已置于竖轴右侧，顶部说明上移，两处留有明确间距。",
+      "24": "F0 E_X箭头及标签已移到X轴下方；没有斜轴穿字，方向仍沿惯性X正向。"
+    },
+    "evidence": [
+      "/tmp/mechanics-training-qa-fixed-tr03.png",
+      "/tmp/mechanics-training-qa-fixed-tr06.png",
+      "/tmp/mechanics-training-qa-fixed-tr19.png",
+      "/tmp/mechanics-training-qa-fixed-tr21.png",
+      "/tmp/mechanics-training-qa-fixed-tr24.png"
+    ],
+    "atlas_layout_disposition": "主代理确认校样不交付；3处校样网格跨行碰撞仅存档，不列为交付阻碍。",
+    "conclusion": "本轮发现的5处图源问题全部修复通过；没有未解决的题图图源问题。"
+  }
+}

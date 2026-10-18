@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=.95]
+\draw[ink,thick](-.6,-.18)--(5,-.18);\draw[ink,thick](-.6,.18)--(5,.18);
+\fill(0,0)circle(2pt)node[below=7pt]{$O$};\fill[ink](2.5,0)circle(5pt)node[below=8pt]{$m$};
+\draw[force](2.5,0)--(3.9,0)node[below=8pt]{$\dot x\vect e_1$};\draw[force](2.5,0)--(2.5,1.35)node[right]{$N_2$};
+\draw[->](.739,.9)arc(30:150:.6);\node at(.25,1.55){$\Omega$};
+\draw[<->](0,-.8)--(2.5,-.8)node[midway,below]{$x$};
+\node[align=left,anchor=west]at(5.6,.65){沿管：$m\ddot x=m\Omega^2x$\\横向：$N_2=2m\Omega\dot x$\\竖直：$N_z=mg$};
+\end{tikzpicture}

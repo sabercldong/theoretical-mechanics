@@ -1,0 +1,12 @@
+{
+  "pdf_pages": 128,
+  "examples": 79,
+  "exercises": 25,
+  "original_assets": 61,
+  "model_figures": 8,
+  "numbered_figures": 63,
+  "source_slides": 276,
+  "pdf_sha256": "432ef65366636df4bc12ccb20fd9a7efdb2154778785f5eeba4f093a78703c96",
+  "tex_sha256": "181d24fa809ad699db48162b8ff668aa3b3973ac70354e05065b30083936fa86",
+  "archive_sha256": "08559df248e6e1432bd028b45f89dc53f67a50c5d592199b45100dfa1242f88f"
+}

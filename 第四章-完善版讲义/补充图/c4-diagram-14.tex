@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=.9]
+\foreach \x/\ang/\txt in {0/0/向外,4/180/向内,8/90/逆时针切向}{
+\begin{scope}[shift={(\x,0)}]
+\draw[muted](-1.2,0)--(1.5,0);\draw[muted](0,-1.2)--(0,1.5);
+\fill[ink](0,0)circle(2pt);\draw[force](0,0)--({cos(\ang)},{sin(\ang)})node[above right]{$\vect v'$};
+\draw[force](0,0)--({1.05*cos(\ang-90)},{1.05*sin(\ang-90)})node[below right]{$\vect F_{\mathrm{Co}}$};
+\node[below]at(0,-1.65){\txt};\node[above]at(0,1.95){$\Om$ 垂直纸面向外};
+\end{scope}}
+\end{tikzpicture}

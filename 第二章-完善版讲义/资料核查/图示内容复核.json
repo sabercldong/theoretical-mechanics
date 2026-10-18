@@ -1,0 +1,248 @@
+{
+  "scope": "第二章18幅删除图的数学/图文审核；源代码级审核，实际PDF视觉复核待编译后完成。",
+  "deleted_figure_indices": [
+    2,
+    6,
+    7,
+    8,
+    12,
+    14,
+    26,
+    29,
+    37,
+    39,
+    40,
+    43,
+    44,
+    45,
+    48,
+    49,
+    50,
+    52
+  ],
+  "results": [
+    {
+      "old_index": 2,
+      "caption": "三角形质心位于三条中线的交点",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "三角形所设顶点的平均为(0.2,0.9)，三条中线均精确过质心，2:1标注正确。可恢复。"
+    },
+    {
+      "old_index": 6,
+      "caption": "抛物线薄片关于竖直轴对称，质心高度为 $3a/5$",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "填充区域确为y=kx^2到y=a之间；a=2、k=0.5时质心高度1.2=3a/5。可恢复，可补x=±b的竖直虚线帮助读积分域。"
+    },
+    {
+      "old_index": 7,
+      "caption": "均匀四面体的质心坐标等于各轴截距的四分之一",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "投影中四个顶点平均(0.425,0.425)恰为C；物理截距2、4、8对应质心(1/2,1,2)，正确。可恢复。"
+    },
+    {
+      "old_index": 8,
+      "caption": "密度梯度使质心上移，不能只按体积平均",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "独立积分M=11rho0*pi*a^3/12、MZ=23rho0*pi*a^4/60；图半径2时C高0.83636=2*23/55。可恢复。图中的水平线是截面，不是密度等值大小测量。"
+    },
+    {
+      "old_index": 12,
+      "caption": "多人跳车必须逐次写出离车瞬间的动量方程",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "逐次动量分母M+(N-k+1)m以及同时/依次比较正确。图的v_rel向右、负车速向左与正文一致，可恢复。"
+    },
+    {
+      "old_index": 14,
+      "caption": "外冲量的径向分量由绳约束分配给两个小球",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "两端径向速度均J cos(alpha)/(mA+mB)，横向仅B有J sin(alpha)/mB；beta>alpha，图中方向正确。建议用两条圆弧明确alpha、beta各自均从正x轴量起。"
+    },
+    {
+      "old_index": 26,
+      "caption": "强冲量模型首次返回地面的是原来的上球，轨迹到该事件即终止",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "独立二分根验证tau*=0.8900586117066736，theta*=1.780117223413347；x1/l=0.40097248420100157，x2/l=1.3791447392123455，y1/l=0.20779566772678892；下球延长线下一根1.3915573782515103。图准确截断于首碰，正确。可恢复并补归一化坐标及初态编号。"
+    },
+    {
+      "old_index": 29,
+      "caption": "个体速度周期变化，而质量加权总动量保持不变",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "omega=sqrt(3k/(2m))；v1/v0=(1+2cos)/3，v2/v0=(1-cos)/3；初态(1,0)，最小v1=-1/3、最大v2=2/3，质量加权均速1/3。公式与图正确。建议补π、2π和纵轴关键刻度。"
+    },
+    {
+      "old_index": 37,
+      "caption": "最高点水平分离只改变两者水平运动，质心抛物线保持不变",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "两落点在预定落点两侧，质心轨迹不变，图示水平距离反映一种允许质量比，数学没有冲突。箭头u必须明确是人相对物体的速度，保留原题相对定义即可。可恢复。"
+    },
+    {
+      "old_index": 39,
+      "caption": "重入射球的速度圆不包含原点，同一实验室方向可截圆两次",
+      "restore": true,
+      "severity": "improve",
+      "finding": "正文速度圆与theta_max=arcsin(1/lambda)、双支公式正确；旧图近似画切点但没有展示图题所指同向两交点。应恢复并更新为精确切点以及同一射线上两个端点。"
+    },
+    {
+      "old_index": 40,
+      "caption": "重入射球的角度变换不是一一对应，两个质心角可映到同一实验室角",
+      "restore": true,
+      "severity": "improve",
+      "finding": "旧曲线atan2(sinTheta,2+cosTheta)正确，最高点Theta=120deg、theta=30deg；横虚线theta=17deg对应Theta=52.7848651341804deg与161.2151348658196deg。应恢复并标出两个交点，避免仅有支1、支2浮动文字。"
+    },
+    {
+      "old_index": 43,
+      "caption": "燃气相对喷速与地面速度不同，推力项为 $-c\\dot m$",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "推力向上、排气相对向下、重力向下，恒相对喷速变质量方程及高度积分均正确。图可恢复；正文题干“竖直向上喷射”宜改为“竖直向上飞行、向下排气”避免误读燃气方向。"
+    },
+    {
+      "old_index": 44,
+      "caption": "先受支承、后自由飞行的火箭速度；起飞时刻由支持力降至零决定",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "延迟起飞分界mL=cq/g正确，示例tL/tb=0.5；图0到0.5为0，后续ln(2/(3-2s))-(s-0.5)与正文一致，端点vb/(gtb)=ln2-0.5=0.193147；zb/(gtb²)=0.375-0.5ln2=0.0284264。可恢复，建议标tL/tb=1/2与tb。图仅画燃烧段则图题注明截至熄火。"
+    },
+    {
+      "old_index": 45,
+      "caption": "按表面积凝结的恒密度雨滴，其半径与时间成线性关系",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "质量增长率随面积而不是扫掠速度，r=a+lambda*t、v及a(t)正确。初加速度g、远期g/4且无有限终速，公式正确。图箭头宜说明“下降方向”，避免等长箭头被读成同速。"
+    },
+    {
+      "old_index": 48,
+      "caption": "对地射弹速度为负的瞬时示意；另一题设的地面速度方向须另行判断",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "对地速度恒定模型d(mv)/dt-qu=-mu mg与相对速度恒定模型m dv/dt=qu-mu mg均正确；图中U向左只对当前U<0成立，原图题已明确。可恢复。"
+    },
+    {
+      "old_index": 49,
+      "caption": "是否可省去平均边界项，取决于 $D$ 的长期增长而非某一瞬时值",
+      "restore": true,
+      "severity": "must_fix",
+      "finding": "必须修改：旧束缚周期示意D=1+0.35sin(180t)均值非零；对周期有界运动D=I_dot/2应零均值，否则I随周期累积增长。改为围绕D=0的正负交替曲线，并将y轴延伸至负值。自由粒子直线斜率正正确。"
+    },
+    {
+      "old_index": 50,
+      "caption": "谐振子瞬时动能与势能互相转换，其周期平均相等",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "T∝sin²、U∝cos²与x=Acos初值一致，初态T=0、U=E，平均E/2正确。建议纵轴改T/E、U/E并加1、1/2及横轴π、2π刻度，使曲线具有清楚定量含义。"
+    },
+    {
+      "old_index": 52,
+      "caption": "经典时间平均与量子定态期望具有不同含义，均须满足相应条件",
+      "restore": true,
+      "severity": "pass_with_optional_polish",
+      "finding": "量子定态D期望为0与有限I期望且定态条件相容；经典周期D围绕0振荡正确，两类平均的区分清楚。可恢复。"
+    }
+  ],
+  "math_checks": {
+    "contact_event_tau": 0.8900586117066736,
+    "contact_upper_x": 1.3791447392123455,
+    "contact_lower_height": 0.20779566772678892,
+    "scatter_lambda": 2,
+    "scatter_theta_degrees": 17,
+    "scatter_Theta_branches_degrees": [
+      52.7848651341804,
+      161.2151348658196
+    ],
+    "spring_beta": 0.55,
+    "spring_outer_root": 2.201225443214576
+  },
+  "extra_figures": [
+    {
+      "old_index": 4,
+      "priority": "medium",
+      "reason": "PPT原图只有实心半球，缺少厚半球壳体积差的几何对象。原图保留，恢复厚壳子图即可；标内半径a、外半径b，避免只写a<b。",
+      "math": "Z=3(b^4-a^4)/(8(b^3-a^3))；a=0与b→a极限正确。"
+    },
+    {
+      "old_index": 5,
+      "priority": "medium",
+      "reason": "PPT原图仅有完整圆锥，半圆锥横向质心a/pi需要半圆截面形心4r/(3pi)图支撑。原图保留，恢复右侧半圆截面示意。",
+      "math": "半圆截面一阶矩2r³/3，体积pi*a²*h/6，X=a/pi，Z=h/4，全部正确。"
+    },
+    {
+      "old_index": 24,
+      "priority": "high",
+      "reason": "alpha=10deg, mu_s=.2首次越界只有窄峰，需放大正峰及标首碰边界；后段为假设固定端的需求，不能冒充已起滑后的真实摩擦曲线。",
+      "math": "q(10deg)=0.086813916；q=+.2首根28.251686707deg，回穿34.974813886deg；峰0.204735355于31.767deg；q=-.2为54.217243801deg。"
+    },
+    {
+      "old_index": 33,
+      "priority": "high",
+      "reason": "PPT初态/质心系原图不能代替有效势与两转折点；恢复有效势定量曲线，用beta=0.55明确参数。",
+      "math": "Ueff/Erel=1/x²+beta(x-1)²；内根1，外根2.201225443214576。纵轴应写Ueff/Erel，能量线1。"
+    }
+  ],
+  "body_patches": [
+    {
+      "old": "求无外力时的速度变化；再求恒流率 $q>0$、竖直向上喷射、\n均匀重力下的速度与高度。",
+      "new": "求无外力时的速度变化；再求恒流率 $q>0$、竖直向上飞行且向下排气、\n均匀重力下的速度与高度。",
+      "reason": "明确火箭与排气方向。"
+    }
+  ],
+  "tikz_replacements": [
+    {
+      "old_index": 49,
+      "tikz": "\\begin{tikzpicture}\n\\draw[->](0,0)--(5,0)node[right]{$t$};\\draw[->](0,-.8)--(0,2.8)node[above]{$D(t)$};\n\\draw[ink,thick](.3,.4)--(4.5,2.3)node[right]{自由粒子：线性增长};\n\\draw[muted,thick]plot[domain=.3:4.5,samples=100](\\x,{-.55*sin(180*\\x)});\n\\node[right]at(4.5,-.55){束缚周期示意};\n\\end{tikzpicture}",
+      "caption": "是否可省去平均边界项，取决于 $D$ 的长期增长而非某一瞬时值",
+      "reason": "消除不可能的非零周期平均D。"
+    },
+    {
+      "old_index": 39,
+      "caption": "重入射球的速度圆：同一实验室方向对应两个末速度，切线给出最大散射角（$\\lambda=2$）",
+      "reason": "使图真正展示双支；点坐标由二次方程计算。",
+      "tikz": "\\begin{tikzpicture}[scale=1.05]\n\\draw[->](-.4,0)--(5.1,0)node[right]{$v_x$};\n\\draw[->](0,-1.6)--(0,2.2)node[above]{$v_y$};\n\\coordinate(C)at(2.6,0);\n\\coordinate(Pone)at(3.38625235,1.03528124);\n\\coordinate(Ptwo)at(1.36924534,.41862031);\n\\coordinate(T)at(1.95,1.12583302);\n\\draw[ink,thick](C)circle(1.3);\n\\draw[guide](0,0)--(3.92,1.1985);\n\\draw[guide](0,0)--(2.73,1.57617);\n\\draw[force](0,0)--(C)node[midway,below]{$V$};\n\\draw[force](0,0)--(Pone);\n\\draw[force](C)--(Pone)node[pos=.65,right]{$v'_1$};\n\\draw[muted,thick](C)--(Ptwo);\n\\fill[ink](Pone)circle(2.5pt)node[above right]{$P_1$};\n\\fill[ink](Ptwo)circle(2.5pt)node[above left]{$P_2$};\n\\fill[muted](T)circle(2pt)node[above left]{$T$};\n\\draw[thin](.65,0)arc(0:17:.65);\n\\node at(.98,.12){$\\theta$};\n\\node[align=left,anchor=west]at(4.05,.9){$\\theta=17^\\circ$\\\\$\\theta_{\\max}=30^\\circ$};\n\\node[align=center]at(2.6,-1.85){同向射线交于 $P_1,P_2$；$OT$ 为切线};\n\\end{tikzpicture}"
+    },
+    {
+      "old_index": 40,
+      "caption": "$\\lambda=2$ 时，实验室角 $17^\\circ$ 对应两个质心角；最大实验室角为 $30^\\circ$",
+      "reason": "标明同一纵坐标对应的两个横坐标；明确角度刻度。",
+      "tikz": "\\begin{tikzpicture}[x=.034cm,y=.09cm]\n\\draw[->](0,0)--(196,0)node[right]{$\\Theta$};\n\\draw[->](0,0)--(0,37)node[above]{$\\theta$};\n\\draw[ink,thick]plot[domain=0:180,samples=200](\\x,{atan2(sin(\\x),2+cos(\\x))});\n\\draw[guide](0,30)--(180,30);\n\\draw[guide](0,17)--(180,17);\n\\foreach \\a in {60,120,180}{\\draw(\\a,0)--(\\a,-1)node[below]{$\\a^\\circ$};}\n\\foreach \\a in {17,30}{\\draw(0,\\a)--(-3,\\a)node[left]{$\\a^\\circ$};}\n\\draw[guide](52.784865,0)--(52.784865,17);\n\\draw[guide](161.215135,0)--(161.215135,17);\n\\fill[ink](52.784865,17)circle(2.3pt)node[above left]{$\\Theta_1$};\n\\fill[ink](161.215135,17)circle(2.3pt)node[above right]{$\\Theta_2$};\n\\fill[muted](120,30)circle(2pt);\n\\node at(86,35){$\\lambda=2$};\n\\end{tikzpicture}"
+    },
+    {
+      "old_index": 4,
+      "caption": "实心半球的水平切片与厚半球壳的体积差；右图 $a$、$b$ 分别为内外半径",
+      "reason": "PPT原图可同时保留；恢复被遗漏的厚壳几何对象并明确半径。",
+      "tikz": "\\begin{tikzpicture}\n\\begin{scope}\n\\draw[fill=soft,thick](-1.8,0)arc(180:0:1.8)--cycle;\n\\draw[->](0,-.25)--(0,2.2)node[above]{$z$};\n\\draw[thick](-1.34,1.2)--(1.34,1.2);\n\\node[anchor=west]at(1.35,1.2){$A(z)$};\n\\fill[ink](0,.675)circle(2.5pt)node[left]{$C$};\n\\draw[<->](-2.15,0)--(-2.15,1.8)node[midway,left]{$a$};\n\\node[align=center]at(0,-.65){实心半球\\\\$Z=3a/8$};\n\\end{scope}\n\\begin{scope}[shift={(5.6,0)}]\n\\draw[fill=soft,thick](-1.8,0)arc(180:0:1.8)--cycle;\n\\draw[fill=white,thick](-1.2,0)arc(180:0:1.2)--cycle;\n\\draw[->](0,-.25)--(0,2.2)node[above]{$z$};\n\\draw[force](0,0)--(-.84853,.84853)node[midway,above left]{$a$};\n\\draw[force](0,0)--(1.27279,1.27279)node[midway,above left]{$b$};\n\\node[below right]at(0,0){$O$};\n\\node[align=center]at(0,-1.05){厚半球壳\\\\$Z=\\dfrac{3(b^4-a^4)}{8(b^3-a^3)}$};\n\\end{scope}\n\\end{tikzpicture}"
+    },
+    {
+      "old_index": 5,
+      "caption": "半圆锥的水平截面为半圆盘：先求截面形心 $4r/(3\\pi)$，再沿高度作体积加权",
+      "reason": "完整圆锥原图不能说明横向一阶矩；本图将横向质心与逐片积分明确对应。",
+      "tikz": "\\begin{tikzpicture}\n\\begin{scope}\n\\draw[fill=soft,thick](-1.7,0)--(0,2.8)--(1.7,0)--cycle;\n\\draw[->](0,-.25)--(0,3.25)node[above]{$z$};\n\\draw[thick](-1.0625,1.05)--(1.0625,1.05);\n\\draw[force](0,1.05)--(1.0625,1.05)node[midway,above]{$r(z)$};\n\\draw[<->](-2.1,0)--(-2.1,2.8)node[midway,left]{$h$};\n\\draw[<->](0,-.4)--(1.7,-.4)node[midway,below]{$a$};\n\\fill[ink](0,.7)circle(2.5pt)node[left]{$h/4$};\n\\node at(0,-1.05){$r(z)=a(1-z/h)$};\n\\end{scope}\n\\begin{scope}[shift={(5.2,1.1)}]\n\\draw[fill=soft,thick](0,-1.4)arc(-90:90:1.4)--cycle;\n\\draw[->](-.35,0)--(2.2,0)node[right]{$x$};\n\\draw[->](0,-1.65)--(0,1.75)node[above]{$y$};\n\\fill[ink](.594178,0)circle(2.5pt);\n\\draw[thin](.594178,0)--(1.7,-.75)node[right]{$\\bar x_A=4r/(3\\pi)$};\n\\draw[<->](-.3,0)--(-.3,1.4)node[midway,left]{$r$};\n\\node[align=center]at(1,-2.05){高度 $z$ 处的半圆截面\\\\$\\int_A x\\,\\dd A=2r^3/3$};\n\\end{scope}\n\\end{tikzpicture}"
+    },
+    {
+      "old_index": 24,
+      "caption": "取 $\\alpha=10^\\circ$、$\\mu_s=0.2$。浅色带为静摩擦许可区间；实线为实际静止阶段，$\\theta_*=28.2517^\\circ$ 处首次越界。虚线仅表示继续固定下端所需的摩擦比，右图放大首次越界附近",
+      "reason": "原曲线正确，但.3改.2后必须精确识别很窄的首次越界，避免读成首次负向越界。",
+      "tikz": "\\begin{tikzpicture}\n\\begin{scope}[x=.05cm,y=1.15cm]\n\\fill[soft](10,-.2)rectangle(90,.2);\n\\draw[->](0,0)--(98,0)node[right]{$\\theta$};\n\\draw[->](0,-2.35)--(0,.65)node[above]{$q=f/N$};\n\\draw[muted,thick,dashed]plot[domain=10:90,samples=220](\\x,{(3*cos(\\x)-2*cos(10))*sin(\\x)/(1-2*cos(10)*cos(\\x)+3*cos(\\x)^2)});\n\\draw[ink,very thick]plot[domain=10:28.2516867,samples=60](\\x,{(3*cos(\\x)-2*cos(10))*sin(\\x)/(1-2*cos(10)*cos(\\x)+3*cos(\\x)^2)});\n\\draw[guide](0,.2)--(90,.2);\\draw[guide](0,-.2)--(90,-.2);\n\\foreach \\a in {-.2,.2}{\\node[left]at(0,\\a){$\\a$};}\n\\foreach \\a in {30,60,90}{\\draw(\\a,0)--(\\a,-.06)node[below]{$\\a^\\circ$};}\n\\fill[ink](28.2516867,.2)circle(2.3pt);\n\\node[above]at(28.2516867,.36){$\\theta_*$};\n\\node[below]at(50,-2.42){全角度需求曲线};\n\\end{scope}\n\\begin{scope}[shift={(6.5,-1.6)},x=.12cm,y=24cm]\n\\fill[soft](0,0)rectangle(20,.04);\n\\draw[->](0,0)--(23,0)node[right]{$\\theta$};\n\\draw[->](0,0)--(0,.065)node[above]{$q$};\n\\draw[guide](0,.04)--(20,.04);\n\\draw[muted,thick,dashed]plot[domain=20:40,samples=160]({\\x-20},{(3*cos(\\x)-2*cos(10))*sin(\\x)/(1-2*cos(10)*cos(\\x)+3*cos(\\x)^2)-.16});\n\\draw[ink,very thick]plot[domain=20:28.2516867,samples=60]({\\x-20},{(3*cos(\\x)-2*cos(10))*sin(\\x)/(1-2*cos(10)*cos(\\x)+3*cos(\\x)^2)-.16});\n\\foreach \\a/\\b in {0/20,10/30,20/40}{\\draw(\\a,0)--(\\a,-.002)node[below]{$\\b^\\circ$};}\n\\foreach \\a/\\b in {0/.16,.02/.18,.04/.20,.06/.22}{\\draw(0,\\a)--(-.4,\\a)node[left]{$\\b$};}\n\\fill[ink](8.2516867,.04)circle(2.3pt);\n\\draw[guide](8.2516867,0)--(8.2516867,.04);\n\\node[above]at(12,.09){首次越界局部放大};\n\\end{scope}\n\\end{tikzpicture}"
+    },
+    {
+      "old_index": 33,
+      "caption": "自由弹簧两体问题的有效势，取 $\\beta=2ka^2/(mv_0^2)=0.55$；横轴为 $r/a$，纵轴以 $E_{\\rm rel}=mv_0^2/4$ 归一化。两转折点为 $1$ 和 $x_*=2.201225$",
+      "reason": "给出明确参数与能量尺度，避免泛示意与公式不对应。",
+      "tikz": "\\begin{tikzpicture}[x=2.3cm,y=1.35cm]\n\\draw[->](.5,0)--(3.05,0)node[right]{$r/a$};\n\\draw[->](.6,0)--(.6,2.7)node[above]{$U_{\\rm eff}/E_{\\rm rel}$};\n\\draw[ink,thick]plot[domain=.67:2.8,samples=200](\\x,{1/\\x^2+.55*(\\x-1)^2});\n\\draw[guide](.6,1)--(2.8,1)node[right]{能量线};\n\\draw[guide](1,0)--(1,1);\n\\draw[guide](2.201225443,0)--(2.201225443,1);\n\\fill[ink](1,1)circle(2.2pt);\\fill[ink](2.201225443,1)circle(2.2pt);\n\\node[below]at(1,0){$1$};\\node[below]at(2.201225443,0){$x_*$};\n\\draw[<->](1,.25)--(2.201225443,.25)node[midway,above]{$a\\le r\\le ax_*$};\n\\node[left]at(.6,1){$1$};\n\\end{tikzpicture}"
+    }
+  ],
+  "proposal_visual_check": {
+    "status": "all 22 candidate scientific diagrams compiled and visually inspected on 4 contact sheets",
+    "pdf": "/tmp/c2-all-figures-qa.pdf",
+    "figure_count": 22,
+    "must_fix_remaining": false,
+    "fixes": "修正图49零均值；图39/40精确双支；图24首次越界与局部放大；图4内半径与标题分离；图5形心文字移至弧线右侧（最后一项需主稿复核）。"
+  }
+}

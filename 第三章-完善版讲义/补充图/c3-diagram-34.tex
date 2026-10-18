@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw[thick](-.5,0)--(4.2,0);
+\begin{scope}[rotate=20]
+\draw[fill=soft,thick](0,0)rectangle(2.5,2.5);
+\fill(1.25,1.25)circle(3pt)node[right]{$C$};
+\draw[guide](0,0)--(1.25,1.25);
+\end{scope}
+\fill(0,0)circle(3pt)node[below left]{$O$};
+\draw(.8,0)arc(0:20:.8); \node at(1,.17){$\theta$};
+\draw[force](.747,1.602)--(.747,.55)node[left]{$mg$};
+\end{tikzpicture}

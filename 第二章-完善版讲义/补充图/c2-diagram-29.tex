@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=.95cm,y=1.6cm]
+\draw[->](0,0)--(6.8,0)node[right]{$\omega t$};\draw[->](0,-.6)--(0,1.3)node[above]{$v_i/v_0$};
+\draw[ink,thick]plot[domain=0:6.28,samples=100](\x,{(1+2*cos(180*\x/pi))/3});
+\draw[muted,thick,dashed]plot[domain=0:6.28,samples=100](\x,{(1-cos(180*\x/pi))/3});
+\draw[guide](0,.3333)--(6.3,.3333);\node[above]at(2.6,1){实线：球1};\node[below]at(4,-.4){虚线：球2};
+\draw(pi,0)--(pi,-.04)node[below]{$\pi$};\draw(2*pi,0)--(2*pi,-.04)node[below]{$2\pi$};
+\foreach \yy/\lab in {-.333333/{-1/3},.333333/{1/3},.666667/{2/3},1/{1}}{\draw(0,\yy)--(-.07,\yy)node[left]{$\lab$};}
+\end{tikzpicture}

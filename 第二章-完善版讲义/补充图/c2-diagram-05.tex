@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\begin{scope}
+\draw[fill=soft,thick](-1.7,0)--(0,2.8)--(1.7,0)--cycle;
+\draw[->](0,-.25)--(0,3.25)node[above]{$z$};
+\draw[thick](-1.0625,1.05)--(1.0625,1.05);
+\draw[force](0,1.05)--(1.0625,1.05)node[midway,above]{$r(z)$};
+\draw[<->](-2.1,0)--(-2.1,2.8)node[midway,left]{$h$};
+\draw[<->](0,-.4)--(1.7,-.4)node[midway,below]{$a$};
+\fill[ink](0,.7)circle(2.5pt)node[left]{$h/4$};
+\node at(0,-1.05){$r(z)=a(1-z/h)$};
+\end{scope}
+\begin{scope}[shift={(5.2,1.1)}]
+\draw[fill=soft,thick](0,-1.4)arc(-90:90:1.4)--cycle;
+\draw[->](-.35,0)--(2.2,0)node[right]{$x$};
+\draw[->](0,-1.65)--(0,1.75)node[above]{$y$};
+\fill[ink](.594178,0)circle(2.5pt);
+\draw[thin](.594178,0)--(1.7,-.75)node[right]{$\bar x_A=4r/(3\pi)$};
+\draw[<->](-.3,0)--(-.3,1.4)node[midway,left]{$r$};
+\node[align=center]at(1,-2.05){高度 $z$ 处的半圆截面\\$\int_A x\,\dd A=2r^3/3$};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](0,0)rectangle(3.3,.5);\draw(.4,-.15)circle(.18);\draw(2.8,-.15)circle(.18);\foreach \x in {.5,1.4,2.3}{\fill(\x,1)circle(3pt)node[above]{$m$};\draw(\x,.5)--(\x,.88);}\draw[->](2.3,1)--(3.7,1)node[right]{$v$};\node at(1.6,.23){$M$};\node at(1.6,-.75){$N$ 人：同时或依次};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\Delta V_j=-mv/[M+(N-j+1)m]$\\[6pt]$\Downarrow$\\[6pt]$|V_{\rm seq}|=\sum_{j=1}^N mv/[M+jm]$};
+\end{tikzpicture}

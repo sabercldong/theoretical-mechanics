@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=1.1]
+\draw[ink,thick,fill=soft](0,0)circle(1.8);
+\coordinate(A)at(-1.44,1.08);\coordinate(B)at(1.77106908,.32142544);
+\draw[force](-3,1.08)--(A);
+\draw[force](A)--(B);
+\draw[force](B)--++(1.38613962,-.69362594);
+\draw[guide](A)--(0,0)--(B);
+\draw[guide](-3,0)--(3.4,0);
+\draw[guide](A)--++(1.05,0);
+\draw[guide](B)--++(1.35,0);
+\draw[<->](-2.6,0)--(-2.6,1.08)node[midway,left]{$b$};
+\draw[<->](0,0)--(0,-1.8)node[midway,right]{$a$};
+\draw(A)++(-36.86989765:.95)arc(-36.86989765:0:.95);
+\node at(-.32,.95){$i$};
+\draw(A)++(-36.86989765:.55)arc(-36.86989765:-13.29171917:.55);
+\node at(-.70,.72){$j$};
+\draw(B)++(0:.8)arc(0:-26.58343834:.8);
+\node at(2.79,.11){$\chi$};
+\node[above left]at(A){入口};\node[above right]at(B){出口};
+\node at(0,-2.2){阱内匀速直行，边界处折转};
+\end{tikzpicture}

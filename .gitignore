@@ -1,0 +1,44 @@
+# Track the source material and the current five chapter projects.
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/*.py
+!/*.pptx
+!/*.pdf
+!/*.docx
+!/课后作业答案/
+!/第一章-完善版讲义/
+!/第二章-完善版讲义/
+!/第三章-完善版讲义/
+!/第四章-完善版讲义/
+!/第五章-完善版讲义/
+
+# Generated archives, previews, compiler files, and caches stay local.
+*.zip
+*.rar
+*.aux
+*.log
+*.toc
+*.out
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+.DS_Store
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.pem
+*.key
+
+# Retain authoring/check scripts but omit bulky working artifacts.
+**/工作文件/*
+!**/工作文件/*.py
+!**/工作文件/*.json
+!**/工作文件/*.md
+**/*备份*/
+**/资料核查/*
+!**/资料核查/*.json
+!**/资料核查/*.md

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](0,0)--(2.8,0)--(1,2)--cycle;\fill(0,0)circle(2pt)node[below]{$A$};\fill(2.8,0)circle(2pt)node[below]{$B$};\fill(1,2)circle(2pt)node[above]{$D$};\node at(1.4,2.65){$M_A=M_B=M_D=0$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\Delta=x_{AB}y_{AD}-y_{AB}x_{AD}\ne0$\\[6pt]$\Downarrow$\\[6pt]$F_x=F_y=M_A=0$};
+\end{tikzpicture}

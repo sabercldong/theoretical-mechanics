@@ -1,0 +1,762 @@
+{
+  "reviewer": "independent_visual_qa_front",
+  "reviewed_at": "2026-10-17T19:05:57.505116+08:00",
+  "scope": {
+    "examples": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "atlas_images_actually_viewed": [
+      "工作文件/题图总览PNG/atlas-01.png",
+      "工作文件/题图总览PNG/atlas-02.png",
+      "工作文件/题图总览PNG/atlas-03.png",
+      "工作文件/题图总览PNG/atlas-04.png",
+      "工作文件/题图总览PNG/atlas-05.png",
+      "工作文件/题图总览PNG/atlas-06.png",
+      "工作文件/题图总览PNG/atlas-07.png",
+      "工作文件/题图总览PNG/atlas-08.png"
+    ],
+    "statement_source": "工作文件/完整题干.json",
+    "source_files_read": [
+      "题图/ex01.tex",
+      "题图/ex02.tex",
+      "题图/ex03.tex",
+      "题图/ex04.tex",
+      "题图/ex05.tex",
+      "题图/ex06.tex",
+      "题图/ex07.tex",
+      "题图/ex08.tex",
+      "题图/ex09.tex",
+      "题图/ex10.tex",
+      "题图/ex11.tex",
+      "题图/ex12.tex",
+      "题图/ex13.tex",
+      "题图/ex14.tex",
+      "题图/ex15.tex",
+      "题图/ex16.tex",
+      "题图/ex17.tex",
+      "题图/ex18.tex",
+      "题图/ex19.tex",
+      "题图/ex20.tex",
+      "题图/ex21.tex",
+      "题图/ex22.tex",
+      "题图/ex23.tex",
+      "题图/ex24.tex",
+      "题图/ex25.tex",
+      "题图/ex26.tex",
+      "题图/ex27.tex",
+      "题图/ex28.tex",
+      "题图/ex29.tex",
+      "题图/ex30.tex",
+      "题图/ex31.tex",
+      "题图/ex32.tex",
+      "题图/ex33.tex",
+      "题图/ex34.tex",
+      "题图/ex35.tex",
+      "题图/ex36.tex",
+      "题图/ex37.tex",
+      "题图/ex38.tex",
+      "题图/ex39.tex",
+      "题图/ex40.tex",
+      "题图/ex41.tex",
+      "题图/ex42.tex",
+      "题图/ex43.tex",
+      "题图/ex44.tex",
+      "题图/ex45.tex",
+      "题图/ex46.tex",
+      "题图/ex47.tex",
+      "题图/ex48.tex"
+    ]
+  },
+  "method": "实际查看全部8张总览，与48题题干和48份TikZ源逐项对照；对标签疑点裁图放大确认。未改主稿或题图，只写本报告。",
+  "overall_status": "needs_revision",
+  "summary": "48幅题图均完成初查。18题提出修订，重点实质问题是例32接触点悬空、例34冲量作用点、例39最近距离几何、例40不等质量质心、例45/46非水平分离方向。其余主要为标注与状态/受力示意完整性。",
+  "material_issue_examples": [
+    32,
+    34,
+    39,
+    40,
+    45,
+    46
+  ],
+  "other_issue_examples": [
+    3,
+    5,
+    8,
+    12,
+    20,
+    22,
+    24,
+    26,
+    29,
+    30,
+    42,
+    43
+  ],
+  "issue_question_count": 18,
+  "current_open_issue_count": 18,
+  "atlas_only_findings": [],
+  "atlas_scaling_note": "本次没有把固定缩放产生的单元格大小差异认定为题图错误；报告中的穿字均来自图内部相对位置，缩放不能解除。主稿最终列内可读性需重编译后另行查看。",
+  "specific_priority_checks": {
+    "half_sphere_cone": "例3/7上半球z≥0正确，例4半圆锥截面x≥0正确；例3内半径a标签穿内弧。",
+    "monkeys": "例19对地/相对绳速度已区分；例20需补不等初始高度和距离尺寸。",
+    "grounded_double_balls": "例29/30补下球重力；例31/33初态冲量正确；例32接触点和例34碰撞冲量作用点须改。",
+    "spring_and_peg": "例26区分初态与原长时状态；例36/41初态正确；例42碰后状态正确但标签遮箭头；例44初始a+3a及同向等速正确。"
+  },
+  "reviewed": [
+    {
+      "example": 1,
+      "title": "三角形薄片与三个顶点质点",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "source": "题图/ex01.tex",
+      "status": "passed",
+      "finding": "三角形中线交点G与BC中点D的几何正确，G位于中线2:1分点。",
+      "issues": []
+    },
+    {
+      "example": 2,
+      "title": "圆盘挖去两个相同圆孔",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "source": "题图/ex02.tex",
+      "status": "passed",
+      "finding": "孔心为(±.4,.69282)、大盘R=1.6，距心R/2且夹角60°，两孔对称且不重叠。",
+      "issues": []
+    },
+    {
+      "example": 3,
+      "title": "均匀实心半球与厚半球壳",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "source": "题图/ex03.tex",
+      "status": "needs_revision",
+      "finding": "上半球z≥0与厚半球壳模型正确；a标签需避内圆弧。",
+      "issues": [
+        {
+          "id": "ex03-1",
+          "severity": "minor_layout",
+          "detail": "厚半球壳内半径a文字落在内圆弧上，内弧穿过字母。",
+          "recommended_fix": "将a标成明确半径尺寸或移离内弧。",
+          "source": "题图/ex03.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 4,
+      "title": "圆锥及其沿轴剖开的半圆锥",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "source": "题图/ex04.tex",
+      "status": "passed",
+      "finding": "以底面中心为原点、轴向z、半圆截面保留x≥0，模型正确。",
+      "issues": []
+    },
+    {
+      "example": 5,
+      "title": "抛物线围成的均匀薄片",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "source": "题图/ex05.tex",
+      "status": "needs_revision",
+      "finding": "抛物线与水平截线构型正确，dx条宽标法需明确。",
+      "issues": [
+        {
+          "id": "ex05-1",
+          "severity": "diagram_clarity",
+          "detail": "单条竖直截线旁标dx，容易把竖直条高误作水平方向宽度。",
+          "recommended_fix": "画两条邻近竖直边界并水平标dx；条高可标a−kx²。",
+          "source": "题图/ex05.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 6,
+      "title": "由坐标平面截出的四面体",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "source": "题图/ex06.tex",
+      "status": "passed",
+      "finding": "四面体x=2、y=4、z=8截距及平面方程对应。",
+      "issues": []
+    },
+    {
+      "example": 7,
+      "title": "具有轴向密度梯度的实心半球",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "source": "题图/ex07.tex",
+      "status": "passed",
+      "finding": "z≥0上半球、A(z)横截面与线性密度标式正确。",
+      "issues": []
+    },
+    {
+      "example": 8,
+      "title": "等长曲柄连杆机构",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "source": "题图/ex08.tex",
+      "status": "needs_revision",
+      "finding": "等长OA/AB、滑块在水平轴、θ从正水平量起均正确；标签有穿线。",
+      "issues": [
+        {
+          "id": "ex08-1",
+          "severity": "readability",
+          "detail": "B,m2节点锚定滑块中心below，m2被滑块底边压住；左杆l,m1也贴到杆线，已放大确认。",
+          "recommended_fix": "将B,m2移到滑块外下方，左杆参数移到左上空白。",
+          "source": "题图/ex08.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 9,
+      "title": "爆炸后的质心仍受同一外场控制",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "source": "题图/ex09.tex",
+      "status": "passed",
+      "finding": "爆炸位置C,t0、重力方向与未爆炸轨道示意正确；一般爆炸可有任意碎片分速度。",
+      "issues": []
+    },
+    {
+      "example": 10,
+      "title": "固定机座上的偏心电动机",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "source": "题图/ex10.tex",
+      "status": "passed",
+      "finding": "t=0转子质心在O正上，ω箭头逆时针，偏心距e正确。",
+      "issues": []
+    },
+    {
+      "example": 11,
+      "title": "可自由后退的炮车",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "source": "题图/ex11.tex",
+      "status": "passed",
+      "finding": "炮弹相对炮车出膛V向右上、α与水平夹角、炮车后退方向正确。",
+      "issues": []
+    },
+    {
+      "example": 12,
+      "title": "人跳上车再向后跳离",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "source": "题图/ex12.tex",
+      "status": "needs_revision",
+      "finding": "两阶段方向分别右下与左上正确；入车箭头应严格60°。",
+      "issues": [
+        {
+          "id": "ex12-1",
+          "severity": "secondary_geometry",
+          "detail": "入车速度箭头位移(.6,−.8)，实际与水平夹角约53.13°，与60°标签不一致。",
+          "recommended_fix": "按cos60°、sin60°构造右下速度箭头。",
+          "source": "题图/ex12.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 13,
+      "title": "多人同时跳车与依次跳车",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "source": "题图/ex13.tex",
+      "status": "passed",
+      "finding": "初静止载人车、N人沿同一正方向跳出示意正确。",
+      "issues": []
+    },
+    {
+      "example": 14,
+      "title": "可水平移动的支座与摆球",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "source": "题图/ex14.tex",
+      "status": "passed",
+      "finding": "可水平移动支座、向下竖直参考线和θ定义正确。",
+      "issues": []
+    },
+    {
+      "example": 15,
+      "title": "太空中两人相互拉绳",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "source": "题图/ex15.tex",
+      "status": "passed",
+      "finding": "两质量端点、间距L与相向拉力正确。",
+      "issues": []
+    },
+    {
+      "example": 16,
+      "title": "冲量作用于由轻绳连接的两个小球",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "source": "题图/ex16.tex",
+      "status": "passed",
+      "finding": "连线A→B为正x、J斜向右上且α<π/2，约束冲量沿绳的提示正确。",
+      "issues": []
+    },
+    {
+      "example": 17,
+      "title": "借助小球反弹延长越过深沟的运动",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "source": "题图/ex17.tex",
+      "status": "passed",
+      "finding": "同高出发、人员向上u、小球向下w、共同水平v与沟深h正确。",
+      "issues": []
+    },
+    {
+      "example": 18,
+      "title": "无外力矩仍不守恒的移动点角动量",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "source": "题图/ex18.tex",
+      "status": "passed",
+      "finding": "A在(0,ut)上移u，质点(vt,0)右移v，A到质点的相对位置箭头正确。",
+      "issues": []
+    },
+    {
+      "example": 19,
+      "title": "等质量猴子爬绳与滑轮惯量",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "source": "题图/ex19.tex",
+      "status": "passed",
+      "finding": "初始两猴同高，A对地u与B相对绳v明确区分，轮惯量Ip是可变参数。",
+      "issues": []
+    },
+    {
+      "example": 20,
+      "title": "不等质量猴子同时爬到轮轴高度",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "source": "题图/ex20.tex",
+      "status": "needs_revision",
+      "finding": "轻轮与不同质量标注正确，初始s/s′几何与加速度标法需改。",
+      "issues": [
+        {
+          "id": "ex20-1",
+          "severity": "model_clarity",
+          "detail": "两猴在图中初始高度完全相同，s/s′与加速度a/a′合在向上箭头旁；题设允许且一般需要不同初始距离。",
+          "recommended_fix": "分别画不同初始高度，用轮轴水平面与尺寸线标s、s′，加速度箭头仅标a、a′。",
+          "source": "题图/ex20.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 21,
+      "title": "竖直轻杆连接的双球自由平抛",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "source": "题图/ex21.tex",
+      "status": "passed",
+      "finding": "竖直等质量双球、C在中点、向右冲量加在下球，重力向下，符合自由释放题设。",
+      "issues": []
+    },
+    {
+      "example": 22,
+      "title": "中心斥力场中的刚杆双球",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "source": "题图/ex22.tex",
+      "status": "needs_revision",
+      "finding": "OA/OB上的排斥力方向与杆相对OC约45°正确，B标签穿字。",
+      "issues": [
+        {
+          "id": "ex22-1",
+          "severity": "readability",
+          "detail": "B,m标签被FB向外箭杆穿过，已放大确认。",
+          "recommended_fix": "将B,m标签移到B点左上，避开FB径向箭杆。",
+          "source": "题图/ex22.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 23,
+      "title": "秋千为何越荡越高",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "source": "题图/ex23.tex",
+      "status": "passed",
+      "finding": "f-r循环顺时针，右行高f、左行低f，正内力功符号正确。",
+      "issues": []
+    },
+    {
+      "example": 24,
+      "title": "双球的公转与自转",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "source": "题图/ex24.tex",
+      "status": "needs_revision",
+      "finding": "公转Ω逆时针与两球距A相同正确；自转ω的顺时针箭头被遮。",
+      "issues": [
+        {
+          "id": "ex24-1",
+          "severity": "readability_direction",
+          "detail": "ω顺时针弧与小圆周重合，箭头终点落在下球上被黑点遮住，旋向难辨；m标签也贴着球点/圆弧。",
+          "recommended_fix": "将ω弧单独画在外侧且终点避开两球，将m标签外移。",
+          "source": "题图/ex24.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 25,
+      "title": "运动能量与食物热值的估算",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "source": "题图/ex25.tex",
+      "status": "passed",
+      "finding": "质量100kg、升高H、速度V和食物能量转换的符号示意与估算题意一致。",
+      "issues": []
+    },
+    {
+      "example": 26,
+      "title": "一对弹簧内力的功可以增加总动能",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "source": "题图/ex26.tex",
+      "status": "needs_revision",
+      "finding": "弹簧参数与两球质量正确，初态与原长时的速度状态需区分。",
+      "issues": [
+        {
+          "id": "ex26-1",
+          "severity": "state_clarity",
+          "detail": "图示长度a−δ表示初始压缩态，却同时画非零向外速度v1/v2；未区分初态和经过原长的状态。",
+          "recommended_fix": "初态标v1=v2=0并画弹簧力，或分初态与经过原长两幅图。",
+          "source": "题图/ex26.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 27,
+      "title": "两自由质点因引力相向运动",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "source": "题图/ex27.tex",
+      "status": "passed",
+      "finding": "初始r=a静止与后续相向速度方向一致，图中用r表示当前距离。",
+      "issues": []
+    },
+    {
+      "example": 28,
+      "title": "自由旋转管中的小球从管口射出",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "source": "题图/ex28.tex",
+      "status": "passed",
+      "finding": "管长l、Mt、球初始在中点、正径向er和初始转向一致；未误标恒速维持。",
+      "issues": []
+    },
+    {
+      "example": 29,
+      "title": "光滑地面上由轻杆连接的双球",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "source": "题图/ex29.tex",
+      "status": "needs_revision",
+      "finding": "上球右上、θ从向上竖直起算、N竖直正确，受力示意少下球mg。",
+      "issues": [
+        {
+          "id": "ex29-1",
+          "severity": "incomplete_force_diagram",
+          "detail": "图已画N与上球mg，但未画下球自身mg；作为受力示意会漏掉一份重力。",
+          "recommended_fix": "补下球向下mg，或明确全图只是构型示意且不混画不完整力图。",
+          "source": "题图/ex29.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 30,
+      "title": "粗糙地面上先不滑动的双球",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "source": "题图/ex30.tex",
+      "status": "needs_revision",
+      "finding": "粗糙地面、θ定义、N竖直和f有向参考正确，受力示意少下球mg。",
+      "issues": [
+        {
+          "id": "ex30-1",
+          "severity": "incomplete_force_diagram",
+          "detail": "图已画N、f与上球mg，但未画下球自身mg。",
+          "recommended_fix": "补下球向下mg，并避开地面及1,m标签。",
+          "source": "题图/ex30.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 31,
+      "title": "上球受水平冲量后的接地运动与离地分支",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "source": "题图/ex31.tex",
+      "status": "passed",
+      "finding": "初始竖直、J加于上球且向右、θ(0)=0、Λ定义正确。",
+      "issues": []
+    },
+    {
+      "example": 32,
+      "title": "连接质点组与光滑地面的弹性及非弹性碰撞",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "source": "题图/ex32.tex",
+      "status": "needs_revision",
+      "finding": "刚杆双点质心示意合理，但碰撞q未接地。",
+      "issues": [
+        {
+          "id": "ex32-1",
+          "severity": "material_contact",
+          "detail": "接触点q=(.2,.4)，地面y=0，球点下缘仍明显悬空，却已施加碰撞法向冲量。",
+          "recommended_fix": "将接触点q放到地面，连同杆与质心平移保持几何，并从q画法向冲量。",
+          "source": "题图/ex32.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 33,
+      "title": "强冲量后的第一次碰地事件",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "source": "题图/ex33.tex",
+      "status": "passed",
+      "finding": "强冲量初态与Λ=4正确，J仍加上球。",
+      "issues": []
+    },
+    {
+      "example": 34,
+      "title": "杆水平时上球碰地的速度更新",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "source": "题图/ex34.tex",
+      "status": "needs_revision",
+      "finding": "水平杆和球2向下v正确，K作用位置需对准球2。",
+      "issues": [
+        {
+          "id": "ex34-1",
+          "severity": "material_force_location",
+          "detail": "题干限定只对球2施加法向冲量；K箭头起点(2.2,.2)却在杆中部附近，球2为(2.7,.15)。",
+          "recommended_fix": "让K从球2/其接触点发出，可分前后速度箭头或用引线避开向下v。",
+          "source": "题图/ex34.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 35,
+      "title": "两端载质点的轻粗杆绕桌沿转动",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "source": "题图/ex35.tex",
+      "status": "passed",
+      "finding": "桌沿角点接触、左右力臂l/3与2l/3、N垂直杆、f沿杆向左上正确。",
+      "issues": []
+    },
+    {
+      "example": 36,
+      "title": "自由弹簧两球的完整时间解",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "source": "题图/ex36.tex",
+      "status": "passed",
+      "finding": "2m球在左且x2=0，m球在右且x1=a、初速v0向右，正确。",
+      "issues": []
+    },
+    {
+      "example": 37,
+      "title": "日地两体的相对轨道与双方公转",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "source": "题图/ex37.tex",
+      "status": "passed",
+      "finding": "标为质心位置关系示意，r是两星间距；圆虚线不应据此解读成一般轨道必为圆。",
+      "issues": []
+    },
+    {
+      "example": 38,
+      "title": "圆形双星的周期",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "source": "题图/ex38.tex",
+      "status": "passed",
+      "finding": "两星分列质心两侧，L为星间距、各自半径不同，圆形双星模型正确。",
+      "issues": []
+    },
+    {
+      "example": 39,
+      "title": "可反冲的反立方斥力靶的最近距离",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "source": "题图/ex39.tex",
+      "status": "needs_revision",
+      "finding": "ρ是相对入射直线到O的垂距、v∞入射向右；最近距a的几何位置错误。",
+      "issues": [
+        {
+          "id": "ex39-1",
+          "severity": "material_geometry",
+          "detail": "标最近距离a的径向虚线指向向外运动段(.45,1.8)，该处不是曲线到O的最近点，也不满足径向与轨迹切线垂直。",
+          "recommended_fix": "重画最近点，使O到该点的线段垂直轨迹切线，并以a或rmin标出。",
+          "source": "题图/ex39.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 40,
+      "title": "不等质量轻杆双球的一端受横向冲量",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "source": "题图/ex40.tex",
+      "status": "needs_revision",
+      "finding": "下球受右向J和杆沿y方向正确；一般不等质量的C不可在中点。",
+      "issues": [
+        {
+          "id": "ex40-1",
+          "severity": "material_center_of_mass",
+          "detail": "题设m1,m2一般不等，C却固定在杆中点(0,1.15)，只适用于m1=m2。",
+          "recommended_fix": "将C偏置并标两端距质心分别m2L/M、m1L/M，明确以C为初始原点。",
+          "source": "题图/ex40.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 41,
+      "title": "横向冲量后的等质量自由弹簧",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "source": "题图/ex41.tex",
+      "status": "passed",
+      "finding": "原长a的弹簧与横向初速v0正确。",
+      "issues": []
+    },
+    {
+      "example": 42,
+      "title": "粘连碰撞后弹簧最大伸长为三倍原长",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "source": "题图/ex42.tex",
+      "status": "needs_revision",
+      "finding": "碰后左球为2m、速度V0/2与另一m球静止的状态正确，状态说明与箭头重叠。",
+      "issues": [
+        {
+          "id": "ex42-1",
+          "severity": "readability",
+          "detail": "“碰后：入射球已粘连”文本覆盖V0/2速度箭头顶端，箭头穿字。",
+          "recommended_fix": "将状态说明移到不与速度箭头相交的上方或右上空白。",
+          "source": "题图/ex42.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 43,
+      "title": "轻绳中点受冲击后三球的首次相碰",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "source": "题图/ex43.tex",
+      "status": "needs_revision",
+      "finding": "等长两半绳、端球关于水平轴对称、φ从竖直起算合理，M/a文字需避线。",
+      "issues": [
+        {
+          "id": "ex43-1",
+          "severity": "readability",
+          "detail": "M标签被向右速度箭杆穿过；a标签放在斜绳线上。",
+          "recommended_fix": "M移到点的下方，a沿绳中段偏到空白侧。",
+          "source": "题图/ex43.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 44,
+      "title": "长度为 $4a$ 的绳绕光滑固定钉",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "source": "题图/ex44.tex",
+      "status": "passed",
+      "finding": "遇钉前绳长分为a与3a，两球同速向上，光滑钉可滑绳提示正确。",
+      "issues": []
+    },
+    {
+      "example": 45,
+      "title": "携物抛体在最高点水平分离",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "source": "题图/ex45.tex",
+      "status": "needs_revision",
+      "finding": "最高点位置与重力正确，但两分离箭头必须水平。",
+      "issues": [
+        {
+          "id": "ex45-1",
+          "severity": "material_direction",
+          "detail": "题设在最高点水平分离，初瞬两者竖直速度为零，图却画右上/右下两支箭头。",
+          "recommended_fix": "改画水平速度或水平速度增量，并清楚区分对地速度与分离增量。",
+          "source": "题图/ex45.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 46,
+      "title": "炮弹最高点爆炸后的碎片间距",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "source": "题图/ex46.tex",
+      "status": "needs_revision",
+      "finding": "最高点位置与重力正确，但两爆炸速度变化必须水平。",
+      "issues": [
+        {
+          "id": "ex46-1",
+          "severity": "material_direction",
+          "detail": "题设最高点爆炸的速度变化仅沿水平，图却画右上/右下两支箭头。",
+          "recommended_fix": "两支箭头改成水平；可画相反的水平速度增量并标Δu1、Δu2。",
+          "source": "题图/ex46.tex",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "example": 47,
+      "title": "静止靶的一维弹性碰撞",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "source": "题图/ex47.tex",
+      "status": "passed",
+      "finding": "一维入射u沿正x、靶初静止与质量标注正确。",
+      "issues": []
+    },
+    {
+      "example": 48,
+      "title": "等质量散射与中子减速的运动学",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "source": "题图/ex48.tex",
+      "status": "passed",
+      "finding": "实验室角θ与入射x正向一致，v1·v2≈0，等质量出射速度垂直正确。",
+      "issues": []
+    }
+  ],
+  "atlas_sha256": {
+    "atlas-01.png": "bbe26272a83ce6c32e05f0235d2600bc710512765a94aff0fb2a9cb657eedba3",
+    "atlas-02.png": "c9c6ba06dbe9ae28e7f667b1cb101679025c0fb066ce307c7ed202a96354b8df",
+    "atlas-03.png": "b39e456cfe588d93fd2e1bb5c855261ce268f77d3153932e43dc0037a861fe83",
+    "atlas-04.png": "b8b524c525650f59861263a48c47822214ab69f0aec3548d062b1fad045e4cad",
+    "atlas-05.png": "b161073a3d00b4a763094c8c42224bb30abcf803c4e49392d95510de23f718ad",
+    "atlas-06.png": "585897da9fab9df98a8e0865b3263c595b4a6ea021343f357c37141d4b600ee7",
+    "atlas-07.png": "3a830c098979830c303e0d60df8890f1052a08d49efaeefec230bc708ab054a5",
+    "atlas-08.png": "99555a1cf095b02fb2366f1daddbc72e46337076e1a72268d88d3a682f51a40a"
+  },
+  "limits": [
+    "只对例1–48题图和题干进行复核，不重审全章正文或解答。",
+    "此为初编图集的发现问题报告，修复后应对相关图重新渲染复验。"
+  ]
+}

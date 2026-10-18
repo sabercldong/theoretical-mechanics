@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](0,0)--(2.8,0)--(1.4,2.425)--cycle;\foreach \x/\y in {0/0,2.8/0,1.4/2.425}{\fill(\x,\y)circle(3pt);}\node[below left]at(0,0){$O,m$};\node[below right]at(2.8,0){$m$};\node[above]at(1.4,2.425){$m$};\node[below]at(1.4,0){$a$};\draw[->,gray](0,0)--(3.5,0)node[right]{$x$};\draw[->,gray](0,0)--(0,2.8)node[above]{$y$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$I_{ij}=\sum m(r^2\delta_{ij}-x_ix_j)$\\[6pt]$\Downarrow$\\[6pt]$\mathsf I\vect n=\lambda\vect n$};
+\end{tikzpicture}

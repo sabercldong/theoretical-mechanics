@@ -1,0 +1,374 @@
+[
+  {
+    "key": "c5-diagram-01",
+    "caption": "双面约束与单面约束的力学差别",
+    "old_start": 4479,
+    "sha256": "bec250d6e1d5052978836cc1f263ec291c5f0fcc7b56148f01bb56a66fe2fc17"
+  },
+  {
+    "key": "c5-diagram-02",
+    "caption": "圆盘滚动的俯视与侧视示意；无侧滑时速度沿盘面方向，并与轨迹相切",
+    "old_start": 5635,
+    "sha256": "2c63098f6d8e312ce5d4738427dabfa69d1627da5a8a8e9fc32d70c3c78cfb6c"
+  },
+  {
+    "key": "c5-diagram-03",
+    "caption": "几种完整约束系统的广义坐标",
+    "old_start": 8314,
+    "sha256": "a129049552c233fb279f3d300e994ed8395dcaccc57a3fe78893d0e0bfcddb56"
+  },
+  {
+    "key": "c5-diagram-04",
+    "caption": "同一物理限制下可选择不同坐标，空间转动仍需三个姿态参数",
+    "old_start": 9319,
+    "sha256": "1d085785ac4d5cf6ae10399b4bb0c3d858d2fc6364c72ff14da091b81fdbbd14"
+  },
+  {
+    "key": "c5-diagram-05",
+    "caption": "移动约束面上的虚位移与实位移",
+    "old_start": 10959,
+    "sha256": "9f5a0dc5b6c9316620a10386dd42a352f391133cee839626a419f0bf8d37ab68"
+  },
+  {
+    "key": "c5-diagram-06",
+    "caption": "理想约束的零总虚功来自几何垂直、反力抵消或接触点不动",
+    "old_start": 13058,
+    "sha256": "a74730c8eacd36af76d2cf5279ae93de37ea460e696fa787ad07e91bfc44aff6"
+  },
+  {
+    "key": "c5-diagram-07",
+    "caption": "平衡位置与稳定性需分别判断",
+    "old_start": 14678,
+    "sha256": "054dfc2c4fd4db33f6f48b716264b9e20fa8284d1c08eb20a6539fe636445cbb"
+  },
+  {
+    "key": "c5-diagram-08",
+    "caption": "两杆的独立角坐标与主动力",
+    "old_start": 15338,
+    "sha256": "60084e7474a5b9486c6f352749e9e6e0e4a572a1688bcf3f80423c3411cc022e"
+  },
+  {
+    "key": "c5-diagram-09",
+    "caption": "机构三个点的虚位移来自同一个独立转角",
+    "old_start": 17577,
+    "sha256": "c1f31716bea440e09d672a423c71845039004ec859ea146719d143ed3ff49d92"
+  },
+  {
+    "key": "c5-diagram-10",
+    "caption": "光滑支承杆的驻势能构形可以是不稳定平衡",
+    "old_start": 18468,
+    "sha256": "9f79c8b1ecfc83d7db7ae00f5a2f02d629a21a708e457b5b64a912c6b206b63f"
+  },
+  {
+    "key": "c5-diagram-11",
+    "caption": "折杆两段重量正比于各自长度，不能按等质量求角",
+    "old_start": 19648,
+    "sha256": "114832a8eace7d1441e3979251a26b50a30778ee4fc55bdf030120b034897c22"
+  },
+  {
+    "key": "c5-diagram-12",
+    "caption": "虚功关系由力的方向和机构几何共同决定",
+    "old_start": 20707,
+    "sha256": "9f27519c3fb4824d2fcae4378ce9fcc7e9e691f02a73a67d754b48a2cf23cc34"
+  },
+  {
+    "key": "c5-diagram-13",
+    "caption": "两种约束下高度函数的驻值位置",
+    "old_start": 22483,
+    "sha256": "fabfc8d8b8b05d02bbad3847f28b2eb07257493c1bb3098eaec7e4ba515635e4"
+  },
+  {
+    "key": "c5-diagram-14",
+    "caption": "目标函数曲面的高度沿约束交线取驻值，两种几何约束给不同极值",
+    "old_start": 23622,
+    "sha256": "945ecdaa4aa27b48a9e8a7eff39331e2577fcb81fbe367f8a81a33df89cd41ad"
+  },
+  {
+    "key": "c5-diagram-15",
+    "caption": "横杆反力的符号由预先规定的向外方向判断",
+    "old_start": 25336,
+    "sha256": "86f6c556c97155d13d369d07ca446f4533fe356753fc66a87b3267ba0a178789"
+  },
+  {
+    "key": "c5-diagram-16",
+    "caption": "串接两球的有向绳角与分别作用于球的拉力",
+    "old_start": 26914,
+    "sha256": "8ea8721ba4bc598d13d60e5f4962c64b7a0768563253ae11c68c87f4acc6dc76"
+  },
+  {
+    "key": "c5-diagram-17",
+    "caption": "极坐标动能自动包含基矢转动带来的动力学项",
+    "old_start": 31890,
+    "sha256": "d934cbdc0520820cbe4af54b9662570ea38319a1b75047b073f1c1bb866b95de"
+  },
+  {
+    "key": "c5-diagram-18",
+    "caption": "绳速是柱心速度的两倍，静摩擦向右",
+    "old_start": 32667,
+    "sha256": "64dbfba8dc757519a8230774da883947469d5e8a4fb0f2714cc51fd7b85da688"
+  },
+  {
+    "key": "c5-diagram-19",
+    "caption": "定轴滑轮的转动动能必须计入等效质量",
+    "old_start": 34021,
+    "sha256": "199c3e7aa1b591f2d0c0dc0f2fc07a53547ec669ee6269ffcb326169e0d5d082"
+  },
+  {
+    "key": "c5-diagram-20",
+    "caption": "弹簧摆的长度与方向均为独立变量",
+    "old_start": 35107,
+    "sha256": "c29ca4602f03ef1301fb7a2962a7c96ce713ba02732f7017f0fe61a04bf715ec"
+  },
+  {
+    "key": "c5-diagram-21",
+    "caption": "大球外侧滚动的接触几何与小球受力；法向力、摩擦力作用于接触点",
+    "old_start": 36348,
+    "sha256": "be59955ddb1c4f9c4156656ff3ab8ce7bf188540417b4c33f148ef8b8eb667b3"
+  },
+  {
+    "key": "c5-diagram-22",
+    "caption": "移动悬点产生动能中的速度交叉项",
+    "old_start": 38301,
+    "sha256": "ac00cc0084cf1e8c656eac4e7e5e146919ac193cda2f15e1816e20144fe7ab67"
+  },
+  {
+    "key": "c5-diagram-23",
+    "caption": "斜面移动与相对运动的速度不能直接平方后相加",
+    "old_start": 40514,
+    "sha256": "559765593f729aaeb9d46ccbf46eb6ed9ddd4bae89ffe87b5ff8830f41311667"
+  },
+  {
+    "key": "c5-diagram-24",
+    "caption": "行星轮平动与绝对自转共同构成动能",
+    "old_start": 41963,
+    "sha256": "446694e195754e60a2dbd7dbc5aada32b39cc8108dbd863e63a5d7dde16ad5db"
+  },
+  {
+    "key": "c5-diagram-25",
+    "caption": "球形碗中的轴对称运动与循环积分",
+    "old_start": 45689,
+    "sha256": "7d63767e8079b76874a0ca04a0da224435c38378b09788d537371be779862d1a"
+  },
+  {
+    "key": "c5-diagram-26",
+    "caption": "质心与相对坐标使双球动能和势能分离",
+    "old_start": 49293,
+    "sha256": "caf8277f58f9314815cbcc3c6a2dc30384df8708e7ff2abc6b90bdaecd37274b"
+  },
+  {
+    "key": "c5-diagram-27",
+    "caption": "环的转动由规定角速率驱动，滑珠只有一个独立坐标",
+    "old_start": 49966,
+    "sha256": "d312fa463898a0e2bdf5b8a773c2f41fc060740edd25f16c8480e4589746cc79"
+  },
+  {
+    "key": "c5-diagram-28",
+    "caption": "重力对循环坐标的贡献抵消，弹性绳长作简谐变化",
+    "old_start": 52054,
+    "sha256": "b3c2ac0a91ec560ddfbad654d42112641073ed90a8b88d4bd1ba3726de16497c"
+  },
+  {
+    "key": "c5-diagram-29",
+    "caption": "角动量积分与能量积分共同决定径向转折点",
+    "old_start": 53594,
+    "sha256": "1ce65423494839e072a3e7b4166b17a8e11ac4396081cc82f18a77c10426e805"
+  },
+  {
+    "key": "c5-diagram-30",
+    "caption": "自由双球初态明确给出径向与横向速度的符号",
+    "old_start": 54629,
+    "sha256": "610c9e2ed8bcc11592f2a0ce4791fd39a77073370eadab55d46c8a52588cfbb8"
+  },
+  {
+    "key": "c5-diagram-31",
+    "caption": "循环积分包含轮的转动贡献，不等于系统线动量",
+    "old_start": 56338,
+    "sha256": "8db7ba13d2bd2915a4d96b84e750bf50d09270b0e9e8d97290296affc8769047"
+  },
+  {
+    "key": "c5-diagram-32",
+    "caption": "变分改变整条函数曲线，固定两端",
+    "old_start": 57323,
+    "sha256": "9efe203c1e0b318536d46421099bca0999aabea2928dab576b9108fa9d7f6af4"
+  },
+  {
+    "key": "c5-diagram-33",
+    "caption": "最速降线先快速取得速度，并非最短路程",
+    "old_start": 58862,
+    "sha256": "16f5f95bf6f6474ab4cafcbbe8e20983019a663292496e7a29a764351cc98345"
+  },
+  {
+    "key": "c5-diagram-34",
+    "caption": "悬链线的尺度由链长决定，张力随高度改变",
+    "old_start": 60437,
+    "sha256": "5ee99476f3e8250828f868499c3b0e0d64a2ef40046800a200a6135205bdfcec"
+  },
+  {
+    "key": "c5-diagram-35",
+    "caption": "旋转曲面的驻值解与稳定最小解须区分",
+    "old_start": 62583,
+    "sha256": "af095670d8e799386d5cd43d9b0b9148272920e60b94e61ef816f5d5974df966"
+  },
+  {
+    "key": "c5-diagram-36",
+    "caption": "折射角由界面两侧的驻传播时间条件联系",
+    "old_start": 65068,
+    "sha256": "46edc5919844f1b2145bda0e23d8b53162486232d34e265d9d620e8ab07632f4"
+  },
+  {
+    "key": "c5-diagram-37",
+    "caption": "定点轴对称刚体的欧拉角分别描述进动、章动和自转",
+    "old_start": 67926,
+    "sha256": "ae8bb138d0c4841fe18b8fd979a63b3f3a709b1aa64292ded1f472b67f41b502"
+  },
+  {
+    "key": "c5-diagram-38",
+    "caption": "球心绕圆柱轴运动，同时球绕自身质心转动",
+    "old_start": 72555,
+    "sha256": "f2b298b7d53a060e07f1e97691f2dc1951899088af914fe785a97989238178fc"
+  },
+  {
+    "key": "c5-diagram-39",
+    "caption": "半圆柱摇摆时质心偏移，瞬时接触点仍位于圆心正下方",
+    "old_start": 73594,
+    "sha256": "59d827390c1506bba2e801d33049c86035b35796e72684c29bd60e7e2fa98211"
+  },
+  {
+    "key": "c5-diagram-40",
+    "caption": "两种模式对中间弹簧的伸长贡献不同",
+    "old_start": 79286,
+    "sha256": "f224b895bef0a35864af42a46e2372b59d6a91c2b415474a6d220730cd01069d"
+  },
+  {
+    "key": "c5-diagram-41",
+    "caption": "两侧各一根弹簧时回复力为 $-2kx$",
+    "old_start": 81991,
+    "sha256": "8885d70d244d92a9c6e97de02cbb3c4facaadd590b51e5317ccb042386ee5639"
+  },
+  {
+    "key": "c5-diagram-42",
+    "caption": "等长双单摆的两种小振动模式；示意偏角作了放大，振幅比为 $\\pm\\sqrt2$",
+    "old_start": 84216,
+    "sha256": "e1840313043217f84ff18a3f5fa0f90ba8e24d99b0892f783b852dd15ce6bd46"
+  },
+  {
+    "key": "c5-diagram-43",
+    "caption": "拉格朗日与哈密顿描述包含相同初始状态信息",
+    "old_start": 86588,
+    "sha256": "408eb398e684bfe87344b9ba14a6260feace9a454170d48698e01b6d961ba650"
+  },
+  {
+    "key": "c5-diagram-44",
+    "caption": "角动量分量的泊松代数给出旋转结构",
+    "old_start": 95129,
+    "sha256": "49ab888f46cc13bcb37d164ec639da8007d1b89829b781ef4a182341c23fa4e2"
+  },
+  {
+    "key": "c5-diagram-45",
+    "caption": "作用量标记轨道，角变量为归一化相位；$A=\\sqrt{2P/(m\\omega)}$，$B=\\sqrt{2m\\omega P}$",
+    "old_start": 104741,
+    "sha256": "a8174a7dbb0afb8b658ddaccc10bfce716938de95fd99f102050b15ce6a467d9"
+  },
+  {
+    "key": "c5-diagram-46",
+    "caption": "三维抛物坐标的子午截面，两族曲线正交",
+    "old_start": 111801,
+    "sha256": "9cc76e90e6de715fbfba04a7f6fe835203e4b4ef1cf91e852256e3ddd2fd436a"
+  },
+  {
+    "key": "c5-diagram-47",
+    "caption": "长旋转椭球坐标的两族子午曲线共用焦点",
+    "old_start": 114172,
+    "sha256": "de1ab467219a8dc1ded3e234dfc86208403f2b39b4789e0bff373940d52d39f8"
+  },
+  {
+    "key": "c5-diagram-48",
+    "caption": "相点轨迹区分保守运动与耗散运动",
+    "old_start": 118566,
+    "sha256": "169833bc62b456aa4174d9d870017da335f73c822ab8a420111e043db4d46975"
+  },
+  {
+    "key": "c5-diagram-49",
+    "caption": "非对称双阱还包含远处势垒与逃逸区域",
+    "old_start": 119948,
+    "sha256": "6da47a39a0d0323ee54daee4dd75df9f50ced9de503a63456d40ca9d65ce7aca"
+  },
+  {
+    "key": "c5-diagram-50",
+    "caption": "全势的相轨迹：实线分离曲线区分周期运动与散射运动（$m=1$）",
+    "old_start": 121667,
+    "sha256": "4ceb67a5e6be2a15f6a647578113da24024434ae6fd4a92347ec882529d1f744"
+  },
+  {
+    "key": "c5-diagram-51",
+    "caption": "刘维尔定理保相体积，不要求形状固定",
+    "old_start": 172135,
+    "sha256": "c10694a38ef11d7a5b528a3c2038b008abf56cd189df13b0305f7e3124a37edb"
+  },
+  {
+    "key": "c5-diagram-52",
+    "caption": "库仑束缚能级及不同末态的跃迁系列",
+    "old_start": 180001,
+    "sha256": "f16e3b5883712e209f59688835a069b7462b350f356eac868ebf3eb4550d4068"
+  },
+  {
+    "key": "c5-diagram-53",
+    "caption": "六个氢光谱系列的谱线位置；横轴取波长的对数，线高不表示强度",
+    "old_start": 180658,
+    "sha256": "d091c05d1d54f9c78e0832470a06263f8046440d380481cbf3f04180c36b85e6"
+  },
+  {
+    "key": "c5-diagram-54",
+    "caption": "路径积分中的相位叠加与经典驻值路径",
+    "old_start": 194862,
+    "sha256": "de14dfaf979444d7603e7e0a3dd2af8b940b5c708ae7c0679d505421a098ba28"
+  },
+  {
+    "key": "c5-diagram-55",
+    "caption": "两条通道的振幅干涉，屏上强度包含交叉项",
+    "old_start": 195706,
+    "sha256": "d24a60016f0785cd99a54ed2cccc7ba1eabc061a979c6ff6fb7bb66a7906d82e"
+  },
+  {
+    "key": "c5-diagram-56",
+    "caption": "离散位移坐标在连续极限中变为场",
+    "old_start": 196816,
+    "sha256": "a3be63b7d6e6c72d2e547a142ca0d1a4b971c3d23883b7f6b08273b5a725c559"
+  },
+  {
+    "key": "c5-diagram-57",
+    "caption": "定端弦的模式对应不同节点数与离散频率",
+    "old_start": 199416,
+    "sha256": "f2c7c729b840e727f6e84f46ee252295d83b425d8c4b2a908f5fbc399e5fa8af"
+  },
+  {
+    "key": "c5-diagram-58",
+    "caption": "小振幅鼓膜的位移与面积变化示意；图中竖向变形作了放大",
+    "old_start": 202687,
+    "sha256": "2c607725071f26e94f9d342736c6fb963ce07ae9a029774f08964c141626f898"
+  },
+  {
+    "key": "c5-diagram-59",
+    "caption": "麦克斯韦方程中的定义恒等式与动力学方程",
+    "old_start": 206978,
+    "sha256": "687243c4684097248f7e6dbacf68d8d0bf7f46448be3fa2eadb42af6d36487f0"
+  },
+  {
+    "key": "c5-diagram-60",
+    "caption": "局部守恒与区域内总量守恒的边界条件",
+    "old_start": 213782,
+    "sha256": "1781fe67b61c3350b5a3f56ac3f581085896dafd5c721363aea12cb37c2fe590"
+  },
+  {
+    "key": "c5-diagram-61",
+    "caption": "球面自由运动的测地线是大圆",
+    "old_start": 222072,
+    "sha256": "c39b494fc83d786b3b3a39d883c0f4a3ef1237349935d83859eb33ea70744f8c"
+  },
+  {
+    "key": "c5-diagram-62",
+    "caption": "同一力学模型可沿受力、广义坐标与正则状态三条路径组织",
+    "old_start": 225777,
+    "sha256": "205c04e7561e98e6ad62f0443709bb72d747bbb6263e17600a2b7fba1e837b6a"
+  }
+]

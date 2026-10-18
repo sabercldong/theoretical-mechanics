@@ -1,0 +1,2 @@
+% 振幅包络和快速变化相位有不同空间尺度；波长远短于包络尺度时，量子势才可相对经典动能忽略。
+\begin{tikzpicture}\draw[->](-.2,0)--(5.3,0)node[right]{$x$};\draw[guide,domain=0:5,samples=80]plot(\x,{exp(-.16*(\x-2.5)^2)});\draw[guide,domain=0:5,samples=80]plot(\x,{-exp(-.16*(\x-2.5)^2)});\draw[ink,domain=0:5,samples=180]plot(\x,{exp(-.16*(\x-2.5)^2)*cos(600*\x)});\draw[<->](2,1.35)--(2.6,1.35)node[midway,above]{$\lambda$};\draw[<->](.4,-1.4)--(4.6,-1.4)node[midway,below]{$l_A$};\end{tikzpicture}

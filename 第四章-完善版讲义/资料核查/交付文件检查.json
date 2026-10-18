@@ -1,0 +1,20 @@
+{
+  "pdf_pages": 85,
+  "body_start_pdf_page": 6,
+  "examples": 47,
+  "exercises": 24,
+  "original_assets": 47,
+  "model_figures": 47,
+  "numbered_figures": 94,
+  "source_slides": 75,
+  "source_decks": 2,
+  "warnings": [],
+  "pdf_resource_deduplication": "合并完全相同的对象与数据流；不下采样、不有损编码；独立源码编译另逐页验证文字与像素。",
+  "compiled_pdf_bytes": 105136040,
+  "delivery_pdf_bytes": 6303470,
+  "pdf_sha256": "39b057b903b80c341ba18487a6beadf866a358040410136190ec3ebb05b041dd",
+  "tex_sha256": "f9d4b9a1012f25631f9c0f0156f79d58cdb58322796785c572f346a5446c7d77",
+  "archive_sha256": "58246a8e14b2e6e9f94500f50c9be1335f1c180fe29b8de89919c5384efdc748",
+  "final_visual_review": "passed",
+  "portable_compile": "passed"
+}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=.7cm,y=.7cm]
+\draw[thick](-.5,0)--(10,0);
+\draw[guide,thick]plot[domain=0:8,samples=70](\x,{.125*\x*(8-\x)});
+\draw[ink,thick]plot[domain=4:9.2,samples=60](\x,{2-2*((\x-4)/5.2)^2});
+\draw[muted,thick]plot[domain=4:6.5,samples=60](\x,{2-2*((\x-4)/2.5)^2});
+\fill[ink](4,2)circle(3pt);\node[above]at(4,2.55){水平分离};
+\node[below]at(6.5,0){$x_2$};\node[below]at(8,0){$R_0$};\node[below]at(9.2,0){$x_1$};
+\draw[force](4,2)--(5.1,2)node[right]{$u$};
+\end{tikzpicture}

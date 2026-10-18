@@ -1,0 +1,2 @@
+% 位置、动量分布的宽度是同一量子态的二阶矩；它们通过态向量内积和不可交换算符联系。
+\begin{tikzpicture}\draw[->](-2.5,0)--(2.5,0)node[right]{$x$};\draw[ink,domain=-2:2,samples=60]plot(\x,{1.8*exp(-2*\x*\x)});\draw[<->](-.7,.4)--(.7,.4)node[midway,above]{$\Delta x$};\begin{scope}[xshift=6cm]\draw[->](-2.5,0)--(2.5,0)node[right]{$p$};\draw[ink,domain=-2:2,samples=60]plot(\x,{1.1*exp(-.5*\x*\x)});\draw[<->](-1,.3)--(1,.3)node[midway,above]{$\Delta p$};\end{scope}\end{tikzpicture}

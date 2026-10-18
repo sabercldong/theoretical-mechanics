@@ -1,0 +1,4 @@
+% 两条光路在界面交点连接，两个角都从法线量起；改变交点会同时改变两段长度，不能各自独立取极值。
+\begin{tikzpicture}
+\draw[thick](-3,0)--(3,0);\draw[guide](0,-2.2)--(0,2.2);\draw[ink,thick,->](-1.8,2)--(0,0);\draw[ink,thick,->](0,0)--(1,-2);\node[left]at(-1.8,2){$A$};\node[right]at(1,-2){$B$};\node at(-2.5,1){$n_1$};\node at(-2.5,-1){$n_2$};\draw(0,.65)arc(90:131.9872:.65);\draw(0,-.65)arc(-90:-63.4349:.65);\node at(-.38,.95){$\theta_1$};\node at(.28,-.95){$\theta_2$};
+\end{tikzpicture}

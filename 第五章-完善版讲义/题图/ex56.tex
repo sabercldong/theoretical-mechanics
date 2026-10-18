@@ -1,0 +1,2 @@
+% 经典相点和任意小椭圆都可作为状态；相椭圆面积随振幅缩小，而基本泊松括号不随轨道大小改变。
+\begin{tikzpicture}\draw[->](-2.5,0)--(2.8,0)node[right]{$q$};\draw[->](0,-1.9)--(0,2.1)node[above]{$p$};\foreach\a in {.4,.9,1.6}{\pgfmathsetmacro\b{.7*\a}\draw[ink](0,0)ellipse(\a cm and \b cm);}\fill(0,0)circle(2pt);\node[right]at(1.1,1.2){$A\downarrow$};\draw[force](1.2,.9)--(.5,.4);\node at(0,-2.3){$\{q,p\}=1$ 对每条轨道成立};\end{tikzpicture}

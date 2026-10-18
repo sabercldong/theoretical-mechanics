@@ -1,0 +1,613 @@
+{
+  "reviewer": "revision_training_qa_c",
+  "status": "passed",
+  "scope": "原图总览 05–07：实际原图清单第 49–79 项，共 31 图；只读资产，不改图。",
+  "manifest": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/资料核查/实际原图清单.json",
+  "manifest_sha256": "1bffe738a06f515d639f03a99888c6e7f5a823c56d017bfc332c0e3cbbf871a9",
+  "atlases_actual_viewed": [
+    "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/原图总览-05.png",
+    "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/原图总览-06.png",
+    "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/原图总览-07.png"
+  ],
+  "source_reports": [
+    "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/资料核查/原图视觉复核-b.json",
+    "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/资料核查/原图视觉复核-c.json"
+  ],
+  "individual_pngs_actual_viewed": [
+    "c5-8-p003-potential-local",
+    "c5-8-p020-fixed-endpoint-paths",
+    "c5-3-p020-action-variation",
+    "c5-3-p013-fermat-refraction",
+    "c5-8-p018-hydrogen-spectrum",
+    "c5-8-p018-hydrogen-series",
+    "c5-9-p005-string",
+    "c5-9-p008-string-modes",
+    "c5-4-p018-slider-pendulum-velocity",
+    "c5-4-p024-double-pendulum"
+  ],
+  "summary": {
+    "assets_reviewed": 31,
+    "passed": 31,
+    "minor_crop_issues": 0,
+    "severe_issues": 0,
+    "soft_mask_or_missing_text_issues": 0,
+    "resolved_crop_issues": 2
+  },
+  "issues": [
+    {
+      "id": "c5-8-p003-next-panel-edge",
+      "key": "c5-8-p003-potential-local",
+      "severity": "minor",
+      "category": "adjacent_figure_fragment",
+      "observed": "PNG 最底部（约 y=507–510 px）带入下一张相图的上框线及刻度；这条横线在势能图 x 标签下方，不是势能图坐标轴。",
+      "source_crop_current_pt": [
+        330.2,
+        2.5,
+        701.7,
+        206.8
+      ],
+      "repair_suggestion": "将源裁框下界收至约 205 pt，保留上图 x 标签；更合适的是使用源报告 preferred_group_crop_rect_pt 把势能和相图成组保留，接续虚线对应，避免把下图框线截成残片。",
+      "proposed_source_crop_rect_pt": [
+        330.2,
+        2.5,
+        701.7,
+        205
+      ],
+      "needs_recheck_after_repair": false,
+      "status": "fixed_and_visually_rechecked",
+      "verification": "实际刷新修复后 PNG；残片/外框竖线已去除，原图所有坐标、标号与箭头完整。"
+    },
+    {
+      "id": "c5-8-p020-partial-outer-frame",
+      "key": "c5-8-p020-fixed-endpoint-paths",
+      "severity": "minor",
+      "category": "partial_outer_frame",
+      "observed": "图像 x≈4 px 与 x≈543 px 有两条图外长竖线，属于原图外框的左右残边；当前裁框已排除了外框顶、底边，因此形成悬空残线。内部 q–t 坐标轴在 x≈64 px 处，与左残线是不同对象。",
+      "source_crop_current_pt": [
+        496,
+        38,
+        715,
+        227
+      ],
+      "repair_suggestion": "从源重新裁到约 x=503…711 pt，去掉左右外框残边；保留内部 q(t)、t、A、B、t₁、t₂ 和横轴箭头。不要直接擦线或重绘。",
+      "proposed_source_crop_rect_pt": [
+        503,
+        38,
+        711,
+        227
+      ],
+      "needs_recheck_after_repair": false,
+      "status": "fixed_and_visually_rechecked",
+      "verification": "实际刷新修复后 PNG；残片/外框竖线已去除，原图所有坐标、标号与箭头完整。"
+    }
+  ],
+  "assets": [
+    {
+      "key": "c5-3-p011-particle-refraction",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p011-particle-refraction.png",
+      "size_px": [
+        848,
+        535
+      ],
+      "png_sha256": "c3f79a30bda6d17cf7e4221c341d33bff0ebd36bb8182586e0376db93b0a9d02",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p011-particle-refraction.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-3-p013-fermat-refraction",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p013-fermat-refraction.png",
+      "size_px": [
+        445,
+        395
+      ],
+      "png_sha256": "4ff7c1b63f566a031f5c2a88173f75295f41f494b63a2950b46386282021d7ad",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p013-fermat-refraction.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-3-p014-action-path-family",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p014-action-path-family.png",
+      "size_px": [
+        498,
+        460
+      ],
+      "png_sha256": "63faec4de56c184f9ecffaa6206e92a7fd79f6063c7fdfdf85d0803714521836",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p014-action-path-family.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-3-p020-action-variation",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p020-action-variation.png",
+      "size_px": [
+        560,
+        545
+      ],
+      "png_sha256": "77c899ad48e5270ce25d8862eefec1fc06ee247b2893e769c480d500e76e00cd",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p020-action-variation.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-4-p005-ball-inner-roll",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p005-ball-inner-roll.png",
+      "size_px": [
+        440,
+        438
+      ],
+      "png_sha256": "857ad30a71810ce36e9e197595b1cc2a75390a2ba266f8068496a45b3733f718",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p005-ball-inner-roll.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-4-p006-half-cylinder",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p006-half-cylinder.png",
+      "size_px": [
+        463,
+        308
+      ],
+      "png_sha256": "7e1c8e5ab18a3ec92d4be0871e60a178a8a14fd5649c0f3b41dea1ec86192263",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p006-half-cylinder.pdf",
+      "status": "passed_after_full_reextraction",
+      "inspection": "updated_png_actually_viewed_after_confirmed_79_success",
+      "issues": [],
+      "pdf_sha256": "9267826062f92fa69fcc2fb3d35638ee67b557021ffce010870623e885ededc6",
+      "latest_verification": "右上红色 d=4r/(3π) 已完整恢复；r、d、O、C、θ、A 及接触几何清晰，无孤立 r 残片、缺字或软蒙版黑底。"
+    },
+    {
+      "key": "c5-4-p009-three-springs",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p009-three-springs.png",
+      "size_px": [
+        767,
+        222
+      ],
+      "png_sha256": "3ac167d93931a475d7a1fc86a6ab292db4dbc4af25e4052dc51d57a8781a1bca",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p009-three-springs.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-4-p011-three-spring-animation",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p011-three-spring-animation.png",
+      "size_px": [
+        1125,
+        75
+      ],
+      "png_sha256": "bab28d772fca5b1b647d2cf181793a64764929bd73c70722b5f985d69ae9f83b",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p011-three-spring-animation.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-4-p018-slider-pendulum-velocity",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p018-slider-pendulum-velocity.png",
+      "size_px": [
+        810,
+        489
+      ],
+      "png_sha256": "6377b1bfd9ae747091ef9b65fe094c12a3c8eef5f90dba09768c44e5bfd21c7b",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p018-slider-pendulum-velocity.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-4-p020-slider-release-frame",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p020-slider-release-frame.png",
+      "size_px": [
+        1125,
+        788
+      ],
+      "png_sha256": "02bff7c46927549e66a392c683f3fad7f127b3b037ac5bbe487506822a2b6e08",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p020-slider-release-frame.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-4-p021-double-spring-pendulum",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p021-double-spring-pendulum.png",
+      "size_px": [
+        421,
+        372
+      ],
+      "png_sha256": "f4fd1a7711f198cf70504e268fc2da4851918c11afac947d01dadff59839bbf5",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p021-double-spring-pendulum.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-4-p024-double-pendulum",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p024-double-pendulum.png",
+      "size_px": [
+        329,
+        461
+      ],
+      "png_sha256": "99ced738aefa05c3a1c754ddd7557dc99798bd7ddbbf42422fd53890d216fc02",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p024-double-pendulum.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-5-p015-rotating-tube",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-5-p015-rotating-tube.png",
+      "size_px": [
+        813,
+        290
+      ],
+      "png_sha256": "8a12fee155ebfc5ef3c66855b22b2a7454466380d3890c44bd1bfd238faccabc",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-5-p015-rotating-tube.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-7-p016-parabolic-grid",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-7-p016-parabolic-grid.png",
+      "size_px": [
+        460,
+        240
+      ],
+      "png_sha256": "3257ed9546f5d814328e957a41227330b9640be2f31cbf6947264dfcebdfdf11",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-7-p016-parabolic-grid.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-7-p016-prolate-grid",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-7-p016-prolate-grid.png",
+      "size_px": [
+        561,
+        561
+      ],
+      "png_sha256": "56b55799cb468a8e258c83b465c43604097bdce25382cef69769404d42bea969",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-7-p016-prolate-grid.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p002-oscillator-phase",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p002-oscillator-phase.png",
+      "size_px": [
+        1275,
+        590
+      ],
+      "png_sha256": "4c38f10cf47e81302c26655d8a4cb6d1d4a79e13e2b1d139a9f8836bd8e026f5",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p002-oscillator-phase.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p003-potential-local",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p003-potential-local.png",
+      "size_px": [
+        929,
+        511
+      ],
+      "png_sha256": "c4af0afc281955fd6f2d629bbf0c1a639eb3725b64d2b78286295a6127aee3ce",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p003-potential-local.pdf",
+      "status": "passed_after_full_reextraction",
+      "inspection": "updated_png_actually_viewed_after_confirmed_79_success",
+      "issues": [],
+      "prior_png_sha256": "80e3d04f4cab3feb0dd46198b040bc640b6812216579688771ca4a04853b06ee",
+      "resolved_issues": [
+        "c5-8-p003-next-panel-edge"
+      ],
+      "pdf_sha256": "a18da0a8fcf0ee735ab7bc222b686b166a0c64652b8f140d328718f0cdfb39fe",
+      "latest_verification": "势能图下方下一相图的横框线及刻度残片已去除，V(x)、x 标签和势能曲线完整。蓝色虚线是原有上下图位置对应线，未作为多余轴框误删。"
+    },
+    {
+      "key": "c5-8-p003-phase-local",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p003-phase-local.png",
+      "size_px": [
+        925,
+        760
+      ],
+      "png_sha256": "96cae23b73e618d7b77dc8942707ccc22d33458b37ab39d50fa65362e059af1b",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p003-phase-local.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p008-sector",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-sector.png",
+      "size_px": [
+        270,
+        274
+      ],
+      "png_sha256": "4ed9b66c69c27bcb20381854616fca0186e23209601d68e60ebfb287cff0992f",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-sector.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p008-annular-sector",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-annular-sector.png",
+      "size_px": [
+        270,
+        274
+      ],
+      "png_sha256": "8cfff0e66a5e09f44e1a981835ceddabd98b9fb3823686931823b4b26df64182",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-annular-sector.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p008-disk",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-disk.png",
+      "size_px": [
+        270,
+        274
+      ],
+      "png_sha256": "a3e0a267cff1744e46b2afaea6eb9ca4c1ffb8003f983da6568d93fdf0f05d55",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-disk.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p008-material-domain",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-material-domain.png",
+      "size_px": [
+        446,
+        225
+      ],
+      "png_sha256": "602d585d4c4ba18685aa55b7db4a5cc9d149294b443f791d2f61c98a2f93eafb",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p008-material-domain.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p010-ducks-video-still",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p010-ducks-video-still.png",
+      "size_px": [
+        815,
+        432
+      ],
+      "png_sha256": "c425d18c5ce24a5edee033c5ef5a0fb9bde6ea703aeb719b607044d15c6c8af0",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p010-ducks-video-still.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p013-theory-domains",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p013-theory-domains.png",
+      "size_px": [
+        1320,
+        393
+      ],
+      "png_sha256": "a4b05798b6d895d49132e78c543b5a0704e883b9fc656f3d8395639efc354f83",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p013-theory-domains.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p018-hydrogen-spectrum",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p018-hydrogen-spectrum.png",
+      "size_px": [
+        960,
+        384
+      ],
+      "png_sha256": "d1a2bfbb5aeefd41d693e9d7379b3ca921d6eae718ad62f9ea01078fe424c9db",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p018-hydrogen-spectrum.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p018-hydrogen-series",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p018-hydrogen-series.png",
+      "size_px": [
+        960,
+        720
+      ],
+      "png_sha256": "abe61e297e76c514edb0bb8150a20a48fbd0f07e0166bd171f7e0254eed8ed76",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p018-hydrogen-series.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-8-p020-fixed-endpoint-paths",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p020-fixed-endpoint-paths.png",
+      "size_px": [
+        548,
+        473
+      ],
+      "png_sha256": "2c38c317f42e3a5edccfe85b2583273d842899ec3604a58e646d8910cd5ec14d",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p020-fixed-endpoint-paths.pdf",
+      "status": "passed_after_full_reextraction",
+      "inspection": "updated_png_actually_viewed_after_confirmed_79_success",
+      "issues": [],
+      "prior_png_sha256": "ed85d3868f72b029bfe079c5e92d58c17c831664ec2c83d7502281dc944b961b",
+      "resolved_issues": [
+        "c5-8-p020-partial-outer-frame"
+      ],
+      "pdf_sha256": "9e11a620c3f07da3248b5fe4daeecfb16b93c4699d73fadfe8f0231f1fbcd3ff",
+      "latest_verification": "左右悬空外框已去除，内部 q(t)、t 坐标轴、A/B、t₁/t₂、路径及箭头完整。"
+    },
+    {
+      "key": "c5-8-p021-double-slit",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p021-double-slit.png",
+      "size_px": [
+        1778,
+        943
+      ],
+      "png_sha256": "4dfe3bd3a9cb9d000b8350e95173247930e6d2dcd030ddcd14f1fbc7dfe98e64",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p021-double-slit.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-9-p005-string",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-9-p005-string.png",
+      "size_px": [
+        171,
+        1297
+      ],
+      "png_sha256": "669b70d3c282fae3b00fe7395515d6bfddcecf7efeef383702d3c5e357b5f23a",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-9-p005-string.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-9-p008-string-modes",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-9-p008-string-modes.png",
+      "size_px": [
+        760,
+        963
+      ],
+      "png_sha256": "0f1c9aa69daba6f5781e8b955f91904bbdac70b6c0ed65472a777201cd135ee5",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-9-p008-string-modes.pdf",
+      "status": "passed",
+      "inspection": "atlas_and_individual_png",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    },
+    {
+      "key": "c5-9-p009-drum",
+      "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-9-p009-drum.png",
+      "size_px": [
+        186,
+        98
+      ],
+      "png_sha256": "f6ada0af518f84ecabd35c002e481bcc676c66ad8da8a42d9f5e3b01d6b4bf74",
+      "pdf_asset": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-9-p009-drum.pdf",
+      "status": "passed",
+      "inspection": "atlas",
+      "issues": [],
+      "hash_note": "初次 31 图终校时读取的哈希；本次按限定范围只复看上述 3 图。"
+    }
+  ],
+  "clarifications": [
+    {
+      "key": "c5-3-p013-fermat-refraction",
+      "finding": "绿色细外框完整围住源图，不是邻接文字残片；θ₁、θ₂、d₁、d₂、n₁、n₂、A/B 完整。"
+    },
+    {
+      "key": "c5-8-p013-theory-domains",
+      "finding": "上方“20世纪初物理学的两次革命”原课件本就换行于“革/命”；文字完整，未误判为裁切缺字。"
+    },
+    {
+      "key": "c5-8-p018-hydrogen-spectrum / c5-8-p018-hydrogen-series",
+      "finding": "已放大检查白底、谱线、n 值、波长和系列英文标签，SMask 正常，无裸 RGB 黑底或黑字丢失。"
+    },
+    {
+      "key": "c5-8-p008-disk",
+      "finding": "圆盘在 x=2 图框处相切是源图几何，不能误判为资产裁掉圆盘；底部 x 标签现完整。"
+    },
+    {
+      "key": "c5-9-p005-string / c5-9-p008-string-modes",
+      "finding": "A/B、u_n(x,t)、n=1…10 均完整。高窄弦图仍为源几何比例，不通过放大宽度或重绘改变。"
+    }
+  ],
+  "conclusion": "本轮指定 3 图在 79 图全部成功重提后实际复看通过：两处裁框残片已消除，半圆柱 d=4r/(3π) 完整恢复。结合此前 31 图初检，无本范围未解决问题。未改资产或主稿。",
+  "repair_recheck": {
+    "keys": [
+      "c5-8-p003-potential-local",
+      "c5-8-p020-fixed-endpoint-paths"
+    ],
+    "actually_viewed_updated_png": true,
+    "changed_png_keys_since_initial_report": [
+      "c5-4-p006-half-cylinder",
+      "c5-8-p003-potential-local",
+      "c5-8-p020-fixed-endpoint-paths"
+    ]
+  },
+  "pipeline_note": "主代理已明确通知 79 图全部重提成功；本代理按限定范围实际复看 3 个关注资产。",
+  "pending_full_run_observation": {
+    "key": "c5-4-p006-half-cylinder",
+    "observed_png_sha256": "7e1c8e5ab18a3ec92d4be0871e60a178a8a14fd5649c0f3b41dea1ec86192263",
+    "observation": "中间版本右上原 d=4r/(3π) 只剩孤立 r；已通知主代理，待完整提取成功后复验。",
+    "classification": "intermediate_pipeline_output_not_final_defect",
+    "status": "resolved_in_successful_full_run",
+    "final_key": "c5-4-p006-half-cylinder",
+    "resolution": "已实际确认公式完整恢复，最终 PNG 哈希见 final_full_extraction_recheck。"
+  },
+  "final_full_extraction_recheck": {
+    "date": "2026-10-18",
+    "scope": "只复看主代理指定的 3 个 PNG，不扩展资产范围",
+    "assets": [
+      {
+        "key": "c5-8-p003-potential-local",
+        "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p003-potential-local.png",
+        "png_sha256": "c4af0afc281955fd6f2d629bbf0c1a639eb3725b64d2b78286295a6127aee3ce",
+        "pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p003-potential-local.pdf",
+        "pdf_sha256": "a18da0a8fcf0ee735ab7bc222b686b166a0c64652b8f140d328718f0cdfb39fe",
+        "actual_updated_png_viewed": true,
+        "status": "passed",
+        "finding": "势能图下方下一相图的横框线及刻度残片已去除，V(x)、x 标签和势能曲线完整。蓝色虚线是原有上下图位置对应线，未作为多余轴框误删。"
+      },
+      {
+        "key": "c5-8-p020-fixed-endpoint-paths",
+        "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p020-fixed-endpoint-paths.png",
+        "png_sha256": "2c38c317f42e3a5edccfe85b2583273d842899ec3604a58e646d8910cd5ec14d",
+        "pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-8-p020-fixed-endpoint-paths.pdf",
+        "pdf_sha256": "9e11a620c3f07da3248b5fe4daeecfb16b93c4699d73fadfe8f0231f1fbcd3ff",
+        "actual_updated_png_viewed": true,
+        "status": "passed",
+        "finding": "左右悬空外框已去除，内部 q(t)、t 坐标轴、A/B、t₁/t₂、路径及箭头完整。"
+      },
+      {
+        "key": "c5-4-p006-half-cylinder",
+        "png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p006-half-cylinder.png",
+        "png_sha256": "7e1c8e5ab18a3ec92d4be0871e60a178a8a14fd5649c0f3b41dea1ec86192263",
+        "pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-4-p006-half-cylinder.pdf",
+        "pdf_sha256": "9267826062f92fa69fcc2fb3d35638ee67b557021ffce010870623e885ededc6",
+        "actual_updated_png_viewed": true,
+        "status": "passed",
+        "finding": "右上红色 d=4r/(3π) 已完整恢复；r、d、O、C、θ、A 及接触几何清晰，无孤立 r 残片、缺字或软蒙版黑底。"
+      }
+    ],
+    "status": "passed"
+  }
+}

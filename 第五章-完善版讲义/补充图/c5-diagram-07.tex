@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+\draw[->](-.2,0)--(4.8,0)node[right]{$q$};\draw[->](0,-.2)--(0,2.7)node[above]{$V$};
+\draw[ink,thick,domain=.2:4.4,samples=60]plot(\x,{.08*(\x-1)^2*(\x-4)^2+.25});
+\fill(1,.25)circle(3pt);\fill(2.5,.655)circle(3pt);\fill(4,.25)circle(3pt);\node[below]at(1,0){极小};\node[above]at(2.5,.7){极大};\node[below]at(4,0){极小};
+\node[align=left,anchor=west]at(5.5,1.7){一阶：$V'=0$\\二阶：检查 $V''$\\驻值不必是极小值};
+\end{tikzpicture}

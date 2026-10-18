@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=.85cm,y=.048cm,every node/.style={font=\small}]
+\draw[ink](0,-90)rectangle(7,90);
+\foreach \lat/\txt in {90/极地高压,60/副极地低压,30/副热带高压,0/赤道低压,-30/副热带高压,-60/副极地低压,-90/极地高压}{
+\fill[soft](0,{max(-90,\lat-4)})rectangle(7,{min(90,\lat+4)});
+\draw[guide](0,\lat)--(7,\lat);\node[left]at(-.1,\lat){$\lat^\circ$};\node[fill=white,inner sep=1pt]at(3.5,\lat){\txt};}
+\foreach \lat/\dx/\dy/\txt in {75/-.8/-9/极地东风,45/.8/9/西风,15/-.8/-9/东北信风,-15/-.8/9/东南信风,-45/.8/-9/西风,-75/-.8/9/极地东风}{
+\foreach \xx in {1.6,3.5,5.4}{\draw[force](\xx,\lat)--++(\dx,\dy);}
+\node[anchor=west]at(7.35,\lat){\txt};}
+\node[anchor=west]at(7.35,0){辐合、上升};
+\node[above]at(3.5,99){近地面：上北、右东，箭头表示吹向};
+\end{tikzpicture}

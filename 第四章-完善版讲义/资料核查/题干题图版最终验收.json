@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "pdf_pages": 100,
+  "examples_with_complete_statements_and_diagrams": 47,
+  "training_questions_with_complete_statements_and_diagrams": 24,
+  "body_originals_retained": 47,
+  "explanatory_figures_retained": 47,
+  "dark_callouts_removed": true,
+  "formula_boxes_removed": true,
+  "image_source_appendix_removed": true,
+  "visual_overview": "全部100页已渲染并查看9张全册概览；另查看例题、训练题、首页和末页的清晰单页样张。",
+  "question_figure_review": "全部71图已核对，发现的问题均修复并重新渲染查看。",
+  "compile_warnings": [],
+  "portable_compilation": "独立解包编译通过；100页文字与0.8x渲染像素逐页完全一致。",
+  "pdf_sha256": "ca8fd6fc310aed38babe3308d8f2075f213c2981142236f5f9eccba87817668d",
+  "archive_sha256": "60ab48e67566b24a1b076aec1adcd943ec0780433a8e5ce696f9ac69db5128f7"
+}

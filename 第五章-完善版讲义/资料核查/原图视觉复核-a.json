@@ -1,0 +1,3377 @@
+{
+  "status": "complete",
+  "scope": {
+    "decks": [
+      "c5-1",
+      "c5-2",
+      "c5-3"
+    ],
+    "pages": 105,
+    "pdf_page_size_pt": [
+      720,
+      540
+    ]
+  },
+  "method": "全部105页联系图逐页目视总览，所有所选图均打开单页PNG放大核对；文本核查结合旧主稿和既有审核。",
+  "figures": [
+    {
+      "key": "c5-1-p002-fixed-pivot",
+      "deck": "c5-1",
+      "page": 2,
+      "crop_rect_pt": [
+        82,
+        287,
+        292,
+        445
+      ],
+      "caption": "固定悬点的等长单摆",
+      "lecture_location": "5.1.1",
+      "lecture_subsection": "约束方程及其分类",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/002.png",
+      "notes": "黑底原图；保留图内原有标记。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p002-moving-pivot",
+      "deck": "c5-1",
+      "page": 2,
+      "crop_rect_pt": [
+        428,
+        287,
+        631,
+        439
+      ],
+      "caption": "悬点以水平速度移动的等长单摆",
+      "lecture_location": "5.1.1",
+      "lecture_subsection": "约束方程及其分类",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/002.png",
+      "notes": "图上O旁水平箭头表示悬点平移。源页下方收绳式x²+y²=(l−v0t)²与图不符，勿裁入或照抄；主稿已用移动悬点方程。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p003-rigid-pendulum",
+      "deck": "c5-1",
+      "page": 3,
+      "crop_rect_pt": [
+        146,
+        153,
+        267,
+        305
+      ],
+      "caption": "刚杆对摆球施加双面长度约束",
+      "lecture_location": "5.1.1",
+      "lecture_subsection": "约束方程及其分类",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/003.png",
+      "notes": "仅裁图内实际杆、点和坐标轴，整体排除右下灰色图块边界，避开边界上的无关F文字；所有O、φ、M、x、y与箭头保留。",
+      "duplicate_source_pages": [
+        "c5-1:p4:left"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p003-string-pendulum",
+      "deck": "c5-1",
+      "page": 3,
+      "crop_rect_pt": [
+        447,
+        153,
+        573,
+        303
+      ],
+      "caption": "轻绳的张紧与松弛对应单面约束",
+      "lecture_location": "5.1.1",
+      "lecture_subsection": "约束方程及其分类",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/003.png",
+      "notes": "仅裁摆、点和坐标轴，排除左侧正文红括号与灰色图块边界。图内y向下，φ为竖直角。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p004-straight-rolling-disk",
+      "deck": "c5-1",
+      "page": 4,
+      "crop_rect_pt": [
+        405,
+        150,
+        607,
+        307
+      ],
+      "caption": "圆盘沿直线纯滚动：向右平移与顺时针自转",
+      "lecture_location": "5.1.2",
+      "lecture_subsection": "完整约束与可积的运动约束",
+      "example_numbers": [
+        1,
+        2
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/004.png",
+      "notes": "图上半径r、中心A，对应正文R和圆心；ω箭头顺时针。小节5.1.4的圆盘坐标例可交叉引用本图，避免重复简单圆盘图。",
+      "duplicate_source_pages": [
+        "c5-1:p7:top-left"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "沿曲线滚动的竖直圆盘",
+        "单摆、球面质点、滚动圆盘与定点刚体"
+      ]
+    },
+    {
+      "key": "c5-1-p007-helix",
+      "deck": "c5-1",
+      "page": 7,
+      "crop_rect_pt": [
+        242,
+        22,
+        461,
+        184
+      ],
+      "caption": "约束在给定螺旋线上的质点",
+      "lecture_location": "5.1.4",
+      "lecture_subsection": "常见系统的坐标选择",
+      "example_numbers": [
+        3
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/007.png",
+      "notes": "只裁蓝色螺旋线和黑点；下方广义坐标公式框从约y=186开始，不纳入。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "螺旋线、平面定点运动与三维定点运动"
+      ]
+    },
+    {
+      "key": "c5-1-p007-planar-fixed-body",
+      "deck": "c5-1",
+      "page": 7,
+      "crop_rect_pt": [
+        547,
+        10,
+        660,
+        185
+      ],
+      "caption": "刚体在竖直平面内绕固定点O摆动；图中θ对应正文γ",
+      "lecture_location": "5.1.4",
+      "lecture_subsection": "常见系统的坐标选择",
+      "example_numbers": [
+        3
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/007.png",
+      "notes": "完整保留O、G、θ、mg。不是一般三维定点刚体；一自由度来自平面限制。 图中G为质心，原页旁列x_C、y_C时的C同样指质心。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "螺旋线、平面定点运动与三维定点运动"
+      ]
+    },
+    {
+      "key": "c5-1-p007-euler-angles",
+      "deck": "c5-1",
+      "page": 7,
+      "crop_rect_pt": [
+        17,
+        241,
+        243,
+        434
+      ],
+      "caption": "定点刚体的三个欧拉角；角弧表示夹角，正方向按正文约定",
+      "lecture_location": "5.1.4",
+      "lecture_subsection": "常见系统的坐标选择",
+      "example_numbers": [
+        2
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/007.png",
+      "notes": "原图含空间轴ξ、η、ζ和本体轴x、y、z及节点N。可在5.8.6重陀螺节复用/引用。θ、φ、ψ正向需以正文欧拉角约定为准，不机械沿用低清角弧箭头。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "单摆、球面质点、滚动圆盘与定点刚体"
+      ]
+    },
+    {
+      "key": "c5-1-p007-elastic-atwood",
+      "deck": "c5-1",
+      "page": 7,
+      "crop_rect_pt": [
+        305,
+        265,
+        400,
+        444
+      ],
+      "caption": "绳轮连接的三球系统；滑轮旁的a为滑轮半径，正文a为弹性绳自然长",
+      "lecture_location": "5.6.6",
+      "lecture_subsection": "带弹性绳的三球系统",
+      "example_numbers": [
+        4,
+        29
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/007.png",
+      "notes": "同图可在5.1.4坐标选择先引。保留T、T′及原图水印。图内滑轮a与正文a不同物理量，必须在图题说明。c5-2p21右缘图被页面裁切，选本页完整版本。",
+      "duplicate_source_pages": [
+        "c5-2:p21"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "弹性阿特伍德系统与受驱动圆环",
+        "绳轮系统的简谐运动和两段张力"
+      ]
+    },
+    {
+      "key": "c5-1-p007-driven-hoop",
+      "deck": "c5-1",
+      "page": 7,
+      "crop_rect_pt": [
+        521,
+        288,
+        687,
+        435
+      ],
+      "caption": "圆环绕环上固定点O匀速转动，滑珠位置用相对角θ描述",
+      "lecture_location": "5.1.4",
+      "lecture_subsection": "常见系统的坐标选择",
+      "example_numbers": [
+        4
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/007.png",
+      "notes": "简单几何版，C为圆心、M为滑珠、a为环半径。5.6.5另选c5-2p20带随动坐标的图，用于速度分解。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "弹性阿特伍德系统与受驱动圆环"
+      ]
+    },
+    {
+      "key": "c5-1-p008-linkage-virtual",
+      "deck": "c5-1",
+      "page": 8,
+      "crop_rect_pt": [
+        63,
+        260,
+        296,
+        375
+      ],
+      "caption": "曲柄连杆机构的两组许可虚位移",
+      "lecture_location": "5.2.1",
+      "lecture_subsection": "等时虚位移与实位移",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/008.png",
+      "notes": "红、黑两组箭头表示正反虚变动，保留全部δφ、δr_A、δr_B。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p008-surface-virtual",
+      "deck": "c5-1",
+      "page": 8,
+      "crop_rect_pt": [
+        423,
+        224,
+        593,
+        389
+      ],
+      "caption": "约束曲面上不同方向的切向虚位移",
+      "lecture_location": "5.2.1",
+      "lecture_subsection": "等时虚位移与实位移",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/008.png",
+      "notes": "原图右下灰色L形边框属于图块边界，可完整保留；不得混入下方实位移文字。正文的变分符号有Symbol空框，图内δ正常。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p010-smooth-support",
+      "deck": "c5-1",
+      "page": 10,
+      "crop_rect_pt": [
+        83,
+        132,
+        227,
+        237
+      ],
+      "caption": "光滑支承面的法向力与切向虚位移",
+      "lecture_location": "5.2.4",
+      "lecture_subsection": "理想约束及其适用范围",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/010.png",
+      "notes": "不纳入下面的纯公式。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p010-ideal-hinge",
+      "deck": "c5-1",
+      "page": 10,
+      "crop_rect_pt": [
+        407,
+        113,
+        606,
+        246
+      ],
+      "caption": "内铰链两侧反力相反，铰点虚位移相同",
+      "lecture_location": "5.2.4",
+      "lecture_subsection": "理想约束及其适用范围",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/010.png",
+      "notes": "保留N、N′、δr和两杆。下方被源版面截断的公式不纳入。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p010-rolling-contact",
+      "deck": "c5-1",
+      "page": 10,
+      "crop_rect_pt": [
+        428,
+        310,
+        611,
+        517
+      ],
+      "caption": "纯滚动接触点C处的法向力N与静摩擦F",
+      "lecture_location": "5.2.4",
+      "lecture_subsection": "理想约束及其适用范围",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/010.png",
+      "notes": "图中F为静摩擦，对应正文f；必须保留接触点C、水平F与竖直N。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-1-p014-pendulum-displacement",
+      "deck": "c5-1",
+      "page": 14,
+      "crop_rect_pt": [
+        612,
+        22,
+        704,
+        145
+      ],
+      "caption": "单摆的位矢与摆角θ",
+      "lecture_location": "5.2.2",
+      "lecture_subsection": "虚位移的直接计算",
+      "example_numbers": [
+        5
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/014.png",
+      "notes": "只裁右上摆图，保留θ与矢量r；与下方θ虚位移公式配合。",
+      "duplicate_source_pages": [
+        "c5-1:p30"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "单摆与球面上的虚位移"
+      ]
+    },
+    {
+      "key": "c5-1-p016-wall-edge-rod",
+      "deck": "c5-1",
+      "page": 16,
+      "crop_rect_pt": [
+        418,
+        46,
+        702,
+        258
+      ],
+      "caption": "均匀杆AB跨过光滑棱边O，C为中点，杆长2l",
+      "lecture_location": "5.2.8",
+      "lecture_subsection": "墙与棱边支承杆的平衡及稳定性",
+      "example_numbers": [
+        9
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/016.png",
+      "notes": "保留左墙、d、θ、O、y轴、重力mg，不能镜像；源V缺mg，正文已恢复。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "均匀杆跨过固定光滑棱边"
+      ]
+    },
+    {
+      "key": "c5-1-p018-two-rods-static",
+      "deck": "c5-1",
+      "page": 18,
+      "crop_rect_pt": [
+        421,
+        49,
+        667,
+        214
+      ],
+      "caption": "两铰接杆的静力构形：α=π/2−θ₁，β=π/2−θ₂；图中x向下、y向右",
+      "lecture_location": "5.2.6",
+      "lecture_subsection": "两根均匀铰接杆的静力平衡",
+      "example_numbers": [
+        7
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/018.png",
+      "notes": "图角α、β从水平量，正文θ_i从竖直向下量；图x=−正文Y，图y=正文X。p17无重力的同构形不重复抽取。源最终tan关系互为倒数的错误勿恢复。",
+      "duplicate_source_pages": [
+        "c5-1:p17"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "端点水平力作用下的两杆"
+      ]
+    },
+    {
+      "key": "c5-1-p020-paraboloid-plane",
+      "deck": "c5-1",
+      "page": 20,
+      "crop_rect_pt": [
+        524,
+        50,
+        720,
+        226
+      ],
+      "caption": "抛物面与平面相交形成的受约束曲线",
+      "lecture_location": "5.3.1",
+      "lecture_subsection": "受约束的极值问题",
+      "example_numbers": [
+        12
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/020.png",
+      "notes": "只提右上三维图，不含数学题正文与求导式。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "抛物面上与平面、圆柱相交的极值"
+      ]
+    },
+    {
+      "key": "c5-1-p020-paraboloid-cylinder",
+      "deck": "c5-1",
+      "page": 20,
+      "crop_rect_pt": [
+        547,
+        260,
+        715,
+        493
+      ],
+      "caption": "抛物面与偏置圆柱面的交线",
+      "lecture_location": "5.3.1",
+      "lecture_subsection": "受约束的极值问题",
+      "example_numbers": [
+        12
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/020.png",
+      "notes": "保留完整圆柱下端，图下方不是章节页脚。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "抛物面上与平面、圆柱相交的极值"
+      ]
+    },
+    {
+      "key": "c5-1-p024-three-rods-released",
+      "deck": "c5-1",
+      "page": 24,
+      "crop_rect_pt": [
+        489,
+        56,
+        711,
+        224
+      ],
+      "caption": "解除横杆DE后的三杆结构；N向外为假定正向，负值表示横杆受拉",
+      "lecture_location": "5.3.3",
+      "lecture_subsection": "三杆结构的三种求解方式",
+      "example_numbers": [
+        13
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/024.png",
+      "notes": "选择角度、轴标及边界完整的p24。p22为同构形无θ，p23右边x轴靠页边，去重。源图是解除DE后的受力图，题干完整横杆模型仍需TikZ图，勿把N箭头当实体杆。",
+      "duplicate_source_pages": [
+        "c5-1:p22",
+        "c5-1:p23"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "顶角为六十度的对称轻杆结构"
+      ]
+    },
+    {
+      "key": "c5-1-p028-steering-disk",
+      "deck": "c5-1",
+      "page": 28,
+      "crop_rect_pt": [
+        425,
+        174,
+        668,
+        354
+      ],
+      "caption": "自由转向圆盘的航向θ与平面轨迹；图中半径a对应正文R",
+      "lecture_location": "5.1.2",
+      "lecture_subsection": "完整约束与可积的运动约束",
+      "example_numbers": [
+        1
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/028.png",
+      "notes": "图内速度v、圆心(x,y)、航向θ。源自转角ψ对应正文φ（未直接标在图上）。母版绿色曲线穿入图右上，建议仅对白母版工作副本裁切；图形线条不可重绘或抹除。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "沿曲线滚动的竖直圆盘"
+      ]
+    },
+    {
+      "key": "c5-1-p029-three-point-linkage",
+      "deck": "c5-1",
+      "page": 29,
+      "crop_rect_pt": [
+        419,
+        106,
+        705,
+        284
+      ],
+      "caption": "机构A、B、C三点的虚位移，OC=CB=a，OA=l",
+      "lecture_location": "5.2.7",
+      "lecture_subsection": "三个机构点的虚位移与坐标奇点",
+      "example_numbers": [
+        8
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/029.png",
+      "notes": "完整保留δr_A、δr_B、δr_C、δφ及P辅助投影点；P不是另一个物体。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "等长连杆机构的三个位置映射"
+      ]
+    },
+    {
+      "key": "c5-1-p031-right-angle-rod",
+      "deck": "c5-1",
+      "page": 31,
+      "crop_rect_pt": [
+        501,
+        45,
+        714,
+        292
+      ],
+      "caption": "直角折杆与两段质心D、E；图中θ₀为平衡角",
+      "lecture_location": "5.2.9",
+      "lecture_subsection": "直角折杆的平衡角",
+      "example_numbers": [
+        10
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/031.png",
+      "notes": "底端虚线稍超出绿色框，裁至292保留，不可只按框截断。源最终分母a²+3ab错误，正文a²+2ab正确。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "两段同线密度杆构成的刚性折杆"
+      ]
+    },
+    {
+      "key": "c5-1-p032-crank-forces",
+      "deck": "c5-1",
+      "page": 32,
+      "crop_rect_pt": [
+        211,
+        340,
+        494,
+        451
+      ],
+      "caption": "曲柄连杆的几何尺寸与主动力方向",
+      "lecture_location": "5.2.10",
+      "lecture_subsection": "曲柄连杆的力关系",
+      "example_numbers": [
+        11
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/032.png",
+      "notes": "此图含r、d；p33解图省略d但新增虚位移，二者各有信息，均保留。F_A沿OA的正横向，F_B向右。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "一个自由度的曲柄连杆机构"
+      ]
+    },
+    {
+      "key": "c5-1-p033-crank-virtual",
+      "deck": "c5-1",
+      "page": 33,
+      "crop_rect_pt": [
+        412,
+        13,
+        703,
+        177
+      ],
+      "caption": "曲柄连杆的许可虚转动与两作用点虚位移",
+      "lecture_location": "5.2.10",
+      "lecture_subsection": "曲柄连杆的力关系",
+      "example_numbers": [
+        11
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/033.png",
+      "notes": "黄色底是图块本身，保留。δr_A与F_A同向，δr_B与F_B相反。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "一个自由度的曲柄连杆机构"
+      ]
+    },
+    {
+      "key": "c5-1-p034-two-balls-tensions",
+      "deck": "c5-1",
+      "page": 34,
+      "crop_rect_pt": [
+        466,
+        10,
+        713,
+        179
+      ],
+      "caption": "串接两球的水平外力与两段绳张力",
+      "lecture_location": "5.3.4",
+      "lecture_subsection": "两球两绳的反力与平衡角",
+      "example_numbers": [
+        14
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-1.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-1/034.png",
+      "notes": "取白框内实际图形区域，不保留大块空白。上球的T₂箭头向右下、下球的T₂向左上，为同绳相反两力；不是两种张力。图示上绳右倾只对应F₂>F₁。",
+      "duplicate_source_pages": [
+        "c5-1:p35",
+        "c5-1:p36"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "串接两球，各受水平力"
+      ]
+    },
+    {
+      "key": "c5-2-p010-top-string-cylinder",
+      "deck": "c5-2",
+      "page": 10,
+      "crop_rect_pt": [
+        440,
+        5,
+        720,
+        163
+      ],
+      "caption": "圆柱顶部B绕绳牵引悬挂物，A为接触点；图中r对应正文R",
+      "lecture_location": "5.5.1",
+      "lecture_subsection": "滚动圆柱与悬挂物",
+      "example_numbers": [
+        16
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/010.png",
+      "notes": "图块顶部原题号(3.20)与B相邻，保留完整题号比裁断B更妥当；外部母版背景宜白化工作副本。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "圆柱顶端绕绳牵引"
+      ]
+    },
+    {
+      "key": "c5-2-p011-two-pulleys",
+      "deck": "c5-2",
+      "page": 11,
+      "crop_rect_pt": [
+        546,
+        82,
+        701,
+        198
+      ],
+      "caption": "轻绳联结两个定轴圆盘与悬挂物",
+      "lecture_location": "5.5.2",
+      "lecture_subsection": "两个有惯量的定轴滑轮",
+      "example_numbers": [
+        17
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/011.png",
+      "notes": "源图没有尺寸质量标签，正文/TikZ须给大轮2r、4m，小轮r、m，吊物m，均匀圆盘及静止释放条件。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "轻绳带动大小圆盘"
+      ]
+    },
+    {
+      "key": "c5-2-p012-spring-pendulum",
+      "deck": "c5-2",
+      "page": 12,
+      "crop_rect_pt": [
+        541,
+        9,
+        698,
+        192
+      ],
+      "caption": "弹簧摆的瞬时长度r与竖直角θ",
+      "lecture_location": "5.5.3",
+      "lecture_subsection": "弹簧摆的径向与横向方程",
+      "example_numbers": [
+        18
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/012.png",
+      "notes": "r是总长，a才是自然长，不能当作伸长。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "自然长不为零的二维弹簧摆"
+      ]
+    },
+    {
+      "key": "c5-2-p019-rotating-tube",
+      "deck": "c5-2",
+      "page": 19,
+      "crop_rect_pt": [
+        394,
+        111,
+        720,
+        237
+      ],
+      "caption": "匀速转动的水平直管，初始球距轴a，管长2a",
+      "lecture_location": "5.6.3",
+      "lecture_subsection": "匀速转动直管中的小球",
+      "example_numbers": [
+        25
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/019.png",
+      "notes": "源嵌入图bbox右界728.93超出720页边，x标签被裁；建议从PDF xref469连同soft mask取完整原位图，保持标签。不是扩绘。正文一般管长l，图为l=2a特例。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "embedded_image_preferred",
+      "embedded_image_xref": 469,
+      "embedded_image_bbox_pt": [
+        394.016,
+        111.203,
+        728.929,
+        235.899
+      ],
+      "example_titles": [
+        "水平直管的离管速度与时间"
+      ]
+    },
+    {
+      "key": "c5-2-p020-hoop-moving-axes",
+      "deck": "c5-2",
+      "page": 20,
+      "crop_rect_pt": [
+        445,
+        0,
+        699,
+        180
+      ],
+      "caption": "转动圆环上的滑珠与固定、随环坐标轴",
+      "lecture_location": "5.6.5",
+      "lecture_subsection": "转动圆环上的滑珠",
+      "example_numbers": [
+        28,
+        39
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/020.png",
+      "notes": "M是滑珠而非质量符号，C为圆心；x′轴沿OC，ωt为转管方位，θ为CM相对OC正向延长线角。蓝色随动轴与顶端虚线属前景，勿随母版去除；源顶部有辅助延长线出页，实际环、点、轴标签完整。c5-3p19相同几何但作用量推导内容仍须保留。",
+      "duplicate_source_pages": [
+        "c5-3:p19"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "水平圆环绕环上一点旋转",
+        "不先写拉格朗日方程而求圆环滑珠运动"
+      ]
+    },
+    {
+      "key": "c5-2-p025-tube-two-balls",
+      "deck": "c5-2",
+      "page": 25,
+      "crop_rect_pt": [
+        467,
+        9,
+        705,
+        100
+      ],
+      "caption": "旋转水平管中两球的有符号轴向坐标x₁、x₂",
+      "lecture_location": "5.6.4",
+      "lecture_subsection": "竖直转管与水平双球",
+      "example_numbers": [
+        27
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/025.png",
+      "notes": "坐标可跨O为负，间距为x₂−x₁，不能误作两半径之和。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "旋转水平管中的弹性绳双球"
+      ]
+    },
+    {
+      "key": "c5-2-p026-ball-on-sphere",
+      "deck": "c5-2",
+      "page": 26,
+      "crop_rect_pt": [
+        582,
+        0,
+        705,
+        146
+      ],
+      "caption": "小球在大球外侧滚动，质心运动半径为R+r",
+      "lecture_location": "5.5.4",
+      "lecture_subsection": "球在大球外侧滚动至首次滑动",
+      "example_numbers": [
+        19
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/026.png",
+      "notes": "θ由顶部铅垂半径量起；最上端虚线在源页边截断，不丢半径标签和小球几何。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "接触反力与静摩擦失效角"
+      ]
+    },
+    {
+      "key": "c5-2-p027-table-hole-balls",
+      "deck": "c5-2",
+      "page": 27,
+      "crop_rect_pt": [
+        519,
+        2,
+        720,
+        157
+      ],
+      "caption": "穿孔轻绳联结桌上球A与悬球B",
+      "lecture_location": "5.6.7",
+      "lecture_subsection": "桌面与悬球：两个第一积分的组合",
+      "example_numbers": [
+        30
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/027.png",
+      "notes": "保留r、θ、v、T、mg；两球等质量条件由正文明确，图内T表示等大绳张力。",
+      "duplicate_source_pages": [
+        "c5-2:p28"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "轻绳穿过桌面光滑小孔"
+      ]
+    },
+    {
+      "key": "c5-2-p029-free-two-balls",
+      "deck": "c5-2",
+      "page": 29,
+      "crop_rect_pt": [
+        615,
+        2,
+        720,
+        174
+      ],
+      "caption": "自由双球的初态：上球速度与水平成45°",
+      "lecture_location": "5.6.8",
+      "lecture_subsection": "自由双球与滚轮小车的循环积分",
+      "example_numbers": [
+        31
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/029.png",
+      "notes": "这是水平面俯视图，纵向连线不代表重力方向；源图无m、a、v字样，正文与TikZ明确。右缘仅截辅助水平虚线延长，不截45°。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "自由平面双球的最大伸长"
+      ]
+    },
+    {
+      "key": "c5-2-p031-planet-gear",
+      "deck": "c5-2",
+      "page": 31,
+      "crop_rect_pt": [
+        449,
+        77,
+        678,
+        283
+      ],
+      "caption": "外啮合行星轮的公转与自转；M对应正文力偶矩𝓜，ω_A对应绝对自转ω₂",
+      "lecture_location": "5.5.7",
+      "lecture_subsection": "行星齿轮机构",
+      "example_numbers": [
+        22
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/031.png",
+      "notes": "φ与正文φ相同；原题文字AB应为OA。轮心A，曲柄长R+r。相对曲柄自转Rφ̇/r不能替代图ω_A的绝对量。",
+      "duplicate_source_pages": [
+        "c5-2:p30"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "固定轮外侧纯滚动的行星轮"
+      ]
+    },
+    {
+      "key": "c5-2-p035-two-rods-dynamic",
+      "deck": "c5-2",
+      "page": 35,
+      "crop_rect_pt": [
+        420,
+        269,
+        663,
+        438
+      ],
+      "caption": "铰接双杆的竖直角θ₁、θ₂；图中x向下、y向右",
+      "lecture_location": "5.5.8",
+      "lecture_subsection": "两根均匀杆的动能与广义力",
+      "example_numbers": [
+        23
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/035.png",
+      "notes": "源x=−正文Y，源y=正文X；θ_i与正文竖直角一致，不能与c5-1p18的水平α、β混用。",
+      "duplicate_source_pages": [
+        "c5-2:p32"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "把铰接双杆的静力问题推广到动力学"
+      ]
+    },
+    {
+      "key": "c5-2-p036-slider-pendulum",
+      "deck": "c5-2",
+      "page": 36,
+      "crop_rect_pt": [
+        348,
+        186,
+        674,
+        383
+      ],
+      "caption": "弹簧滑块与单摆的速度合成",
+      "lecture_location": "5.5.5",
+      "lecture_subsection": "滑块与单摆：保留全部非线性项",
+      "example_numbers": [
+        20
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/036.png",
+      "notes": "图中x、φ与正文相同。保留红色φ、lφ̇、ẋ、v_B及虚线平行四边形；题干末尾φ显示空框，图内φ正常。",
+      "duplicate_source_pages": [
+        "c5-2:p37"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "水平弹簧滑块悬挂单摆"
+      ]
+    },
+    {
+      "key": "c5-2-p041-wedge-apparatus",
+      "deck": "c5-2",
+      "page": 41,
+      "crop_rect_pt": [
+        173,
+        246,
+        349,
+        402
+      ],
+      "caption": "水平可动斜面上的弹簧物块",
+      "lecture_location": "5.5.6",
+      "lecture_subsection": "移动斜面上的弹簧物块",
+      "example_numbers": [
+        21
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/041.png",
+      "notes": "保留图内原署名高云峰；轮子只表示水平无阻运动，不计轮惯量。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "斜面与弹簧的二自由度运动"
+      ]
+    },
+    {
+      "key": "c5-2-p042-wedge-velocities",
+      "deck": "c5-2",
+      "page": 42,
+      "crop_rect_pt": [
+        449,
+        136,
+        673,
+        300
+      ],
+      "caption": "移动斜面的速度分解；图中水平x与正文x反向，x_r=−s",
+      "lecture_location": "5.5.6",
+      "lecture_subsection": "移动斜面上的弹簧物块",
+      "example_numbers": [
+        21
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/042.png",
+      "notes": "图中两坐标均向左（x_r下坡）；正文x向右、s上坡，故同时反号。l+δ_s是平衡弹簧总长，δ_s=mg sinα/k。原图已有被截成“高”的署名残片，不主动擦除。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "斜面与弹簧的二自由度运动"
+      ]
+    },
+    {
+      "key": "c5-2-p043-rolling-cart",
+      "deck": "c5-2",
+      "page": 43,
+      "crop_rect_pt": [
+        207,
+        316,
+        521,
+        479
+      ],
+      "caption": "两轮纯滚小车与弹簧物块；图中x_r对应正文相对坐标u",
+      "lecture_location": "5.6.8",
+      "lecture_subsection": "自由双球与滚轮小车的循环积分",
+      "example_numbers": [
+        32
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/043.png",
+      "notes": "图中k、m₁、m₂、x_r等字形横向拉伸为源版状态，无空框但较差；勿重绘替代。保留两轮m₁和地面x，caption说明坐标。上右“动能加势能”气泡不属装置，排除。 矩形总裁框右上角会碰到黄气泡左下小块，可用crop_exclude_rects_pt仅排除该无关区域（该区无装置线条/文字），或在工作副本隐藏气泡；不得误删图的x_r、m₂。",
+      "duplicate_source_pages": [
+        "c5-2:p44"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "crop_exclude_rects_pt": [
+        [
+          465,
+          316,
+          521,
+          358
+        ]
+      ],
+      "example_titles": [
+        "滚轮小车上弹簧物块的第一积分"
+      ]
+    },
+    {
+      "key": "c5-3-p003-brachistochrone-paths",
+      "deck": "c5-3",
+      "page": 3,
+      "crop_rect_pt": [
+        23,
+        140,
+        286,
+        348
+      ],
+      "caption": "固定端点A、B之间的候选下降轨道",
+      "lecture_location": "5.7.4",
+      "lecture_subsection": "最速降线：完整参数解",
+      "example_numbers": [
+        33
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/003.png",
+      "notes": "保留x向右、y向下、水平距离d与下落高度h。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "从静止出发的重力下降轨道"
+      ]
+    },
+    {
+      "key": "c5-3-p004-function-variation",
+      "deck": "c5-3",
+      "page": 4,
+      "crop_rect_pt": [
+        426,
+        339,
+        670,
+        524
+      ],
+      "caption": "固定端点函数y(x)及其变分y+δy",
+      "lecture_location": "5.7.1",
+      "lecture_subsection": "函数、泛函与变分",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/004.png",
+      "notes": "底部y箭头及B贴近母版页脚，必须用白母版工作副本裁切或保留全部标签；不可裁掉B/轴箭头。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-3-p009-surface-boundaries",
+      "deck": "c5-3",
+      "page": 9,
+      "crop_rect_pt": [
+        467,
+        2,
+        716,
+        191
+      ],
+      "caption": "绕x轴旋转的曲面：两端半径a、b与轴向间距d",
+      "lecture_location": "5.7.6",
+      "lecture_subsection": "最小旋转曲面、测地线与等周问题",
+      "example_numbers": [
+        35
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/009.png",
+      "notes": "x竖直、y水平仅是图的页面朝向；数学坐标x为轴向、y为半径，与正文一致。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "两圆环之间的最小旋转曲面"
+      ]
+    },
+    {
+      "key": "c5-3-p010-cycloid-family",
+      "deck": "c5-3",
+      "page": 10,
+      "crop_rect_pt": [
+        0,
+        111,
+        243,
+        226
+      ],
+      "caption": "摆线族；图中纵坐标向上为正，与正文下落坐标互为相反数",
+      "lecture_location": "5.7.4",
+      "lecture_subsection": "最速降线：完整参数解",
+      "example_numbers": [
+        33
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/010.png",
+      "notes": "保留完整刻度、坐标轴标签；纯公式框不纳入。重复p7的图选择本页避免页脚。",
+      "duplicate_source_pages": [
+        "c5-3:p7"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "从静止出发的重力下降轨道"
+      ]
+    },
+    {
+      "key": "c5-3-p010-catenary-family",
+      "deck": "c5-3",
+      "page": 10,
+      "crop_rect_pt": [
+        247,
+        87,
+        447,
+        287
+      ],
+      "caption": "同一对端点间不同参数的悬链线族",
+      "lecture_location": "5.7.5",
+      "lecture_subsection": "悬链线：固定链长的约束不可漏",
+      "example_numbers": [
+        34
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/010.png",
+      "notes": "不同曲线具有不同长度；定长条件决定参数，不可说这些曲线同时满足同一链长。",
+      "duplicate_source_pages": [
+        "c5-3:p8"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "均匀柔链的静力形状"
+      ]
+    },
+    {
+      "key": "c5-3-p010-revolution-mesh",
+      "deck": "c5-3",
+      "page": 10,
+      "crop_rect_pt": [
+        467,
+        88,
+        715,
+        282
+      ],
+      "caption": "旋转曲面的网格示意；母线方程以正文悬链线为准",
+      "lecture_location": "5.7.6",
+      "lecture_subsection": "最小旋转曲面、测地线与等周问题",
+      "example_numbers": [
+        35
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/010.png",
+      "notes": "仅图像网格，不把源页下方错误sinh公式纳入。该金色图用于几何示意，不据此宣称冷却塔必为最小曲面。p9同图右边出页，选本页完整版本。",
+      "duplicate_source_pages": [
+        "c5-3:p9:lower"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "两圆环之间的最小旋转曲面"
+      ]
+    },
+    {
+      "key": "c5-3-p011-particle-refraction",
+      "deck": "c5-3",
+      "page": 11,
+      "crop_rect_pt": [
+        3,
+        285,
+        342,
+        499
+      ],
+      "caption": "势阶微粒模型中的动量分解（历史模型示意，不能作为介质光速的经典解释）",
+      "lecture_location": "5.7.7",
+      "lecture_subsection": "费马原理、反射与折射",
+      "example_numbers": [
+        37
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/011.png",
+      "notes": "必须邻接正文历史模型局限说明；图中0、−V₀及向下力箭头属于经典微粒模型，不是实际介质光子机械势。Snell物理推导以正文波矢匹配/费马原理为准。",
+      "duplicate_source_pages": [],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "平面界面上的折射定律"
+      ]
+    },
+    {
+      "key": "c5-3-p013-fermat-refraction",
+      "deck": "c5-3",
+      "page": 13,
+      "crop_rect_pt": [
+        530,
+        191,
+        708,
+        349
+      ],
+      "caption": "两介质界面上的折射光路；图中d₁、d₂对应正文h₁、h₂",
+      "lecture_location": "5.7.7",
+      "lecture_subsection": "费马原理、反射与折射",
+      "example_numbers": [
+        37
+      ],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/013.png",
+      "notes": "θ₁、θ₂均从法线量，n₁、n₂介质标记完整；绿色细框为原图前景边框，保留。",
+      "duplicate_source_pages": [
+        "c5-3:p12"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": [
+        "平面界面上的折射定律"
+      ]
+    },
+    {
+      "key": "c5-3-p014-action-path-family",
+      "deck": "c5-3",
+      "page": 14,
+      "crop_rect_pt": [
+        517,
+        130,
+        716,
+        314
+      ],
+      "caption": "固定两个时空端点的候选构形路径",
+      "lecture_location": "5.8.1",
+      "lecture_subsection": "作用量与固定端点变分",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/014.png",
+      "notes": "保留q(t)、t、t_A、t_B；真实路径为驻作用量，不可仅凭粗蓝线宣称全局最小。",
+      "duplicate_source_pages": [
+        "c5-3:p2"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    },
+    {
+      "key": "c5-3-p020-action-variation",
+      "deck": "c5-3",
+      "page": 20,
+      "crop_rect_pt": [
+        489,
+        11,
+        713,
+        229
+      ],
+      "caption": "固定端点的等时路径变分q与q+δq",
+      "lecture_location": "5.8.1",
+      "lecture_subsection": "作用量与固定端点变分",
+      "example_numbers": [],
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-3.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-3/020.png",
+      "notes": "选p20清晰无叠污版。p16图中有无关小公式叠污，p15/p17同构图不再提。保留整个黑框。",
+      "duplicate_source_pages": [
+        "c5-3:p15",
+        "c5-3:p16",
+        "c5-3:p17"
+      ],
+      "visual_status": "inspected_full_slide",
+      "extraction_method": "pdf_crop",
+      "example_titles": []
+    }
+  ],
+  "source_hashes": {
+    "c5-1": "23bf5a591b7b4a312ea5b249cfdca96822d098039ade991bfe6e4a2e8e608a84",
+    "c5-2": "96ba96f9901b94c19c2b1f1639b01de24a629b76a33f4ff16174d0fa51b0bb44",
+    "c5-3": "88ba26d2b70fea9c9fb46615560381ff29b23d155704f6d83947dd40e968aaf8"
+  },
+  "pages": [
+    {
+      "deck": "c5-1",
+      "page": 1,
+      "topic": "全章内容结构",
+      "lecture_location": "5.1.1",
+      "lecture_subsection": "约束方程及其分类",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "目录，实质章节后文均保留"
+    },
+    {
+      "deck": "c5-1",
+      "page": 2,
+      "topic": "约束、定常与非定常",
+      "lecture_location": "5.1.1",
+      "lecture_subsection": "约束方程及其分类",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [
+        "c5-1-p002-fixed-pivot",
+        "c5-1-p002-moving-pivot"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 3,
+      "topic": "双面与单面约束",
+      "lecture_location": "5.1.1",
+      "lecture_subsection": "约束方程及其分类",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [
+        "c5-1-p003-rigid-pendulum",
+        "c5-1-p003-string-pendulum"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 4,
+      "topic": "几何/运动约束与直线滚动",
+      "lecture_location": "5.1.2",
+      "lecture_subsection": "完整约束与可积的运动约束",
+      "example_numbers": [
+        1,
+        2
+      ],
+      "example_titles": [
+        "沿曲线滚动的竖直圆盘",
+        "单摆、球面质点、滚动圆盘与定点刚体"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p004-straight-rolling-disk"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 5,
+      "topic": "完整与非完整约束",
+      "lecture_location": "5.1.2",
+      "lecture_subsection": "完整约束与可积的运动约束",
+      "example_numbers": [
+        1
+      ],
+      "example_titles": [
+        "沿曲线滚动的竖直圆盘"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 6,
+      "topic": "自由度与广义坐标",
+      "lecture_location": "5.1.3",
+      "lecture_subsection": "自由度计数与独立性",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 7,
+      "topic": "六种系统的坐标选择",
+      "lecture_location": "5.1.4",
+      "lecture_subsection": "常见系统的坐标选择",
+      "example_numbers": [
+        2,
+        3,
+        4
+      ],
+      "example_titles": [
+        "单摆、球面质点、滚动圆盘与定点刚体",
+        "螺旋线、平面定点运动与三维定点运动",
+        "弹性阿特伍德系统与受驱动圆环"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p007-helix",
+        "c5-1-p007-planar-fixed-body",
+        "c5-1-p007-euler-angles",
+        "c5-1-p007-elastic-atwood",
+        "c5-1-p007-driven-hoop"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "简单直线圆盘复用p4；弹性绳装置主放5.6.6"
+    },
+    {
+      "deck": "c5-1",
+      "page": 8,
+      "topic": "虚位移与实位移",
+      "lecture_location": "5.2.1",
+      "lecture_subsection": "等时虚位移与实位移",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [
+        "c5-1-p008-linkage-virtual",
+        "c5-1-p008-surface-virtual"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 9,
+      "topic": "虚功与理想约束",
+      "lecture_location": "5.2.3",
+      "lecture_subsection": "虚功与广义力",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 10,
+      "topic": "理想约束五例",
+      "lecture_location": "5.2.4",
+      "lecture_subsection": "理想约束及其适用范围",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [
+        "c5-1-p010-smooth-support",
+        "c5-1-p010-ideal-hinge",
+        "c5-1-p010-rolling-contact"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 11,
+      "topic": "虚功原理两种形式",
+      "lecture_location": "5.2.5",
+      "lecture_subsection": "虚功原理的证明与势能判据",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 12,
+      "topic": "广义力及势能",
+      "lecture_location": "5.2.3",
+      "lecture_subsection": "虚功与广义力",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 13,
+      "topic": "虚功解题步骤",
+      "lecture_location": "5.2.5",
+      "lecture_subsection": "虚功原理的证明与势能判据",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 14,
+      "topic": "单摆与球面虚位移",
+      "lecture_location": "5.2.2",
+      "lecture_subsection": "虚位移的直接计算",
+      "example_numbers": [
+        5
+      ],
+      "example_titles": [
+        "单摆与球面上的虚位移"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p014-pendulum-displacement"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "球面三分量展开在旧稿被基矢式压缩，建议恢复"
+    },
+    {
+      "deck": "c5-1",
+      "page": 15,
+      "topic": "虚功原理三类应用",
+      "lecture_location": "5.2.5",
+      "lecture_subsection": "虚功原理的证明与势能判据",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 16,
+      "topic": "墙与棱边支承均匀杆",
+      "lecture_location": "5.2.8",
+      "lecture_subsection": "墙与棱边支承杆的平衡及稳定性",
+      "example_numbers": [
+        9
+      ],
+      "example_titles": [
+        "均匀杆跨过固定光滑棱边"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p016-wall-edge-rod"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 17,
+      "topic": "双杆静力题干",
+      "lecture_location": "5.2.6",
+      "lecture_subsection": "两根均匀铰接杆的静力平衡",
+      "example_numbers": [
+        7
+      ],
+      "example_titles": [
+        "端点水平力作用下的两杆"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "图与p18重复，选带两重力箭头p18"
+    },
+    {
+      "deck": "c5-1",
+      "page": 18,
+      "topic": "双杆平衡推导",
+      "lecture_location": "5.2.6",
+      "lecture_subsection": "两根均匀铰接杆的静力平衡",
+      "example_numbers": [
+        7
+      ],
+      "example_titles": [
+        "端点水平力作用下的两杆"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p018-two-rods-static"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 19,
+      "topic": "约束极值与乘数法",
+      "lecture_location": "5.3.1",
+      "lecture_subsection": "受约束的极值问题",
+      "example_numbers": [
+        12
+      ],
+      "example_titles": [
+        "抛物面上与平面、圆柱相交的极值"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 20,
+      "topic": "抛物面与平面/圆柱交线极值",
+      "lecture_location": "5.3.1",
+      "lecture_subsection": "受约束的极值问题",
+      "example_numbers": [
+        12
+      ],
+      "example_titles": [
+        "抛物面上与平面、圆柱相交的极值"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p020-paraboloid-plane",
+        "c5-1-p020-paraboloid-cylinder"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 21,
+      "topic": "静力乘数与约束反力",
+      "lecture_location": "5.3.2",
+      "lecture_subsection": "静力方程与反力恢复",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 22,
+      "topic": "三轻杆，横杆长度坐标法",
+      "lecture_location": "5.3.3",
+      "lecture_subsection": "三杆结构的三种求解方式",
+      "example_numbers": [
+        13
+      ],
+      "example_titles": [
+        "顶角为六十度的对称轻杆结构"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "图去重使用p24；第一种解法须保留"
+    },
+    {
+      "deck": "c5-1",
+      "page": 23,
+      "topic": "三轻杆，半顶角乘数法",
+      "lecture_location": "5.3.3",
+      "lecture_subsection": "三杆结构的三种求解方式",
+      "example_numbers": [
+        13
+      ],
+      "example_titles": [
+        "顶角为六十度的对称轻杆结构"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "图去重使用p24；第二种解法须保留"
+    },
+    {
+      "deck": "c5-1",
+      "page": 24,
+      "topic": "三轻杆，解除横杆法",
+      "lecture_location": "5.3.3",
+      "lecture_subsection": "三杆结构的三种求解方式",
+      "example_numbers": [
+        13
+      ],
+      "example_titles": [
+        "顶角为六十度的对称轻杆结构"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p024-three-rods-released"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 25,
+      "topic": "作业题号5.1/5.2/5.3",
+      "lecture_location": "5.19.1",
+      "lecture_subsection": "约束、虚功与反力",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "只有题号，无题干，不伪造原题"
+    },
+    {
+      "deck": "c5-1",
+      "page": 26,
+      "topic": "补充材料过渡",
+      "lecture_location": "5.1.2",
+      "lecture_subsection": "完整约束与可积的运动约束",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "后续补充页均纳入"
+    },
+    {
+      "deck": "c5-1",
+      "page": 27,
+      "topic": "牛顿与分析力学形式比较",
+      "lecture_location": "5.4.1",
+      "lecture_subsection": "把动力学投影到允许位移上",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "拉氏方程仍一般为二阶；跨学科动机见章末"
+    },
+    {
+      "deck": "c5-1",
+      "page": 28,
+      "topic": "自由转向圆盘的积分因子检验",
+      "lecture_location": "5.1.2",
+      "lecture_subsection": "完整约束与可积的运动约束",
+      "example_numbers": [
+        1
+      ],
+      "example_titles": [
+        "沿曲线滚动的竖直圆盘"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p028-steering-disk"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 29,
+      "topic": "A/B/C三点虚位移",
+      "lecture_location": "5.2.7",
+      "lecture_subsection": "三个机构点的虚位移与坐标奇点",
+      "example_numbers": [
+        8
+      ],
+      "example_titles": [
+        "等长连杆机构的三个位置映射"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p029-three-point-linkage"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 30,
+      "topic": "单摆静力虚功",
+      "lecture_location": "5.2.3",
+      "lecture_subsection": "虚功与广义力",
+      "example_numbers": [
+        6
+      ],
+      "example_titles": [
+        "水平力对单摆的广义力"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "单摆图复用p14，保留竖直上下有效分支讨论"
+    },
+    {
+      "deck": "c5-1",
+      "page": 31,
+      "topic": "直角折杆平衡",
+      "lecture_location": "5.2.9",
+      "lecture_subsection": "直角折杆的平衡角",
+      "example_numbers": [
+        10
+      ],
+      "example_titles": [
+        "两段同线密度杆构成的刚性折杆"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p031-right-angle-rod"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 32,
+      "topic": "曲柄连杆题干",
+      "lecture_location": "5.2.10",
+      "lecture_subsection": "曲柄连杆的力关系",
+      "example_numbers": [
+        11
+      ],
+      "example_titles": [
+        "一个自由度的曲柄连杆机构"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p032-crank-forces"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 33,
+      "topic": "曲柄连杆虚位移求力比",
+      "lecture_location": "5.2.10",
+      "lecture_subsection": "曲柄连杆的力关系",
+      "example_numbers": [
+        11
+      ],
+      "example_titles": [
+        "一个自由度的曲柄连杆机构"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p033-crank-virtual"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 34,
+      "topic": "两球两绳题干",
+      "lecture_location": "5.3.4",
+      "lecture_subsection": "两球两绳的反力与平衡角",
+      "example_numbers": [
+        14
+      ],
+      "example_titles": [
+        "串接两球，各受水平力"
+      ],
+      "selected_figure_keys": [
+        "c5-1-p034-two-balls-tensions"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-1",
+      "page": 35,
+      "topic": "两球两绳乘数方程",
+      "lecture_location": "5.3.4",
+      "lecture_subsection": "两球两绳的反力与平衡角",
+      "example_numbers": [
+        14
+      ],
+      "example_titles": [
+        "串接两球，各受水平力"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "原图重复p34"
+    },
+    {
+      "deck": "c5-1",
+      "page": 36,
+      "topic": "两球两绳张力与合反力",
+      "lecture_location": "5.3.4",
+      "lecture_subsection": "两球两绳的反力与平衡角",
+      "example_numbers": [
+        14
+      ],
+      "example_titles": [
+        "串接两球，各受水平力"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "原图重复p34"
+    },
+    {
+      "deck": "c5-2",
+      "page": 1,
+      "topic": "虚功原理复习",
+      "lecture_location": "5.2.5",
+      "lecture_subsection": "虚功原理的证明与势能判据",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 2,
+      "topic": "拉氏方程两条路线",
+      "lecture_location": "5.4.1",
+      "lecture_subsection": "把动力学投影到允许位移上",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 3,
+      "topic": "达朗贝尔原理",
+      "lecture_location": "5.4.1",
+      "lecture_subsection": "把动力学投影到允许位移上",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 4,
+      "topic": "投影到广义坐标",
+      "lecture_location": "5.4.1",
+      "lecture_subsection": "把动力学投影到允许位移上",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 5,
+      "topic": "惯性项动能导数第一部分",
+      "lecture_location": "5.4.2",
+      "lecture_subsection": "惯性项化为动能导数的完整推导",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 6,
+      "topic": "惯性项动能导数第二部分",
+      "lecture_location": "5.4.2",
+      "lecture_subsection": "惯性项化为动能导数的完整推导",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 7,
+      "topic": "一般主动力拉氏方程",
+      "lecture_location": "5.4.3",
+      "lecture_subsection": "一般形式、保守形式与耗散力",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "本次源页保守力负号正确，旧审核判错须撤回"
+    },
+    {
+      "deck": "c5-2",
+      "page": 8,
+      "topic": "保守形式L=T−V",
+      "lecture_location": "5.4.3",
+      "lecture_subsection": "一般形式、保守形式与耗散力",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 9,
+      "topic": "解题步骤",
+      "lecture_location": "5.4.3",
+      "lecture_subsection": "一般形式、保守形式与耗散力",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 10,
+      "topic": "顶绳牵引纯滚圆柱",
+      "lecture_location": "5.5.1",
+      "lecture_subsection": "滚动圆柱与悬挂物",
+      "example_numbers": [
+        16
+      ],
+      "example_titles": [
+        "圆柱顶端绕绳牵引"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p010-top-string-cylinder"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 11,
+      "topic": "两个有惯量定轴滑轮",
+      "lecture_location": "5.5.2",
+      "lecture_subsection": "两个有惯量的定轴滑轮",
+      "example_numbers": [
+        17
+      ],
+      "example_titles": [
+        "轻绳带动大小圆盘"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p011-two-pulleys"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 12,
+      "topic": "二维弹簧摆",
+      "lecture_location": "5.5.3",
+      "lecture_subsection": "弹簧摆的径向与横向方程",
+      "example_numbers": [
+        18
+      ],
+      "example_titles": [
+        "自然长不为零的二维弹簧摆"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p012-spring-pendulum"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 13,
+      "topic": "循环坐标与广义动量",
+      "lecture_location": "5.6.1",
+      "lecture_subsection": "循环坐标及其守恒量",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 14,
+      "topic": "自由粒子/中心力/球碗积分",
+      "lecture_location": "5.6.1",
+      "lecture_subsection": "循环坐标及其守恒量",
+      "example_numbers": [
+        24
+      ],
+      "example_titles": [
+        "自由粒子、有心力场与球形碗"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 15,
+      "topic": "坐标与力/动量对应表",
+      "lecture_location": "5.6.1",
+      "lecture_subsection": "循环坐标及其守恒量",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "九份重复小表，合并含义即可；不当作几何原图"
+    },
+    {
+      "deck": "c5-2",
+      "page": 16,
+      "topic": "能量积分推导",
+      "lecture_location": "5.6.2",
+      "lecture_subsection": "能量积分的逐项推导",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 17,
+      "topic": "速度齐次分解T₂/T₁/T₀",
+      "lecture_location": "5.6.2",
+      "lecture_subsection": "能量积分的逐项推导",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 18,
+      "topic": "第一积分条件小结",
+      "lecture_location": "5.6.2",
+      "lecture_subsection": "能量积分的逐项推导",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 19,
+      "topic": "水平匀转直管的离管运动",
+      "lecture_location": "5.6.3",
+      "lecture_subsection": "匀速转动直管中的小球",
+      "example_numbers": [
+        25
+      ],
+      "example_titles": [
+        "水平直管的离管速度与时间"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p019-rotating-tube"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 20,
+      "topic": "水平环绕环上一点转动",
+      "lecture_location": "5.6.5",
+      "lecture_subsection": "转动圆环上的滑珠",
+      "example_numbers": [
+        28
+      ],
+      "example_titles": [
+        "水平圆环绕环上一点旋转"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p020-hoop-moving-axes"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 21,
+      "topic": "弹性阿特伍德系统",
+      "lecture_location": "5.6.6",
+      "lecture_subsection": "带弹性绳的三球系统",
+      "example_numbers": [
+        29
+      ],
+      "example_titles": [
+        "绳轮系统的简谐运动和两段张力"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图完整版本选c5-1p7"
+    },
+    {
+      "deck": "c5-2",
+      "page": 22,
+      "topic": "作业5.5/5.12/5.14",
+      "lecture_location": "5.19.2",
+      "lecture_subsection": "拉格朗日方程与能量积分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "只有题号"
+    },
+    {
+      "deck": "c5-2",
+      "page": 23,
+      "topic": "补充材料过渡",
+      "lecture_location": "5.6.4",
+      "lecture_subsection": "竖直转管与水平双球",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "后续补充页均纳入"
+    },
+    {
+      "deck": "c5-2",
+      "page": 24,
+      "topic": "竖直匀转管",
+      "lecture_location": "5.6.4",
+      "lecture_subsection": "竖直转管与水平双球",
+      "example_numbers": [
+        26
+      ],
+      "example_titles": [
+        "竖直平面内的匀速转管"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 25,
+      "topic": "水平匀转管弹性绳双球",
+      "lecture_location": "5.6.4",
+      "lecture_subsection": "竖直转管与水平双球",
+      "example_numbers": [
+        27
+      ],
+      "example_titles": [
+        "旋转水平管中的弹性绳双球"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p025-tube-two-balls"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 26,
+      "topic": "小球沿大球外侧滚动首次滑动",
+      "lecture_location": "5.5.4",
+      "lecture_subsection": "球在大球外侧滚动至首次滑动",
+      "example_numbers": [
+        19
+      ],
+      "example_titles": [
+        "接触反力与静摩擦失效角"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p026-ball-on-sphere"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 27,
+      "topic": "孔绳桌上球与悬球第一积分",
+      "lecture_location": "5.6.7",
+      "lecture_subsection": "桌面与悬球：两个第一积分的组合",
+      "example_numbers": [
+        30
+      ],
+      "example_titles": [
+        "轻绳穿过桌面光滑小孔"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p027-table-hole-balls"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 28,
+      "topic": "孔绳系统转折半径",
+      "lecture_location": "5.6.7",
+      "lecture_subsection": "桌面与悬球：两个第一积分的组合",
+      "example_numbers": [
+        30
+      ],
+      "example_titles": [
+        "轻绳穿过桌面光滑小孔"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图选p27"
+    },
+    {
+      "deck": "c5-2",
+      "page": 29,
+      "topic": "自由平面双球弹簧初值",
+      "lecture_location": "5.6.8",
+      "lecture_subsection": "自由双球与滚轮小车的循环积分",
+      "example_numbers": [
+        31
+      ],
+      "example_titles": [
+        "自由平面双球的最大伸长"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p029-free-two-balls"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 30,
+      "topic": "行星齿轮题干",
+      "lecture_location": "5.5.7",
+      "lecture_subsection": "行星齿轮机构",
+      "example_numbers": [
+        22
+      ],
+      "example_titles": [
+        "固定轮外侧纯滚动的行星轮"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图选p31"
+    },
+    {
+      "deck": "c5-2",
+      "page": 31,
+      "topic": "行星齿轮动能与角加速度",
+      "lecture_location": "5.5.7",
+      "lecture_subsection": "行星齿轮机构",
+      "example_numbers": [
+        22
+      ],
+      "example_titles": [
+        "固定轮外侧纯滚动的行星轮"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p031-planet-gear"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 32,
+      "topic": "铰接双杆动力学题干",
+      "lecture_location": "5.5.8",
+      "lecture_subsection": "两根均匀杆的动能与广义力",
+      "example_numbers": [
+        23
+      ],
+      "example_titles": [
+        "把铰接双杆的静力问题推广到动力学"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图选p35"
+    },
+    {
+      "deck": "c5-2",
+      "page": 33,
+      "topic": "双杆动能交叉项",
+      "lecture_location": "5.5.8",
+      "lecture_subsection": "两根均匀杆的动能与广义力",
+      "example_numbers": [
+        23
+      ],
+      "example_titles": [
+        "把铰接双杆的静力问题推广到动力学"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 34,
+      "topic": "双杆广义力推导",
+      "lecture_location": "5.5.8",
+      "lecture_subsection": "两根均匀杆的动能与广义力",
+      "example_numbers": [
+        23
+      ],
+      "example_titles": [
+        "把铰接双杆的静力问题推广到动力学"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 35,
+      "topic": "双杆广义力结果",
+      "lecture_location": "5.5.8",
+      "lecture_subsection": "两根均匀杆的动能与广义力",
+      "example_numbers": [
+        23
+      ],
+      "example_titles": [
+        "把铰接双杆的静力问题推广到动力学"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p035-two-rods-dynamic"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 36,
+      "topic": "弹簧滑块单摆题干",
+      "lecture_location": "5.5.5",
+      "lecture_subsection": "滑块与单摆：保留全部非线性项",
+      "example_numbers": [
+        20
+      ],
+      "example_titles": [
+        "水平弹簧滑块悬挂单摆"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p036-slider-pendulum"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 37,
+      "topic": "滑块单摆T/V/L",
+      "lecture_location": "5.5.5",
+      "lecture_subsection": "滑块与单摆：保留全部非线性项",
+      "example_numbers": [
+        20
+      ],
+      "example_titles": [
+        "水平弹簧滑块悬挂单摆"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图选p36"
+    },
+    {
+      "deck": "c5-2",
+      "page": 38,
+      "topic": "滑块单摆精确方程",
+      "lecture_location": "5.5.5",
+      "lecture_subsection": "滑块与单摆：保留全部非线性项",
+      "example_numbers": [
+        20
+      ],
+      "example_titles": [
+        "水平弹簧滑块悬挂单摆"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "源非线性项有错，旧稿已修正"
+    },
+    {
+      "deck": "c5-2",
+      "page": 39,
+      "topic": "滑块单摆线性化",
+      "lecture_location": "5.5.5",
+      "lecture_subsection": "滑块与单摆：保留全部非线性项",
+      "example_numbers": [
+        20
+      ],
+      "example_titles": [
+        "水平弹簧滑块悬挂单摆"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 40,
+      "topic": "二次拉氏函数求线性化",
+      "lecture_location": "5.5.5",
+      "lecture_subsection": "滑块与单摆：保留全部非线性项",
+      "example_numbers": [
+        20
+      ],
+      "example_titles": [
+        "水平弹簧滑块悬挂单摆"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 41,
+      "topic": "移动楔弹簧物块题干",
+      "lecture_location": "5.5.6",
+      "lecture_subsection": "移动斜面上的弹簧物块",
+      "example_numbers": [
+        21
+      ],
+      "example_titles": [
+        "斜面与弹簧的二自由度运动"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p041-wedge-apparatus"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 42,
+      "topic": "移动楔速度分解与方程",
+      "lecture_location": "5.5.6",
+      "lecture_subsection": "移动斜面上的弹簧物块",
+      "example_numbers": [
+        21
+      ],
+      "example_titles": [
+        "斜面与弹簧的二自由度运动"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p042-wedge-velocities"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 43,
+      "topic": "纯滚小车弹簧物块题干",
+      "lecture_location": "5.6.8",
+      "lecture_subsection": "自由双球与滚轮小车的循环积分",
+      "example_numbers": [
+        32
+      ],
+      "example_titles": [
+        "滚轮小车上弹簧物块的第一积分"
+      ],
+      "selected_figure_keys": [
+        "c5-2-p043-rolling-cart"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-2",
+      "page": 44,
+      "topic": "纯滚小车循环积分",
+      "lecture_location": "5.6.8",
+      "lecture_subsection": "自由双球与滚轮小车的循环积分",
+      "example_numbers": [
+        32
+      ],
+      "example_titles": [
+        "滚轮小车上弹簧物块的第一积分"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图选p43，真实水平动量与广义动量须区分"
+    },
+    {
+      "deck": "c5-3",
+      "page": 1,
+      "topic": "拉氏力学总览",
+      "lecture_location": "5.4.1",
+      "lecture_subsection": "把动力学投影到允许位移上",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 2,
+      "topic": "作用量与驻值动机",
+      "lecture_location": "5.8.1",
+      "lecture_subsection": "作用量与固定端点变分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "相同路径族图选p14"
+    },
+    {
+      "deck": "c5-3",
+      "page": 3,
+      "topic": "最速降线题干与时间泛函",
+      "lecture_location": "5.7.4",
+      "lecture_subsection": "最速降线：完整参数解",
+      "example_numbers": [
+        33
+      ],
+      "example_titles": [
+        "从静止出发的重力下降轨道"
+      ],
+      "selected_figure_keys": [
+        "c5-3-p003-brachistochrone-paths"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 4,
+      "topic": "函数与泛函的变分",
+      "lecture_location": "5.7.1",
+      "lecture_subsection": "函数、泛函与变分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [
+        "c5-3-p004-function-variation"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 5,
+      "topic": "欧拉方程的分部积分",
+      "lecture_location": "5.7.2",
+      "lecture_subsection": "欧拉方程与边界项",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 6,
+      "topic": "两个常用变分积分",
+      "lecture_location": "5.7.3",
+      "lecture_subsection": "两个常用第一积分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 7,
+      "topic": "最速降线参数解",
+      "lecture_location": "5.7.4",
+      "lecture_subsection": "最速降线：完整参数解",
+      "example_numbers": [
+        33
+      ],
+      "example_titles": [
+        "从静止出发的重力下降轨道"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "曲线族图选p10"
+    },
+    {
+      "deck": "c5-3",
+      "page": 8,
+      "topic": "定长柔链",
+      "lecture_location": "5.7.5",
+      "lecture_subsection": "悬链线：固定链长的约束不可漏",
+      "example_numbers": [
+        34
+      ],
+      "example_titles": [
+        "均匀柔链的静力形状"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "曲线族图选p10；保留定长乘数条件"
+    },
+    {
+      "deck": "c5-3",
+      "page": 9,
+      "topic": "最小旋转曲面",
+      "lecture_location": "5.7.6",
+      "lecture_subsection": "最小旋转曲面、测地线与等周问题",
+      "example_numbers": [
+        35
+      ],
+      "example_titles": [
+        "两圆环之间的最小旋转曲面"
+      ],
+      "selected_figure_keys": [
+        "c5-3-p009-surface-boundaries"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 10,
+      "topic": "三个曲线族与测地/等周问题",
+      "lecture_location": "5.7.6",
+      "lecture_subsection": "最小旋转曲面、测地线与等周问题",
+      "example_numbers": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "example_titles": [
+        "从静止出发的重力下降轨道",
+        "均匀柔链的静力形状",
+        "两圆环之间的最小旋转曲面",
+        "球面测地线与等周曲线"
+      ],
+      "selected_figure_keys": [
+        "c5-3-p010-cycloid-family",
+        "c5-3-p010-catenary-family",
+        "c5-3-p010-revolution-mesh"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 11,
+      "topic": "历史微粒光学示意",
+      "lecture_location": "5.7.7",
+      "lecture_subsection": "费马原理、反射与折射",
+      "example_numbers": [
+        37
+      ],
+      "example_titles": [
+        "平面界面上的折射定律"
+      ],
+      "selected_figure_keys": [
+        "c5-3-p011-particle-refraction"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "保留图时必须说明模型局限"
+    },
+    {
+      "deck": "c5-3",
+      "page": 12,
+      "topic": "费马原理及时间变分",
+      "lecture_location": "5.7.7",
+      "lecture_subsection": "费马原理、反射与折射",
+      "example_numbers": [
+        37
+      ],
+      "example_titles": [
+        "平面界面上的折射定律"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图选p13"
+    },
+    {
+      "deck": "c5-3",
+      "page": 13,
+      "topic": "折射几何约束变分",
+      "lecture_location": "5.7.7",
+      "lecture_subsection": "费马原理、反射与折射",
+      "example_numbers": [
+        37
+      ],
+      "example_titles": [
+        "平面界面上的折射定律"
+      ],
+      "selected_figure_keys": [
+        "c5-3-p013-fermat-refraction"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 14,
+      "topic": "哈密顿原理与路径族",
+      "lecture_location": "5.8.1",
+      "lecture_subsection": "作用量与固定端点变分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [
+        "c5-3-p014-action-path-family"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 15,
+      "topic": "固定端点等时变分",
+      "lecture_location": "5.8.1",
+      "lecture_subsection": "作用量与固定端点变分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "同图选p20"
+    },
+    {
+      "deck": "c5-3",
+      "page": 16,
+      "topic": "多自由度作用量变分",
+      "lecture_location": "5.8.1",
+      "lecture_subsection": "作用量与固定端点变分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "图内小公式叠污，改用p20清晰同图"
+    },
+    {
+      "deck": "c5-3",
+      "page": 17,
+      "topic": "非保守虚功变分",
+      "lecture_location": "5.8.3",
+      "lecture_subsection": "非保守力与拉格朗日--达朗贝尔形式",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "相同路径变分图选p20；原δV符号错误"
+    },
+    {
+      "deck": "c5-3",
+      "page": 18,
+      "topic": "恢复牛顿方程",
+      "lecture_location": "5.8.2",
+      "lecture_subsection": "驻作用量与“最小”的限制",
+      "example_numbers": [
+        38
+      ],
+      "example_titles": [
+        "自由粒子的驻作用量"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 19,
+      "topic": "转动圆环的直接作用量推导",
+      "lecture_location": "5.8.4",
+      "lecture_subsection": "转动圆环方程的直接变分推导",
+      "example_numbers": [
+        39
+      ],
+      "example_titles": [
+        "不先写拉格朗日方程而求圆环滑珠运动"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "图重复c5-2p20，但保留独立推导与边界项"
+    },
+    {
+      "deck": "c5-3",
+      "page": 20,
+      "topic": "分部积分与基本引理说明",
+      "lecture_location": "5.8.1",
+      "lecture_subsection": "作用量与固定端点变分",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [
+        "c5-3-p020-action-variation"
+      ],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 21,
+      "topic": "作业5.28/5.30/5.31",
+      "lecture_location": "5.19.3",
+      "lecture_subsection": "变分与小振动",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "只有题号"
+    },
+    {
+      "deck": "c5-3",
+      "page": 22,
+      "topic": "Backup过渡",
+      "lecture_location": "5.8.6",
+      "lecture_subsection": "拉格朗日陀螺的第一积分与欧拉方程",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": "后面陀螺/欧拉推导不得丢弃"
+    },
+    {
+      "deck": "c5-3",
+      "page": 23,
+      "topic": "对称重陀螺三个积分",
+      "lecture_location": "5.8.6",
+      "lecture_subsection": "拉格朗日陀螺的第一积分与欧拉方程",
+      "example_numbers": [
+        40
+      ],
+      "example_titles": [
+        "轴对称重陀螺的三个积分"
+      ],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 24,
+      "topic": "欧拉方程链式法则",
+      "lecture_location": "5.8.7",
+      "lecture_subsection": "以允许虚转动推导三个欧拉方程",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    },
+    {
+      "deck": "c5-3",
+      "page": 25,
+      "topic": "自转角偏导与轴轮换",
+      "lecture_location": "5.8.7",
+      "lecture_subsection": "以允许虚转动推导三个欧拉方程",
+      "example_numbers": [],
+      "example_titles": [],
+      "selected_figure_keys": [],
+      "visual_review": "contact_sheet_overview_completed",
+      "notes": ""
+    }
+  ],
+  "source_errors": [
+    {
+      "id": "A-01",
+      "deck": "c5-1",
+      "pages": [
+        2
+      ],
+      "type": "图式不符",
+      "description": "移动悬点图与下方匀速收绳约束式不匹配。",
+      "recommendation": "图作为移动悬点；正文用(x−a(t))²+y²=l²。如保留收绳式须另明确固定悬点。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-02",
+      "deck": "c5-1",
+      "pages": [
+        3
+      ],
+      "type": "术语歧义",
+      "description": "“可解/不可解”表示可脱离/不可脱离，不是数学可解性。",
+      "recommendation": "用单面/双面约束并说明绳张紧阶段。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-03",
+      "deck": "c5-1",
+      "pages": [
+        8,
+        17
+      ],
+      "type": "字体异常",
+      "description": "正文变分符号/水平角的Symbol字符出现空框；选定图内标签无空框。",
+      "recommendation": "勿把整页正文截图当讲义文字；若做工作副本兼容修复仅恢复确定码点。",
+      "status": "asset_and_text_attention"
+    },
+    {
+      "id": "A-04",
+      "deck": "c5-1",
+      "pages": [
+        10
+      ],
+      "type": "源排版截断",
+      "description": "铰链和滚动接触虚功公式下半被源版面覆盖/截断。",
+      "recommendation": "只取示意图；正文分别保留两铰链力虚功相消、接触点许可虚位移为零。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-05",
+      "deck": "c5-1",
+      "pages": [
+        12,
+        13
+      ],
+      "type": "概念错误",
+      "description": "将一般静力平衡说成势能极小。",
+      "recommendation": "使用驻值条件；稳定性另判，墙棱杆本身给不稳定反例。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-06",
+      "deck": "c5-1",
+      "pages": [
+        18
+      ],
+      "type": "公式错误",
+      "description": "水平角α、β的tan最终写成倒数。",
+      "recommendation": "正确tanα=(P₁+2P₂)/(2F)，tanβ=P₂/(2F)；正文竖直角公式已正确。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-07",
+      "deck": "c5-1",
+      "pages": [
+        21,
+        23
+      ],
+      "type": "索引与量纲",
+      "description": "多约束求和应为f_i；以半顶角求横杆广义力时2Nl cosθ不能漏l。",
+      "recommendation": "保留旧稿索引与完整l因子。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-08",
+      "deck": "c5-1",
+      "pages": [
+        31
+      ],
+      "type": "代数笔误",
+      "description": "直角折杆最终tanθ分母源写a²+3ab。",
+      "recommendation": "正文a²+2ab正确。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-09",
+      "deck": "c5-1",
+      "pages": [
+        36
+      ],
+      "type": "约束梯度符号",
+      "description": "下球约束力梯度式前的负号有误，结果向量本身正确。",
+      "recommendation": "N₂=λ₂∇₂f₂=−F₂ i−mg j（y向下）；不恢复错式。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-10",
+      "deck": "c5-2",
+      "pages": [
+        7
+      ],
+      "type": "旧审核更正",
+      "description": "本次PDF红框实际为Qα=−∂V/∂qα，负号清楚存在；旧源审核称其为正号与本次图像不符。",
+      "recommendation": "删除/标注旧审核此条误判，不把正确源式列入纠错。",
+      "status": "prior_audit_correction"
+    },
+    {
+      "id": "A-11",
+      "deck": "c5-2",
+      "pages": [
+        19
+      ],
+      "type": "源页裁切",
+      "description": "原位图右界728.93超过720，x标签在页面裁切。",
+      "recommendation": "用xref469及soft mask完整原位图；manifest提供坐标。",
+      "status": "extraction_required"
+    },
+    {
+      "id": "A-12",
+      "deck": "c5-2",
+      "pages": [
+        21
+      ],
+      "type": "符号错误",
+      "description": "阿特伍德系统最后s方程重力符号有误。",
+      "recommendation": "保留旧稿(3/4)m s̈+k(s−a)−mg=0。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-13",
+      "deck": "c5-2",
+      "pages": [
+        24
+      ],
+      "type": "初值常数笔误",
+      "description": "c₁/c₂中c₃又除2造成初值错误。",
+      "recommendation": "旧稿双曲函数显式解已正确，勿照抄源常数。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-14",
+      "deck": "c5-2",
+      "pages": [
+        28,
+        29
+      ],
+      "type": "幂次与势能",
+      "description": "孔绳h²一处写a⁴，双球能量中间一处误写kr²/2。",
+      "recommendation": "保持h²=9ga³/2及k(r−a)²/2；旧稿已正确。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-15",
+      "deck": "c5-2",
+      "pages": [
+        30,
+        32,
+        36
+      ],
+      "type": "字体异常",
+      "description": "题干/说明中的φ或θ出现Symbol空框，图内相应标签正常。",
+      "recommendation": "正文重新排公式；所选原图不含这些正文空框。",
+      "status": "asset_and_text_attention"
+    },
+    {
+      "id": "A-16",
+      "deck": "c5-2",
+      "pages": [
+        34
+      ],
+      "type": "力虚功符号",
+      "description": "双杆水平力第二项源有错误负号。",
+      "recommendation": "保留+Fl₂cosθ₂δθ₂；旧稿完整非线性方程及静力复验已正确。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-17",
+      "deck": "c5-2",
+      "pages": [
+        38,
+        39
+      ],
+      "type": "非线性推导错误",
+      "description": "原精确方程漏cosφ、φ̇²sinφ等，另一式又残留本该抵消的速度交叉项。",
+      "recommendation": "旧稿精确两式及二次L推导均正确，应完整保留；不能只保留线性结果。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-18",
+      "deck": "c5-2",
+      "pages": [
+        42
+      ],
+      "type": "速度点与坐标方向",
+      "description": "原动能漏若干速度点、末式弹簧项误为k ẋ_r；原坐标向左/下坡，旧稿向右/上坡。",
+      "recommendation": "保持旧稿动能和ks恢复力。图题明确x_source=−x_main、x_r=−s。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-19",
+      "deck": "c5-2",
+      "pages": [
+        43,
+        44
+      ],
+      "type": "源字形变形",
+      "description": "原图k、m₁、m₂、x_r等字符明显水平拉伸，但仍可辨，无空框。",
+      "recommendation": "原图原样保留，附近正文/TikZ使用正常字形解释。p43比p44边界完整。",
+      "status": "source_quality_limitation"
+    },
+    {
+      "id": "A-20",
+      "deck": "c5-3",
+      "pages": [
+        8
+      ],
+      "type": "定长条件",
+      "description": "源柔链推导未显式加入固定链长乘数。",
+      "recommendation": "保持旧稿定长约束与λ，不能把无约束势能驻值直接等同悬链线。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-21",
+      "deck": "c5-3",
+      "pages": [
+        9,
+        10
+      ],
+      "type": "曲面名称与方程",
+      "description": "源称最小曲面母线为双曲线并等同冷却塔；总结又给sinh公式。",
+      "recommendation": "母线为cosh悬链线，旋转得到悬链面；只保留几何图，舍弃错误旁文。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-22",
+      "deck": "c5-3",
+      "pages": [
+        11
+      ],
+      "type": "物理模型混用",
+      "description": "源把牛顿固定质量微粒势阶与p=ℏk、n关系混写。",
+      "recommendation": "保留原图时明确是历史势阶模型；正文用波矢相位匹配/费马原理。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-23",
+      "deck": "c5-3",
+      "pages": [
+        12,
+        13
+      ],
+      "type": "角与几何因子",
+      "description": "第二段时间分母一处误用cosθ₁；几何约束变分漏d₁/d₂。",
+      "recommendation": "正文第二段用cosθ₂，固定D变分保留h₁/h₂；旧稿已完整。",
+      "status": "old_main_correct"
+    },
+    {
+      "id": "A-24",
+      "deck": "c5-3",
+      "pages": [
+        16
+      ],
+      "type": "图内叠污",
+      "description": "路径变分图被无关小公式叠盖。",
+      "recommendation": "不提取该版，使用同图清晰p20。",
+      "status": "resolved_by_selection"
+    },
+    {
+      "id": "A-25",
+      "deck": "c5-3",
+      "pages": [
+        17
+      ],
+      "type": "变分符号",
+      "description": "源δV=F·δr缺负号，一般非保守虚功不能总写普通δS。",
+      "recommendation": "保持旧稿δV=−ΣQδq与拉格朗日—达朗贝尔形式。",
+      "status": "old_main_correct"
+    }
+  ],
+  "content_findings": [
+    {
+      "id": "CONTENT-A-01",
+      "source": [
+        "c5-1:p14"
+      ],
+      "lecture_location": "5.2.2",
+      "example_numbers": [
+        5
+      ],
+      "finding": "旧稿球面虚位移只保留球基矢紧凑式，源课件逐分量展开被压缩；建议两个形式并列，展示各分量如何依赖θ、φ。",
+      "severity": "restore_detail",
+      "patch": {
+        "old": "两者的虚位移均垂直于径向反力。球面的两个切向方向可以独立变化，不应把虚位移限定为实际轨迹的切线。",
+        "new": "将球面关系展开到固定笛卡尔基矢，可逐项核对两个角变分：\n\\[\n\\vect r=R(\\sin\\theta\\cos\\phi\\,\\vect e_x+\\sin\\theta\\sin\\phi\\,\\vect e_y+\\cos\\theta\\,\\vect e_z),\n\\]\n\\begin{align*}\n\\delta\\vect r={}&R(\\cos\\theta\\cos\\phi\\,\\vect e_x+\\cos\\theta\\sin\\phi\\,\\vect e_y-\\sin\\theta\\,\\vect e_z)\\delta\\theta\\\\\n&+R(-\\sin\\theta\\sin\\phi\\,\\vect e_x+\\sin\\theta\\cos\\phi\\,\\vect e_y)\\delta\\phi.\n\\end{align*}\n两者的虚位移均垂直于径向反力。球面的两个切向方向可以独立变化，不应把虚位移限定为实际轨迹的切线。",
+        "old_occurrences": 1
+      }
+    },
+    {
+      "id": "CONTENT-A-02",
+      "source": [
+        "c5-1:p7"
+      ],
+      "lecture_location": "5.1.4",
+      "example_numbers": [
+        3
+      ],
+      "finding": "源平面定点运动还列质心横/纵坐标为可选广义坐标，旧稿只讨论转角γ；恢复局部可用及转折失效条件。",
+      "severity": "restore_detail",
+      "patch": {
+        "old": "固定点减少平动自由度，但不把三维转动压成一个自由度。",
+        "new": "对平面定点运动，在 $\\dd x_C/\\dd\\gamma\\ne0$ 的局部范围也可用质心横坐标 $x_C$ 作广义坐标；同理，$\\dd y_C/\\dd\\gamma\\ne0$ 时可用 $y_C$。相应导数为零的转折位置，这种坐标不能继续单独标记邻近构形，应改用转角。固定点减少平动自由度，但不把三维转动压成一个自由度。",
+        "old_occurrences": 1
+      }
+    },
+    {
+      "id": "CONTENT-A-03",
+      "source": [
+        "c5-2:p42"
+      ],
+      "lecture_location": "5.5.6",
+      "example_numbers": [
+        21
+      ],
+      "finding": "原图标明平衡弹簧长l+δ_s，旧题干没有自然长l；方程因平衡坐标平移而不含l，但恢复自然长有助图题变量完整。",
+      "severity": "clarify_figure",
+      "patch": {
+        "old": "质量 $m$ 的物块沿光滑斜面运动，以劲度 $k$ 的弹簧与斜面上端连接。",
+        "new": "质量 $m$ 的物块沿光滑斜面运动，以自然长 $l$、劲度 $k$ 的弹簧与斜面上端连接。",
+        "old_occurrences": 1
+      }
+    },
+    {
+      "id": "CONTENT-A-04",
+      "source": [
+        "c5-1:p2"
+      ],
+      "lecture_location": "5.1.1",
+      "example_numbers": [],
+      "finding": "旧稿把与图不符的收绳式改为移动悬点式是正确处理。若希望保留源页数学素材，可另加固定悬点、匀速收绳的非定常例x²+y²=(l−v₀t)²，明确0≤t<l/v₀；不应把该式配到移动悬点图。",
+      "severity": "optional_source_recovery"
+    },
+    {
+      "id": "CONTENT-A-05",
+      "source": [
+        "c5-1:p7",
+        "c5-1:p22-p24",
+        "c5-2:p10-p44",
+        "c5-3:p7-p25"
+      ],
+      "lecture_location": "5.1.4–5.8.7",
+      "finding": "旧稿已保留六类坐标案例、三杆三法、备用动力学题、滑块摆非线性与两种线性化、圆环拉氏与作用量两法、测地线/等周问题、陀螺积分与欧拉链式推导。未发现新的整题/整段推导丢失；本轮主要需恢复原图及上述局部展开。",
+      "severity": "coverage_confirmation"
+    }
+  ],
+  "completed_at": "2026-10-18",
+  "old_main_tex": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/旧版完整主稿.tex",
+  "old_main_sha256": "662c1126e226c8ee4e905c88490594851bd1081a475b595b6b2add6e1b7122f1",
+  "counts": {
+    "pages_reviewed": 105,
+    "figures_selected": 52,
+    "c5-1_figures": 27,
+    "c5-2_figures": 15,
+    "c5-3_figures": 10,
+    "source_notes": 25,
+    "actionable_detail_recoveries": 3
+  },
+  "extraction_warnings": [
+    "不要裁入纯公式或整页文字；52项均为几何/装置/曲线图。",
+    "仅对白母版工作副本作背景兼容处理，所有前景线条、署名和图内框线保留。",
+    "需要特殊处理：c5-2p19原位图xref469及smask；c5-2p43排除黄气泡残片。",
+    "c5-1p3边界避开正文叠字；c5-1p31框外虚线要保留；c5-3p4保留贴近页脚的B和y箭头。",
+    "本报告是源资料视觉及针对性内容核对，不代替父代理成稿逐页QA与计算复核。"
+  ]
+}

@@ -1,0 +1,4 @@
+% 两条路径在同一屏点叠加复振幅，路径差改变相位差；交叉项不能在叠加前当作两独立概率相加。
+\begin{tikzpicture}
+\fill(-3,0)circle(3pt)node[left=5.0pt]{源};\draw[very thick](0,-2)--(0,-.8);\draw[very thick](0,-.4)--(0,.4);\draw[very thick](0,.8)--(0,2);\draw[thick](5,-2.3)--(5,2.3);\fill(5,.7)circle(3pt)node[right=5.0pt]{屏点};\draw[ink](-3,0)--(0,.6)--(5,.7);\draw[ink](-3,0)--(0,-.6)--(5,.7);\draw[guide](-3,0)..controls(-1,2)and(0,1)..(0,.6);\draw[guide](0,-.6)..controls(2,-2)and(4,1)..(5,.7);\node at(2,1.1){$\psi_1$};\node at(2,-1){$\psi_2$};
+\end{tikzpicture}

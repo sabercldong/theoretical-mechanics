@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.85]
+\draw[ink,thick](-1.8,2.2)..controls(-.9,.2)and(.9,.2)..(1.8,2.2);\coordinate(P)at(0,.7);\fill(P)circle(3pt);
+\draw[force](P)--++(0,1.3)node[right]{$\vect a_O$};\draw[force](P)--++(0,-1.45)node[pos=.6,right]{$\vect g_{\rm eff}$};
+\draw[->,muted](P)--++(1.3,0)node[above]{$\vect V$};\node at(0,3){向上弯曲：谷底};
+\node[align=center]at(0,-1.55){有效重力向下\\大小 $g+V^2/\rho_c$};
+\begin{scope}[shift={(6.7,0)}]
+\draw[ink,thick](-1.8,.2)..controls(-.9,2.2)and(.9,2.2)..(1.8,.2);\coordinate(Q)at(0,1.7);\fill(Q)circle(3pt);
+\draw[force](Q)--++(0,-1.1)node[right]{$\vect a_O$};\draw[->,muted](Q)--++(1.3,0)node[above]{$\vect V$};
+\node at(0,3){向下弯曲：峰顶};
+\node[align=center]at(0,-1.25){$\vect g_{\rm eff}=-(g-V^2/\rho_c)\vect e_z$\\$V^2/\rho_c=g$ 时为零\\超过 $g$ 后方向向上};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,388 @@
+[
+  {
+    "old_index": 1,
+    "old_caption": "中心内力成对抵消；外力由系统边界决定",
+    "original_keys": [
+      "internal_central_pair"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 2,
+    "old_caption": "三角形质心位于三条中线的交点",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 3,
+    "old_caption": "上方挖孔使质心向下偏移",
+    "original_keys": [
+      "disk_two_holes"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 4,
+    "old_caption": "用水平截面求实心半球质心；用体积差求厚壳质心",
+    "original_keys": [
+      "hemisphere"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 5,
+    "old_caption": "圆锥的轴向积分与半圆锥的横向积分",
+    "original_keys": [
+      "cone"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 6,
+    "old_caption": "抛物线薄片关于竖直轴对称，质心高度为 $3a/5$",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 7,
+    "old_caption": "均匀四面体的质心坐标等于各轴截距的四分之一",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 8,
+    "old_caption": "密度梯度使质心上移，不能只按体积平均",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 9,
+    "old_caption": "曲柄连杆的各部分质心与整体质心椭圆",
+    "original_keys": [
+      "crank_slider"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 10,
+    "old_caption": "偏心转子的加速度产生周期变化的支承反力",
+    "original_keys": [
+      "eccentric_rotor"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 11,
+    "old_caption": "炮弹相对速度必须与炮车速度作矢量相加",
+    "original_keys": [
+      "cannon_velocity_triangle"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 12,
+    "old_caption": "多人跳车必须逐次写出离车瞬间的动量方程",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 13,
+    "old_caption": "水平质心固定使支座与摆球的水平运动相互补偿",
+    "original_keys": [
+      "sliding_support_pendulum"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 14,
+    "old_caption": "外冲量的径向分量由绳约束分配给两个小球",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 15,
+    "old_caption": "等水平速度保证人与球在反弹周期末再次相遇",
+    "original_keys": [
+      "chasm_rebound_original"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 16,
+    "old_caption": "绳速与爬绳相对速度共同决定猴子的绝对速度",
+    "original_keys": [
+      "monkeys_pulley"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 17,
+    "old_caption": "关于原点的角动量由质心轨道部分与内部部分组成",
+    "original_keys": [
+      "angular_momentum_decomposition"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 18,
+    "old_caption": "双球的参数轨迹与质心抛物线，坐标与长度采用示意尺度",
+    "original_keys": [
+      "projectile_double_ball_setup",
+      "projectile_double_ball_paths"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 19,
+    "old_caption": "平方反比场中两球受力不同，产生关于质心的潮汐力矩",
+    "original_keys": [
+      "tidal_repulsive_double_ball"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 20,
+    "old_caption": "主动内力一周期的净功等于回路的有向面积",
+    "original_keys": [
+      "active_internal_work"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 21,
+    "old_caption": "两自由质点相向运动而质心保持静止",
+    "original_keys": [
+      "gravitating_pair"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 22,
+    "old_caption": "出管绝对速度由径向和切向两分量合成",
+    "original_keys": [
+      "free_rotating_tube"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 23,
+    "old_caption": "光滑地面上，水平动量与机械能共同确定双球运动",
+    "original_keys": [
+      "smooth_floor_double_ball"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 24,
+    "old_caption": "静摩擦许可区间为 $-\\mu_s\\le q\\le\\mu_s$；摩擦系数本身非负",
+    "original_keys": [
+      "static_friction_demand",
+      "rough_floor_double_ball"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 25,
+    "old_caption": "接地、飞行和碰撞阶段具有不同方程，须按事件切换",
+    "original_keys": [
+      "upper_ball_impulse_initial"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 26,
+    "old_caption": "强冲量模型首次返回地面的是原来的上球，轨迹到该事件即终止",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 27,
+    "old_caption": "桌沿角点模型中，法向力垂直于杆",
+    "original_keys": [
+      "rough_rod_edge"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 28,
+    "old_caption": "相对位矢从质点2指向质点1，质心在连线上按反质量比分配距离",
+    "original_keys": [
+      "two_body_cm",
+      "relative_vectors"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 29,
+    "old_caption": "个体速度周期变化，而质量加权总动量保持不变",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 30,
+    "old_caption": "相对轨道与双方真实轨道的区别，太阳运动大小采用示意比例",
+    "original_keys": [
+      "sun_earth_orbits"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 31,
+    "old_caption": "斥力两体问题的最近距离在相对运动中确定",
+    "original_keys": [
+      "repulsive_approach"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 32,
+    "old_caption": "不等质量双球的相对转动半径不同，但角速度相同",
+    "original_keys": [
+      "rod_impulse",
+      "rod_impulse_tracks"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 33,
+    "old_caption": "相对运动在有效势与能量线的两个交点之间往返，参数取示意值",
+    "original_keys": [
+      "spring_impulse"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 34,
+    "old_caption": "先计算粘连冲击，再用新的折合质量研究弹簧运动",
+    "original_keys": [
+      "spring_stick_before",
+      "spring_stick_after"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 35,
+    "old_caption": "两端对称向中球后方汇合，碰前仍有相反的横向速度",
+    "original_keys": [
+      "three_beads_string"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 36,
+    "old_caption": "绳可滑过光滑钉，两端半径变化而总长度固定",
+    "original_keys": [
+      "string_peg"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 37,
+    "old_caption": "最高点水平分离只改变两者水平运动，质心抛物线保持不变",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 38,
+    "old_caption": "质心系中两体出射动量始终反向，弹性碰撞还保持其模",
+    "original_keys": [
+      "cm_scattering"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 39,
+    "old_caption": "重入射球的速度圆不包含原点，同一实验室方向可截圆两次",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 40,
+    "old_caption": "重入射球的角度变换不是一一对应，两个质心角可映到同一实验室角",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 41,
+    "old_caption": "固定铰点刚杆传递横向冲量；柔绳只传递沿自身方向的张力",
+    "original_keys": [
+      "hinged_rod_before",
+      "hinged_rod_after"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 42,
+    "old_caption": "开放主体的动量变化必须同时计入穿过边界的质量流",
+    "original_keys": [
+      "mass_accretion"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 43,
+    "old_caption": "燃气相对喷速与地面速度不同，推力项为 $-c\\dot m$",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 44,
+    "old_caption": "先受支承、后自由飞行的火箭速度；起飞时刻由支持力降至零决定",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 45,
+    "old_caption": "按表面积凝结的恒密度雨滴，其半径与时间成线性关系",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 46,
+    "old_caption": "地面总反力包含新绳元的制停冲击与已堆积绳重",
+    "original_keys": [
+      "falling_rope"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 47,
+    "old_caption": "全链共同速率不等于各直段具有相同的动量方向",
+    "original_keys": [
+      "sliding_chain"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 48,
+    "old_caption": "对地射弹速度为负的瞬时示意；另一题设的地面速度方向须另行判断",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 49,
+    "old_caption": "是否可省去平均边界项，取决于 $D$ 的长期增长而非某一瞬时值",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 50,
+    "old_caption": "谐振子瞬时动能与势能互相转换，其周期平均相等",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  },
+  {
+    "old_index": 51,
+    "old_caption": "容器壁对气体的平均力位积为 $-3P\\mathcal V$",
+    "original_keys": [
+      "gas_wall_virial"
+    ],
+    "action": "原图替换"
+  },
+  {
+    "old_index": 52,
+    "old_caption": "经典时间平均与量子定态期望具有不同含义，均须满足相应条件",
+    "original_keys": [],
+    "action": "保留正文及公式，去除无原图对应的重绘插图"
+  }
+]

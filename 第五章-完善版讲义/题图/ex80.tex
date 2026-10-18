@@ -1,0 +1,2 @@
+% 底面无穿透选取双曲余弦的深度分布；自由面上的垂向流速与压力条件把表面位移联系到速度势。
+\begin{tikzpicture}\draw[ink,thick](-.3,-1.8)--(5,-1.8);\draw[guide](-.3,0)--(5,0);\draw[ink,domain=0:4.5,samples=80]plot(\x,{.35*sin(160*\x)});\draw[<->](-.6,-1.8)--(-.6,0)node[midway,left]{$h$};\draw[<->](.5625,0)--(.5625,.35)node[above]{$\eta$};\draw[->](5,-1.8)--(5,1)node[above]{$z$};\node at(2.3,-1){$\nabla^2\phi=0$};\node at(2.3,-2.4){$\phi_z(-h)=0$};\end{tikzpicture}

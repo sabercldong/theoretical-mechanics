@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-1.5,0)arc(180:0:1.5);\draw[->,gray](-1.8,0)--(2,0)node[right]{$x$};\draw[->,gray](0,-.3)--(0,2)node[above]{$y$};\draw(0,0)--(1.06,1.06)node[midway,above left]{$a$};\draw(.5,0)arc(0:45:.5);\node at(.8,.25){$\phi$};\node[below left]at(0,0){$O$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\dd m=\lambda a\dd\varphi$\\[6pt]$\Downarrow$\\[6pt]$Y_C=a\int_0^\pi\sin\varphi\dd\varphi/\pi=2a/\pi$};
+\end{tikzpicture}

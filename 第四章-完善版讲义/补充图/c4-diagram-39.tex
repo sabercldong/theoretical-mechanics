@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.78,every node/.style={font=\small}]
+\foreach \xx/\dir/\kind/\txt in {0/1/1/北半球低压,4.5/-1/-1/北半球高压,9/-1/1/南半球低压,13.5/1/-1/南半球高压}{\begin{scope}[shift={(\xx,0)}]
+\draw[guide](0,0)circle(.9);\draw[guide](0,0)circle(1.65);
+\ifnum\kind=1
+\draw[ink,thick,->,domain=0:250,samples=100]plot({(1.85-.004*\x)*cos(\dir*\x)},{(1.85-.004*\x)*sin(\dir*\x)});\node at(0,0){低压};\node at(0,-2.2){辐合};
+\else
+\draw[ink,thick,->,domain=0:250,samples=100]plot({(.55+.004*\x)*cos(\dir*\x)},{(.55+.004*\x)*sin(\dir*\x)});\node at(0,0){高压};\node at(0,-2.2){辐散};
+\fi
+\node at(0,2.3){\txt};\end{scope}}
+\end{tikzpicture}

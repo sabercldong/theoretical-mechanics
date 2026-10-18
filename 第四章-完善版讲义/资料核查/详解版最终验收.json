@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "pdf_pages": 116,
+  "expanded_example_solutions": 47,
+  "expanded_training_solutions": 24,
+  "solution_steps": 226,
+  "theory_statements_and_graphics_preserved": true,
+  "original_figures": 47,
+  "explanatory_figures": 47,
+  "question_figures": 71,
+  "equation_labels_preserved": true,
+  "computational_verification": {
+    "symbolic_checks": 44,
+    "passed": true,
+    "independent_numerical_evaluations": 18
+  },
+  "visual_review": "全部116页已渲染并查看10张全册概览；另对代表性详解逐页放大检查。独立复核覆盖全部24道训练题以及重点例题。",
+  "portable_compile": {
+    "status": "passed",
+    "warnings": [],
+    "all_116_page_texts_and_pixels_identical": true
+  },
+  "pdf_sha256": "94b7f689fcb13d3dfc4626ca1060715bcf1d9e752ecf15cd9a510876707e6b71",
+  "archive_sha256": "2c3bb0e78cbdc725ced790cd5faea360262b55a089534c224e482cbbff962d18",
+  "tex_sha256": "8b4555e2035b8669d743220bb350f035302410da107fc033eeccd8a85c0a82c7"
+}

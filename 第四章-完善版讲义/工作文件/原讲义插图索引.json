@@ -1,0 +1,331 @@
+[
+  {
+    "index": 1,
+    "caption": "固定轴与转动轴对同一空间矢量的分解",
+    "start": 5415,
+    "end": 6048,
+    "preceding": "不变。任一空间矢量可以展开为\n\\[\n\\vect G=G_1\\vect e_1+G_2\\vect e_2+G_3\\vect e_3.\n\\]\n$G_i(t)$ 是动系中的分量。动系观察者记录分量变化；惯性系观察者还要计入基矢本身的变化。因此“分量不变”与“空间矢量不变”不同。例如固定在转盘上的杆，动系中长度和方向均不变，在惯性系中却不断改变方向。\n\n以下把两种求导写成\n\\[\n\\DI\\vect G=\\sum_i\\dot G_i\\vect e_i+\\sum_iG_i\\dot{\\vect e}_i,\n\\qquad\n\\DR\\vect G=\\sum_i\\dot G_i\\vect e_i.\n\\]\n右式并非把矢量变成标量；它仍是空间中的矢量，只是求导规则把动系基矢视为常量。两种导数的差来自同一组基矢的转动。\n"
+  },
+  {
+    "index": 2,
+    "caption": "转动矢量端点的透视图；有限端点差为弦，无穷小变化沿垂轴圆的切线",
+    "start": 6800,
+    "end": 7588,
+    "preceding": "经历角位移 $\\dd\\vect\\theta=\\Om\\dd t$。对于任一刚性附着的矢量 $\\vect b$，一阶变化为\n\\[\n\\dd\\vect b=\\dd\\vect\\theta\\times\\vect b.\n\\]\n可以从几何上检验这一式：沿转轴的分量不变；垂直分量在垂直于轴的圆上移动；切向位移的大小为 $b_\\perp\\dd\\theta$，方向按右手规则确定。除以 $\\dd t$，有\n\\begin{equation}\n\\boxed{\\dot{\\vect e}_i=\\Om\\times\\vect e_i.}\\label{eq:basis}\n\\end{equation}\n该式允许转轴方向和转速都随时间变化，$\\Om$ 是瞬时角速度。只在计算一个瞬间的一阶变化时把它视为给定量，并未假设匀速定轴转动。\n"
+  },
+  {
+    "index": 3,
+    "caption": "绝对、相对与牵连速度的平行四边形；分量方向须先统一",
+    "start": 11435,
+    "end": 12053,
+    "preceding": "\\vect e_1+\\dot y\\vect e_2+\\dot z\\vect e_3.\n\\]\n惯性系速度为 $\\vect v=\\DI\\vect r$，由运输公式，\n\\begin{equation}\n\\boxed{\\vect v=\\vect v'+\\Om\\times\\vect r.}\\label{eq:velocity}\n\\end{equation}\n$\\Om\\times\\vect r$ 称为牵连速度，表示动系中该瞬时位置的框架点在惯性系的速度。它依赖位置；不同于纯平动时全空间各框架点具有相同牵连速度。\n\n若质点恰固定在动系中，$\\vect v'=0$，式\\eqref{eq:velocity}退化为刚体定点运动的速度式。一般运动质点不必是框架的一部分，例如旋转管中的滑块或转盘上自由滑动的小球。\n"
+  },
+  {
+    "index": 4,
+    "caption": "三维转动的向轴项使用垂轴分量，而非整个位置矢量",
+    "start": 13718,
+    "end": 14352,
+    "preceding": "量：\n\\[\n\\vect r_\\parallel=(\\vect r\\cdot\\vect n)\\vect n,\n\\qquad \\vect R_\\perp=\\vect r-\\vect r_\\parallel.\n\\]\n于是\n\\begin{equation}\n\\boxed{\\Om\\times(\\Om\\times\\vect r)=-\\Omega^2\\vect R_\\perp.}\\label{eq:centripetal}\n\\end{equation}\n$\\vect R_\\perp$ 从转轴指向质点，而 $\\vect r$ 从动系原点指向质点。空间运动中两者通常不同。向轴加速度指向转轴，模为 $\\Omega^2R_\\perp$；只有位矢完全位于垂轴平面中时才能写成 $-\\Omega^2\\vect r$。\n"
+  },
+  {
+    "index": 5,
+    "caption": "一般动系的位置三角形：平动项与转动项使用不同位置矢量",
+    "start": 15333,
+    "end": 16012,
+    "preceding": "O+\\vect v'',\\qquad\n\\vect a=\\vect a_O+\\vect a''.\n\\]\n再比较共同原点的 $S''$ 与 $S'$，由式\\eqref{eq:velocity}和\\eqref{eq:accel}，\n\\[\n\\vect v''=\\vect v'+\\Om\\times\\vect r,\n\\quad\n\\vect a''=\\vect a'+\\dot\\Om\\times\\vect r\n+\\Om\\times(\\Om\\times\\vect r)+2\\Om\\times\\vect v'.\n\\]\n将第二组代入第一组便得通式。中间系 $S''$ 在原点加速时也不是惯性系，但这里使用的是位置与基矢求导的运动学恒等式，并未在其中无条件应用惯性系牛顿定律。此构造也说明为什么原点加速度只出现一次。\n\n"
+  },
+  {
+    "index": 6,
+    "caption": "匀速沿管滑动的速度与加速度；两幅图的箭长仅表示分量方向",
+    "start": 18396,
+    "end": 19168,
+    "preceding": "^2+\\Omega^2R^2/9},\\qquad\nv_R=\\sqrt{u^2+\\Omega^2R^2}.\n\\]\n速度与径向的夹角 $\\beta$ 满足 $\\tan\\beta=\\Omega r/u$。相对加速度为零，而绝对加速度是\n\\[\n\\vect a=-\\Omega^2r\\vect e_r+2\\Omega u\\vect e_\\theta,\n\\qquad a=\\sqrt{\\Omega^4r^2+4\\Omega^2u^2}.\n\\]\n令 $r(t)=r_0+ut$、$\\theta(t)=\\theta_0+\\Omega t$，惯性平面轨迹满足\n\\[\nr=r_0+\\frac u\\Omega(\\theta-\\theta_0),\n\\]\n即阿基米德螺线的一段。即使相对运动匀速直线，绝对运动也不是匀速直线。\n"
+  },
+  {
+    "index": 7,
+    "caption": "恒绝对速率运动的首个向外阶段在惯性系中成为半圆",
+    "start": 20368,
+    "end": 21040,
+    "preceding": "不唯一决定续接。\n\\subsubsection*{惯性轨迹的几何}\n在首个向外阶段 $\\theta=\\Omega t$，惯性直角坐标为\n\\[\nX=r\\cos\\theta=\\frac{c}{2\\Omega}\\sin2\\Omega t,\n\\quad\nY=r\\sin\\theta=\\frac{c}{2\\Omega}(1-\\cos2\\Omega t).\n\\]\n所以\n\\[\nX^2+\\left(Y-\\frac{c}{2\\Omega}\\right)^2\n=\\left(\\frac{c}{2\\Omega}\\right)^2.\n\\]\n首段绝对轨迹是一段半圆，半径 $c/(2\\Omega)$；绝对角速率为 $2\\Omega$，惯性速率为 $c$，与题设一致。角度已经转动而相对径向速度恰为零的时刻，对应半圆另一端。\n"
+  },
+  {
+    "index": 8,
+    "caption": "调速器小球的子午面侧视图；相对速度在纸面内，牵连速度垂直纸面",
+    "start": 21845,
+    "end": 22641,
+    "preceding": "内；第二项属于竖直方向。牵连速度沿方位方向：\n\\[\n\\vect v_t=\\Omega l\\sin\\theta\\vect e_\\theta.\n\\]\n故\n\\begin{equation}\n\\vect v=l\\dot\\theta\\cos\\theta\\vect e_r\n+\\Omega l\\sin\\theta\\vect e_\\theta\n+l\\dot\\theta\\sin\\theta\\vect e_z.\\label{eq:governorv}\n\\end{equation}\n三分量正交，\n\\[\nv^2=l^2\\dot\\theta^2+\\Omega^2l^2\\sin^2\\theta.\n\\]\n相对平衡 $\\dot\\theta=0$ 时，小球仍以速率 $\\Omega l\\sin\\theta$ 绕轴作圆周运动。\n"
+  },
+  {
+    "index": 9,
+    "caption": "同心圆槽中必须以有符号角速率合成，反向时科氏项改变符号",
+    "start": 24505,
+    "end": 25124,
+    "preceding": "vect a'=-\\nu^2a\\vect e_r.\n\\]\n牵连向轴项为 $-\\Omega^2a\\vect e_r$，科氏项为\n\\[\n2\\Om\\times\\vect v'=-2\\Omega\\nu a\\vect e_r.\n\\]\n所以\n\\begin{equation}\n\\boxed{\\vect v=(\\Omega+\\nu)a\\vect e_\\theta,\n\\quad \\vect a=-(\\Omega+\\nu)^2a\\vect e_r.}\\label{eq:groove}\n\\end{equation}\n若用无符号相对速率 $u=|\\nu|a$，同向转动时加速度模为 $(|\\Omega|a+u)^2/a$；反向时为 $(|\\Omega|a-u)^2/a$。平方作用于整个速度和，而不是某一个速度分量。\n"
+  },
+  {
+    "index": 10,
+    "caption": "偏心圆槽的加速度由槽中心运动与质点绕中心运动合成",
+    "start": 25764,
+    "end": 26401,
+    "preceding": "vect{OC}=d\\vect e_1$。槽半径 $a$，质点绕 $C$ 的相对角为 $\\psi=\\nu t$。求惯性系加速度。\n\\solution 在盘系中，\n\\[\n\\vect r=d\\vect e_1+a\\vect e_\\rho,\n\\quad \\vect v'=a\\nu\\vect e_\\psi,\n\\quad \\vect a'=-a\\nu^2\\vect e_\\rho.\n\\]\n各旋转项分别处理，得\n\\[\n\\boxed{\\vect a=-\\Omega^2d\\vect e_1-a(\\Omega+\\nu)^2\\vect e_\\rho.}\n\\]\n第一项是槽中心的绝对加速度，第二项是质点相对该中心的惯性圆周加速度。一般不能把总加速度说成始终指向 $O$ 或 $C$，更不能用同心槽公式只换一个总半径。\n"
+  },
+  {
+    "index": 11,
+    "caption": "倾斜轴刚体的进动与自转；两种框架不能混用角速度",
+    "start": 27482,
+    "end": 28242,
+    "preceding": "\\Omega_p\\omega_s\\cos\\alpha$。轴上点 $\\vect r=h\\vect n$ 的相对自转速度为 $\\omega_s\\vect n\\times h\\vect n=0$，所以绝对速度只有进动部分，大小 $|\\Omega_p|h\\sin\\alpha$。这不表示整个刚体没有自转，而是轴上点不因绕自身轴旋转而移动。\n\n若 $\\Omega_p,\\omega_s$ 都恒定，$\\dot{\\vect n}=\\Omega_p\\vect e_Z\\times\\vect n$，因此\n\\[\n\\dot{\\vect\\omega}_B=\\omega_s\\Omega_p\\vect e_Z\\times\\vect n.\n\\]\n两个角速率为常数仍可能有非零的总角加速度。它不能在完全随体系加速度变换中被忽略。\n"
+  },
+  {
+    "index": 12,
+    "caption": "南行汽车的球面几何与局部基矢；向东方向垂直于子午面",
+    "start": 29383,
+    "end": 30056,
+    "preceding": "\\sin\\lambda\\vect e_E\n+\\Omega_E^2R\\sin\\lambda\\cos\\lambda\\vect e_N\\\\\n&\\hspace{12mm}-\\left(\\frac{u^2}R+\\Omega_E^2R\\cos^2\\lambda\\right)\\vect e_U.\n\\end{align}\n速度模为 $\\sqrt{u^2+\\Omega_E^2R^2\\cos^2\\lambda}$。加速度模的平方逐项相加，可以整理为\n\\[\na^2=\\frac{u^4}{R^2}+\\Omega_E^4R^2\\cos^2\\lambda\n+2\\Omega_E^2u^2(1+\\sin^2\\lambda).\n\\]\n纬度在运动中变化，$\\dot\\lambda=-u/R$；不能把绝对轨迹当成纬度固定的圆周。\n"
+  },
+  {
+    "index": 13,
+    "caption": "匀加速逆时针转盘上固定点的离心力与欧拉惯性力",
+    "start": 32246,
+    "end": 32734,
+    "preceding": "t F_{\\mathrm{Eu}}=-m\\dot\\Omega\\vect n\\times\\vect r.\n\\]\n转盘加速时，它沿转动切向的反方向；转盘减速时方向改变。在更一般的变轴问题中，$\\dot{\\Om}$ 可不平行于 $\\Om$，必须直接计算矢量叉乘。\n\n对于空间常量 $\\dot{\\Om}$，\n\\[\n\\nabla\\times\\vect F_{\\mathrm{Eu}}=-2m\\dot{\\Om}.\n\\]\n通常不为零，所以欧拉力一般不能由只依赖位置的标量势表示。取转盘平面内半径 $a$ 的闭合圆，线积分为\n\\[\n\\oint\\vect F_{\\mathrm{Eu}}\\cdot\\dd\\vect r\n=-2\\pi m\\dot\\Omega a^2,\n\\]\n这与保守力沿任意闭合路径做功为零的性质不同。\n"
+  },
+  {
+    "index": 14,
+    "caption": "固定正向角速度下，科氏惯性力由相对速度顺时针转 $90^\\circ$ 得到",
+    "start": 33165,
+    "end": 33701,
+    "preceding": "m\\Om\\times\\vect v'$，其模为\n\\[\nF_{\\mathrm{Co}}=2m\\Omega v'\\sin\\alpha,\n\\]\n$\\alpha$ 为 $\\Om$ 与 $\\vect v'$ 的夹角。方向先按 $\\Om\\times\\vect v'$ 的右手规则确定，再反向。它垂直于相对速度，所以瞬时相对功率为\n\\begin{equation}\n\\vect F_{\\mathrm{Co}}\\cdot\\vect v'=0.\\label{eq:coriolispower}\n\\end{equation}\n因此科氏力可以改变相对速度方向，却不能单独改变相对动能。它依赖速度，不能由一般的纯位置势能描述。零功率针对的是相对速度；真实约束机构可能在惯性系中做功，不能把零功率扩展为整个装置能量交换为零。\n"
+  },
+  {
+    "index": 15,
+    "caption": "整体旋转与皮带循环的两个角速率不同；图中仅标局部惯性力",
+    "start": 35837,
+    "end": 36488,
+    "preceding": " $y(0)=y(\\ell)=0$ 时，得到\n\\[\ny(x)=\\frac{q}{2\\mathcal T_{\\rm eff}}x(\\ell-x).\n\\]\n这里 $q\\simeq\\mu(\\Omega_c^2r-2\\epsilon\\Omega_cu)$ 只适用于相应局部的径向投影，并假设形变导致的附加载荷远小于所保留的常量项；接近离心与科氏抵消条件时，这一常载荷近似尤其需要重新检验。沿长跨段 $r$ 变化时，应保留 $q(x)$；大形变和弯轮段还须使用完整曲率方程。只有在 $\\mu u^2\\ll\\mathcal T$ 时，才可进一步用静态张紧线近似 $\\mathcal T_{\\rm eff}\\simeq\\mathcal T$。惯性项给出载荷来源，运动材料的法向加速度、张力与端部条件共同决定挠度。\n"
+  },
+  {
+    "index": 16,
+    "caption": "平动加速座舱内的有效重力与静压分布",
+    "start": 37134,
+    "end": 37549,
+    "preceding": "速飞行没有额外平动惯性力；在向下飞行过程中若正在减速，加速度仍可向上。\n\\example{舱内理想液柱的压强差}\n选择竖直向上 $z$ 轴，舱体加速度为 $A\\vect e_z$，理想液体密度为 $\\rho$，在舱内相对静止。求高度差 $h$ 两处的压强差。\n\\solution 局部有效重力为 $-(g+A)\\vect e_z$，静力平衡给出\n\\[\n\\frac{\\dd p}{\\dd z}=-\\rho(g+A),\n\\quad p(z+h)-p(z)=-\\rho(g+A)h.\n\\]\n向上加速时压强随高度下降得更快；足够强的向下加速可使有效重力减小或反向。这一力学模型解释飞行加速度为何能改变人体内液体压强分布的趋势，但具体生理反应还依赖血管、调节机制和持续时间，不能从液柱模型指定统一的人体阈值。\n"
+  },
+  {
+    "index": 17,
+    "caption": "圆弧飞行中的加速度方向；几何曲率决定附加载荷",
+    "start": 38240,
+    "end": 39089,
+    "preceding": "轴上的正、负载荷可改变血液压强分布。向脚部的有效重力增强时，头部灌注可能下降，产生灰视、黑视，严重时可失去意识；黑视和失去意识是不同现象。反向载荷可能引起头部充血和红视等反应。\\footnote{现象区分参见 FAA \\href{https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC\\%2091-61.pdf}{AC 91-61: Effects of G-Forces on Pilots}。这里只说明惯性力方向及压强趋势，不从液柱模型推断人体耐受阈值。}\n若乘员轴线倾斜，应将 $\\vect g-\\vect a_O$ 投影到人体轴线再讨论，不能直接用地面竖直分量代替。不同加速度持续时间和生理状态也不能由单一力学模型消去。\n"
+  },
+  {
+    "index": 18,
+    "caption": "轴上悬点的相对平衡；离心力只在动系受力图中加入",
+    "start": 41148,
+    "end": 41689,
+    "preceding": "}\n平衡分支包括 $\\theta_0=0$ 和满足\n\\[\n\\cos\\theta_0=\\frac g{\\Omega^2l}\n\\]\n的倾斜分支。后者只有 $\\Omega^2l\\ge g$ 时存在。向上倒立的 $\\theta_0=\\pi$ 只适用于可承压刚杆模型，且这里是不稳定平衡。\n\n相对平衡且 $0\\le\\theta_0<\\pi/2$ 时，竖直与水平真实力满足\n\\[\nT\\cos\\theta_0=mg,\\qquad\nT\\sin\\theta_0=m\\Omega^2l\\sin\\theta_0.\n\\]\n若倾斜角非零，$T=m\\Omega^2l=mg/\\cos\\theta_0$；竖直分支则为 $T=mg$，不能在 $\\sin\\theta_0=0$ 时先除以 $\\sin\\theta_0$ 而丢掉该分支。\n"
+  },
+  {
+    "index": 19,
+    "caption": "转速增大时竖直平衡的势阱变浅，超过临界值后形成两个倾斜势阱",
+    "start": 42346,
+    "end": 42919,
+    "preceding": "quad \\omega_\\theta=\\Omega|\\sin\\theta_0|.\n\\]\n若以有符号角度允许在框架平面两侧倾斜，则存在 $\\pm\\theta_0$ 两个稳定分支。\n\n势能法提供独立核验：\n\\[\nU_{\\mathrm{eff}}=mgl(1-\\cos\\theta)-\\frac12m\\Omega^2l^2\\sin^2\\theta,\n\\quad T'=\\frac12ml^2\\dot\\theta^2.\n\\]\n在临界点 $\\Omega_c^2=g/l$，展开为\n\\[\nU_{\\mathrm{eff}}=\\frac18mgl\\,\\theta^4+O(\\theta^6).\n\\]\n二次项为零而四次项为正，原点仍是势能局部极小，但没有非零的线性固有频率。小幅运动由非线性回复项决定，周期依赖振幅。\n"
+  },
+  {
+    "index": 20,
+    "caption": "偏置悬点必须保留距轴距离 $a$；平衡角以悬点处向下铅垂线起算",
+    "start": 43790,
+    "end": 44514,
+    "preceding": "是 $l\\sin\\varphi$，而是\n\\[\n\\rho=a+l\\sin\\varphi.\n\\]\n对小球列动系水平、竖直平衡，\n\\[\nT\\sin\\varphi=m\\Omega^2(a+l\\sin\\varphi),\\qquad\nT\\cos\\varphi=mg.\n\\]\n因此\n\\begin{equation}\n\\boxed{g\\tan\\varphi=\\Omega^2(a+l\\sin\\varphi),\n\\quad T=\\frac{mg}{\\cos\\varphi}.}\\label{eq:offsetpend}\n\\end{equation}\n$a=0$ 时恢复轴上悬点情形；$a>0$ 时非零转速使竖直杆方向不再满足平衡。悬点随框架的圆周运动已包含在以转轴为原点的离心项内，不能再重复给它加入一次平动惯性力。\n"
+  },
+  {
+    "index": 21,
+    "caption": "复摆的离心力矩必须对全杆积分，不能把全部质量集中到杆端",
+    "start": 49368,
+    "end": 49999,
+    "preceding": ")(1-\\cos\\varphi)-(M\\Omega^2L^2/6)\\sin^2\\varphi$ 提供相同的稳定性判断。临界点的势能展开首项为 $MgL\\varphi^4/16$。\n\n杆上离心力随距铰点的距离 $s$ 线性增加。其合力大小与等效作用位置分别为\n\\[\nF_{\\rm cf}=\\int_0^L\\Omega^2s\\sin\\varphi\\,\\dd m\n=\\frac12M\\Omega^2L\\sin\\varphi,\n\\qquad\ns_F=\\frac{\\int_0^Ls^2\\dd m}{\\int_0^Ls\\dd m}=\\frac{2L}{3}.\n\\]\n合力的作用位置不是质心 $L/2$，所以即使先求合力，计算离心力矩时也要使用 $s_F$；重力合力则作用于质心。此区别与直接逐质元积分一致。\n\n"
+  },
+  {
+    "index": 22,
+    "caption": "离心调速器的负反馈作用链；响应速度与阻尼决定动态行为",
+    "start": 50225,
+    "end": 50712,
+    "preceding": ".2,2.95){$I_O=ML^2/3$\\\\重力矩含 $ML/2$\\\\离心力矩含 $ML^2/3$\\\\离心合力作用于 $s=2L/3$};\n\\end{tikzpicture}\\figend{复摆的离心力矩必须对全杆积分，不能把全部质量集中到杆端}\n\\notice{若 $\\Omega\\to0$，周期恢复普通均匀杆复摆周期 $2\\pi\\sqrt{2L/(3g)}$。将质点摆的 $g/l$ 直接替换为 $g/L$ 会漏掉复摆的惯量与质心距离。}\n\n\\subsection{调速器的平衡、摩擦与反馈}\\label{topic:governorcontrol}\n离心调速器通过小球向外偏移改变连杆和阀门位置。给定转速时，球的角度由相对平衡决定；转速增加，平衡角增大，机构可以使供能阀门关小，构成负反馈。\n"
+  },
+  {
+    "index": 23,
+    "caption": "旋转液体的自由表面为抛物面，中心高度由体积条件确定",
+    "start": 51515,
+    "end": 52020,
+    "preceding": "\\Omega^2\\rho^2,\n\\qquad \\nabla p=-\\rho_f\\nabla\\Phi_{\\mathrm{eff}},\n\\]\n$\\rho_f$ 为液体密度。自由表面压强恒为外界压强，所以沿表面 $\\Phi_{\\mathrm{eff}}$ 为常数，得到\n\\[\n\\boxed{z(\\rho)=z_0+\\frac{\\Omega^2\\rho^2}{2g}.}\n\\]\n在半径 $a$ 的圆柱容器中，若自由表面尚未露底，体积守恒给平均深度\n\\[\n\\bar h=z_0+\\frac{\\Omega^2a^2}{4g},\\qquad\nz_0=\\bar h-\\frac{\\Omega^2a^2}{4g}.\n\\]\n若算得 $z_0<0$，意味着中心将露底，原来的全底面覆盖假设失效，需要改用带干区的体积条件。\n"
+  },
+  {
+    "index": 24,
+    "caption": "俯视径向管；横向反力保持珠子随管转动",
+    "start": 53426,
+    "end": 54012,
+    "preceding": "{-\\Omega t},\\quad\nC_++C_-=a,\\quad \\Omega(C_+-C_-)=u_0.\n\\]\n所以 $C_+=(a+u_0/\\Omega)/2$、$C_-=(a-u_0/\\Omega)/2$，合并指数才得到式\\eqref{eq:freebead}。速度为\n\\[\n\\dot x=a\\Omega\\sinh\\Omega t+u_0\\cosh\\Omega t,\n\\quad N_2=2ma\\Omega^2\\sinh\\Omega t+2m\\Omega u_0\\cosh\\Omega t.\n\\]\n特别地，$u_0=0$ 时 $N_2(0)=0$，之后侧反力随滑动速度增大；竖直支持力从始至终为 $mg$。若 $a=u_0=0$，珠子始终停在轴心，不能把指数解误读成无扰动也会自行离开轴心。\n"
+  },
+  {
+    "index": 25,
+    "caption": "双弹簧滑块；物块偏移时两根弹簧的恢复力相加",
+    "start": 56049,
+    "end": 56916,
+    "preceding": "end{cases}\n\\]\n物块对槽壁的力为 $-N_2\\vect e_2$，因此压力大小要取绝对值，方向要反转。在稳定振动中，每当 $\\dot x=0$，侧压力为零；穿过该瞬间后反力变号，接触的侧壁随之切换。临界区间的侧压力恒为 $2m|\\Omega u_0|$，并不一定为零；失稳区间通常随扰动增长。这里使用双侧、无间隙的理想槽约束，有间隙时接触切换需另分析碰撞。\n\n若只给出物块最初位于圆心 $x_0=0$，还不足以确定运动，须另给 $u_0$。以圆心为初位置时，低速解 $x=(u_0/\\omega_s)\\sin\\omega_st$、临界解 $x=u_0t$、高速解 $x=(u_0/\\gamma)\\sinh\\gamma t$，可分别代入上式；若还规定相对静止，则所有反力的横向分量都为零。\n"
+  },
+  {
+    "index": 26,
+    "caption": "同一自由粒子在两个参考系中的轨迹",
+    "start": 58248,
+    "end": 58732,
+    "preceding": "{topic:freeparticle}\n\\example{经过轴心的匀速直线运动}\n无真实力的粒子在惯性系中从原点以速度 $u\\vect E_x$ 出发，动系以 $\\Omega$ 转动。求动系轨迹并核验动力学。\n\\solution 惯性系坐标为 $X=ut,Y=0$；逆旋转给出\n\\[\nx=ut\\cos\\Omega t,\\qquad y=-ut\\sin\\Omega t.\n\\]\n半径为 $ut$，动系看到的曲线向后卷转。求导后验证\n\\[\n\\ddot x=\\Omega^2x+2\\Omega\\dot y,\n\\qquad \\ddot y=\\Omega^2y-2\\Omega\\dot x.\n\\]\n离心项与科氏项共同产生动系曲线；真实惯性轨迹仍为直线。这与仅保留水平科氏力的地球惯性圆模型具有不同的假设。\n"
+  },
+  {
+    "index": 27,
+    "caption": "地轴在当地北向和天向上的投影",
+    "start": 59868,
+    "end": 60646,
+    "preceding": "mes\\vect e_N=\\vect e_U$。纬度 $\\lambda$ 北纬为正、南纬为负。在球形地球近似中，天方向沿地心径向向外，地球角速度分解为\n\\begin{equation}\n\\Om_E=\\Omega_E(\\cos\\lambda\\,\\vect e_N+\\sin\\lambda\\,\\vect e_U).\n\\label{eq:earthomega}\n\\end{equation}\n自转角速度取 $\\Omega_E\\simeq7.292115\\times10^{-5}\\,\\mathrm{s^{-1}}$，恒星日为 $D=2\\pi/\\Omega_E\\simeq86164.1\\,\\mathrm s$。太阳日约为 $86400\\,\\mathrm s$，适合粗估；需要精确周期时，两种日长不能混用。\n"
+  },
+  {
+    "index": 28,
+    "caption": "有效重力的矢量合成；偏角为显示清楚作了夸大",
+    "start": 61557,
+    "end": 62049,
+    "preceding": "a_E^4R^2\\cos^2\\lambda}.\n\\label{eq:geffnorm}\n\\end{equation}\n若 $\\epsilon=\\Omega_E^2R/g_0\\ll1$，则\n\\[\ng_{\\mathrm{eff}}=g_0-\\Omega_E^2R\\cos^2\\lambda+O(\\epsilon^2g_0).\n\\]\n北半球铅垂向下相对于地心向下偏向赤道的角度满足\n\\[\n\\tan\\delta=\\frac{\\Omega_E^2R\\sin\\lambda\\cos\\lambda}{g_0-\\Omega_E^2R\\cos^2\\lambda}.\n\\]\n取有符号 $\\delta$ 时南半球变号；偏角大小取绝对值。实际水平面垂直 $\\vect g_{\\mathrm{eff}}$，并不严格切于球面。\n"
+  },
+  {
+    "index": 29,
+    "caption": "东西向运动时科氏力的竖直分量",
+    "start": 64597,
+    "end": 65093,
+    "preceding": "\\lambda-\\frac{u^2}{R}.\n\\label{eq:eotvos}\n\\end{equation}\n一阶自转修正 $-2\\Omega_Eu\\cos\\lambda$ 使向东运动减轻、向西运动加重；$-u^2/R$ 是运动轨迹曲率所需的向心项，东西两个方向相同。保持纬线还需要水平引导力，故 $N_U$ 是总约束力的径向分量。\n\n在当地有效水平面模型中，忽略曲率时，同一结论为 $N/m=g-2\\Omega_Eu\\cos\\lambda$。例如 $\\lambda=45^\\circ,u=200\\,\\mathrm{m/s}$，科氏竖直修正约 $0.02063\\,\\mathrm{m/s^2}$；曲率项约 $0.00628\\,\\mathrm{m/s^2}$。两者精度阶次不同，明确模型后才能相加。\n"
+  },
+  {
+    "index": 30,
+    "caption": "水平速度的科氏偏转方向",
+    "start": 66201,
+    "end": 66708,
+    "preceding": "ct F_C}{m}=\n(2\\Omega_E\\sin\\lambda\\,v-2\\Omega_E\\cos\\lambda\\,w)\\vect e_E\n-2\\Omega_E\\sin\\lambda\\,u\\vect e_N\n+2\\Omega_E\\cos\\lambda\\,u\\vect e_U.\n\\label{eq:localcoriolis}\n\\end{equation}\n水平运动取 $w=0$，再将竖直科氏分量交给支持力平衡，水平方程中的参数为\n\\[\nf=2\\Omega_E\\sin\\lambda.\n\\]\n北半球 $f>0$，水平科氏力使速度向右转；南半球 $f<0$，向左转。这里的右、左相对于运动方向，从上向下观察。赤道 $f=0$ 仅表示水平投影消失，东西运动的竖直科氏力和竖直运动的东西偏转仍可存在。\n"
+  },
+  {
+    "index": 31,
+    "caption": "科氏力提供相对向心加速度的惯性圆",
+    "start": 67450,
+    "end": 68025,
+    "preceding": "_0}{f}(1-\\cos ft),\\notag\\\\\ny&=y_0+\\frac{v_0}{f}\\sin ft-\\frac{u_0}{f}(1-\\cos ft).\\label{eq:inertialtrajectory}\n\\end{align}\n圆心为 $(x_0+v_0/f,y_0-u_0/f)$，半径 $r_I=U/|f|$，周期\n\\begin{equation}\nT_I=\\frac{2\\pi}{|f|}=\\frac{D}{2|\\sin\\lambda|}.\\label{eq:inertialperiod}\n\\end{equation}\n北半球惯性圆顺时针，南半球逆时针。$f\\to0$ 时上式应取连续极限 $x=x_0+u_0t,y=y_0+v_0t$，不能认为赤道有一个有限半径的惯性圆。\n"
+  },
+  {
+    "index": 32,
+    "caption": "近地面向赤道运动的偏西趋势；箭头表示空气去向",
+    "start": 68756,
+    "end": 69276,
+    "preceding": "\n\\subsection{信风的偏转与环流条件}\\label{topic:tradewinds}\n在近地面低纬度，空气向赤道运动。北半球南行 $v<0$ 时，$\\dot u=fv<0$，向西偏；南半球北行 $v>0,f<0$ 时，也向西偏。风向名称表示风从哪里来，因此这对应北半球的东北信风与南半球的东南信风。高空从赤道向较高纬度流动时，科氏偏转则具有向东分量。\n\n纬度变化还使距地轴的距离 $R\\cos\\lambda$ 改变。忽略轴向外力矩时，空气微团对地轴的角动量约为\n\\[\nL_z=mR\\cos\\lambda\\,[\\Omega_ER\\cos\\lambda+u].\n\\]\n从较高纬度移向赤道而保持 $L_z$ 时，相对东向速度趋向减小，可形成西向分量。地表摩擦和压强力使实际流动不严格守恒该式。\n"
+  },
+  {
+    "index": 33,
+    "caption": "一个半球的纬向平均环流示意；实线箭头仅表示经向—竖直平均循环",
+    "start": 69609,
+    "end": 70615,
+    "preceding": "运动的偏西趋势；箭头表示空气去向}\n科氏力改变方向而不直接供能。大气环流的能量来自受热不均；运动还受压强、浮力与摩擦制约。实际全球环流有多个环流圈，不能把整颗地球当作单一的极地至赤道往返回路。海洋表面大尺度流向也需结合风应力与大陆边界。\n\n\n\\subsection{气压带、三圈环流与海盆环流}\\label{topic:windbelts}\n纬向平均的理想大气示意，可按每半球划分为低纬哈德莱环流、中纬费雷尔环流和高纬极地环流。赤道附近受热上升，约 $30^\\circ$ 附近下降形成副热带高压带，约 $60^\\circ$ 附近形成副极地低压区，极地附近相对冷而高压。近地面相应有信风、西风和极地东风。费雷尔环流的平均结构与中纬天气涡旋的热量、动量输送相联系，不能当作与低纬完全相同的直接热力单圈。\n"
+  },
+  {
+    "index": 34,
+    "caption": "两半球气压带与近地面风带的完整对应；纬度边界为理想示意",
+    "start": 70812,
+    "end": 71554,
+    "preceding": "de at(15,-1){信风};\\node at(45,-1){西风};\\node at(75,-1){极地东风};\n\\node at(45,-1.8){横轴为纬度；风带名称另含纬向运动};\n\\end{tikzpicture}\\figend{一个半球的纬向平均环流示意；实线箭头仅表示经向—竖直平均循环}\n\n\\subsubsection*{两半球的七个气压带与六个风带}\\phantomsection\\label{topic:globalwindbands}\n将两半球一起考虑，理想纬向平均结构从北到南依次为：极地高压、副极地低压、副热带高压、赤道低压、副热带高压、副极地低压、极地高压。与其间六个近地面风带对应的关系如下图。风带名称中的“东”“西”说明来向，图中的箭头则说明吹向，两者不能混同。\n"
+  },
+  {
+    "index": 35,
+    "caption": "两半球副热带海盆的典型环流旋向；形状、尺度和边界流宽度均为示意",
+    "start": 71994,
+    "end": 72567,
+    "preceding": "见 NOAA \\href{https://www.noaa.gov/jetstream/tropical/convergence-zone}{Inter-Tropical Convergence Zone}。}\n副热带下降区的近地面气流一支流向赤道，另一支流向中纬；极地下降气流流向副极地低压区。将这些经向运动与科氏偏转结合，才得到图中的东西向分量。科氏力本身不建立赤道加热与极地冷却的能量来源。\n\n海洋大尺度表层流受风应力、压强梯度、地球自转及海盆边界共同作用。在理想副热带海盆中，北半球常见顺时针环流，南半球常见逆时针环流；其中西侧边界流通常较窄、较强，东侧流较宽缓。部分西侧边界流把暖水带向高纬，东侧边界流把冷水带向低纬。暖、寒流指与邻近海区相比的水温性质，不能当作科氏力方向或高低压的符号。\n"
+  },
+  {
+    "index": 36,
+    "caption": "北半球主要表层海流的概略连接；副热带回流与向高纬分支分别表示，路径和尺度非地图",
+    "start": 72991,
+    "end": 74581,
+    "preceding": "界。世界海流图中的流线可以提示这些差异，但定量计算仍应先写出对应区域的动力学平衡。\\footnote{大尺度海流中的自转作用可参见 NOAA \\href{https://oceanservice.noaa.gov/education/tutorial_currents/04currents1.html}{The Coriolis Effect}。}\n\n\\subsubsection*{具名海流与海盆之间的连接}\\phantomsection\\label{topic:currentnames}\n仅知道一个副热带环流的旋向，还不足以识别海流图。下面将典型表层海流按海盆、西侧与东侧边界以及赤道附近的连接组织。图采用示意海盆，保留流向与具名海流的相对位置；不把箭长当成流速，也不把图框当成真实海岸线。\n"
+  },
+  {
+    "index": 37,
+    "caption": "南半球主要海流连接的概略图；厄加勒斯回流与南极绕极流分别标明",
+    "start": 74702,
+    "end": 75947,
+    "preceding": "多寒流};\n\\node[anchor=west,text=red!60!black]at(.5,-1.5){红：暖流};\\node[anchor=west,text=blue!65!black]at(3.5,-1.5){蓝：寒流};\\node[anchor=west]at(6.5,-1.5){连接、尺度与颜色均为概略示意};\n\\end{tikzpicture}\\figend{北半球主要表层海流的概略连接；副热带回流与向高纬分支分别表示，路径和尺度非地图}\n\n墨西哥湾流与黑潮分别沿北大西洋、北太平洋的西侧边界把暖水带向高纬，随后接入向东的中纬度流。拉布拉多寒流从较高纬度南下，属于另一个亚极地分支，不能因它位于美洲东岸就判为暖流。寒暖性质由相邻海区与水团来源决定，不由“西侧边界”四字单独决定。\n"
+  },
+  {
+    "index": 38,
+    "caption": "地转近似下压强力与科氏力的平衡；北半球低压逆时针、高压顺时针，南半球反向",
+    "start": 77108,
+    "end": 77861,
+    "preceding": "uide} 的表层海流图核对。}\n由海流旋向反推纬度，仍须满足纯惯性圆条件，不能把上述风生、压强控制的环流代入 $T_I=2\\pi/|f|$。\n\n\\subsection{地转平衡与气旋、反气旋}\\label{topic:geostrophy}\n当水平惯性加速度和摩擦相对较小，压强梯度力与科氏力近似平衡：\n\\[\n0=-\\frac1\\rho\\nabla_h p-f\\vect e_U\\times\\vect v_h,\n\\qquad\n\\vect v_g=\\frac1{\\rho f}\\vect e_U\\times\\nabla_h p.\n\\]\n地转风沿等压线运动。北半球速度左侧为低压，低压中心周围逆时针、高压中心周围顺时针；南半球反向。这里低压气旋与惯性圆在同一半球的旋向相反，因为前者的压强力不可忽略。\n"
+  },
+  {
+    "index": 39,
+    "caption": "含近地面摩擦时的气流旋向与径向分量；曲线为方向示意，不是定量轨迹",
+    "start": 78838,
+    "end": 79507,
+    "preceding": "h=-\\frac{r_d}{\\rho(r_d^2+f^2)}\\nabla_h p\n+\\frac{f}{\\rho(r_d^2+f^2)}\\vect e_U\\times\\nabla_h p.\n\\]\n第一项沿压强下降方向，第二项沿等压线。摩擦不只是降低风速，还使地转风发生跨等压线偏转，交角大小满足 $\\tan\\beta=r_d/|f|$。当 $r_d\\to0$ 且 $f\\ne0$，恢复纯地转关系；赤道附近则不能据此继续套用弱摩擦地转近似。\n\n低压中心向外压强梯度 $p_r>0$，因此摩擦产生向内速度，近地面形成辐合；高压中心 $p_r<0$，则形成向外速度和辐散。切向分量在北半球低压逆时针、高压顺时针，南半球反向。连续性要求水平辐合、辐散与竖直运动或质量变化配合，这与只画封闭等压线上的圆流不同。\n"
+  },
+  {
+    "index": 40,
+    "caption": "直河道中由横向水面坡度平衡科氏力；右侧按水流方向定义",
+    "start": 80776,
+    "end": 81433,
+    "preceding": "abel{topic:rivercross}\n取沿河流向为正，横向坐标 $q$ 向行进方向的右侧。在北半球，速度为 $U$ 的水流每单位质量受右向水平科氏力 $fU$。若河道直、流速近似均匀、横向平均运动可忽略，水面高度 $\\eta(q)$ 引起的横向压强加速度是 $-g\\dd\\eta/\\dd q$。由横向平衡，\n\\[\n0=-g\\frac{\\dd\\eta}{\\dd q}+fU,\n\\quad \\frac{\\dd\\eta}{\\dd q}=\\frac{fU}{g},\n\\quad \\eta(B)-\\eta(0)=\\frac{fUB}{g}.\n\\]\n$B$ 为河宽。因此北半球右岸水面稍高，压强力指向左侧，抵消科氏力；南半球 $f<0$，高低关系反向。这个结论描述理想稳态水面，不能直接等同于侵蚀速率。\n"
+  },
+  {
+    "index": 41,
+    "caption": "下落过程中逐渐累积的偏东位移",
+    "start": 83437,
+    "end": 84134,
+    "preceding": "dot z^{(0)}=-gt$，$x^{(0)}=y^{(0)}=0$。代入东西方程，\n\\[\n\\ddot x^{(1)}=2cgt,\\quad \\dot x^{(1)}=cgt^2,\n\\quad x^{(1)}=\\frac13cgt^3.\n\\]\n北向与竖直修正的一阶驱动均为零，所以 $y^{(1)}=0,z^{(1)}=0$。落地时间在一阶仍为 $t_0=\\sqrt{2h/g}$，偏移为\n\\begin{equation}\nd_E=\\frac{\\Omega_E\\cos\\lambda}{3}\\sqrt{\\frac{8h^3}{g}}.\n\\label{eq:eastfall}\n\\end{equation}\n$\\cos\\lambda\\ge0$，因此除极点一阶偏移为零以外，南、北半球的落体均偏东。\n"
+  },
+  {
+    "index": 42,
+    "caption": "竖直上抛在东—天平面内的一阶轨迹示意",
+    "start": 85211,
+    "end": 85788,
+    "preceding": "为 $z=w_0t-gt^2/2$，$\\dot z=w_0-gt$，代入东西方程并使用 $x(0)=\\dot x(0)=0$：\n\\[\n\\ddot x=-2c(w_0-gt),\\quad\n\\dot x=-2cw_0t+cgt^2,\\quad\nx=-cw_0t^2+\\frac13cgt^3.\n\\]\n零阶返回时间 $T_0=2w_0/g$，因此\n\\begin{equation}\nx(T_0)=-\\frac{4\\Omega_E\\cos\\lambda\\,w_0^3}{3g^2}.\\label{eq:verticalthrow}\n\\end{equation}\n在上升段小球向西偏，下降段科氏力虽转向东，仍不能抹去先前积累的西向位置。返回时一阶东西速度为零，而位置仍在西侧。速度修正和位移修正必须分别积分。\n"
+  },
+  {
+    "index": 43,
+    "caption": "长摆与当地水平运动；$\\vect F_R$ 为回复力，$\\vect F_C$ 为科氏力",
+    "start": 90587,
+    "end": 91350,
+    "preceding": "c{(x^2+y^2)^2}{l^3}\\right).\n\\]\n若水平振幅为 $A\\ll l$，则 $z$ 和 $\\dot z$ 都是振幅二阶量。张力的水平分量恰为 $-Tx/l$、$-Ty/l$；零阶竖直平衡给出 $T=mg$，故线性回复加速度是 $-gx/l$、$-gy/l$。\n\n竖直科氏项可使张力产生关于振幅的一阶变化，但这部分张力再乘 $x/l$ 或 $y/l$ 后属于水平振幅二阶，不进入线性水平方程；$-2\\Omega_E\\cos\\lambda\\dot z$ 也为振幅二阶。因此在线性振幅、一阶自转的共同精度下，水平式只留下 $\\Omega_E\\sin\\lambda$。这一步来自明确的阶次判断，并不是断言地轴的水平分量不存在。摆长 $l$ 应量到摆球质心，不能用悬挂建筑的总高度代替。\n"
+  },
+  {
+    "index": 44,
+    "caption": "相对静止释放产生极细椭圆，主轴按慢旋转因子进动",
+    "start": 93131,
+    "end": 93733,
+    "preceding": "ign*}\n在随慢角 $-\\sigma t$ 转动的水平坐标中，这是一条短轴与长轴之比为 $|\\sigma|/\\kappa$ 的极细椭圆。检查 $t=0$，位置为 $(a,0)$，两速度都为零。只写 $a e^{-\\mathrm i\\sigma t}\\cos\\omega_0t$ 会给出初始 $\\dot y=-\\sigma a$，因此它不是该精确初值问题的完整解。\n\n若人为取 $v_0=-\\mathrm i\\sigma a$，则 $B=0$，$\\zeta=a e^{-\\mathrm i\\sigma t}\\cos\\kappa t$，在慢旋转坐标中严格沿一条直线振动。真实地球的 $|\\sigma|/\\kappa$ 很小，通常说“振动平面缓慢转动”是对主轴方向的准确近似，但推导时仍应保留释放条件。\n"
+  },
+  {
+    "index": 45,
+    "caption": "北半球振动主轴缓慢顺时针进动",
+    "start": 94295,
+    "end": 94662,
+    "preceding": "eriod}\n\\end{equation}\n北半球顺时针、南半球逆时针；赤道一阶进动为零，极点进动周期为一个恒星日。这一结果仅取地轴的当地竖直投影，不能用整个 $\\Omega_E$ 代替 $\\Omega_E\\sin\\lambda$。\n\n$T_P$ 是慢角累计 $360^\\circ$ 的通常进动周期。一条没有箭头的振动轴转过 $180^\\circ$ 即与原直线重合，因此若只比较无向轴，方向重合时间是 $T_P/2$；这不代表整个摆的快振动相位也恢复。傅科慢进动周期恰为同纬度惯性圆周期的两倍。\n\n摆的快振动周期近似为 $T_0=2\\pi\\sqrt{l/g}$，由摆长和重力决定；进动周期由纬度和地球自转决定。振幅由初条件决定，$\\sqrt{l/g}$ 的量纲是时间，不能用它作为振幅、直径或周长。\n"
+  },
+  {
+    "index": 46,
+    "caption": "傅科摆测量的三个环节",
+    "start": 96437,
+    "end": 96873,
+    "preceding": "(x^2+y^2)\\right]=0.\n\\]\n科氏交叉项抵消，证明其不改变该模型的水平振动能量。能量恒定不意味着振动方向恒定；功率与力的偏转作用是不同问题。\n\n\\subsection{实验中的阻尼、补能与方向误差}\\label{topic:foucaultpractice}\n实际摆的能量因空气阻力和悬挂损耗衰减。对称、适当定相的微小驱动力可以补偿能量损失；补能并不是理论上禁止的操作，但驱动若偏向某个水平方向，就可能改变振动主轴。检验进动时应同时关注驱动对称性与悬挂自由度。\n\n悬点两个水平方向的刚度差会分裂固有频率，释放时的横向扰动会产生椭圆轨迹，地板振动和气流也可转动主轴。这些运动可能与地球进动叠加。因此实验常用长摆、细致的对称悬挂、平稳释放，并记录足够长的时间，将快振动与慢进动分别拟合。\n"
+  },
+  {
+    "index": 47,
+    "caption": "规定运动与受力运动的两种求解路径",
+    "start": 99845,
+    "end": 100386,
+    "preceding": "两倍科氏项；若 $\\Om$ 变化，再出现欧拉项。\n\n勒让德变换给出\n\\[\nH'=\\vect p'\\cdot\\vect v'-L=\\frac12m|\\vect v'|^2+U-\\frac12m|\\Om\\times\\vect r|^2=J.\n\\]\n当 $L$ 不显含时间时，$H'$ 守恒。此推导为后续分析力学作准备：坐标变化不会改变物理运动，但会改变速度相关项以及正则动量的表达。\n\n\\subsection{两类问题的计算顺序}\\label{topic:workflow}\n已知轨迹或规定相对运动的运动学问题，先求 $\\vect v',\\vect a'$，再通过变换求绝对运动，最后根据真实牛顿方程求力。已知真实力的动力学问题，则先选择动系、写完整惯性项，再投影、求解相对运动，最后恢复反力和绝对量。\n"
+  }
+]

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw(0,0)circle(1.4);\draw[->,gray](-1.7,0)--(2,0)node[right]{$x$};\draw[->,gray](0,-1.7)--(0,2)node[above]{$y$};\draw[->,thick](0,0)--(.99,.99)node[midway,left]{$\vect r$};\draw[->](.99,.99)--(.4,1.58)node[above]{$\dd\vect s$};\draw[->,thick](.1,-2.2)--(1.5,-2.2)node[right]{$\vect B$};\node[below left]at(0,0){$O$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect B\cdot\dd\vect s=-Br\sin\chi\dd\chi$\\[6pt]$\Downarrow$\\[6pt]$B\oint y\dd x=-\pi Br^2$};
+\end{tikzpicture}

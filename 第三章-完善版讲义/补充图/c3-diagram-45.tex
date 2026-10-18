@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw[thick](-2.5,0)arc(180:360:2.5);
+\coordinate(O)at(0,0);\coordinate(C)at(.975,-1.689);
+\draw[guide](-1.95,0)arc(180:360:1.95);\draw[guide](O)--(0,-2.5);\draw[guide](O)--(1.25,-2.165);
+\draw[fill=soft,thick](C)circle(.55);
+\fill(O)circle(2pt)node[above]{$O$};\fill(C)circle(2pt)node[above left]{$C$};
+\draw[force](1.25,-2.165)--(.7,-1.212)node[above right]{$N$};
+\draw[force](1.25,-2.165)--(2.03,-1.715)node[right]{$F$};
+\draw[force](C)--(.975,-2.8)node[right]{$mg$};
+\node[font=\small]at(-2,-2.8){虚线圆弧：圆心轨迹};\draw(0,-.8)arc(270:300:.8); \node at(.34,-.99){$\varphi$};
+\end{tikzpicture}

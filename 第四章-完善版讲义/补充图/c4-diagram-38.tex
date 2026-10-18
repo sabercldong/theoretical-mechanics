@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.88]
+\foreach \xx/\lab/\sg in {0/低压/1,6/高压/-1}{\begin{scope}[shift={(\xx,0)}]
+\draw[guide](0,0)circle(1.1);\draw[guide](0,0)circle(1.8);\node at(0,0){\lab};
+\ifnum\sg=1 \draw[ink,thick,->]({1.45*cos(20)},{1.45*sin(20)})arc(20:145:1.45);
+\else \draw[ink,thick,->]({1.45*cos(145)},{1.45*sin(145)})arc(145:20:1.45);\fi
+\coordinate(P)at(1.45,0);\fill(P)circle(2.5pt);
+\draw[force](P)--++({-.85*\sg},0)node[below=5pt]{$\vect F_p$};
+\draw[force](P)--++({.85*\sg},0)node[below=5pt]{$\vect F_C$};
+\draw[->,muted](P)--++(0,{\sg*1.1})node[right]{$\vect v_g$};
+\end{scope}}
+\node[align=center]at(3,-2.55){北半球俯视；$\vect F_p+\vect F_C\simeq0$\\局部忽略曲率加速度与摩擦，南半球速度方向反向};
+\end{tikzpicture}

@@ -1,0 +1,4 @@
+% 两端位移为零选择正弦振型，内部曲率通过张力给横向加速度；初形和初速度各确定一组时间系数。
+\begin{tikzpicture}[x=1cm,y=.8cm]
+\foreach \n in {1,2,3}{\pgfmathsetmacro{\dy}{-2*(\n-1)}\begin{scope}[yshift=\dy cm]\draw[guide](0,0)--(6,0);\draw[ink,thick,domain=0:6,samples=80]plot(\x,{.7*sin(\n*180*\x/6)});\fill(0,0)circle(2pt);\fill(6,0)circle(2pt);\node[right]at(6.4,0){$n=\n$};\end{scope}}
+\end{tikzpicture}

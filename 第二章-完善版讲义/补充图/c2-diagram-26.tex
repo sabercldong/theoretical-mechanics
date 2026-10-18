@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=4cm,y=2.8cm]
+\draw[->](-.08,0)--(1.62,0)node[right]{$x/l$};
+\draw[->](0,-.06)--(0,1.13)node[above]{$y/l$};
+\foreach \xx in {.5,1,1.5}{\draw(\xx,0)--(\xx,-.025)node[below]{$\xx$};}
+\draw(0,1)--(-.025,1)node[left]{$1$};
+\draw[ink,thick]plot[domain=0:.8900586117,samples=140]({\x-.5*sin(360*\x/pi)},{.5*(1-\x^2-cos(360*\x/pi))});
+\draw[muted,thick,dashed]plot[domain=0:.8900586117,samples=140]({\x+.5*sin(360*\x/pi)},{.5*(1-\x^2+cos(360*\x/pi))});
+\fill[ink](.4009724842,.2077956677)circle(1.5pt);\fill[muted](1.3791447392,0)circle(1.5pt);
+\draw[guide](.4009724842,.2077956677)--(1.3791447392,0)node[midway,above,sloped]{碰地时的杆};
+\draw[ink,thick](.78,1.09)--(.92,1.09)node[right]{球1（初始下球）};
+\draw[muted,thick,dashed](.78,.92)--(.92,.92)node[right]{球2（初始上球）};
+\end{tikzpicture}

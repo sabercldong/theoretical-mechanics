@@ -1,0 +1,5 @@
+% 最高点的绳速由柱心平动与圆柱自转同向叠加；地面接触点瞬时静止，静摩擦仍提供转动力矩。
+\begin{tikzpicture}
+\draw[thick](-1,-1)--(4,-1);\draw[ink,thick](0,0)circle(1);\fill(0,0)circle(2pt)node[below]{$C$};\draw[thick](0,1)--(4.5,1)arc(90:0:.35)--(4.85,-1.6);\draw(4.5,.65)circle(.35);\draw[fill=soft](4.5,-1.6)rectangle(5.2,-2.25);\node at(4.85,-1.93){$m$};
+\draw[force](.3,1)--(1.5,1)node[above]{$T$};\draw[force](0,-1)--(1,-1)node[below]{$f$};\node[left]at(-1,0){$M,R$};\draw[force](5.5,-1.5)--(5.5,-2.4)node[right]{$y$};
+\end{tikzpicture}

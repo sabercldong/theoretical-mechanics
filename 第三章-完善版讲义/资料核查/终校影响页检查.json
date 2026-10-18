@@ -1,0 +1,38 @@
+{
+  "pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+  "pages": 218,
+  "text_changed_pages": [
+    48,
+    106,
+    135,
+    146,
+    184
+  ],
+  "pixel_changed_pages": [
+    48,
+    64,
+    66,
+    68,
+    72,
+    73,
+    76,
+    79,
+    80,
+    85,
+    92,
+    93,
+    96,
+    100,
+    106,
+    107,
+    109,
+    113,
+    135,
+    146,
+    172,
+    184
+  ],
+  "unchanged_pages": 196,
+  "syntax_check": "qpdf --check passed; PyMuPDF did not repair file",
+  "regression_notes": "发现首次 PDF 导出存在单页内容流损坏；从同一 XDV 重新导出后通过 PDF 语法及流编码检查。此记录针对重新导出的文件。"
+}

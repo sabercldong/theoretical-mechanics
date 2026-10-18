@@ -1,0 +1,156 @@
+{
+  "c3-2-p007-couple": {
+    "caption": "等大反向的非共线二力构成力偶；图中为顺时针力偶，例~\\ref{ex:c3-16} 取两力反向后的逆时针情形"
+  },
+  "c3-4-p009-tipping-cube": {
+    "caption": "立方体绕地面棱转动的截面；图中 $\\alpha$ 对应正文倾角 $\\theta$，释放时为 $\\theta_0$",
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "f6cf37e0397bab6441a4c5cf97a499b137fc1834352ed330f9ced6472acae834"
+  },
+  "c3-5-p033-wheel-left-acceleration": {
+    "caption": "轮缘左侧点的相对切向与法向加速度；图中浅色 $\\omega$ 为角速度，$\\varepsilon$ 对应正文角加速度 $\\alpha$"
+  },
+  "c3-5-p028-two-wheel-forces": {
+    "caption": "双轮和悬挂物的受力；$T,T^{\\prime}$ 大小相等，悬挂段张力为 $S$。原图 $\\varepsilon_1,\\varepsilon_2$ 分别以各轮提升重物时的转向为正，正文两轮统一取逆时针为正"
+  },
+  "c3-6-p021-nutation-tracks": {
+    "caption": "单位球面上的重陀螺轴迹：单向、回环与尖点；原图上、下边界分别为 $\\theta_2=\\theta_{\\min}$、$\\theta_1=\\theta_{\\max}$"
+  },
+  "c3-3-p005-mass-element": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": "第3、5、6页为同一质元图，选第5页的完整图形；保留质元位置、动量与角速度全部标记。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "83787c093483fa8c7945587f289cb321d28e488f1f51cfa9ed421d524a18e025"
+  },
+  "c3-3-p009-cube-center": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "5df617785490fb7a3c03370c02ad0f84e14935e88218751f707fb7b1de5d0d3e"
+  },
+  "c3-3-p011-cube-vertex": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "3824db7eb49dc68f7549ca4bf11284ed7d3380ff1be1a9b5499a6c6197ae34d2"
+  },
+  "c3-3-p013-parallel-axes": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "421d64f1a5aee2ec90dbb3932ef97e8bd8d4e8a708c04fda08ea51f238d39b19"
+  },
+  "c3-3-p013-perpendicular-axes": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "d43235b2050bceb89b9c13823bb2e964ea09b744f286bb1ab01abba5e30b316d"
+  },
+  "c3-3-p014-rod-direction": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-labels-figures.pdf",
+    "notes": "工作副本仅保留课件原有细杆图组，解除邻接无关公式造成的裁剪冲突；无重绘。图中杆沿x、θ为夹角，正文杆沿z、α为夹角，图题已说明。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "7d6a3aa0ab7ea5f98ae92bac430cfaf481cb71f93771d366737a9f85c2e556c2"
+  },
+  "c3-3-p015-body-bases": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "e4106bad2a51e10b40747a53089d24cc104741aebc3a488150ff1c257cc48aa7"
+  },
+  "c3-3-p019-paired-symmetry": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "6f6abc93857cf6ee4f880912ca2f04deb7f5c6843551846a858ae3f1aa081c04"
+  },
+  "c3-3-p021-lamina-axes": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "dc33ac23967d59d65407da27ee93b46861d001f3786ced1efa526dd544797963"
+  },
+  "c3-3-p022-symmetry-examples": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": "保留课件照片及水印、标记；用于说明几何对称性，惯量主轴推断还须满足正文的质量分布对称条件。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "f490082dd2c73926683f207c3e802512d246b14597a8dfe341765994acbdf083"
+  },
+  "c3-3-p024-octant-sphere": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "459bc6a8fe808c9287c9a74427cd37d93e52cd74b728e62b37d93c925f0ff2f5"
+  },
+  "c3-3-p038-solid-sphere": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "f57570c5829e415cda0b2d7098c817ca2d658757282dc8160f2f781cbfd89f4e"
+  },
+  "c3-3-p042-hemisphere-pair": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": "只保留第42页几何图；第43页质心惯量公式错误，未复制，讲义正确给出83/320、83/320、2/5。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "4b92f4c9755ba88d3d2152a1e0568ed5d114ff80c3ee21cae8007ccdb2861330"
+  },
+  "c3-3-p047-triangle-masses": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "00819d9e74da91596159816b6be3cab298c7c8235f1af8a98d37285e00233ffe"
+  },
+  "c3-4-p002-fixed-axis-cases": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": "课件底部三段动画的同一代表时刻；保留原有O与角速度标记。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "3f047352e4dfdb3c5e37d922e093e78c2340280a00123109051f77827d76066a"
+  },
+  "c3-4-p003-circular-path": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-labels-figures.pdf",
+    "notes": "为避免LibreOffice把数学标签裁成半字，在工作副本启用PPT内嵌原始PNG后备标签。原始几何、线条及标记不变；兼容记录见原始标签兼容记录.json。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "3432a4473809bdd2e1476d6b71b80d0454a5ee23821800fae510177cd461ff98"
+  },
+  "c3-4-p008-physical-pendulum": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "42b3c8623a84b607248397b44fc0d564a25b06cf9230e0e5e55e45b2055a1bb1"
+  },
+  "c3-4-p011-massive-pulley": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "91cb1d016fcb6f292fdc204aa17877fe112633c68641550f0f547318d6c5627d"
+  },
+  "c3-4-p013-bearing-forces": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-labels-figures.pdf",
+    "notes": "采用PPT内嵌原始PNG后备标签兼容导出，避免原公式对象在LibreOffice中截断，几何及符号保持原图。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "52c6d3d31d08ce20486a484263041b117dd22df5b37e638d00d9259b7701f6c3"
+  },
+  "c3-4-p018-tilted-disk": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。 上裁界由163收至164pt，移除上方题干底边，保留完整坐标标签。",
+    "sha256": "b6cd4ea3d8bf716571010f38516642fc86df25698b7dc1c093386f277501cec7",
+    "crop_rect_pt": [
+      133.0,
+      164.0,
+      563.0,
+      377.0
+    ]
+  },
+  "c3-4-p019-tilted-disk-3d": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "53ecfef224faa03eacf47aa8477627fb16509e253b891aa83b0724382a7ae126"
+  },
+  "c3-4-p024-centrifugal-couple": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-labels-figures.pdf",
+    "notes": "在工作副本仅保留课件原有力偶图对象后导出，避开交错的无关正文、系数式；红、蓝箭头方向及其作用点全部保留。 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "dc4be48621bb4979056a1062e653f251f183d80a22949bc458b8b58f72277181"
+  },
+  "c3-4-p027-t-rod-loads": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "0d586a3f55fb07461d855e31af58e344fe530cedb944d7dd6fcf8861199138b6"
+  },
+  "c3-4-p028-t-rod-accelerations": {
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pdf",
+    "notes": " 终校从仅将母版背景设为白色的工作副本提取，幻灯片对象XML及媒体字节不变；去掉与图形无关的模板色条。",
+    "sha256": "975826fc19ff01c19e0dc55dfcd6ab652fa8877467fb2310cbce457a81fa4628"
+  },
+  "c3-6-p018-heavy-top": {
+    "crop_rect_pt": [
+      435,
+      234.25,
+      604,
+      471
+    ],
+    "sha256": "28bb6dd51a0371d57140d20602277c8234d69401347641d1576fa48f4fa152e3",
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。 终校将上裁界由233调至234.25pt，去除相邻公式底边，保留竖直轴端点。"
+  }
+}

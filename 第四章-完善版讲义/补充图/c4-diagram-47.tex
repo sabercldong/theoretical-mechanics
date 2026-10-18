@@ -1,0 +1,10 @@
+\begin{tikzpicture}[node distance=.6cm,box/.style={draw=ink,text width=3.1cm,minimum height=1.7cm,align=center}]
+\node[box,fill=soft](a){已知位置与运动规律\\求 $\vect v',\vect a'$};
+\node[box,right=of a](b){速度、加速度变换\\求绝对运动};
+\node[box,right=of b](c){真实牛顿方程\\求真实力与反力};
+\draw[force](a)--(b);\draw[force](b)--(c);
+\node[box,fill=soft,below=1cm of a](d){已知真实力与约束\\选参考系和坐标};
+\node[box,right=of d](e){写动系牛顿方程\\投影并解初值问题};
+\node[box,right=of e](f){计算约束反力\\恢复绝对量};
+\draw[force](d)--(e);\draw[force](e)--(f);
+\end{tikzpicture}

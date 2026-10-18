@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[->,gray](0,0)--(3.7,0)node[right]{$x$};\fill(.5,0)circle(3pt)node[below]{$\vect r_0$};\fill(2.4,0)circle(3pt)node[below]{$\vect r(t)$};\draw[->,thick](2.4,.5)--(3.4,.5)node[above]{$\vect v$};\node at(1.8,1.5){$F=0,\quad D=\vect r\cdot m\vect v$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$D(\tau)-D(0)=mv^2\tau$\\[6pt]$\Downarrow$\\[6pt]$2\overline T+\overline W=mv^2\ne0$};
+\end{tikzpicture}

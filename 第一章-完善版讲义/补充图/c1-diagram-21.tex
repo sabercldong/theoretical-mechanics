@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+\draw[muted,thick](-1.2,-.6)--(-1.2,3.1)--(3.2,3.1)--(3.2,-.6);\draw[muted](-1.2,-.6)--(3.2,-.6);
+\coordinate(O)at(1.7,2.8);\coordinate(P)at(.6,.9);\draw[thick](O)--(P);\draw[guide](O)--(1.7,.3);\fill[ink](P)circle(4pt);\fill[ink](O)circle(2pt);
+\draw[force](P)--++(0.6947368421,1.2)node[midway,left=3pt]{$T$};\draw[force](P)--++(-0.6947368421,0)node[left]{$ma_0$};\draw[force](P)--++(0,-1.2)node[right]{$mg$};
+\draw(1.7,2.15)arc(-90:-120.07:.65);\node at(1.42,1.97){$\beta$};\draw[force](3.7,2.5)--(5.2,2.5)node[right]{$a_0$};\node[align=center]at(4.5,.5){小车参考系\\$\vect g_{\rm eff}=\vect g-\vect a_0$};
+\end{tikzpicture}

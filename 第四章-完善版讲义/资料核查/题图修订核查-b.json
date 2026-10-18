@@ -1,0 +1,210 @@
+{
+  "reviewer": "independent_visual_qa_b",
+  "scope": "例25–47",
+  "source_statements": "工作文件/完整题干.json",
+  "source_atlas": "工作文件/题图校样编译/题图校样.pdf",
+  "pages_viewed": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "method": "读取完整题干；使用 fitz 将校样 PDF 第3–6页渲染为 PNG，并以 view_image 实际逐图检查；对疑点读取对应 TikZ 源码。",
+  "overall": "例25–47共23题均已实际查看；初检3项问题已经全部修复并对更新后校样逐图复看通过，无未解决问题。",
+  "reviewed": [
+    {
+      "example": 25,
+      "status": "pass",
+      "finding": "悬点距轴 a、绳长 l、外倾角从悬点向下铅垂线量起，符合题意。",
+      "issues": []
+    },
+    {
+      "example": 26,
+      "status": "pass",
+      "finding": "细杆上端 O、竖直转轴、杆长与质量 L,M、下垂参考线及倾角均一致。",
+      "issues": []
+    },
+    {
+      "example": 27,
+      "status": "pass",
+      "finding": "竖轴、重力向下、旋转容器与凹向上的自由表面一致。",
+      "issues": []
+    },
+    {
+      "example": 28,
+      "status": "pass",
+      "finding": "沿管 x、切向基矢 e2 与正转方向一致；图为 x>0 的示意。",
+      "issues": []
+    },
+    {
+      "example": 29,
+      "status": "fixed_passed",
+      "finding": "向外匀速箭头 u 与旋转方向一致；坐标字母需统一。",
+      "issues": [
+        {
+          "severity": "minor",
+          "category": "notation",
+          "detail": "图中径向距离标 r，题干与后续解答使用 x(t)=a+ut。",
+          "recommended_fix": "把图中 r 改为 x。",
+          "source": "题图/ex29.tex",
+          "status": "fixed_passed"
+        }
+      ],
+      "rereview": "已将径向标注 r 改为 x；渲染与题干一致。"
+    },
+    {
+      "example": 30,
+      "status": "pass",
+      "finding": "两根弹簧均标 k、位移沿直槽、盘正转方向一致。",
+      "issues": []
+    },
+    {
+      "example": 31,
+      "status": "pass",
+      "finding": "两根弹簧和直槽、偏离圆心的滑块示意一致；具体数值由正文给出。",
+      "issues": []
+    },
+    {
+      "example": 32,
+      "status": "pass",
+      "finding": "初始点 O 与惯性初速度 u E_X 明确；转动基矢与正角一致。",
+      "issues": []
+    },
+    {
+      "example": 33,
+      "status": "pass",
+      "finding": "球形子午面、纬度从赤道量起、北/天基矢及地轴方向一致。",
+      "issues": []
+    },
+    {
+      "example": 34,
+      "status": "pass",
+      "finding": "球形地球及纬度几何与题干一致。",
+      "issues": []
+    },
+    {
+      "example": 35,
+      "status": "fixed_passed",
+      "finding": "东/天轴及东、西行箭头正确；速度字母需统一。",
+      "issues": [
+        {
+          "severity": "minor",
+          "category": "notation",
+          "detail": "图中东、西行速度都标 U，题干使用以东为正的有向速度 u。",
+          "recommended_fix": "统一为 u；若比较同速东/西行，可分别标 +|u| 和 −|u|。",
+          "source": "题图/ex35.tex",
+          "status": "fixed_passed"
+        }
+      ],
+      "rereview": "东西行速度统一标为大小 |u|，箭头分别向西、向东，含义清楚。"
+    },
+    {
+      "example": 36,
+      "status": "pass",
+      "finding": "从上俯视逆时针箭头与北、东坐标正确；周期为 14 h。",
+      "issues": []
+    },
+    {
+      "example": 37,
+      "status": "pass",
+      "finding": "东西等压线、北侧高压、压强梯度向北、f>0 均符合题意。",
+      "issues": []
+    },
+    {
+      "example": 38,
+      "status": "pass",
+      "finding": "L 和 U 表示尺度与速度；示意涡旋没有把旋向绑定到半球。",
+      "issues": []
+    },
+    {
+      "example": 39,
+      "status": "pass",
+      "finding": "h 高度、初始相对静止、向东 x/向上 z 与重力方向一致。",
+      "issues": []
+    },
+    {
+      "example": 40,
+      "status": "pass",
+      "finding": "两种高度 h1,h2、静止释放、坐标和重力方向一致。",
+      "issues": []
+    },
+    {
+      "example": 41,
+      "status": "pass",
+      "finding": "从地面原点上抛 w0，向东 x/向上 z，返回 z=0 一致。",
+      "issues": []
+    },
+    {
+      "example": 42,
+      "status": "pass",
+      "finding": "从 h 高度向东水平抛出 u0，初速方向及重力方向一致。",
+      "issues": []
+    },
+    {
+      "example": 43,
+      "status": "fixed_passed",
+      "finding": "h 与小东向初速度 ui 的方向正确，但释放点标签被箭杆穿过。",
+      "issues": [
+        {
+          "severity": "material_layout",
+          "category": "overlap",
+          "detail": "释放点的 node[right] 与东向 ui 箭头位于同一高度，箭杆穿过“释放点”文字，且标签靠近 ui。",
+          "recommended_fix": "将“释放点”移到节点左侧或左上方，保留 ui 在箭头上方。",
+          "source": "题图/ex43.tex",
+          "status": "fixed_passed"
+        }
+      ],
+      "rereview": "释放点移至左上方，与初速箭杆及 ui 标记分离；没有文字重叠。"
+    },
+    {
+      "example": 44,
+      "status": "pass",
+      "finding": "水平投影中 P0 位于正东 x=a、y=0，初始水平速度为零，均一致。",
+      "issues": []
+    },
+    {
+      "example": 45,
+      "status": "pass",
+      "finding": "巴黎位于北京以北，北极在轴上，地轴转动和恒星日标记一致。",
+      "issues": []
+    },
+    {
+      "example": 46,
+      "status": "pass",
+      "finding": "径向管、x 坐标、e1/e2 及转动方向一致；图示一般运动瞬间，初始静止条件在正文。",
+      "issues": []
+    },
+    {
+      "example": 47,
+      "status": "pass",
+      "finding": "转盘上距轴 a 的固定物块、Omega(t)、径/切向基矢一致。",
+      "issues": []
+    }
+  ],
+  "issue_count": 3,
+  "rendered_evidence": [
+    "工作文件/qa-b/atlas3.png",
+    "工作文件/qa-b/atlas4.png",
+    "工作文件/qa-b/atlas5.png",
+    "工作文件/qa-b/atlas6.png"
+  ],
+  "note": "校样编译可能早于主代理最后修订；上述问题已结合当前 ex29/ex35/ex43.tex 核实。",
+  "open_issue_count": 0,
+  "fixed_issue_count": 3,
+  "followup_review": {
+    "reviewed_at": "2026-10-17T17:07:42.275097+08:00",
+    "atlas_mtime": "2026-10-17T17:07:04.042926+08:00",
+    "examples": [
+      29,
+      35,
+      43
+    ],
+    "method": "确认 PDF 时间晚于修订源文件后，重新渲染这3图并用 view_image 实际查看。",
+    "status": "passed",
+    "evidence": [
+      "工作文件/qa-b/fixed-ex29.png",
+      "工作文件/qa-b/fixed-ex35.png",
+      "工作文件/qa-b/fixed-ex43.png"
+    ]
+  }
+}

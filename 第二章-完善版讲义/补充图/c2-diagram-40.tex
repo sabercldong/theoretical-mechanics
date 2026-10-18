@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=.034cm,y=.09cm]
+\draw[->](0,0)--(196,0)node[right]{$\Theta$};
+\draw[->](0,0)--(0,37)node[above]{$\theta$};
+\draw[ink,thick]plot[domain=0:180,samples=200](\x,{atan2(sin(\x),2+cos(\x))});
+\draw[guide](0,30)--(180,30);
+\draw[guide](0,17)--(180,17);
+\foreach \a in {60,120,180}{\draw(\a,0)--(\a,-1)node[below]{$\a^\circ$};}
+\foreach \a in {17,30}{\draw(0,\a)--(-3,\a)node[left]{$\a^\circ$};}
+\draw[guide](52.784865,0)--(52.784865,17);
+\draw[guide](161.215135,0)--(161.215135,17);
+\fill[ink](52.784865,17)circle(2.3pt)node[above left]{$\Theta_1$};
+\fill[ink](161.215135,17)circle(2.3pt)node[above right]{$\Theta_2$};
+\fill[muted](120,30)circle(2pt);
+\node at(86,35){$\lambda=2$};
+\end{tikzpicture}

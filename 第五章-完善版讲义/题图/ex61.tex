@@ -1,0 +1,2 @@
+% 能量水平线在相平面中是抛物线，$\dot q=1$ 规定沿横轴向右；参数导数给时间原点常数。
+\begin{tikzpicture}\draw[->](-2.5,0)--(2.8,0)node[right]{$q$};\draw[->](0,-1.9)--(0,2.1)node[above]{$p$};\draw[ink,thick,domain=-1.5:1.5,smooth]plot(\x,{1.4-.65*\x*\x});\node[above]at(0,1.4){$p=E-aq^2$};\draw[force](.4,1.296)--(1,.75);\node at(0,-1.6){$a>0$ 示意，$\dot q=1$};\end{tikzpicture}

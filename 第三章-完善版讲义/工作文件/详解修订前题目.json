@@ -1,0 +1,770 @@
+[
+  {
+    "kind": "example",
+    "n": 1,
+    "title": "曲线平动的速度与加速度",
+    "stem": "\\label{ex:c3-1}\n一个矩形平台的中心沿半径 $R$ 的圆周以恒定角速率 $\\Omega$ 运动，\n但平台相对于地面保持水平且各边方向不变。求平台上任意点的速度和加速度。\n",
+    "answer": "\\solution 取中心位置\n$\\vect r_C=R(\\cos\\Omega t\\,\\vect i+\\sin\\Omega t\\,\\vect j)$。\n任一点 $\\vect r_A=\\vect r_C+\\vect\\rho_A$，其中 $\\vect\\rho_A$ 在空间中也为常矢量，故\n\\[\n\\vect v_A=R\\Omega(-\\sin\\Omega t\\,\\vect i+\\cos\\Omega t\\,\\vect j),\\quad\n\\vect a_A=-R\\Omega^2(\\cos\\Omega t\\,\\vect i+\\sin\\Omega t\\,\\vect j).\n\\]\n平台角速度为零，各点虽然都有向心加速度，却没有相对于平台中心的转动。\n\n\n",
+    "length": 323
+  },
+  {
+    "kind": "example",
+    "n": 2,
+    "title": "更换基点后的位置分解",
+    "stem": "\\label{ex:c3-2}\n刚体的质心为 $C$，某铰接点为 $O$。已知本体常矢量\n$\\vect\\rho_{OC}$ 与 $\\vect\\rho_{OA}$，写出以 $C$ 和 $O$ 为基点的等价描述。\n",
+    "answer": "\\solution\n\\[\n\\vect r_C=\\vect r_O+\\mathsf R\\vect\\rho_{OC},\\quad\n\\vect r_A=\\vect r_O+\\mathsf R\\vect\\rho_{OA}\n=\\vect r_C+\\mathsf R(\\vect\\rho_{OA}-\\vect\\rho_{OC}).\n\\]\n改变的是平移部分和相对位置；姿态矩阵相同。\n这也解释了质心系和固定铰点系为什么可以给出同一个刚体的运动。\n\n\n",
+    "length": 218
+  },
+  {
+    "kind": "example",
+    "n": 3,
+    "title": "定点转动中一点的速度",
+    "stem": "\\label{ex:c3-3}\n刚体绕固定点 $O$ 运动，某瞬间\n$\\vect\\omega=(2,1,-1)\\,\\mathrm{s}^{-1}$，\n$\\vect r_{OA}=(1,-2,3)\\,\\mathrm m$。求点 $A$ 的速度。\n",
+    "answer": "\\solution\n\\[\n\\vect v_A=\\begin{vmatrix}\\vect i&\\vect j&\\vect k\\\\2&1&-1\\\\1&-2&3\\end{vmatrix}\n=(1,-7,-5)\\,\\mathrm{m\\,s^{-1}}.\n\\]\n检查 $\\vect v_A\\cdot\\vect r_{OA}=1+14-15=0$，\n以及 $\\vect v_A\\cdot\\vect\\omega=2-7+5=0$。\n相对速度同时垂直于两个参与叉积的矢量。\n\n\n把行列式完全展开可看出每个分量的来源：\n\\begin{align*}\nv_x&=\\omega_yz-\\omega_zy=3-2=1,\\\\\nv_y&=\\omega_zx-\\omega_xz=-1-6=-7,\\\\\nv_z&=\\omega_xy-\\omega_yx=-4-1=-5.\n\\end{align*}\n再用标量恒等式作第三个独立核查：\n\\[\nv^2=\\omega^2r^2-(\\vect\\omega\\cdot\\vect r)^2.\n\\]\n本题 $\\omega^2=6$、$r^2=14$、$\\vect\\omega\\cdot\\vect r=-3$，\n故 $v^2=84-9=75$，与 $1^2+(-7)^2+(-5)^2=75$ 一致。\n若还给定 $\\vect\\alpha$，才可完整确定加速度；\n单给某瞬间 $\\vect\\omega$ 不能自行假定 $\\vect\\alpha=0$。\n\n\n",
+    "length": 627
+  },
+  {
+    "kind": "example",
+    "n": 4,
+    "title": "转台上的水平轴圆盘",
+    "stem": "\\label{ex:c3-4}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-1-p026-colored-turntable}{支架上的圆盘及两根转动轴}\n% END ORIGINAL FIGURES\n\n转台绕竖直轴以常速 $\\Omega$ 转动，盘轴始终水平且随转台转动，\n圆盘相对于转台绕盘轴以常速 $\\omega$ 转动。\n令瞬时盘轴方向为 $\\vect e_r$，竖直向上为 $\\vect k$。\n",
+    "answer": "\\solution\n\\[\n\\vect\\omega_{\\text{总}}=\\omega\\vect e_r+\\Omega\\vect k,\\qquad\n|\\vect\\omega_{\\text{总}}|=\\sqrt{\\omega^2+\\Omega^2}.\n\\]\n虽两个速率都恒定，方向 $\\vect e_r$ 仍在变化，故\n\\[\n\\vect\\alpha=\\omega\\Omega\\vect e_\\varphi.\n\\]\n这说明恒定的分转速不保证总角速度矢量恒定。\n\n\n本例可以写成固定空间分量，直接检查上述角加速度。\n取转台初始径向沿 $\\vect i$：\n\\[\n\\vect e_r(t)=\\cos\\Omega t\\,\\vect i+\\sin\\Omega t\\,\\vect j,\n\\qquad\n\\vect e_\\varphi(t)=-\\sin\\Omega t\\,\\vect i+\\cos\\Omega t\\,\\vect j.\n\\]\n因此\n\\[\n\\vect\\omega_{\\text{总}}\n=\\omega\\cos\\Omega t\\,\\vect i+\\omega\\sin\\Omega t\\,\\vect j+\\Omega\\vect k,\n\\]\n\\[\n\\vect\\alpha\n=-\\omega\\Omega\\sin\\Omega t\\,\\vect i+\\omega\\Omega\\cos\\Omega t\\,\\vect j.\n\\]\n角速率大小恒定，意味着 $\\vect\\omega\\cdot\\vect\\alpha=0$，\n而不是意味着 $\\vect\\alpha=0$。\n总角速度端点绕竖直轴画圆，其方向作圆锥运动。\n\n若盘自转速率与转台速率都允许变化，则\n\\[\n\\vect\\alpha\n=\\dot\\omega\\vect e_r+\\omega\\Omega\\vect e_\\varphi+\\dot\\Omega\\vect k.\n\\]\n三个项分别代表盘相对加速、盘轴随台转向、转台自身加速。\n\n\n",
+    "length": 831
+  },
+  {
+    "kind": "example",
+    "n": 5,
+    "title": "倾斜轴陀螺的角速度",
+    "stem": "\\label{ex:c3-5}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-1-p011-inclined-top}{倾斜自转轴与竖直进动轴：$\\omega_1$ 为自转角速率，$\\omega_2$ 为进动角速率}\n% END ORIGINAL FIGURES\n\n陀螺对称轴 $\\vect n$ 与竖直轴夹角 $\\theta$，\n轴绕竖直方向以角速率 $\\Omega$ 进动，物体相对于进动架绕 $\\vect n$\n以角速率 $\\omega$ 自转，$\\theta$ 恒定。求总角速度。\n",
+    "answer": "\\solution 令 $\\vect n=\\sin\\theta\\,\\vect e_r+\\cos\\theta\\,\\vect k$，则\n\\[\n\\vect\\omega_{\\text{总}}\n=\\omega\\sin\\theta\\,\\vect e_r+(\\Omega+\\omega\\cos\\theta)\\vect k,\n\\quad\n\\omega_{\\text{总}}^2=\\omega^2+\\Omega^2+2\\omega\\Omega\\cos\\theta.\n\\]\n投影到对称轴得到\n$\\vect\\omega_{\\text{总}}\\cdot\\vect n=\\omega+\\Omega\\cos\\theta$。\n相对自转速率与总角速度沿对称轴的分量不是同一个量。\n\n\n把总角速度向对称轴方向和平面内垂直方向分解。\n在 $\\vect n$ 与 $\\vect k$ 张成的平面中，\n令 $\\vect t$ 沿增大轴倾角的方向，满足\n$\\vect k=\\cos\\theta\\,\\vect n-\\sin\\theta\\,\\vect t$。\n于是\n\\[\n\\vect\\omega_{\\text{总}}\n=(\\omega+\\Omega\\cos\\theta)\\vect n-\\Omega\\sin\\theta\\,\\vect t.\n\\]\n第一项使盘面内的材料方向绕本体轴转动，\n第二项负责改变本体轴在空间中的方向。\n把两项平方相加，\n\\begin{align*}\n|\\vect\\omega_{\\text{总}}|^2\n&=(\\omega+\\Omega\\cos\\theta)^2+\\Omega^2\\sin^2\\theta\\\\\n&=\\omega^2+\\Omega^2+2\\omega\\Omega\\cos\\theta.\n\\end{align*}\n这也说明即使轴向投影在某一瞬间抵消，物体仍可能有非零横向角速度。\n当 $\\theta=0$，两转轴同向，合角速度为 $(\\omega+\\Omega)\\vect k$；\n当 $\\theta=\\pi/2$，两分角速度正交，大小为平方和的平方根。\n有向速率允许 $\\omega$、$\\Omega$ 取负值，不能在叉积运算前都改成绝对值。\n\n\n",
+    "length": 919
+  },
+  {
+    "kind": "example",
+    "n": 6,
+    "title": "悬挂杆端圆盘的两种约束",
+    "stem": "\\label{ex:c3-6}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-1-p012-hanging-disks}{悬挂杆端圆盘及两种轴线约束}\n% END ORIGINAL FIGURES\n\n悬挂点附近的支架绕竖直轴以 $\\Omega$ 转动，杆与竖直方向成固定夹角 $\\beta$。\n比较两种机构：第一种圆盘平面始终垂直于杆，并相对支架绕杆以 $\\omega$ 转动；\n第二种用万向机构保持圆盘水平，其相对支架的方位角以 $\\omega$ 增长。\n",
+    "answer": "\\solution 第一种的盘轴为 $\\vect n$，故\n$\\vect\\omega_1=\\Omega\\vect k+\\omega\\vect n$。\n杆竖直时变为 $(\\Omega+\\omega)\\vect k$。\n第二种盘面法线始终为 $\\vect k$，其姿态只有水平面内转角，\n$\\vect\\omega_2=(\\Omega+\\omega)\\vect k$。\n若第二种的 $\\omega$ 是直接相对地面测量的绝对转速，\n则总角速度为 $\\omega\\vect k$，不能再次加上 $\\Omega$。\n题目中的“绕轴转动”必须连同相对参考架一起规定。\n\n\n",
+    "length": 280
+  },
+  {
+    "kind": "example",
+    "n": 7,
+    "title": "铰接摆杆端的旋转圆盘",
+    "stem": "\\label{ex:c3-7}\n长 $l$ 的杆 $OA$ 绕固定水平铰轴以有向角速率 $\\omega_1$ 转动。\n杆端装半径 $a$ 的圆盘，盘面始终垂直杆，相对杆绕杆以 $\\omega_2$ 转动。\n$t=0$ 杆竖直向下，圆盘上半径 $AC$ 沿水平铰轴正向，\n半径 $AB$ 垂直铰轴并在水平面内。求 $B,C$ 点随时间的速度。\n",
+    "answer": "\\solution 取右手随杆轴组：$\\vect e_1$ 沿 $OA$，$\\vect e_3$ 沿水平铰轴，\n$\\vect e_2=\\vect e_3\\times\\vect e_1$。\n杆倾角 $q=\\omega_1t$，圆盘相对转角 $s=\\omega_2t$，则\n\\[\n\\vect r_{AB}=a(\\cos s\\,\\vect e_2+\\sin s\\,\\vect e_3),\\qquad\n\\vect r_{AC}=a(-\\sin s\\,\\vect e_2+\\cos s\\,\\vect e_3).\n\\]\n总角速度为 $\\vect\\omega=\\omega_1\\vect e_3+\\omega_2\\vect e_1$，\n圆心速度 $\\vect v_A=l\\omega_1\\vect e_2$。利用右手叉积，\n\\begin{align*}\n\\vect v_B&=-a\\omega_1\\cos s\\,\\vect e_1\n+(l\\omega_1-a\\omega_2\\sin s)\\vect e_2\n+a\\omega_2\\cos s\\,\\vect e_3,\\\\\n\\vect v_C&=a\\omega_1\\sin s\\,\\vect e_1\n+(l\\omega_1-a\\omega_2\\cos s)\\vect e_2\n-a\\omega_2\\sin s\\,\\vect e_3.\n\\end{align*}\n在最低位置且 $s=0$ 时，\n$\\vect v_B=-a\\omega_1\\vect e_1+l\\omega_1\\vect e_2+a\\omega_2\\vect e_3$，\n$\\vect v_C=(l\\omega_1-a\\omega_2)\\vect e_2$。\n两运动的速度可能在 $C$ 点抵消。\n\n\n",
+    "length": 748
+  },
+  {
+    "kind": "example",
+    "n": 8,
+    "title": "匀速进动陀螺的本体分量",
+    "stem": "\\label{ex:c3-8}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-1-p019-top-initial}{节点线与本体轴重合的一种陀螺初态}\n% END ORIGINAL FIGURES\n\n取 $\\theta=\\theta_0$，\n$\\varphi=\\pi/2+\\Omega t$，$\\psi=-\\pi/2+\\omega t$。\n求角速度在本体坐标系的分量及初始空间分量。\n",
+    "answer": "\\solution\n\\[\n\\omega_x=-\\Omega\\sin\\theta_0\\cos\\omega t,\\quad\n\\omega_y=\\Omega\\sin\\theta_0\\sin\\omega t,\\quad\n\\omega_z=\\Omega\\cos\\theta_0+\\omega.\n\\]\n初始时 $z$ 轴位于 $\\xi\\zeta$ 平面且向 $\\xi$ 倾斜，\n故空间分量为\n\\[\n\\vect\\omega(0)=\\omega\\sin\\theta_0\\,\\vect e_\\xi+\n(\\Omega+\\omega\\cos\\theta_0)\\vect e_\\zeta.\n\\]\n两种表达使用不同轴组，不能直接逐项比较数值；乘姿态矩阵后应一致。\n\n\n本例的三个速率为 $\\dot\\theta=0,\\dot\\varphi=\\Omega,\\dot\\psi=\\omega$。\n代入 $\\sin(-\\pi/2+\\omega t)=-\\cos\\omega t$、\n$\\cos(-\\pi/2+\\omega t)=\\sin\\omega t$，\n即可得到三个本体分量。\n横向分量在本体系中按相对自转速率 $\\omega$ 变化，\n但空间中的本体轴按进动速率 $\\Omega$ 绕竖直转动。\n它们描述不同参考系中的方向变化，因此没有矛盾。\n\n按当前本体轴求角加速度分量时，\n$\\vect\\omega\\times\\vect\\omega=0$，所以只需对本体分量求导：\n\\[\n\\alpha_x=\\Omega\\omega\\sin\\theta_0\\sin\\omega t,\\qquad\n\\alpha_y=\\Omega\\omega\\sin\\theta_0\\cos\\omega t,\\qquad\n\\alpha_z=0.\n\\]\n空间表达则为\n\\[\n\\vect\\alpha\n=\\Omega\\omega\\sin\\theta_0\n(-\\sin\\Omega t\\,\\vect e_\\xi+\\cos\\Omega t\\,\\vect e_\\eta).\n\\]\n两者大小均为 $|\\Omega\\omega\\sin\\theta_0|$。\n若误把三个本体分量都视为空间固定轴上的分量，\n就会把真实轴转向与坐标分量变化混淆。\n\n\n",
+    "length": 933
+  },
+  {
+    "kind": "example",
+    "n": 9,
+    "title": "理想地球的姿态描述",
+    "stem": "\\label{ex:c3-9}\n忽略自转轴的长期改变，以轨道法线为固定 $\\zeta$ 轴，\n把地球自转轴作为本体 $z$ 轴。设轴倾角为常数 $\\varepsilon$，\n固定其方位使节点角为 $\\varphi_0$，地球日转角速率为 $\\omega$。\n",
+    "answer": "\\solution\n\\[\n\\theta=\\varepsilon,\\qquad\\varphi=\\varphi_0,\\qquad\n\\psi=\\psi_0+\\omega t,\\qquad \\vect\\omega=\\omega\\vect e_z.\n\\]\n年周运动属于质心平移，不能作为地球刚体姿态的额外自转角。\n若纳入自转轴的慢进动，则应使 $\\varphi$ 缓慢变化，\n此时本体轴向分量也包括 $\\dot\\varphi\\cos\\varepsilon$。\n$\\varphi_0$ 的数值取决于参考 $\\xi$ 轴的选择。\n\n",
+    "length": 259
+  },
+  {
+    "kind": "example",
+    "n": 10,
+    "title": "同步自转卫星",
+    "stem": "\\label{ex:c3-10}\n卫星在同一平面内做匀速圆周运动，角速率为 $\\Omega$，\n始终以同一面朝向中心天体。取本体 $z$ 轴与轨道法线同向。\n",
+    "answer": "\\solution 可在欧拉角的奇异位置取 $\\theta=0,\\varphi=0$，\n$\\psi=\\psi_0+\\Omega t$，因而\n$\\omega_x=\\omega_y=0,\\omega_z=\\Omega$。\n朝向中心的体内方向在空间中每周期转过 $2\\pi$，\n因此同步锁定并不表示卫星相对于惯性系没有自转。\n\n\n",
+    "length": 162
+  },
+  {
+    "kind": "example",
+    "n": 11,
+    "title": "固定顶点圆锥的无滑动滚动",
+    "stem": "\\label{ex:c3-11}\n直圆锥顶点固定在水平面上，轴向高度 $h$，半顶角 $0<\\alpha<\\pi/2$。\n圆锥沿一条母线接触地面并无滑动滚动。\n以顶点为原点，竖直向上为 $\\zeta$，\n$t=0$ 时接触母线沿 $+\\eta$ 方向。\n圆锥相对于进动架绕对称轴的有向自转速率为常数 $\\omega$。\n求欧拉角、角速度本体分量及底面圆周最高点的瞬时速度。\n",
+    "answer": "\\solution 对称轴与水平面的夹角为 $\\alpha$，\n$\\theta=\\pi/2-\\alpha$。\n初始方位为 $\\pi/2$，故 $\\varphi(0)=\\pi$。\n选初始本体 $x$ 轴沿竖直方向在垂直于 $z$ 轴平面内的投影，\n则 $\\psi(0)=-\\pi/2$。这个投影与 $z$ 轴正交，才能构成正交本体系。\n滚动瞬时转轴是接触母线，必水平，故\n\\[\n\\dot\\varphi+\\omega\\cos\\theta=0,\\qquad\n\\dot\\varphi=-\\omega\\sin\\alpha.\n\\]\n欧拉角及本体分量为\n\\[\n\\theta=\\frac\\pi2-\\alpha,\\quad\n\\varphi=\\pi-\\omega\\sin\\alpha\\,t,\\quad\n\\psi=-\\frac\\pi2+\\omega t,\n\\]\n\\[\n\\omega_x=-\\omega\\sin\\alpha\\cos\\alpha\\sin\\psi,\\quad\n\\omega_y=-\\omega\\sin\\alpha\\cos\\alpha\\cos\\psi,\\quad\n\\omega_z=\\omega\\cos^2\\alpha.\n\\]\n设接触母线水平单位方向为 $\\vect u$，则\n$\\vect e_z=\\cos\\alpha\\,\\vect u+\\sin\\alpha\\,\\vect e_\\zeta$，\n总角速度为 $\\vect\\omega=\\omega\\cos\\alpha\\,\\vect u$。\n\n底面半径 $b=h\\tan\\alpha$。最高圆周位置相对于顶点为\n\\[\n\\vect r_A=\\frac{h\\cos2\\alpha}{\\cos\\alpha}\\vect u\n+2h\\sin\\alpha\\,\\vect e_\\zeta.\n\\]\n于是\n\\[\n\\vect v_A=\\vect\\omega\\times\\vect r_A\n=2h\\omega\\sin\\alpha\\cos\\alpha\\,(\\vect u\\times\\vect e_\\zeta),\n\\qquad |v_A|=h|\\omega|\\sin2\\alpha.\n\\]\n这指的是恰在最高位置的体内质点的瞬时速度，\n不是对每一时刻几何最高点的位置函数直接求导。\n\n\n",
+    "length": 947
+  },
+  {
+    "kind": "example",
+    "n": 12,
+    "title": "匀速曲柄带动的连杆",
+    "stem": "\\label{ex:c3-12}\n曲柄 $OA$ 长 $a$，以角速率 $\\Omega$ 在平面内匀速转动，\n滑块 $B$ 沿过 $O$ 的竖直直线运动，连杆 $AB$ 长 $L>a$。\n令曲柄转角 $q=\\Omega t$，使 $A$ 的水平坐标为 $a\\sin q$。\n取本体 $x$ 轴从 $B$ 指向 $A$，初始沿向下的固定 $\\xi$ 轴，\n$\\eta$ 轴向右，$\\zeta$ 轴垂直运动平面向外。求连杆的姿态及角速度。\n",
+    "answer": "\\solution 连杆相对于向下轴的有向角 $\\psi$ 满足\n$\\sin\\psi=a\\sin q/L$。选不越过死点的连续支路，\n\\[\n\\theta=0,\\quad\\varphi=0,\\quad\n\\psi=\\arcsin\\frac{a\\sin\\Omega t}{L},\\qquad\n\\vect\\omega=\\frac{a\\Omega\\cos\\Omega t}\n{\\sqrt{L^2-a^2\\sin^2\\Omega t}}\\vect e_\\zeta.\n\\]\n若固定 $\\eta$ 轴取向左，$\\psi$ 和角速度分量同时变号。\n当曲柄通过横向极位，连杆瞬时角速度为零；但滑块与连杆可能仍在平移。\n$L>a$ 保证本支路根号不为零，不能把长度约束省去。\n\n\n",
+    "length": 329
+  },
+  {
+    "kind": "example",
+    "n": 13,
+    "title": "由姿态矩阵提取非奇异欧拉角",
+    "stem": "\\label{ex:c3-13}\n已知本体到空间的旋转矩阵元素为 $R_{ij}$，\n并约定 $0<\\theta<\\pi$。写出欧拉角的反解。\n",
+    "answer": "\\solution\n\\[\n\\theta=\\arccos R_{33},\\quad\n\\varphi=\\operatorname{atan2}(R_{13},-R_{23}),\\quad\n\\psi=\\operatorname{atan2}(R_{31},R_{32}).\n\\]\n使用双参数反正切可保留象限信息。\n若 $\\theta=0$ 或 $\\pi$，这些单独的反解失效，应改求可确定的角度组合。\n\n\n",
+    "length": 200
+  },
+  {
+    "kind": "example",
+    "n": 14,
+    "title": "两次直角转动为何不能当作矢量相加",
+    "stem": "\\label{ex:c3-14}\n比较先绕 $y$ 后绕 $x$ 各转 $\\pi/2$ 与反向次序的结果。\n",
+    "answer": "\\solution\n\\[\n\\mathsf R_x(\\pi/2)\\mathsf R_y(\\pi/2)\n=\\begin{pmatrix}0&0&1\\\\1&0&0\\\\0&1&0\\end{pmatrix},\\quad\n\\mathsf R_y(\\pi/2)\\mathsf R_x(\\pi/2)\n=\\begin{pmatrix}0&1&0\\\\0&0&-1\\\\-1&0&0\\end{pmatrix}.\n\\]\n两者显然不同。例如初始 $\\vect e_z$ 分别变为 $\\vect e_x$ 与 $-\\vect e_y$。\n第一种合成的迹为零，对应总角 $2\\pi/3$，\n不等于把两个“角度矢量”相加得到的 $\\pi/\\sqrt2$。\n但小转动满足\n\\[\n\\mathsf R_x(\\epsilon)\\mathsf R_y(\\epsilon)\n=\\mathsf1+\\epsilon(\\mathsf T_x+\\mathsf T_y)+O(\\epsilon^2),\n\\]\n交换次序仅在二阶开始出现差异。\n\n\n",
+    "length": 444
+  },
+  {
+    "kind": "example",
+    "n": 15,
+    "title": "同向与反向平行力的合成",
+    "stem": "\\label{ex:c3-15}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-2-p006-parallel-opposite}{反向不等平行力的合力位于较大力一侧}\n% END ORIGINAL FIGURES\n\n沿 $y$ 方向的两力 $F_1,F_2$ 作用于横坐标 $x_1,x_2$。\n$F_i$ 按向上为正取代数值，求合力作用线。\n",
+    "answer": "\\solution 先以 $x_1$ 为取矩点，两力总矩为 $(x_2-x_1)F_2$。\n若合力为 $F=F_1+F_2$，作用线位于 $x_R$，其矩必须满足\n\\[\n(x_R-x_1)(F_1+F_2)=(x_2-x_1)F_2.\n\\]\n当 $F_1+F_2\\ne0$ 时，解得\n\\[\nF=F_1+F_2,\\qquad\nx_R=x_1+\\frac{F_2}{F_1+F_2}(x_2-x_1)\n=\\frac{x_1F_1+x_2F_2}{F_1+F_2}.\n\\]\n令 $x_2>x_1$。两力同向时，$F_2/(F_1+F_2)$ 在0与1之间，\n所以 $x_R$ 位于两力之间，并有\n$F_1(x_R-x_1)=F_2(x_2-x_R)$。\n取 $F_1=2F_0,F_2=3F_0$，合力就在从第一作用线向第二作用线走 $3/5$ 间距的位置。\n合力靠近较大的力，而不是靠近较小的力。\n\n反向时仍使用带符号代数值。若 $F_1=3F_0,F_2=-F_0$，\n合力为向上的 $2F_0$，并有 $x_R=x_1-(x_2-x_1)/2$，\n作用线位于第一力外侧。若反向较大的力在 $x_2$，则作用线在 $x_2$ 外侧。\n无需另记一套比例，只要保持符号与矩方程即可。\n\n若 $F_2=-F_1$，前面的除法失效，因为主矢为零。\n此时关于原点的主矩为\n\\[\nM_O=x_1F_1+x_2F_2=F_1(x_1-x_2).\n\\]\n两作用线分离就形成非零力偶；两线重合时主矩也为零，力系完全相消。\n当反向两力趋于等大而保持间距不变时，普通合力越来越小，\n$|x_R|$ 越来越大，但乘积“合力乘力臂”保持有限。这说明等大反向极限必须用力偶描述。\n\n",
+    "length": 726
+  },
+  {
+    "kind": "example",
+    "n": 16,
+    "title": "扳手上的力偶",
+    "stem": "\\label{ex:c3-16}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-2-p007-couple}{等大反向的非共线二力构成力偶；图中为顺时针力偶，例~\\ref{ex:c3-16} 取两力反向后的逆时针情形}\n% END ORIGINAL FIGURES\n\n在相距 $d$ 的两条平行作用线上施加大小相等的反向力 $F$，\n方向使物体逆时针转动。再把整个力偶平移到其他位置，求主矢、主矩。\n",
+    "answer": "\\solution 主矢为 $\\vect F_{\\text{主}}=0$，主矩为 $\\vect M_O=Fd\\vect k$。\n移到 $A$ 后，由式\\eqref{eq:momenttranslation}，\n\\[\n\\vect M_A=\\vect M_O-\\vect r_{OA}\\times\\vect F_{\\text{主}}=Fd\\vect k.\n\\]\n可改变两力大小与间距，只要 $Fd$ 及矩方向不变，整体转动效果仍相同。\n但单独保留一个力会产生非零主矢，不能替代力偶。\n若再有一个普通力，须把该力的主矢与此自由矩一起保留，\n而不是说“力偶没有合力”就从力系中删去力偶。\n力偶的自由性针对刚体整体效果，局部应力仍依赖真实施力位置。\n\n",
+    "length": 321
+  },
+  {
+    "kind": "example",
+    "n": 17,
+    "title": "不能合成单力的空间力系",
+    "stem": "\\label{ex:c3-17}\n在原点作用 $\\vect F=(0,0,F)$，同时施加力偶\n$\\vect M_O=(0,0,C)$，$F,C\\ne0$。判断能否以一力替代。\n",
+    "answer": "\\solution 任意单力关于原点的矩 $\\vect r\\times\\vect F$\n都垂直于 $\\vect F$，而本题矩平行于 $\\vect F$。\n又有 $\\vect F\\cdot\\vect M_O=FC\\ne0$，故不能以一力替代。\n中心轴就是 $z$ 轴；轴向拉力与扭矩须同时保留。\n\n",
+    "length": 149
+  },
+  {
+    "kind": "example",
+    "n": 18,
+    "title": "粗糙地面上靠光滑棱边的均匀杆",
+    "stem": "\\label{ex:c3-18}\n均匀杆长 $2l$、重 $P$，下端 $A$ 放在粗糙水平面，\n中途支在距地面高度 $h$ 的光滑棱边 $B$，杆与水平面成角 $\\varphi$。\n地面静摩擦系数为 $\\mu$。求平衡反力以及临界滑动角满足的方程。\n棱边是局部接触而不是整块竖直光滑墙，接触反力垂直于杆。\n",
+    "answer": "\\solution 先确定接触方向，再列矩方程。取 $A$ 为原点，地面向右为 $x$、向上为 $y$，\n杆的单位方向为 $\\vect u=(\\cos\\varphi,\\sin\\varphi)$。\n中点 $D$ 与棱边接点 $B$ 的位置分别为\n\\[\n\\vect r_{AD}=l\\vect u,\n\\qquad \\vect r_{AB}=\\frac h{\\sin\\varphi}\\vect u\n=(h\\cot\\varphi,h).\n\\]\n光滑棱边反力垂直杆且推向左上，故为\n$\\vect N_1=N_1(-\\sin\\varphi,\\cos\\varphi)$。\n地面反力拆成 $(f,N_2)$，先把向右的 $f$ 作为正方向；\n重力为 $(0,-P)$。三条平衡式逐一写成\n\\begin{align*}\n\\sum F_x=0&:\\quad f-N_1\\sin\\varphi=0,\\\\\n\\sum F_y=0&:\\quad N_2+N_1\\cos\\varphi-P=0,\\\\\n\\sum M_A=0&:\\quad\n(h\\cot\\varphi)N_1\\cos\\varphi+hN_1\\sin\\varphi-Pl\\cos\\varphi=0.\n\\end{align*}\n最后一式中的前两项合为\n$N_1h(\\cos^2\\varphi+\\sin^2\\varphi)/\\sin\\varphi$。\n也可以直接看出力矩大小为 $N_1AB$，因为 $N_1$ 垂直杆。\n因此\n\\[\nN_1\\frac h{\\sin\\varphi}=Pl\\cos\\varphi,\n\\quad N_1=\\frac{Pl}{h}\\sin\\varphi\\cos\\varphi.\n\\]\n依次回代水平、竖直平衡，得\n\\[\nf=\\frac{Pl}{h}\\sin^2\\varphi\\cos\\varphi,\n\\qquad N_2=P-\\frac{Pl}{h}\\sin\\varphi\\cos^2\\varphi.\n\\]\n在 $0<\\varphi<\\pi/2$ 内，$N_1>0,f>0$，所以假定的摩擦方向正确。\n不能将地面反力预先设成重力 $P$：棱边也承担了一部分竖直载荷。\n\n\\paragraph{反力解与可行静止解。}\n必须同时检验\n\\[\n\\frac h{\\sin\\varphi}\\le2l,\n\\qquad h-l\\sin\\varphi\\cos^2\\varphi>0,\n\\qquad\n\\frac{l\\sin^2\\varphi\\cos\\varphi}\n{h-l\\sin\\varphi\\cos^2\\varphi}\\le\\mu.\n\\]\n第一式保证 $B$ 仍在杆上；第二式保证地面仍受压；第三式是摩擦需求不超过上限。\n只有将要滑动时第三式取等号，临界角为\n\\begin{equation}\n\\mu=\\frac{l\\sin^2\\varphi_0\\cos\\varphi_0}\n{h-l\\sin\\varphi_0\\cos^2\\varphi_0}.\n\\end{equation}\n若把 $h/l=\\eta$、$u=\\sin\\varphi_0$ 作为无量纲量，待解条件为\n\\[\n\\mu=\\frac{u^2\\sqrt{1-u^2}}{\\eta-u+u^3},\n\\qquad 0<u<1,\\quad u\\ge\\eta/2,\\quad\\eta-u+u^3>0.\n\\]\n数值求根时可直接使用这一式。若为消去根号而平方，会得到\n$\\mu^2(\\eta-u+u^3)^2=u^4(1-u^2)$，\n但还须重新检查原式及上述符号限制，不能把所有多项式根都视为临界姿态。\n有多个临界根时，应沿实际改变角度的连续可行分支寻找首次失稳位置。\n\n\\paragraph{第二解：求三力的交点坐标。}\n将地面两分量合为 $\\vect R_A=(f,N_2)$，\n其与竖直的夹角 $\\beta$ 满足 $\\tan\\beta=f/N_2$。\n重力作用线是 $x=l\\cos\\varphi$；棱边法线可写成\n\\[\n(x,y)=(h\\cot\\varphi,h)+t(-\\sin\\varphi,\\cos\\varphi).\n\\]\n令其横坐标等于重力线横坐标，求得\n\\[\nt=\\frac{h\\cot\\varphi-l\\cos\\varphi}{\\sin\\varphi},\n\\quad\nQ=\\left(l\\cos\\varphi,\n\\frac{h-l\\sin\\varphi\\cos^2\\varphi}{\\sin^2\\varphi}\\right).\n\\]\n三力共点要求 $\\vect R_A$ 沿 $AQ$。\n取其水平距离与竖直高度之比，得到\n\\begin{align*}\n\\tan\\beta\n&=\\frac{l\\cos\\varphi}{Q_y}\n=\\frac{l\\sin^2\\varphi\\cos\\varphi}{h-l\\sin\\varphi\\cos^2\\varphi}\\\\\n&=\\frac{l\\cos\\varphi}\n{l\\sin\\varphi+(h/\\sin\\varphi-l)/\\sin\\varphi}.\n\\end{align*}\n在临界角 $\\varphi_0$，$\\tan\\beta=\\mu$，因此与第一解完全一致。\n$Q_y>0$ 与 $N_2>0$ 是同一条件：若交点落到地面下方，\n要求的合地面反力就会包含向下的法向分量，单向接触不能实现。\n三力法把摩擦锥条件变成了合反力方向的几何条件。\n\n",
+    "length": 2246
+  },
+  {
+    "kind": "example",
+    "n": 19,
+    "title": "两根直角刚接杆的悬挂平衡",
+    "stem": "\\label{ex:c3-19}\n两均匀细杆长 $a,b$、线密度相同，刚接成直角。\n$a$ 杆的上端 $A$ 用理想铰悬挂。\n令 $a$ 杆从 $A$ 向下并向右偏离竖直角 $\\theta$，\n$b$ 杆从接点向左下伸出。求平衡角。\n",
+    "answer": "\\solution 取 $A$ 为原点，向右为 $x$、向上为 $y$。\n$a$ 杆接点为 $B=(a\\sin\\theta,-a\\cos\\theta)$，\n$b$ 杆从 $B$ 沿 $(-\\cos\\theta,-\\sin\\theta)$ 伸出。\n两个杆方向点积为零，确实构成直角。\n各杆质心是对应线段中点，位置为\n\\[\n\\vect r_1=\\left(\\frac a2\\sin\\theta,-\\frac a2\\cos\\theta\\right),\n\\quad\n\\vect r_2=\\left(a\\sin\\theta-\\frac b2\\cos\\theta,\n-a\\cos\\theta-\\frac b2\\sin\\theta\\right).\n\\]\n理想铰反力通过 $A$，对 $A$ 不产生矩。两杆重力的矩分别为\n$-m_1gx_1$ 与 $-m_2gx_2$，因此\n\\[\nm_1\\frac a2\\sin\\theta+\n m_2\\left(a\\sin\\theta-\\frac b2\\cos\\theta\\right)=0.\n\\]\n将正弦项合并，\n\\[\na(m_1+2m_2)\\sin\\theta=m_2b\\cos\\theta,\n\\qquad\\tan\\theta=\\frac{m_2b}{a(m_1+2m_2)}.\n\\]\n同线密度时 $m_1=\\lambda a,m_2=\\lambda b$，约去 $\\lambda$ 得\n\\[\n\\tan\\theta=\\frac{b^2}{a^2+2ab}.\n\\]\n不应把“均匀”自动理解为两杆线密度相同：各杆内部均匀仍允许两杆材料或截面不同，\n所以题干中的相同线密度是获得这个简式的必要条件。\n\n从总质心看，\n$x_C=(m_1x_1+m_2x_2)/(m_1+m_2)$，矩平衡正是 $x_C=0$。\n于是总重力作用线经过悬点，铰反力的水平分量为零、竖直分量为 $(m_1+m_2)g$。\n用质量加权质心求角度，与把两重力分别取矩是同一个计算。\n\n\\paragraph{哪一个零力矩姿态稳定？}\n令 $A_0=a(m_1/2+m_2)$、$B_0=m_2b/2$，重力势能除去常数后为\n\\[\nV(\\theta)=-(A_0\\cos\\theta+B_0\\sin\\theta)g.\n\\]\n求导得到 $V'=g(A_0\\sin\\theta-B_0\\cos\\theta)$，\n驻点条件与上面的矩方程相同。取 $0<\\theta<\\pi/2$ 的分支时，\n\\[\nV''=g(A_0\\cos\\theta+B_0\\sin\\theta)>0,\n\\]\n质心在 $A$ 下方，势能为极小值，是稳定平衡。\n反向姿态 $\\theta+\\pi$ 的 $V''$ 反号，质心在 $A$ 上方，是不稳定平衡。\n当 $b\\to0$，$\\theta\\to0$，单杆竖直悬挂；\n当 $a=b$，$\\tan\\theta=1/3$，这给出一个可直接核验的几何特例。\n\n",
+    "length": 1227
+  },
+  {
+    "kind": "example",
+    "n": 20,
+    "title": "同时接触竖墙和棱边的光滑杆",
+    "stem": "\\label{ex:c3-20}\n均匀杆长 $2l$、重 $P$，一端 $O$ 接触光滑竖墙，\n杆中部支于光滑棱边 $B$；棱边距竖墙水平距离为 $d$。\n杆从 $O$ 向右上倾斜，与水平面夹角 $\\theta$，\n且 $B$ 在质心之前：$d\\le l\\cos\\theta$。\n求平衡角及反力。\n",
+    "answer": "\\solution 取 $O=(0,0)$，杆方向为 $\\vect u=(\\cos\\theta,\\sin\\theta)$。\n均匀杆中点为 $D=(l\\cos\\theta,l\\sin\\theta)$，\n棱边接点为 $B=(d,d\\tan\\theta)$，沿杆距离 $OB=d/\\cos\\theta$。\n墙在 $O$ 左侧，其光滑反力只能水平向右，记大小 $R$；\n棱边法向垂直杆向左上，记 $\\vect N=N(-\\sin\\theta,\\cos\\theta)$。\n\n水平、竖直平衡分别为\n\\[\nR-N\\sin\\theta=0,\\qquad N\\cos\\theta-P=0,\n\\]\n因此\n\\[\nN=\\frac P{\\cos\\theta},\\qquad R=P\\tan\\theta.\n\\]\n取 $O$ 矩消掉 $R$，棱边力与杆垂直，力矩为 $NOB$；\n重力矩为 $-Pl\\cos\\theta$，所以\n\\[\nN\\frac d{\\cos\\theta}=Pl\\cos\\theta.\n\\]\n代入 $N$ 后逐步消元，\n\\[\n\\frac{Pd}{\\cos^2\\theta}=Pl\\cos\\theta,\n\\quad d=l\\cos^3\\theta,\n\\quad\\theta=\\arccos\\left(\\frac dl\\right)^{1/3}.\n\\]\n长度 $l$ 是半杆长，不能把它误用成全长 $2l$；重力臂来自中点位置。\n\n\\paragraph{第二解：两个正交投影怎样产生三个余弦？}\n墙反力作用线是过 $O$ 的水平线；重力作用线是过 $D$ 的竖直线。\n两线交于 $Q=(l\\cos\\theta,0)$。三力共点要求 $BQ$ 为棱边法线，\n即 $BQ\\perp OB$。直角三角形 $OBQ$ 中，\n\\[\nOQ=l\\cos\\theta,\n\\qquad OB=OQ\\cos\\theta=l\\cos^2\\theta.\n\\]\n再把 $OB$ 投影到水平方向，\n$d=OB\\cos\\theta=l\\cos^3\\theta$。\n第一个余弦来自质心位置的水平投影，第二个来自直角三角形，\n第三个来自支点距离的水平投影。三力共点说的是作用线相交，\n不要求三个力箭头都朝向交点；本例的 $N$ 箭头沿 $BQ$ 的反向也符合定理。\n\n在非退化双接触中 $0<d<l$，所以 $0<\\theta<\\pi/2$，两反力均为正。\n又因 $d=l\\cos^3\\theta\\le l\\cos\\theta$，支点确在质心之前。\n当 $d=l$ 时 $\\theta=0$，墙反力 $R=0$，成为退化极限；\n当 $d\\to0$ 时所需 $N,R$ 发散，理想式的极限不意味着有限支承可承受无限反力。\n本题光滑墙的水平法向与光滑棱边的斜法向必须同时保留。\n\n",
+    "length": 1163
+  },
+  {
+    "kind": "example",
+    "n": 21,
+    "title": "光滑半球碗中的均匀杆",
+    "stem": "\\label{ex:c3-21}\n半径 $r$ 的光滑半球碗固定，碗口水平。\n均匀细杆一端 $B$ 位于碗内，穿过碗缘 $C$ 伸向碗外，\n碗内杆段长 $BC=c$，杆总长为 $l>c$。\n忽略杆厚度，碗内端反力沿球面法线，碗缘反力垂直杆。\n求这个平衡分支中 $l$ 与 $c$ 的关系。\n",
+    "answer": "\\solution 在经过杆的竖直截面内，球心为 $O=(0,0)$，右碗缘为 $C=(r,0)$。\n设杆从碗内端 $B$ 向右上伸出，单位方向为\n$\\vect u=(\\cos\\theta,\\sin\\theta)$，故 $B=C-c\\vect u$。\n由于 $B$ 在圆上，\n\\[\n|B|^2=(r-c\\cos\\theta)^2+c^2\\sin^2\\theta=r^2.\n\\]\n展开并约去 $r^2$，得到 $c^2-2rc\\cos\\theta=0$；$c>0$，所以\n\\[\nc=2r\\cos\\theta.\n\\]\n这就是弦长关系，不需要把 $c$ 误作半径。\n代回 $B$，可写成 $B=(-r\\cos2\\theta,-r\\sin2\\theta)$。\n\n碗内端支持沿半径 $BO$，朝向球心；碗缘反力垂直杆，向左上。\n设两条法线交于 $Q$。碗缘法线写成\n\\[\nQ=(r,0)+t(-\\sin\\theta,\\cos\\theta).\n\\]\n另一法线是过原点且平行 $B$ 的直线。联立可得\n\\[\nt=2r\\sin\\theta=c\\tan\\theta,\n\\qquad Q=(r\\cos2\\theta,r\\sin2\\theta).\n\\]\n因此 $Q=-B$：这一平衡几何里两法线的交点正好是 $B$ 的径向对称点。\n重力作用线必须经过 $Q$。杆的中点 $D=B+(l/2)\\vect u$，\n重力竖直，故 $x_D=x_Q$，得到\n\\[\n-r\\cos2\\theta+\\frac l2\\cos\\theta=r\\cos2\\theta,\n\\qquad \\frac l2=\\frac{2r\\cos2\\theta}{\\cos\\theta}\n=c\\frac{\\cos2\\theta}{\\cos^2\\theta}.\n\\]\n利用 $\\cos2\\theta=2\\cos^2\\theta-1$ 以及 $c=2r\\cos\\theta$，\n\\[\nl=2c(1-\\tan^2\\theta)\n=2c\\left(2-\\frac1{\\cos^2\\theta}\\right)\n=4c-\\frac{8r^2}{c}.\n\\]\n几何上，中点 $D$ 在碗内段上，$CD=c-l/2=c\\tan^2\\theta$。\n这提供另一条课堂作图路线：先求 $CQ=c\\tan\\theta$，\n再由 $CQ$ 的水平投影与 $CD$ 的水平投影相等，得到 $CD=CQ\\tan\\theta$。\n\n\\paragraph{用力的大小独立检验几何分支。}\n设两反力大小为 $N_B,N_C$。内端法向为\n$(\\cos2\\theta,\\sin2\\theta)$，碗缘法向为 $(-\\sin\\theta,\\cos\\theta)$，故\n\\[\nN_B\\cos2\\theta-N_C\\sin\\theta=0,\n\\quad N_B\\sin2\\theta+N_C\\cos\\theta=mg.\n\\]\n消去 $N_C$，得\n\\[\nN_B=mg\\tan\\theta,\n\\qquad N_C=mg\\frac{\\cos2\\theta}{\\cos\\theta}.\n\\]\n题设 $l>c$ 要求\n$4c-8r^2/c>c$，即 $c>\\sqrt{8/3}\\,r$。\n弦长给出 $c<2r$，所以非退化分支为\n\\[\n\\sqrt{8/3}\\,r<c<2r,\n\\qquad 0<\\theta<\\arccos\\sqrt{2/3}.\n\\]\n在这个角度范围中，两反力均为正，几何与受力相容。\n$c=2r$ 时杆沿水平直径，$N_B=0$，三力问题退化；\n$c=\\sqrt{8/3}\\,r$ 时 $l=c$，恰无碗外杆段，不符合题设严格条件。\n只检查 $l>0$ 会保留一些没有题设构型的解，因此长度、接触与题干要求须一起筛选。\n\n\n",
+    "length": 1565
+  },
+  {
+    "kind": "example",
+    "n": 22,
+    "title": "圆柱木材堆积与运输的建模研究",
+    "stem": "\\label{ex:c3-22}\n相同圆柱木材长 $l$、半径 $a$、密度 $\\rho$，\n每根质量 $m=\\rho\\pi a^2l$，截面按等边三角形紧密堆积。\n先考虑完整五层堆，底层五根、上层依次四、三、二、一根。研究：\n\\begin{enumerate}\n\\item 木材表面光滑，两侧各压一根挡杆，两杆上端连接，\n在下端施加水平向内的力 $F$，求连接处作用力与 $F$。\n\\item 缓慢撤去挡杆后，若木材不能滚落，最多能堆几层？\n\\item 木材接触静摩擦系数为 $\\mu$，在底层左右最外侧木材施加水平向内 $F$，\n最多能保持几层？\n\\item 仅保留原五层堆中的最下三层，即 $5+4+3$ 根，\n装在货车上并用允许最大拉力 $T_{\\max}$ 的钢绳固定。\n以速度 $v$ 转弯时允许的最小半径是多少？\n以速度 $V$ 紧急换道时允许的最大方向盘角速度是多少？\n\\end{enumerate}\n\\TeachingFigure{c3-diagram-21}{木材堆积研究题的几何模型}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-2-p025-stacked-logs}{受两侧夹杆约束的圆柱木材堆积}\n% END ORIGINAL FIGURES\n\n\n",
+    "answer": "\\solution 四问共有同一个截面几何，但外部约束分别改变。\n先建立每根圆柱的接触模型，再分析挡杆、撤杆、摩擦与运输。\n仅给质量、半径和木材间摩擦系数，不能唯一确定全部问项；\n应明确指出哪个量缺少哪个条件，并在明示假设下求可确定的结果。\n\n\\paragraph{共同几何与接触方程。}\n以地面为 $y=0$。完整 $n$ 层堆的圆心可编号为\n\\[\n\\vect r_{kj}=\\bigl((2j+k-n+1)a,\\ a+\\sqrt3ka\\bigr),\n\\quad k=0,\\ldots,n-1,\\quad j=0,\\ldots,n-1-k.\n\\]\n同层邻圆心水平相距 $2a$，上下相邻圆心差为 $(\\pm a,\\sqrt3a)$，\n长度也为 $2a$。它们分别给出接触法向的水平角 $0^\\circ$、$60^\\circ$、$120^\\circ$。\n总根数是 $n(n+1)/2$，五层时为15。\n接触方向由这些圆心坐标决定，不能将所有斜接触力假定竖直。\n\n对圆柱 $i$ 与 $j$ 的接触，取指向 $i$ 的法向\n$\\vect n_{ij}=(\\vect r_i-\\vect r_j)/(2a)$，\n切向 $\\vect t_{ij}=\\vect k\\times\\vect n_{ij}$。\n作用在 $i$ 上的接触力写成\n\\[\n\\vect f_{ij}=N_{ij}\\vect n_{ij}+\\tau_{ij}\\vect t_{ij},\n\\qquad N_{ij}\\ge0,\\quad |\\tau_{ij}|\\le\\mu N_{ij}.\n\\]\n对 $j$ 的作用力取相反矢量。接触点相对 $i$ 圆心的力臂为 $-a\\vect n_{ij}$，\n所以法向力通过圆心而没有矩，切向力的矩为\n$(-a\\vect n_{ij})\\times(\\tau_{ij}\\vect t_{ij})=-a\\tau_{ij}\\vect k$。\n地面接触的力臂为 $(0,-a)$，若地面摩擦向右为 $f_{ig}$，其圆心矩为 $af_{ig}\\vect k$。\n每根圆柱必须独立列两条力式与一条矩式：\n\\[\n\\sum_{j\\in\\mathcal C_i}\\vect f_{ij}\n+\\vect f_{ig}+\\vect f_{i,\\text{侧}}-mg\\vect j=0,\n\\qquad\n\\sum_{j\\in\\mathcal C_i}(-a\\vect n_{ij})\\times\\vect f_{ij}\n+(0,-a)\\times\\vect f_{ig}+M_{i,\\text{侧}}\\vect k=0.\n\\]\n若侧推力通过圆心，则 $M_{i,\\text{侧}}=0$；若施力线有高度偏差，必须加其矩。\n这些矩条件解释了为什么仅列水平力平衡不能判断圆柱是否滚落。\n\n",
+    "length": 1180
+  },
+  {
+    "kind": "example",
+    "n": 23,
+    "title": "小块组装后的总惯量",
+    "stem": "\\label{ex:c3-23}\n两个质量均为 $m$、自身中心惯量均为 $\\mathsf I_0$ 的刚体，\n其质心分别位于总质心两侧 $\\pm a\\vect e_x$，且轴方向相同。\n",
+    "answer": "\\solution 两部件的位置是 $\\vect a_\\pm=\\pm a\\vect e_x$，\n它们的外积相同，每个平移增量均为 $ma^2\\operatorname{diag}(0,1,1)$，相加得\n\\[\n\\mathsf I_C=2\\mathsf I_0+2ma^2\\begin{pmatrix}0&0&0\\\\0&1&0\\\\0&0&1\\end{pmatrix}.\n\\]\n连线轴到各部件质心垂距为零，惯量不增加；两个横向轴各距部件质心 $a$，每块加 $ma^2$。\n间距翻倍时平移贡献乘4。姿态不同时应先旋转自身张量，组装通式为\n\\[\n\\mathsf I_{\\text{总},O}=\\sum_\\alpha\\left[\n\\mathsf R_\\alpha\\mathsf I_{\\alpha,C}\\mathsf R_\\alpha^{\\mathsf T}\n+m_\\alpha(a_\\alpha^2\\mathsf1-\\vect a_\\alpha\\vect a_\\alpha^{\\mathsf T})\\right].\n\\]\n每项都须在同一公共基底表示。先求总质心，再与目标转轴联系，\n不能直接相加各自不同方向与不同原点的部件矩阵。\n\n",
+    "length": 513
+  },
+  {
+    "kind": "example",
+    "n": 24,
+    "title": "质心平动能与定点转动能的一致性",
+    "stem": "\\label{ex:c3-24}\n均匀细杆长 $L$、质量 $m$，绕端点以角速率 $\\omega$ 在平面内转动。\n",
+    "answer": "\\solution 沿杆从端点取 $s\\in[0,L]$，线密度 $m/L$，质元速度大小为 $\\omega s$。\n由速度积分\n\\[\nT=\\frac12\\frac mL\\int_0^L\\omega^2s^2\\dd s=\\frac{mL^2\\omega^2}{6},\n\\qquad I_O=\\frac mL\\int_0^L s^2\\dd s=\\frac{mL^2}{3}.\n\\]\n改以质心为基点，$v_C=\\omega L/2$，中心惯量为\n\\[\nI_C=\\frac mL\\int_{-L/2}^{L/2}s^2\\dd s=\\frac{mL^2}{12}.\n\\]\n因而\n\\[\nT=\\frac12m(\\omega L/2)^2+\\frac12\\frac{mL^2}{12}\\omega^2\n=\\frac{mL^2\\omega^2}{8}+\\frac{mL^2\\omega^2}{24}=\\frac{mL^2\\omega^2}{6}.\n\\]\n两项之比为3比1，不能略去质心平动。平行轴给出\n$I_O=I_C+m(L/2)^2=mL^2/3$，三条计算路线一致。\n\n",
+    "length": 480
+  },
+  {
+    "kind": "example",
+    "n": 25,
+    "title": "均匀矩形薄片与椭圆薄片",
+    "stem": "\\label{ex:c3-25}\n矩形边长 $a,b$，质心为原点，$x,y$ 沿边，$z$ 垂直片面。\n",
+    "answer": "\\solution 矩形区域为 $-a/2\\le x\\le a/2$、$-b/2\\le y\\le b/2$，$z=0$，\n质量面密度 $\\sigma=m/(ab)$。先计算两个平方二阶矩：\n\\begin{align*}\n\\int x^2\\dd m\n&=\\sigma\\int_{-a/2}^{a/2}x^2\\dd x\\int_{-b/2}^{b/2}\\dd y\n=\\sigma\\frac{a^3}{12}b=\\frac{ma^2}{12},\\\\\n\\int y^2\\dd m\n&=\\sigma\\int_{-a/2}^{a/2}\\dd x\\int_{-b/2}^{b/2}y^2\\dd y\n=\\sigma a\\frac{b^3}{12}=\\frac{mb^2}{12}.\n\\end{align*}\n$\\int xy\\dd m=\\sigma(\\int x\\dd x)(\\int y\\dd y)=0$，\n另外两个惯性积因为 $z=0$ 而为零。\n因此\n\\[\nI_x=\\frac{mb^2}{12},\\qquad I_y=\\frac{ma^2}{12},\n\\qquad I_z=\\frac{m(a^2+b^2)}{12}.\n\\]\n$I_x$ 含的是垂直 $x$ 轴的边长 $b$，不是沿 $x$ 的边长 $a$。\n垂直轴结果也由 $I_z=I_x+I_y$ 校验。\n\n\\paragraph{椭圆薄片的变量代换。}\n另取半轴 $a,b$ 的椭圆，区域 $x^2/a^2+y^2/b^2\\le1$，面密度为 $m/(\\pi ab)$。\n令 $x=au\\cos\\chi,y=bu\\sin\\chi$，$0\\le u\\le1,0\\le\\chi<2\\pi$。\n雅可比为\n\\[\n\\left|\\frac{\\partial(x,y)}{\\partial(u,\\chi)}\\right|\n=\\left|\\begin{matrix}a\\cos\\chi&-au\\sin\\chi\\\\b\\sin\\chi&bu\\cos\\chi\\end{matrix}\\right|\n=ab\\,u,\n\\qquad\\dd S=ab\\,u\\dd u\\dd\\chi.\n\\]\n检验质量为 $\\sigma ab(\\int_0^1u\\dd u)(\\int_0^{2\\pi}\\dd\\chi)=m$。\n对 $x$ 轴，质元垂距平方是 $y^2=b^2u^2\\sin^2\\chi$，故\n\\[\nI_x=\\sigma ab\\,b^2\\int_0^1u^3\\dd u\\int_0^{2\\pi}\\sin^2\\chi\\dd\\chi\n=\\frac{m}{\\pi}b^2\\frac14\\pi=\\frac{mb^2}{4}.\n\\]\n同理 $I_y=ma^2/4$，$\n\\int xy\\dd m=\\sigma a^2b^2\\int_0^1u^3\\dd u\\int_0^{2\\pi}\\sin\\chi\\cos\\chi\\dd\\chi=0$，\n所以\n\\[\nI_z=I_x+I_y=\\frac{m(a^2+b^2)}4.\n\\]\n$a=b$ 时得到均匀圆盘 $I_x=I_y=ma^2/4,I_z=ma^2/2$。\n矩形里的 $a,b$ 是全边长，椭圆里的 $a,b$ 是半轴；\n若比较相同外接尺寸，应将矩形边长取为 $2a,2b$，再比较系数。\n二者几何主轴方向相同，质量分布与数值惯量不同。\n% BEGIN ORIGINAL FIGURES\n",
+    "length": 1419
+  },
+  {
+    "kind": "example",
+    "n": 26,
+    "title": "均匀圆柱与细杆",
+    "stem": "\\label{ex:c3-26}\n圆柱质量 $m$、半径 $a$、高 $L$，质心 $z$ 轴沿圆柱轴。\n",
+    "answer": "\\solution 密度为 $\\rho=m/(\\pi a^2L)$。柱坐标取\n$x=s\\cos\\chi,y=s\\sin\\chi$，区域为\n\\[\n0\\le s\\le a,\\quad0\\le\\chi<2\\pi,\\quad-L/2\\le z\\le L/2,\n\\quad\\dd V=s\\dd s\\dd\\chi\\dd z.\n\\]\n体积积分先给 $\\pi a^2L$，可检查积分上下限和密度。\n轴向垂距平方为 $s^2$，故\n\\[\nI_z=\\rho\\int_{-L/2}^{L/2}\\dd z\n\\int_0^{2\\pi}\\dd\\chi\\int_0^a s^3\\dd s\n=\\rho L(2\\pi)\\frac{a^4}{4}=\\frac12ma^2.\n\\]\n横向惯量 $I_x=\\int(y^2+z^2)\\dd m$ 必须分别计算两项。\n\\begin{align*}\n\\int y^2\\dd m\n&=\\rho\\int_{-L/2}^{L/2}\\dd z\n\\int_0^{2\\pi}\\sin^2\\chi\\dd\\chi\\int_0^as^3\\dd s\n=\\rho L\\pi\\frac{a^4}{4}=\\frac{ma^2}{4},\\\\\n\\int z^2\\dd m\n&=\\rho\\int_{-L/2}^{L/2}z^2\\dd z\n\\int_0^{2\\pi}\\dd\\chi\\int_0^as\\dd s\n=\\rho\\frac{L^3}{12}(2\\pi)\\frac{a^2}{2}=\\frac{mL^2}{12}.\n\\end{align*}\n于是\n\\[\nI_x=I_y=\\frac{m(3a^2+L^2)}{12},\\qquad I_z=\\frac{ma^2}{2}.\n\\]\n$xy$ 的角积分为零；$xz,yz$ 至少对 $z$ 为奇函数，故交叉元全零。\n\n\\paragraph{圆盘、圆环与细杆的极限。}\n$L\\to0$ 且质量保持不变，变成薄圆盘，横向系数为1/4、轴向为1/2。\n质量若集中在半径 $a$ 的圆周上，轴向垂距处处为 $a$，则 $I_z=ma^2$；\n由平面与轴对称得到两个横向惯量为 $ma^2/2$。\n盘和环差别来自径向质量分布，不能只看外半径相同。\n\n$a\\to0$、总质量不变时，圆柱趋于细杆，\n$\\mathsf I_C=(mL^2/12)\\operatorname{diag}(1,1,0)$，这里杆沿 $z$。\n也可直接用线积分 $\\frac mL\\int_{-L/2}^{L/2}z^2\\dd z=mL^2/12$。\n过质心的轴与杆夹角为 $\\alpha$ 时，\n\\[\n\\vect n=(\\sin\\alpha\\cos\\gamma,\\sin\\alpha\\sin\\gamma,\\cos\\alpha),\n\\qquad I_{\\vect n}=\\frac{mL^2}{12}\\sin^2\\alpha.\n\\]\n沿杆为零，垂直杆为 $mL^2/12$，与方位角 $\\gamma$ 无关。\n忽略截面厚度使张量半正定，在求反矩阵时必须处理这个退化。\n% BEGIN ORIGINAL FIGURES\n",
+    "length": 1299
+  },
+  {
+    "kind": "example",
+    "n": 27,
+    "title": "均匀实心球的惯量",
+    "stem": "\\label{ex:c3-27}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-3-p038-solid-sphere}{均匀实心球的球心主轴}\n% END ORIGINAL FIGURES\n\n均匀球半径 $a$、质量 $m$，球心为原点。\n",
+    "answer": "\\solution 密度为 $\\rho=3m/(4\\pi a^3)$，质量区域是整个实心球。\n球坐标取\n\\[\nx=r\\sin\\vartheta\\cos\\chi,\\quad y=r\\sin\\vartheta\\sin\\chi,\n\\quad z=r\\cos\\vartheta,\n\\]\n\\[\n0\\le r\\le a,\\quad0\\le\\vartheta\\le\\pi,\\quad0\\le\\chi<2\\pi,\n\\quad\\dd V=r^2\\sin\\vartheta\\dd r\\dd\\vartheta\\dd\\chi.\n\\]\n对 $z$ 轴，$x^2+y^2=r^2\\sin^2\\vartheta$，所以\n\\[\nI_z=\\rho\\int_0^ar^4\\dd r\n\\int_0^\\pi\\sin^3\\vartheta\\dd\\vartheta\\int_0^{2\\pi}\\dd\\chi.\n\\]\n角积分用 $u=\\cos\\vartheta$，$\\dd u=-\\sin\\vartheta\\dd\\vartheta$，得到\n\\[\n\\int_0^\\pi\\sin^3\\vartheta\\dd\\vartheta\n=\\int_{-1}^{1}(1-u^2)\\dd u\n=\\left[u-\\frac{u^3}{3}\\right]_{-1}^{1}=\\frac43.\n\\]\n径向为 $a^5/5$，方位角为 $2\\pi$，故\n\\[\nI_z=\\rho\\frac{a^5}{5}\\frac43(2\\pi)\n=\\frac{8\\pi\\rho a^5}{15}=\\frac25ma^2.\n\\]\n坐标反射使三个惯性积为零，球旋转对称使三个对角元相等，因而\n$\\mathsf I_C=(2ma^2/5)\\mathsf1$。\n\n\\paragraph{第二路线：先求迹。}\n逐对角元相加，\n\\[\n\\operatorname{tr}\\mathsf I=2\\int r^2\\dd m\n=2\\rho\\int_0^ar^4\\dd r\\int_0^\\pi\\sin\\vartheta\\dd\\vartheta\\int_0^{2\\pi}\\dd\\chi\n=\\frac{8\\pi\\rho a^5}{5}.\n\\]\n由三对角相等，各惯量等于迹的1/3，再得 $2ma^2/5$。\n还可计算单个二阶矩，\n\\[\n\\int z^2\\dd m=\\rho\\frac{a^5}{5}\n\\int_{-1}^{1}u^2\\dd u(2\\pi)=\\frac{ma^2}{5},\n\\]\n$I_x$ 是 $y^2,z^2$ 两项之和。这三种积分相互校验，避免把角度雅可比漏掉。\n任意过球心轴都有 $I_{\\vect n}=2ma^2/5$，角动量与角速度同向。\n\n薄球壳质量集中在 $r=a$，面密度 $\\sigma=m/(4\\pi a^2)$，面积元为\n$a^2\\sin\\vartheta\\dd\\vartheta\\dd\\chi$，故\n\\[\nI_z=\\sigma a^4\\int_0^\\pi\\sin^3\\vartheta\\dd\\vartheta\\int_0^{2\\pi}\\dd\\chi\n=\\frac23ma^2.\n\\]\n薄壳没有实心球的径向平均，不能沿用2/5。偏心平行轴则在相应中心结果上加 $md^2$。\n\n",
+    "length": 1352
+  },
+  {
+    "kind": "example",
+    "n": 28,
+    "title": "均匀实心椭球的惯量",
+    "stem": "\\label{ex:c3-28}\n椭球边界为 $x^2/a^2+y^2/b^2+z^2/c^2=1$，质量 $m$。\n",
+    "answer": "\\solution 椭球体积为 $4\\pi abc/3$，均匀密度为 $\\rho=3m/(4\\pi abc)$。\n直接球坐标的径向上限依角度变化：\n\\[\nr_0(\\vartheta,\\chi)=\\left(\n\\frac{\\sin^2\\vartheta\\cos^2\\chi}{a^2}\n+\\frac{\\sin^2\\vartheta\\sin^2\\chi}{b^2}\n+\\frac{\\cos^2\\vartheta}{c^2}\\right)^{-1/2}.\n\\]\n虽然可以按此积分，仿射代换更能分离三个半轴的影响。\n令 $x=au,y=bv,z=cw$，区域化为 $u^2+v^2+w^2\\le1$，\n雅可比为 $abc$，质量元变成 $\\rho abc\\dd u\\dd v\\dd w$。\n变换后密度 $\\rho'=\\rho abc=3m/(4\\pi)$，单位球总质量仍为 $m$。\n\n对单位球，再令 $u=s\\sin\\vartheta\\cos\\chi$，\n$v=s\\sin\\vartheta\\sin\\chi,w=s\\cos\\vartheta$，\n其中 $0\\le s\\le1,0\\le\\vartheta\\le\\pi,0\\le\\chi<2\\pi$。\n计算一个平方矩即可：\n\\[\n\\int_{\\text{单位球}}w^2\\dd V'\n=\\int_0^1s^4\\dd s\\int_0^\\pi\\cos^2\\vartheta\\sin\\vartheta\\dd\\vartheta\n\\int_0^{2\\pi}\\dd\\chi\n=\\frac15\\frac23(2\\pi)=\\frac{4\\pi}{15}.\n\\]\n球对称给 $u^2,v^2$ 同样积分，交叉矩全零。\n因此\n\\begin{align*}\n\\int x^2\\dd m&=a^2\\rho abc\\frac{4\\pi}{15}=\\frac{ma^2}{5},\\\\\n\\int y^2\\dd m&=\\frac{mb^2}{5},\\qquad\n\\int z^2\\dd m=\\frac{mc^2}{5}.\n\\end{align*}\n将每两个平方矩相加，\n\\[\n\\mathsf I_C=\\frac m5\\operatorname{diag}(b^2+c^2,c^2+a^2,a^2+b^2).\n\\]\n$xz,xy,yz$ 在单位球各至少对一个坐标为奇函数，所以无交叉元。\n$a=b=c$ 退化为球 $2ma^2/5$；$c\\to0$ 且质量保持不变时所得极薄实心椭球\n不是均匀椭圆薄片，因为投影后的面密度随位置变化，不能改用薄片1/4系数。\n这里是积分变量代换，并非声称材料真实变形后惯量不变。\n长方体全边长为 $a,b,c$ 时二阶矩系数为1/12，\n与椭球半轴符号比较时应先统一实际外接尺寸。\n\n",
+    "length": 1161
+  },
+  {
+    "kind": "example",
+    "n": 29,
+    "title": "均匀实心半球：球心与质心原点",
+    "stem": "\\label{ex:c3-29}\n半球为 $x^2+y^2+z^2\\le a^2,z\\ge0$，半球质量 $m$。\n求球心 $O$ 与质心 $C$ 的惯量张量。\n",
+    "answer": "\\solution 半球体积为 $2\\pi a^3/3$，所以 $\\rho=3m/(2\\pi a^3)$。\n球心 $O$ 是底面圆心，不是质量中心。横向坐标反射使 $xy,xz,yz$ 三个惯性积都为零。\n对平方矩，半球是同密度完整球的一半，而完整球质量为 $2m$，故\n\\[\n\\mathsf I_O=\\frac12\\left[\\frac25(2m)a^2\\mathsf1\\right]\n=\\frac25ma^2\\mathsf1.\n\\]\n此处各向同性是球心二阶矩的性质，不表示半球形状或质心张量各向同性。\n\n\\paragraph{用水平圆截面核验平方矩。}\n高度 $z\\in[0,a]$ 的截面半径为 $R(z)=\\sqrt{a^2-z^2}$，面积为 $\\pi(a^2-z^2)$。\n于是\n\\[\n\\int z^2\\dd m=\\rho\\pi\\int_0^az^2(a^2-z^2)\\dd z\n=\\rho\\pi a^5\\left(\\frac13-\\frac15\\right)\n=\\frac{2\\rho\\pi a^5}{15}=\\frac{ma^2}{5}.\n\\]\n截面圆盘的 $x^2$ 面积分为 $\\pi R^4/4$，由圆极坐标\n$\\int_0^{R}s^3\\dd s\\int_0^{2\\pi}\\cos^2\\chi\\dd\\chi$ 可直接得到。\n再沿 $z$ 积分，\n\\[\n\\int x^2\\dd m=\\frac{\\rho\\pi}{4}\\int_0^a(a^2-z^2)^2\\dd z\n=\\frac{\\rho\\pi a^5}{4}\\left(1-\\frac23+\\frac15\\right)\n=\\frac{ma^2}{5}.\n\\]\n$y^2$ 同理，任意对角惯量是两项之和，再次得到 $2ma^2/5$。\n\n\\paragraph{一阶矩与质心平移。}\n$x_C=y_C=0$；质量积分为\n$m=\\rho\\pi\\int_0^a(a^2-z^2)\\dd z=2\\rho\\pi a^3/3$。\n质心高度为\n\\[\nz_C=\\frac{\\rho\\pi}{m}\\int_0^az(a^2-z^2)\\dd z\n=\\frac{\\rho\\pi}{m}\\left[\\frac{a^2z^2}{2}-\\frac{z^4}{4}\\right]_0^a\n=\\frac{\\rho\\pi a^4}{4m}=\\frac{3a}{8}.\n\\]\n也可用半球球坐标 $0\\le\\vartheta\\le\\pi/2$ 得\n$\\int z\\dd m=\\rho(\\int_0^ar^3\\dd r)(\\int_0^{\\pi/2}\\cos\\vartheta\\sin\\vartheta\\dd\\vartheta)(2\\pi)\n=\\rho\\pi a^4/4$。\n\n$\\vect r_{OC}=(3a/8)\\vect k$，平移增量为\n$ma^2\\operatorname{diag}(9/64,9/64,0)$。\n从 $O$ 回到 $C$ 减去它：\n\\[\n\\mathsf I_C=ma^2\\operatorname{diag}\n\\left(\\frac25-\\frac9{64},\\frac25-\\frac9{64},\\frac25\\right)\n=ma^2\\operatorname{diag}\\left(\\frac{83}{320},\\frac{83}{320},\\frac25\\right).\n\\]\n两个横向轴变近质心，惯量减少；$z$ 轴前后是同一条轴，惯量不变。\n穿质心并与 $z$ 成角 $\\alpha$ 的方向有\n$I_{\\vect n}=ma^2[(83/320)\\sin^2\\alpha+(2/5)\\cos^2\\alpha]$，\n落在两个主惯量之间，与极值界限一致。\n从球心移到质心的符号、改变的对角位置与系数都须一起检查。\n\n",
+    "length": 1595
+  },
+  {
+    "kind": "example",
+    "n": 30,
+    "title": "同一个正方体在两个原点下的惯量",
+    "stem": "\\label{ex:c3-30}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-3-p009-cube-center}{以正方体质心为原点的本体坐标轴}\n% END ORIGINAL FIGURES\n\n均匀实心正方体边长 $a$、质量 $m$，坐标轴平行棱。\n分别取质心 $C$ 与一个顶点 $O$ 为原点。\n",
+    "answer": "\\solution 密度为 $\\rho=m/a^3$。先取质心原点，区域为 $[-a/2,a/2]^3$。\n对一个平方二阶矩，\n\\[\n\\int x^2\\dd m=\\rho\\int_{-a/2}^{a/2}x^2\\dd x\n\\int_{-a/2}^{a/2}\\dd y\\int_{-a/2}^{a/2}\\dd z\n=\\rho\\frac{a^3}{12}a^2=\\frac{ma^2}{12}.\n\\]\n另两平方矩相同；$xy$ 积分可分成两个奇函数积分而为零，$xz,yz$ 同理。\n对角惯量是两平方矩之和，所以\n\\[\n\\mathsf I_C=\\frac{ma^2}{6}\\mathsf1,\n\\qquad\\vect L_C=\\frac{ma^2}{6}\\vect\\omega,\n\\qquad T_C=\\frac{ma^2\\omega^2}{12}.\n\\]\n任何过质心轴惯量都是 $ma^2/6$。\n这不是因为正方体是球，而是它的质量二阶矩恰好各向同性，\n外形或更高阶形状矩仍有方向差异。\n\n\\paragraph{顶点原点的直接积分。}\n区域改为 $0\\le x,y,z\\le a$，密度不变。\n\\begin{align*}\n\\int x^2\\dd m&=\\rho\\left(\\int_0^ax^2\\dd x\\right)a^2\n=\\rho\\frac{a^5}{3}=\\frac{ma^2}{3},\\\\\n\\int xy\\dd m&=\\rho\\left(\\int_0^ax\\dd x\\right)\n\\left(\\int_0^ay\\dd y\\right)\\left(\\int_0^a\\dd z\\right)\n=\\rho\\frac{a^2}{2}\\frac{a^2}{2}a=\\frac{ma^2}{4}.\n\\end{align*}\n循环交换变量，全部平方矩与全部交叉矩分别相同，故\n\\[\n\\mathsf I_O=ma^2\\begin{pmatrix}\n2/3&-1/4&-1/4\\\\-1/4&2/3&-1/4\\\\-1/4&-1/4&2/3\n\\end{pmatrix}.\n\\]\n从顶点看，三个坐标都非负，交叉矩不再因奇对称抵消。\n% BEGIN ORIGINAL FIGURES\n",
+    "length": 934
+  },
+  {
+    "kind": "example",
+    "n": 31,
+    "title": "顶点正方体的三根正交主轴",
+    "stem": "\\label{ex:c3-31}\n求上一例 $\\mathsf I_O$ 的全部主惯量，并选一组正交主轴。\n",
+    "answer": "\\solution 本例用三种互相独立的路线寻找全部主方向。\n设 $\\mathsf I_O=(ma^2/12)\\mathsf A$，\n\\[\n\\mathsf A=\\begin{pmatrix}8&-3&-3\\\\-3&8&-3\\\\-3&-3&8\\end{pmatrix}.\n\\]\n\n\\paragraph{第一法：代数本征求解。}\n令 $\\vect u=(1,1,1)^{\\mathsf T}$，有 $\\mathsf A=11\\mathsf1-3\\vect u\\vect u^{\\mathsf T}$。\n由于 $\\vect u^{\\mathsf T}\\vect u=3$，\n$\\mathsf A\\vect u=(11-9)\\vect u=2\\vect u$；\n若 $\\vect u^{\\mathsf T}\\vect v=0$，则 $\\mathsf A\\vect v=11\\vect v$。\n这已经确定一个一维本征空间与一个二维本征空间。\n\n若按常规行列式求解，利用上述分解或从行列式两行相减，可以因式分解为\n\\[\n\\det(\\mathsf A-\\lambda\\mathsf1)\n=(2-\\lambda)(11-\\lambda)^2\n=-\\lambda^3+24\\lambda^2-165\\lambda+242.\n\\]\n根为 $2,11,11$；换回有量纲主惯量得\n\\[\nI_1=\\frac{ma^2}{6},\\qquad I_2=I_3=\\frac{11ma^2}{12}.\n\\]\n对 $\\lambda=2$，齐次方程是\n\\[\n\\begin{pmatrix}6&-3&-3\\\\-3&6&-3\\\\-3&-3&6\\end{pmatrix}\n\\begin{pmatrix}v_x\\\\v_y\\\\v_z\\end{pmatrix}=0.\n\\]\n前两式相减给 $v_x=v_y$，再代回得 $v_x=v_y=v_z$。\n对 $\\lambda=11$，三行均为 $-3(v_x+v_y+v_z)=0$，\n所以完整解集为平面 $v_x+v_y+v_z=0$。\n选择其内两个正交方向，得到\n\\[\n\\vect n_1=\\frac{(1,1,1)}{\\sqrt3},\\quad\n\\vect n_2=\\frac{(1,-1,0)}{\\sqrt2},\\quad\n\\vect n_3=\\frac{(1,1,-2)}{\\sqrt6}.\n\\]\n逐一检查点积均为零、长度均为1，且 $\\vect n_1\\times\\vect n_2=\\vect n_3$。\n平面内任意方向都是一个主方向，但必须再选正交的两根，才形成三维对角轴组。\n\n\\paragraph{第二法：从质心各向同性和平行轴几何求解。}\n质心张量为 $ma^2\\mathsf1/6$，所有过质心方向惯量相同。\n令 $\\vect R=\\vect r_{OC}$，$R^2=3a^2/4$。\n与 $OC$ 夹角为 $\\gamma$ 的顶点轴距质心的垂距为 $R\\sin\\gamma$，因此\n\\[\nI_{\\vect n}=\\frac{ma^2}{6}+mR^2\\sin^2\\gamma\n=ma^2\\left(\\frac16+\\frac34\\sin^2\\gamma\\right).\n\\]\n$\\gamma=0$ 时惯量最小，为1/6；$\\gamma=\\pi/2$ 时最大，为11/12。\n沿 $OC$ 的方向与它的整个垂直平面因此分别是两个本征空间。\n此法直接显示平移为何将中心的三重退化变为一维加二维，不需展开三次式。\n\n\\paragraph{第三法：惯量椭球的径向与法向。}\n设非零辅助径向为 $\\vect q=(x,y,z)$，$\\Sigma=x+y+z$。\n$\\mathsf A\\vect q=11\\vect q-3\\Sigma(1,1,1)$，所以\n\\[\n\\vect q\\times\\mathsf A\\vect q=-3\\Sigma\\vect q\\times(1,1,1).\n\\]\n径向平行法向要求叉积为零，得到\n\\[\n(x-y)\\Sigma=0,\\qquad(y-z)\\Sigma=0,\\qquad(z-x)\\Sigma=0.\n\\]\n若 $\\Sigma\\ne0$，三个坐标相同，得到体对角线。\n若 $\\Sigma=0$，整个垂直体对角线的平面都是解，不能再把其中某几条特殊直线误列为独立分支。\n代回张量仍得1/6与11/12。对应椭球沿体对角线的半轴较长，\n横向两半轴相同；正方体外形并不因此变成旋转体。\n\n三种方法分别利用谱分解、实际轴距与曲面法向，\n都给出相同本征空间与物理主惯量，是比只比较三个数字更完整的互相核验。\n\n",
+    "length": 1924
+  },
+  {
+    "kind": "example",
+    "n": 32,
+    "title": "顶点长方体的惯量与数值主轴",
+    "stem": "\\label{ex:c3-32}\n均匀长方体边长 $a,b,c$，取顶点原点，棱沿 $x,y,z$。\n求惯量张量，并在 $a=3c,b=2c$ 时计算主轴。\n",
+    "answer": "\\solution 均匀密度为 $\\rho=m/(abc)$，顶点区域为\n$0\\le x\\le a,0\\le y\\le b,0\\le z\\le c$。\n独立平方与交叉矩分别为\n\\[\n\\int x^2\\dd m=\\rho\\frac{a^3}{3}bc=\\frac{ma^2}{3},\n\\quad\\int xy\\dd m=\\rho\\frac{a^2}{2}\\frac{b^2}{2}c=\\frac{mab}{4},\n\\]\n循环交换给另外四个量。因此\n\\[\n\\mathsf I_O=\\frac m{12}\\begin{pmatrix}\n4(b^2+c^2)&-3ab&-3ac\\\\-3ab&4(c^2+a^2)&-3bc\\\\-3ac&-3bc&4(a^2+b^2)\n\\end{pmatrix}.\n\\]\n也可用中心张量\n$\\mathsf I_C=(m/12)\\operatorname{diag}(b^2+c^2,c^2+a^2,a^2+b^2)$，\n质心位移 $(a/2,b/2,c/2)$，平行轴逐项给同一式。\n取 $a=3c,b=2c$，公共系数为 $mc^2/12$，\n\\[\n\\mathsf I_O=\\frac{mc^2}{12}\\mathsf A,\n\\qquad\\mathsf A=\\begin{pmatrix}20&-18&-9\\\\-18&40&-6\\\\-9&-6&52\\end{pmatrix}.\n\\]\n\n\\paragraph{特征多项式的系数怎样得到？}\n$\\operatorname{tr}\\mathsf A=20+40+52=112$。\n三个二阶主子式为\n\\[\n20\\cdot40-18^2=476,\\quad20\\cdot52-9^2=959,\n\\quad40\\cdot52-6^2=2044,\n\\]\n和为3479。沿第一行展开行列式，\n\\[\n\\det\\mathsf A=20(40\\cdot52-6^2)+18(-18\\cdot52-54)-9(108+360)=18848.\n\\]\n因此特征方程为\n\\[\nf(\\lambda)=\\lambda^3-112\\lambda^2+3479\\lambda-18848=0.\n\\]\n本例三个主惯量互异，没有正方体的退化平面，三轴各自确定到正负号。\n\n\\paragraph{数值根的定位与迭代。}\n可先检查符号：$f(6)=-1790,f(7)=360$，\n$f(50)=102,f(51)=-80$，$f(54)=-110,f(55)=72$。\n因此三个根分别位于 $(6,7),(50,51),(54,55)$。\n用二分法在各区间缩小范围，或用牛顿法\n\\[\n\\lambda^{(k+1)}=\\lambda^{(k)}-\n\\frac{f(\\lambda^{(k)})}{3(\\lambda^{(k)})^2-224\\lambda^{(k)}+3479}.\n\\]\n例如从7出发，第一步为 $7-360/2058\\approx6.825073$，继续得到 $6.826408$。\n另外两根为50.506181和54.667411。对称矩阵保证所有根实数，\n本例积分正定又保证三个物理主惯量正值。\n\n\\paragraph{从根求方向，不能只列最终数字。}\n$\\mathsf A-\\lambda\\mathsf1$ 的前两行为\n$\\vect r_1=(20-\\lambda,-18,-9)$、$\\vect r_2=(-18,40-\\lambda,-6)$。\n根处矩阵秩为2，一个与这两行都垂直的向量就是零空间方向：\n\\[\n\\vect v(\\lambda)=\\vect r_1\\times\\vect r_2\n=(468-9\\lambda,\\ 282-6\\lambda,\\ \\lambda^2-60\\lambda+476).\n\\]\n代入各根后，用 $\\vect n=\\vect v/|\\vect v|$，并按需要整体反号，得到\n\\begin{center}\n\\begin{tabular}{c r r r r}\n\\toprule\n&$\\lambda$&$n_x$&$n_y$&$n_z$\\\\\\midrule\n1&6.826408&.836600&.496001&.232556\\\\\n2&50.506181&$-.533299$&.834479&.138697\\\\\n3&54.667411&$-.125270$&$-.240056$&.962642\\\\\\bottomrule\n\\end{tabular}\n\\end{center}\n第一根例如未归一化方向约为 $(406.562,241.042,113.015)$，\n归一化产生表中第一行。另两方向用同一叉积公式即可复现。\n\n物理主惯量为 $mc^2\\lambda_i/12$，约为\n$0.568867mc^2,4.208848mc^2,4.555618mc^2$。\n根之和为112，根两两乘积之和为3479，根积为18848。\n还须检查 $|\\vect n_i|=1$、$\\vect n_i\\cdot\\vect n_j=0$、\n$\\mathsf A\\vect n_i-\\lambda_i\\vect n_i\\approx0$。\n表中截断会带来末位残差，改变某轴整体符号不改变物理意义；\n三根取成右手组后，即可用于后续角速度本体分量。\n\n",
+    "length": 2212
+  },
+  {
+    "kind": "example",
+    "n": 33,
+    "title": "长方体绕体对角线的方向惯量",
+    "stem": "\\label{ex:c3-33}\n仍取均匀长方体，转轴沿从一个顶点到对角顶点的直线。\n",
+    "answer": "\\solution 体对角线方向为 $\\vect n=(a,b,c)/\\sqrt{a^2+b^2+c^2}$，且经过质心。\n先用中心原点计算二阶矩，\n\\[\n\\int x^2\\dd m=\\frac{m}{abc}\\frac{a^3}{12}bc=\\frac{ma^2}{12},\n\\quad\\int y^2\\dd m=\\frac{mb^2}{12},\\quad\\int z^2\\dd m=\\frac{mc^2}{12}.\n\\]\n坐标上下限分别为 $[-a/2,a/2],[-b/2,b/2],[-c/2,c/2]$，\n交叉积分均因奇对称为零。代入中心对角张量得\n\\begin{align*}\nI_{\\vect n}\n&=\\frac{m}{12}\n\\frac{a^2(b^2+c^2)+b^2(c^2+a^2)+c^2(a^2+b^2)}{a^2+b^2+c^2}\\\\\n&=\\frac m6\\frac{a^2b^2+b^2c^2+c^2a^2}{a^2+b^2+c^2}.\n\\end{align*}\n\n再用顶点张量独立检验。令分母为 $S=a^2+b^2+c^2$，\n三个对角贡献为 $4[a^2(b^2+c^2)+b^2(c^2+a^2)+c^2(a^2+b^2)]$，\n交叉项贡献为 $-6(a^2b^2+a^2c^2+b^2c^2)$。\n前者是 $8$ 倍同一个两两乘积和，减去后剩2倍，乘 $m/(12S)$ 仍得上式。\n顶点计算中交叉项不可略去；只有中心对角张量才没有这些项。\n\n体对角线过质心，轴距为零，所以两原点得到同一轴惯量。\n但一般 $a,b,c$ 不相等时，中心三个主惯量不同，\n$\\mathsf I_C(a,b,c)$ 的三个分量比例也不同，角动量不会沿体对角线。\n若三条边严格正值，体对角线要成为主轴需三个中心主惯量相等，也就是 $a=b=c$。\n这一特例给 $ma^2/6$。方向惯量可计算与方向是主轴，是两个不同结论。\n\n",
+    "length": 823
+  },
+  {
+    "kind": "example",
+    "n": 34,
+    "title": "三个质点组成的等边三角刚体",
+    "stem": "\\label{ex:c3-34}\n三个质点各质量 $m$，固定在边长 $a$ 的等边三角形顶点。\n取一个顶点为原点，另两点坐标为\n$(a,0,0)$ 和 $(a/2,\\sqrt3a/2,0)$。\n",
+    "answer": "\\solution 原点质点对 $O$ 的惯量贡献为零。\n位于 $(a,0,0)$ 的质点贡献为 $ma^2\\operatorname{diag}(0,1,1)$，\n位于 $(a/2,\\sqrt3a/2,0)$ 的质点贡献为\n\\[\nma^2\\begin{pmatrix}3/4&-\\sqrt3/4&0\\\\-\\sqrt3/4&1/4&0\\\\0&0&1\\end{pmatrix}.\n\\]\n相加得到\n\\[\n\\mathsf I_O=ma^2\\begin{pmatrix}3/4&-\\sqrt3/4&0\\\\-\\sqrt3/4&5/4&0\\\\0&0&2\\end{pmatrix}.\n\\]\n这里的 $m$ 是每个质点质量，总质量是 $3m$；已逐点相加后不能再乘3。\n$z$ 方向直接是主轴，主惯量 $2ma^2$，并满足平面垂直轴定理。\n\n\\paragraph{平面二阶本征方程。}\n令平面无量纲本征值为 $\\lambda$，\n\\[\n\\left(\\frac34-\\lambda\\right)\\left(\\frac54-\\lambda\\right)\n-\\frac3{16}=\\lambda^2-2\\lambda+\\frac34=0.\n\\]\n得到 $\\lambda=1/2,3/2$。\n对1/2根，第一行是 $v_x-\\sqrt3v_y=0$，归一化得\n$\\vect n_1=(\\sqrt3/2,1/2,0)$；另一正交方向可取\n$\\vect n_2=(-1/2,\\sqrt3/2,0)$，并取 $\\vect n_3=(0,0,1)$。\n所以\n\\[\nI_1=\\frac{ma^2}{2},\\qquad I_2=\\frac{3ma^2}{2},\\qquad I_3=2ma^2.\n\\]\n$\\vect n_1$ 沿原点至对边中点，角为 $30^\\circ$，符合图中的几何主轴。\n\n\\paragraph{用总质心和平行轴再验证。}\n三点平均位置为 $C=(a/2,\\sqrt3a/6,0)$，$|OC|^2=a^2/3$。\n总质量 $3m$，平移增量为\n\\[\n3m(R^2\\mathsf1-\\vect R\\vect R^{\\mathsf T})\n=ma^2\\begin{pmatrix}1/4&-\\sqrt3/4&0\\\\-\\sqrt3/4&3/4&0\\\\0&0&1\\end{pmatrix}.\n\\]\n从 $\\mathsf I_O$ 减去它，得到\n$\\mathsf I_C=ma^2\\operatorname{diag}(1/2,1/2,1)$。\n质心平面张量具有二重退化；移到顶点后，沿 $OC$ 的轴距仍为零，\n惯量保持 $ma^2/2$，另一个横向轴距为 $|OC|$，增加 $3m|OC|^2=ma^2$，\n成为 $3ma^2/2$；垂直平面的轴也加 $ma^2$，成为 $2ma^2$。\n这把离散求和、二阶特征方程与几何轴距连在一起。\n\n",
+    "length": 1213
+  },
+  {
+    "kind": "example",
+    "n": 35,
+    "title": "第一卦限球体的惯量、角动量与主轴",
+    "stem": "\\label{ex:c3-35}\n均匀实心球半径 $a$，只保留 $x,y,z\\ge0$ 的部分，\n剩余部分质量为 $m$。以球心 $O$ 为固定点，\n求惯量张量；当\n$\\vect\\omega=\\omega(\\vect i+\\vect j)/\\sqrt2$ 时求角动量和动能；\n求主轴，并把原点移到质心后重做这些计算。\n",
+    "answer": "\\solution 以下按四个问题顺序计算，始终把 $m$ 作为剩余八分之一球的质量。\n球坐标约定为 $x=r\\sin\\vartheta\\cos\\chi,y=r\\sin\\vartheta\\sin\\chi,z=r\\cos\\vartheta$。\n第一卦限的积分区域与体元为\n\\[\n0\\le r\\le a,\\quad0\\le\\vartheta\\le\\pi/2,\n\\quad0\\le\\chi\\le\\pi/2,\n\\quad\\dd V=r^2\\sin\\vartheta\\dd r\\dd\\vartheta\\dd\\chi.\n\\]\n体积为 $(a^3/3)\\cdot1\\cdot(\\pi/2)=\\pi a^3/6$，密度是\n$\\rho=6m/(\\pi a^3)$。同密度完整球质量为 $8m$，不能用剩余 $m$ 当整球质量。\n\n\\paragraph{第一问：完整计算六个独立二阶矩。}\n先算平方矩。$x^2=r^2\\sin^2\\vartheta\\cos^2\\chi$，因此\n\\[\n\\int x^2\\dd m=\\rho\\int_0^ar^4\\dd r\n\\int_0^{\\pi/2}\\sin^3\\vartheta\\dd\\vartheta\n\\int_0^{\\pi/2}\\cos^2\\chi\\dd\\chi.\n\\]\n三个因子依次为 $a^5/5,2/3,\\pi/4$，乘积为 $\\rho\\pi a^5/30=ma^2/5$。\n$y^2$ 的方位角积分改为 $\\sin^2\\chi$，仍为 $\\pi/4$。\n对 $z^2$，极角积分变为\n$\\int_0^{\\pi/2}\\cos^2\\vartheta\\sin\\vartheta\\dd\\vartheta=1/3$，\n方位角为 $\\pi/2$，所以也是 $ma^2/5$。\n于是每个对角惯量都是 $2ma^2/5$。\n\n但 $xy,xz,yz$ 在此区域内均非负，没有跨坐标平面的质元与它们配对抵消。\n以 $xy$ 为例，\n\\begin{align*}\n\\int xy\\dd m\n&=\\rho\\int_0^ar^4\\dd r\n\\int_0^{\\pi/2}\\sin^3\\vartheta\\dd\\vartheta\n\\int_0^{\\pi/2}\\sin\\chi\\cos\\chi\\dd\\chi\\\\\n&=\\rho\\frac{a^5}{5}\\frac23\\frac12\n=\\frac{\\rho a^5}{15}=\\frac{2ma^2}{5\\pi}.\n\\end{align*}\n对 $xz$，角因子为\n$\\int_0^{\\pi/2}\\sin^2\\vartheta\\cos\\vartheta\\dd\\vartheta=1/3$\n与 $\\int_0^{\\pi/2}\\cos\\chi\\dd\\chi=1$，仍得 $\\rho a^5/15$；\n$yz$ 的方位角积分为1，也相同。\n这些相等性也可由 $x,y,z$ 的排列对称直接判断，\n但排列对称不是 $x\\mapsto-x$ 一类镜面对称，不能把交叉矩设零。\n\n令 $d=2/5,p=2/(5\\pi)$，完整张量为\n\\[\n\\mathsf I_O=ma^2\\begin{pmatrix}d&-p&-p\\\\-p&d&-p\\\\-p&-p&d\\end{pmatrix}.\n\\]\n迹为 $6ma^2/5$；非对角元负号来自张量定义，$p$ 本身为正惯性积系数。\n\n\\paragraph{第二问：逐行乘角速度并求动能。}\n$\\vect\\omega=(\\omega/\\sqrt2)(1,1,0)$。第一行给 $(d-p)\\omega/\\sqrt2$，\n第二行相同，第三行给 $-2p\\omega/\\sqrt2$，故\n\\[\n\\vect L_O=\\frac{ma^2\\omega}{\\sqrt2}\n[(d-p)\\vect i+(d-p)\\vect j-2p\\vect k].\n\\]\n即使 $\\omega_z=0$，角动量也有非零 $z$ 分量。\n点乘时第三分量不参与，因为角速度第三分量为零；\n\\[\nT_O=\\frac12\\frac{ma^2\\omega^2}{2}[2(d-p)]\n=\\frac12ma^2\\omega^2(d-p)\n=\\frac{ma^2\\omega^2}{5}\\left(1-\\frac1\\pi\\right).\n\\]\n用速度积分再次检查，$\\vect v=(\\omega/\\sqrt2)(z,-z,y-x)$，\n\\[\nT_O=\\frac{\\omega^2}{4}\\int[2z^2+(y-x)^2]\\dd m\n=\\frac{\\omega^2}{4}\n\\left[\\frac{4ma^2}{5}-\\frac{4ma^2}{5\\pi}\\right],\n\\]\n与张量结果一致。这里的 $(y-x)^2$ 特别显示交叉矩不能略去。\n\n\\paragraph{第三问：主轴空间与重根。}\n写 $\\vect u=(1,1,1)^{\\mathsf T}$，则\n$\\mathsf I_O/(ma^2)=(d+p)\\mathsf1-p\\vect u\\vect u^{\\mathsf T}$。\n沿 $\\vect u$，本征系数为 $d+p-3p=d-2p$；\n在 $\\vect u^\\perp$ 平面，外积项为零，本征系数为 $d+p$。\n特征行列式因此分解为\n\\[\n\\left[(d-2p)-\\lambda\\right]\\left[(d+p)-\\lambda\\right]^2=0.\n\\]\n可以选择正交主轴\n\\[\n\\vect n_1=\\frac{(1,1,1)}{\\sqrt3},\\quad\n\\vect n_2=\\frac{(1,-1,0)}{\\sqrt2},\\quad\n\\vect n_3=\\frac{(1,1,-2)}{\\sqrt6},\n\\]\n主惯量为\n\\[\nI_{O1}=\\frac{2ma^2}{5}\\left(1-\\frac2\\pi\\right),\n\\qquad I_{O2}=I_{O3}=\\frac{2ma^2}{5}\\left(1+\\frac1\\pi\\right).\n\\]\n给定角速度在此轴组中的分量为\n$\\omega_1=\\sqrt{2/3}\\,\\omega,\\omega_2=0,\\omega_3=\\omega/\\sqrt3$。\n于是主轴动能为\n\\[\n\\frac12\\left(\\frac23I_{O1}+\\frac13I_{O3}\\right)\\omega^2\n=\\frac12ma^2\\omega^2(d-p),\n\\]\n再次与坐标矩阵及速度积分相符。\n\n\\paragraph{第四问之一：先求质心一阶矩。}\n排列对称给 $x_C=y_C=z_C$，仍需积分求其数值。\n\\[\n\\int x\\dd m=\\rho\\int_0^ar^3\\dd r\n\\int_0^{\\pi/2}\\sin^2\\vartheta\\dd\\vartheta\n\\int_0^{\\pi/2}\\cos\\chi\\dd\\chi\n=\\rho\\frac{a^4}{4}\\frac\\pi4\\cdot1=\\frac{3ma}{8}.\n\\]\n对 $z$，极角因子为1/2，方位角为 $\\pi/2$，得到同一值。\n所以\n\\[\n\\vect R=\\vect r_{OC}=\\frac{3a}{8}(\\vect i+\\vect j+\\vect k),\n\\qquad R^2=\\frac{27a^2}{64}.\n\\]\n也可固定 $x$，剩下 $yz$ 截面是半径 $\\sqrt{a^2-x^2}$ 的四分之一圆，\n$\\int x\\dd m=(\\rho\\pi/4)\\int_0^ax(a^2-x^2)\\dd x=\\rho\\pi a^4/16$，独立验证一阶矩。\n\n\\paragraph{第四问之二：逐矩阵元移至质心。}\n平行轴的增量为\n\\[\nm(R^2\\mathsf1-\\vect R\\vect R^{\\mathsf T})\n=\\frac{ma^2}{64}\\begin{pmatrix}18&-9&-9\\\\-9&18&-9\\\\-9&-9&18\\end{pmatrix}.\n\\]\n从 $\\mathsf I_O$ 减去它，对角为 $d-18/64=19/160$，\n交叉元为 $-p+9/64$。令\n\\[\nD=\\frac{19}{160},\\qquad B=\\frac9{64}-\\frac{2}{5\\pi},\n\\qquad\n\\mathsf I_C=ma^2\\begin{pmatrix}D&B&B\\\\B&D&B\\\\B&B&D\\end{pmatrix}.\n\\]\n$B>0$，意味着实际中心矩阵的交叉元此时为正，不要仍机械添加负号。\n迹减少 $2mR^2=27ma^2/32$，等于三对角减少量，另有一个整体核验。\n\n与相同角速度相乘，得到质心相对角动量与相对转动能\n\\[\n\\vect L_C=\\frac{ma^2\\omega}{\\sqrt2}\n[(D+B)\\vect i+(D+B)\\vect j+2B\\vect k],\n\\]\n\\[\nT_C=\\frac12ma^2\\omega^2(D+B)\n=ma^2\\omega^2\\left(\\frac{83}{640}-\\frac1{5\\pi}\\right).\n\\]\n此处中心角动量 $z$ 分量已变为正，与 $O$ 处角动量方向不同。\n原点改变同时改变轨道项；这并非同一个角动量矢量被随意改了坐标。\n\n中心矩阵可写成 $(D-B)\\mathsf1+B\\vect u\\vect u^{\\mathsf T}$，主方向空间不变，\n\\[\nI_{C1}=ma^2(D+2B)=ma^2\\left(\\frac25-\\frac4{5\\pi}\\right),\n\\]\n\\[\nI_{C2}=I_{C3}=ma^2(D-B)\n=ma^2\\left(\\frac25+\\frac2{5\\pi}-\\frac{27}{64}\\right).\n\\]\n第一根轴沿 $OC$，轴距为零，所以 $I_{C1}=I_{O1}$；\n横向两轴移到质心各减 $mR^2=27ma^2/64$。\n数值上第一项约 $0.145352ma^2$、横向项约 $0.105449ma^2$，都为正。\n主方向空间未变，但最小最大顺序已改变：在 $O$ 处第一轴最小，在 $C$ 处第一轴最大。\n这能提醒我们“主方向不变”不等于“惯量大小排序不变”。\n\n\\paragraph{同一真实运动的动能与角动量如何恢复？}\n题设物体真实绕固定 $O$ 转动，质心速度不能消失：\n\\[\n\\vect v_C=\\vect\\omega\\times\\vect R\n=\\frac{3a\\omega}{8\\sqrt2}(\\vect i-\\vect j),\n\\qquad v_C^2=\\frac{9a^2\\omega^2}{64}.\n\\]\n因此质心平动能为 $9ma^2\\omega^2/128$，\n\\[\nT_C+\\frac12mv_C^2\n=ma^2\\omega^2\\left(\\frac{83}{640}+\\frac9{128}-\\frac1{5\\pi}\\right)\n=\\frac{ma^2\\omega^2}{5}\\left(1-\\frac1\\pi\\right)=T_O.\n\\]\n角动量的轨道项为\n\\[\n\\vect R\\times m\\vect v_C\n=\\frac{9ma^2\\omega}{64\\sqrt2}(\\vect i+\\vect j-2\\vect k).\n\\]\n把它加到 $\\vect L_C$ 上，前两分量由 $D+B+9/64=d-p$，\n第三分量由 $2B-18/64=-2p$，逐分量恰还原 $\\vect L_O$。\n所以将参考原点移至质心后，必须同时重建轨道平动部分，\n不能只更换惯量矩阵就把中心相对量当作原定点运动的总量。\n\n",
+    "length": 4850
+  },
+  {
+    "kind": "example",
+    "n": 36,
+    "title": "顶点固定正方体的斜轴转动",
+    "stem": "\\label{ex:c3-36}\n正方体边长 $a$、质量 $m$，顶点 $O$ 固定，\n$\\vect\\omega=\\omega(\\vect i+\\vect j)/\\sqrt2$。\n比较定点动能与质心分解。\n",
+    "answer": "\\solution 首先直接用完整顶点张量作二次型。\n$\\omega_x=\\omega_y=\\omega/\\sqrt2,\\omega_z=0$，两个对角贡献相加为\n$(2/3)ma^2\\omega^2$，交叉贡献 $2I_{xy}\\omega_x\\omega_y$ 为\n$-(1/4)ma^2\\omega^2$，故\n\\[\nT_O=\\frac12ma^2\\omega^2\\left(\\frac23-\\frac14\\right)\n=\\frac5{24}ma^2\\omega^2.\n\\]\n角动量也可逐行乘得\n\\[\n\\vect L_O=\\frac{ma^2\\omega}{\\sqrt2}\n\\left(\\frac5{12}\\vect i+\\frac5{12}\\vect j-\\frac12\\vect k\\right),\n\\]\n与角速度点乘的一半仍给 $5ma^2\\omega^2/24$。\n\n\\paragraph{第二种核验：每个质元的速度积分。}\n$\\vect v=(\\omega/\\sqrt2)(z,-z,y-x)$，\n顶点区域 $[0,a]^3$ 上有\n$\\int x^2\\dd m=\\int y^2\\dd m=\\int z^2\\dd m=ma^2/3$，\n$\\int xy\\dd m=ma^2/4$。于是\n\\begin{align*}\nT_O&=\\frac{\\omega^2}{4}\\int[2z^2+(y-x)^2]\\dd m\\\\\n&=\\frac{ma^2\\omega^2}{4}\n\\left(\\frac23+\\frac13+\\frac13-\\frac12\\right)\n=\\frac5{24}ma^2\\omega^2.\n\\end{align*}\n这条计算不预先使用张量动能式，可以独立检验交叉项的系数和符号。\n\n\\paragraph{第三种核验：质心平动与相对转动。}\n中心张量各向同性，$T_C=ma^2\\omega^2/12$。\n$\\vect R=(a/2)(1,1,1)$，\n\\[\n\\vect v_C=\\vect\\omega\\times\\vect R\n=\\frac{a\\omega}{2\\sqrt2}(\\vect i-\\vect j),\n\\quad v_C^2=\\frac{a^2\\omega^2}{4}.\n\\]\n所以\n\\[\nT_C+\\frac12mv_C^2\n=\\frac{ma^2\\omega^2}{12}+\\frac{ma^2\\omega^2}{8}\n=\\frac5{24}ma^2\\omega^2.\n\\]\n相同物体、相同瞬间的三条路线一致。\n若只保留矩阵两个对角元，就会漏掉 $xy$ 交叉项；\n若在定点动能上再加一次质心平动，又会重复计数。\n这两类错误都可通过上述独立检查直接识别。\n\n",
+    "length": 1152
+  },
+  {
+    "kind": "example",
+    "n": 37,
+    "title": "固定点上方的圆盘陀螺动能",
+    "stem": "\\label{ex:c3-37}\n% BEGIN ORIGINAL FIGURES\n\\OriginalFigure[6.2cm]{c3-3-p049-gyroscope-axes}{圆盘姿态与空间轴 $(\\xi,\\eta,\\zeta)$、本体轴 $(x,y,z)$；图中 $O$ 为盘心，正文悬点距盘心为 $h$}\n% END ORIGINAL FIGURES\n\n无质量杆一端固定于 $O$，另一端为均匀薄圆盘中心，\n中心距 $O$ 为 $h$，盘质量 $m$、半径 $a$，\n杆沿盘对称轴。求关于固定点的惯量及欧拉角动能。\n",
+    "answer": "\\solution 以杆方向为本体第三轴，先求圆盘质心惯量。\n均匀薄盘由前面积分有\n\\[\n\\mathsf I_C=\\operatorname{diag}(ma^2/4,ma^2/4,ma^2/2).\n\\]\n位移 $\\vect r_{OC}=h\\vect e_3$，平行轴增量为 $mh^2\\operatorname{diag}(1,1,0)$，所以\n\\[\nI_1=I_2=m(h^2+a^2/4),\\qquad I_3=ma^2/2.\n\\]\n轴向转轴是同一条直线，不因 $h$ 增加而增加轴向惯量；\n横向转动使盘心绕 $O$ 运动，因此增加 $mh^2$。\n\n本体欧拉角速度分量为\n\\[\n\\omega_1=\\dot\\theta\\cos\\psi+\\dot\\varphi\\sin\\theta\\sin\\psi,\n\\quad\\omega_2=-\\dot\\theta\\sin\\psi+\\dot\\varphi\\sin\\theta\\cos\\psi,\n\\quad\\omega_3=\\dot\\psi+\\dot\\varphi\\cos\\theta.\n\\]\n前两式平方相加，混合项正负抵消，得到\n\\[\n\\omega_1^2+\\omega_2^2=\\dot\\theta^2+\\dot\\varphi^2\\sin^2\\theta.\n\\]\n由于横向两惯量相等，动能只需这一个和，故\n\\[\nT=\\frac12I_1(\\dot\\theta^2+\\dot\\varphi^2\\sin^2\\theta)\n+\\frac12I_3(\\dot\\psi+\\dot\\varphi\\cos\\theta)^2.\n\\]\n轴向角速度是两项之和，不能把自转、进动能量分别平方后漏掉交叉项。\n$\\psi$ 本身不出现，反映均匀盘绕自身轴转后的质量分布不变。\n\n\\paragraph{用质心分解解释各项。}\n盘心位置为 $h\\vect e_3$，\n$\\vect v_C=h\\vect\\omega\\times\\vect e_3$，故\n\\[\nv_C^2=h^2(\\omega_1^2+\\omega_2^2)\n=h^2(\\dot\\theta^2+\\dot\\varphi^2\\sin^2\\theta).\n\\]\n质心相对转动动能为\n\\[\nT_C=\\frac{ma^2}{8}(\\omega_1^2+\\omega_2^2)+\\frac{ma^2}{4}\\omega_3^2.\n\\]\n与 $mv_C^2/2$ 相加后，横向系数成为\n$m(h^2+a^2/4)/2$，恰为定点张量表达。\n因此 $mh^2$ 项已经包含盘心平动，不能在定点动能后再加一次。\n\n匀速进动时 $\\theta=\\theta_0,\\dot\\theta=0,\\dot\\varphi=\\Omega,\\dot\\psi=\\omega$，\n\\[\nT=\\frac12m(h^2+a^2/4)\\Omega^2\\sin^2\\theta_0\n+\\frac14ma^2(\\omega+\\Omega\\cos\\theta_0)^2.\n\\]\n这里 $\\omega$ 表示 $\\dot\\psi$，真实轴向角速度为 $\\omega+\\Omega\\cos\\theta_0$。\n从空间矢量合成看，总角速度为 $\\vect\\omega_{\\text{总}}=\\Omega\\vect e_Z+\\omega\\vect e_3$，\n其中 $\\vect e_Z$ 竖直，$\\vect e_Z\\cdot\\vect e_3=\\cos\\theta_0$，故\n\\[\n|\\vect\\omega_{\\text{总}}|^2=\\Omega^2+\\omega^2+2\\Omega\\omega\\cos\\theta_0.\n\\]\n在某瞬间把第一本体轴取向竖直轴在横向平面投影的反方向，可以写成\n\\[\n\\vect\\omega_{\\text{总}}=-\\Omega\\sin\\theta_0\\vect e_1\n+(\\omega+\\Omega\\cos\\theta_0)\\vect e_3.\n\\]\n横向正负取决于本体第一轴取向，其平方和与动能不受这一选择影响。\n\n$h=0$ 时恢复绕盘中心的公式；$\\Omega=0$ 且章动为零时，只剩纯轴向自转能。\n$\\theta_0\\to0$ 时欧拉角发生几何退化，但能量只依赖有限组合 $\\dot\\psi+\\dot\\varphi$，\n不能把两个退化角速率理解为两项额外独立的物理转动。\n\n\\clearpage\n",
+    "length": 1834
+  },
+  {
+    "kind": "example",
+    "n": 38,
+    "title": "恒定力矩驱动圆盘",
+    "stem": "\\label{ex:c3-38}\n均匀圆盘质量 $m$、半径 $a$，绕中心轴转动，\n恒定驱动矩为 $M$，恒定阻矩大小为 $M_f<M$，初始静止。\n",
+    "answer": "\\solution $I_z=ma^2/2$，故\n$\\alpha=2(M-M_f)/(ma^2)$，\n$\\omega=\\alpha t,q-q_0=\\alpha t^2/2$。\n在转过角 $\\Delta q$ 后，\n$\\omega^2=4(M-M_f)\\Delta q/(ma^2)$。\n输入功 $M\\Delta q$ 等于动能增量加摩擦耗散 $M_f\\Delta q$。\n初始静摩擦是否能被克服须另按实际马达启动条件检查。\n\n\n",
+    "length": 215
+  },
+  {
+    "kind": "example",
+    "n": 39,
+    "title": "均匀杆端点物理摆",
+    "stem": "\\label{ex:c3-39}\n均匀杆长 $L$，绕端点水平轴摆动，初始角 $q_0$，初始静止。\n",
+    "answer": "\\solution $I_O=mL^2/3,h=L/2$，故\n\\[\n\\ddot q+\\frac{3g}{2L}\\sin q=0,\\quad\n\\omega_0=\\sqrt{\\frac{3g}{2L}},\\quad\n\\tau_0=2\\pi\\sqrt{\\frac{2L}{3g}}.\n\\]\n到最低点时\n$\\dot q^2=3g(1-\\cos q_0)/L$。\n等效单摆长 $2L/3$，不是杆的全长或质心距离。\n轴反力可由质心加速度求出，而不是由摆方程直接读出。\n\n",
+    "length": 230
+  },
+  {
+    "kind": "example",
+    "n": 40,
+    "title": "悬点位置如何影响小振动周期",
+    "stem": "\\label{ex:c3-40}\n刚体中心轴惯量为 $I_C=mk^2$，\n平行悬轴距质心 $h>0$。求使小振动周期最短的位置。\n",
+    "answer": "\\solution\n\\[\n\\tau_0^2=\\frac{4\\pi^2}{g}\\left(h+\\frac{k^2}{h}\\right).\n\\]\n由均值不等式或求导，最小值在 $h=k$，\n$\\tau_{\\min}=2\\pi\\sqrt{2k/g}$。\n$h\\to0$ 时重力回复矩趋零、周期变大，\n不能把悬点越靠近质心理解为振动越快。\n\n\n",
+    "length": 168
+  },
+  {
+    "kind": "example",
+    "n": 41,
+    "title": "质心在轴上仍有轴承压力",
+    "stem": "\\label{ex:c3-41}\n均匀细杆长 $l$、质量 $m$，中心位于固定竖直轴上，\n杆与轴成角 $\\beta$，并随轴恒速 $\\omega$ 转动。\n杆在 $xz$ 平面，轴承间距 $L$，忽略其他横向主动载荷。\n",
+    "answer": "\\solution 中心惯量可写成\n\\[\\mathsf I_C=\\frac{ml^2}{12}(\\mathsf1-\\vect n\\vect n^{\\mathsf T}),\\qquad \\vect n=(\\sin\\beta,0,\\cos\\beta).\\]\n因此\n$I_{xz}=-ml^2\\sin\\beta\\cos\\beta/12$，$I_{yz}=0$。\n由附加反力式，\n\\[\n\\Delta R_{Bx}=-\\frac{ml^2\\omega^2}{12L}\\sin\\beta\\cos\\beta,\\qquad\n\\Delta R_{Ax}=-\\Delta R_{Bx}.\n\\]\n合力为零，但有一对反向轴承力。\n当杆平行或垂直轴时惯性积为零，两种位置都实现本模型的动平衡。\n\n",
+    "length": 335
+  },
+  {
+    "kind": "example",
+    "n": 42,
+    "title": "点质量转子的单平面和双平面校正",
+    "stem": "\\label{ex:c3-42}\n无质量轴上固定若干小质量 $m_i$，\n横向位置矢量为 $\\vect e_i$，轴向坐标为 $z_i$。\n求恒速动平衡条件，说明为什么通常需要两个校正平面。\n",
+    "answer": "\\solution 质心在轴上要求\n\\[\n\\sum_i m_i\\vect e_i=0.\n\\]\n惯性积为零要求\n\\[\n\\sum_i m_i z_i\\vect e_i=0.\n\\]\n这两个横向矢量条件共四个标量。\n一个校正平面上的质量分布只能任意调整第一个横向矢量，\n其对第二式的贡献固定为第一式贡献乘同一个 $z$，\n一般不能同时消除静不平衡与偶不平衡。\n在两个不同的校正平面 $z_a\\ne z_b$，\n若原不平衡矢量为\n$\\vect U=\\sum m_i\\vect e_i$、$\\vect V=\\sum m_iz_i\\vect e_i$，\n所需校正质量半径矢量满足\n\\[\n\\vect U_a+\\vect U_b=-\\vect U,\\qquad\nz_a\\vect U_a+z_b\\vect U_b=-\\vect V,\n\\]\n\\[\n\\vect U_a=\\frac{z_b\\vect U-\\vect V}{z_a-z_b},\\qquad\n\\vect U_b=\\frac{\\vect V-z_a\\vect U}{z_a-z_b}.\n\\]\n矢量方向决定安装方位，大小决定质量与半径乘积。\n真实转子校正还要根据测量相位和结构允许位置实施。\n\n",
+    "length": 515
+  },
+  {
+    "kind": "example",
+    "n": 43,
+    "title": "立方体绕地面水平棱倾倒",
+    "stem": "\\label{ex:c3-43}\n均匀实心立方体边长 $a$、质量 $m$，\n一条水平棱由理想铰固定在地面，其余接触可脱离。\n底面抬起角 $\\theta_0$ 后从静止释放，求回落时的角速度与角加速度。\n先取 $0<\\theta_0<\\pi/4$，研究触地之前。\n",
+    "answer": "\\solution 关于铰棱的惯量\n$I_O=I_C+m(a/\\sqrt2)^2=ma^2/6+ma^2/2=2ma^2/3$。\n质心高度\n$y_C=(a/\\sqrt2)\\sin(\\theta+\\pi/4)$，故\n\\[\n\\frac12I_O\\dot\\theta^2+\n\\frac{mga}{\\sqrt2}\\sin(\\theta+\\pi/4)\n=\\frac{mga}{\\sqrt2}\\sin(\\theta_0+\\pi/4).\n\\]\n在 $\\theta=0$ 即将触地时，\n\\[\n\\dot\\theta=-\\sqrt{\\frac{3g}{2a}(\\sin\\theta_0+\\cos\\theta_0-1)}.\n\\]\n转动方程为\n\\[\n\\ddot\\theta=-\\frac{3g}{4a}(\\cos\\theta-\\sin\\theta),\n\\]\n所以触地前角加速度为 $-3g/(4a)$。\n$\\theta_0=\\pi/4$ 且精确静止时处于不稳定平衡，理想方程不自行选倾倒方向；\n$\\theta_0>\\pi/4$ 则向另一面倾倒。\n碰撞后的运动须另给接触冲量与恢复条件，\n不能把这里的触地前值直接用作碰撞后值。\n\n",
+    "length": 502
+  },
+  {
+    "kind": "example",
+    "n": 44,
+    "title": "有惯量定滑轮的两重物系统",
+    "stem": "\\label{ex:c3-44}\n质量为 $m$ 的均匀圆盘滑轮半径 $r$，\n轴固定且光滑，轻绳不可伸长并与轮缘无滑动，\n两端悬挂质量 $m$ 与 $2m$ 的物块。由静止释放，求加速度、张力和速度。\n",
+    "answer": "\\solution 以重物向下为正，轻物向上为正，\n\\[\nT_1-mg=ma,\\quad 2mg-T_2=2ma,\\quad\n(T_2-T_1)r=\\frac12mr^2\\frac ar.\n\\]\n因此\n\\[\na=\\frac{2g}{7},\\qquad T_1=\\frac97mg,\\qquad\nT_2=\\frac{10}{7}mg,\\qquad \\alpha_{\\text{顺时针}}=\\frac{2g}{7r}.\n\\]\n重物下降 $h$ 后，\n净势能减少 $mgh$，总动能为\n\\[\n\\frac12mv^2+\\frac12(2m)v^2+\\frac12\\frac{mr^2}{2}\\frac{v^2}{r^2}\n=\\frac74mv^2,\n\\]\n故 $v^2=4gh/7$。\n轮有转动惯量时，两边张力不等；\n若把它当无质量滑轮，会得到不同加速度。\n\n",
+    "length": 376
+  },
+  {
+    "kind": "example",
+    "n": 45,
+    "title": "倾斜薄圆盘的最大轴承压力",
+    "stem": "\\label{ex:c3-45}\n均匀薄圆盘质量 $m$、半径 $r$，\n质心 $O$ 在水平轴 $AB$ 上，$AO=a,OB=b$。\n盘法线与轴夹角 $\\beta$，以恒定 $\\omega$ 随轴转动。\n取 $z$ 沿 $A$ 指向 $B$，瞬时盘法线为\n$\\vect n=\\sin\\beta\\,\\vect e_x+\\cos\\beta\\,\\vect e_z$，\n$t=0$ 时 $\\vect e_x$ 竖直向上。求两个轴承的反力和最大压力。\n",
+    "answer": "\\solution 薄盘张量\n$\\mathsf I_O=(mr^2/4)(\\mathsf1+\\vect n\\vect n^{\\mathsf T})$，\n故\n\\[\nI_{xz}=\\frac{mr^2}{8}\\sin2\\beta,\\quad I_{yz}=0,\\quad\nI_{zz}=\\frac{mr^2}{4}(1+\\cos^2\\beta).\n\\]\n令固定向上的轴为 $\\vect e_X$，静态反力\n$G_A=mgb/(a+b),G_B=mga/(a+b)$，\n运动力偶对应\n\\[\nD=\\frac{mr^2\\omega^2}{8(a+b)}\\sin2\\beta.\n\\]\n整个周期的反力为\n\\[\n\\vect R_A=G_A\\vect e_X-D\\vect e_x(t),\\qquad\n\\vect R_B=G_B\\vect e_X+D\\vect e_x(t).\n\\]\n因此\n\\[\nR_A^2=G_A^2+D^2-2G_AD\\cos\\omega t,\\quad\nR_B^2=G_B^2+D^2+2G_BD\\cos\\omega t.\n\\]\n各自最大压力为 $G_A+|D|$、$G_B+|D|$，\n峰值相位相差 $\\pi$。所有轴承中的最大值为\n$\\max(G_A,G_B)+|D|$。\n仅计算 $t=0$ 的反力，不能称已经求出整个转动周期的最大压力。\n$\\beta=0$ 或 $\\pi/2$ 时 $D=0$，该轴均为惯量主轴。\n\n",
+    "length": 614
+  },
+  {
+    "kind": "example",
+    "n": 46,
+    "title": "T形双杆的瞬时角加速度与轴反力",
+    "stem": "\\label{ex:c3-46}\n两均匀细杆各长 $L$、各质量 $m$，\n水平杆 $OA$ 一端固定于轴 $O$，\n另一端与竖直杆的中点 $A$ 刚接，组成 T 形刚体。\n在 $OA$ 水平、竖杆竖直时，刚体顺时针角速度为 $\\omega$。\n求重力作用下的角加速度和轴反力。\n",
+    "answer": "\\solution 第一杆端点惯量 $mL^2/3$，\n第二杆由中心平行轴定理得 $mL^2/12+mL^2$，总计\n\\[\nI_O=\\frac{17}{12}mL^2.\n\\]\n总质心在 $x_C=3L/4,y_C=0$，总质量 $2m$。\n顺时针角加速度大小为\n\\[\n\\beta=\\frac{2mg(3L/4)}{I_O}=\\frac{18g}{17L}.\n\\]\n质心加速度为\n$-\\tfrac{3L}{4}\\omega^2\\vect i-\\tfrac{3L}{4}\\beta\\vect j$。\n由动量定理，\n\\[\nR_{Ox}=-\\frac32mL\\omega^2,\\qquad\nR_{Oy}=2mg-\\frac32mL\\beta.\n\\]\n取 $m=8\\,\\mathrm{kg},L=.5\\,\\mathrm m,\\omega=4\\,\\mathrm{s^{-1}},\ng=9.8\\,\\mathrm{m\\,s^{-2}}$，得到\n$\\beta=20.75294\\,\\mathrm{s^{-2}}$，\n$R_{Ox}=-96\\,\\mathrm N$、$R_{Oy}=32.28235\\,\\mathrm N$，\n反力大小 $101.28253\\,\\mathrm N$。\n求反力用质心运动定理，求角加速度用绕轴力矩方程，两者不可互相替代。\n\n",
+    "length": 567
+  },
+  {
+    "kind": "example",
+    "n": 47,
+    "title": "等速拖动梯子的两条极迹",
+    "stem": "\\label{ex:c3-47}\n梯子长 $l$，端点 $A$ 沿水平地面向右等速 $u$ 移动，\n端点 $B$ 沿竖直墙向下滑动。取墙脚为原点，\n$A=(x,0),B=(0,y)$，$x^2+y^2=l^2$。\n求角速度、空间极迹和本体极迹。\n",
+    "answer": "\\solution 两端速度分别水平和竖直，\n其法线交于 $P=(x,y)$。空间极迹满足\n$x_P^2+y_P^2=l^2$，是墙脚为圆心的四分之一圆。\n由 $v_A=\\omega y$，\n\\[\n\\omega=\\frac uy,\\qquad v_B=-\\frac{xu}{y}\\vect j.\n\\]\n以 $A$ 为本体原点，$\\vect e_1=(-x,y)/l$ 沿 $AB$，\n$\\vect e_2=(-y,-x)/l$，则\n\\[\nq_1=(\\vect r_P-\\vect r_A)\\cdot\\vect e_1=\\frac{y^2}{l},\\qquad\nq_2=-\\frac{xy}{l}.\n\\]\n因此\n\\[\n(q_1-l/2)^2+q_2^2=l^2/4.\n\\]\n本体极迹是以梯子中点为圆心、梯子长为直径的圆的相应半弧。\n当 $y\\to0$ 时，理想等速拖动需要无界的角速度；\n此极限说明驱动条件不再适合真实机构，不能忽略其几何奇异性。\n\n",
+    "length": 424
+  },
+  {
+    "kind": "example",
+    "n": 48,
+    "title": "圆柱沿粗糙斜面滚下：三种解法",
+    "stem": "\\label{ex:c3-48}\n圆柱质量 $m$、半径 $a$、中心轴惯量 $I_C=mk^2$，\n沿倾角 $\\beta$ 的固定粗糙斜面无滑动滚下。\n从静止开始，忽略滚动阻力。求质心加速度和接触反力。\n",
+    "answer": "\\solution 第一种用能量。下移斜距 $x$ 后，\n\\[\nmgx\\sin\\beta=\\frac12m\\dot x^2+\\frac12mk^2\\frac{\\dot x^2}{a^2},\n\\quad\n\\ddot x=\\frac{g\\sin\\beta}{1+k^2/a^2}.\n\\]\n能量法确定加速度，却不直接确定法向力与静摩擦。\n\n第二种用质心动力学。沿斜面向下为正，角加速度 $\\alpha$ 按逆时针取正，摩擦 $f$ 向上，\n\\[\nm\\ddot x=mg\\sin\\beta-f,\\quad N=mg\\cos\\beta,\\quad\nmk^2\\alpha=-fa,\\quad \\ddot x=-a\\alpha.\n\\]\n因此\n\\[\nf=\\frac{mgk^2}{a^2+k^2}\\sin\\beta,\\quad\nN=mg\\cos\\beta,\\quad\n\\mu_s\\ge\\frac{k^2}{a^2+k^2}\\tan\\beta.\n\\]\n第三种以接触瞬心 $P$ 取矩，$\\rho=a$ 恒定，\n\\[\nI_P\\alpha=-mga\\sin\\beta,\\quad I_P=m(k^2+a^2),\n\\]\n与前两法一致。对均匀实心圆柱 $k^2=a^2/2$，\n\\[\n\\ddot x=\\frac23g\\sin\\beta,\\quad f=\\frac13mg\\sin\\beta,\\quad\n\\mu_s\\ge\\frac13\\tan\\beta.\n\\]\n静摩擦在固定斜面上的接触瞬时速度为零，故总功为零。\n它仍把重力输入的一部分分配给转动；\n不能从总功为零推出摩擦力为零。\n\n",
+    "length": 678
+  },
+  {
+    "kind": "example",
+    "n": 49,
+    "title": "固定轻绳上退绕下落的圆盘",
+    "stem": "\\label{ex:c3-49}\n均匀圆盘质量 $m$、半径 $r$，轻绳上端固定，\n下段沿竖直方向与圆盘边缘相切，绳与盘无滑动。\n圆盘从静止释放，圆心仅竖直下降。求加速度与绳张力。\n",
+    "answer": "\\solution 下降加速度为 $a$，角加速度 $\\alpha$ 按逆时针取正，\n\\[\nma=mg-T,\\quad \\frac12mr^2\\alpha=-Tr,\\quad a=-r\\alpha.\n\\]\n解得 $a=2g/3,T=mg/3$。\n第二种用能量：\n$mgx=\\tfrac12m v^2+\\tfrac12I_Cv^2/r^2$，\n求导得同一 $a$。\n第三种以绳盘接触瞬心取矩，$\\rho=r$ 恒定：\n$-mgr=(I_C+mr^2)\\alpha$，仍得 $a=2g/3$。\n这个圆盘只有一条固定竖直绳段承重，\n不等同于通常有两绳段的动滑轮。\n\n",
+    "length": 280
+  },
+  {
+    "kind": "example",
+    "n": 50,
+    "title": "变速纯滚动轮的四点运动",
+    "stem": "\\label{ex:c3-50}\n半径 $R$ 的轮在固定水平面纯滚动，\n轮心瞬时速度 $v\\vect i$、加速度 $a\\vect i$。\n轮缘 $A$ 在底部、$B$ 在左侧、$C$ 在顶部、$D$ 在右侧。\n取逆时针角速度为正，求四点的速度与加速度。\n",
+    "answer": "\\solution $\\omega=-v/R,\\alpha=-a/R$。\n由相对位置分别为\n$-R\\vect j,-R\\vect i,R\\vect j,R\\vect i$，\n\\[\n\\vect v_A=0,\\quad \\vect v_B=v(\\vect i+\\vect j),\\quad\n\\vect v_C=2v\\vect i,\\quad \\vect v_D=v(\\vect i-\\vect j).\n\\]\n加速度式给出\n\\[\n\\vect a_A=\\frac{v^2}{R}\\vect j,\\qquad\n\\vect a_B=\\left(a+\\frac{v^2}{R}\\right)\\vect i+a\\vect j,\n\\]\n\\[\\vect a_C=2a\\vect i-\\frac{v^2}{R}\\vect j,\\qquad \\vect a_D=\\left(a-\\frac{v^2}{R}\\right)\\vect i-a\\vect j.\\]\n令 $a=0$ 即得匀速滚动的四点加速度。底部点水平加速度由基点项与角加速项相消，\n但向心项仍存在。由此直接证明瞬心加速度不必为零。\n\n",
+    "length": 485
+  },
+  {
+    "kind": "example",
+    "n": 51,
+    "title": "固定轮外侧的行星轮",
+    "stem": "\\label{ex:c3-51}\n半径 $R$ 的轮固定，半径 $r$ 的行星轮与它外接且纯滚动，\n中心 $A$ 绕固定中心 $O$ 以角速度 $\\Omega\\vect k$ 运动。\n求行星轮绝对自转角速度及轮缘上\n$AM\\perp OA$ 的点 $M$ 的速度大小。\n",
+    "answer": "\\solution 轮心速度为\n$\\vect v_A=(R+r)\\Omega\\vect e_t$。\n接触点相对于轮心的位置为 $-r\\vect e_r$，\n令绝对角速度为 $\\omega\\vect k$，无滑动要求\n\\[\n0=(R+r)\\Omega\\vect e_t-r\\omega\\vect e_t,\n\\quad\n\\omega=\\left(1+\\frac Rr\\right)\\Omega.\n\\]\n相对于中心连线转动架的自转速率才为 $R\\Omega/r$。\n指定点取 $\\vect r_{AM}=r\\vect e_t$，\n则\n$\\vect v_M=(R+r)\\Omega(\\vect e_t-\\vect e_r)$，\n大小为 $\\sqrt2(R+r)|\\Omega|$。\n这个结果依赖 $AM\\perp OA$；\n靠近固定轮的接触点速度为零，对侧轮缘点速度为 $2|v_A|$。\n\n",
+    "length": 392
+  },
+  {
+    "kind": "example",
+    "n": 52,
+    "title": "圆槽内圆柱的方程、反力与振动",
+    "stem": "\\label{ex:c3-52}\n均匀实心圆柱半径 $r$、质量 $m$，\n在半径 $R>r$ 的固定圆槽内无滑动滚动，轴线平行槽轴。\n令 $q=R-r$，圆心与槽心连线从竖直向下向右偏转角 $\\varphi$。\n初始 $\\varphi=\\varphi_0,\\dot\\varphi=0$，\n取 $0<|\\varphi_0|<\\pi/2$，忽略滚阻。求运动、接触力及小振动周期。\n",
+    "answer": "\\solution 取\n$\\vect e_\\rho=(\\sin\\varphi,-\\cos\\varphi)$、\n$\\vect e_t=(\\cos\\varphi,\\sin\\varphi)$。\n逆时针自转角 $\\theta$ 为正，\n无滑约束是 $r\\dot\\theta=-q\\dot\\varphi$。\n切向力 $F$ 按 $\\vect e_t$ 取有向值，法向力 $N$ 指向槽心。\n\\[\nmq\\ddot\\varphi=F-mg\\sin\\varphi,\\quad\nmq\\dot\\varphi^2=N-mg\\cos\\varphi,\\quad\n\\frac12mr^2\\ddot\\theta=rF.\n\\]\n消去自转与摩擦，得\n\\[\n\\frac32q\\ddot\\varphi+g\\sin\\varphi=0,\\qquad\nF=\\frac13mg\\sin\\varphi.\n\\]\n总动能为 $\\tfrac34mq^2\\dot\\varphi^2$，能量积分给出\n\\[\n\\dot\\varphi^2=\\frac{4g}{3q}(\\cos\\varphi-\\cos\\varphi_0),\\qquad\nN=\\frac{mg}{3}(7\\cos\\varphi-4\\cos\\varphi_0).\n\\]\n在允许区间 $|\\varphi|\\le|\\varphi_0|$，\n$|F|/N=|\\sin\\varphi|/(7\\cos\\varphi-4\\cos\\varphi_0)$\n的最大值在端点，因此全程纯滚要求\n\\[\n\\mu_s\\ge\\frac13\\tan|\\varphi_0|.\n\\]\n$\\varphi_0=\\pi/2$ 时起点法向力为零而切向力非零，\n有限摩擦不能维持这个从静止纯滚动的模型。\n小振动方程为\n$\\ddot\\varphi+[2g/(3q)]\\varphi=0$，故\n\\[\n\\tau_0=2\\pi\\sqrt{\\frac{3(R-r)}{2g}}.\n\\]\n大振幅需保留正弦项，周期为\n$4\\sqrt{3q/(2g)}K(\\sin(|\\varphi_0|/2))$。\n圆心的轨迹半径是 $R-r$，而不是槽半径 $R$。\n\n",
+    "length": 898
+  },
+  {
+    "kind": "example",
+    "n": 53,
+    "title": "双轮提升装置",
+    "stem": "\\label{ex:c3-53}\n两个均匀圆盘 $A,B$ 的轴固定，重量为 $P_1,P_2$，\n半径为 $r_1,r_2$。轻绳绕过 $B$ 后由 $A$ 收卷，\n绳端物体 $C$ 重 $P_3$。绳不可伸长且无滑动，\n有效卷绕半径恒定，轮 $A$ 受恒定驱动矩 $M_1$。\n求物体的向上加速度及张力。\n",
+    "answer": "\\solution 自由 $A$--$B$ 段张力为 $T$，悬挂段张力为 $S$，\n取提升方向为各正方向：\n\\[\nI_A\\alpha_1=M_1-Tr_1,\\quad\nI_B\\alpha_2=(T-S)r_2,\\quad\n(P_3/g)a=S-P_3,\\quad a=r_1\\alpha_1=r_2\\alpha_2.\n\\]\n由于 $I_A=P_1r_1^2/(2g),I_B=P_2r_2^2/(2g)$，\n\\[\na=\\frac{2g(M_1/r_1-P_3)}{P_1+P_2+2P_3},\\quad\nT=\\frac{M_1}{r_1}-\\frac{P_1a}{2g},\\quad\nS=P_3(1+a/g).\n\\]\n要求从静止向上加速，必须 $M_1>P_3r_1$；\n小于此值时 $a$ 为负，不能仍称向上加速。\n对任意惯量，分母改为\n$P_3/g+I_A/r_1^2+I_B/r_2^2$，\n分子为 $M_1/r_1-P_3$。\n本题 $r_2$ 消去来自均匀盘的惯量与半径平方比例，\n并不表示第二轮惯量没有影响。\n合并轮 $B$ 与物体 $C$ 后也可对固定 $B$ 轴用角动量定理求解；\n该式含角动量导数，应与动能定理区分。\n\n",
+    "length": 520
+  },
+  {
+    "kind": "example",
+    "n": 54,
+    "title": "墙角圆柱的停止转动时间",
+    "stem": "\\label{ex:c3-54}\n均匀实心圆柱半径 $r$、重量 $Q$，同时接触左侧竖墙和水平地面。\n初始质心静止，角速度为逆时针 $\\omega_0>0$。\n两处动摩擦系数均为 $\\mu>0$，忽略滚阻，求首次停止时间。\n",
+    "answer": "\\solution 墙法向 $N_A$ 向右、墙摩擦 $f_A$ 向上；\n地面法向 $N_B$ 向上、地面摩擦 $f_B$ 向左。\n双接触保持时圆心固定，故\n\\[\nN_A=f_B,\\quad N_B+f_A=Q,\\quad\nI_C\\dot\\omega=-r(f_A+f_B),\\quad\nf_A=\\mu N_A,\\ f_B=\\mu N_B.\n\\]\n因此\n\\[\nN_B=\\frac Q{1+\\mu^2},\\quad N_A=\\frac{\\mu Q}{1+\\mu^2},\\quad\nf_A=\\frac{\\mu^2Q}{1+\\mu^2},\\quad f_B=\\frac{\\mu Q}{1+\\mu^2},\n\\]\n\\[\n\\dot\\omega=-\\frac{2g\\mu(1+\\mu)}{r(1+\\mu^2)},\\qquad\nt_*=\\frac{r\\omega_0(1+\\mu^2)}{2g\\mu(1+\\mu)}.\n\\]\n到 $\\omega=0$ 后摩擦模型切换为静摩擦，\n可取 $N_B=Q$、其他三力为零，不能继续沿用恒定动摩擦计算反向加速。\n若初始为顺时针，地面摩擦向右，\n维持圆心固定将要求负的墙法向力，接触会失去；\n上式不适用于该相反转向。$\\mu=0$ 时没有有限停止时间。\n\n",
+    "length": 538
+  },
+  {
+    "kind": "example",
+    "n": 55,
+    "title": "等长曲柄滑块：基点法、投影法与瞬心法",
+    "stem": "\\label{ex:c3-55}\n曲柄 $OA$ 与连杆 $AB$ 均长 $l$，\n$O$ 固定，滑块 $B$ 在过 $O$ 的水平导轨上运动，\n曲柄以恒定逆时针角速度 $\\Omega$ 转动。\n取右侧装配支路，当前曲柄与导轨夹角 $\\varphi=\\pi/4$，\n求滑块速度与连杆角速度。\n",
+    "answer": "\\solution 先由几何写\n$A=(l\\cos\\varphi,l\\sin\\varphi)$，\n$B=(2l\\cos\\varphi,0)$。\n直接求导得一般位置\n\\[\n\\vect v_B=-2l\\Omega\\sin\\varphi\\,\\vect i,\\qquad\n\\omega_{AB}=-\\Omega.\n\\]\n图示位置为 $\\vect v_B=-\\sqrt2l\\Omega\\,\\vect i$，\n连杆顺时针角速度大小为 $\\Omega$。\n\n基点法以 $A$ 为基点：\n$\\vect v_A=l\\Omega(-\\sin\\varphi,\\cos\\varphi)$，\n$\\vect r_{AB}=l(\\cos\\varphi,-\\sin\\varphi)$。\n由 $v_{By}=0$ 得\n$l\\Omega\\cos\\varphi+\\omega_{AB}l\\cos\\varphi=0$，\n再代入水平分量即得滑块速度。\n投影法则向 $AB$ 投影，两端投影相等，先求 $v_B$；\n这个投影消去了 $\\omega_{AB}$，\n故还需完整速度差才能求连杆角速度。\n瞬心法取 $OA$ 延长线与过 $B$ 的竖线交点 $P$；\n在 $45^\\circ$ 位置 $AP=l,BP=\\sqrt2l$，\n由 $v_A=|\\omega_{AB}|AP$、$v_B=|\\omega_{AB}|BP$ 得同样结果。\n三法分别体现代数向量、约束投影和瞬时几何的优势。\n\n",
+    "length": 622
+  },
+  {
+    "kind": "example",
+    "n": 56,
+    "title": "不等长曲柄滑块的加速度",
+    "stem": "\\label{ex:c3-56}\n曲柄 $OA=R$ 以恒定角速度 $\\Omega$ 转动，\n当前与水平导轨成 $45^\\circ$。\n连杆 $AB$ 向右下且与导轨成 $30^\\circ$，\n$B$ 为水平滑块，求 $a_B$ 和连杆角加速度。\n",
+    "answer": "\\solution 几何给 $L=AB=\\sqrt2R$。\n从竖直速度为零先得到\n$\\omega_{AB}=-\\Omega/\\sqrt3$。\n曲柄端加速度\n$\\vect a_A=-R\\Omega^2(\\vect i+\\vect j)/\\sqrt2$，\n$\\vect r_{AB}=L(\\sqrt3\\,\\vect i/2-\\vect j/2)$。\n完整合成式\n\\[\n\\vect a_B=\\vect a_A+\\alpha_{AB}\\vect k\\times\\vect r_{AB}\n-\\omega_{AB}^2\\vect r_{AB}.\n\\]\n由竖直分量为零，得到\n\\[\n\\alpha_{AB}=\\frac{2\\Omega^2}{3\\sqrt3},\\qquad\n\\vect a_B=-\\left(\\frac{\\sqrt2}{2}+\\frac{\\sqrt6}{18}\\right)R\\Omega^2\\vect i\n\\simeq-.8431895R\\Omega^2\\vect i.\n\\]\n连杆角加速度逆时针、滑块加速度向左。\n也可沿连杆投影消去切向项：\n$|a_B|\\cos30^\\circ=R\\Omega^2\\cos75^\\circ+(\\sqrt2/3)R\\Omega^2$。\n这里角加速度项与角速度平方项分别属于相对切向与法向加速度，\n不能因曲柄转速恒定就把连杆的角加速度也删去。\n\n",
+    "length": 590
+  },
+  {
+    "kind": "example",
+    "n": 57,
+    "title": "球与活动板由滑动过渡到纯滚动",
+    "stem": "\\label{ex:c3-57}\n均匀实心球质量 $m$、半径 $r$，\n放在质量 $M$ 的水平长板上，板下支承光滑。\n初始球质心静止且无自转，板以速度 $v>0$ 向右运动。\n球板间动摩擦系数为 $\\mu>0$，忽略滚阻，\n板足够长，使球在滑动至首次相对纯滚动的研究时段内始终保持在板上。\n求开始相对于板纯滚动的时间、此时各速度以及机械能损失。\n",
+    "answer": "\\solution 球底部相对板初始向左滑，球受摩擦向右，板受摩擦向左。\n取球逆时针角速度为正：\n\\[\nf=\\mu mg,\\quad \\dot v_C=\\mu g,\\quad\n\\dot v_{\\text{板}}=-\\frac{\\mu mg}{M},\\quad\n\\dot\\omega=\\frac{fr}{I_C}=\\frac{5\\mu g}{2r}.\n\\]\n因此滑动阶段\n$v_C=\\mu gt$，\n$v_{\\text{板}}=v-\\mu mgt/M$，\n$r\\omega=5\\mu gt/2$。\n球底部材料点的绝对速度为\n$v_C+r\\omega$，故相对无滑条件为\n\\[\nv_C+r\\omega=v_{\\text{板}},\\qquad\nt_*=\\frac{2Mv}{(7M+2m)\\mu g}.\n\\]\n此时\n\\[\nv_C^*=\\frac{2Mv}{7M+2m},\\quad\nv_{\\text{板}}^*=\\frac{7Mv}{7M+2m},\\quad\nr\\omega^*=\\frac{5Mv}{7M+2m}.\n\\]\n总水平动量检查：\n$mv_C^*+Mv_{\\text{板}}^*=Mv$。\n球相对于板仍向左行进，但接触处已经不滑；\n纯滚动不是球质心相对于板静止。\n\n相对滑动速度从 $v$ 匀减至零，所以累计滑动距离\n$s_{\\text{滑}}=vt_*/2=Mv^2/[(7M+2m)\\mu g]$，\n耗散\n\\[\n\\Delta E=f s_{\\text{滑}}=\\frac{mMv^2}{7M+2m}.\n\\]\n不能用接触摩擦对球质心的功单独代替总耗散；\n应把球的转动和板的功同时算入。\n相对无滑后没有水平外驱动，可取静摩擦为零，\n三个速度都保持恒定。\n$\\mu=0$ 时不能在有限时间达到该过渡，\n有限板长时需另核查球与板的相对位移不会越出板端。\n\n",
+    "length": 778
+  },
+  {
+    "kind": "example",
+    "n": 58,
+    "title": "飞机转弯时螺旋桨点的速度与加速度",
+    "stem": "\\label{ex:c3-58}\n飞机以恒速 $u$ 在半径 $R$ 的水平圆周飞行，\n螺旋桨中心为 $A$，桨轴沿飞行切向，以恒定相对自转速率 $\\omega_s$ 转动。\n点 $B$ 距桨中心为 $l$。\n取随飞机转弯的右手轴组：\n$\\vect i$ 径向向外、$\\vect j$ 沿飞行切向、$\\vect k$ 竖直向上。\n令 $\\vartheta$ 从竖直向上朝径向向外增加，\n$\\vect r_{AB}=l(\\sin\\vartheta\\,\\vect i+\\cos\\vartheta\\,\\vect k)$，\n$\\dot\\vartheta=\\omega_s$。忽略其他俯仰与滚转，求 $B$ 的运动。\n",
+    "answer": "\\solution 令 $\\Omega=u/R$，\n$\\vect\\omega=\\omega_s\\vect j+\\Omega\\vect k$。\n因为 $\\dot{\\vect j}=-\\Omega\\vect i$，\n$\\vect\\alpha=-\\Omega\\omega_s\\vect i$，不为零。\n基点速度为 $u\\vect j$，\n\\[\n\\vect v_B=\\omega_sl\\cos\\vartheta\\,\\vect i\n+(u+\\Omega l\\sin\\vartheta)\\vect j\n-\\omega_sl\\sin\\vartheta\\,\\vect k.\n\\]\n基点加速度 $-u^2\\vect i/R$。\n角加速项给 $\\Omega\\omega_sl\\cos\\vartheta\\,\\vect j$，\n双叉积又贡献同样的一项。合写得\n\\[\n\\begin{aligned}\n\\vect a_B={}&-\\left[\\frac{u^2}{R}\n+l(\\omega_s^2+\\Omega^2)\\sin\\vartheta\\right]\\vect i\\\\\n&+2\\Omega\\omega_sl\\cos\\vartheta\\,\\vect j\n-\\omega_s^2l\\cos\\vartheta\\,\\vect k.\n\\end{aligned}\n\\]\n也可直接对速度求导，但必须同时对随转弯的基矢求导。\n两个交叉贡献产生的系数 $2$ 不能漏掉。\n\n",
+    "length": 617
+  },
+  {
+    "kind": "example",
+    "n": 59,
+    "title": "三根主轴转动的线性稳定性",
+    "stem": "\\label{ex:c3-59}\n设 $I_1<I_2<I_3$。绕主轴以速率 $W$ 纯转动，\n考察小横向角速度扰动。\n",
+    "answer": "\\solution 先绕第三轴，\n$\\omega_3=W$，\n$I_1\\dot\\omega_1=(I_2-I_3)W\\omega_2$、\n$I_2\\dot\\omega_2=(I_3-I_1)W\\omega_1$，故\n\\[\n\\ddot\\omega_1+\n\\frac{(I_3-I_2)(I_3-I_1)}{I_1I_2}W^2\\omega_1=0.\n\\]\n扰动振荡，最大主惯量轴在此线性意义下稳定。\n绕第一轴也得到正平方频率，最小主惯量轴稳定。\n绕中间轴则\n\\[\n\\ddot\\omega_1-\n\\frac{(I_2-I_1)(I_3-I_2)}{I_1I_3}W^2\\omega_1=0,\n\\]\n扰动含指数增长分量，因而不稳定。\n该结论针对无外矩、互不相同的三主惯量和小扰动；\n不能直接搬到有重力矩、轴承约束或主动控制的转子上。\n\n\n",
+    "length": 366
+  },
+  {
+    "kind": "example",
+    "n": 60,
+    "title": "给定惯量和角速度的自由陀螺",
+    "stem": "\\label{ex:c3-60}\n关于固定点的主惯量为\n$A=2\\,\\mathrm{kg\\,m^2},C=3\\,\\mathrm{kg\\,m^2}$，\n初始轴向分量 $s=10\\,\\mathrm{s^{-1}}$，横向大小 $w=5\\,\\mathrm{s^{-1}}$。\n求本体频率、空间进动速率与三个方向的夹角。\n",
+    "answer": "\\solution\n\\[\nn=5\\,\\mathrm{s^{-1}},\\quad\nL=\\sqrt{(Aw)^2+(Cs)^2}=10\\sqrt{10}\\,\\mathrm{kg\\,m^2\\,s^{-1}},\n\\quad \\dot\\varphi=5\\sqrt{10}\\,\\mathrm{s^{-1}}.\n\\]\n$\\alpha=\\arctan(1/2)\\simeq26.565^\\circ$，\n$\\beta=\\theta_0=\\arctan(1/3)\\simeq18.435^\\circ$，\n夹角约 $8.130^\\circ$。\n欧拉角自转率为 $-5\\,\\mathrm{s^{-1}}$，\n并不等于正的轴向分量 $10\\,\\mathrm{s^{-1}}$。\n由 $\\dot\\varphi\\cos\\theta_0+\\dot\\psi=10\\,\\mathrm{s^{-1}}$\n可核对两者的关系。\n\n\n",
+    "length": 395
+  },
+  {
+    "kind": "example",
+    "n": 61,
+    "title": "定常进动的两支角速率",
+    "stem": "\\label{ex:c3-61}\n取 $A=1\\,\\mathrm{kg\\,m^2}$、$C=.5\\,\\mathrm{kg\\,m^2}$、\n$mgl=1\\,\\mathrm{N\\,m}$，\n轴向分量 $s=8\\,\\mathrm{s^{-1}}$，\n定常倾角 $\\theta_0=\\pi/3$。求两支进动率与欧拉角自转率。\n",
+    "answer": "\\solution $P=Cs=4\\,\\mathrm{kg\\,m^2\\,s^{-1}}$，\n方程为 $\\Omega^2/2-4\\Omega+1=0$，故\n\\[\n\\Omega_\\pm=4\\pm\\sqrt{14}\\simeq7.74166,\\ .25834\\ \\mathrm{s^{-1}}.\n\\]\n对应 $\\dot\\psi=s-\\Omega\\cos\\theta_0$\n分别为 $4.12917,7.87083\\,\\mathrm{s^{-1}}$。\n慢支近似 $mgl/P=.25\\,\\mathrm{s^{-1}}$，\n相对误差约 $3.2\\%$，本题条件下已有合理近似。\n两支要求不同初始进动率，不能说同一初态会任意选择它们。\n\n",
+    "length": 314
+  },
+  {
+    "kind": "example",
+    "n": 62,
+    "title": "只有轴向自转的倾斜释放",
+    "stem": "\\label{ex:c3-62}\n陀螺初始轴倾角满足 $0<\\theta_0<\\pi$，\n初始无章动、无进动，但轴向角速度为 $s\\ne0$。\n理想固定支点不做功，除均匀恒定重力外没有其他外力矩。\n求守恒量，说明为何开始时出现尖点而不是直接匀速进动。\n",
+    "answer": "\\solution\n\\[\nP=Cs,\\quad K=P\\cos\\theta_0,\\quad E'=mgl\\cos\\theta_0.\n\\]\n初始 $\\dot\\theta=\\dot\\varphi=0$，但\n$\\ddot\\theta(0)=mgl\\sin\\theta_0/A>0$，\n轴开始下倾。此初态位于一个章动转向点，且进动率为零，\n所以球面轴轨迹有尖点；随后章动与进动一起发展。\n令 $u_0=\\cos\\theta_0$，转向点多项式为\n\\[\nf(u)=(u_0-u)\\left[\n\\frac{2mgl}{A}(1-u^2)-\\frac{P^2}{A^2}(u_0-u)\\right].\n\\]\n除了 $u=u_0$，另一允许根决定最大下倾角。\n高速自转时，令 $\\theta=\\theta_0+\\delta$，\n有效势在小 $\\delta$ 中给出\n\\[\n\\delta_{\\max}\\simeq\\frac{2Amgl\\sin\\theta_0}{P^2}.\n\\]\n它随自转角动量平方增大而减小，\n平均慢进动率约为 $mgl/P$。\n这个平均结论不能替代刚开始的零进动与章动过程。\n\n\n",
+    "length": 491
+  },
+  {
+    "kind": "example",
+    "n": 63,
+    "title": "检验一个不能直接消掉的闭环积分",
+    "stem": "\\label{ex:c3-63}\n半径 $r$ 的圆环位于 $xy$ 平面，\n$\\vect B=B\\vect i$。计算\n$\\oint(\\vect B\\cdot\\dd\\vect s)\\vect r$。\n",
+    "answer": "\\solution 用\n$\\vect r=r(\\cos\\chi,\\sin\\chi,0)$、\n$\\dd\\vect s=r(-\\sin\\chi,\\cos\\chi,0)\\dd\\chi$，\n得\n\\[\n\\oint(\\vect B\\cdot\\dd\\vect s)\\vect r\n=-Br^2\\int_0^{2\\pi}(\\sin\\chi\\cos\\chi,\\sin^2\\chi,0)\\dd\\chi\n=-\\pi Br^2\\vect j.\n\\]\n未加权的 $\\oint\\vect B\\cdot\\dd\\vect s=0$，\n并不能推出带矢量权重后的积分也为零。\n\n",
+    "length": 271
+  },
+  {
+    "kind": "example",
+    "n": 64,
+    "title": "弱磁场中的经典轨道拉莫尔变换",
+    "stem": "\\label{ex:c3-64}\n带电粒子在中心势 $U(r)$ 中运动，\n$m\\ddot{\\vect r}=-\\nabla U+q\\dot{\\vect r}\\times\\vect B$，\n外磁场恒定且弱。说明以\n$\\vect\\Omega=-q\\vect B/(2m)$ 转动的参考系为何能消去一阶磁场项。\n",
+    "answer": "\\solution 在该旋转系中速度为 $\\vect v'$，\n空间速度 $\\vect v=\\vect v'+\\vect\\Omega\\times\\vect r$，\n加速度为\n$\\vect a=\\vect a'+2\\vect\\Omega\\times\\vect v'\n+\\vect\\Omega\\times(\\vect\\Omega\\times\\vect r)$。\n代入方程，\n$q\\vect v'\\times\\vect B$ 与科里奥利项相消，\n剩下\n\\[\nm\\vect a'=-\\nabla U+\nm\\vect\\Omega\\times(\\vect\\Omega\\times\\vect r).\n\\]\n最后一项为磁场的二阶小量。\n忽略 $O(B^2)$ 时，旋转系中的方程恢复无磁场中心力形式；\n空间观察者因而看到原轨道叠加缓慢进动。\n中心势的旋转不变性、弱场条件与带符号的旋转率\n是这条经典拉莫尔定理的关键。\n\n\n",
+    "length": 403
+  },
+  {
+    "kind": "example",
+    "n": 65,
+    "title": "各向同性谐振子对二阶项的检验",
+    "stem": "\\label{ex:c3-65}\n设 $U=m\\omega_c^2r^2/2$，磁场沿 $z$，$\\omega_c>0$。\n旋转系中横向方程准确化为\n\\[\n\\ddot x'+(\\omega_c^2+\\Omega^2)x'=0,\\qquad\n\\ddot y'+(\\omega_c^2+\\Omega^2)y'=0,\n\\]\n纵向仍是 $\\ddot z'+\\omega_c^2z'=0$。\n",
+    "answer": "\\solution 记 $w=x+\\mathrm i y$，空间方程为\n\\[\n\\ddot w+\\mathrm i\\frac{qB}{m}\\dot w+\\omega_c^2w=0.\n\\]\n令 $w=e^{\\mathrm i\\Omega t}w'$，$\\Omega=-qB/(2m)$，\n一阶导数项消掉，余下\n$\\ddot w'+(\\omega_c^2+\\Omega^2)w'=0$。\n两个有向横向频率为\n\\[\n\\sigma_\\pm=\\Omega\\pm\\sqrt{\\omega_c^2+\\Omega^2}.\n\\]\n弱场时平方根为\n$\\omega_c+\\Omega^2/(2\\omega_c)+O(\\Omega^4)$。\n两个圆偏振模态的一阶公共转动正是拉莫尔旋转，\n而二阶回复频率修正清楚地保留下来。\n自由粒子极限 $\\omega_c=0$ 不满足相对于中心力频率的弱场条件，\n不能据此把回旋频率 $|q|B/m$ 误写成 $|q|B/(2m)$。\n\n\n",
+    "length": 425
+  },
+  {
+    "kind": "example",
+    "n": 66,
+    "title": "从给定陀螺磁比计算载频和脉冲时间",
+    "stem": "\\label{ex:c3-66}\n某自旋 $1/2$ 核的参数在本题中给定为\n$\\gamma_n=2.68\\times10^8\\,\\mathrm{rad\\,s^{-1}\\,T^{-1}}$，\n取 $B_0=3.00\\,\\mathrm T$、圆偏振旋转幅度\n$B_1=10.0\\,\\mathrm{\\mu T}$。忽略弛豫并调到共振。\n",
+    "answer": "\\solution\n\\[\n\\omega_0=8.04\\times10^8\\,\\mathrm{rad\\,s^{-1}},\\qquad\nf_0=\\frac{8.04\\times10^8}{2\\pi}\\,\\mathrm{Hz}\n\\simeq1.2796\\times10^8\\,\\mathrm{Hz}.\n\\]\nRF 耦合率为 $\\omega_1=2680\\,\\mathrm{rad\\,s^{-1}}$，因此\n\\[\n\\tau_{\\pi/2}\\simeq0.5861\\,\\mathrm{ms},\\qquad\n\\tau_\\pi\\simeq1.1722\\,\\mathrm{ms}.\n\\]\n静场决定载频，旋转 RF 幅度决定理想翻转速率。\n若把条件中的 $10.0\\,\\mathrm{\\mu T}$ 改为线偏振场的峰值，\n同向旋转分量只剩 $5.00\\,\\mathrm{\\mu T}$，上述脉冲时间相应加倍。\n\n",
+    "length": 397
+  },
+  {
+    "kind": "exercise",
+    "n": 1,
+    "title": "距离不变是否意味着相对位置矢量不变？",
+    "stem": "\\label{test:c3-1}\n设刚体上两个材料点 $A,B$ 的距离恒为 $l>0$。\n写出该条件对相对速度的限制，并以平面定轴转动说明它为什么不要求相对速度为零。\n",
+    "answer": "\\solution 令 $\\vect r=\\vect r_B-\\vect r_A$。刚性约束为\n\\[\n\\vect r\\cdot\\vect r=l^2.\n\\]\n在同一惯性系中求导，得到\n\\[\n2\\vect r\\cdot(\\vect v_B-\\vect v_A)=0.\n\\]\n所以相对速度在连线方向的投影为零，而垂直连线的分量可以存在。\n例如 $A$ 固定，$B$ 以恒定角速度 $\\omega$ 绕 $A$ 转动，则\n\\[\n\\vect r=l(\\cos\\omega t\\,\\vect i+\\sin\\omega t\\,\\vect j),\\qquad\n\\dot{\\vect r}=l\\omega(-\\sin\\omega t\\,\\vect i+\\cos\\omega t\\,\\vect j).\n\\]\n两式的内积为零，但 $\\dot{\\vect r}$ 的大小是 $l|\\omega|$。\n进一步求导可得\n\\[\n\\vect r\\cdot(\\vect a_B-\\vect a_A)\n=-|\\vect v_B-\\vect v_A|^2.\n\\]\n这给出相对加速度沿连线方向的分量，说明长度保持不变仍可具有向心加速度。\n\\notice 刚性约束限制的是距离；只有纯平动时，各材料点之间的位置矢量在空间也保持不变。\n\n",
+    "length": 548
+  },
+  {
+    "kind": "exercise",
+    "n": 2,
+    "title": "同样沿圆周运动的座舱和刚性轮辐有何区别？",
+    "stem": "\\label{test:c3-2}\n一座舱的悬挂点沿半径 $R$ 的圆周运动，座舱由机构保持方向恒定；\n另一物体是一根与转轮固连的轮辐。两者都以圆周角速度 $\\Omega$ 运行，\n分别写出任意材料点的速度，并判断运动类型。\n",
+    "answer": "\\solution 对座舱，取悬挂点 $A$ 为基点，任意点 $P$ 满足\n\\[\n\\vect r_P=\\vect r_A+\\vect b_P,\n\\]\n其中 $\\vect b_P$ 在空间固定。因此\n\\[\n\\vect v_P=\\vect v_A,\\qquad \\vect a_P=\\vect a_A,\\qquad \\vect\\omega=\\vect0.\n\\]\n各点轨迹可以都是圆，但圆心相差固定矢量 $\\vect b_P$，\n这属于曲线平动。若圆周运行匀速，各点加速度的大小均为 $R\\Omega^2$，\n方向也相同。\n对轮辐，取轮心 $O$ 固定、角速度 $\\vect\\omega=\\Omega\\vect k$，\n则\n\\[\n\\vect v_P=\\Omega\\vect k\\times\\vect r_{OP},\\qquad\n\\vect a_P=-\\Omega^2\\vect r_{OP}\n\\]\n适用于轮平面中的点。距轮心不同的点，速度和加速度大小均不同。\n轮辐上任意两点的连线随时间转动，因此是定轴转动。\n\\notice 判定平动要检查物体的姿态；单个点的轨迹形状不能决定整个刚体的运动类型。\n\n",
+    "length": 497
+  },
+  {
+    "kind": "exercise",
+    "n": 3,
+    "title": "能否直接把两个有限转角当矢量相加？",
+    "stem": "\\label{test:c3-3}\n先绕固定 $x$ 轴转 $90^\\circ$，再绕固定 $y$ 轴转 $90^\\circ$；\n与顺序颠倒的结果比较。再说明无穷小转动为何可以在一阶精度下相加。\n",
+    "answer": "\\solution 采用主动转动，作用于列矢量的矩阵为\n\\[\nR_x=\\begin{pmatrix}1&0&0\\\\0&0&-1\\\\0&1&0\\end{pmatrix},\\qquad\nR_y=\\begin{pmatrix}0&0&1\\\\0&1&0\\\\-1&0&0\\end{pmatrix}.\n\\]\n取初始矢量 $\\vect e_z=(0,0,1)^{\\mathsf T}$，先 $x$ 后 $y$ 得\n\\[\nR_yR_x\\vect e_z=(0,-1,0)^{\\mathsf T},\n\\]\n先 $y$ 后 $x$ 则得\n\\[\nR_xR_y\\vect e_z=(1,0,0)^{\\mathsf T}.\n\\]\n两个姿态不相同，而通常的矢量加法与顺序无关，故有限转动不能直接作矢量相加。\n若两次小转动分别为 $\\delta\\vect\\alpha,\\delta\\vect\\beta$，\n记 $[\\vect a]_\\times\\vect r=\\vect a\\times\\vect r$，则\n\\[\nR_\\alpha=\\mathsf1+[\\delta\\vect\\alpha]_\\times+O(\\delta^2),\\qquad\nR_\\beta R_\\alpha\n=\\mathsf1+[\\delta\\vect\\alpha+\\delta\\vect\\beta]_\\times+O(\\delta^2).\n\\]\n次序的影响包含在二阶项中。一阶小转动可相加；\n除以同一时间间隔并取极限，得到瞬时角速度的矢量合成。\n这一步的极限不能用于把一段时间内的有限转角直接相加。\n\n",
+    "length": 671
+  },
+  {
+    "kind": "exercise",
+    "n": 4,
+    "title": "已知两点速度方向平行，能否必然找到有限瞬心？",
+    "stem": "\\label{test:c3-4}\n平面刚体上 $A=(0,0)$、$B=(d,0)$，其中 $d>0$。\n已知 $\\vect v_A=u\\vect j$、$\\vect v_B=w\\vect j$。\n求瞬时角速度和速度为零的点；讨论 $u=w\\ne0$ 的情形。\n",
+    "answer": "\\solution 由两点速度关系，\n\\[\n(w-u)\\vect j=\\omega\\vect k\\times(d\\vect i)=\\omega d\\vect j,\n\\qquad \\omega=\\frac{w-u}{d}.\n\\]\n设瞬心 $P=(x_P,y_P)$，利用 $\\vect v_A=\\omega\\vect k\\times\\vect r_{PA}$，\n\\[\nu\\vect j=\\omega(y_P\\vect i-x_P\\vect j).\n\\]\n当 $w\\ne u$ 时，$\\omega\\ne0$，故\n\\[\ny_P=0,\\qquad x_P=-\\frac{u}{\\omega}=-\\frac{ud}{w-u}.\n\\]\n这样才能由大小和几何位置确定有限瞬心。\n若 $u=w\\ne0$，则 $\\omega=0$，所有材料点瞬时具有相同非零速度。\n不存在有限的速度零点；随着 $w-u\\to0$，以上 $x_P$ 发散。\n若 $u=w=0$，则本瞬时全体点速度为零，也不能从速度数据选出唯一瞬心。\n\\notice 平行速度既可能来自转动，也可能来自瞬时平动。作垂线相交时，还要处理重合、平行与零速度等退化情形。\n\n",
+    "length": 507
+  },
+  {
+    "kind": "exercise",
+    "n": 5,
+    "title": "欧拉角 $\\theta=0$ 时，哪些角仍可确定？",
+    "stem": "\\label{test:c3-5}\n使用 $z$--$x$--$z$ 欧拉角约定\n$R=R_z(\\varphi)R_x(\\theta)R_z(\\psi)$。\n在 $\\theta=0$ 时求姿态矩阵，并说明角变量为何不唯一。\n",
+    "answer": "\\solution 当 $\\theta=0$，中间矩阵为单位矩阵，因此\n\\[\nR=R_z(\\varphi)R_z(\\psi)=R_z(\\varphi+\\psi).\n\\]\n两个 $z$ 轴重合，绕它们的转动只通过总角\n$\\chi=\\varphi+\\psi$ 影响姿态。对任意函数 $f(t)$，变换\n\\[\n\\varphi\\longmapsto\\varphi+f(t),\\qquad\n\\psi\\longmapsto\\psi-f(t)\n\\]\n不改变 $R$。所以此时不能分别测定 $\\varphi,\\psi$。\n若一段运动始终保持 $\\theta=0$，则\n\\[\n\\vect\\omega=\\dot\\chi\\,\\vect e_z\n=(\\dot\\varphi+\\dot\\psi)\\vect e_z.\n\\]\n如果运动只是瞬时通过 $\\theta=0$，角速度仍应由\n$\\dot R R^{\\mathsf T}$ 求出，不能把穿越时的横向角速度也删去。\n欧拉角反演公式中的 $1/\\sin\\theta$ 表示坐标退化，而不是刚体运动本身发散。\n\n",
+    "length": 466
+  },
+  {
+    "kind": "exercise",
+    "n": 6,
+    "title": "为什么轴向角速度不一定等于欧拉角自转率？",
+    "stem": "\\label{test:c3-6}\n设刚体以倾角 $\\theta$ 进动，方位率 $\\dot\\varphi$，\n绕节点轴的倾角变化率 $\\dot\\theta$，自转角率 $\\dot\\psi$。\n求总角速度在本体 $z$ 轴上的分量，并给出匀速进动时的区别。\n",
+    "answer": "\\solution 总角速度由三次瞬时转动合成：\n\\[\n\\vect\\omega=\\dot\\varphi\\,\\vect e_\\zeta+\n\\dot\\theta\\,\\vect e_N+\\dot\\psi\\,\\vect e_z.\n\\]\n节点轴同时垂直于空间 $\\zeta$ 轴与本体 $z$ 轴，\n故 $\\vect e_N\\cdot\\vect e_z=0$，而\n$\\vect e_\\zeta\\cdot\\vect e_z=\\cos\\theta$。\n两侧点乘 $\\vect e_z$，得\n\\[\n\\omega_3=\\dot\\psi+\\dot\\varphi\\cos\\theta.\n\\]\n若 $\\dot\\theta=0$、$\\dot\\varphi=\\Omega$，则保持轴向角速度 $s$ 所需的自转角率为\n\\[\n\\dot\\psi=s-\\Omega\\cos\\theta.\n\\]\n例如 $\\theta=60^\\circ$、$\\Omega=2\\,\\mathrm{s^{-1}}$、\n$s=10\\,\\mathrm{s^{-1}}$，相应 $\\dot\\psi=9\\,\\mathrm{s^{-1}}$。\n这个差值来自进动角速度在本体轴上的投影。\n当 $\\theta=90^\\circ$ 时进动投影为零，两者相等；\n更一般地，$\\omega_3=\\dot\\psi$ 的条件是 $\\dot\\varphi\\cos\\theta=0$，\n所以 $\\dot\\varphi=0$ 时也有这一等式。\n在始终保持 $\\theta=0$ 的运动中，姿态及轴向角速度分别由\n$\\varphi+\\psi$ 及 $\\dot\\varphi+\\dot\\psi$ 确定，不能将两角率分别测定。\n\n",
+    "length": 718
+  },
+  {
+    "kind": "exercise",
+    "n": 7,
+    "title": "平面三点取矩为零为什么要求三点不共线？",
+    "stem": "\\label{test:c3-7}\n设平面力系对三个点 $A,B,D$ 的力矩都为零。\n证明三个点不共线时力系平衡，并构造三个点共线时的反例。\n",
+    "answer": "\\solution 令合力为 $\\vect F=F_x\\vect i+F_y\\vect j$。\n取矩点平移关系为\n\\[\nM_B=M_A-(\\vect r_{AB}\\times\\vect F)\\cdot\\vect k,\\qquad\nM_D=M_A-(\\vect r_{AD}\\times\\vect F)\\cdot\\vect k.\n\\]\n三个矩都为零，意味着\n\\[\n\\begin{pmatrix}-y_{AB}&x_{AB}\\\\-y_{AD}&x_{AD}\\end{pmatrix}\n\\begin{pmatrix}F_x\\\\F_y\\end{pmatrix}\n=\\begin{pmatrix}0\\\\0\\end{pmatrix}.\n\\]\n系数行列式为\n$x_{AB}y_{AD}-y_{AB}x_{AD}$，其绝对值等于三角形 $ABD$ 面积的两倍。\n不共线时行列式非零，故 $F_x=F_y=0$，再结合 $M_A=0$，力系平衡。\n若三点在 $x$ 轴上，一个非零力 $F\\vect i$ 的作用线也在 $x$ 轴上，\n它对三点的力矩都为零，但合力不为零。\n所以仅有三条取矩方程还不够，取矩点的几何独立性不可省略。\n\n",
+    "length": 508
+  },
+  {
+    "kind": "exercise",
+    "n": 8,
+    "title": "有静摩擦的无滑滚动为何可以守恒机械能？",
+    "stem": "\\label{test:c3-8}\n半径 $a$ 的圆轮在固定轨道上纯滚动，接触处静摩擦为 $\\vect f$。\n把摩擦的平动功率与转动功率分别写出，说明两项如何相消。\n",
+    "answer": "\\solution 在固定轨道上无滑动时，接触材料点 $P$ 的瞬时速度为零：\n\\[\n\\vect v_P=\\vect v_C+\\vect\\omega\\times\\vect r_{CP}=\\vect0.\n\\]\n摩擦力对刚体整体的功率为\n\\[\n\\mathcal P_f=\\vect f\\cdot\\vect v_C+\n(\\vect r_{CP}\\times\\vect f)\\cdot\\vect\\omega\n=\\vect f\\cdot(\\vect v_C+\\vect\\omega\\times\\vect r_{CP})=0.\n\\]\n等式使用了标量三重积的循环关系。\n以轮向下滚动为例，沿坡向上的静摩擦对质心平动做负功，\n但对转动做同样大小的正功，二者之和为零。\n因此静摩擦能够重新分配平动和转动能量而不耗散总机械能。\n这一结论须同时满足固定支承、无滑动、无滚动阻力以及无其他耗散。\n先解出所需 $f$，再核查 $|f|\\le\\mu_sN$；如果不满足，必须改用滑动模型。\n若轨道本身运动，接触速度等于轨道速度，摩擦功率一般不再为零。\n\n",
+    "length": 463
+  },
+  {
+    "kind": "exercise",
+    "n": 9,
+    "title": "取矩中心改动时主矢和主矩怎样变化？",
+    "stem": "\\label{test:c3-9}\n力系含若干力 $\\vect F_i$，作用点为 $P_i$，并可含自由力偶 $\\vect M_c$。\n由定义推导从 $O$ 改为 $A$ 的力系化简关系。\n",
+    "answer": "\\solution 主矢定义为\n\\[\n\\vect F=\\sum_i\\vect F_i,\n\\]\n它不涉及取矩点，因此保持不变。主矩为\n\\[\n\\vect M_O=\\sum_i\\vect r_{OP_i}\\times\\vect F_i+\\vect M_c.\n\\]\n由于 $\\vect r_{AP_i}=\\vect r_{OP_i}-\\vect r_{OA}$，\n\\[\n\\begin{aligned}\n\\vect M_A\n&=\\sum_i(\\vect r_{OP_i}-\\vect r_{OA})\\times\\vect F_i+\\vect M_c\\\\\n&=\\vect M_O-\\vect r_{OA}\\times\\vect F.\n\\end{aligned}\n\\]\n所以当 $\\vect F=\\vect0$ 时，主矩对任意取矩点都相同，\n这正是力偶的性质。若 $\\vect F\\ne\\vect0$，沿合力方向移动取矩点也不改变主矩，\n但一般方向的移动会改变主矩。\n作为符号检查，设向上的力 $F\\vect j$ 作用于 $x=b$，\n原点矩为 $bF\\vect k$。把取矩点移到 $A=(b,0)$，\n公式给出 $M_A=bF-bF=0$，与作用点取矩一致。\n\n",
+    "length": 527
+  },
+  {
+    "kind": "exercise",
+    "n": 10,
+    "title": "三力定理可以用于含一个独立力偶的物体吗？",
+    "stem": "\\label{test:c3-10}\n一个刚体承受三个非零、非平行力，另外还承受独立力偶。\n说明平衡时三个力的作用线是否必然共点，并给出平面反例。\n",
+    "answer": "\\solution 只有三个力时，任取两条相交作用线的交点取矩，\n这两力的矩为零；第三力若要满足矩平衡，其作用线必须经过交点。\n加上独立力偶后，矩方程变成\n\\[\n\\vect r\\times\\vect F_3+\\vect M_c=\\vect0,\n\\]\n第三力的矩可以由力偶抵消，因此不再要求它通过交点。\n例如两力 $\\vect F_1=F\\vect i$、$\\vect F_2=F\\vect j$\n都通过原点；第三力 $\\vect F_3=-F(\\vect i+\\vect j)$\n作用于 $(a,0)$。三力的合力为零，而合矩为\n\\[\n(a\\vect i)\\times[-F(\\vect i+\\vect j)]=-aF\\vect k.\n\\]\n加入力偶 $\\vect M_c=aF\\vect k$ 后物体平衡，但第三力的作用线不通过原点。\n故三力共点定理的适用条件必须先核对，不能把力偶漏记后作几何判断。\n",
+    "length": 402
+  },
+  {
+    "kind": "exercise",
+    "n": 11,
+    "title": "细杆斜轴的方向惯量",
+    "stem": "\\label{test:c3-11}\n均匀细杆质量 $m$、长度 $L$，通过中点的转轴与杆夹角为 $\\beta$。\n直接由积分求惯量，再用惯量张量验证。\n",
+    "answer": "\\solution 用沿杆坐标 $s\\in[-L/2,L/2]$，\n线密度 $\\lambda=m/L$。坐标为 $s$ 的质元到转轴的垂距为 $|s\\sin\\beta|$，\n因此\n\\[\nI_\\beta=\\int_{-L/2}^{L/2}s^2\\sin^2\\beta\\,\\lambda\\,\\dd s\n=\\frac{m}{L}\\sin^2\\beta\\left[\\frac{s^3}{3}\\right]_{-L/2}^{L/2}\n=\\frac{mL^2}{12}\\sin^2\\beta.\n\\]\n若令杆沿 $z$ 轴，则其中心惯量张量为\n\\[\n\\mathsf I_C=\\operatorname{diag}\\left(\\frac{mL^2}{12},\n\\frac{mL^2}{12},0\\right).\n\\]\n选轴向单位矢量\n$\\vect n=(\\sin\\beta,0,\\cos\\beta)^{\\mathsf T}$，\n有 $I_\\beta=\\vect n^{\\mathsf T}\\mathsf I_C\\vect n$，\n与积分相同。$\\beta=0$ 时惯量为零是理想细杆横截面被忽略的结果；\n实际有截面的杆沿纵轴仍有小而非零的惯量。\n$\\beta=90^\\circ$ 时得到通常的中点横轴惯量，且\n$I_\\beta$ 的量纲始终为质量乘长度平方。\n\n",
+    "length": 573
+  },
+  {
+    "kind": "exercise",
+    "n": 12,
+    "title": "球的平行轴惯量",
+    "stem": "\\label{test:c3-12}\n均匀实心球半径 $a$、质量 $m$。一条转轴与过球心的某直径平行，\n两轴的垂距为 $d$。从平行轴定理的积分证明求其惯量。\n",
+    "answer": "\\solution 取过球心的轴为 $z$ 轴，外轴位于 $x=d,y=0$。\n质元到外轴的距离平方为 $(x-d)^2+y^2$，因此\n\\[\n\\begin{aligned}\nI&=\\int[(x-d)^2+y^2]\\,\\dd m\\\\\n&=\\int(x^2+y^2)\\,\\dd m-2d\\int x\\,\\dd m+d^2\\int\\dd m.\n\\end{aligned}\n\\]\n球心就是质心，$\\int x\\,\\dd m=0$，故\n$I=I_C+md^2$。均匀实心球的中心轴惯量为\n\\[\nI_C=\\rho\\int_0^a r^4\\,\\dd r\n\\int_0^\\pi\\sin^3\\theta\\,\\dd\\theta\n\\int_0^{2\\pi}\\dd\\varphi\n=\\frac{8\\pi\\rho a^5}{15}=\\frac25ma^2,\n\\]\n其中 $\\rho=3m/(4\\pi a^3)$。所以\n\\[\nI=\\frac25ma^2+md^2.\n\\]\n当 $d=a$ 时为切线轴，$I=7ma^2/5$。\n这里的 $d$ 是两条平行轴的最短距离；\n若给出的点间距离包含轴向分量，必须先取其垂直于轴的部分。\n\n",
+    "length": 502
+  },
+  {
+    "kind": "exercise",
+    "n": 13,
+    "title": "均匀实心半球从球心移到质心，哪个惯量不变？",
+    "stem": "\\label{test:c3-13}\n半球占据 $x^2+y^2+z^2\\le a^2,\\ z\\ge0$，质量 $m$。\n求其质心和三条质心主轴的惯量。\n",
+    "answer": "\\solution 密度为 $\\rho=3m/(2\\pi a^3)$。\n高度 $z$ 的圆截面面积为 $\\pi(a^2-z^2)$，故\n\\[\nz_C=\\frac{\\rho\\pi}{m}\\int_0^a z(a^2-z^2)\\,\\dd z\n=\\frac{\\rho\\pi a^4}{4m}=\\frac{3a}{8}.\n\\]\n由对称性 $x_C=y_C=0$。过球心 $O$ 的三个正交轴惯量都为\n$2ma^2/5$：相同密度整球的积分在 $z\\ge0$ 与 $z\\le0$ 各占一半，\n而半球质量也为整球的一半。对 $z$ 轴也可用截面圆盘验证：\n\\[\nI_{Oz}=\\frac{\\rho\\pi}{2}\\int_0^a(a^2-z^2)^2\\,\\dd z\n=\\frac{4\\pi\\rho a^5}{15}=\\frac25ma^2.\n\\]\n将坐标原点沿 $z$ 移到 $C$，平行轴定理给出\n\\[\nI_{Cx}=I_{Ox}-mz_C^2\n=\\left(\\frac25-\\frac9{64}\\right)ma^2=\\frac{83}{320}ma^2,\n\\]\n同理 $I_{Cy}=83ma^2/320$。中心对称轴与原 $z$ 轴是同一条直线，\n不存在两轴间的垂距，所以\n\\[\nI_{Cz}=\\frac25ma^2.\n\\]\n因此移点只改变横向轴惯量，沿对称轴的惯量保持不变。\n\n",
+    "length": 587
+  },
+  {
+    "kind": "exercise",
+    "n": 14,
+    "title": "重根主惯量的主轴是否唯一？",
+    "stem": "\\label{test:c3-14}\n设质心惯量张量在某组正交坐标中为\n$\\operatorname{diag}(A,A,C)$，且 $A\\ne C$。\n求出其主轴，并说明在重根平面中使用斜交方向会发生什么。\n",
+    "answer": "\\solution 特征方程为\n\\[\n(A-\\lambda)^2(C-\\lambda)=0.\n\\]\n对 $\\lambda=C$，特征矢量沿 $z$ 轴；\n对 $\\lambda=A$，任意矢量 $(u,v,0)$ 都是特征矢量。\n可以任选角 $\\chi$，建立单位正交基\n\\[\n\\vect e'_1=(\\cos\\chi,\\sin\\chi,0),\\qquad\n\\vect e'_2=(-\\sin\\chi,\\cos\\chi,0),\\qquad \\vect e'_3=\\vect e_z.\n\\]\n这组三轴均为主轴，且转动动能始终为\n\\[\nT=\\frac12A(\\omega_1'^2+\\omega_2'^2)+\\frac12C\\omega_3'^2.\n\\]\n如果在特征平面内选两条夹角为 $\\eta\\ne90^\\circ$ 的单位方向\n$\\vect u,\\vect v$，虽然两者各自都是特征矢量，\n但令 $\\vect\\omega=p\\vect u+q\\vect v$ 时，\n\\[\nT=\\frac A2(p^2+q^2+2pq\\cos\\eta)\n\\]\n出现交叉项。原因是 $p,q$ 为斜交基展开系数，不能当作正交投影分量。\n重根给出的是主轴选择自由，而不是取消正交坐标的要求。\n若进一步 $A=C$，任意正交三轴组都可以作为主轴组。\n\n",
+    "length": 565
+  },
+  {
+    "kind": "exercise",
+    "n": 15,
+    "title": "均匀圆环与圆盘滚下同一斜面",
+    "stem": "\\label{test:c3-15}\n同半径 $a$ 的均匀圆环和圆盘，从静止开始沿倾角 $\\beta$ 的固定斜面纯滚动。\n求加速度、所需静摩擦和保证纯滚动的最小静摩擦系数。\n",
+    "answer": "\\solution 沿坡向下为正，设静摩擦大小 $f$ 沿坡向上。\n令 $I_C=kma^2$，由平动、转动和无滑约束，\n\\[\nm\\ddot x=mg\\sin\\beta-f,\\qquad\nI_C|\\alpha|=fa,\\qquad \\ddot x=a|\\alpha|.\n\\]\n后两式给出 $f=km\\ddot x$，代入第一式，\n\\[\n\\ddot x=\\frac{g\\sin\\beta}{1+k},\\qquad\nf=\\frac{k}{1+k}mg\\sin\\beta,\\qquad N=mg\\cos\\beta.\n\\]\n圆环 $k=1$，因此\n\\[\n\\ddot x_{\\text{环}}=\\frac12g\\sin\\beta,\\qquad\nf_{\\text{环}}=\\frac12mg\\sin\\beta,\\qquad\n\\mu_s\\ge\\frac12\\tan\\beta.\n\\]\n圆盘 $k=1/2$，因此\n\\[\n\\ddot x_{\\text{盘}}=\\frac23g\\sin\\beta,\\qquad\nf_{\\text{盘}}=\\frac13mg\\sin\\beta,\\qquad\n\\mu_s\\ge\\frac13\\tan\\beta.\n\\]\n两者都满足各自摩擦条件时，圆盘较早到达同一坡下位置。\n也可由 $mgx\\sin\\beta=\\frac12m(1+k)\\dot x^2$ 求导得到相同加速度。\n若斜面摩擦只够圆盘而不够圆环，上述圆环纯滚动解就不能用来比较实际运动。\n\n",
+    "length": 630
+  },
+  {
+    "kind": "exercise",
+    "n": 16,
+    "title": "物理摆悬点过质心时会怎样？",
+    "stem": "\\label{test:c3-16}\n刚体绕水平固定轴运动，质心到轴的距离为 $h$，轴惯量为 $I_O$。\n从动力学方程解释 $h=0$ 与 $h\\to0^+$ 的区别。\n",
+    "answer": "\\solution 以质心位于悬点下方为 $\\theta=0$，\n重力的有向力矩为 $-mgh\\sin\\theta$，故\n\\[\nI_O\\ddot\\theta+mgh\\sin\\theta=0.\n\\]\n对 $h>0$ 的小振幅运动，$\\sin\\theta\\simeq\\theta$，得到\n\\[\n\\omega_{\\text{摆}}^2=\\frac{mgh}{I_O},\\qquad\nT_{\\text{摆}}=2\\pi\\sqrt{\\frac{I_O}{mgh}}.\n\\]\n当悬点向质心趋近，$I_O=I_C+mh^2$。\n若 $I_C>0$，则 $h\\to0^+$ 时回复系数趋零，周期发散。\n在严格的 $h=0$ 条件下，方程直接变为\n\\[\nI_C\\ddot\\theta=0,\\qquad\n\\theta(t)=\\theta(0)+\\dot\\theta(0)t.\n\\]\n初始静止时可以停在任意姿态；初始有角速度时保持匀速转动。\n这里不存在围绕唯一平衡姿态的小摆动，所以不应将无限周期解释成某种有限振荡。\n如果附加扭簧或其他恢复力矩，则须把该项计入，原结论也随之改变。\n\n",
+    "length": 481
+  },
+  {
+    "kind": "exercise",
+    "n": 17,
+    "title": "静平衡是否保证动平衡？",
+    "stem": "\\label{test:c3-17}\n转子绕固定 $z$ 轴以常角速度 $\\Omega$ 转动。\n设质心在轴上，但该轴不是中心主轴。\n由角动量的空间导数证明仍需附加横向力偶。\n",
+    "answer": "\\solution 质心在轴上意味着横向偏心距为零，\n因此没有由质心绕轴公转引起的离心合力。\n不过在随体坐标中，\n\\[\n\\vect L_C=\\Omega(I_{xz}\\vect e_x+I_{yz}\\vect e_y+I_{zz}\\vect e_z).\n\\]\n各分量虽为常数，横向基矢却以 $\\Omega$ 转动。\n由运输公式，\n\\[\n\\vect M_C=\\vect\\omega\\times\\vect L_C\n=-I_{yz}\\Omega^2\\vect e_x+I_{xz}\\Omega^2\\vect e_y.\n\\]\n只要 $I_{xz}$ 或 $I_{yz}$ 非零，就需轴承提供横向力偶。\n例如取均匀细杆，其质心在轴上，杆方向\n$\\vect n=(\\sin\\beta,0,\\cos\\beta)$。\n它的中心张量是\n\\[\n\\mathsf I_C=\\frac{mL^2}{12}(\\mathsf1-\\vect n\\vect n^{\\mathsf T}),\n\\qquad I_{xz}=-\\frac{mL^2}{12}\\sin\\beta\\cos\\beta.\n\\]\n当 $0<\\beta<90^\\circ$，$I_{xz}\\ne0$，这是静平衡但不满足动平衡的明确例子。\n要消除随转动变化的附加轴承载荷，\n还须令固定轴成为中心主轴，即同时满足 $I_{xz}=I_{yz}=0$。\n\n",
+    "length": 590
+  },
+  {
+    "kind": "exercise",
+    "n": 18,
+    "title": "轮子匀速纯滚动时底部点加速度",
+    "stem": "\\label{test:c3-18}\n半径 $R$ 的轮向右以质心速率 $v$ 纯滚动。\n取当前接触地面的材料点 $P$，求其速度和加速度，\n并说明为何不能对瞬心速度零直接求导。\n",
+    "answer": "\\solution 取 $\\vect i$ 向右、$\\vect j$ 向上，\n有 $\\vect v_C=v\\vect i$，\n$\\vect\\omega=-(v/R)\\vect k$、$\\vect r_{CP}=-R\\vect j$。\n因而\n\\[\n\\vect v_P=v\\vect i+\n\\left(-\\frac vR\\vect k\\right)\\times(-R\\vect j)=\\vect0.\n\\]\n匀速运动中 $\\vect a_C=\\vect0$、$\\vect\\alpha=\\vect0$，所以\n\\[\n\\begin{aligned}\n\\vect a_P\n&=\\vect\\omega\\times(\\vect\\omega\\times\\vect r_{CP})\\\\\n&=-\\frac{v^2}{R^2}\\vect r_{CP}\n=\\frac{v^2}{R}\\vect j.\n\\end{aligned}\n\\]\n这里 $P$ 是本瞬时碰巧位于底部的同一个材料点，它随后将离开接触位置。\n下一时刻的底部材料点已是另一个点。\n“接触点速度恒为零”是在不断更换材料点的意义下成立，\n不能由此推出某一材料点的加速度也为零。\n结果还可由摆线的二阶导数核查：最低点的切向速度为零，但曲线具有非零向上加速度。\n\n",
+    "length": 546
+  },
+  {
+    "kind": "exercise",
+    "n": 19,
+    "title": "外滚行星轮半径相等时转速比",
+    "stem": "\\label{test:c3-19}\n固定轮半径 $R$，外滚行星轮半径 $r$，\n转臂绕固定轮心以角速度 $\\Omega>0$ 逆时针转动。\n求行星轮的绝对自转率，以及相对于转臂的自转率。\n",
+    "answer": "\\solution 行星轮心 $C$ 到固定轮心的距离为 $R+r$，\n故其切向速度为\n\\[\n\\vect v_C=(R+r)\\Omega\\vect e_\\theta.\n\\]\n接触点相对轮心的位置为 $-r\\vect e_r$。\n设行星轮的绝对角速度为 $\\omega\\vect k$，\n固定轮上的接触点速度为零；无滑条件给出\n\\[\n\\vect0=(R+r)\\Omega\\vect e_\\theta+\n\\omega\\vect k\\times(-r\\vect e_r)\n=[(R+r)\\Omega-r\\omega]\\vect e_\\theta.\n\\]\n因此\n\\[\n\\omega=\\frac{R+r}{r}\\Omega.\n\\]\n转臂坐标也以 $\\Omega$ 转动，所以相对自转率为\n\\[\n\\omega_{\\text{相对}}=\\omega-\\Omega=\\frac Rr\\Omega.\n\\]\n特别是 $R=r$ 时，绝对率为 $2\\Omega$，相对率为 $\\Omega$。\n转臂完成一周，行星轮在空间转两周，而相对于转臂只转一周。\n应先注明观察参考系，再使用“自转圈数”，否则容易漏掉转臂本身的一周。\n\n",
+    "length": 501
+  },
+  {
+    "kind": "exercise",
+    "n": 20,
+    "title": "光滑支承上的球板系统哪个量守恒？",
+    "stem": "\\label{test:c3-20}\n均匀实心球质量 $m$、半径 $R$，初速 $v>0$，初始角速度为零。\n质量 $M$ 的长水平板初始静止，板的支承光滑；\n球板间有摩擦且始终接触，板足够长。\n求进入无相对滑动状态时的速度和机械能损失。\n",
+    "answer": "\\solution 水平外力为零，系统水平动量守恒；滑动摩擦会耗散机械能。\n记摩擦冲量大小为 $J$，球向右速度为 $v_b$，板速度为 $V$，\n并把球的顺时针转速大小记为 $\\omega$。\n球、板和球自转的冲量方程分别为\n\\[\nmv_b=mv-J,\\qquad MV=J,\\qquad\n\\frac25mR^2\\omega=JR.\n\\]\n所以\n\\[\nv_b=v-\\frac Jm,\\qquad V=\\frac JM,\\qquad\nR\\omega=\\frac{5J}{2m}.\n\\]\n球底部相对板的滑动速度为\n\\[\nu=v_b-R\\omega-V\n=v-J\\left(\\frac7{2m}+\\frac1M\\right).\n\\]\n首次达到 $u=0$ 时，\n\\[\nJ_*=\\frac{2mMv}{7M+2m},\n\\]\n进而\n\\[\nv_b=\\frac{5M+2m}{7M+2m}v,\\qquad\nV=\\frac{2m}{7M+2m}v,\\qquad\nR\\omega=\\frac{5M}{7M+2m}v.\n\\]\n代回可验证 $mv_b+MV=mv$ 和 $v_b-R\\omega=V$。\n初能为 $E_i=mv^2/2$，末能必须包含三项：\n\\[\nE_f=\\frac12mv_b^2+\\frac12MV^2+\n\\frac12\\left(\\frac25mR^2\\right)\\omega^2.\n\\]\n化简得到\n\\[\nE_i-E_f=\\frac{mMv^2}{7M+2m}.\n\\]\n当 $M\\to\\infty$ 时，板的速度趋零，球的 $v_b\\to5v/7$，\n损失趋于 $mv^2/7$，恢复固定平板的结果。\n达成无相对滑动后若无其他作用，三个速度均可保持恒定，此时所需静摩擦为零。\n",
+    "length": 740
+  },
+  {
+    "kind": "exercise",
+    "n": 21,
+    "title": "无外力矩是否保证角速度在空间恒定？",
+    "stem": "\\label{test:c3-21}\n刚体绕固定点自由转动，或者以质心为角动量参考点且无外力矩。\n说明空间角动量与角速度各满足什么关系，并给出角速度不恒定的例子。\n",
+    "answer": "\\solution 在惯性系中，\n\\[\n\\frac{\\dd\\vect L}{\\dd t}=\\vect0,\\qquad \\vect L=\\text{空间常矢量}.\n\\]\n但是 $\\vect L=\\mathsf I(t)\\vect\\omega$，非球形刚体的空间惯量张量\n$\\mathsf I(t)$ 随姿态变化，故不能由 $\\vect L$ 恒定直接推出 $\\vect\\omega$ 恒定。\n对主惯量 $(A,A,C)$ 的轴对称刚体，设 $\\omega_3=s$，\n可将角动量写为\n\\[\n\\vect L=A\\vect\\omega+(C-A)s\\vect e_3,\n\\qquad\n\\vect\\omega=\\frac{\\vect L}{A}-\\frac{C-A}{A}s\\vect e_3.\n\\]\n无矩时 $s$ 恒定，但倾斜的本体轴 $\\vect e_3$ 围绕 $\\vect L$ 进动。\n因此当 $A\\ne C$、$s\\ne0$、$\\vect e_3$ 不平行于 $\\vect L$ 时，\n$\\vect\\omega$ 的空间方向随时间改变。\n特殊情形包括惯量各向同性的刚体，此时\n$\\vect L=I\\vect\\omega$；也包括沿一根主轴的精确纯转动。\n这些特殊解的角速度可在空间恒定，但不能替代一般结论。\n\n",
+    "length": 558
+  },
+  {
+    "kind": "exercise",
+    "n": 22,
+    "title": "三种主轴中哪一根自由转动不稳定？",
+    "stem": "\\label{test:c3-22}\n取 $I_1<I_2<I_3$。围绕中间惯量轴作纯转动\n$\\omega_2=\\Omega\\ne0$，写出 $\\omega_1,\\omega_3$ 的线性扰动方程，\n给出带初始扰动的解，并与另两根轴比较。\n",
+    "answer": "\\solution 无矩欧拉方程为\n\\[\nI_1\\dot\\omega_1+(I_3-I_2)\\omega_2\\omega_3=0,\\qquad\nI_3\\dot\\omega_3+(I_2-I_1)\\omega_1\\omega_2=0.\n\\]\n把 $\\omega_2=\\Omega+O(\\delta)$，\n$\\omega_1=x,\\omega_3=z$ 代入并保留一阶项，得\n\\[\n\\dot x=-az,\\qquad \\dot z=-bx,\\qquad\na=\\frac{(I_3-I_2)\\Omega}{I_1},\\quad\nb=\\frac{(I_2-I_1)\\Omega}{I_3}.\n\\]\n两系数同号，且\n\\[\n\\ddot x=abx,\\qquad\n\\lambda=\\sqrt{ab}\n=|\\Omega|\\sqrt{\\frac{(I_3-I_2)(I_2-I_1)}{I_1I_3}}>0.\n\\]\n若初值为 $x_0,z_0$，则\n\\[\n\\begin{aligned}\nx(t)&=x_0\\cosh\\lambda t-\\frac a\\lambda z_0\\sinh\\lambda t,\\\\\nz(t)&=z_0\\cosh\\lambda t-\\frac b\\lambda x_0\\sinh\\lambda t.\n\\end{aligned}\n\\]\n一般初值含 $e^{\\lambda t}$ 项，扰动增长，故中间轴转动不稳定。\n沿最小惯量轴，二阶方程的系数为\n$-\\Omega^2(I_2-I_1)(I_3-I_1)/(I_2I_3)<0$；\n沿最大惯量轴则为\n$-\\Omega^2(I_3-I_1)(I_3-I_2)/(I_1I_2)<0$。\n相应横向扰动为振荡，在线性意义下稳定。\n惯量重根时上述增长率可能为零，必须另行考察，不能沿用三根互异的判断。\n\n",
+    "length": 775
+  },
+  {
+    "kind": "exercise",
+    "n": 23,
+    "title": "对称自由陀螺的空间进动率",
+    "stem": "\\label{test:c3-23}\n无矩轴对称刚体主惯量为 $(A,A,C)$，\n轴向角速度 $s$。以空间 $\\zeta$ 轴沿恒定角动量 $\\vect L$，\n求 $\\dot\\varphi,\\dot\\theta,\\dot\\psi$，并解释空间进动与本体自转的区别。\n",
+    "answer": "\\solution 欧拉第三式给出 $C\\dot s=0$，故 $s$ 恒定。\n轴向角动量为 $Cs$，于是\n\\[\nL\\cos\\theta=Cs\n\\]\n说明 $\\theta$ 恒定。利用前题的矢量式，\n\\[\n\\dot{\\vect e}_3=\\vect\\omega\\times\\vect e_3\n=\\frac{\\vect L}{A}\\times\\vect e_3.\n\\]\n因此非退化倾斜情形下\n\\[\n\\dot\\varphi=\\frac LA,\\qquad \\dot\\theta=0.\n\\]\n又因 $s=\\dot\\psi+\\dot\\varphi\\cos\\theta$，\n\\[\n\\dot\\psi=s-\\frac LA\\frac{Cs}{L}\n=-\\frac{C-A}{A}s.\n\\]\n所以空间进动率由角动量大小和横向惯量决定，\n欧拉自转角率则随 $C-A$ 的符号改变。\n如果 $C>A$、$s>0$，$\\dot\\psi<0$，并不意味着实际轴向角速度 $s$ 也为负；\n两者包含的进动投影不同。\n在 $\\theta=0,\\pi$ 时节点轴退化，只能由总角率描述轴向转动，\n不宜分别把 $\\dot\\varphi,\\dot\\psi$ 当作可独立观测的角率。\n\n",
+    "length": 526
+  },
+  {
+    "kind": "exercise",
+    "n": 24,
+    "title": "重陀螺有哪些守恒量？",
+    "stem": "\\label{test:c3-24}\n轴对称刚体由理想支点固定于 $O$，质心为 $l\\vect e_3$，\n置于均匀恒定重力场中，不受其他外力矩。空间 $\\zeta$ 轴竖直向上。\n设横向惯量 $A$、轴向惯量 $C$，\n用欧拉角写出三项独立积分及其物理来源。\n",
+    "answer": "\\solution 动能和势能分别为\n\\[\nT=\\frac A2(\\dot\\theta^2+\\dot\\varphi^2\\sin^2\\theta)\n+\\frac C2(\\dot\\psi+\\dot\\varphi\\cos\\theta)^2,\\qquad\nU=mgl\\cos\\theta.\n\\]\n拉格朗日函数 $\\mathcal L=T-U$ 不含 $\\psi,\\varphi$ 本身，\n因此两共轭动量守恒：\n\\[\nP=\\frac{\\partial\\mathcal L}{\\partial\\dot\\psi}\n=C(\\dot\\psi+\\dot\\varphi\\cos\\theta)=C\\omega_3,\n\\]\n\\[\nK=\\frac{\\partial\\mathcal L}{\\partial\\dot\\varphi}\n=A\\dot\\varphi\\sin^2\\theta+P\\cos\\theta=L_\\zeta.\n\\]\n第一项来自轴对称性以及重力矩沿本体轴的分量为零；\n第二项来自重力矩沿空间竖直方向的分量为零。\n理想固定支点不做功，且势能无显式时间依赖，所以\n\\[\nE=T+U\n\\]\n也守恒。消去 $\\dot\\psi,\\dot\\varphi$ 后，\n\\[\n\\frac A2\\dot\\theta^2+\n\\frac{(K-P\\cos\\theta)^2}{2A\\sin^2\\theta}\n+mgl\\cos\\theta+\\frac{P^2}{2C}=E.\n\\]\n但一般情况下\n$\\dot{\\vect L}=\\vect r_{OC}\\times(-mg\\vect e_\\zeta)\\ne0$，\n整个角动量矢量并不守恒。两个固定投影守恒不能替代矢量守恒。\n\n",
+    "length": 715
+  },
+  {
+    "kind": "exercise",
+    "n": 25,
+    "title": "高速重陀螺的慢进动率",
+    "stem": "\\label{test:c3-25}\n保持固定倾角 $0<\\theta_0<\\pi$ 的重陀螺，\n轴向角动量为 $P\\ne0$。求常进动率的两个分支，\n给出慢分支近似的条件，并讨论初始没有进动的倾斜释放。\n",
+    "answer": "\\solution 常进动要求 $\\dot\\theta=\\ddot\\theta=0$。\n倾角方程化为\n\\[\nA\\Omega^2\\cos\\theta_0-P\\Omega+mgl=0.\n\\]\n当 $\\cos\\theta_0\\ne0$ 且\n$D=P^2-4Amgl\\cos\\theta_0\\ge0$ 时，两根为\n\\[\n\\Omega_\\pm=\\frac{P\\pm\\sqrt D}{2A\\cos\\theta_0}.\n\\]\n为处理 $P$ 的正负，把固定倾角下随 $|P|$ 增大而趋于零的进动分支写成\n\\[\n\\Omega_{\\text{慢}}\n=\\frac{P-\\operatorname{sgn}(P)\\sqrt D}{2A\\cos\\theta_0}\n=\\frac{2mgl}{P+\\operatorname{sgn}(P)\\sqrt D}.\n\\]\n若\n\\[\n\\left|\\frac{4Amgl\\cos\\theta_0}{P^2}\\right|\\ll1,\n\\]\n则\n$\\sqrt D=|P|[1-2Amgl\\cos\\theta_0/P^2+O(P^{-4})]$，\n从而\n\\[\n\\Omega_{\\text{慢}}\\simeq\\frac{mgl}{P}.\n\\]\n当 $\\cos\\theta_0=0$，二次项消失，精确关系就是 $\\Omega=mgl/P$。\n这个近似针对满足常进动条件的慢分支。\n若初始 $\\dot\\varphi=0$、$\\dot\\theta=0$ 且轴倾斜，\n倾角方程起初给出\n$\\ddot\\theta=(mgl/A)\\sin\\theta_0\\ne0$，\n物体立即开始章动。因此不能把此类初值直接改成一条常进动轨迹。\n\n",
+    "length": 714
+  },
+  {
+    "kind": "exercise",
+    "n": 26,
+    "title": "重陀螺回环轨迹的判别",
+    "stem": "\\label{test:c3-26}\n已知一段章动允许区间为\n$\\theta_{\\min}\\le\\theta\\le\\theta_{\\max}$，其中端点均不在 $0,\\pi$。\n如何利用 $P,K$ 判断方位进动是否反向？端点方位率为零与内部变号有何区别？\n",
+    "answer": "\\solution 对允许区间内的常规姿态，\n\\[\n\\dot\\varphi=\\frac{K-P\\cos\\theta}{A\\sin^2\\theta}.\n\\]\n分母严格为正，故转向只由分子决定。\n若 $P\\ne0$，候选反向角满足\n\\[\n\\cos\\theta_*=\\frac KP.\n\\]\n先核查 $|K/P|\\le1$，再核查该角是否在章动允许区间内。\n若在严格内部且分子跨过零，\n$\\dot\\varphi$ 在经过该角时改变符号，方位运动出现反向；\n与章动叠加后可形成回环轨迹。\n若分子在整个允许区间同号，则方位单向进动。\n如果分子仅在转向端点为零，则该点同时有\n$\\dot\\theta=0,\\dot\\varphi=0$。本体轴在单位球面上的速度\n\\[\n\\dot{\\vect e}_3=\\dot\\theta\\,\\vect e_\\theta+\n\\sin\\theta\\,\\dot\\varphi\\,\\vect e_\\varphi\n\\]\n此时为零，在非退化初值下可形成尖点。\n内部反向处一般仍有非零 $\\dot\\theta$，\n所以轴端轨迹不必在该处停住。\n当 $P=0$ 时，分子就是常数 $K$，不应继续使用 $K/P$ 的判据。\n\n",
+    "length": 515
+  },
+  {
+    "kind": "exercise",
+    "n": 27,
+    "title": "正、负陀螺磁比的拉莫尔转向",
+    "stem": "\\label{test:c3-27}\n磁矩满足 $\\vect\\mu=\\gamma\\vect L$，\n均匀磁场 $\\vect B=B\\vect k$、$B>0$，忽略耗散。\n从力矩方程确定进动角速度的有向矢量，并写出一个横向初值解。\n",
+    "answer": "\\solution 磁力矩为\n\\[\n\\dot{\\vect L}=\\vect\\mu\\times\\vect B\n=\\gamma\\vect L\\times\\vect B\n=(-\\gamma\\vect B)\\times\\vect L.\n\\]\n与 $\\dot{\\vect L}=\\vect\\Omega_L\\times\\vect L$ 比较，\n\\[\n\\vect\\Omega_L=-\\gamma\\vect B.\n\\]\n分量方程为\n\\[\n\\dot L_x=\\gamma BL_y,\\qquad\n\\dot L_y=-\\gamma BL_x,\\qquad \\dot L_z=0.\n\\]\n若 $L_x(0)=L_\\perp,L_y(0)=0$，\n\\[\nL_x=L_\\perp\\cos(\\gamma Bt),\\qquad\nL_y=-L_\\perp\\sin(\\gamma Bt),\\qquad L_z=L_z(0).\n\\]\n所以 $\\gamma>0$ 时，横向投影起初从 $+x$ 方向转向 $-y$ 方向；\n$\\gamma<0$ 时转向相反。频率大小为 $|\\gamma|B$，\n但只报告正的频率大小会丢掉转向信息。\n由方程还可直接验证\n$\\dd|\\vect L|^2/\\dd t=0$、$\\dd(\\vect L\\cdot\\vect B)/\\dd t=0$，\n故磁矩端点在垂直于磁场的平面内作圆周运动。\n\n",
+    "length": 591
+  },
+  {
+    "kind": "exercise",
+    "n": 28,
+    "title": "共振角频率与普通频率的换算",
+    "stem": "\\label{test:c3-28}\n某磁矩的陀螺磁比以\n$\\mathrm{rad\\,s^{-1}\\,T^{-1}}$ 为单位给出。\n写出共振角频率和每秒周数，并以一个指定参数的算例检查 $2\\pi$ 因子。\n",
+    "answer": "\\solution 一周的相位变化为 $2\\pi$，因此\n\\[\n\\omega_0=|\\gamma|B_0,\\qquad\nf_0=\\frac{\\omega_0}{2\\pi}=\\frac{|\\gamma|B_0}{2\\pi}.\n\\]\n为作纯粹的单位练习，设给定\n$|\\gamma|=2\\pi\\times10^7\\,\\mathrm{rad\\,s^{-1}\\,T^{-1}}$、\n$B_0=2\\,\\mathrm T$，则\n\\[\n\\omega_0=4\\pi\\times10^7\\,\\mathrm{rad\\,s^{-1}},\\qquad\nf_0=2\\times10^7\\,\\mathrm{Hz}.\n\\]\n周期 $T_0=1/f_0=5\\times10^{-8}\\,\\mathrm s$；\n代入 $\\omega_0T_0$ 确实得到 $2\\pi$。\n若参数表直接给 $\\gamma/(2\\pi)$，单位为 $\\mathrm{Hz/T}$，\n则应直接乘 $B_0$ 求 $f_0$，不能再除一次 $2\\pi$。\n相位演化、旋转坐标变换和脉冲翻转角通常使用角频率，\n频谱横轴则常使用普通频率，计算前需明确单位。\n\n",
+    "length": 498
+  },
+  {
+    "kind": "exercise",
+    "n": 29,
+    "title": "磁偶极能有额外半因子吗？",
+    "stem": "\\label{test:c3-29}\n外磁场沿 $z$ 方向，磁矩满足 $\\vect\\mu=\\gamma\\vect S$。\n写出磁偶极能和自旋 $1/2$ 的两个能级，\n说明能级中的半因子来自何处。\n",
+    "answer": "\\solution 固定外场中磁偶极相互作用能为\n\\[\nU_Z=-\\vect\\mu\\cdot\\vect B=-\\gamma B S_z.\n\\]\n自旋 $1/2$ 的两个投影为 $S_z=\\pm\\hbar/2$，所以\n\\[\nE_+=-\\frac{\\gamma\\hbar B}{2},\\qquad\nE_-=\\frac{\\gamma\\hbar B}{2}.\n\\]\n两能级间距的大小为\n\\[\n|\\Delta E|=|\\gamma|\\hbar B=\\hbar\\omega_0.\n\\]\n若错把能量本身再乘 $1/2$，会使能级间距和共振频率都少一半。\n这里每个能级中的半因子来自自旋投影的取值，\n而不是磁偶极能公式里另外存在一个半因子。\nThomas 修正涉及相对论运动中的自旋轨道耦合和参考系转动，\n不应移入上述固定外磁场的塞曼能公式。\n对 $\\gamma<0$，哪个投影处于较低能级会交换，\n但能级间距的正值仍为 $|\\gamma|\\hbar B$。\n\n",
+    "length": 423
+  },
+  {
+    "kind": "exercise",
+    "n": 30,
+    "title": "磁场加倍时频率和理想翻转脉冲怎样变化？",
+    "stem": "\\label{test:c3-30}\n忽略弛豫，射频磁场的共振旋转分量幅度为 $B_1$。\n静磁场由 $B_0$ 改为 $2B_0$，而 $B_1$ 保持不变。\n求共振频率及理想 $90^\\circ$、$180^\\circ$ 脉冲时间的变化。\n",
+    "answer": "\\solution 原共振角频率为 $\\omega_0=|\\gamma|B_0$，\n新频率为\n\\[\n\\omega_0'=|\\gamma|(2B_0)=2\\omega_0,\\qquad f_0'=2f_0.\n\\]\n必须把射频调到新的共振频率。\n共振旋转系内的翻转角率只由横向旋转分量决定：\n\\[\n\\Omega_1=|\\gamma|B_1,\\qquad \\beta=\\Omega_1\\tau.\n\\]\n故\n\\[\n\\tau_{90}=\\frac{\\pi}{2|\\gamma|B_1},\\qquad\n\\tau_{180}=\\frac{\\pi}{|\\gamma|B_1}.\n\\]\n两种脉冲时间都不因 $B_0$ 加倍而改变。\n若射频仍保持旧频率，则出现失谐\n$\\Delta=\\omega_0'-\\omega_{\\mathrm{RF}}$，\n有效旋转轴含纵向分量，旋转率为\n$\\sqrt{\\Omega_1^2+\\Delta^2}$；原脉冲时间不再保证预期翻转角和方向。\n另外，$B_1$ 此处是共振旋转分量幅度；\n若实验参数给的是线偏振场的峰值，在旋转波近似下其共振分量为峰值的一半，\n必须先统一幅度定义再计算时间。\n\n",
+    "length": 503
+  }
+]

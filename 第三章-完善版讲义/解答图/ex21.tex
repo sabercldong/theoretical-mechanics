@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-1.7,0)arc(180:360:1.7);\draw[dashed](-1.7,0)--(1.7,0);\draw[very thick](-1.23,-1.18)--(2.7,.4);\fill(-1.23,-1.18)circle(2pt)node[below]{$B$};\fill(1.7,0)circle(2pt)node[above]{$C$};\fill(0,0)circle(2pt)node[above]{$O$};\draw[dashed](0,0)--(-1.23,-1.18)node[midway,left]{$r$};\node at(.3,-.6){$BC=c$};\node at(2,1){杆长 $l$};\draw[dashed](1.7,0)--(2.8,0);\draw(2.3,0)arc(0:21.9:.6);\node at(2.55,.13){$\theta$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$BC=c=2r\cos\theta$\\[6pt]$\Downarrow$\\[6pt]$l=4c-8r^2/c$};
+\end{tikzpicture}

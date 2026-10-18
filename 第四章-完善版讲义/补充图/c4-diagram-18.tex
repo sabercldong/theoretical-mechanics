@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.94]
+\coordinate(A)at(0,3.5);\coordinate(P)at(1.7,.55);\draw[guide](0,-.1)--(0,4.0);
+\draw[ink,thick](A)--(P)node[midway,right]{$l$};\fill[ink](P)circle(4pt);
+\draw[force](P)--++(-.75,1.301471)node[left]{$T$};\draw[force](P)--++(0,-1.301471)node[right]{$mg$};\draw[force](P)--++(.75,0)node[right]{$m\Omega^2l\sin\theta$};
+\draw[->](0,2.6)arc(-90:-60:.9);\node at(.37,2.42){$\theta$};
+\node[anchor=west,align=left]at(4.2,2.4){动系平衡：三力相加为零\\惯性系：真实合力提供向心加速度};
+\end{tikzpicture}

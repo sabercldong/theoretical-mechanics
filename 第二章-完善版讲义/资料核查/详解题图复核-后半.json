@@ -1,0 +1,632 @@
+{
+  "reviewer": "revision_training_qa",
+  "reviewed_at": "2026-10-17T19:02:08",
+  "scope": {
+    "examples": [
+      49,
+      66
+    ],
+    "exercises": [
+      1,
+      24
+    ],
+    "figure_count": 42
+  },
+  "method": "实际view_image查看atlas-09至15共7张总览；对ex50、ex60、ex66、tr08、tr11和ex58作3倍裁片复看；逐题读取完整题干JSON的stem及全部42个TikZ图源。对速度圆交点独立计算核验。仅写本报告，不修改主稿和图源。",
+  "actual_images_viewed": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-09.png",
+      "sha256": "aa7278dbe43ce490a0b2a243911a4ef9ecbe15e3d9e4b1c20573470f45c88f08"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-10.png",
+      "sha256": "1a82e0e0cfd1ea38e504b147b5bf50bcf6692a394b57f937396af1f1f00a64b2"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-11.png",
+      "sha256": "956aa268f972ba9db2832350a1ee2afbb9ca60e1da6642f242c64ec7ec0818a6"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-12.png",
+      "sha256": "de08caeb241f617fdef07bb46bb03b9aae38975cd2acf20a5ff15fa966e8e8f1"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-13.png",
+      "sha256": "16c6528b09a38b61936f160651dd42c8a2c12e62b92e1fabf9c8080f22eafba1"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-14.png",
+      "sha256": "b3daa688e65a723a5609c7b09849f60e540facd01e690c7a705e559ff81c4866"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-15.png",
+      "sha256": "630935ec6f5df2779cdda01d40a407bbb3692c5cd4c62ac01ebc1dca3d1ca936"
+    }
+  ],
+  "summary": {
+    "figures_reviewed": 42,
+    "source_issue_groups": 6,
+    "figures_needing_fix": 9,
+    "figures_passed": 33,
+    "high_priority_issue_groups": 3,
+    "atlas_layout_only_issues": 0
+  },
+  "issues": [
+    {
+      "id": "C2-VELOCITY-CIRCLE-BRANCH-GEOMETRY",
+      "figures": [
+        "ex50",
+        "ex51"
+      ],
+      "severity": "high",
+      "category": "scattering_geometry",
+      "description": "两图射线从O到(3.3,1.2)，实验室角约20°；但从C=(2,0)画出的半径端点为(2.6,.8)，不在这条射线上，其对应实验室角仅17.10°。图中的Θ因此没有和同一速度端点的θ对应。λ>1的两支关系也只画一个不对应交点的半径。",
+      "recommended_fix": "以射线与速度圆的两个真实交点P±为端点，画CP±及相应Θ±角弧；明确θ从+v_x到OP±量起。例50可用λ=2、θ=20°的交点(2.451498,.892272)、(1.080591,.393303)，对应Θ+=63.16018°、Θ−=156.83982°。",
+      "evidence": "/tmp/c2-qa-ex50.png"
+    },
+    {
+      "id": "C2-TR08-ZERO-ANGLE",
+      "figures": [
+        "tr08"
+      ],
+      "severity": "high",
+      "category": "statement_angle_mismatch",
+      "description": "图中明确写α=0，但炮管和V箭头均斜向右上约30°。水平发射示意与非零图示仰角直接矛盾，并影响相对速率/对地速率模型的水平动量关系。",
+      "recommended_fix": "将炮管、炮弹位置和V箭头改为水平向右；删除无必要的非零角示意，保持后退U向左。",
+      "evidence": "/tmp/c2-qa-tr08.png"
+    },
+    {
+      "id": "C2-EX60-TWO-EJECTION-FRAMES",
+      "figures": [
+        "ex60"
+      ],
+      "severity": "high",
+      "category": "reference_frame_and_signed_velocity",
+      "description": "题干比较子弹对地恒−u与相对机枪恒−u两种模型，图只画向左且标U<0，混淆有符号对地速度和相对枪速度。相对喷速模型的对地子弹速度是U=v−u；在质量比足够大时v可超过u，不能全程标U<0。",
+      "recommended_fix": "拆成两支或在同图明确列“对地给定：U=−u”和“相对枪给定：U_rel=−u，U_ground=v−u”。若保留向左箭头，只把它标作相对喷出方向−u，不把对地U固定为负。",
+      "evidence": "/tmp/c2-qa-ex60.png"
+    },
+    {
+      "id": "C2-ROCKET-RELATIVE-VS-GROUND-EXHAUST",
+      "figures": [
+        "ex54",
+        "ex55",
+        "tr21"
+      ],
+      "severity": "medium",
+      "category": "reference_frame_and_arrow_direction",
+      "description": "向下排气箭头直接标有符号对地速度u=v−c。题设只保证燃气相对火箭向后速率c>0，不能保证绝对u始终负；v>c时u为正。固定下箭头把相对喷出方向误当作绝对速度方向。",
+      "recommended_fix": "向下箭头标“相对火箭：−c”或u_rel=−c，把u_ground=v−c另列为代数关系，不用固定向下箭头表达其任意时刻方向。例55若描绘发射台上的初态，可明确v=0、N≥0；若描绘飞行态，则标N=0。",
+      "evidence": "工作文件/题图总览PNG/atlas-09.png、atlas-10.png、atlas-15.png"
+    },
+    {
+      "id": "C2-EX66-D-ARROW-OVERLAP",
+      "figures": [
+        "ex66"
+      ],
+      "severity": "low",
+      "category": "text_line_overlap",
+      "description": "硬核半径d被放在(1,0)的above节点，恰被x=1竖直硬核箭杆穿过，实际放大可见d中间贯穿线。势阱深度−ε和范围d<r<a的其他符号正确。",
+      "recommended_fix": "把d移到横轴下方，或左下方并避开竖直箭杆。",
+      "evidence": "/tmp/c2-qa-ex66.png"
+    },
+    {
+      "id": "C2-TR11-MOVING-POINT-NOTATION",
+      "figures": [
+        "tr11"
+      ],
+      "severity": "low",
+      "category": "symbol_consistency",
+      "description": "题干以任意移动点A及其速度v_A讨论交叉项，图沿用匀速换系模板，只标O′与U，未标A或v_A。容易让读者把该题误读为必须匀速惯性系变换。",
+      "recommended_fix": "将图中移动原点O′改为A、U改为v_A（或明确A=O′、U=v_A），以匹配一般移动基点的题干。",
+      "evidence": "/tmp/c2-qa-tr11.png"
+    }
+  ],
+  "figures": [
+    {
+      "key": "ex49",
+      "kind": "example",
+      "number": 49,
+      "title": "库仑散射在两个参考系中的截面",
+      "source": "题图/ex49.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed",
+      "note": "实验室入射方向、靶初始静止及出射方向示意符合一般两体散射；θ量自入射+x方向。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex50",
+      "kind": "example",
+      "number": 50,
+      "title": "质量比二的同一实验室角对应两种散射",
+      "source": "题图/ex50.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "needs_fix",
+      "note": "速度圆位置和λ=2比例正确；对应θ射线的两交点/Θ半径未正确对应。",
+      "issue_ids": [
+        "C2-VELOCITY-CIRCLE-BRANCH-GEOMETRY"
+      ]
+    },
+    {
+      "key": "ex51",
+      "kind": "example",
+      "number": 51,
+      "title": "库仑散射的实验室系截面显式式",
+      "source": "题图/ex51.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "needs_fix",
+      "note": "λ>1代表速度圆的OC/半径关系正确；沿用错误Θ半径端点需修。",
+      "issue_ids": [
+        "C2-VELOCITY-CIRCLE-BRANCH-GEOMETRY"
+      ]
+    },
+    {
+      "key": "ex52",
+      "kind": "example",
+      "number": 52,
+      "title": "中点粘连碰撞：三种动量解法为何失效",
+      "source": "题图/ex52.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed",
+      "note": "固定铰点A、轻杆L、中点4m、下端m及水平入射m,v0均与题干一致。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex53",
+      "kind": "example",
+      "number": 53,
+      "title": "吸收静止小块时的机械能损失",
+      "source": "题图/ex53.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "passed",
+      "note": "静止小块u=0、运动主体m,v和碰后共同速度v+说明正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex54",
+      "kind": "example",
+      "number": 54,
+      "title": "无外力火箭与竖直火箭",
+      "source": "题图/ex54.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-09.png",
+      "status": "needs_fix",
+      "note": "火箭向上、g向下、q=−ṁ正确；相对排气方向与有符号绝对排气u需分开。",
+      "issue_ids": [
+        "C2-ROCKET-RELATIVE-VS-GROUND-EXHAUST"
+      ]
+    },
+    {
+      "key": "ex55",
+      "kind": "example",
+      "number": 55,
+      "title": "初始推力不足的竖直火箭",
+      "source": "题图/ex55.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "needs_fix",
+      "note": "发射台及支持力N向上正确；喷出速度箭头的参考系需说明，飞行/支承阶段可明确区分。",
+      "issue_ids": [
+        "C2-ROCKET-RELATIVE-VS-GROUND-EXHAUST"
+      ]
+    },
+    {
+      "key": "ex56",
+      "kind": "example",
+      "number": 56,
+      "title": "恒质量增长率的雨滴：速度与下落距离",
+      "source": "题图/ex56.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed",
+      "note": "向下为正，v、g向下；u=0指地面静止凝结物。两侧无速度符号的小箭头可理解为凝结质量输入，未作有限水平速度解释。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex57",
+      "kind": "example",
+      "number": 57,
+      "title": "质量增长率与表面积成正比的球形雨滴",
+      "source": "题图/ex57.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed",
+      "note": "同上，凝结雨滴模型的参考系和方向正确；半径增长率由题干给定，无错误半径标注。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex58",
+      "kind": "example",
+      "number": 58,
+      "title": "软绳落地的冲击力与地面总反力",
+      "source": "题图/ex58.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed",
+      "note": "下落直段向下、落地部分静止、地面总反力R向上正确；尺寸线为示意，未见穿字。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex59",
+      "kind": "example",
+      "number": 59,
+      "title": "均匀链条从光滑桌沿滑落",
+      "source": "题图/ex59.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "passed",
+      "note": "光滑导槽、水平l−x、悬垂x及共同速率ẋ向下符合题意。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex60",
+      "kind": "example",
+      "number": 60,
+      "title": "持续射弹、滑动摩擦与两种喷出速度题设",
+      "source": "题图/ex60.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-10.png",
+      "status": "needs_fix",
+      "note": "回冲正向与摩擦负向正确；两种子弹喷速模型未在图中区分，U<0不可通用于相对喷速模型。",
+      "issue_ids": [
+        "C2-EX60-TWO-EJECTION-FRAMES"
+      ]
+    },
+    {
+      "key": "ex61",
+      "kind": "example",
+      "number": 61,
+      "title": "自由粒子为什么不满足省略边界项的位力式",
+      "source": "题图/ex61.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed",
+      "note": "无力匀速粒子位置与速度示意正确；D的定义为位置动量内积，没有把位力当作力。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex62",
+      "kind": "example",
+      "number": 62,
+      "title": "一维谐振子的有限时间位力检验",
+      "source": "题图/ex62.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed",
+      "note": "平衡原点0、正位移及x=Acosωt、弹簧k/m示意正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex63",
+      "kind": "example",
+      "number": 63,
+      "title": "相互引力质点组的位力平衡",
+      "source": "题图/ex63.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed",
+      "note": "C为非旋转质心系原点，r_i′从C指向质点；各对只计一次的说明正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex64",
+      "kind": "example",
+      "number": 64,
+      "title": "一维谐振子的时间平均",
+      "source": "题图/ex64.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed",
+      "note": "谐振子模型与时间平均题意一致，无多余力方向错误。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex65",
+      "kind": "example",
+      "number": 65,
+      "title": "硬球排斥的第二位力系数",
+      "source": "题图/ex65.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "passed",
+      "note": "硬核中心距d与零势分支、∞区域示意正确；r≥d标的是允许中心距离。",
+      "issue_ids": []
+    },
+    {
+      "key": "ex66",
+      "kind": "example",
+      "number": 66,
+      "title": "硬核加有限深度吸引壳的第二位力系数",
+      "source": "题图/ex66.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-11.png",
+      "status": "needs_fix",
+      "note": "三段势能U∞、−ε、0及边界顺序d<a正确；d被竖直箭杆穿字。",
+      "issue_ids": [
+        "C2-EX66-D-ARROW-OVERLAP"
+      ]
+    },
+    {
+      "key": "tr01",
+      "kind": "exercise",
+      "number": 1,
+      "title": "反向力不一定抵消力矩",
+      "source": "题图/tr01.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed",
+      "note": "等大反向力分别向上/下，分离距离a，合内力矩不抵消的图示正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr02",
+      "kind": "exercise",
+      "number": 2,
+      "title": "两质点质心的反质量比",
+      "source": "题图/tr02.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed",
+      "note": "质量m2较大，C靠近m2；图示d1:d2=3:1符合给定特例。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr03",
+      "kind": "exercise",
+      "number": 3,
+      "title": "均匀半圆细线的质心",
+      "source": "题图/tr03.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed",
+      "note": "上半圆细线、半径a与角φ正确，没有误画半球体。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr04",
+      "kind": "exercise",
+      "number": 4,
+      "title": "线性密度梯度的细杆",
+      "source": "题图/tr04.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed",
+      "note": "细杆x∈[0,L]与线密度公式一致。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr05",
+      "kind": "exercise",
+      "number": 5,
+      "title": "单圆孔的负质量法",
+      "source": "题图/tr05.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed",
+      "note": "圆孔中心沿+x偏距d，孔完全在母盘内，与d+r≤R一致。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr06",
+      "kind": "exercise",
+      "number": 6,
+      "title": "恒外力下质心的运动",
+      "source": "题图/tr06.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-12.png",
+      "status": "passed",
+      "note": "恒外力F与初始动量P0可取不同方向，图示为合法代表情形。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr07",
+      "kind": "exercise",
+      "number": 7,
+      "title": "改换匀速参考系后的动能",
+      "source": "题图/tr07.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed",
+      "note": "平行匀速新系与U方向、m_i位置关系符合伽利略变换。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr08",
+      "kind": "exercise",
+      "number": 8,
+      "title": "相对出膛速度与对地出膛速度",
+      "source": "题图/tr08.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "needs_fix",
+      "note": "α=0却画非零炮管倾角和斜V，需要修。",
+      "issue_ids": [
+        "C2-TR08-ZERO-ANGLE"
+      ]
+    },
+    {
+      "key": "tr09",
+      "kind": "exercise",
+      "number": 9,
+      "title": "有限滑轮惯量的数值比例",
+      "source": "题图/tr09.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed",
+      "note": "猴A绝对上升u、猴B相对本侧绳上爬v明确标注；滑轮惯量I_p=mr²正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr10",
+      "kind": "exercise",
+      "number": 10,
+      "title": "移动点角动量的守恒条件",
+      "source": "题图/tr10.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed",
+      "note": "A=(0,ut)、粒子(vt,0)、相对位置s及绝对速度u/v方向正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr11",
+      "kind": "exercise",
+      "number": 11,
+      "title": "柯尼希定理中的交叉项",
+      "source": "题图/tr11.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "needs_fix",
+      "note": "图中移动原点及速度的符号需与A、v_A统一。",
+      "issue_ids": [
+        "C2-TR11-MOVING-POINT-NOTATION"
+      ]
+    },
+    {
+      "key": "tr12",
+      "kind": "exercise",
+      "number": 12,
+      "title": "自由管球的两种质量极限",
+      "source": "题图/tr12.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-13.png",
+      "status": "passed",
+      "note": "水平细管、固定端O、长度l、初始中点与ω0转向代表约定正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr13",
+      "kind": "exercise",
+      "number": 13,
+      "title": "光滑接地双球碰地前的极限",
+      "source": "题图/tr13.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed",
+      "note": "下球接光滑地面，杆向右上，θ从竖直量起，N向上及上球mg向下正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr14",
+      "kind": "exercise",
+      "number": 14,
+      "title": "桌边链条的一般初值",
+      "source": "题图/tr14.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed",
+      "note": "理想光滑导槽与链长/悬长及ẋ方向正确；一般初值由正文给定。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr15",
+      "kind": "exercise",
+      "number": 15,
+      "title": "自由弹簧两体的稳定圆周相对运动",
+      "source": "题图/tr15.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed",
+      "note": "折合相对质点μ、中心弹簧与切向速度、r0>a的圆轨道条件示意正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr16",
+      "kind": "exercise",
+      "number": 16,
+      "title": "双星质量翻倍的周期变化",
+      "source": "题图/tr16.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed",
+      "note": "两星在相对C的相反位置，轨道半径与质量反比的代表构形正确，L量两星间距。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr17",
+      "kind": "exercise",
+      "number": 17,
+      "title": "各向异性线性外场的相对角动量",
+      "source": "题图/tr17.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed",
+      "note": "相对位置r位于第一象限，两线性回复分量向−x、−y，符合共同各向异性场的相对方程。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr18",
+      "kind": "exercise",
+      "number": 18,
+      "title": "重入射球的最大角与能量转移",
+      "source": "题图/tr18.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-14.png",
+      "status": "passed",
+      "note": "λ=3速度圆切线及垂直半径几何正确，给出最大实验室角；数值切点(8/3,√8/3)与射线匹配。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr19",
+      "kind": "exercise",
+      "number": 19,
+      "title": "等质量各向同性散射的实验室概率",
+      "source": "题图/tr19.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed",
+      "note": "等质量两出射速度正交（2.2×.76818−1.3²≈0），实验室θ从+x量起，图示正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr20",
+      "kind": "exercise",
+      "number": 20,
+      "title": "完全粘连碰撞的最大动能损失",
+      "source": "题图/tr20.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed",
+      "note": "静止靶、入射方向及一维碰撞+x正向正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr21",
+      "kind": "exercise",
+      "number": 21,
+      "title": "恒流率竖直火箭的燃烧终态",
+      "source": "题图/tr21.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "needs_fix",
+      "note": "竖直火箭方向正确；固定向下箭头应标相对喷速而非有符号绝对u。",
+      "issue_ids": [
+        "C2-ROCKET-RELATIVE-VS-GROUND-EXHAUST"
+      ]
+    },
+    {
+      "key": "tr22",
+      "kind": "exercise",
+      "number": 22,
+      "title": "雨滴无增长极限的正确展开",
+      "source": "题图/tr22.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed",
+      "note": "无质量增长极限的雨滴参考系与向下正向正确。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr23",
+      "kind": "exercise",
+      "number": 23,
+      "title": "有限时间位力项的量纲",
+      "source": "题图/tr23.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed",
+      "note": "两体位置/速度及r12·F12示意为位力内积，未将其标作合力。",
+      "issue_ids": []
+    },
+    {
+      "key": "tr24",
+      "kind": "exercise",
+      "number": 24,
+      "title": "含两种齐次势的位力关系",
+      "source": "题图/tr24.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-15.png",
+      "status": "passed",
+      "note": "−1次吸引势与2次正齐次势的代表曲线正确；常数势不影响位力，未见符号/穿字问题。",
+      "issue_ids": []
+    }
+  ],
+  "independent_geometry_check": {
+    "circle_center": [
+      2,
+      0
+    ],
+    "radius": 1,
+    "lab_angle_degrees": 20,
+    "P_plus": [
+      2.451497804328152,
+      0.8922722301443982
+    ],
+    "P_minus": [
+      1.0805910819098044,
+      0.3933029892286805
+    ],
+    "CM_angle_plus_degrees": 63.160177799818335,
+    "CM_angle_minus_degrees": 156.83982220018166,
+    "current_drawn_radius_endpoint": [
+      2.6,
+      0.8
+    ],
+    "current_endpoint_lab_angle_degrees": 17.102728969052375
+  },
+  "atlas_layout_note": "本批7张总览未发现相邻图互侵、页外裁切或固定图高导致的额外超宽问题。上述穿字和几何问题均可在单个TikZ源中定位，属于实际图源问题。",
+  "limitations": "初查后需在更新渲染中复验修正图；未对未分配的例1–48作审查。"
+}

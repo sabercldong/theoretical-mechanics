@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=.95]
+\coordinate(O)at(0,0);\coordinate(B)at(-1.53208889,-1.28557522);
+\coordinate(C)at(2,0);\coordinate(D)at(1.53208889,-.17030572);
+\coordinate(Q)at(1.53208889,1.28557522);
+\draw[thick](-2,0)arc(180:360:2);
+\draw[guide](-2,0)--(2,0);
+\draw[line width=1.6pt,ink](B)--(4.59626666,.94496378);
+\draw[guide](B)--(Q);\draw[guide](C)--(Q);\draw[guide](D)--(Q);
+\foreach \P in {O,B,C,D,Q}{\fill(\P)circle(2pt);}
+\node[above left]at(O){$O$};\node[below left]at(B){$B$};
+\node[below right]at(C){$C$};\node[below left]at(D){$D$};\node[above]at(Q){$Q$};
+\draw(1.3,0)arc(180:200:.7);\node at(.95,-.10){$\theta$};
+\node at(-.15,-1.1){$BD=l/2$};
+\node at(2.9,-.8){$CQ\perp BC$};
+\end{tikzpicture}

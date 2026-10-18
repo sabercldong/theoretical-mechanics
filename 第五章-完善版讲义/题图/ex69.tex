@@ -1,0 +1,4 @@
+% 势能曲线与能量线的交点给径向转折位置；图中远处正势垒必须保留，才能区分跨阱闭轨和向右逃逸。
+\begin{tikzpicture}[x=.65cm,y=.4cm]
+\draw[->](-2,0)--(8,0)node[right]{$x$};\draw[->](0,-3)--(0,7)node[above]{$V$};\draw[ink,thick,domain=-1.6:7.5,samples=120]plot(\x,{exp(-\x)*((\x)^4-2*(\x)^2)});\draw[guide](-1.7,0)--(7.5,0);\draw[guide](-1.6,4.14)--(7.5,4.14);\node[below]at(-1.1,-2.7){左阱};\node[below]at(.85,-.9){右阱};\node[above]at(4.25,4.2){外侧势垒};
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-1.2,0)--(0,2.7)--(1.2,0);\draw(0,0)ellipse(1.2 and .25);\draw[->,gray](0,-.4)--(0,3.1)node[above]{$z$};\draw[dashed](-.8,.9)--(.8,.9);\draw[<->](-1.7,0)--(-1.7,2.7)node[midway,left]{$h$};\draw[<->](0,-.6)--(1.2,-.6)node[midway,below]{$a$};\begin{scope}[xshift=3.7cm,yshift=1.1cm]\draw(0,-1)arc(-90:90:1)--cycle;\draw[->](0,0)--(1.7,0)node[right]{$x$};\draw[->](0,-1.3)--(0,1.4)node[above]{$y$};\node at(.6,-1.6){截面 $x\ge0$};\end{scope}
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\bar x(z)=4a(1-z/h)/(3\pi)$\\[6pt]$\Downarrow$\\[6pt]$X_C=a/\pi,\quad Z_C=h/4$};
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\fill(0,0)circle(4pt)node[below]{$m_1$};\fill(3,0)circle(4pt)node[below]{$m_2$};\draw[decorate,decoration={zigzag,segment length=5pt,amplitude=2pt}](.15,0)--(2.85,0);\node at(1.5,.5){$k,\ a$};\draw[<->](0,-.7)--(3,-.7)node[midway,below]{$a$};\draw[->](.2,.8)--(-.7,.8)node[left]{$\vect v_1$};\draw[->](2.8,.8)--(3.7,.8)node[right]{$\vect v_2$};\node at(1.5,1.55){经过原长：弹性势能为0};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$m_1\vect v_1+m_2\vect v_2=\vect0$\\[6pt]$\Downarrow$\\[6pt]$|p_1|=|p_2|=\delta\sqrt{\mu k}$};
+\end{tikzpicture}

@@ -1,0 +1,589 @@
+{
+  "reviewer": "independent_visual_content_qa_examples",
+  "reviewed_at": "2026-10-17T17:40:53.423297+08:00",
+  "source_pdf": "第四章-完善版讲义/工作文件/详解终校.pdf",
+  "source_sha256": "f581f977da9e77a3825d4b82c5ab0eade27a571c6e8cc1243f8c8e0fdd35c458",
+  "source_page_count": 116,
+  "scope": {
+    "physical_pages_requested": [
+      44,
+      45,
+      46,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      63,
+      64,
+      65,
+      66,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "physical_pages_actually_viewed": [
+      44,
+      45,
+      46,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      63,
+      64,
+      65,
+      66,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "additional_text_read": [
+      59
+    ],
+    "additional_text_reason": "例32代入方程与初条件核验延续到物理页59，仅读取该续文以确认逐项回答；未扩展整章。",
+    "example_count": 20
+  },
+  "method": [
+    "固定PDF哈希校验通过；指定28页全部用fitz渲染并以view_image实际查看。",
+    "先作4页并排概览，再放大查看物理页56的三段反力长公式、90页的傅科摆复通解与实坐标展开。",
+    "对每题按题干要求逐项核对；对关键步骤进行独立代入或短式核算，不重做整章。",
+    "用独立数值复算抽查例24、31、33、40、42、45；扫描指定页PDF文本边界，正文跨度未超出x=48..547 pt，未检测到替换字符。"
+  ],
+  "overall_status": "passed",
+  "summary": "指定28页版面与20个相关例题的分步解答通过；未发现实质推导错误、漏答项目、公式溢出、缺字或公式遮挡。",
+  "material_issue_count": 0,
+  "issues": [],
+  "questions": [
+    {
+      "example": 24,
+      "physical_pages": [
+        44,
+        45
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "稳定倾斜角",
+        "单位质量杆力",
+        "小振动角频率",
+        "小振动周期"
+      ],
+      "finding": "先判断临界条件，再列张力平衡并线性化；57.01°、18.0 m/s²、5.033 s⁻¹、1.248 s均复算吻合。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 25,
+      "physical_pages": [
+        45,
+        46
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "距轴距离",
+        "相对平衡角方程",
+        "绳张力"
+      ],
+      "finding": "ρ=a+l sinφ、水平/竖直平衡及T=mg/cosφ一致；极限核验正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 27,
+      "physical_pages": [
+        51,
+        52
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "自由表面z(r)",
+        "积分常数的确定条件"
+      ],
+      "finding": "静力压强梯度、自由面等压条件及积分过程完整；体积条件示例z0=H−Ω²b²/(4g)正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 28,
+      "physical_pages": [
+        52,
+        53
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "x(t)",
+        "横向反力",
+        "竖直支持力"
+      ],
+      "finding": "通解和两初条件、N2=2mΩxdot、Nz=mg均逐项给出；总接触力和Ω→0检查一致。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 29,
+      "physical_pages": [
+        54
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "控制力",
+        "横向反力",
+        "相对功率",
+        "被动管能否维持"
+      ],
+      "finding": "规定运动先求导再反求F1=−mΩ²(a+ut)；N2、相对功率和惯性系净功率均相符。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 30,
+      "physical_pages": [
+        55,
+        56
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "运动方程",
+        "临界转速",
+        "低临界运动",
+        "临界运动",
+        "超临界运动",
+        "横向槽壁反力"
+      ],
+      "finding": "合刚度2k正确；三种初值解和三段有符号反力完整；稳定性与衰减特例区分正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 31,
+      "physical_pages": [
+        57
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "x(t)",
+        "周期",
+        "有符号反力",
+        "最大侧压力"
+      ],
+      "finding": "ωs=5 s⁻¹、x=0.040cos5t、N2=−0.400sin5t N、最大0.400 N均正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 32,
+      "physical_pages": [
+        58,
+        59
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "坐标x,y",
+        "动系轨迹",
+        "代入动系方程核验"
+      ],
+      "finding": "物理页58给坐标和导数，补读紧接的59页确认代入方程和初条件检验完整；与自由惯性运动一致。",
+      "layout": "物理页58已实际查看，未见公式溢出、裁切或缺字；页59仅核对续文。"
+    },
+    {
+      "example": 33,
+      "physical_pages": [
+        63
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "赤道修正",
+        "45°竖直分量",
+        "45°水平分量",
+        "45°总量",
+        "极点修正",
+        "铅垂偏角"
+      ],
+      "finding": "分量符号、总量与偏角区分正确；Ω²R≈0.03388 m/s²、δ≈0.0991°已复算。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 34,
+      "physical_pages": [
+        64
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "球形模型重力差",
+        "与给定差值比较",
+        "差异来源"
+      ],
+      "finding": "0.03388与0.052 m/s²比较完整；不重复加入离心项，球形/引力模型边界说明正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 35,
+      "physical_pages": [
+        65,
+        66
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "径向道路约束力",
+        "东/西称重差",
+        "水平引导力"
+      ],
+      "finding": "惯性纬线角速度及天向投影正确；NU/m包含静止离心、线性速度和曲率项；aN引导分量给出。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 39,
+      "physical_pages": [
+        81,
+        82
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "从方程积分",
+        "落地时间",
+        "东西偏移"
+      ],
+      "finding": "零阶速度代入、两次积分、落地时间与方向/量纲核验完整；dE=(Ωcosλ/3)sqrt(8h³/g)正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 40,
+      "physical_pages": [
+        82,
+        83
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "百米时间/偏移",
+        "五百米时间/偏移",
+        "高度变化规律"
+      ],
+      "finding": "t0和dE数值复算吻合；五倍高度对应5^(3/2)倍偏移正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 41,
+      "physical_pages": [
+        83,
+        84
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "返回原高度的东西速度",
+        "东西位移",
+        "偏西原因"
+      ],
+      "finding": "最终xdot=0、x=−4Ωcosλ w0³/(3g²)正确；明确速度恢复而位移累积。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 42,
+      "physical_pages": [
+        85
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "飞行时间修正",
+        "东向射程修正",
+        "南北偏移"
+      ],
+      "finding": "保留δT以及零阶射程的u0δT；δT≈0.002373 s、δx≈0.2528 m、y≈−0.1051 m复算一致。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 43,
+      "physical_pages": [
+        86
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "落点随高度关系",
+        "线性作图法",
+        "截距/斜率解释"
+      ],
+      "finding": "在题设舍去Ωui²项的精度下，h^(1/2)与h^(3/2)两项正确；x/sqrt(h)对h的截距和斜率正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 44,
+      "physical_pages": [
+        90,
+        91
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "x(t),y(t)",
+        "全部初条件",
+        "慢转坐标轨迹"
+      ],
+      "finding": "复通解常数、实坐标展开和静止释放条件正确；慢转系椭圆半轴a与a|σ|/κ及退化极限一致。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 45,
+      "physical_pages": [
+        92,
+        93
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "三地进动周期",
+        "每小时进动角",
+        "俯视旋向",
+        "快周期",
+        "质量依赖"
+      ],
+      "finding": "三地TP和角速率均复算；顺时针、16.42 s快周期以及质量约去均正确。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 46,
+      "physical_pages": [
+        95,
+        96
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "由动系量算J",
+        "由E−ΩLz算J",
+        "一致性",
+        "惯性机械能是否守恒"
+      ],
+      "finding": "两法都得J=−ma²Ω²/2；E增长率=2mΩ²x xdot=ΩLzdot与侧壁功率一致。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    },
+    {
+      "example": 47,
+      "physical_pages": [
+        96
+      ],
+      "status": "passed",
+      "requirements_checked": [
+        "Jdot",
+        "惯性动能变化率",
+        "驱动功率",
+        "核验−Ωdot Lz"
+      ],
+      "finding": "固定半径且相对静止，Jdot=−ma²ΩΩdot；Tdot=P=ma²ΩΩdot，恒等核验完整。",
+      "layout": "passed; 已查看所属指定页，未见公式溢出、裁切、缺字或重叠。"
+    }
+  ],
+  "page_checks": [
+    {
+      "physical_page": 44,
+      "printed_page": 39,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 45,
+      "printed_page": 40,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 46,
+      "printed_page": 41,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 51,
+      "printed_page": 46,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 52,
+      "printed_page": 47,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 53,
+      "printed_page": 48,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 54,
+      "printed_page": 49,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 55,
+      "printed_page": 50,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 56,
+      "printed_page": 51,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 57,
+      "printed_page": 52,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 58,
+      "printed_page": 53,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 63,
+      "printed_page": 58,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 64,
+      "printed_page": 59,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 65,
+      "printed_page": 60,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 66,
+      "printed_page": 61,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 81,
+      "printed_page": 76,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 82,
+      "printed_page": 77,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 83,
+      "printed_page": 78,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 84,
+      "printed_page": 79,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 85,
+      "printed_page": 80,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 86,
+      "printed_page": 81,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 90,
+      "printed_page": 85,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 91,
+      "printed_page": 86,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 92,
+      "printed_page": 87,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 93,
+      "printed_page": 88,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 94,
+      "printed_page": 89,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 95,
+      "printed_page": 90,
+      "status": "passed",
+      "visual_findings": []
+    },
+    {
+      "physical_page": 96,
+      "printed_page": 91,
+      "status": "passed",
+      "visual_findings": []
+    }
+  ],
+  "numeric_spot_checks": {
+    "ex24_theta_deg": 57.01329291752108,
+    "ex24_omega": 5.03278142669527,
+    "ex24_T": 1.248451854843492,
+    "ex31_T": 1.2566370614359172,
+    "ex33_Omega2R": 0.03387775502146165,
+    "ex33_tilt_deg": 0.09910335604400725,
+    "ex40_100_T": 4.515236409857309,
+    "ex40_100_dE": 0.015521287604123189,
+    "ex40_500_T": 10.096375546923044,
+    "ex40_500_dE": 0.17353327090572146,
+    "ex42_deltaT": 0.0023732855663796924,
+    "ex42_deltaX": 0.25284984424209245,
+    "ex42_xland": 451.776490829973,
+    "ex42_yland": -0.1051234243770059,
+    "ex45_Paris_TP_h": 31.781123570665248,
+    "ex45_Paris_deg_per_h": 11.327478690284217,
+    "ex45_Beijing_TP_h": 37.31314014702884,
+    "ex45_Beijing_deg_per_h": 9.648075680080922,
+    "ex45_NorthPole_TP_h": 23.9345,
+    "ex45_NorthPole_deg_per_h": 15.04104953101172,
+    "ex45_fast_T": 16.420363465515862
+  },
+  "limits": [
+    "旧图来源及可选留白按任务要求不重审。",
+    "例32的物理页59为题目续文的补充文本核验，未计入指定28页视觉复核范围。",
+    "本报告仅记录固定哈希PDF的核查结果；未编辑主稿或题图。"
+  ]
+}

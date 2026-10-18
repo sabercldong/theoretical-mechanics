@@ -1,0 +1,5 @@
+\begin{tikzpicture}[scale=.95]
+\draw[ink](0,0)circle(1.5);\draw[ink,->,thick](0,1.5)arc(90:5:1.5);\fill(0,1.5)circle(3pt);
+\draw[force](0,1.5)--(1.4,1.5)node[right]{$\vect v'$};\draw[force](0,1.5)--(0,.5)node[right]{$\vect F_C$};\node at(0,-2){北半球：顺时针};
+\begin{scope}[shift={(6,0)}]\draw[ink](0,0)circle(1.5);\draw[ink,->,thick](0,-1.5)arc(-90:-5:1.5);\fill(0,-1.5)circle(3pt);\draw[force](0,-1.5)--(1.4,-1.5)node[right]{$\vect v'$};\draw[force](0,-1.5)--(0,-.5)node[right]{$\vect F_C$};\node at(0,-2){南半球：逆时针};\end{scope}
+\end{tikzpicture}

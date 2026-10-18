@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=.88]
+\draw[->,thick](0,-.2)--(0,4.5)node[above]{$\Omega_p\vect e_Z$};
+\draw[ink,fill=soft,rotate around={-30:(1.15,1.991858)}](1.15,1.991858)ellipse(1.1 and .3);
+\draw[force](0,0)--(2.1,3.637307)node[right]{$\omega_s\vect n$};
+\draw[force,muted](0,0)--(1.15,1.991858)node[pos=.55,right=5pt]{$h\vect n$};
+\fill(1.15,1.991858)circle(2pt)node[below right]{$P$};
+\draw[guide](0,3.637307)--(2.1,3.637307);\draw(0,.9)arc(90:60:.9);\node at(.46,1.15){$\alpha$};
+\draw[->](-1.2,3.3)arc(180:30:1.2 and .3);
+\node[anchor=west,align=left]at(3.5,2.5){进动框架：$\Om_f=\Omega_p\vect e_Z$\\随体框架：\\$\vect\omega_B=\Omega_p\vect e_Z+\omega_s\vect n$\\$P$ 位于刚体对称轴上};
+\node[below left]at(0,0){$O$};
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}[scale=.8]
+\draw[->](-3.3,0)--(1.4,0)node[right]{东};\draw[->](0,0)--(0,4.4)node[above]{$z$};
+\draw[ink,thick,domain=0:1,samples=55,->]plot({-4*\x^2+8/3*\x^3},{16*(\x-\x^2)});
+\coordinate(H)at(-.666667,4);\fill(H)circle(2.5pt)node[above left]{最高点};\draw[->,muted](-.208333,3)--++(-.11,.586667);\draw[->,muted](-1.125,3)--++(-.11,-.586667);\fill(0,0)circle(3pt);\fill(-1.333,0)circle(3pt);\node[below]at(-1.333333,-.1){返回点};\node[anchor=west,align=left]at(2,2.5){轨迹中的横向位移已夸大\\最高点不在初始铅垂线上\\回到原高度也不等于回到原位置};
+\end{tikzpicture}

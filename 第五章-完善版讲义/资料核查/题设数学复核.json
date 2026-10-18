@@ -1,0 +1,1744 @@
+{
+  "report_type": "independent_mathematical_physical_statement_qa",
+  "generated_at": "2026-10-18T07:54:11.159219+08:00",
+  "author": "c3_originals_b",
+  "scope": {
+    "examples": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86
+    ],
+    "exercises": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "checked_count": 106,
+    "not_checked_examples": [],
+    "not_checked_exercises": []
+  },
+  "sources": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/题设数据.py",
+      "sha256": "8a4536b3ff7ec6aa68e0efd2ae8ad74cb147b8297d7c48054f06a86332313ae0"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图解数据.py",
+      "sha256": "dc0c3a6eb974ceb049d7f9e1c700568d4a5d58914aae3eab076df93b58c927e5"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/旧稿题目与解答.json",
+      "sha256": "fc100bf7cc23f4b7e7edc8067fb5e81c417aed33f8339de9f68671cd571cc47a"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/推导扩展.py",
+      "sha256": "86fd3dff461bcb19bc0db4d214cca24caed1cfdc78f75f1e8eceb1ec0b422ef1"
+    }
+  ],
+  "method": "逐题对照86例与20训练的新题设、图解公式/桥接文字、旧解全文及新增推导；对关键初值、惯量、正则偏导、特征模、求积系数、场方程和边界项独立核算。旧缺项在扩展已解决者保留历史并标resolved。只读数据文件，不等同实际图像视觉核查或最终组装稿回归。",
+  "limitations": "父代理持续修改题设与扩展，报告标明输入hash与复核时间。组装脚本计划进行的μ_s统一及P_i定义，未在本轮允许范围中独立核实；最终成稿仍需确认。报告没有修改题设、推导、主稿或图片。",
+  "summary": {
+    "checked_items": 106,
+    "historical_findings": 19,
+    "resolved_findings": 11,
+    "active_findings": 8,
+    "active_item_numbers": [
+      "example 3",
+      "example 13",
+      "example 19",
+      "example 23",
+      "example 24",
+      "exercise 16",
+      "example 70",
+      "example 80"
+    ],
+    "new_second_half_findings": [
+      "T016-scaled-rotation",
+      "E070-angle-width",
+      "E080-heat-energy"
+    ],
+    "conclusion": "全部106题已完成数据级数学/物理QA。新增推导的主要代数公式未发现错误；需要改清热扩散能量含义、缩放相图角度和扇区单覆盖条件，并确认例41有向角速度/速率约定。前轮多数条件与新增小问缺项已被题设修订和推导扩展解决。仍列出的未定义参数、例13分杆平衡及组装统一须在终稿复核。"
+  },
+  "issues": [
+    {
+      "id": "E003-mass",
+      "kind": "example",
+      "number": 3,
+      "title": "螺旋线、平面定点运动与三维定点运动",
+      "severity": "minor",
+      "category": "missing_parameter",
+      "status": "needs_fix",
+      "problem": "新题设要求动能，但未定义质点质量 m。图解与旧解均使用 m。",
+      "evidence": "新题设“质点被限制在螺旋线…求…动能”；图解 T=m(a²+b²)u_dot²/2。",
+      "recommended_change": "题首改为“质量 m 的质点…”。",
+      "verified_formula": ""
+    },
+    {
+      "id": "E010-potential",
+      "kind": "example",
+      "number": 10,
+      "title": "两段同线密度杆构成的刚性折杆",
+      "severity": "moderate",
+      "category": "new_request_not_explicitly_answered",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题设增加“写出…总势能”，旧解写了向下的质心坐标及虚功，未实际写出总势能。",
+      "evidence": "旧解给 y_D=(a/2)cosθ、y_E=a cosθ+(b/2)sinθ，随后直接给虚功和平衡角。",
+      "recommended_change": "在坐标式后补总势能；说明这些 y 是向下坐标，若使用通常向上高度，势能负号必须同步改变。",
+      "verified_formula": "V=-\\sigma g[(a^2/2+ab)\\cos\\theta+(b^2/2)\\sin\\theta]+C. 在下垂分支 V\\prime\\prime=\\sigma g\\sqrt{(a^2/2+ab)^2+(b^2/2)^2}>0。",
+      "resolution": "推导扩展.py 例10已给总势能及V二阶导数，代数和稳定分支正确。"
+    },
+    {
+      "id": "E013-method",
+      "kind": "example",
+      "number": 13,
+      "title": "顶角为六十度的对称轻杆结构",
+      "severity": "moderate",
+      "category": "new_request_not_answered",
+      "status": "needs_fix",
+      "problem": "新题设要求“整体平衡”求横杆内力，但旧解的三法实际是两种坐标的乘数法与虚功法。整体受力平衡中内力相消，单靠整体不能求横杆轴力。",
+      "evidence": "旧解第三种方式仍是拆横杆后写 -P δy_B+N δ(x_E-x_D)=0；没有单杆的受力或力矩平衡。",
+      "recommended_change": "把要求改为“整体与单杆受力平衡”，并增加对单杆取矩；或恢复要求为“虚功法及两种坐标的乘数法”，保持旧三种推导。",
+      "verified_formula": "整体及对称性给 N_A=N_C=P/2。取左杆对 B 的力矩，令横杆拉力大小 T>0：-Pl/2+T\\sqrt3l/2=0，故 T=P/\\sqrt3；按向外为正的 N=-T=-P/\\sqrt3。"
+    },
+    {
+      "id": "E017-fixed-axes",
+      "kind": "example",
+      "number": 17,
+      "title": "轻绳带动大小圆盘",
+      "severity": "major",
+      "category": "lost_physical_condition",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题设仅在“大圆盘”前注明定轴，没有说明小圆盘也定轴。旧解完全按两个定轴盘计算；若小盘可平动，速度约束、动能和结果均改变。",
+      "evidence": "旧题：“两…圆盘…转轴固定且轴摩擦忽略”；新题：“定轴均匀大圆盘…，小圆盘…”；旧解只有两盘转动动能。",
+      "recommended_change": "改为“两均匀圆盘的转轴均固定且轴摩擦忽略；大盘…小盘…”。角速度若只给大小，统一称角速率；如要求有向角速度，另给各盘正向。",
+      "verified_formula": "",
+      "resolution": "新版题设明确小圆盘也定轴，关键模型条件已恢复。"
+    },
+    {
+      "id": "E019-initial",
+      "kind": "example",
+      "number": 19,
+      "title": "接触反力与静摩擦失效角",
+      "severity": "major",
+      "category": "changed_initial_condition",
+      "status": "resolved_in_reviewed_data",
+      "problem": "“由顶部附近静止开始”可指有限初始角 θ0>0，而旧解和新图解均使用从顶点静止的微扰极限能量。两种初值的速度、法向力和首次滑动角不同。",
+      "evidence": "旧题明确“从顶部静止的小扰动极限”；新图解能量 mgρ(1−cosθ)，旧解同式。",
+      "recommended_change": "最小修正是把新题设改回“取由顶部静止开始滚下的微扰极限”；若保留附近释放，必须给 θ(0)=θ0 并改相应结果。",
+      "verified_formula": "有限静止释放角 \\theta_0 下：\\dot\\theta^2=10g(\\cos\\theta_0-\\cos\\theta)/(7\\rho)，N=mg(17\\cos\\theta-10\\cos\\theta_0)/7，f=2mg\\sin\\theta/7；首次滑动 2\\sin\\theta_s=\\mu_s(17\\cos\\theta_s-10\\cos\\theta_0)。还需初始 \\mu_s\\ge(2/7)\\tan\\theta_0 才可立即纯滚动。\\theta_0\\to0 才恢复旧式。",
+      "resolution": "新版题设已恢复顶部静止经无穷小扰动的极限，与能量常数一致。"
+    },
+    {
+      "id": "E019-symbols",
+      "kind": "example",
+      "number": 19,
+      "title": "接触反力与静摩擦失效角",
+      "severity": "moderate",
+      "category": "symbol_mismatch",
+      "status": "pending_assembly_check",
+      "problem": "新题设/图解使用 μ_s、ρ，旧解使用 μ、d；旧题里对 μ 的定义若被替换就丢失。d 虽在旧解重新定义，但同一半径两记号会打断图文对应。",
+      "evidence": "新：接触静摩擦系数 μ_s，令ρ=R+r；旧解：令d=R+r，f=μN 和 θ_s(μ)。",
+      "recommended_change": "全题将 μ 统一为 μ_s、d 统一为 ρ，或在解答第一句明确 μ≡μ_s、d≡ρ。",
+      "verified_formula": "",
+      "resolution": "父代理计划通过组装脚本统一μ_s；本轮只读数据文件，未验证最终组装替换。"
+    },
+    {
+      "id": "E022-accelerations",
+      "kind": "example",
+      "number": 22,
+      "title": "固定轮外侧纯滚动的行星轮",
+      "severity": "moderate",
+      "category": "new_request_not_explicitly_answered",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题设要求行星轮绝对、相对自转角速度和角加速度；旧解只显式给两个角速度与曲柄角加速度。",
+      "evidence": "旧解结尾为 φ_ddot=ℳ/[(R+r)²(m1/3+m2+I2/r²)]，没有 α2 和 α2,rel。",
+      "recommended_change": "在曲柄角加速度后写行星轮的两种角加速度；若题意只要求曲柄角加速度，应把题目明确写为该量。",
+      "verified_formula": "A=(R+r)^2(m_1/3+m_2+I_2/r^2),\\quad \\ddot\\phi=\\mathcal M/A,\\quad \\alpha_2=(R+r)\\ddot\\phi/r,\\quad \\alpha_{2,\\mathrm{rel}}=R\\ddot\\phi/r。",
+      "resolution": "推导扩展.py 例22已分别给绝对/相对自转角加速度，关系正确。"
+    },
+    {
+      "id": "E023-weights",
+      "kind": "example",
+      "number": 23,
+      "title": "把铰接双杆的静力问题推广到动力学",
+      "severity": "moderate",
+      "category": "undefined_symbol_after_restatement",
+      "status": "pending_author_edit",
+      "problem": "新题设只给质量 m1,m2；旧题原本定义 m_i=P_i/g。替换旧题后，旧解的势能和最终两条方程仍出现未定义重量 P1,P2。",
+      "evidence": "新题无 P_i；旧 V_g=−(P1/2+P2)l1 cosθ1−P2l2 cosθ2/2；旧最终方程同样用 P_i。",
+      "recommended_change": "新题或解答开头明写 P_i=m_i g；或将解答全部 P_i 换为 m_i g。不要仅靠例7的重量定义。",
+      "verified_formula": "",
+      "resolution": "父代理确认将定义P_i=m_i g；当前读取的题设仍未见该定义，最终稿须验证。"
+    },
+    {
+      "id": "E024-momenta",
+      "kind": "example",
+      "number": 24,
+      "title": "自由粒子、有心力场与球形碗",
+      "severity": "minor",
+      "category": "parameter_and_explicit_answer",
+      "status": "needs_fix",
+      "problem": "新题分别求三个模型的守恒动量，但未定义各质点质量；旧解第一问只说三个坐标均循环，没有明列三个线动量。",
+      "evidence": "旧解第一句 L=m(x_dot²+y_dot²+z_dot²)/2 后称三个坐标都循环；后两问的 pφ 已显式给出。",
+      "recommended_change": "题首补“各模型质点质量均记为 m”；在自由粒子小问列 p_x=m x_dot、p_y=m y_dot、p_z=m z_dot 均为常量。",
+      "verified_formula": ""
+    },
+    {
+      "id": "E025-mass",
+      "kind": "example",
+      "number": 25,
+      "title": "水平直管的离管速度与时间",
+      "severity": "moderate",
+      "category": "lost_parameter",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题设漏掉小球质量 m，但新增/保留的反力、驱动功率均依赖 m。",
+      "evidence": "旧题“球质量 m”；新题只说“小球初始距轴 a”；旧解 N=2mωr_dot、功率=2mω²r r_dot。",
+      "recommended_change": "题设加“质量 m 的小球”。",
+      "verified_formula": "",
+      "resolution": "新版题设已定义小球质量m。"
+    },
+    {
+      "id": "E027-stability",
+      "kind": "example",
+      "number": 27,
+      "title": "旋转水平管中的弹性绳双球",
+      "severity": "major",
+      "category": "ambiguous_stability_scope",
+      "status": "resolved_in_reviewed_data",
+      "problem": "题目无修饰地要求“稳定条件”，容易把 k>μω² 理解为整个双球系统稳定。事实上它只使相对伸缩模稳定；质心模 X_ddot−ω²X=0 具有指数增长，ω>0 时完整平衡不稳定。",
+      "evidence": "旧解同时写 X_ddot−ω²X=0 与 ν²=k/μ−ω²，却没有明确整体不稳定结论；新题还未说明 ω>0。",
+      "recommended_change": "明确“求相对伸缩运动的稳定条件，并讨论整体质心运动的稳定性”；注明 ω>0。写出整体平衡 (X=0,s=s_e) 对任意一般小扰动不稳定。弹性绳应明确只在 s≥a 的拉紧区间使用线性弹性式，松弛时分段。",
+      "verified_formula": "X=C_+e^{\\omega t}+C_-e^{-\\omega t}，s_e=ka/(k-\\mu\\omega^2)，\\nu^2=k/\\mu-\\omega^2。k>\\mu\\omega^2 仅使 s 模有界振动；并不能消除 X 的正实特征根。k=2\\mu\\omega^2 且 s(0)=a,\\dot s(0)=0 时 s=2a-a\\cos\\omega t\\ge a，特例不需要松弛分段。",
+      "resolution": "新版题设明确只求相对伸缩模式的稳定条件，已消除整体稳定的歧义。ω>0以及绳只在拉紧支适用仍建议明确，但不影响所给特例。"
+    },
+    {
+      "id": "E041-instant-center",
+      "kind": "example",
+      "number": 41,
+      "title": "均匀实心球的微振动",
+      "severity": "moderate",
+      "category": "new_request_not_answered",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题明确要求“分别用质心分解和接触点瞬心法建立动能”，旧解只有质心平动+自转相加。图解桥接语提到瞬心，但没有给惯量计算。",
+      "evidence": "旧解只有 T=mv²/2+I_Cω_s²/2；新图解文字称可合为绕 A 的动能。",
+      "recommended_change": "补 I_A=I_C+mr²=7mr²/5 和对应瞬心动能，与质心法逐项对照。父代理已表示将补此内容，本报告仍以所读三文件快照记为待补。",
+      "verified_formula": "I_A=I_C+mr^2=7mr^2/5,\\quad T=I_A\\omega_s^2/2=7m(R-r)^2\\dot\\theta^2/10。",
+      "resolution": "推导扩展.py 例41已给I_A=7mr²/5及完整欧拉偏导，动能和方程正确。速率/有向量的表述另列E041-spin-sign。"
+    },
+    {
+      "id": "E042-exact-equation",
+      "kind": "example",
+      "number": 42,
+      "title": "均匀半圆柱在水平面纯滚动",
+      "severity": "moderate",
+      "category": "new_request_not_answered",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题要求精确方程；旧解有精确 T,V，但只完整写 L2 与小振动频率，最后仅说精确方程“还含”某个三阶项。",
+      "evidence": "旧解最后句：“精确方程还含 mrd sinθ θ_dot²；它是三阶小量…”",
+      "recommended_change": "由精确 T,V 完整列出运动方程，再进行线性化。",
+      "verified_formula": "(3r^2/2-2rd\\cos\\theta)\\ddot\\theta+rd\\sin\\theta\\dot\\theta^2+gd\\sin\\theta=0。来自 I_A\\ddot\\theta+\\tfrac12I_A\\prime\\dot\\theta^2+V\\prime=0；三项共同含 m，可约去。",
+      "resolution": "推导扩展.py 例42完整精确方程正确，A′项系数为1/2后得到mrd sinθ θ_dot²，无符号问题。"
+    },
+    {
+      "id": "T007-second-variation",
+      "kind": "exercise",
+      "number": 7,
+      "title": "固定端点与自然边界条件",
+      "severity": "moderate",
+      "category": "new_request_not_answered",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新训练题增加二阶变化符号判断；旧解只求驻值曲线和自然边界，图解也未给二阶变化。",
+      "evidence": "新题“并判断二阶变化的符号”；旧解在 y=x−x²/2 后结束。",
+      "recommended_change": "补任意η(0)=0、η(1)自由的扰动计算，说明严格极小而不只是驻值。",
+      "verified_formula": "I[y_*+\\varepsilon\\eta]-I[y_*]=\\varepsilon^2\\int_0^1(\\eta\\prime)^2\\,dx/2，\\delta^2I=\\int_0^1(\\eta\\prime)^2\\,dx>0（非零允许扰动）；交叉项经分部积分利用 y_*\\prime(1)=0 消失。",
+      "resolution": "推导扩展.py 训练7给精确泛函差、自然边界及严格全局最小性，均正确。"
+    },
+    {
+      "id": "T009-normal-modes",
+      "kind": "exercise",
+      "number": 9,
+      "title": "二维系统的质量正交",
+      "severity": "moderate",
+      "category": "new_request_partially_answered",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题要求显式质量归一化、正规坐标及模式运动。旧解给未归一振幅后只说“各除以自身M范数”“再分别解谐振子”；a_± 在归一前后复用还可能使 Q=a^T Mq 被误用。",
+      "evidence": "旧 a_±=(1,2−λ_±)，然后直接 Q_±=a_±^TMq；没有独立的归一后符号、范数或 Q_±(t)。",
+      "recommended_change": "保留 a_± 为原向量，另定义 e_± 为质量归一向量，完整给 Q 与展开和谐振运动。",
+      "verified_formula": "\\lambda_\\pm=(3\\pm\\sqrt3)/2，b_\\pm=2-\\lambda_\\pm=(1\\mp\\sqrt3)/2，e_\\pm=(1,b_\\pm)^T/\\sqrt{m(3\\mp\\sqrt3)}。e_i^TMe_j=\\delta_{ij}，Q_\\pm=e_\\pm^TMq，q=e_+Q_++e_-Q_-，\\omega_\\pm^2=k\\lambda_\\pm/m；Q_\\pm(t)=Q_\\pm(0)\\cos\\omega_\\pm t+\\dot Q_\\pm(0)\\sin\\omega_\\pm t/\\omega_\\pm。",
+      "resolution": "推导扩展.py 训练9显式区分a与e，给归一范数、坐标展开及模式运动，正确。"
+    },
+    {
+      "id": "T010-general-solution",
+      "kind": "exercise",
+      "number": 10,
+      "title": "重根情况下余子式法的限制",
+      "severity": "moderate",
+      "category": "new_request_not_answered",
+      "status": "resolved_in_reviewed_data",
+      "problem": "新题明确要求选质量正交模式并写通解。旧解仅指出零空间为整个平面、可选坐标轴，没有写具体归一基与通解。",
+      "evidence": "旧解结尾“应选任意两条M正交独立方向，例如坐标轴”，随后讲余子式法限制。",
+      "recommended_change": "补标准基或归一基和任意四初值的运动。",
+      "verified_formula": "e_1=(1,0)^T/\\sqrt m，e_2=(0,1)^T/\\sqrt m，\\omega=\\sqrt{k/m}；q(t)=q(0)\\cos\\omega t+\\dot q(0)\\sin\\omega t/\\omega。或 Q_j=A_j\\cos\\omega t+B_j\\sin\\omega t，q=e_1Q_1+e_2Q_2。",
+      "resolution": "推导扩展.py 训练10给质量归一基与四初值通解，正确。"
+    },
+    {
+      "id": "T016-scaled-rotation",
+      "kind": "exercise",
+      "number": 16,
+      "severity": "moderate",
+      "category": "new_extension_physical_statement",
+      "status": "needs_fix",
+      "problem": "新扩展称象限区域的两条径向边在相平面“顺时针旋转ωt”。原(q,p)平面中的精确流是椭圆线性流，一般不是欧氏刚性旋转，边界的几何角速度不是常量ω。",
+      "evidence": "推导扩展.py TR16：“象限区域的两条径向边顺时针旋转ωt”。题设未预先定义缩放相坐标。",
+      "recommended_change": "改为“在缩放相坐标 Q=√(mω)q、P=p/√(mω) 中，两径向边顺时针旋转ωt；原(q,p)中按精确流矩阵变换”。或只说随相流移动，不给原坐标几何旋转角。",
+      "verified_formula": "(q,p)^T=[[cosωt,sinωt/(mω)],[-mωsinωt,cosωt]](q_0,p_0)^T；正q轴边界变为(λcosωt,−mωλsinωt)，其原坐标斜率为−mωtanωt；缩放后才是标准旋转矩阵。",
+      "title": "定态密度不意味着所有概率分布相同"
+    },
+    {
+      "id": "E070-angle-width",
+      "kind": "example",
+      "number": 70,
+      "severity": "moderate",
+      "category": "domain_restriction",
+      "status": "needs_fix",
+      "problem": "新题把角区间的像称为相区，却未限制角宽。面积mωA0²(θ2−θ1)/2只在角宽不超过2π、除边界外不重复覆盖时成立。角宽大于一周会重复计数；旧解的“展开角积分”也不能把重复覆盖当成新增区域面积。",
+      "evidence": "题设只有θ1≤θ≤θ2；旧解直接按全区间积分雅可比。",
+      "recommended_change": "题设加“0≤θ2−θ1≤2π”，跨越角度零点允许，但总宽不得超过一周。若要允许任意角宽，区分带重数面积与几何像的面积。",
+      "verified_formula": "当θ2≥θ1时，几何像面积=(mωA0²/2)min(θ2−θ1,2π)；如θ2−θ1=4π，几何区域仍只是一整个椭圆，面积πmωA0²。",
+      "title": "谐振子扇形区域面积"
+    },
+    {
+      "id": "E080-heat-energy",
+      "kind": "example",
+      "number": 80,
+      "severity": "moderate",
+      "category": "new_statement_physical_distinction",
+      "status": "needs_fix",
+      "problem": "新题要求比较热扩散的“能量耗散”，但无热交换的纯导热使总热能守恒；扩展证明衰减的是温差平方积分，并不是总热能。当前措辞可能把扩散耗散理解为热能凭空减少。",
+      "evidence": "新题最后“时间结构和能量耗散”；扩展例80实际证明d/dt∫(T−T̄)²/2=−D∫|∇T|²≤0。",
+      "recommended_change": "题设改为“时间结构与温度不均匀性的衰减”；解答补绝热或周期边界下总热能守恒，而温度方差衰减（熵产生）。若讨论可用能或相对于热平衡的自由能，须明确定义，不能把它简称总能量。",
+      "verified_formula": "均匀常c_v下，E_th=∫ρ_m c_v T dV；ρ_m c_v T_t=κ∇²T，故dE_th/dt=κ∮∇T·n dS=0（绝热或周期）。与此同时d/dt∫(T−T̄)²/2=−D∫|∇T|²≤0。",
+      "title": "理想流体表面重力波与热扩散的区别"
+    }
+  ],
+  "clarification_suggestions": [
+    {
+      "id": "E021-direction",
+      "kind": "example",
+      "number": 21,
+      "problem": "新题只给坡角α，图解与旧解选择坡面向右上方升高，才有正的交叉项 m x_dot s_dot cosα。",
+      "recommendation": "题设补“坡面向右上方升高”。现有图解桥接语已经说明夹角α，因此不列为确定公式错误。",
+      "status": "suggestion"
+    },
+    {
+      "id": "E035-bound",
+      "kind": "example",
+      "number": 35,
+      "problem": "新题求间距存在条件；旧解以 u/cosh u 的最大值及 u tanh u=1 隐式说明，未写最终不等式。",
+      "recommendation": "可直接补 0<d/(2R)≤u*/cosh u*，u*tanh u*=1，u*≈1.1996786403，即 d/R≤1.3254868387。等号为两驻值支合并，严格局部稳定性须另判；不把存在条件冒充全局最小条件。",
+      "status": "resolved_in_reviewed_data",
+      "resolution": "推导扩展.py例35已给d/R≤1.32549及存在性/最小性区别，正确。"
+    },
+    {
+      "id": "E038-cases",
+      "kind": "example",
+      "number": 38,
+      "problem": "旧解已给符号因子 π²/τ²−ω²，但只文字说明τ>π/ω的负方向。",
+      "recommendation": "可补所选正弦扰动在τ<π/ω为正、τ=π/ω为零、τ>π/ω为负。最后一种只说明存在负方向，不能说二阶型在所有扰动上为负。",
+      "status": "suggestion"
+    },
+    {
+      "id": "E041-spin-sign",
+      "kind": "example",
+      "number": 41,
+      "problem": "图解写 v_C=(R−r)θ_dot=rω_s；旧解把ω_s称速率。圆柱内滚动的绝对自转与球心绕圆柱轴的有向转动相反，不能在同一轴正向下把两角速度相等。",
+      "recommendation": "新扩展仍把 rω_s=(R−r)θ_dot 称为“速率关系”，小振动θ_dot会变号。改为速率等式 r|ω_s|=(R−r)|θ_dot|，或明说ω_s的有向正转约定与θ相反。",
+      "status": "needs_clarification"
+    },
+    {
+      "id": "T006-inverse",
+      "kind": "exercise",
+      "number": 6,
+      "problem": "新题增加速度反解；旧解给p=m q_dot+b，反解可以立即推出但未显式列出。",
+      "recommendation": "为逐问作答，补 q_dot=(p−b(q))/m。",
+      "status": "resolved_in_reviewed_data",
+      "resolution": "推导扩展.py训练6已显式给速度反解及正则方程消元。"
+    },
+    {
+      "id": "E036-L-symbol",
+      "kind": "example",
+      "number": 36,
+      "problem": "图解公式使用 L·r=0；题设及该例旧解没有定义图中的向量L。",
+      "recommendation": "桥接文字定义 L∝r×dr/ds 是球面自由测地运动的守恒法向量；若不引入动力学质量，可直接以 n·r=0 表示过球心的固定平面。",
+      "status": "suggestion"
+    },
+    {
+      "id": "E065-conjugate-momenta",
+      "kind": "example",
+      "number": 65,
+      "status": "suggestion",
+      "problem": "新题明确要求动量，旧解仅说由动能计算共轭动量后反解，没有逐个列出。",
+      "recommendation": "可补p_ξ=m(ξ+η)ξ_dot/(4ξ)，p_η=m(ξ+η)η_dot/(4η)，p_ϑ=mξηϑ_dot；其与已给H相容。"
+    }
+  ],
+  "review_records": [
+    {
+      "kind": "example",
+      "number": 1,
+      "title": "沿曲线滚动的竖直圆盘",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "非完整滚动约束与预定导轨的可积化一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 2,
+      "title": "单摆、球面质点、滚动圆盘与定点刚体",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "四系统自由度与局部坐标独立性一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 3,
+      "title": "螺旋线、平面定点运动与三维定点运动",
+      "status": "needs_revision",
+      "issue_ids": [
+        "E003-mass"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 4,
+      "title": "弹性阿特伍德系统与受驱动圆环",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "弹性阿特伍德自由度2，规定转环1、自由转环2，一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 5,
+      "title": "单摆与球面上的虚位移",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "单摆与球面切向虚位移尺度因子正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 6,
+      "title": "水平力对单摆的广义力",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "恒水平力广义力和势能符号一致；绳与杆倒立区别保留。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 7,
+      "title": "端点水平力作用下的两杆",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "双杆重力系数含下杆全重，虚功与势能一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 8,
+      "title": "等长连杆机构的三个位置映射",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "右侧构形位置映射、虚位移与φ=0局部退化一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 9,
+      "title": "均匀杆跨过固定光滑棱边",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "cos³θ=d/l，不稳定；墙和棱边反力与杆上接触条件一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 10,
+      "title": "两段同线密度杆构成的刚性折杆",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "E010-potential"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 11,
+      "title": "一个自由度的曲柄连杆机构",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "切向力与滑块位移同一正向约定，力关系一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 12,
+      "title": "抛物面上与平面、圆柱相交的极值",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "直线约束最小1/2无最大；偏心圆约束最小1最大9，一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 13,
+      "title": "顶角为六十度的对称轻杆结构",
+      "status": "needs_revision",
+      "issue_ids": [
+        "E013-method"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 14,
+      "title": "串接两球，各受水平力",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "两绳张力及水平恒力符号、乘数方程一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 15,
+      "title": "有心力场中的平面质点",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "极坐标动能、径向离心项与角动量守恒一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 16,
+      "title": "圆柱顶端绕绳牵引",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "顶绳速度2倍柱心速度，重物加速度8mg/(3M+8m)，张力与摩擦向右一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 17,
+      "title": "轻绳带动大小圆盘",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "E017-fixed-axes"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 18,
+      "title": "自然长不为零的二维弹簧摆",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "径向自然长、重力投影及摆角方程一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 19,
+      "title": "接触反力与静摩擦失效角",
+      "status": "needs_revision",
+      "issue_ids": [
+        "E019-initial",
+        "E019-symbols"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 20,
+      "title": "水平弹簧滑块悬挂单摆",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "精确动能交叉项、摆角方向和二次近似一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 21,
+      "title": "斜面与弹簧的二自由度运动",
+      "status": "consistent_with_clarifications",
+      "issue_ids": [],
+      "suggestion_ids": [
+        "E021-direction"
+      ],
+      "notes": "新图解已限定正交叉项所需上坡方向；建议题设也直接说明。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 22,
+      "title": "固定轮外侧纯滚动的行星轮",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "E022-accelerations"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 23,
+      "title": "把铰接双杆的静力问题推广到动力学",
+      "status": "needs_revision",
+      "issue_ids": [
+        "E023-weights"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 24,
+      "title": "自由粒子、有心力场与球形碗",
+      "status": "needs_revision",
+      "issue_ids": [
+        "E024-momenta"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 25,
+      "title": "水平直管的离管速度与时间",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "E025-mass"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 26,
+      "title": "竖直平面内的匀速转管",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 27,
+      "title": "旋转水平管中的弹性绳双球",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "E027-stability"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 28,
+      "title": "水平圆环绕环上一点旋转",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "绕环上一点而非环心旋转；惯性速度、精确方程、广义能量一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 29,
+      "title": "绳轮系统的简谐运动和两段张力",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "绳速约束、循环积分、s=2a−acosΩt及两段张力一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 30,
+      "title": "轻绳穿过桌面光滑小孔",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "两球共同贡献径向动能，转折半径a与3a，要求l>3a一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 31,
+      "title": "自由平面双球的最大伸长",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "初始相对速度径向和横向均非零；最大伸长仍有转动能，v²=576ka²/(31m)一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 32,
+      "title": "滚轮小车上弹簧物块的第一积分",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "循环动量含轮转动折算项，不能等同真实水平动量；相对频率一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 33,
+      "title": "从静止出发的重力下降轨道",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "摆线参数支、最低点后上升段及时间公式完整一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 34,
+      "title": "均匀柔链的静力形状",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "长度乘数、悬链线边界条件、张力与等高长度条件一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 35,
+      "title": "两圆环之间的最小旋转曲面",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [
+        "E035-bound"
+      ],
+      "notes": "驻值母线和边界式一致；存在界值可再写成不等式。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 36,
+      "title": "球面测地线与等周曲线",
+      "status": "consistent_with_clarifications",
+      "issue_ids": [],
+      "suggestion_ids": [
+        "E036-L-symbol"
+      ],
+      "notes": "两问题结论与法向变分相容；图解L需定义。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 37,
+      "title": "平面界面上的折射定律",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "交点法、受约束双角变分与相位匹配三种推导完整。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 38,
+      "title": "自由粒子的驻作用量",
+      "status": "consistent_with_clarifications",
+      "issue_ids": [],
+      "suggestion_ids": [
+        "E038-cases"
+      ],
+      "notes": "自由粒子严格最小证明正确；谐振子变分符号需按扰动方向理解。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 39,
+      "title": "不先写拉格朗日方程而求圆环滑珠运动",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "给定L、边界项、交叉项抵消及精确方程一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 40,
+      "title": "轴对称重陀螺的三个积分",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "关于支点惯量、θ从向上量起、循环动量与有效势符号一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 41,
+      "title": "均匀实心球的微振动",
+      "status": "consistent_with_clarifications",
+      "issue_ids": [
+        "E041-instant-center"
+      ],
+      "suggestion_ids": [
+        "E041-spin-sign"
+      ],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 42,
+      "title": "均匀半圆柱在水平面纯滚动",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "E042-exact-equation"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 43,
+      "title": "对称与反对称振动、拍频",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "同反相模、频率、和差坐标、初值及拍频相容。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 44,
+      "title": "等质量滑块单摆的两个简正频率",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "小振动质量矩阵、特征根、静止释放系数和双弹簧2k替换一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 45,
+      "title": "两个相同单摆串接的平面小振动",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "绝对摆角、质量内积、模式比与任意四初值通解一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 46,
+      "title": "二次函数的勒让德变换",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "代数勒让德反解与凸共轭区别正确；a<0的上确界确为+∞。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 47,
+      "title": "一维自由粒子与势场质点",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "动量、哈密顿函数、正则方程与自由解一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 48,
+      "title": "中心力的哈密顿函数",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "四正则方程及恢复极坐标二阶式正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 49,
+      "title": "球形碗的四个正则方程",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "碗底势能零点、离心项偏导符号及极点限制一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 50,
+      "title": "滑块单摆的精确反解",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "新扩展A1B1显式角动量方程系数正确，与−m2l x_dot φ_dot sinφ−m2gl sinφ一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 51,
+      "title": "等质量模型的四个精确正则方程",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "等质量精确反解、分母导数、二次H及线性消元正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 52,
+      "title": "单自由度线性振子的正则解",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "初值系数和能量交叉项抵消正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 53,
+      "title": "固定核库仑场中电子的经典运动",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "库仑六正则式、球坐标消元及总角动量积分一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 54,
+      "title": "计算简单括号与角动量括号",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "泊松括号单自由度及角动量逐项符号正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 55,
+      "title": "两个角动量分量守恒推出第三个",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "Jacobi展开符号正确；恒零括号不产生独立积分。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 56,
+      "title": "泊松括号不产生普适的经典不确定下限",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "新增待证伪命题及平均定义清楚，三种经典反例正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 57,
+      "title": "缩放、位置动量交换与对数坐标",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "四变换的括号、母函数符号与对数定义域一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 58,
+      "title": "新坐标是作用量的新变量次序",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "变量次序为作用量作坐标，p dq−P dQ为全微分，括号及量纲正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 59,
+      "title": "以指定速度平移的坐标",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "时间相关平移K=H−a_dotP，恢复原轨道正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 60,
+      "title": "用正则变换解二维谐振子",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "作用量与角变量初值反解、相位象限、归一化与零振幅处理完整一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 61,
+      "title": "\\texorpdfstring{$H=p+aq^2$}{H=p+aq²}",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "S_qE=1，初值参数和抽象单位约定一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 62,
+      "title": "分别积分两个振动方向",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "振子特性函数积分、参数导数和转折分支一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 63,
+      "title": "平面中心力的一般积分表达",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "径向时间与轨道求积中的m和J/r²系数正确，已说明根号换支。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 64,
+      "title": "径向势与极角势的叠加",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "角向分离常数、径向有效势及三参数求积符号正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 65,
+      "title": "旋转抛物面坐标与轴对称势",
+      "status": "consistent_with_clarifications",
+      "issue_ids": [],
+      "suggestion_ids": [
+        "E065-conjugate-momenta"
+      ],
+      "notes": "线元、分离动量根式和参数导数正确；可显式列共轭动量定义。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 66,
+      "title": "共焦椭球面与双曲面组成的坐标",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "椭球尺度因子、能量分离的η负号、σ²量纲和三求积式正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 67,
+      "title": "分母也可依赖共轭动量的分离问题",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "允许G含p的隐式反解、时间积分和行列式G/∏D_i正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 68,
+      "title": "谐振子与阻尼振子的相轨迹",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "阻尼动量含包络求导项，相流散度与面积衰减正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 69,
+      "title": "指数乘四次多项式的势能",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "远势垒与左右阱分类、同宿支、转折积分和鞍点对数发散一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 70,
+      "title": "谐振子扇形区域面积",
+      "status": "needs_revision",
+      "issue_ids": [
+        "E070-angle-width"
+      ],
+      "suggestion_ids": [],
+      "notes": "流矩阵及第一象限计算正确；一般角区间需限制不重复覆盖。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 71,
+      "title": "显式欧拉法与辛欧拉法的区别",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "先动量后位置的辛欧拉矩阵和修正不变量交叉项为负，正定区间0<hω<2正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 72,
+      "title": "库仑势的量子能级",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "径向级数递推、截断条件、能级与谱线极限正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 73,
+      "title": "量子不确定关系的独立证明",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "自伴/乘积期望条件已给，Cauchy–Schwarz推对易子下界正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 74,
+      "title": "两个通道的干涉",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "复振幅叠加、等振幅干涉、传播子与概率密度区别一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 75,
+      "title": "定端弦的小横振动",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "空间边界项方向、变系数弦方程、初值投影一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 76,
+      "title": "驻波能量与波长的精确关系",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "总能量波长关系、沿弦正则动量零、奇偶模式横向机械动量和端点反力一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 77,
+      "title": "均匀鼓膜",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "膜面积小量展开、矩形频率及圆膜Bessel条件正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 78,
+      "title": "各向同性弹性体的纵横波",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "应变能变分给σ_ij，纵横投影及材料稳定条件正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 79,
+      "title": "声波的线性化",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "连续/动量线性化消元、绝热导数与小量限制正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 80,
+      "title": "理想流体表面重力波与热扩散的区别",
+      "status": "needs_revision",
+      "issue_ids": [
+        "E080-heat-energy"
+      ],
+      "suggestion_ids": [],
+      "notes": "重力波表面两条件消元和深浅水极限正确；热扩散的总热能与温差耗散应区分。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 81,
+      "title": "以势为场变量推导两条有源方程",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "标量势与矢量势边界项、规范源项变化及Poynting符号正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 82,
+      "title": "平移、转动与时间平移",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "Noether生成量与时间平移负能量的整体符号相容。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 83,
+      "title": "复标量场的连续相位变换",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "复场相位Noether流符号、独立变分与局部守恒正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 84,
+      "title": "弦场的能量密度再现",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "混合指标张量、能流与主动平移动量方向约定可相容，定端能流为零。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 85,
+      "title": "把局部守恒写成流体方程",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "理想流体Tμν压力符号、c因子、实验系分量以及扣除γρ0c²的低速能量极限正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "example",
+      "number": 86,
+      "title": "半径为 \\texorpdfstring{$R$}{R} 的球面自由质点",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "度规导数、两个混合联络给因子2、角动量平面与大圆轨道一致；零速度为退化静止点。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 1,
+      "title": "移动圆周上的实位移",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "外法向定义、虚位移与实位移、真实功率Nv n_x一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 2,
+      "title": "约束函数缩放与乘数",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "乘数缩放tildeλ=2aλ，单位与有向反力分量一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 3,
+      "title": "单面绳约束与倒立驻值",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "倒立绳拉力需负，轻杆可推但倒立不稳定；图解明确T=−mg。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 4,
+      "title": "滑块摆方程中的抵消",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "角方程交叉速度项在全导数与Lφ中抵消，符号一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 5,
+      "title": "匀转直管中的功率",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "能量输入等于横向反力功率2mω²r r_dot，初值一致。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 6,
+      "title": "一阶速度项是否影响能量",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [
+        "T006-inverse"
+      ],
+      "notes": "速度一次项为一维全导数，动量、H、能量、运动方程一致；速度反解可显式补一句。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 7,
+      "title": "固定端点与自然边界条件",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "T007-second-variation"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 8,
+      "title": "小振动频率的坐标不变性",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "非零尺度变换使两二次系数同时除c²，频率不变。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 9,
+      "title": "二维系统的质量正交",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "T009-normal-modes"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 10,
+      "title": "重根情况下余子式法的限制",
+      "status": "pass_after_extension",
+      "issue_ids": [
+        "T010-general-solution"
+      ],
+      "suggestion_ids": [],
+      "notes": "参见具体发现；已比对新题设、图解数据与旧解全文。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 11,
+      "title": "时间相关动量平移",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "时间相关动量平移链式法则中混合偏导抵消正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 12,
+      "title": "一个显含时间的运动积分",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "显含时间运动积分及其与p的常数括号正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 13,
+      "title": "由主函数恢复恒力运动",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "恒力W显式根式、W_E=−p/F、转折换支及F=0单独处理正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 14,
+      "title": "正则变换是否使哈密顿函数更简单",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "缩放K、圆面积、作用量归一化与零能量角未定义正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 15,
+      "title": "自由粒子的相体积剪切",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "剪切顶点、精确面积积分和雅可比正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 16,
+      "title": "定态密度不意味着所有概率分布相同",
+      "status": "needs_revision",
+      "issue_ids": [
+        "T016-scaled-rotation"
+      ],
+      "suggestion_ids": [],
+      "notes": "高斯归一常数βω/(2π)、密度拉回公式正确；新增旋转角说明需要缩放坐标。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 17,
+      "title": "弦模式的总能量",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "两个空间平方积分、固定幅度E∝n²及固定能量A∝1/n正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 18,
+      "title": "诺特流的边界与区域守恒",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "外法向净流出与总荷减少符号正确，净零通量不要求逐点零。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 19,
+      "title": "球面赤道与极坐标奇点",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "赤道空间轨道、速度R|Ω|、法向加速度和Ω=0退化处理正确。",
+      "reviewed_with_derivation_extension": true
+    },
+    {
+      "kind": "exercise",
+      "number": 20,
+      "title": "经典极限的条件",
+      "status": "pass",
+      "issue_ids": [],
+      "suggestion_ids": [],
+      "notes": "量子势量级比(ℏ/pl_A)²与节点/转折限制正确。",
+      "reviewed_with_derivation_extension": true
+    }
+  ],
+  "audit_history": [
+    {
+      "stage": "initial_55_items",
+      "generated_at": "2026-10-18T07:50:56.465927+08:00",
+      "sources": [
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/题设数据.py",
+          "sha256": "74fb41aae358d9375dbbb3b02f3373cd17b0135c3c82820c96587631410275e2"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图解数据.py",
+          "sha256": "29f8cc8f2699d92fd672d78661f35b626f5fa72e99a2610f35484132f9a7c16e"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/旧稿题目与解答.json",
+          "sha256": "fc100bf7cc23f4b7e7edc8067fb5e81c417aed33f8339de9f68671cd571cc47a"
+        }
+      ],
+      "scope": {
+        "examples": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        "exercises": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "checked_count": 55,
+        "not_checked_examples": [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86
+        ],
+        "not_checked_exercises": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "summary": {
+        "checked_items": 55,
+        "items_with_repair_findings": 15,
+        "findings": 16,
+        "major": 3,
+        "moderate": 11,
+        "minor": 2,
+        "nonblocking_suggestions": 6,
+        "conclusion": "大部分新题设与旧解的物理模型和结果一致。应先修定轴/初值/整体稳定性三类实质条件，再补未定义量和新增小问的显式解答；修正后应复核最终组装稿。"
+      }
+    }
+  ]
+}

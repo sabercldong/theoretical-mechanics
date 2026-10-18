@@ -1,0 +1,4 @@
+% 两轮转动由无滑动条件与车架速度联系；循环积分含转动折算项，地面摩擦可改变真实水平动量。
+\begin{tikzpicture}
+\draw[thick](-.5,-.6)--(5,-.6);\draw[fill=soft](0,0)rectangle(4,1.1);\draw(1,-.2)circle(.4);\draw(3,-.2)circle(.4);\draw[spring](0,.55)--(2,.55);\draw[fill=white](2,.2)rectangle(2.8,.9);\node at(2.4,.55){$m_2$};\draw[force](.2,1.65)--(1.45,1.65)node[midway,above]{$x$（对地）};\draw[force](2.4,1.65)--(3.65,1.65)node[midway,above]{$u$（相对车架）};\node[below]at(1,-.75){$m_1,I$};\node[below]at(3,-.75){$m_1,I$};
+\end{tikzpicture}

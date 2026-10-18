@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[very thick](0,0)--(2.2,1.9)node[above right]{$A$};\fill(0,0)circle(2pt)node[below left]{$O$};\fill(1.1,.95)circle(2pt)node[below right]{$C$};\node at(1.55,.65){$L$};\draw[->](-.15,1.1)arc(100:35:1.1);\node at(1,1.7){$\omega$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$v_C=|\omega|L/2$\\[6pt]$\Downarrow$\\[6pt]$T=mv_C^2/2+I_C\omega^2/2$};
+\end{tikzpicture}

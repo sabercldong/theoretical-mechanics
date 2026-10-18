@@ -1,0 +1,482 @@
+{
+  "status": "needs_asset_repairs",
+  "review_scope": {
+    "contact_sheets": [
+      "工作文件/原图总览-01.png",
+      "工作文件/原图总览-02.png",
+      "工作文件/原图总览-03.png",
+      "工作文件/原图总览-04.png"
+    ],
+    "manifest_order_range": [
+      1,
+      48
+    ],
+    "asset_count": 48
+  },
+  "manifest_sha256_at_review": "18b4405239c277a8db7cb78effb71c8d6fedb6c3d28ec9c8a775be984ca6669e",
+  "method": "逐幅看完4张总览共48图；对9个问题资产及滚轮小车等可疑资产打开单图放大，并读取白底PDF文本/图像位置及原PDF对照。",
+  "counts": {
+    "reviewed": 48,
+    "issues": 9,
+    "passed_without_action": 39
+  },
+  "issues": [
+    {
+      "id": "ASSET-A-01",
+      "key": "c5-1-p010-ideal-hinge",
+      "deck": "c5-1",
+      "source_page": 10,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p010-ideal-hinge.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p010-ideal-hinge.png",
+      "asset_pdf_sha256": "2c7aa18b4ef19a0bc5383dc0e455134da0e452b11c7284ea15479a2060c90500",
+      "status": "open",
+      "problem": "资产最上方有一条浅绿色水平线，为上方理想铰链标题色块底边；与铰链图无关。",
+      "recommended_fix": "把裁框上边从113收至115；δr字样实际位于更下方，不会受损。",
+      "current_crop": [
+        407,
+        113,
+        606,
+        246
+      ],
+      "suggested_crop": [
+        407,
+        115,
+        606,
+        246
+      ]
+    },
+    {
+      "id": "ASSET-A-02",
+      "key": "c5-1-p014-pendulum-displacement",
+      "deck": "c5-1",
+      "source_page": 14,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p014-pendulum-displacement.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p014-pendulum-displacement.png",
+      "asset_pdf_sha256": "8d9d99251c734dca8fd94ea50ae15e079e31a0ae2324a657c805e213a7f42b2e",
+      "status": "open",
+      "problem": "左缘中段带入正文蓝色右括号。悬挂横梁在更上方从同一左缘开始，不能简单缩窄整个左边界。",
+      "recommended_fix": "保持总框，排除左侧无关括号小矩形[612,65,620,101]；该区域不含摆、横梁、θ或r。",
+      "current_crop": [
+        612,
+        22,
+        704,
+        145
+      ],
+      "suggested_exclude_rects_pt": [
+        [
+          612,
+          65,
+          620,
+          101
+        ]
+      ]
+    },
+    {
+      "id": "ASSET-A-03",
+      "key": "c5-1-p018-two-rods-static",
+      "deck": "c5-1",
+      "source_page": 18,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p018-two-rods-static.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p018-two-rods-static.png",
+      "asset_pdf_sha256": "b399a1fef8953ad8bd5f805ec7ba39fcc8f8487f9f2c456bd7268cf0884fc625",
+      "status": "open",
+      "problem": "左缘带入上一列公式的β和底端小字碎片；y标签上边留白也偏紧。",
+      "recommended_fix": "左界改428、顶界47，其余不变。O实际墨迹约从429开始，留约1pt；正图的所有力箭头与P₂保留。",
+      "current_crop": [
+        421,
+        49,
+        667,
+        214
+      ],
+      "suggested_crop": [
+        428,
+        47,
+        667,
+        214
+      ]
+    },
+    {
+      "id": "ASSET-A-04",
+      "key": "c5-2-p020-hoop-moving-axes",
+      "deck": "c5-2",
+      "source_page": 20,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p020-hoop-moving-axes.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p020-hoop-moving-axes.png",
+      "asset_pdf_sha256": "f2e1e186bb99ba446fb515101344410c3a6214ecc3ae4d1540b4d941f15ce885",
+      "status": "open",
+      "problem": "左缘纵贯全图的粉色细线来自邻接正文框；不属于蓝色随动坐标轴。",
+      "recommended_fix": "左界从445移到448。y′蓝箭头最左实际约451，仍有3pt余量；顶端蓝虚线属于前景需保留。",
+      "current_crop": [
+        445,
+        0,
+        699,
+        180
+      ],
+      "suggested_crop": [
+        448,
+        0,
+        699,
+        180
+      ]
+    },
+    {
+      "id": "ASSET-A-05",
+      "key": "c5-2-p029-free-two-balls",
+      "deck": "c5-2",
+      "source_page": 29,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p029-free-two-balls.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p029-free-two-balls.png",
+      "asset_pdf_sha256": "0a15c77e2c3fac343addedccc08483686e17dedb8fe910e979ecfa6540729875",
+      "status": "open",
+      "problem": "上边带入粉色正文边框，右下角还有粉点；双球、45°和弹簧完整。",
+      "recommended_fix": "新框[615,10,718,168]：避开顶部和右侧正文框；下球底部约164，仍有4pt留白。",
+      "current_crop": [
+        615,
+        2,
+        720,
+        174
+      ],
+      "suggested_crop": [
+        615,
+        10,
+        718,
+        168
+      ]
+    },
+    {
+      "id": "ASSET-A-06",
+      "key": "c5-2-p043-rolling-cart",
+      "deck": "c5-2",
+      "source_page": 43,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p043-rolling-cart.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p043-rolling-cart.png",
+      "asset_pdf_sha256": "53037308584deba37a1a2b81dcaa3b104b4b76483bbf28ae402821d203853f6c",
+      "status": "open",
+      "problem": "右上排除区下缘仍残留一条极淡的蓝色气泡边线，位于源坐标y约358。",
+      "recommended_fix": "将原排除框[465,316,521,358]下边延至360。这一区域没有装置与m₂字符，图示不用变。",
+      "suggested_exclude_rects_pt": [
+        [
+          465,
+          316,
+          521,
+          360
+        ]
+      ]
+    },
+    {
+      "id": "ASSET-A-07",
+      "key": "c5-3-p004-function-variation",
+      "deck": "c5-3",
+      "source_page": 4,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p004-function-variation.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p004-function-variation.png",
+      "asset_pdf_sha256": "eb960c61078e2ca163c7ea7e9ab2daad8accff256e4be34857de3945f0c7f015",
+      "status": "open",
+      "problem": "右下B标签被原幻灯片页码4叠盖，看起来像双重B。页码为独立PDF文本，B为位图。",
+      "recommended_fix": "仅在工作副本移除独立页码文本4，再按原裁框提取；不得删B位图或抹掉整块重叠区。白底PDF页4文本4 bbox=(648.907,497.733,658.913,519.888)，B图xref65，bbox=(631.276,488.636,679.238,529.795)。",
+      "current_crop": [
+        426,
+        339,
+        670,
+        524
+      ],
+      "footer_text_bbox_pt": [
+        648.907,
+        497.733,
+        658.913,
+        519.888
+      ],
+      "preserve_image_xref": 65
+    },
+    {
+      "id": "ASSET-A-08",
+      "key": "c5-2-p041-wedge-apparatus",
+      "deck": "c5-2",
+      "source_page": 41,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p041-wedge-apparatus.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p041-wedge-apparatus.png",
+      "asset_pdf_sha256": "f563949efea08ef89bfda7b61ecba194f2c69447da9f14172b98bacdaab0f9f7",
+      "status": "open",
+      "problem": "与原源PDF相同裁区对照：原图左上浅灰描边署名“高云峰”在新资产消失。源PNG和原PDF裁区均可见，新资产没有。",
+      "recommended_fix": "此图总框内原源PDF没有母版色条；直接从原源PDF按现框提取即可保留署名、图线、原半透明效果。不要添加新署名或重绘。",
+      "current_crop": [
+        173,
+        246,
+        349,
+        402
+      ],
+      "suggested_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "evidence": "已实际渲染原源PDF同裁区对照；原/白底PDF装置位图digest和smask一致，署名缺失来自周边PDF绘制内容差别，不是位图几何变化。"
+    },
+    {
+      "id": "ASSET-A-09",
+      "key": "c5-2-p042-wedge-velocities",
+      "deck": "c5-2",
+      "source_page": 42,
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p042-wedge-velocities.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p042-wedge-velocities.png",
+      "asset_pdf_sha256": "1a50d9f639454e52b4785ce11aaa099d1d10d7a9fd0eae09c3138ff4e4b4574a",
+      "status": "open",
+      "problem": "原源图左上浅灰署名残字“高”在新资产中消失。原图已有截短署名，不应进一步去掉。",
+      "recommended_fix": "同p41，直接从原源PDF按现框提取可保留源内容，区域内不含母版彩条。不要扩写残字，也不要重绘。",
+      "current_crop": [
+        449,
+        136,
+        673,
+        300
+      ],
+      "suggested_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf"
+    }
+  ],
+  "assets": [
+    {
+      "key": "c5-1-p002-fixed-pivot",
+      "asset_pdf_sha256": "3dbfc37620087dff6a270b12a920f81374897fdd2c11966491cac0d8b23352dc",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p002-moving-pivot",
+      "asset_pdf_sha256": "a2df4e3be4efdaa2e632f3e47ffd4c36ef63a18ec6b8223d508b843d90b202cf",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p003-rigid-pendulum",
+      "asset_pdf_sha256": "3ae4bdb10bfdf976e2dbd779ee284cf7c23d076a6210f6d914ac6e15c2bc11bd",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p003-string-pendulum",
+      "asset_pdf_sha256": "5a8dfa53035c351d60f406f326176d4e5f50bf7388d5796f247d07210349048c",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p004-straight-rolling-disk",
+      "asset_pdf_sha256": "efc56b6db1d221bac82c75d97a1f13a9143cc77197fb47d3472076d09a303c1f",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p007-helix",
+      "asset_pdf_sha256": "06eff3e4ed2be167e0968a8dd14cb8a3f30e4b12d474fb6fbd47452205326663",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p007-planar-fixed-body",
+      "asset_pdf_sha256": "a436dc5e91fd9c3d7a432487b99a8153bf4e21898f270bf652a203c13ec70d53",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p007-euler-angles",
+      "asset_pdf_sha256": "e1f80aa8bba17f7438d188caa3d9ce5b27a338621c16036fdef7f9de635ae493",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p007-elastic-atwood",
+      "asset_pdf_sha256": "912943a37ebc4453c33177e591f70a64126fdd2074646223cb500a9533e02cd1",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p007-driven-hoop",
+      "asset_pdf_sha256": "9ed8688ef725afb748e71b381e75d781e747ea6dc76681ecfc038e67ece957d0",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p008-linkage-virtual",
+      "asset_pdf_sha256": "2723790302597a9bbf4d940c0b578e77a1fbf970320cf07b386505f179059032",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p008-surface-virtual",
+      "asset_pdf_sha256": "4d4dda79d379fca56d9ea694c5360e3df6fababafcaf607ada656a90518f655e",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p010-smooth-support",
+      "asset_pdf_sha256": "1a9994e28dab1b5fc30245821039aea7aa9147d1569c7c8a820173ca60b23629",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p010-ideal-hinge",
+      "asset_pdf_sha256": "2c7aa18b4ef19a0bc5383dc0e455134da0e452b11c7284ea15479a2060c90500",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-1-p010-rolling-contact",
+      "asset_pdf_sha256": "8f14751e136a21ec31b817c49cc0c2b616fd2c1f1bb17ce7bee8e43adebf4f7f",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p014-pendulum-displacement",
+      "asset_pdf_sha256": "8d9d99251c734dca8fd94ea50ae15e079e31a0ae2324a657c805e213a7f42b2e",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-1-p016-wall-edge-rod",
+      "asset_pdf_sha256": "cc794cf8ab4b54779dcbf66122aeb83b5cfc7b00fcea8358448181c87b639f24",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p018-two-rods-static",
+      "asset_pdf_sha256": "b399a1fef8953ad8bd5f805ec7ba39fcc8f8487f9f2c456bd7268cf0884fc625",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-1-p020-paraboloid-plane",
+      "asset_pdf_sha256": "23f36f8660ecc4d38e120e3b31fdcedf205ee6bed3ad8d39320ad178e37b134c",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p020-paraboloid-cylinder",
+      "asset_pdf_sha256": "f99edc5ce4e4b0a9ef7ca5948f552a8b08ce38bd17af0e3c15823675c05344b1",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p024-three-rods-released",
+      "asset_pdf_sha256": "0253f2c83cea03f221ee5c9a048660997b991f516dea7b1828219e8e1ad02fea",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p028-steering-disk",
+      "asset_pdf_sha256": "1402016de54121a633721101d6eae979b7ede13fbb2383dfeb64408cf980f4be",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p029-three-point-linkage",
+      "asset_pdf_sha256": "8e2ca63b7cb8ea4bd378561204640ff24b57427ed909b4c1d08882471b916ee4",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p031-right-angle-rod",
+      "asset_pdf_sha256": "42c4bc54a5187ff5190e8276c9e6fdba911a1adb7bbd6c205e980c047c8dc34c",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p032-crank-forces",
+      "asset_pdf_sha256": "43f97a2d267cb57d29763face9d308712c13c2043de9618de87f03c736ebe201",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p033-crank-virtual",
+      "asset_pdf_sha256": "cc093860b709cd566c62958cd2517524fe00937548b975475b0d467a667d78aa",
+      "status": "pass"
+    },
+    {
+      "key": "c5-1-p034-two-balls-tensions",
+      "asset_pdf_sha256": "4cb6a551be31b2eb7573b3c763abb546f9560780810dc309915f9e5e3eebaf1c",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p010-top-string-cylinder",
+      "asset_pdf_sha256": "619fb36820a9a861f68cc819ea44c49bfe955c2d5a581cdaa16148f2c03268a5",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p011-two-pulleys",
+      "asset_pdf_sha256": "d214da2dab3c325ee2cface3502efb642eadf3c076b8de02e19a8b046fcc5d8d",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p012-spring-pendulum",
+      "asset_pdf_sha256": "5dd2a30570906f4be27792d508324852f4270f867f8d7c1815423cbcfa14c92b",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p019-rotating-tube",
+      "asset_pdf_sha256": "075be056bcbc5ae96ac1f8dc4deaa149f27ff15b8e90ece18d26ed83d960a504",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p020-hoop-moving-axes",
+      "asset_pdf_sha256": "f2e1e186bb99ba446fb515101344410c3a6214ecc3ae4d1540b4d941f15ce885",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-2-p025-tube-two-balls",
+      "asset_pdf_sha256": "79eb4ff9af020a5b7586924bc99ac52392aa98a2195302b891409d8a7a95573a",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p026-ball-on-sphere",
+      "asset_pdf_sha256": "4bed1c7acfb6d0ed8df6d735d1ca4754409d81634c291796bd8bb079b4b3ca4a",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p027-table-hole-balls",
+      "asset_pdf_sha256": "ffbda71200b998f9cc96a446d20525d1facf6df16dc21d1143d2043aeed8da3e",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p029-free-two-balls",
+      "asset_pdf_sha256": "0a15c77e2c3fac343addedccc08483686e17dedb8fe910e979ecfa6540729875",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-2-p031-planet-gear",
+      "asset_pdf_sha256": "441d97e11335f1fe2069e373fc875ed4095998c978a4f1ae00a2927332049e94",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p035-two-rods-dynamic",
+      "asset_pdf_sha256": "456eb17d640813022061ee6de214a4078cdcef8e5ff5f747fcac52dbd88062cd",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p036-slider-pendulum",
+      "asset_pdf_sha256": "c43d2f08fef751c9163d16b80267b67adce0ef75b4d2c8a99d691bac86b36b34",
+      "status": "pass"
+    },
+    {
+      "key": "c5-2-p041-wedge-apparatus",
+      "asset_pdf_sha256": "f563949efea08ef89bfda7b61ecba194f2c69447da9f14172b98bacdaab0f9f7",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-2-p042-wedge-velocities",
+      "asset_pdf_sha256": "1a50d9f639454e52b4785ce11aaa099d1d10d7a9fd0eae09c3138ff4e4b4574a",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-2-p043-rolling-cart",
+      "asset_pdf_sha256": "53037308584deba37a1a2b81dcaa3b104b4b76483bbf28ae402821d203853f6c",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-3-p003-brachistochrone-paths",
+      "asset_pdf_sha256": "26a33bad24eeeeddf36dcde6e654b88cbefc1130d1024cd692628e2361ecb926",
+      "status": "pass"
+    },
+    {
+      "key": "c5-3-p004-function-variation",
+      "asset_pdf_sha256": "eb960c61078e2ca163c7ea7e9ab2daad8accff256e4be34857de3945f0c7f015",
+      "status": "needs_fix"
+    },
+    {
+      "key": "c5-3-p009-surface-boundaries",
+      "asset_pdf_sha256": "dae08b69d71de145f77a3425f2538520600b835de83f739b85271dff0f8122a7",
+      "status": "pass"
+    },
+    {
+      "key": "c5-3-p010-cycloid-family",
+      "asset_pdf_sha256": "bfc626671884b38e79b5d5fb61edfc733d24ae00e4929783da153d5b81132430",
+      "status": "pass"
+    },
+    {
+      "key": "c5-3-p010-catenary-family",
+      "asset_pdf_sha256": "c356bc84349793fa297b6ae7f8293fe6b42a8f4d03a288fd10a71080c5ac07a2",
+      "status": "pass"
+    },
+    {
+      "key": "c5-3-p010-revolution-mesh",
+      "asset_pdf_sha256": "0f16656859b07daf8bf672fb8106872b98aa05fd5e59525440241db839259af5",
+      "status": "pass"
+    }
+  ],
+  "checks_passed": [
+    "旋转直管通过完整原位图恢复，右端x字已完整，soft mask背景正常。",
+    "所有前48图未见新空框；滚轮图字形拉伸是源状态，符号仍可辨。",
+    "p3两单摆无之前正文F/红括号；p4圆盘与p8曲面灰色前景框完整。",
+    "黑底摆图、黄色曲柄底色、青色球体、两张三维交线及金色网格图颜色正常。",
+    "p31折杆底部框外虚线保留，δ/θ/φ/ω等原标签完整。",
+    "除报告的页码与旁文残片，未见图内重要线条被新裁框截断。"
+  ],
+  "note": "只提交问题和修复建议，未修改资产、源PPT/PDF或主TeX。"
+}

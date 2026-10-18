@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.95]
+\draw[guide](0,-.3)--(0,4.0)node[above]{转轴};\coordinate(A)at(1.1,3.4);\coordinate(P)at(2.6,.8);
+\draw[ink,thick](0,3.4)--(A)--(P);\draw[guide](A)--(1.1,.4);
+\fill[ink](A)circle(2.5pt)node[above]{$A$};\fill[ink](P)circle(4pt)node[above right]{$P$};
+\draw[<->](0,3.8)--(1.1,3.8)node[midway,above]{$a$};\node[right]at(1.9,2.2){$l$};
+\draw[->](1.1,2.6)arc(-90:-60:.8);\node at(1.44,2.45){$\varphi$};
+\draw[<->](0,-.7)--(2.6,-.7)node[midway,below=6pt]{$\rho=a+l\sin\varphi$};
+\draw[force](P)--++(0,-1.3)node[pos=.55,right]{$mg$};\draw[force](P)--++(.75,0)node[right]{$m\Omega^2\rho$};
+\draw[force](P)--++(-.75,1.3)node[left]{$T$};
+\end{tikzpicture}

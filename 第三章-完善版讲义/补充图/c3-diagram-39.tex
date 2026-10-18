@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\draw[thick](0,3.6)--(0,0)--(4.1,0);
+\coordinate(A)at(3,0);\coordinate(B)at(0,2);
+\coordinate(P)at(3,2);
+\draw[line width=2pt,ink](A)--(B);
+\draw[guide](A)--(P)--(B);
+\draw[force](A)--(4,0)node[above]{$u$};
+\draw[force](B)--(0,.5)node[midway,left]{$v_B$};
+\fill(P)circle(2pt)node[above right]{$P$};
+\draw[guide](3.606,0)arc(0:90:3.606);
+\node[below]at(A){$A$};\node[left]at(B){$B$};
+\node[above left]at(0,0){$O$};
+\end{tikzpicture}

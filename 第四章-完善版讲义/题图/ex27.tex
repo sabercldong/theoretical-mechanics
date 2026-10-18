@@ -1,0 +1,3 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-1.6,2.3)--(-1.6,0)--(1.6,0)--(1.6,2.3);\draw[smooth,domain=-1.6:1.6,samples=30]plot(\x,{.7+.4*\x*\x});\draw[->,gray](0,0)--(0,2.8)node[above]{$z$};\draw[->,gray](0,0)--(2.2,0)node[right]{$r$};\node at(.95,1.8){$z(r)$};\draw[->](-.4,2.4)arc(180:0:.4 and .12);\node[left]at(-.5,2.4){$\Omega$};\draw[->](2.1,2.3)--(2.1,1.4)node[right]{$g$};
+\end{tikzpicture}

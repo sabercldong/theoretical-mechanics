@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=.67]
+\pgfmathsetmacro{\footx}{4+sqrt(3)}
+\pgfmathsetmacro{\joiny}{4*sqrt(3)+2}
+\draw[thick](-6.6,-1)--(6.6,-1);
+\foreach \row in {0,...,4}{
+\pgfmathtruncatemacro{\last}{4-\row}
+\foreach \j in {0,...,\last}{
+\pgfmathsetmacro{\xx}{2*\j+\row-4}
+\pgfmathsetmacro{\yy}{sqrt(3)*\row}
+\draw[thick,fill=soft](\xx,\yy)circle(1);}}
+\draw[line width=2pt,ink](-\footx,-1)--(0,\joiny)--(\footx,-1);
+\fill(0,\joiny)circle(3pt);
+\draw[force](-7.2,-1)--(-\footx,-1)node[midway,above]{$F$};
+\draw[force](7.2,-1)--(\footx,-1)node[midway,above]{$F$};
+\node[above]at(0,{\joiny+.2}){上端连接};
+\node at(0,-1.8){五层截面；运输子模型取底部 $5+4+3$ 根};
+\end{tikzpicture}

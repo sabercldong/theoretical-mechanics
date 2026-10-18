@@ -1,0 +1,25 @@
+{
+  "chapter": 4,
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/PDF/第四章-转动参考系讲义.pdf",
+  "official_pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/第四章-转动参考系讲义-完善版.pdf",
+  "source_zip": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/可编辑源码/第四章-转动参考系-完善版LaTeX源码及图片.zip",
+  "official_zip": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/第四章-转动参考系-完善版LaTeX源码及图片.zip",
+  "top_directory": "第四章-转动参考系源码",
+  "main_filename": "第四章-转动参考系讲义-完善版.tex",
+  "pages": 116,
+  "examples": 47,
+  "exercises": 24,
+  "original_assets": 47,
+  "diagram_files": {
+    "补充图": 47,
+    "题图": 71
+  },
+  "embedded_TikZ": 1,
+  "zip_entries": 167,
+  "warnings": [],
+  "pdf_sha256": "7fc9850779db6a078137a53002680973a1cb460cea4987f8c775cd6da5b8bdac",
+  "tex_sha256": "e137207e246144e449054ee1ceb030419e304593e5aa17ed8677649b8112dca9",
+  "zip_sha256": "0f42211452cb91501b03676d4ac1bbc8f9fb9ab136d35a9626b63e5e9302f773",
+  "pdf_bytes": 6494766,
+  "zip_bytes": 97242933
+}

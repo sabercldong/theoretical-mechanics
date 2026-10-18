@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\draw[fill=soft,thick,rotate=20](0,0)ellipse(1.8 and .9);
+\draw[thick](-3,1.046)--(3,1.046);
+\node[right]at(2.7,1.2){不可变平面};
+\coordinate(P)at(.747,1.046);
+\fill(0,0)circle(2pt)node[below]{$O$};
+\fill(P)circle(3pt)node[right,yshift=-2mm]{$P$};
+\draw[force](0,0)--(1.16,1.62)node[right]{$\vect\omega$};
+\draw[force](P)--(.747,2.2)node[above]{$\vect L$};
+\draw[guide](0,0)--(0,1.046)node[midway,left]{$d$};
+\draw[muted](0,.876)--(.17,.876)--(.17,1.046);
+\node[below,align=center]at(0,-1.5){图示为接触截面；上方直线表示切平面\\本体极迹与空间极迹未在此图绘出};
+\end{tikzpicture}

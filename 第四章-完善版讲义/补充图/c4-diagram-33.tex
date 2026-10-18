@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=.085cm,y=.75cm]
+\draw[ink,thick](0,0)--(90,0);\draw[->](0,0)--(0,3.3)node[above]{高度};
+\foreach \x/\txt in {0/赤道,30/副热带,60/副极地,90/极地}{\draw[guide](\x,0)--(\x,2.8);\node[below]at(\x,-.12){\txt};\node[above]at(\x,2.85){$\x^\circ$};}
+\draw[ink](3,.3)--(3,2.4)--(27,2.4)--(27,.3)--cycle;
+\draw[force](3,.6)--(3,2.1);\draw[force](7,2.4)--(23,2.4);\draw[force](27,2.1)--(27,.6);\draw[force](23,.3)--(7,.3);
+\draw[ink](33,.3)--(33,2.4)--(57,2.4)--(57,.3)--cycle;
+\draw[force](33,2.1)--(33,.6);\draw[force](37,.3)--(53,.3);\draw[force](57,.6)--(57,2.1);\draw[force](53,2.4)--(37,2.4);
+\draw[ink](63,.3)--(63,2.4)--(87,2.4)--(87,.3)--cycle;
+\draw[force](63,.6)--(63,2.1);\draw[force](67,2.4)--(83,2.4);\draw[force](87,2.1)--(87,.6);\draw[force](83,.3)--(67,.3);
+\node at(15,1.4){哈德莱};\node at(45,1.4){费雷尔};\node at(75,1.4){极地};
+\node at(15,-1){信风};\node at(45,-1){西风};\node at(75,-1){极地东风};
+\node at(45,-1.8){横轴为纬度；风带名称另含纬向运动};
+\end{tikzpicture}

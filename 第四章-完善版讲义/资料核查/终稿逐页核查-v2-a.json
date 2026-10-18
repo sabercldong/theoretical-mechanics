@@ -1,0 +1,323 @@
+{
+  "review": "第四章整册终校 v2 前段逐页视觉核查",
+  "reviewer": "/root/c4_model_qa",
+  "pdf": "工作文件/整册终校-v2.pdf",
+  "pdf_sha256": "c57b205a4c462fb218270a3b776c1b453244fc114d0be93328af64fb9496bfa3",
+  "pdf_total_pages": 87,
+  "physical_page_range": [
+    1,
+    29
+  ],
+  "actual_pages_viewed": 29,
+  "status": "passed",
+  "pages": [
+    {
+      "physical_page": 1,
+      "status": "passed",
+      "pixmap_digest_0_8": "c88c154ea8692114b736979c294c5bc8",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "封面标题、示意图与变换公式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 2,
+      "status": "passed",
+      "pixmap_digest_0_8": "02404f30501a2f3f1f3775b4f7714e94",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "阅读说明、符号表与提示框完整，前置说明页留白正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 3,
+      "status": "passed",
+      "pixmap_digest_0_8": "5d3c84804283a5d1e3db74316cf2e180",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "目录首段层级、点线与页码列清晰。",
+      "issues": []
+    },
+    {
+      "physical_page": 4,
+      "status": "passed",
+      "pixmap_digest_0_8": "8f08509b01ba27156361976743d3c1f1",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "目录中段层级、点线与页码列清晰。",
+      "issues": []
+    },
+    {
+      "physical_page": 5,
+      "status": "passed",
+      "pixmap_digest_0_8": "5001b86d387034bb916db0f4220e187b",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "目录末段与两项附录入口完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 6,
+      "status": "passed",
+      "pixmap_digest_0_8": "6e1f4c9b38ccf95bfc995f7dac21baec",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "开章、模型图4.1与原图4.2完整；两个O标记的图题澄清已经显示。",
+      "issues": []
+    },
+    {
+      "physical_page": 7,
+      "status": "passed",
+      "pixmap_digest_0_8": "923dc6dce27334d5fe065322d05794e7",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "例1、无穷小转动图4.3与运输公式推导起始完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 8,
+      "status": "passed",
+      "pixmap_digest_0_8": "2a85cadc382ae91c8d406f47413da743",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "运输公式结果、例2与旋转矩阵公式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 9,
+      "status": "passed",
+      "pixmap_digest_0_8": "d76148a5288baffbafc23483bd72edb9",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "例3、正交性推导、例4均未拆开标题与题干。",
+      "issues": []
+    },
+    {
+      "physical_page": 10,
+      "status": "passed",
+      "pixmap_digest_0_8": "2118185b1889014c99d7c91ad62a5d29",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "角速度多级框架与速度合成章节接排正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 11,
+      "status": "passed",
+      "pixmap_digest_0_8": "ab192f9d4877a25e52a95e877d8990ff",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "共原点原图4.4、速度模型图4.5及加速度推导完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 12,
+      "status": "passed",
+      "pixmap_digest_0_8": "f2cdfc4f376f31fe6ef181c238f86cce",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "轴距原图4.6、例5、向轴分解公式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 13,
+      "status": "passed",
+      "pixmap_digest_0_8": "ca818dc142610f389b827ed120f97499",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "图4.7/4.8与一般动系变换完整；段末续页正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 14,
+      "status": "passed",
+      "pixmap_digest_0_8": "bdbbf483cf7b5245d95155cd323ce93b",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "一般动系例6、位置三角形图4.9及分量形式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 15,
+      "status": "passed",
+      "pixmap_digest_0_8": "559e1140fffd3451ef77c52d6a3d63a3",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "特殊情形列表、例7和例8接排正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 16,
+      "status": "passed",
+      "pixmap_digest_0_8": "73606480b0f8b13db7c662f3fce994bc",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "转管原图4.10/模型图4.11与例9起始完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 17,
+      "status": "passed",
+      "pixmap_digest_0_8": "ff9ecfe5739bea4343eb237a0f488356",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "转管原图4.12及半圆图4.13与解析轨迹相邻。",
+      "issues": []
+    },
+    {
+      "physical_page": 18,
+      "status": "passed",
+      "pixmap_digest_0_8": "d6b059e584264ebd973a07cae46092d1",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "调速器图4.14/4.15及速度推导完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 19,
+      "status": "passed",
+      "pixmap_digest_0_8": "bcd8a6dbf012fa7a4659a5d3ad56cbde",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "例10、调速器加速度与例11起始完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 20,
+      "status": "passed",
+      "pixmap_digest_0_8": "6f53aef496a7ee901152f1e8bac4db46",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "同心圆槽图4.16/4.17与例12完整，无截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 21,
+      "status": "passed",
+      "pixmap_digest_0_8": "563f58ee835974cd3adf3531018b4018",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "例13/14、偏心槽图4.18和轮轴图4.19完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 22,
+      "status": "passed",
+      "pixmap_digest_0_8": "969874ec4df5094006e8db5892092d1e",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "例15、自转进动图4.20/4.21完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 23,
+      "status": "passed",
+      "pixmap_digest_0_8": "9bc7320b9978073554eaf2f4b58a958f",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "圆锥图4.22、南行汽车例16及公式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 24,
+      "status": "passed",
+      "pixmap_digest_0_8": "722a57bad7ebdeed33de7d680c1aabee",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "南行汽车原图4.23/4.25与模型图4.24完整，图题清晰。",
+      "issues": []
+    },
+    {
+      "physical_page": 25,
+      "status": "passed",
+      "pixmap_digest_0_8": "859d367298ed6f94de613145050db615",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "非惯性系方程、惯性力提示框与离心势完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 26,
+      "status": "passed",
+      "pixmap_digest_0_8": "cc5e956785172f812d351fdd95219043",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "图4.26、例17及欧拉小节正常同页接排；原v1 p27的大空白已消除。",
+      "issues": []
+    },
+    {
+      "physical_page": 27,
+      "status": "passed",
+      "pixmap_digest_0_8": "1f79dc0641cd84e016e4bda11ae79c11",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "欧拉模型图4.27、科氏小节与方向原图4.28完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 28,
+      "status": "passed",
+      "pixmap_digest_0_8": "e9fad21d727b2a69bafb67fc5453464a",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "科氏模型图4.29、例18及皮带原图4.30接排合理。",
+      "issues": []
+    },
+    {
+      "physical_page": 29,
+      "status": "passed",
+      "pixmap_digest_0_8": "73e14975c9d129b8753eb1c09e798f0d",
+      "actual_visual_check": true,
+      "render_scale": 1.5,
+      "figures": [],
+      "checks": "例19、双跨段分析、同向皮带图4.31和弦线方程完整；原生彩条按要求保留。",
+      "issues": []
+    }
+  ],
+  "issues": [],
+  "scope": "逐页实际查看1.5x渲染，验证标题/例题邻接、图题/公式完整、无新重叠裁切和不必要大留白；不重做已完成的模型科学推导。",
+  "revision_checks": [
+    {
+      "old_version": "v1",
+      "old_page": 27,
+      "new_page": 26,
+      "issue": "例17后大空白",
+      "status": "resolved",
+      "evidence": "欧拉小节及推导已正常接排在例17后。"
+    },
+    {
+      "page": 6,
+      "issue": "原图两个O的图题澄清",
+      "status": "confirmed"
+    }
+  ],
+  "limitations": "仅覆盖v2物理页1–29；其余页由其他责任核查负责。"
+}

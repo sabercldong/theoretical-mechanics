@@ -1,0 +1,1750 @@
+{
+  "reviewer": "independent_visual_qa_front",
+  "reviewed_at": "2026-10-17T18:13:08.218593+08:00",
+  "scope": {
+    "examples": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "atlas_images": [
+      "工作文件/题图总览PNG/atlas-01.png",
+      "工作文件/题图总览PNG/atlas-02.png",
+      "工作文件/题图总览PNG/atlas-03.png",
+      "工作文件/题图总览PNG/atlas-04.png",
+      "工作文件/题图总览PNG/atlas-05.png",
+      "工作文件/题图总览PNG/atlas-06.png",
+      "工作文件/题图总览PNG/atlas-07.png",
+      "工作文件/题图总览PNG/atlas-08.png"
+    ],
+    "actual_viewed_all_atlas_images": true,
+    "source_files_read": [
+      "题图/ex01.tex",
+      "题图/ex02.tex",
+      "题图/ex03.tex",
+      "题图/ex04.tex",
+      "题图/ex05.tex",
+      "题图/ex06.tex",
+      "题图/ex07.tex",
+      "题图/ex08.tex",
+      "题图/ex09.tex",
+      "题图/ex10.tex",
+      "题图/ex11.tex",
+      "题图/ex12.tex",
+      "题图/ex13.tex",
+      "题图/ex14.tex",
+      "题图/ex15.tex",
+      "题图/ex16.tex",
+      "题图/ex17.tex",
+      "题图/ex18.tex",
+      "题图/ex19.tex",
+      "题图/ex20.tex",
+      "题图/ex21.tex",
+      "题图/ex22.tex",
+      "题图/ex23.tex",
+      "题图/ex24.tex",
+      "题图/ex25.tex",
+      "题图/ex26.tex",
+      "题图/ex27.tex",
+      "题图/ex28.tex",
+      "题图/ex29.tex",
+      "题图/ex30.tex",
+      "题图/ex31.tex",
+      "题图/ex32.tex",
+      "题图/ex33.tex",
+      "题图/ex34.tex",
+      "题图/ex35.tex",
+      "题图/ex36.tex",
+      "题图/ex37.tex",
+      "题图/ex38.tex",
+      "题图/ex39.tex",
+      "题图/ex40.tex",
+      "题图/ex41.tex",
+      "题图/ex42.tex",
+      "题图/ex43.tex",
+      "题图/ex44.tex",
+      "题图/ex45.tex",
+      "题图/ex46.tex",
+      "题图/ex47.tex",
+      "题图/ex48.tex"
+    ],
+    "statements": "工作文件/完整题干.json; examples1–48",
+    "supplemental_read": "工作文件/题干题图修订后主稿.tex中例7随杆基矢定义、QuestionStatement缩放宏。"
+  },
+  "method": "逐页用view_image实际查看8张总览，对照48题题干与全部48份TikZ源；对疑点裁出放大图再次查看；未编辑主稿或题图。",
+  "overall": "例1–48题图与解答图已完成独立视觉复核。初检问题及后续新增标签问题全部修复并实际复看通过；48幅解答图右侧计算关系、模型对应和显式图号引用通过，当前未解决问题为0。",
+  "material_issue_examples": [
+    1,
+    3,
+    48
+  ],
+  "secondary_geometry_examples": [
+    11
+  ],
+  "scope_clarity_examples": [
+    22
+  ],
+  "layout_issue_examples": [
+    24,
+    27,
+    28,
+    29,
+    37,
+    38,
+    39,
+    43
+  ],
+  "issue_question_count": 13,
+  "atlas_only_findings": [
+    {
+      "example": 23,
+      "detail": "总览把每图固定缩放到4.6cm高，使横宽大的例23伸入右侧例24格；右格截图中的x箭头来自例23。",
+      "classification": "atlas_layout_only",
+      "actual_document_check": "QuestionStatement以.98倍右侧.34列宽进行等比例缩放，故不能据总览外溢认定主稿超宽。"
+    }
+  ],
+  "specific_priority_checks": {
+    "ex7": "B/C位置与题干相符；未判互换。建议若希望图独立表达速度符号，可补e2箭头或前后半圆区分。",
+    "ex18": "局部棱边N1垂直杆，接触法向正确。",
+    "ex19": "两杆直角关系与朝向正确。",
+    "ex20": "墙面及棱边两反力方向正确，B在重心之前。",
+    "ex21": "球面端B、碗缘C及外伸杆段关系正确。",
+    "ex22": "五层接触几何正确；未区分第(1)/(3)问力施加位置。",
+    "ex45": "斜盘平面与n垂直，β、a/b与轴方向正确。"
+  },
+  "reviewed": [
+    {
+      "example": 1,
+      "title": "曲线平动的速度与加速度",
+      "source": "题图/ex01.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "status": "fixed_passed",
+      "finding": "中心位置需修正，转向与平台边方向保持一致。",
+      "issues": [
+        {
+          "id": "ex01-center",
+          "severity": "material_geometry",
+          "detail": "C被题干定义为矩形平台中心，但源矩形(.36,.56)至(1.86,1.26)的中心为(1.11,.91)，C却画在(.81,.81)。",
+          "recommended_fix": "以C为矩形几何中心重新给定四边位置，保留C位于R圆周上。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 2,
+      "title": "更换基点后的位置分解",
+      "source": "题图/ex02.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "status": "passed",
+      "finding": "O、C、A位置分解箭头的起终点与符号一致。",
+      "issues": []
+    },
+    {
+      "example": 3,
+      "title": "定点转动中一点的速度",
+      "source": "题图/ex03.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "status": "fixed_passed",
+      "finding": "位置箭头为右上示意，ω箭头与给定分量不符。",
+      "issues": [
+        {
+          "id": "ex03-omega-direction",
+          "severity": "material_direction",
+          "detail": "所画+x向右、+y向左下、+z向上。给定ω=(2,1,−1)的投影必含向下分量；当前ω箭头从(−.6,.8)至(.15,2.1)却向右上，且标签贴近z轴。",
+          "recommended_fix": "用同一空间投影构造数值ω方向，画成右下；将ω标签移离z轴。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 4,
+      "title": "转台上的水平轴圆盘",
+      "source": "题图/ex04.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "status": "passed",
+      "finding": "竖直进动轴与水平盘轴正交，圆盘平面与盘轴垂直。",
+      "issues": []
+    },
+    {
+      "example": 5,
+      "title": "倾斜轴陀螺的角速度",
+      "source": "题图/ex05.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "status": "passed",
+      "finding": "倾角θ、进动和沿n自转示意一致。",
+      "issues": []
+    },
+    {
+      "example": 6,
+      "title": "悬挂杆端圆盘的两种约束",
+      "source": "题图/ex06.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-01.png",
+      "status": "passed",
+      "finding": "两种圆盘法线分别沿杆和竖直，均与题干约束对应。",
+      "issues": []
+    },
+    {
+      "example": 7,
+      "title": "铰接摆杆端的旋转圆盘",
+      "source": "题图/ex07.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "status": "passed",
+      "finding": "C位于水平铰轴正向；B位于与铰轴垂直的水平半径。未见B/C互换。未画e2/前后半圆，因此图本身不额外规定AB正负，解答取AB(0)=a e2。",
+      "issues": []
+    },
+    {
+      "example": 8,
+      "title": "匀速进动陀螺的本体分量",
+      "source": "题图/ex08.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "status": "passed",
+      "finding": "θ与轴/节点示意无明显矛盾；未标为t=0快照，不按一般角图强制检验初始φ。",
+      "issues": []
+    },
+    {
+      "example": 9,
+      "title": "理想地球的姿态描述",
+      "source": "题图/ex09.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "status": "passed",
+      "finding": "轴倾角、竖直轨道法线与地轴方向一致。",
+      "issues": []
+    },
+    {
+      "example": 10,
+      "title": "同步自转卫星",
+      "source": "题图/ex10.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "status": "passed",
+      "finding": "三个位置的e1均指向中心，Ω示意逆时针，符合同步姿态。",
+      "issues": []
+    },
+    {
+      "example": 11,
+      "title": "固定顶点圆锥的无滑动滚动",
+      "source": "题图/ex11.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "status": "fixed_passed",
+      "finding": "接触母线在地面上、顶点固定正确；轴截面几何建议统一构造。",
+      "issues": [
+        {
+          "id": "ex11-right-cone-section",
+          "severity": "secondary_geometry",
+          "detail": "以当前二维轴截面解释时，直圆锥轴不平分两母线夹角，也不垂直底边：接触母线长3.10，另一母线约2.65，轴线取到对边中点(2.32,1.075)。",
+          "recommended_fix": "统一按半顶角α和轴向高度h构造顶点、底面中心和两母线端点，保持直圆锥几何。",
+          "note": "可视作不按比例示意，优先级低于明确的方向/接触错误。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 12,
+      "title": "匀速曲柄带动的连杆",
+      "source": "题图/ex12.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-02.png",
+      "status": "passed",
+      "finding": "B在A上方，竖直导轨、BA初始向下的装配支路和L>a一致；q/ψ仅为文字示意。",
+      "issues": []
+    },
+    {
+      "example": 13,
+      "title": "由姿态矩阵提取非奇异欧拉角",
+      "source": "题图/ex13.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "status": "passed",
+      "finding": "Euler节点、竖轴与本体z轴示意一致。",
+      "issues": []
+    },
+    {
+      "example": 14,
+      "title": "两次直角转动为何不能当作矢量相加",
+      "source": "题图/ex14.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "status": "passed",
+      "finding": "RxRy ez沿+x，RyRx ez沿−y，两次主动固定轴转动的跟踪结果正确。",
+      "issues": []
+    },
+    {
+      "example": 15,
+      "title": "同向与反向平行力的合成",
+      "source": "题图/ex15.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "status": "passed",
+      "finding": "两力按+y有向取值，当前图代表同向的示例，题干另讨论反向情形。",
+      "issues": []
+    },
+    {
+      "example": 16,
+      "title": "扳手上的力偶",
+      "source": "题图/ex16.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "status": "passed",
+      "finding": "左下右上的力偶为逆时针，距离d与出平面k一致。",
+      "issues": []
+    },
+    {
+      "example": 17,
+      "title": "不能合成单力的空间力系",
+      "source": "题图/ex17.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "status": "passed",
+      "finding": "F和力偶矩均沿k，符合空间力系题意。",
+      "issues": []
+    },
+    {
+      "example": 18,
+      "title": "粗糙地面上靠光滑棱边的均匀杆",
+      "source": "题图/ex18.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-03.png",
+      "status": "passed",
+      "finding": "B局部棱边接触，N1垂直杆向左上；地面N2向上、摩擦向右，方向正确。",
+      "issues": []
+    },
+    {
+      "example": 19,
+      "title": "两根直角刚接杆的悬挂平衡",
+      "source": "题图/ex19.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "status": "passed",
+      "finding": "a杆向右下、b杆向左下，两杆几乎精确正交，两个重力作用于各自中点。",
+      "issues": []
+    },
+    {
+      "example": 20,
+      "title": "同时接触竖墙和棱边的光滑杆",
+      "source": "题图/ex20.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "status": "passed",
+      "finding": "墙反力向右、棱边反力垂直杆向左上；B在重心之前的示意正确。",
+      "issues": []
+    },
+    {
+      "example": 21,
+      "title": "光滑半球碗中的均匀杆",
+      "source": "题图/ex21.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "status": "passed",
+      "finding": "B在球面上、C在右碗缘、BC沿杆且有碗外部分；半径r连到B，几何一致。",
+      "issues": []
+    },
+    {
+      "example": 22,
+      "title": "圆柱木材堆积与运输的建模研究",
+      "source": "题图/ex22.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "status": "fixed_passed",
+      "finding": "五层圆木为5+4+3+2+1且相互紧密接触；F位置仅符合第(3)问。",
+      "issues": [
+        {
+          "id": "ex22-subproblem-force-location",
+          "severity": "scope_clarity",
+          "detail": "图中F直接压在最外侧底层圆木，符合第(3)问；第(1)问规定F施于两侧挡杆下端、两挡杆上端连接，图中没有这套机构，也未标明仅为第(3)问。",
+          "recommended_fix": "至少注明“第(3)问截面”；建议另用小图画第(1)问挡杆及上端连接，以区分力的施加位置。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 23,
+      "title": "小块组装后的总惯量",
+      "source": "题图/ex23.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "status": "passed",
+      "finding": "两个相同部件的中心位于总质心两侧±a，坐标与两段尺寸正确；总览超宽见独立说明。",
+      "issues": []
+    },
+    {
+      "example": 24,
+      "title": "质心平动能与定点转动能的一致性",
+      "source": "题图/ex24.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-04.png",
+      "status": "fixed_passed",
+      "finding": "定点O、质心C、端点A与杆长L对应，L贴转动弧。",
+      "issues": [
+        {
+          "id": "ex24-label-on-arc",
+          "severity": "minor_layout",
+          "detail": "L标签位于ω转动弧线上，L下部与弧线相贴。",
+          "recommended_fix": "将L移到杆的空白一侧，避开转动弧。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 25,
+      "title": "均匀矩形薄片与椭圆薄片",
+      "source": "题图/ex25.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "status": "passed",
+      "finding": "矩形a×b与椭圆半轴a,b的区别已明确。",
+      "issues": []
+    },
+    {
+      "example": 26,
+      "title": "均匀圆柱与细杆",
+      "source": "题图/ex26.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "status": "passed",
+      "finding": "圆柱轴沿z、半径a和高L标法正确。",
+      "issues": []
+    },
+    {
+      "example": 27,
+      "title": "均匀实心球的惯量",
+      "source": "题图/ex27.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "status": "fixed_passed",
+      "finding": "球心原点、半径a和三轴一致；原点文字需避线。",
+      "issues": [
+        {
+          "id": "ex27-origin-label",
+          "severity": "minor_layout",
+          "detail": "O=C标记放在赤道虚线椭圆下半弧上，虚线穿过等号/字母下缘。",
+          "recommended_fix": "把原点标签移到椭圆外的空白位置或用白底遮罩。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 28,
+      "title": "均匀实心椭球的惯量",
+      "source": "题图/ex28.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "status": "fixed_passed",
+      "finding": "a,b,c对应x,y,z方向，均匀椭球示意一致；原点文字需避线。",
+      "issues": [
+        {
+          "id": "ex28-origin-label",
+          "severity": "minor_layout",
+          "detail": "O=C标记与赤道虚线椭圆下半弧重叠。",
+          "recommended_fix": "将原点标签移离虚线椭圆。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 29,
+      "title": "均匀实心半球：球心与质心原点",
+      "source": "题图/ex29.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "status": "fixed_passed",
+      "finding": "z≥0半球、球心O和质心C在轴上，3a/8高度正确；尺寸文字需避线。",
+      "issues": [
+        {
+          "id": "ex29-height-label",
+          "severity": "minor_layout",
+          "detail": "3a/8尺寸文字被底面椭圆的上半弧穿过。",
+          "recommended_fix": "将高度尺寸线和文字整体移到半球外侧。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 30,
+      "title": "同一个正方体在两个原点下的惯量",
+      "source": "题图/ex30.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-05.png",
+      "status": "passed",
+      "finding": "顶点O、质心C和立方体棱方向正确。",
+      "issues": []
+    },
+    {
+      "example": 31,
+      "title": "顶点正方体的三根正交主轴",
+      "source": "题图/ex31.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "status": "passed",
+      "finding": "顶点O及正棱轴正确，C在体对角线中点。",
+      "issues": []
+    },
+    {
+      "example": 32,
+      "title": "顶点长方体的惯量与数值主轴",
+      "source": "题图/ex32.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "status": "passed",
+      "finding": "顶点坐标及a,b,c的长方体示意正确；图为不按数值比例的通用示意。",
+      "issues": []
+    },
+    {
+      "example": 33,
+      "title": "长方体绕体对角线的方向惯量",
+      "source": "题图/ex33.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "status": "passed",
+      "finding": "虚线确为从O到对顶点的整条体对角线，符合转轴定义。",
+      "issues": []
+    },
+    {
+      "example": 34,
+      "title": "三个质点组成的等边三角刚体",
+      "source": "题图/ex34.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "status": "passed",
+      "finding": "三个相同质点构成等边三角形，原点/坐标正向与题给坐标对应。",
+      "issues": []
+    },
+    {
+      "example": 35,
+      "title": "第一卦限球体的惯量、角动量与主轴",
+      "source": "题图/ex35.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "status": "passed",
+      "finding": "第一卦限球体区域、球心原点和正轴约定一致。",
+      "issues": []
+    },
+    {
+      "example": 36,
+      "title": "顶点固定正方体的斜轴转动",
+      "source": "题图/ex36.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-06.png",
+      "status": "passed",
+      "finding": "固定顶点O、质心C、边长a对应正确；图未另画ω，未引入错误方向。",
+      "issues": []
+    },
+    {
+      "example": 37,
+      "title": "固定点上方的圆盘陀螺动能",
+      "source": "题图/ex37.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "status": "fixed_passed",
+      "finding": "轴线/盘面关系正确，关键标签存在两处重叠。",
+      "issues": [
+        {
+          "id": "ex37-two-label-collisions",
+          "severity": "readability",
+          "detail": "h与θ近乎同位，且dotψ与m,a明显叠字；源h节点在(.6,1.1)左侧、θ在(.4,1.02)，dotψ在(2,1.5)、m,a在(1.6,1.55)右侧。",
+          "recommended_fix": "用独立尺寸线标h；将dotψ移到盘轴上端空白处，m,a移到盘外右下。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 38,
+      "title": "恒定力矩驱动圆盘",
+      "source": "题图/ex38.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "status": "fixed_passed",
+      "finding": "驱动矩/阻矩旋向相反正确，但箭头端点相撞。",
+      "issues": [
+        {
+          "id": "ex38-arrowhead-collision",
+          "severity": "readability_direction",
+          "detail": "M与Mf两条半径1.55的弧都终止于100°处，箭头端点完全重合，方向标识相撞。",
+          "recommended_fix": "将驱动矩与阻矩分别放在不同半径或不同扇区，保留相反旋向。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 39,
+      "title": "均匀杆端点物理摆",
+      "source": "题图/ex39.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "status": "fixed_passed",
+      "finding": "杆、向下铅垂参考线、q、mg方向均正确，L/C标签重叠。",
+      "issues": [
+        {
+          "id": "ex39-L-C-collision",
+          "severity": "readability",
+          "detail": "杆长L与质心C标签均在(.65,1.4)右侧，完全叠字。",
+          "recommended_fix": "把L移至杆上半段另一侧，保留C紧邻质心点。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 40,
+      "title": "悬点位置如何影响小振动周期",
+      "source": "题图/ex40.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "status": "passed",
+      "finding": "悬点O与质心C距离h、重力方向和中心惯量标注一致。",
+      "issues": []
+    },
+    {
+      "example": 41,
+      "title": "质心在轴上仍有轴承压力",
+      "source": "题图/ex41.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "status": "passed",
+      "finding": "A在下B在上符合+z方向，轴承间距L与杆过轴心正确。",
+      "issues": []
+    },
+    {
+      "example": 42,
+      "title": "点质量转子的单平面和双平面校正",
+      "source": "题图/ex42.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-07.png",
+      "status": "passed",
+      "finding": "两不同轴向校正平面za/zb明确，Ua/Ub表示质量半径矢量。",
+      "issues": []
+    },
+    {
+      "example": 43,
+      "title": "立方体绕地面水平棱倾倒",
+      "source": "题图/ex43.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "status": "fixed_passed",
+      "finding": "抬角θ为正、绕地面棱O、重力近乎精确竖直向下；mg标签重叠。",
+      "issues": [
+        {
+          "id": "ex43-weight-label",
+          "severity": "readability",
+          "detail": "mg标签位于抬起底边上，与底边及θ角标区域重叠。",
+          "recommended_fix": "将mg放在重力箭头中段左/右侧，θ留在底面与地面之间。",
+          "status": "fixed_passed"
+        }
+      ]
+    },
+    {
+      "example": 44,
+      "title": "有惯量定滑轮的两重物系统",
+      "source": "题图/ex44.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "status": "passed",
+      "finding": "滑轮m,r、两块m/2m与大块下降箭头一致。",
+      "issues": []
+    },
+    {
+      "example": 45,
+      "title": "倾斜薄圆盘的最大轴承压力",
+      "source": "题图/ex45.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "status": "passed",
+      "finding": "斜盘长轴为115°、n约25°，二者垂直；z从A向B，β在轴与n之间，AO/OB分别a/b。几何通过。",
+      "issues": []
+    },
+    {
+      "example": 46,
+      "title": "T形双杆的瞬时角加速度与轴反力",
+      "source": "题图/ex46.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "status": "passed",
+      "finding": "水平杆与竖杆等长、竖杆中点A、两mg作用点及顺时针ω方向均正确。",
+      "issues": []
+    },
+    {
+      "example": 47,
+      "title": "等速拖动梯子的两条极迹",
+      "source": "题图/ex47.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "status": "passed",
+      "finding": "A向右、B沿墙向下，空间瞬心P=(x,y)，极迹构造示意一致。",
+      "issues": []
+    },
+    {
+      "example": 48,
+      "title": "圆柱沿粗糙斜面滚下：三种解法",
+      "source": "题图/ex48.tex",
+      "atlas": "工作文件/题图总览PNG/atlas-08.png",
+      "status": "fixed_passed",
+      "finding": "向右下坡面、向上坡摩擦方向正确，但圆/坡面接触几何需修正。",
+      "issues": [
+        {
+          "id": "ex48-contact-geometry",
+          "severity": "material_contact",
+          "detail": "圆心(1.7,1.46)、半径.9，到坡线(−.4,1.5)–(3.7,−.4)的距离约.8467，故圆与坡面相交、穿入约.0533（半径的5.9%）。N/f起点(1.3,.65)也不在该坡线上；C与N标记较挤。",
+          "recommended_fix": "用同一个β定义坡面单位切向/法向，先选接触点P，再取C=P+a*n；N和f都从P出发，并避让C标签。",
+          "status": "fixed_passed"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "本次不重审原课件117图及已保留的59幅正文图。",
+    "总览固定高度导致的超宽与图内部缺陷已分开记录。",
+    "未根据总览截图宣称主稿最终列内排版已通过；主稿需在重编译后独立复看。"
+  ],
+  "atlas_sha256": {
+    "atlas-01.png": "be03ea95188ca34b7bcb3717757f85a39b2f17cb6ded5ebe2fa272d537630d74",
+    "atlas-02.png": "b05b1753ecd27c4ee1fc67b84ad880453e78d04db04b31024f7ae544c1ff4085",
+    "atlas-03.png": "12e94081701106539957d35e1795248afc109023971e827bf425c0d44738711e",
+    "atlas-04.png": "b4b6016113975b564ddf21c630429d2156126ac4a420f48449acdcce5c6fef8e",
+    "atlas-05.png": "ceadb8ba6db2b6b39cc4c7634224576baacbde184a05cf2140d5ba168efe89ad",
+    "atlas-06.png": "403209a6db6801a1df983d0863779412c5ab540be3ffc736967517f19ac30811",
+    "atlas-07.png": "d5f81ca4750d5c6406595c6cebfa5aac29e69d313a206b5474d37dae5ee79822",
+    "atlas-08.png": "80f1ca4db984f34110b8a02a3992d157a1face43cb20b5594680a84ac4a61cb4"
+  },
+  "rereview_round_1": {
+    "reviewed_at": "2026-10-17T18:16:16.624591+08:00",
+    "source_images": [
+      "工作文件/题图总览复验PNG/atlas-01.png",
+      "工作文件/题图总览复验PNG/atlas-02.png",
+      "工作文件/题图总览复验PNG/atlas-03.png",
+      "工作文件/题图总览复验PNG/atlas-04.png",
+      "工作文件/题图总览复验PNG/atlas-05.png",
+      "工作文件/题图总览复验PNG/atlas-06.png",
+      "工作文件/题图总览复验PNG/atlas-07.png",
+      "工作文件/题图总览复验PNG/atlas-08.png"
+    ],
+    "all_eight_images_actually_viewed": true,
+    "original_issue_examples_fixed": [
+      1,
+      3,
+      11,
+      22,
+      24,
+      27,
+      28,
+      29,
+      37,
+      38,
+      39,
+      43,
+      48
+    ],
+    "geometry_findings": "例1中心正确；例3ω已右下；例11轴截面已按同长母线与平分轴构造；例48圆到坡线距离≈.9，接触点在坡线上，N/f同点起画。",
+    "scope_findings": "例22已明确注明第(3)问底层侧推截面；第(1)问挡杆由正文保留图补充。",
+    "layout_findings": "例24、29、37、38、39、43旧叠字与箭头相撞均解除；例23总览超宽也解除；例24 C/L略近但无穿字，不列未解决项。",
+    "new_issues": [
+      {
+        "example": 3,
+        "id": "ex03-new-origin-label-overlap",
+        "severity": "readability",
+        "detail": "ω箭头已改为右下，方向问题已修复；但ω终点旁标签与原点O重叠，已裁图放大确认。",
+        "recommended_fix": "把ω文字放在箭头中段左侧或移至右下空白处。"
+      },
+      {
+        "example": 27,
+        "id": "ex27-new-zaxis-label-overlap",
+        "severity": "minor_layout",
+        "detail": "O=C已避开赤道虚线，但标签首字母O被竖直z轴穿过，已裁图放大确认。",
+        "recommended_fix": "把整组O=C再向右移或加白底。"
+      },
+      {
+        "example": 28,
+        "id": "ex28-new-zaxis-label-overlap",
+        "severity": "minor_layout",
+        "detail": "O=C已避开赤道虚线，但标签首字母O被竖直z轴穿过，已裁图放大确认。",
+        "recommended_fix": "把整组O=C再向右移或加白底。"
+      }
+    ],
+    "new_issue_count": 3,
+    "hashes": {
+      "atlas-01.png": "6646fd836340165ce5817645b5fc8903d5854f7cf87d85d8184055eca6135ac6",
+      "atlas-02.png": "bb040366386fec09279cfb9fd8c73f960bf7ce6ec1391e2e4e3d01d1ae213183",
+      "atlas-03.png": "0f2b74dba105c730f48acea55e7df33c826e58b0cd5a396442d7cbb31a3d0389",
+      "atlas-04.png": "558df777e52892e142ec0b797563943eb42786d9845026f091ec32096e16c7f6",
+      "atlas-05.png": "b1c0437487eef743eca9302d3451b64e50d939a58cb4ed08cd3b1e6c573ad784",
+      "atlas-06.png": "5d1ccb3d6f7822ba5a92cfcc3cb7474a33687b563be4e441fa4d89e933f903ea",
+      "atlas-07.png": "db33453954adeae62951c262c85445c977afaa7ffd4911cd95895a0e0bb09931",
+      "atlas-08.png": "3dcacedc77c416bab7685b2f80fde6250e8bb7bbb24ca3fd3cb818f7e1642e1d"
+    }
+  },
+  "current_open_issues": [],
+  "current_open_issue_count": 0,
+  "current_material_geometry_direction_contact_issue_count": 0,
+  "rereview_round_2": {
+    "reviewed_at": "2026-10-17T18:31:23.573341+08:00",
+    "source_images": [
+      "工作文件/题图总览终验PNG/atlas-01.png",
+      "工作文件/题图总览终验PNG/atlas-05.png"
+    ],
+    "actually_viewed": true,
+    "ex3_status": "fixed_passed",
+    "ex27_ex28_status": "首字母O已避开z轴，但末字母C与右下外轮廓线相碰；已通知主代理，主代理确认加白底修复，等待更新渲染终验。",
+    "material_geometry_direction_contact_issue_count": 0
+  },
+  "solution_figure_review": {
+    "reviewed_at": "2026-10-17T18:31:23.573452+08:00",
+    "scope_examples": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "actual_viewed_images": [
+      "工作文件/解答图总览PNG/solutions-01.png",
+      "工作文件/解答图总览PNG/solutions-02.png",
+      "工作文件/解答图总览PNG/solutions-03.png",
+      "工作文件/解答图总览PNG/solutions-04.png",
+      "工作文件/解答图总览PNG/solutions-05.png",
+      "工作文件/解答图总览PNG/solutions-06.png",
+      "工作文件/解答图总览PNG/solutions-07.png",
+      "工作文件/解答图总览PNG/solutions-08.png",
+      "工作文件/解答图总览PNG/solutions-09.png",
+      "工作文件/解答图总览PNG/solutions-10.png",
+      "工作文件/解答图总览PNG/solutions-11.png",
+      "工作文件/解答图总览PNG/solutions-12.png"
+    ],
+    "all_12_images_actually_viewed": true,
+    "source_calculation_nodes_read_all_48": true,
+    "body_reference_checks": [
+      {
+        "example": 1,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 2,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 3,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 4,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 5,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 6,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 7,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 8,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 9,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 10,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 11,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 12,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 13,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 14,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 15,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 16,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 17,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 18,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 19,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 20,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 21,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 22,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 23,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 24,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 25,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 26,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 27,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 28,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 29,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 30,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 31,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 32,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 33,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 34,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 35,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 36,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 37,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 38,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 39,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 40,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 41,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 42,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 43,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 44,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 45,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 46,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 47,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      },
+      {
+        "example": 48,
+        "solution_figure_invocation_count": 1,
+        "explicit_reference_count": 1
+      }
+    ],
+    "body_reference_check_status": "passed",
+    "summary": "48张解答图均已实际查看；对修改后的6张总览再次实际复看。例8条件表述、例21角θ、例44张力/加速度及例47本体轴已补齐；例1点A统一、例27/28白底避线也通过。无残存问题。",
+    "issues": [
+      {
+        "example": 8,
+        "id": "solution-ex08-equality-condition",
+        "severity": "minor_calculation_condition",
+        "detail": "图右写dotψ=ω≠ωz，但Ωcosθ0=0时两者相等，故不等号不应无条件成立。",
+        "recommended_fix": "改写成ωz−dotψ=Ωcosθ0，或注明一般不等。",
+        "status": "fixed_passed"
+      },
+      {
+        "example": 21,
+        "id": "solution-ex21-angle-not-drawn",
+        "severity": "diagram_calculation_link",
+        "detail": "右侧弦长公式c=2r cosθ使用θ，但左侧模型未标杆与水平面的夹角θ。正文定义了该角，图内尚缺对应。",
+        "recommended_fix": "在C或适当位置补水平参考与θ角弧。",
+        "status": "fixed_passed"
+      },
+      {
+        "example": 44,
+        "id": "solution-ex44-tensions-not-drawn",
+        "severity": "diagram_calculation_link",
+        "detail": "右侧分块方程用T1/T2，左图尚未标两处绳张力；右块的2m与加速度a较近。",
+        "recommended_fix": "给左右两块分别补向上T1/T2，a移至箭头中段右侧。",
+        "status": "fixed_passed"
+      },
+      {
+        "example": 47,
+        "id": "solution-ex47-body-axes-not-drawn",
+        "severity": "diagram_calculation_link",
+        "detail": "右侧直接给q1=y²/l、q2=−xy/l，但模型只画空间瞬心P，未画A处本体e1/e2正向。正文虽有定义，图内不能直观看出负号来源。",
+        "recommended_fix": "在A处补e1沿AB、e2=k×e1的小基矢，或增加一个本体投影小图。",
+        "status": "fixed_passed"
+      }
+    ],
+    "reviewed": [
+      {
+        "example": 1,
+        "atlas": "工作文件/解答图总览PNG/solutions-01.png",
+        "source": "解答图/ex01.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 2,
+        "atlas": "工作文件/解答图总览PNG/solutions-01.png",
+        "source": "解答图/ex02.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 3,
+        "atlas": "工作文件/解答图总览PNG/solutions-01.png",
+        "source": "解答图/ex03.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 4,
+        "atlas": "工作文件/解答图总览PNG/solutions-01.png",
+        "source": "解答图/ex04.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 5,
+        "atlas": "工作文件/解答图总览PNG/solutions-02.png",
+        "source": "解答图/ex05.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 6,
+        "atlas": "工作文件/解答图总览PNG/solutions-02.png",
+        "source": "解答图/ex06.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 7,
+        "atlas": "工作文件/解答图总览PNG/solutions-02.png",
+        "source": "解答图/ex07.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 8,
+        "atlas": "工作文件/解答图总览PNG/solutions-02.png",
+        "source": "解答图/ex08.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": [
+          {
+            "example": 8,
+            "id": "solution-ex08-equality-condition",
+            "severity": "minor_calculation_condition",
+            "detail": "图右写dotψ=ω≠ωz，但Ωcosθ0=0时两者相等，故不等号不应无条件成立。",
+            "recommended_fix": "改写成ωz−dotψ=Ωcosθ0，或注明一般不等。",
+            "status": "fixed_passed"
+          }
+        ]
+      },
+      {
+        "example": 9,
+        "atlas": "工作文件/解答图总览PNG/solutions-03.png",
+        "source": "解答图/ex09.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 10,
+        "atlas": "工作文件/解答图总览PNG/solutions-03.png",
+        "source": "解答图/ex10.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 11,
+        "atlas": "工作文件/解答图总览PNG/solutions-03.png",
+        "source": "解答图/ex11.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 12,
+        "atlas": "工作文件/解答图总览PNG/solutions-03.png",
+        "source": "解答图/ex12.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 13,
+        "atlas": "工作文件/解答图总览PNG/solutions-04.png",
+        "source": "解答图/ex13.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 14,
+        "atlas": "工作文件/解答图总览PNG/solutions-04.png",
+        "source": "解答图/ex14.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 15,
+        "atlas": "工作文件/解答图总览PNG/solutions-04.png",
+        "source": "解答图/ex15.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 16,
+        "atlas": "工作文件/解答图总览PNG/solutions-04.png",
+        "source": "解答图/ex16.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 17,
+        "atlas": "工作文件/解答图总览PNG/solutions-05.png",
+        "source": "解答图/ex17.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 18,
+        "atlas": "工作文件/解答图总览PNG/solutions-05.png",
+        "source": "解答图/ex18.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 19,
+        "atlas": "工作文件/解答图总览PNG/solutions-05.png",
+        "source": "解答图/ex19.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 20,
+        "atlas": "工作文件/解答图总览PNG/solutions-05.png",
+        "source": "解答图/ex20.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 21,
+        "atlas": "工作文件/解答图总览PNG/solutions-06.png",
+        "source": "解答图/ex21.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": [
+          {
+            "example": 21,
+            "id": "solution-ex21-angle-not-drawn",
+            "severity": "diagram_calculation_link",
+            "detail": "右侧弦长公式c=2r cosθ使用θ，但左侧模型未标杆与水平面的夹角θ。正文定义了该角，图内尚缺对应。",
+            "recommended_fix": "在C或适当位置补水平参考与θ角弧。",
+            "status": "fixed_passed"
+          }
+        ]
+      },
+      {
+        "example": 22,
+        "atlas": "工作文件/解答图总览PNG/solutions-06.png",
+        "source": "解答图/ex22.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 23,
+        "atlas": "工作文件/解答图总览PNG/solutions-06.png",
+        "source": "解答图/ex23.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 24,
+        "atlas": "工作文件/解答图总览PNG/solutions-06.png",
+        "source": "解答图/ex24.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 25,
+        "atlas": "工作文件/解答图总览PNG/solutions-07.png",
+        "source": "解答图/ex25.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 26,
+        "atlas": "工作文件/解答图总览PNG/solutions-07.png",
+        "source": "解答图/ex26.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 27,
+        "atlas": "工作文件/解答图总览PNG/solutions-07.png",
+        "source": "解答图/ex27.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 28,
+        "atlas": "工作文件/解答图总览PNG/solutions-07.png",
+        "source": "解答图/ex28.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 29,
+        "atlas": "工作文件/解答图总览PNG/solutions-08.png",
+        "source": "解答图/ex29.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 30,
+        "atlas": "工作文件/解答图总览PNG/solutions-08.png",
+        "source": "解答图/ex30.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 31,
+        "atlas": "工作文件/解答图总览PNG/solutions-08.png",
+        "source": "解答图/ex31.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 32,
+        "atlas": "工作文件/解答图总览PNG/solutions-08.png",
+        "source": "解答图/ex32.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 33,
+        "atlas": "工作文件/解答图总览PNG/solutions-09.png",
+        "source": "解答图/ex33.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 34,
+        "atlas": "工作文件/解答图总览PNG/solutions-09.png",
+        "source": "解答图/ex34.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 35,
+        "atlas": "工作文件/解答图总览PNG/solutions-09.png",
+        "source": "解答图/ex35.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 36,
+        "atlas": "工作文件/解答图总览PNG/solutions-09.png",
+        "source": "解答图/ex36.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 37,
+        "atlas": "工作文件/解答图总览PNG/solutions-10.png",
+        "source": "解答图/ex37.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 38,
+        "atlas": "工作文件/解答图总览PNG/solutions-10.png",
+        "source": "解答图/ex38.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 39,
+        "atlas": "工作文件/解答图总览PNG/solutions-10.png",
+        "source": "解答图/ex39.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 40,
+        "atlas": "工作文件/解答图总览PNG/solutions-10.png",
+        "source": "解答图/ex40.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 41,
+        "atlas": "工作文件/解答图总览PNG/solutions-11.png",
+        "source": "解答图/ex41.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 42,
+        "atlas": "工作文件/解答图总览PNG/solutions-11.png",
+        "source": "解答图/ex42.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 43,
+        "atlas": "工作文件/解答图总览PNG/solutions-11.png",
+        "source": "解答图/ex43.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 44,
+        "atlas": "工作文件/解答图总览PNG/solutions-11.png",
+        "source": "解答图/ex44.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": [
+          {
+            "example": 44,
+            "id": "solution-ex44-tensions-not-drawn",
+            "severity": "diagram_calculation_link",
+            "detail": "右侧分块方程用T1/T2，左图尚未标两处绳张力；右块的2m与加速度a较近。",
+            "recommended_fix": "给左右两块分别补向上T1/T2，a移至箭头中段右侧。",
+            "status": "fixed_passed"
+          }
+        ]
+      },
+      {
+        "example": 45,
+        "atlas": "工作文件/解答图总览PNG/solutions-12.png",
+        "source": "解答图/ex45.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 46,
+        "atlas": "工作文件/解答图总览PNG/solutions-12.png",
+        "source": "解答图/ex46.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      },
+      {
+        "example": 47,
+        "atlas": "工作文件/解答图总览PNG/solutions-12.png",
+        "source": "解答图/ex47.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": [
+          {
+            "example": 47,
+            "id": "solution-ex47-body-axes-not-drawn",
+            "severity": "diagram_calculation_link",
+            "detail": "右侧直接给q1=y²/l、q2=−xy/l，但模型只画空间瞬心P，未画A处本体e1/e2正向。正文虽有定义，图内不能直观看出负号来源。",
+            "recommended_fix": "在A处补e1沿AB、e2=k×e1的小基矢，或增加一个本体投影小图。",
+            "status": "fixed_passed"
+          }
+        ]
+      },
+      {
+        "example": 48,
+        "atlas": "工作文件/解答图总览PNG/solutions-12.png",
+        "source": "解答图/ex48.tex",
+        "viewed": true,
+        "calculation_status": "passed",
+        "model_status": "passed",
+        "layout_status": "passed",
+        "issues": []
+      }
+    ],
+    "atlas_sha256": {
+      "solutions-01.png": "79b31bf1dbceb1702e1410f8d50961b929b1b3cbee6a8d7e861201a10b23d0f6",
+      "solutions-02.png": "d28463a98b8a191ca343c19d4e9989af24b208be1114f40f34ed1a257f1c5dc4",
+      "solutions-03.png": "14658b04af82e7efa12d0fa5389fa1a07989942548cfeb29d7bc2c2b17253164",
+      "solutions-04.png": "92fb931cb686ebdafa2f2066c6f5b0ced45844d209eb5cd50aef62572eb698e7",
+      "solutions-05.png": "c8ded663220a902e77ffd3736cb204bc3d2349f7c64445283f40757b0272ad5f",
+      "solutions-06.png": "1b521818f0bd4c1fd8514acb759901133c7514ad4199a192468cc7c4923e8d49",
+      "solutions-07.png": "93e270a62f3884e3bcc5b486dce747009b5dd8b257139dae54b6d6390c2df06a",
+      "solutions-08.png": "da8396939a509fb209c4e47ddb7c24e1f4a6b119ab790f3730f0d9b60390c94e",
+      "solutions-09.png": "17ddca04531b667cf8d0885ca31879d442694f9f49d1e045c5ed0aae10ae35aa",
+      "solutions-10.png": "9990d707a8d672c107872d9f52b44a2c11a01641d6555965cd53aaef3d5ba5bf",
+      "solutions-11.png": "71e1c0800ff6810943951efdad10b5048bc19751315db78892c08381bbc8e02a",
+      "solutions-12.png": "496d299933bebc961a1aa75c659de00183df477c9c4ed593162161f83689f717"
+    },
+    "pending_changes_from_parent": [],
+    "status": "passed",
+    "open_issue_count": 0
+  },
+  "overall_status": "passed",
+  "final_solution_figure_rereview": {
+    "reviewed_at": "2026-10-17T18:36:21.360046+08:00",
+    "scope_atlas_numbers": [
+      1,
+      2,
+      6,
+      7,
+      11,
+      12
+    ],
+    "source_images": [
+      "工作文件/解答图终验PNG/solutions-01.png",
+      "工作文件/解答图终验PNG/solutions-02.png",
+      "工作文件/解答图终验PNG/solutions-06.png",
+      "工作文件/解答图终验PNG/solutions-07.png",
+      "工作文件/解答图终验PNG/solutions-11.png",
+      "工作文件/解答图终验PNG/solutions-12.png"
+    ],
+    "all_six_images_actually_viewed": true,
+    "status": "passed",
+    "findings": [
+      {
+        "example": 1,
+        "status": "fixed_passed",
+        "finding": "任意点、位置分解与速度关系全部统一为A，C仍为平台中心。"
+      },
+      {
+        "example": 3,
+        "status": "fixed_passed",
+        "finding": "右下ω及原点O标签分离；方向与数值计算保持正确。"
+      },
+      {
+        "example": 8,
+        "status": "fixed_passed",
+        "finding": "改为ωz−dotψ=Ωcosθ0，消除了无条件不等的例外。"
+      },
+      {
+        "example": 21,
+        "status": "fixed_passed",
+        "finding": "C处补水平延长线及θ角弧，直接对应c=2r cosθ。"
+      },
+      {
+        "example": 27,
+        "status": "fixed_passed",
+        "finding": "O=C局部白底清除球轮廓穿字，三轴与半径仍清楚。"
+      },
+      {
+        "example": 28,
+        "status": "fixed_passed",
+        "finding": "O=C局部白底清除椭球轮廓穿字，半轴与公式对应保持清楚。"
+      },
+      {
+        "example": 44,
+        "status": "fixed_passed",
+        "finding": "T1/T2向上张力箭头清楚；a已与2m分离，匹配右侧两物块方程。"
+      },
+      {
+        "example": 47,
+        "status": "fixed_passed",
+        "finding": "A处e1沿AB、e2向左下且与e1正交，明确q1/q2投影正负。"
+      }
+    ],
+    "new_issue_count": 0,
+    "hashes": {
+      "solutions-01.png": "b113fde5e9247ce71299a88729820d81b80ee6ffc12ae9f5d9e3a1a618c8f2e8",
+      "solutions-02.png": "56976a834967fffb619a129169d0cab54b4b39a146c0e2536d03a3e234a70758",
+      "solutions-06.png": "a7bf37e899009f1860ed0859bd3e7ae205bc9f4111f709b527a64d6be86363ff",
+      "solutions-07.png": "0555a6a9108af1fdd4ae71efb85da1748d78838abbe234905c68d876719a79ae",
+      "solutions-11.png": "7a3e2305b6caa9a92d129a773eb05f869fbca69dd8947efd633fcc91535c9188",
+      "solutions-12.png": "8fb2449df075fc9fbe0eaed1669bb05b30a8d1727b883f11b882d1776f55a524"
+    },
+    "scope_limit": "只复看主代理指定的6张更新总览；其余未改图沿用此前已完成的视觉检查，不扩展范围。"
+  }
+}

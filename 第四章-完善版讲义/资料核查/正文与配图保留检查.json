@@ -1,0 +1,32 @@
+{
+  "baseline_sha256": "497bcb73cf31109f0b4ce341cdc3576bb658e3f5dff63ca0eb1817f1d0cff3c5",
+  "all_preexisting_text_preserved_before_listed_patches": true,
+  "existing_model_figures_preserved": 47,
+  "examples": 47,
+  "selftests": 24,
+  "original_assets_added": 47,
+  "documented_text_patches": [
+    {
+      "old": "所有示意图均在题干所定义的坐标与方向下绘制。",
+      "new": "本章以题干规定的坐标与方向为准；课件原图的记号或转向与正文不同时，图题说明两者的对应。",
+      "reason": "加入课件原图后明确图文符号对应，保留正文推导及所有模型图。"
+    },
+    {
+      "old": "\\solution 保守力可有显式时间变化的势。即使惯性系有静态势",
+      "new": "\\solution 保守力可有显式时间变化的势。\n\n即使惯性系有静态势",
+      "reason": "自测24解答按论点分段，解决含较长行内公式的松散行；文字与公式不变。"
+    }
+  ],
+  "heading_pagination": "先以零惩罚触发页面构建，再判断实际剩余高度；避免沿用前页高度导致尾段单独成页；正文及数学内容不改。",
+  "documented_model_layout_patches": {
+    "c4-diagram-26": [
+      {
+        "old": "--(0,2.2)node[above]{$y$};",
+        "new": "--(0,2.2)node[left]{$y$};",
+        "reason": "将y轴标签放至轴尖左侧，解除与上方r=ut公式的重叠；不改轴、轨迹或公式。"
+      }
+    ]
+  },
+  "numbered_equation_environments_before": 33,
+  "numbered_equation_environments_after": 33
+}

@@ -1,0 +1,8 @@
+% 两族子午抛物线正交，旋转得到轴对称坐标面；先由线元得到尺度，再把能量方程乘以 $\xi+\eta$ 分离。
+\begin{tikzpicture}[scale=.85]
+\draw[->](-2.1,0)--(2.1,0)node[right]{$x$};\draw[->](0,-2.1)--(0,2.1)node[above]{$z$};
+\foreach \a in {.6,1.2,1.8}{
+\draw[ink,domain=-1.5:1.5,samples=50]plot(\x,{(\a-\x*\x/\a)/2});
+\draw[muted,dashed,domain=-1.5:1.5,samples=50]plot(\x,{(\x*\x/\a-\a)/2});}
+\node[anchor=west,align=left]at(2.7,.7){实线：$\xi=\text{常数}$\\虚线：$\eta=\text{常数}$\\子午平面 $y=0$，$\rho=|x|$\\绕 $z$ 轴旋转成曲面};
+\end{tikzpicture}

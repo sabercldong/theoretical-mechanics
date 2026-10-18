@@ -1,0 +1,711 @@
+{
+  "pages": 218,
+  "body_start": 5,
+  "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+  "figures": {
+    "fig:lesson-c3-diagram-01": {
+      "number": "3.1",
+      "page": 6
+    },
+    "fig:orig-c3-1-p004-body-frame": {
+      "number": "3.2",
+      "page": 7
+    },
+    "fig:orig-c3-1-p005-base-frame": {
+      "number": "3.3",
+      "page": 7
+    },
+    "fig:orig-c3-1-p037-axis-polar": {
+      "number": "3.4",
+      "page": 8
+    },
+    "fig:lesson-c3-diagram-02": {
+      "number": "3.5",
+      "page": 8
+    },
+    "fig:orig-c3-1-p006-ferris-wheel": {
+      "number": "3.6",
+      "page": 9
+    },
+    "fig:orig-c3-1-p007-euler": {
+      "number": "3.7",
+      "page": 10
+    },
+    "fig:orig-c3-1-p030-infinitesimal": {
+      "number": "3.8",
+      "page": 12
+    },
+    "fig:lesson-c3-diagram-03": {
+      "number": "3.9",
+      "page": 14
+    },
+    "fig:orig-c3-1-p008-velocity": {
+      "number": "3.10",
+      "page": 14
+    },
+    "fig:orig-c3-1-p026-colored-turntable": {
+      "number": "3.11",
+      "page": 17
+    },
+    "fig:lesson-c3-diagram-04": {
+      "number": "3.12",
+      "page": 18
+    },
+    "fig:orig-c3-1-p010-turntable": {
+      "number": "3.13",
+      "page": 18
+    },
+    "fig:orig-c3-1-p011-inclined-top": {
+      "number": "3.14",
+      "page": 18
+    },
+    "fig:orig-c3-1-p012-hanging-disks": {
+      "number": "3.15",
+      "page": 19
+    },
+    "fig:lesson-c3-diagram-05": {
+      "number": "3.16",
+      "page": 21
+    },
+    "fig:orig-c3-1-p024-swing-disk": {
+      "number": "3.17",
+      "page": 22
+    },
+    "fig:lesson-c3-diagram-06": {
+      "number": "3.18",
+      "page": 23
+    },
+    "fig:orig-c3-1-p014-euler-angles": {
+      "number": "3.19",
+      "page": 23
+    },
+    "fig:lesson-c3-diagram-07": {
+      "number": "3.20",
+      "page": 24
+    },
+    "fig:orig-c3-1-p015-euler-steps": {
+      "number": "3.21",
+      "page": 24
+    },
+    "fig:orig-c3-1-p019-top-initial": {
+      "number": "3.22",
+      "page": 27
+    },
+    "fig:lesson-c3-diagram-08": {
+      "number": "3.23",
+      "page": 28
+    },
+    "fig:orig-c3-1-p018-earth-orbit": {
+      "number": "3.24",
+      "page": 28
+    },
+    "fig:lesson-c3-diagram-09": {
+      "number": "3.25",
+      "page": 31
+    },
+    "fig:orig-c3-1-p025-rolling-cone": {
+      "number": "3.26",
+      "page": 31
+    },
+    "fig:lesson-c3-diagram-10": {
+      "number": "3.27",
+      "page": 33
+    },
+    "fig:orig-c3-1-p026-crank": {
+      "number": "3.28",
+      "page": 33
+    },
+    "fig:orig-c3-1-p043-planar-rotation": {
+      "number": "3.29",
+      "page": 34
+    },
+    "fig:orig-c3-1-p047-arbitrary-axis": {
+      "number": "3.30",
+      "page": 36
+    },
+    "fig:lesson-c3-diagram-11": {
+      "number": "3.31",
+      "page": 38
+    },
+    "fig:orig-c3-1-p029-rotation-xy": {
+      "number": "3.32",
+      "page": 38
+    },
+    "fig:orig-c3-1-p029-rotation-yx": {
+      "number": "3.33",
+      "page": 38
+    },
+    "fig:orig-c3-2-p002-force-system": {
+      "number": "3.34",
+      "page": 40
+    },
+    "fig:orig-c3-2-p003-sliding-force": {
+      "number": "3.35",
+      "page": 42
+    },
+    "fig:orig-c3-2-p009-spatial-reduction": {
+      "number": "3.36",
+      "page": 43
+    },
+    "fig:lesson-c3-diagram-12": {
+      "number": "3.37",
+      "page": 43
+    },
+    "fig:orig-c3-2-p008-transfer-pair": {
+      "number": "3.38",
+      "page": 44
+    },
+    "fig:orig-c3-2-p005-three-resultant": {
+      "number": "3.39",
+      "page": 44
+    },
+    "fig:lesson-c3-diagram-13": {
+      "number": "3.40",
+      "page": 45
+    },
+    "fig:orig-c3-2-p004-two-forces": {
+      "number": "3.41",
+      "page": 45
+    },
+    "fig:orig-c3-2-p004-two-resultant": {
+      "number": "3.42",
+      "page": 45
+    },
+    "fig:orig-c3-2-p006-parallel-opposite": {
+      "number": "3.43",
+      "page": 46
+    },
+    "fig:lesson-c3-diagram-14": {
+      "number": "3.44",
+      "page": 47
+    },
+    "fig:orig-c3-2-p006-parallel-same": {
+      "number": "3.45",
+      "page": 47
+    },
+    "fig:orig-c3-2-p007-couple": {
+      "number": "3.46",
+      "page": 48
+    },
+    "fig:lesson-c3-diagram-15": {
+      "number": "3.47",
+      "page": 50
+    },
+    "fig:orig-c3-2-p026-three-moments": {
+      "number": "3.48",
+      "page": 51
+    },
+    "fig:orig-c3-2-p018-skew-forces": {
+      "number": "3.49",
+      "page": 51
+    },
+    "fig:lesson-c3-diagram-16": {
+      "number": "3.50",
+      "page": 54
+    },
+    "fig:orig-c3-2-p016-rough-rod": {
+      "number": "3.51",
+      "page": 54
+    },
+    "fig:orig-c3-2-p019-concurrent-rod": {
+      "number": "3.52",
+      "page": 54
+    },
+    "fig:lesson-c3-diagram-17": {
+      "number": "3.53",
+      "page": 56
+    },
+    "fig:orig-c3-2-p017-right-angle-rods": {
+      "number": "3.54",
+      "page": 56
+    },
+    "fig:lesson-c3-diagram-18": {
+      "number": "3.55",
+      "page": 57
+    },
+    "fig:orig-c3-2-p020-smooth-corner": {
+      "number": "3.56",
+      "page": 57
+    },
+    "fig:lesson-c3-diagram-19": {
+      "number": "3.57",
+      "page": 59
+    },
+    "fig:orig-c3-2-p024-bowl-rod": {
+      "number": "3.58",
+      "page": 59
+    },
+    "fig:lesson-c3-diagram-20": {
+      "number": "3.59",
+      "page": 59
+    },
+    "fig:lesson-c3-diagram-21": {
+      "number": "3.60",
+      "page": 60
+    },
+    "fig:orig-c3-2-p025-stacked-logs": {
+      "number": "3.61",
+      "page": 60
+    },
+    "fig:lesson-c3-diagram-22": {
+      "number": "3.62",
+      "page": 61
+    },
+    "fig:orig-c3-3-p005-mass-element": {
+      "number": "3.63",
+      "page": 64
+    },
+    "fig:orig-c3-3-p015-body-bases": {
+      "number": "3.64",
+      "page": 66
+    },
+    "fig:orig-c3-3-p013-parallel-axes": {
+      "number": "3.65",
+      "page": 67
+    },
+    "fig:orig-c3-3-p013-perpendicular-axes": {
+      "number": "3.66",
+      "page": 68
+    },
+    "fig:lesson-c3-diagram-23": {
+      "number": "3.67",
+      "page": 71
+    },
+    "fig:orig-c3-3-p019-paired-symmetry": {
+      "number": "3.68",
+      "page": 72
+    },
+    "fig:lesson-c3-diagram-24": {
+      "number": "3.69",
+      "page": 73
+    },
+    "fig:orig-c3-3-p022-symmetry-examples": {
+      "number": "3.70",
+      "page": 73
+    },
+    "fig:orig-c3-3-p021-lamina-axes": {
+      "number": "3.71",
+      "page": 74
+    },
+    "fig:orig-c3-3-p014-rod-direction": {
+      "number": "3.72",
+      "page": 75
+    },
+    "fig:lesson-c3-diagram-25": {
+      "number": "3.73",
+      "page": 75
+    },
+    "fig:orig-c3-3-p038-solid-sphere": {
+      "number": "3.74",
+      "page": 76
+    },
+    "fig:lesson-c3-diagram-26": {
+      "number": "3.75",
+      "page": 78
+    },
+    "fig:orig-c3-3-p042-hemisphere-pair": {
+      "number": "3.76",
+      "page": 79
+    },
+    "fig:orig-c3-3-p009-cube-center": {
+      "number": "3.77",
+      "page": 79
+    },
+    "fig:orig-c3-3-p011-cube-vertex": {
+      "number": "3.78",
+      "page": 80
+    },
+    "fig:lesson-c3-diagram-27": {
+      "number": "3.79",
+      "page": 81
+    },
+    "fig:lesson-c3-diagram-28": {
+      "number": "3.80",
+      "page": 85
+    },
+    "fig:orig-c3-3-p047-triangle-masses": {
+      "number": "3.81",
+      "page": 85
+    },
+    "fig:lesson-c3-diagram-29": {
+      "number": "3.82",
+      "page": 89
+    },
+    "fig:orig-c3-3-p024-octant-sphere": {
+      "number": "3.83",
+      "page": 89
+    },
+    "fig:orig-c3-3-p049-gyroscope-axes": {
+      "number": "3.84",
+      "page": 90
+    },
+    "fig:orig-c3-4-p002-fixed-axis-cases": {
+      "number": "3.85",
+      "page": 92
+    },
+    "fig:orig-c3-4-p002-axial-translation": {
+      "number": "3.86",
+      "page": 92
+    },
+    "fig:orig-c3-4-p003-circular-path": {
+      "number": "3.87",
+      "page": 93
+    },
+    "fig:lesson-c3-diagram-30": {
+      "number": "3.88",
+      "page": 96
+    },
+    "fig:orig-c3-4-p008-physical-pendulum": {
+      "number": "3.89",
+      "page": 96
+    },
+    "fig:lesson-c3-diagram-31": {
+      "number": "3.90",
+      "page": 100
+    },
+    "fig:orig-c3-4-p013-bearing-forces": {
+      "number": "3.91",
+      "page": 100
+    },
+    "fig:orig-c3-4-p024-centrifugal-couple": {
+      "number": "3.92",
+      "page": 101
+    },
+    "fig:lesson-c3-diagram-32": {
+      "number": "3.93",
+      "page": 102
+    },
+    "fig:orig-c3-4-p019-tilted-disk-3d": {
+      "number": "3.94",
+      "page": 102
+    },
+    "fig:lesson-c3-diagram-33": {
+      "number": "3.95",
+      "page": 104
+    },
+    "fig:lesson-c3-diagram-34": {
+      "number": "3.96",
+      "page": 106
+    },
+    "fig:orig-c3-4-p009-tipping-cube": {
+      "number": "3.97",
+      "page": 106
+    },
+    "fig:lesson-c3-diagram-35": {
+      "number": "3.98",
+      "page": 107
+    },
+    "fig:orig-c3-4-p011-massive-pulley": {
+      "number": "3.99",
+      "page": 107
+    },
+    "fig:lesson-c3-diagram-36": {
+      "number": "3.100",
+      "page": 108
+    },
+    "fig:orig-c3-4-p018-tilted-disk": {
+      "number": "3.101",
+      "page": 108
+    },
+    "fig:lesson-c3-diagram-37": {
+      "number": "3.102",
+      "page": 109
+    },
+    "fig:orig-c3-4-p027-t-rod-loads": {
+      "number": "3.103",
+      "page": 109
+    },
+    "fig:orig-c3-4-p028-t-rod-accelerations": {
+      "number": "3.104",
+      "page": 113
+    },
+    "fig:orig-c3-5-p002-parallel-planes": {
+      "number": "3.105",
+      "page": 115
+    },
+    "fig:orig-c3-5-p002-rotation-translation": {
+      "number": "3.106",
+      "page": 115
+    },
+    "fig:lesson-c3-diagram-38": {
+      "number": "3.107",
+      "page": 116
+    },
+    "fig:orig-c3-5-p006-instant-center": {
+      "number": "3.108",
+      "page": 116
+    },
+    "fig:orig-c3-5-p007-one-velocity": {
+      "number": "3.109",
+      "page": 116
+    },
+    "fig:orig-c3-5-p007-rolling-contact": {
+      "number": "3.110",
+      "page": 117
+    },
+    "fig:orig-c3-5-p008-nonparallel-velocities": {
+      "number": "3.111",
+      "page": 117
+    },
+    "fig:orig-c3-5-p003-planar-position": {
+      "number": "3.112",
+      "page": 118
+    },
+    "fig:orig-c3-5-p008-opposite-directions": {
+      "number": "3.113",
+      "page": 119
+    },
+    "fig:orig-c3-5-p008-same-direction": {
+      "number": "3.114",
+      "page": 119
+    },
+    "fig:orig-c3-5-p009-instant-translation": {
+      "number": "3.115",
+      "page": 120
+    },
+    "fig:orig-c3-5-p011-body-circle": {
+      "number": "3.116",
+      "page": 121
+    },
+    "fig:orig-c3-5-p011-contact-loci": {
+      "number": "3.117",
+      "page": 121
+    },
+    "fig:orig-c3-5-p011-fixed-circle": {
+      "number": "3.118",
+      "page": 121
+    },
+    "fig:lesson-c3-diagram-39": {
+      "number": "3.119",
+      "page": 122
+    },
+    "fig:orig-c3-5-p012-ladder-loci": {
+      "number": "3.120",
+      "page": 122
+    },
+    "fig:lesson-c3-diagram-40": {
+      "number": "3.121",
+      "page": 124
+    },
+    "fig:orig-c3-5-p041-moving-center": {
+      "number": "3.122",
+      "page": 125
+    },
+    "fig:orig-c3-5-p015-rolling-centers": {
+      "number": "3.123",
+      "page": 126
+    },
+    "fig:lesson-c3-diagram-41": {
+      "number": "3.124",
+      "page": 129
+    },
+    "fig:orig-c3-5-p017-incline-forces": {
+      "number": "3.125",
+      "page": 129
+    },
+    "fig:lesson-c3-diagram-42": {
+      "number": "3.126",
+      "page": 130
+    },
+    "fig:orig-c3-5-p019-unwinding-disc": {
+      "number": "3.127",
+      "page": 130
+    },
+    "fig:orig-c3-5-p020-rolling-resistance": {
+      "number": "3.128",
+      "page": 131
+    },
+    "fig:lesson-c3-diagram-43": {
+      "number": "3.129",
+      "page": 134
+    },
+    "fig:orig-c3-5-p005-wheel-relative": {
+      "number": "3.130",
+      "page": 134
+    },
+    "fig:orig-c3-5-p032-wheel-bottom-acceleration": {
+      "number": "3.131",
+      "page": 135
+    },
+    "fig:orig-c3-5-p033-wheel-left-acceleration": {
+      "number": "3.132",
+      "page": 135
+    },
+    "fig:orig-c3-5-p034-wheel-velocity-field": {
+      "number": "3.133",
+      "page": 135
+    },
+    "fig:lesson-c3-diagram-44": {
+      "number": "3.134",
+      "page": 136
+    },
+    "fig:orig-c3-5-p023-planet-arc": {
+      "number": "3.135",
+      "page": 136
+    },
+    "fig:orig-c3-5-p023-planet-mechanism": {
+      "number": "3.136",
+      "page": 137
+    },
+    "fig:orig-c3-5-p024-planet-velocities": {
+      "number": "3.137",
+      "page": 137
+    },
+    "fig:lesson-c3-diagram-45": {
+      "number": "3.138",
+      "page": 140
+    },
+    "fig:orig-c3-5-p025-groove-geometry": {
+      "number": "3.139",
+      "page": 141
+    },
+    "fig:orig-c3-5-p026-groove-forces": {
+      "number": "3.140",
+      "page": 141
+    },
+    "fig:lesson-c3-diagram-46": {
+      "number": "3.141",
+      "page": 142
+    },
+    "fig:orig-c3-5-p028-two-wheel-mechanism": {
+      "number": "3.142",
+      "page": 142
+    },
+    "fig:lesson-c3-diagram-47": {
+      "number": "3.143",
+      "page": 143
+    },
+    "fig:orig-c3-5-p029-corner-contacts": {
+      "number": "3.144",
+      "page": 143
+    },
+    "fig:orig-c3-5-p029-corner-forces": {
+      "number": "3.145",
+      "page": 143
+    },
+    "fig:lesson-c3-diagram-48": {
+      "number": "3.146",
+      "page": 145
+    },
+    "fig:orig-c3-5-p028-two-wheel-forces": {
+      "number": "3.147",
+      "page": 146
+    },
+    "fig:lesson-c3-diagram-49": {
+      "number": "3.148",
+      "page": 149
+    },
+    "fig:orig-c3-5-p035-equal-link-mechanism": {
+      "number": "3.149",
+      "page": 149
+    },
+    "fig:orig-c3-5-p035-equal-link-velocities": {
+      "number": "3.150",
+      "page": 149
+    },
+    "fig:orig-c3-5-p036-equal-link-center": {
+      "number": "3.151",
+      "page": 150
+    },
+    "fig:lesson-c3-diagram-50": {
+      "number": "3.152",
+      "page": 150
+    },
+    "fig:orig-c3-5-p037-unequal-link-mechanism": {
+      "number": "3.153",
+      "page": 151
+    },
+    "fig:orig-c3-5-p038-unequal-link-acceleration": {
+      "number": "3.154",
+      "page": 151
+    },
+    "fig:lesson-c3-diagram-51": {
+      "number": "3.155",
+      "page": 152
+    },
+    "fig:orig-c3-5-p039-ball-board": {
+      "number": "3.156",
+      "page": 152
+    },
+    "fig:orig-c3-6-p004-perpendicular-radius": {
+      "number": "3.157",
+      "page": 158
+    },
+    "fig:lesson-c3-diagram-52": {
+      "number": "3.158",
+      "page": 160
+    },
+    "fig:orig-c3-6-p005-propeller-axes": {
+      "number": "3.159",
+      "page": 160
+    },
+    "fig:orig-c3-6-p005-propeller-motion": {
+      "number": "3.160",
+      "page": 160
+    },
+    "fig:orig-c3-6-p009-euler-portrait": {
+      "number": "3.161",
+      "page": 162
+    },
+    "fig:lesson-c3-diagram-53": {
+      "number": "3.162",
+      "page": 167
+    },
+    "fig:orig-c3-6-p015-free-top-disc": {
+      "number": "3.163",
+      "page": 167
+    },
+    "fig:orig-c3-6-p015-free-top-section": {
+      "number": "3.164",
+      "page": 167
+    },
+    "fig:lesson-c3-diagram-54": {
+      "number": "3.165",
+      "page": 170
+    },
+    "fig:orig-c3-6-p016-poinsot-tangent": {
+      "number": "3.166",
+      "page": 170
+    },
+    "fig:orig-c3-6-p017-poinsot-ellipsoid": {
+      "number": "3.167",
+      "page": 170
+    },
+    "fig:lesson-c3-diagram-55": {
+      "number": "3.168",
+      "page": 172
+    },
+    "fig:orig-c3-6-p018-heavy-top": {
+      "number": "3.169",
+      "page": 172
+    },
+    "fig:lesson-c3-diagram-56": {
+      "number": "3.170",
+      "page": 183
+    },
+    "fig:orig-c3-6-p021-nutation-tracks": {
+      "number": "3.171",
+      "page": 184
+    },
+    "fig:lesson-c3-diagram-57": {
+      "number": "3.172",
+      "page": 185
+    },
+    "fig:orig-c3-6-p022-magnetic-ring": {
+      "number": "3.173",
+      "page": 185
+    },
+    "fig:lesson-c3-diagram-58": {
+      "number": "3.174",
+      "page": 188
+    },
+    "fig:orig-c3-6-p025-magnetic-precession": {
+      "number": "3.175",
+      "page": 189
+    },
+    "fig:lesson-c3-diagram-59": {
+      "number": "3.176",
+      "page": 194
+    }
+  }
+}

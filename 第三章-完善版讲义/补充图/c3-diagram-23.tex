@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\draw[thick,fill=soft](0,0)ellipse(2.1 and 1.15);
+\draw[guide](-2.1,0)--(2.1,0);\draw[guide](0,-1.15)--(0,1.15);
+\draw[->](0,0)--(2.7,0)node[right]{$\vect n_1$};
+\draw[->](0,0)--(0,1.65)node[above]{$\vect n_2$};
+\draw[force](0,0)--({2.1*cos(45)},{1.15*sin(45)})node[right]{$q\vect n$};
+\node[align=center]at(0,-1.95){$q^2I_{\vect n}=I_*$\\长半轴对应较小主惯量};
+\end{tikzpicture}

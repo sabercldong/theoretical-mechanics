@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\begin{scope}
+\draw[->](0,0)--(1.6,0)node[right]{$x$};
+\draw[->](0,0)--(-.7,-.7)node[below]{$y$};
+\draw[->](0,0)--(0,1.5)node[above]{$z$};
+\draw[force](0,0)--(1.25,0);\node[below,align=center]at(.3,-1.1){先 $y$ 后 $x$\\$\vect e_z\mapsto\vect e_x$};
+\end{scope}
+\begin{scope}[xshift=4.5cm]
+\draw[->](0,0)--(1.6,0)node[right]{$x$};
+\draw[->](0,0)--(-.7,-.7)node[below]{$y$};
+\draw[->](0,0)--(0,1.5)node[above]{$z$};
+\draw[force](0,0)--(.9,.9)node[right]{$-y$};
+\node[below,align=center]at(.3,-1.1){先 $x$ 后 $y$\\$\vect e_z\mapsto-\vect e_y$};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,185 @@
+[
+  {
+    "key": "c2-diagram-02",
+    "old_index": 2,
+    "caption": "三角形质心位于三条中线的交点",
+    "anchor": "}\n均匀三角形薄片顶点为 $\\vect a,\\vect b,\\vect c$，求质心，并与三个等质量顶点质点比较。\n\\solution 用重心坐标\n$\\vect r=\\vect a+u(\\vect b-\\vect a)+v(\\vect c-\\vect a)$，\n$u\\ge0,v\\ge0,u+v\\le1$。面积元中的常数雅可比在分子、分母中约去。\n积分域面积为 $1/2$，而\n\\[\n\\int_0^1\\!\\int_0^{1-u}u\\,\\dd v\\,\\dd u=\\frac16,\\qquad\n\\int_0^1\\!\\int_0^{1-u}v\\,\\dd v\\,\\dd u=\\frac16.\n\\]\n故 $\\bar u=\\bar v=1/3$，\n\\begin{equation}\n\\vect R=\\frac{\\vect a+\\vect b+\\vect c}{3}.\n\\end{equation}\n三个等质量顶点质点给出完全相同的质心。若 $D=(\\vect b+\\vect c)/2$，\n则 $\\vect R=\\vect a+\\frac23(\\vect D-\\vect a)$，质心将每条中线按 $2:1$ 分割。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-04",
+    "old_index": 4,
+    "caption": "实心半球的水平切片与厚半球壳的体积差；右图 $a$、$b$ 分别为内外半径",
+    "anchor": "}\n求半径为 $a$ 的均匀实心半球的质心；再求内半径为 $a$、外半径为 $b$ 的均匀厚半球壳质心。\n\\solution 以赤道平面为 $z=0$，半球位于 $z\\ge0$。实心半球横截面积\n$A(z)=\\pi(a^2-z^2)$，所以\n\\[\nV=\\int_0^aA(z)\\dd z=\\frac{2\\pi a^3}{3},\\qquad\n\\int z\\dd V=\\int_0^a\\pi z(a^2-z^2)\\dd z=\\frac{\\pi a^4}{4}.\n\\]\n因此 $X=Y=0$，$Z=3a/8$。\n\n另用球坐标 $z=s\\cos\\theta$，$\\dd V=s^2\\sin\\theta\\,\\dd s\\,\\dd\\theta\\,\\dd\\phi$，\n$0\\le\\theta\\le\\pi/2$，可得\n\\[\n\\int z\\dd V=\n\\int_0^{2\\pi}\\!\\dd\\phi\\int_0^{\\pi/2}\\!\\cos\\theta\\sin\\theta\\,\\dd\\theta\n\\int_0^a s^3\\dd s=\\frac{\\pi a^4}{4}.\n\\]\n厚半球壳由两实心半球相减：\n\\begin{equation}\nZ=\\frac{3(b^4-a^4)}{8(b^3-a^3)}.\n\\end{equation}\n$a=0$ 时恢复实心结果 $3b/8$；薄壳极限 $b\\to a$ 给出 $Z=a/2$。\n实心半球与薄半球壳的质心不同，不能混用。",
+    "kind": "完善定量或积分图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "revision_notes": "PPT原图可同时保留；恢复被遗漏的厚壳几何对象并明确半径。"
+  },
+  {
+    "key": "c2-diagram-05",
+    "old_index": 5,
+    "caption": "半圆锥的水平截面为半圆盘：先求截面形心 $4r/(3\\pi)$，再沿高度作体积加权",
+    "anchor": "}\n均匀圆锥底面半径为 $a$，高为 $h$。求完整圆锥的质心，以及沿包含轴的平面剖开、保留 $x\\ge0$ 部分后的质心。\n\\solution 先以顶点为原点、沿轴向下取 $s$。截面半径 $as/h$，截面积\n$\\pi a^2s^2/h^2$。故\n\\[\n\\bar s=\\frac{\\int_0^h s^3\\dd s}{\\int_0^h s^2\\dd s}=\\frac{3h}{4}.\n\\]\n以底面为 $z=0$、向上为正，则 $Z=h/4$。\n\n半圆锥仍有 $Z=h/4$，$Y=0$。高度 $z$ 处截面为半径\n$r=a(1-z/h)$ 的半圆盘，其面积为 $\\pi r^2/2$，面积对 $yz$ 平面的矩为\n\\[\n\\int_{x\\ge0}x\\,\\dd A\n=\\int_{-\\pi/2}^{\\pi/2}\\!\\cos\\phi\\,\\dd\\phi\\int_0^r s^2\\dd s\n=\\frac{2r^3}{3}.\n\\]\n积分得半圆锥体积 $V=\\pi a^2h/6$，一阶矩为\n$\\int_0^h(2/3)a^3(1-z/h)^3\\dd z=a^3h/6$。所以\n\\begin{equation}\n(X,Y,Z)=\\left(\\frac a\\pi,0,\\frac h4\\right).\n\\end{equation}",
+    "kind": "完善定量或积分图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "revision_notes": "完整圆锥原图不能说明横向一阶矩；本图将横向质心与逐片积分明确对应。"
+  },
+  {
+    "key": "c2-diagram-06",
+    "old_index": 6,
+    "caption": "抛物线薄片关于竖直轴对称，质心高度为 $3a/5$",
+    "anchor": "}\n均匀薄片由 $y=kx^2$ 与 $y=a$ 围成，其中 $k,a>0$。求质心。\n\\solution 关于 $y$ 轴对称，故 $X=0$。令 $b=\\sqrt{a/k}$，\n\\[\nA=\\int_{-b}^b(a-kx^2)\\dd x=\\frac43ab,\n\\]\n\\[\n\\int y\\,\\dd A=\\frac12\\int_{-b}^b(a^2-k^2x^4)\\dd x\n=\\frac45a^2b.\n\\]\n于是 $Y=3a/5$。取适当坐标单位使 $k=1$，即得到 $y=x^2$ 的特例。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-07",
+    "old_index": 7,
+    "caption": "均匀四面体的质心坐标等于各轴截距的四分之一",
+    "anchor": "}\n均匀四面体由 $x=0,y=0,z=0$ 和 $4x+2y+z=8$ 围成，求质心。\n\\solution 截距为 $a=2,b=4,c=8$。作变量变换\n$x=au,y=bv,z=cw$，积分域为\n$u,v,w\\ge0,u+v+w\\le1$。单纯形中四个重心坐标\n$u,v,w,1-u-v-w$ 地位对称且和为1，因此平均均为 $1/4$。\n也可直接计算\n\\[\n\\int\\dd u\\dd v\\dd w=\\frac16,\\quad\n\\int u\\,\\dd u\\dd v\\dd w=\\frac1{24}.\n\\]\n故\n\\begin{equation}\n(X,Y,Z)=\\left(\\frac a4,\\frac b4,\\frac c4\\right)=\\left(\\frac12,1,2\\right).\n\\end{equation}",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-08",
+    "old_index": 8,
+    "caption": "密度梯度使质心上移，不能只按体积平均",
+    "anchor": "}\n上半球半径为 $a$，密度随高度变化为 $\\rho(z)=\\rho_0(1+z/a)$。求质量及质心。\n\\solution 仍取水平截面，$\\dd m=\\rho_0(1+z/a)\\pi(a^2-z^2)\\dd z$。对称性给 $X=Y=0$。展开并积分：\n\\begin{align*}\nM&=\\rho_0\\pi\\int_0^a\\left(a^2-z^2+az-z^3/a\\right)\\dd z\\\\\n&=\\rho_0\\pi a^3\\left(1-\\frac13+\\frac12-\\frac14\\right)\n=\\frac{11}{12}\\rho_0\\pi a^3,\\\\\nMZ&=\\rho_0\\pi\\int_0^a\\left(a^2z-z^3+az^2-z^4/a\\right)\\dd z\\\\\n&=\\rho_0\\pi a^4\\left(\\frac12-\\frac14+\\frac13-\\frac15\\right)\n=\\frac{23}{60}\\rho_0\\pi a^4.\n\\end{align*}\n因此 $Z=23a/55\\approx0.41818a$。它高于均匀半球的 $3a/8$，符合上方更密的分布；同时仍在 $0<Z<a$ 内。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-12",
+    "old_index": 12,
+    "caption": "多人跳车必须逐次写出离车瞬间的动量方程",
+    "anchor": "}\n小车质量为 $M$，载有 $N$ 个质量均为 $m$ 的人，初始静止。\n每人离车时沿同一水平正方向，相对离车后小车速度为 $v$。\n比较同时跳离与逐个跳离时小车的最终速度。\n\\solution 同时离车时，若车速度为 $U$，每人的对地速度均为 $U+v$。\n\\begin{equation}\nU_{\\text{同时}}=-\\frac{Nm}{M+Nm}v.\n\\end{equation}\n依次离车时，设第 $k$ 人跳前共同速度为 $U_{k-1}$，跳后车与剩余人的速度为 $U_k$。\n以该瞬间“车、未离车的人、正在离车的人”为系统，\n\\[\n[M+(N-k+1)m]U_{k-1}\n=[M+(N-k)m]U_k+m(U_k+v).\n\\]\n故\n\\begin{equation}\nU_k-U_{k-1}=-\\frac{m}{M+(N-k+1)m}v,\\qquad\nU_{\\text{依次}}=-v\\sum_{j=1}^{N}\\frac{m}{M+jm}.\n\\end{equation}\n每项分母不大于 $M+Nm$，且 $N>1$ 时至少一项严格较小，因而\n$|U_{\\text{依次}}|>|U_{\\text{同时}}|$。\n差异来自每次跳离时车上剩余质量不同；各人的最终对地速度也不同。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-14",
+    "old_index": 14,
+    "caption": "外冲量的径向分量由绳约束分配给两个小球",
+    "anchor": "}\n质量为 $m_A,m_B$ 的小球由拉直的不可伸长轻绳连接，在光滑水平面上静止。\n给 $B$ 一个与 $A\\to B$ 方向成 $\\alpha$ 的冲量 $J$，\n$0\\le\\alpha<\\pi/2$。已知冲量后 $B$ 的速度大小为 $v_B$，求其方向和 $J$。\n\\solution 取绳方向为 $x$，横向为 $y$。冲量的向外分量使轻绳绷紧，\n绳的约束冲量为 $K$。绳长在冲量后必须满足两端径向相对速度为零：\n\\[\nm_Av_{Ax}=K,\\quad m_Bv_{Bx}=J\\cos\\alpha-K,\\quad\nv_{Ax}=v_{Bx}=\\frac{J\\cos\\alpha}{m_A+m_B}.\n\\]\n横向分量给出 $v_{Ay}=0$、$v_{By}=J\\sin\\alpha/m_B$，所以\n\\begin{equation}\n\\tan\\beta=\\frac{m_A+m_B}{m_B}\\tan\\alpha,\\qquad\nJ=\\frac{v_B}{\\sqrt{\\cos^2\\alpha/(m_A+m_B)^2+\\sin^2\\alpha/m_B^2}}.\n\\end{equation}\n同时 $K=m_AJ\\cos\\alpha/(m_A+m_B)$。\n若冲量方向使两球趋于靠近，柔绳会松弛，这组径向约束便不适用。\n若冲量作用时间很短，外冲量中输入的功取决于施力过程；不能从总动量方程单独推断其数值。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-24",
+    "old_index": 24,
+    "caption": "取 $\\alpha=10^\\circ$、$\\mu_s=0.2$。浅色带为静摩擦许可区间；实线为实际静止阶段，$\\theta_*=28.2517^\\circ$ 处首次越界。虚线仅表示继续固定下端所需的摩擦比，右图放大首次越界附近",
+    "anchor": "}\n保持上一例的几何与释放条件，地面最大静摩擦系数为 $\\mu_s$。\n若下球尚未移动，求所需支持力、摩擦力及起滑条件。\n\\solution 此阶段上球绕固定下球转动。\n\\[\n\\dot\\theta^2=\\frac{2g}{l}(\\cos\\alpha-\\cos\\theta),\\qquad\n\\ddot\\theta=\\frac gl\\sin\\theta.\n\\]\n上球速度 $v=l\\dot\\theta$，加速度分量为\n\\[\na_x=l(\\cos\\theta\\ddot\\theta-\\sin\\theta\\dot\\theta^2),\\quad\na_y=-l(\\sin\\theta\\ddot\\theta+\\cos\\theta\\dot\\theta^2).\n\\]\n下球加速度为零，全系统水平合力等于 $ma_x$，\n竖直合力 $N-2mg=ma_y$。以摩擦向右为正，得到\n\\begin{equation}\nN=mg(1-2\\cos\\alpha\\cos\\theta+3\\cos^2\\theta),\\quad\nf=mg(3\\cos\\theta-2\\cos\\alpha)\\sin\\theta.\n\\end{equation}\n静止接触需要 $N\\ge0$ 且 $|f|\\le\\mu_sN$。\n摩擦方向在\n\\[\n\\theta_0=\\arccos\\left(\\frac23\\cos\\alpha\\right)\n\\]\n处改变。起滑时满足\n\\begin{equation}\n\\mu_s=\\frac{|(3\\cos\\theta-2\\cos\\alpha)\\sin\\theta|}\n{1-2\\cos\\alpha\\cos\\theta+3\\cos^2\\theta}.\n\\end{equation}\n释放瞬间 $\\theta=\\alpha$，这条静止接触分支还须满足\n\\[\n\\mu_s\\ge\\frac{\\sin\\alpha\\cos\\alpha}{1+\\cos^2\\alpha}.\n\\]\n若不满足，下球自释放即起滑，应直接采用滑动阶段方程，\n不能沿静止分支寻找一个更晚的临界交点。\n初态满足许可条件时，沿 $\\theta$ 增大方向寻找\\textbf{首次越出}\n$|f|\\le\\mu_sN$ 许可区间的临界点；仅与边界相切而仍留在许可区间内，不意味着起滑。\n在 $f>0$ 支首次越过上界时，所需向右摩擦不足，下球开始向左滑；\n若此前始终可维持静止，而在 $f<0$ 支首次越过下界，则下球开始向右滑。\n若 $\\mu_s$ 不小于整段 $|f|/N$ 的最大值，\n则上球首次碰地以前下球不滑动；这一结论不涉及碰撞后的阶段。\n\n取 $\\alpha\\to0^+$ 的极限，最大需求约为 $2.041885$，\n发生于 $\\theta\\simeq1.492775\\,\\mathrm{rad}$。\n精确 $\\alpha=0$ 且初速为0是竖直平衡解，必须有微小偏角或初始扰动才会倒下。\n由起滑求得的是最大静摩擦系数，不是动摩擦系数。",
+    "kind": "完善定量或积分图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "revision_notes": "原曲线正确，但.3改.2后必须精确识别很窄的首次越界，避免读成首次负向越界。"
+  },
+  {
+    "key": "c2-diagram-26",
+    "old_index": 26,
+    "caption": "强冲量情形 $\\Lambda=J^2/(m^2gl)=4$ 的双球轨迹，横纵坐标分别为 $x/l,y/l$。在 $\\tau=t\\sqrt{g/l}\\approx0.890059$ 时原来的上球先碰地，此时下球仍高于地面；两条曲线均截止于这一事件。",
+    "anchor": "}\n取 $\\Lambda=4$，求哪一球先碰地及碰撞位置。用 $l$、$\\sqrt{l/g}$ 作长度和时间单位。\n\\solution 令 $\\tau=t\\sqrt{g/l}$，自由飞行角速率满足 $\\omega\\sqrt{l/g}=2$，两球轨迹为\n\\[\n\\frac{x_{1,2}}l=\\tau\\mp\\frac12\\sin2\\tau,\\qquad\n\\frac{y_{1,2}}l=\\frac12(1-\\tau^2\\mp\\cos2\\tau).\n\\]\n初始下球 $y_1(0)=0$，展开得 $y_1/l=\\tau^2/2+O(\\tau^4)>0$，所以零时刻不是新的碰撞。寻找从正高度返回零的第一个正根，上球方程为 $1-\\tau^2+\\cos2\\tau=0$，得到\n\\[\n\\tau_*=0.890059,\\quad \\theta_*=1.780117,\\quad\nx_1/l=0.400972,\\quad x_2/l=1.379145.\n\\]\n此时下球高度仍为正，所以上球先碰地。下球高度的下一零点约在 $\\tau=1.391557$，它属于未计第一次碰撞的自由轨迹延长线，不能用于实际后续运动。碰后需按恢复系数重新求速度并再次判断接触。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-29",
+    "old_index": 29,
+    "caption": "质量为 $m$、$2m$ 的弹簧双球速度。初始球1速度为 $v_0$、球2静止；水平细虚线为质心速度 $V/v_0=1/3$，两球各自的速度随时间周期变化。",
+    "anchor": "}\n光滑直线上两球质量为 $m_1=m,m_2=2m$，用劲度 $k$、原长 $a$ 的无质量弹簧连接。初始 $x_1=a,x_2=0,v_1=v_0>0,v_2=0$。假设振幅足够小，使两球不交换左右顺序。求两球运动及能量分解。\n\\solution 令 $q=x_1-x_2$，$M=3m,\\mu=2m/3$。质心与相对方程为\n\\[\n\\ddot R=0,\\qquad \\mu\\ddot q=-k(q-a),\\qquad\n\\omega=\\sqrt{3k/(2m)}.\n\\]\n由初态 $R(0)=a/3,\\dot R(0)=v_0/3,q(0)=a,\\dot q(0)=v_0$，得\n\\[\nR=\\frac a3+\\frac{v_0t}{3},\\qquad q=a+\\frac{v_0}{\\omega}\\sin\\omega t.\n\\]\n反解坐标，\n\\begin{align*}\nx_1&=a+\\frac{v_0t}{3}+\\frac{2v_0}{3\\omega}\\sin\\omega t,\\\\\nx_2&=\\frac{v_0t}{3}-\\frac{v_0}{3\\omega}\\sin\\omega t,\\\\\nv_1&=\\frac{v_0}{3}(1+2\\cos\\omega t),\\quad\nv_2=\\frac{v_0}{3}(1-\\cos\\omega t).\n\\end{align*}\n不交换顺序的充分条件为 $v_0/\\omega<a$。总动量 $mv_1+2mv_2=mv_0$ 恒定；能量为\n\\[\nT_{\\rm CM}=\\frac{mv_0^2}{6},\\qquad\nE_{\\rm rel}=\\frac12\\mu v_0^2=\\frac{mv_0^2}{3},\\qquad\nE=\\frac12mv_0^2.\n\\]\n相对能量中 $T_C=(mv_0^2/3)\\cos^2\\omega t$、\n$U=(mv_0^2/3)\\sin^2\\omega t$ 交换，质心平动能不变。两球各自的动能则随时间变化，不能单独守恒。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-33",
+    "old_index": 33,
+    "caption": "自由弹簧两体问题的有效势，取 $\\beta=2ka^2/(mv_0^2)=0.55$；横轴为 $r/a$，纵轴以 $E_{\\rm rel}=mv_0^2/4$ 归一化。两转折点为 $1$ 和 $x_*=2.201225$",
+    "anchor": "}\n两球质量均为 $m$，由劲度系数 $k>0$、原长 $a$ 的轻弹簧连接，\n初始静止且弹簧处于原长。给一个球横向冲量，使其初速度为 $v_0>0$，\n另一球仍静止。求两球间距的最小值和最大值。\n\\solution $\\mu=m/2$，质心速度为 $v_0/2$，\n初始相对速度大小为 $v_0$ 且垂直弹簧。\n相对角动量与能量为\n\\[\nL=\\frac{mav_0}{2},\\qquad E_{\\rm rel}=\\frac{mv_0^2}{4}.\n\\]\n有效势\n\\[\nU_{\\rm eff}(r)=\\frac{ma^2v_0^2}{4r^2}+\\frac12k(r-a)^2.\n\\]\n转折点满足\n\\[\n\\frac{a^2v_0^2}{r^2}+\\frac{2k}{m}(r-a)^2=v_0^2.\n\\]\n初始 $r=a,\\dot r=0$，$\\ddot r=v_0^2/a>0$，\n故原长是内侧转折点而不是圆轨道，$r_{\\min}=a$。\n令 $x=r/a$、$\\beta=2ka^2/(mv_0^2)$，外侧根满足\n\\begin{equation}\n\\beta x^2(x-1)=x+1,\\qquad x>1.\n\\end{equation}\n左侧对应有效势在其最低点外侧上升至初始能量；\n唯一大于1的物理解 $x_*$ 给出 $r_{\\max}=ax_*$。\n也可把条件写为 $\\beta x^3-\\beta x^2-x-1=0$，数值求根。\n$\\beta\\gg1$ 时最大伸长小；$k\\to0$ 时没有有限最大距离。\n$v_0=0$ 时两球保持静止，间距恒为 $a$。",
+    "kind": "完善定量或积分图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "revision_notes": "给出明确参数与能量尺度，避免泛示意与公式不对应。"
+  },
+  {
+    "key": "c2-diagram-37",
+    "old_index": 37,
+    "caption": "最高点水平分离只改变两者水平运动，质心抛物线保持不变",
+    "anchor": "}\n重量为 $W$ 的人携带重量为 $w$ 的物体，以速率 $v_0$、\n仰角 $\\alpha$ 从地面起跳。到最高点时将物体水平向后抛出，\n使人相对物体的向前水平速度为 $u>0$，两者初瞬竖直速度均为0。\n无空气阻力，落地与起跳处等高。求人相对不分离时预定落点的偏移和两落点间距。\n\\solution 两质量为 $W/g,w/g$，最高点原水平速度为 $v_0\\cos\\alpha$。\n质心系中\n\\[\nWv'_1+wv'_2=0,\\quad v'_1-v'_2=u\n\\Rightarrow v'_1=\\frac w{W+w}u,\\quad v'_2=-\\frac W{W+w}u.\n\\]\n下落时间为 $t_d=v_0\\sin\\alpha/g$，原定射程\n$R_0=v_0^2\\sin2\\alpha/g$。\n\\begin{equation}\nx_1=R_0+\\frac w{W+w}ut_d,\\qquad\nx_2=R_0-\\frac W{W+w}ut_d.\n\\end{equation}\n人前移 $\\Delta x_1=wu v_0\\sin\\alpha/[(W+w)g]$，\n两落点间距为 $ut_d$。\n另一解法是在地面系直接写水平动量守恒与相对速度条件，\n得到相同末态速度；质心系法先消去共同平移，更便于检查。\n质量加权落点仍为 $R_0$。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-39",
+    "old_index": 39,
+    "caption": "重入射球的速度圆：同一实验室方向对应两个末速度，切线给出最大散射角（$\\lambda=2$）",
+    "anchor": "\n\n令 $\\lambda=m_1/m_2$、\n$D=\\sqrt{1+\\lambda^2+2\\lambda\\cos\\Theta}$，\n实验室入射球散射角 $\\theta$ 满足\n\\begin{equation}\n\\sin\\theta=\\frac{\\sin\\Theta}{D},\\qquad\n\\cos\\theta=\\frac{\\lambda+\\cos\\Theta}{D}.\n\\end{equation}\n因此 $\\tan\\theta=\\sin\\Theta/(\\lambda+\\cos\\Theta)$，\n但计算时应保留象限，用上述正弦、余弦或\n$\\operatorname{atan2}(\\sin\\Theta,\\lambda+\\cos\\Theta)$。\n\n\\begin{itemize}\n\\item $0<\\lambda<1$：角度单调，一一对应，实验室可有后向散射。\n\\item $\\lambda=1$：$\\theta=\\Theta/2$，$0\\le\\theta<\\pi/2$。\n$\\Theta=\\pi$ 时入射球停下，其方向角没有定义。\n\\item $\\lambda>1$：实验室最大角为\n$\\theta_{\\max}=\\arcsin(1/\\lambda)$，\n发生于 $\\cos\\Theta=-1/\\lambda$。\n在 $0<\\theta<\\theta_{\\max}$ 有两个允许质心角：\n\\[\n\\Theta_1=\\theta+\\arcsin(\\lambda\\sin\\theta),\\quad\n\\Theta_2=\\theta+\\pi-\\arcsin(\\lambda\\sin\\theta).\n\\]\n\\end{itemize}",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "revision_notes": "使图真正展示双支；点坐标由二次方程计算。"
+  },
+  {
+    "key": "c2-diagram-40",
+    "old_index": 40,
+    "caption": "$\\lambda=2$ 时，实验室角 $17^\\circ$ 对应两个质心角；最大实验室角为 $30^\\circ$",
+    "anchor": "}\n两粒子相互作用势能为 $K/r$，$K>0$。\n实验室入射速率 $u$、靶初始静止。\n给出用于角度变换的相对能量及质心系截面。\n\\solution 初始相对速率是 $u$，\n\\[\nE_{\\rm rel}=\\frac12\\mu u^2\n=\\frac{m_2}{M}T_{1,\\text{入}}.\n\\]\n例如在非相对论、忽略屏蔽和核力的点电荷模型中，\n$\\alpha$ 粒子与金原子核分别带电 $Z_1q_{\\rm e}$、$Z_2q_{\\rm e}$，\n$q_{\\rm e}>0$ 是元电荷，$\\epsilon_0$ 是真空介电常数，故\n\\[\nK=\\frac{Z_1Z_2q_{\\rm e}^{\\,2}}{4\\pi\\epsilon_0},\\qquad\n\\mu=\\frac{m_\\alpha m_{\\rm Au}}{m_\\alpha+m_{\\rm Au}}.\n\\]\n无外力时质心匀速运动；相对质点满足\n$\\mu\\ddot{\\vect r}=(K/r^2)\\er$。\n设冲量参数 $b>0$，相对角动量大小 $L=\\mu ub$，\n以最近点方向为极角 $\\phi=0$，令 $w=1/r$。斥力的 Binet 方程及其解为\n\\[\nw''+w=-\\frac{\\mu K}{L^2},\\qquad\nr=\\frac{p}{e_{\\rm orb}\\cos\\phi-1},\\qquad\np=\\frac{L^2}{\\mu K}.\n\\]\n这里 $e_{\\rm orb}$ 是轨道离心率，与元电荷区分。\n由相对能量得\n\\[\ne_{\\rm orb}^{\\,2}=1+\\frac{2E_{\\rm rel}L^2}{\\mu K^2}>1,\n\\]\n所以轨道为斥力双曲线，仅 $e_{\\rm orb}\\cos\\phi>1$ 的支可取。\n两条渐近方向满足 $\\cos\\phi_\\infty=1/e_{\\rm orb}$，\n入、出射速度的散射角为 $\\Theta=\\pi-2\\phi_\\infty$，于是\n\\[\n\\cot\\frac\\Theta2=\\tan\\phi_\\infty\n=\\sqrt{e_{\\rm orb}^{\\,2}-1}=\\frac{2E_{\\rm rel}b}{K}.\n\\]\n因此中心斥力轨道给冲量参数\n$b=K\\cot(\\Theta/2)/(2E_{\\rm rel})$。\n正碰 $b=0$ 时不采用除以 $L^2$ 的轨道推导，而由极限得到 $\\Theta=\\pi$。\n轴对称入射束中环形面积 $\\dd\\sigma=2\\pi b|\\dd b|$，所以\n\\[\nf_C(\\Theta)=\\frac{b}{\\sin\\Theta}\\left|\\frac{\\dd b}{\\dd\\Theta}\\right|\n=\\left(\\frac{K}{4E_{\\rm rel}}\\right)^2\n\\frac1{\\sin^4(\\Theta/2)}.\n\\]\n再按对应的质量比选择角支，代入立体角雅可比求 $f_L$。\n这里能量必须是相对运动能量；直接代入实验室入射能量会改变系数。\n理想无限程库仑力在极小角区间有发散，具体总截面讨论还须说明角度范围或屏蔽模型。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "revision_notes": "标明同一纵坐标对应的两个横坐标；明确角度刻度。"
+  },
+  {
+    "key": "c2-diagram-43",
+    "old_index": 43,
+    "caption": "燃气相对喷速与地面速度不同，推力项为 $-c\\dot m$",
+    "anchor": "}\n火箭质量为 $m(t)$，燃气相对火箭向后喷出的速率恒为 $c>0$。\n求无外力时的速度变化；再求恒流率 $q>0$、竖直向上喷射、\n均匀重力下的速度与高度。\n\\solution 沿前进方向为正，燃气惯性速度 $u=v-c$，\n$\\dot m<0$。变质量方程为\n\\[\nm\\dot v=F_{\\rm ext}-c\\dot m.\n\\]\n无外力时积分得\n\\begin{equation}\nv-v_0=c\\ln\\frac{m_0}{m}.\n\\end{equation}\n这不是恒推力假设，而是恒相对喷速假设。\n竖直恒流率模型 $m=m_0-qt$、$F_{\\rm ext}=-mg$，\n\\[\n\\dot v=\\frac{cq}{m_0-qt}-g,\n\\qquad\nv(t)=v_0+c\\ln\\frac{m_0}{m_0-qt}-gt.\n\\]\n从 $z(0)=z_0$ 积分：\n\\begin{equation}\nz(t)=z_0+v_0t+c\\left[t-\\frac{m_0-qt}{q}\n\\ln\\frac{m_0}{m_0-qt}\\right]-\\frac12gt^2.\n\\end{equation}\n求导可恢复 $v(t)$；$q\\to0$ 时恢复无喷气的抛体运动。\n公式仅用于燃烧阶段，质量应始终不小于干质量 $m_f>0$。\n燃烧结束时刻 $t_b=(m_0-m_f)/q$，以后质量不变，按外力重新积分。\n\n若 $q=\\alpha m_0$，则\n\\[\nv(t)=v_0-c\\ln(1-\\alpha t)-gt,\\quad\n\\dot v=\\frac{\\alpha c}{1-\\alpha t}-g.\n\\]\n若 $v_0\\ge0$，从初瞬起全程严格加速上升的自由飞行条件是 $\\alpha c>g$。\n在某个后来的时刻，仅需 $\\alpha c>g(1-\\alpha t)$。\n若初始推力不足而火箭仍在发射台上，发射台支持力必须计入，\n不能把自由飞行解延伸到穿过地面的负高度。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-44",
+    "old_index": 44,
+    "caption": "先在发射台上燃烧、后自由飞行的火箭速度，图示区间截至熄火。示例在 $t_L/t_b=1/2$ 时起飞，熄火时 $v_b/(gt_b)=\\ln2-1/2$。",
+    "anchor": "}\n火箭初始质量 $m_0$、干质量 $m_f$，从水平发射台静止燃烧。恒质量流率为 $q>0$，相对向后喷速为 $c$，重力恒定，无空气阻力。燃烧结束 $t_b=(m_0-m_f)/q$。求起飞条件及起飞后运动。\n\\solution 燃烧时 $m(t)=m_0-qt$、推力为 $cq$。仍在台上时 $v=0,z=z_0$，支持力\n$N=m(t)g-cq$。地面只能提供 $N\\ge0$，当质量降至 $m_L=cq/g$ 时达到离台阈值。\n\n若 $cq>m_0g$，从零时刻起飞；若 $m_fg<cq<m_0g$，先在台上燃烧，起飞时刻\n\\[\nt_L=\\frac{m_0-cq/g}{q},\\qquad m(t_L)=m_L.\n\\]\n若 $cq\\le m_fg$，燃烧结束前都不能产生向上的自由飞行；等号只在熄火瞬间达到零支持力，不能形成有限上升过程。初始等号 $cq=m_0g$ 时燃烧随即减轻质量，可视为 $t_L=0$ 的极限。\n\n对于实际起飞的支，记 $\\Delta t=t-t_L$、$m_L=m(t_L)$、$v(t_L)=0$。自由飞行方程为 $m\\dot v=cq-mg$。积分得\n\\[\nv(t)=c\\ln\\frac{m_L}{m(t)}-g\\Delta t,\n\\]\n\\[\nz(t)-z_0=c\\left[\\Delta t-\\frac{m(t)}q\\ln\\frac{m_L}{m(t)}\\right]\n-\\frac12g\\Delta t^2,\\qquad t_L\\le t\\le t_b.\n\\]\n延迟起飞时不能继续使用 $m_0$ 作对数起始质量，因为此前主体速度始终为零。熄火后令 $v_b=v(t_b),z_b=z(t_b)$，有\n\\[\nv=v_b-g(t-t_b),\\quad z=z_b+v_b(t-t_b)-\\frac12g(t-t_b)^2.\n\\]\n若 $v_b>0$，最高点时间为 $t_b+v_b/g$，高度为 $z_b+v_b^2/(2g)$。\n\n例如取 $m_0=3m_f$、$q=2m_f/t_b$、$c=gt_b$，推力初始不足，$m_L=2m_f$、$t_L=t_b/2$。熄火结果为\n\\[\n\\frac{v_b}{gt_b}=\\ln2-\\frac12\\approx0.193147,\n\\quad\\frac{z_b-z_0}{gt_b^2}=\\frac38-\\frac12\\ln2\\approx0.0284264.\n\\]\n这组例子显示“全程自由飞行”和“先燃烧后起飞”具有不同初值与时间区间。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-45",
+    "old_index": 45,
+    "caption": "按表面积凝结的恒密度雨滴，其半径与时间成线性关系。箭头仅表示下降方向，长度不表示速率；$0<t_1<t_2$。",
+    "anchor": "}\n球形雨滴密度为 $\\rho$，初始半径为 $a$、初速0，\n质量增长率 $\\dot m=c_s r^2$，$c_s>0$。\n凝结物质对地静止，无空气阻力。求半径、速度和加速度。\n\\solution $m=4\\pi\\rho r^3/3$，故\n$4\\pi\\rho r^2\\dot r=c_s r^2$，\n令 $\\lambda=c_s/(4\\pi\\rho)$，得到 $r=a+\\lambda t$。\n动量积分\n\\[\nmv=\\int_0^t m(\\tau)g\\,\\dd\\tau\n=\\frac{4\\pi\\rho}{3}\\frac g{4\\lambda}\n[(a+\\lambda t)^4-a^4].\n\\]\n所以\n\\begin{equation}\nv=\\frac g{4\\lambda}\\left[a+\\lambda t-\\frac{a^4}{(a+\\lambda t)^3}\\right],\n\\quad\n\\dot v=\\frac g4\\left[1+3\\left(\\frac a{a+\\lambda t}\\right)^4\\right].\n\\end{equation}\n初始加速度为 $g$，长期渐近为 $g/4$，仍无有限终端速度。\n若把增长率写为 $\\dot m=km^{2/3}$，则\n$m^{1/3}=m_0^{1/3}+kt/3$，\n半径为 $r=[m_0^{1/3}+kt/3]/(4\\pi\\rho/3)^{1/3}$。\n立方根不能误写成平方根。\n若增长来自扫掠流体而增长率还依赖 $v$，\n则是另一模型，须同时修改 $m(t)$ 与动量方程。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-48",
+    "old_index": 48,
+    "caption": "对地射弹速度为负的瞬时示意；另一题设的地面速度方向须另行判断",
+    "anchor": "}\n裸机枪质量为 $M$，初始弹药总质量为 $M'$，\n以恒质量流率 $q$ 射出，初始静止。\n取机枪回冲方向为正，地面动摩擦系数为 $\\mu_f$，\n假设已启动且全程沿正方向滑动。\n比较子弹对地恒速度 $-u$ 与相对机枪恒速度 $-u$ 两种模型的最终枪速。\n\\solution 枪与未射弹药的主体质量\n$m(t)=M+M'-qt$，射完时 $t_f=M'/q$，\n摩擦力 $F=-\\mu_fmg$。\n\n\\textbf{模型一：子弹对地速度 $U=-u$ 恒定。}\n开放动量式为\n\\[\n\\frac{\\dd(mv)}{\\dd t}-qu=-\\mu_fmg.\n\\]\n积分得\n\\[\nmv=qu\\,t-\\mu_fg[(M+M')t-qt^2/2],\n\\]\n所以\n\\begin{equation}\nv_f=\\frac{M'}M u\n-\\frac{\\mu_fg}{2qM}\\big[(M+M')^2-M^2\\big].\n\\end{equation}\n摩擦减小回冲，括号中必须是初始质量平方减干质量平方。\n无摩擦时所有射弹对地总动量为 $-M'u$，\n枪末动量为 $M'u$，符合整体动量守恒。\n\n\\textbf{模型二：相对机枪速度 $U-v=-u$ 恒定。}\n此时 $U=v-u$，方程变为\n\\[\nm\\dot v=qu-\\mu_fmg.\n\\]\n积分到射完：\n\\begin{equation}\nv_f=u\\ln\\frac{M+M'}M-\\frac{\\mu_fgM'}q.\n\\end{equation}\n两个公式回答不同的速度题设，不可互换。\n若枪没有启动或中途停止，滑动摩擦方向不再保持上述形式，\n必须加入静摩擦阈值与分段运动条件。\n初始已滑动模型要从静止立即向正方向运动，至少需\n$qu>\\mu_f(M+M')g$；实际启动还要比较最大静摩擦。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-49",
+    "old_index": 49,
+    "caption": "是否可省去平均边界项，取决于 $D$ 的长期增长而非某一瞬时值",
+    "anchor": "}\n无力粒子以恒速度 $\\vect v$ 运动，求式 \\eqref{eq:virfinite} 两端。\n\\solution $\\vect r=\\vect r_0+\\vect vt$、$\\vect p=m\\vect v$，\n$D(\\tau)-D(0)=mv^2\\tau$。\n右端为 $mv^2=2T$，左端 $W=0$，同样为 $2T$。\n边界项并不消失，不能据 $W=0$ 推出 $\\overline T=0$。\n孤立系统若整体匀速平移，应在不旋转质心系中讨论内部束缚和平衡，\n避免把无界平移混入内部位力关系。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "revision_notes": "消除不可能的非零周期平均D。"
+  },
+  {
+    "key": "c2-diagram-50",
+    "old_index": 50,
+    "caption": "从最大位移处静止释放的谐振子：$T/E=\\sin^2\\omega t$、$U/E=\\cos^2\\omega t$。两者瞬时互补，各自的周期平均均为 $1/2$。",
+    "anchor": "}\n$x=A\\cos\\omega t$、$\\omega^2=k/m$，求一周期平均动能和势能。\n\\solution\n$T=mA^2\\omega^2\\sin^2\\omega t/2$、\n$U=kA^2\\cos^2\\omega t/2$，\n一周期正弦平方与余弦平方平均均为 $1/2$。\n\\[\n\\overline T=\\overline U=\\frac14kA^2,\\qquad\nE=\\frac12kA^2.\n\\]\n这与 $\\alpha=2$ 的位力定理相符，定理给的是平均关系而非任意瞬时\n$T=U$。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  },
+  {
+    "key": "c2-diagram-52",
+    "old_index": 52,
+    "caption": "经典时间平均与量子定态期望具有不同含义，均须满足相应条件",
+    "anchor": "}\n经典位力式使用时间平均。\n量子力学中，$\\langle\\hat A\\rangle=\\langle\\psi|\\hat A|\\psi\\rangle$\n是给定量子态的算符期望值；混态为\n$\\operatorname{Tr}(\\hat\\rho\\hat A)$。它不要求在不同能量态之间平均。\n\n取时间无关 Hamiltonian\n\\[\n\\hat H=\\sum_i\\frac{\\hat{\\vect p}_i^2}{2m_i}+U(\\hat{\\vect r}_1,\\ldots),\n\\quad\n\\hat D=\\frac12\\sum_i\n(\\hat{\\vect r}_i\\cdot\\hat{\\vect p}_i+\n\\hat{\\vect p}_i\\cdot\\hat{\\vect r}_i).\n\\]\n对称化使 $\\hat D$ 为 Hermitian 算符。\n用 $[\\hat r_{i\\alpha},\\hat p_{j\\beta}]\n=i\\hbar\\delta_{ij}\\delta_{\\alpha\\beta}$，\n可得\n\\[\n\\frac{i}{\\hbar}[\\hat H,\\hat D]\n=2\\hat T-\\sum_i\\hat{\\vect r}_i\\cdot\\nabla_iU.\n\\]\nHeisenberg/Ehrenfest 方程因此给\n\\begin{equation}\n\\frac{\\dd\\langle\\hat D\\rangle}{\\dd t}\n=2\\langle\\hat T\\rangle\n-\\left\\langle\\sum_i\\hat{\\vect r}_i\\cdot\\nabla_iU\\right\\rangle.\n\\end{equation}\n对可归一化束缚定态，若相关期望有限、算符定义域与边界条件成立，\n左端为0，得到量子位力定理\n\\begin{equation}\n2\\langle\\hat T\\rangle\n=\\left\\langle\\sum_i\\hat{\\vect r}_i\\cdot\\nabla_iU\\right\\rangle.\n\\end{equation}\n齐次势同样给 $2\\langle\\hat T\\rangle=\\alpha\\langle U\\rangle$。\n库仑束缚定态满足\n$\\langle\\hat T\\rangle=-\\langle U\\rangle/2$，\n这不依赖假设电子具有经典周期轨道。\n非定态须保留导数项，或另检查长期平均的边界项是否消失。\n\n\\important{\\textbf{位力定理的检查点}\\quad\n首先区分瞬时恒等式与平均结论；\n其次核查边界项；再辨明内力、壁力及外场；\n最后说明平均是时间平均、平衡统计平均还是量子态期望。\n相同的代数形式并不意味着平均的物理含义相同。}",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑"
+  }
+]

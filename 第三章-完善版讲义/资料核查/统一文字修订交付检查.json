@@ -1,0 +1,26 @@
+{
+  "chapter": 3,
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/PDF/第三章-刚体力学讲义.pdf",
+  "official_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学讲义-完善版.pdf",
+  "source_zip": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/可编辑源码/第三章-刚体力学-完善版LaTeX源码及图片.zip",
+  "official_zip": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学-完善版LaTeX源码及图片.zip",
+  "top_directory": "第三章-刚体力学源码",
+  "main_filename": "第三章-刚体力学讲义-完善版.tex",
+  "pages": 283,
+  "examples": 66,
+  "exercises": 30,
+  "original_assets": 117,
+  "diagram_files": {
+    "补充图": 59,
+    "题图": 96,
+    "解答图": 96
+  },
+  "embedded_TikZ": 1,
+  "zip_entries": 370,
+  "warnings": [],
+  "pdf_sha256": "ee0158fd67aff95a90fd49d5e09685025b661adbe1194ddbd47b5af0066ab184",
+  "tex_sha256": "29911bb4b07143303a4d2293d8997af6e838aaac415214e2d30427ceba60fb46",
+  "zip_sha256": "5fad34e8f1eaaa07c1ddd1c44a66c6b23307a26c965b9d9f8de6c391c99700d1",
+  "pdf_bytes": 19366491,
+  "zip_bytes": 151831662
+}

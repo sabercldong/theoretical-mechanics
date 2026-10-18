@@ -1,0 +1,2950 @@
+{
+  "reviewer": "c3_originals_a",
+  "reviewed_at": "2026-10-14",
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学讲义-完善版.pdf",
+  "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+  "physical_page_range": [
+    73,
+    144
+  ],
+  "printed_page_range": [
+    69,
+    140
+  ],
+  "page_count_reviewed": 72,
+  "figure_count_reviewed": 77,
+  "figure_range": [
+    "3.69",
+    "3.145"
+  ],
+  "status": "pass",
+  "scope": "最终候选 PDF 的中段交叉视觉核查；未沿用旧稿结论。",
+  "method": [
+    "逐张查看 9 张总览（sheet-073-080 至 sheet-137-144）覆盖 72 页。",
+    "逐页查看 p073.png 至 p144.png；全数 77 幅原图/模型图及图题均放大核查。",
+    "对图3.132同时查看原图高清 PNG，以区分源图颜色与缩放问题。",
+    "核验实际 PDF SHA-256 与父代理给定最终候选 hash 一致。"
+  ],
+  "checks": {
+    "label_clipping": "未发现内容标签被裁切",
+    "diagram_caption_agreement": "符号对应已补齐，未发现图文实质矛盾",
+    "orphan_headings": "未发现",
+    "formula_overflow": "未发现",
+    "footer_caption_collision": "未发现",
+    "background_fragments": "MID-01至MID-09均已解决；图3.101最后一条题干底边亦已移除。原图必要前景框保留。",
+    "label_readability": "图3.132源图浅色标签保留，图题明示其含义与正文符号对应；已解决。"
+  },
+  "page80_regression": {
+    "status": "pass",
+    "finding": "“顶点原点的直接积分。”标题、正文与公式分行正常，图3.78在独立行，后续“张量平行轴的逐项校验。”亦独立起段；无原先标题/图片挤在同一行的问题。背景橙线单列为 MID-01。"
+  },
+  "issues": [
+    {
+      "id": "MID-01",
+      "physical_page": 80,
+      "printed_page": 76,
+      "figure": "3.78",
+      "asset_key": "c3-3-p011-cube-vertex",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "白色外框下方混入约 11 pt 橙色背景线；父代理已独立定位源页白框下边 y=227.65，可收紧至 y=228.2 保留完整细框。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.78下方橙条消失；白色细框、字母及立方体边线完整。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-02",
+      "physical_page": 93,
+      "printed_page": 89,
+      "figure": "3.87",
+      "asset_key": "c3-4-p003-circular-path",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "原图四周夹有绿色、橙色主题边条，右边尤为明显。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.87主题绿/橙边条消失；黄色原图细框保留正确，所有坐标及角速度标签完整。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-03",
+      "physical_page": 96,
+      "printed_page": 92,
+      "figure": "3.89",
+      "asset_key": "c3-4-p008-physical-pendulum",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "原图左上、顶边及右下残留绿色、橙色背景细条。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.89主题背景残条消失，蓝色原图细框与原有字母、箭头完整。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-04",
+      "physical_page": 100,
+      "printed_page": 96,
+      "figure": "3.91",
+      "asset_key": "c3-4-p013-bearing-forces",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "原图左上大片绿色及顶边残条，底部有橙色小段。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.91绿色块及橙色残条消失，黄色原图边框保留，所有力/轴标注完整。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-05",
+      "physical_page": 106,
+      "printed_page": 102,
+      "figure": "3.97",
+      "asset_key": "c3-4-p009-tipping-cube",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "图形上方留有独立橙色横线，未参与任何几何关系。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.97顶部孤立橙条消失，立方体、虚线、倾角弧及字母无损。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-06",
+      "physical_page": 107,
+      "printed_page": 103,
+      "figure": "3.99",
+      "asset_key": "c3-4-p011-massive-pulley",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "顶部青色主题条及边缘少量杂色残条位于白色示意图框之外。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.99顶部青色条消失，蓝框、转向、T1/T2及质量标签完整。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-07",
+      "physical_page": 108,
+      "printed_page": 104,
+      "figure": "3.101",
+      "asset_key": "c3-4-p018-tilted-disk",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "原图上方横跨图宽的淡黄色细线与几何无关。",
+      "recommendation": "上裁边收至164pt附近并核对红色x′标签可见墨迹完整，或只清除题干文本框底边。",
+      "regression_finding": "物理108页图3.101顶部淡黄线仍在。核查模板背景剥离/c3-4-source-figures.pdf的p18，题干文本框渲染位图bbox为[19.786,9.128,711.014,163.531]，当前图裁剪y0=163纳入该无关文字框约0.53pt底边；不是示意图前景细框。",
+      "resolution": "已将图3.101源页crop y0从163改为164pt。实际查看最终物理108页及原图高清PNG：淡黄色题干底边已消失，红色x′完整且上方留有白边，全部转轴、主轴、力箭头和字母保留，图题/公式/页脚布局完整。",
+      "resolved_in_pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba"
+    },
+    {
+      "id": "MID-08",
+      "physical_page": 109,
+      "printed_page": 105,
+      "figure": "3.103",
+      "asset_key": "c3-4-p027-t-rod-loads",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "图形两侧残留青、橙、绿色背景短条。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.103两侧彩色母版残条消失，结构线、尺寸线与字母完整。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-09",
+      "physical_page": 113,
+      "printed_page": 109,
+      "figure": "3.104",
+      "asset_key": "c3-4-p028-t-rod-accelerations",
+      "category": "background_fragment",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "原图上沿大片绿色边条及两侧彩色边条来自幻灯片主题框。",
+      "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。",
+      "resolution": "图3.104主题绿/橙边条消失，原图全部箭头、受力与加速度标签保留。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-10",
+      "physical_page": 106,
+      "printed_page": 102,
+      "figure": "3.97",
+      "asset_key": "c3-4-p009-tipping-cube",
+      "category": "symbol_mapping",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "图中倾角标作 α，正文和相邻模型图使用 θ 与 θ₀；当前图题仅称“初始角”，未说明符号对应。",
+      "recommendation": "图题补明“图中 α 表示正文的倾角 θ，释放时为 θ₀”。",
+      "resolution": "图3.97图题现明确图中α对应正文倾角θ，释放时为θ₀；图题和页脚间隔正常。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    },
+    {
+      "id": "MID-11",
+      "physical_page": 135,
+      "printed_page": 131,
+      "figure": "3.132",
+      "asset_key": "c3-5-p033-wheel-left-acceleration",
+      "category": "label_contrast",
+      "severity": "minor",
+      "status": "resolved",
+      "finding": "图中 ω、ε 是浅紫色；原图高清 PNG 亦为此颜色。缩放到讲义尺寸后这两个标签对比度明显偏低，其余标签完整可读。",
+      "recommendation": "至少在图题说明 ω 为角速度、ε 表示角加速度（对应正文 α）；如恢复颜色，只针对原标签加深并记录，勿改变图形和方向。",
+      "resolution": "图3.132保留源图浅色标签，并在图题清楚说明ω为角速度、ε对应正文角加速度α；图题未溢出。",
+      "resolved_in_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da"
+    }
+  ],
+  "pages": [
+    {
+      "physical_page": 73,
+      "printed_page": 69,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.69",
+        "3.70"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 74,
+      "printed_page": 70,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.71"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 75,
+      "printed_page": 71,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.72",
+        "3.73"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 76,
+      "printed_page": 72,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.74"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 77,
+      "printed_page": 73,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 78,
+      "printed_page": 74,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.75"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 79,
+      "printed_page": 75,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.76",
+        "3.77"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 80,
+      "printed_page": 76,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.78"
+      ],
+      "findings": [
+        "MID-01"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 81,
+      "printed_page": 77,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.79"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 82,
+      "printed_page": 78,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 83,
+      "printed_page": 79,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 84,
+      "printed_page": 80,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 85,
+      "printed_page": 81,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.80",
+        "3.81"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 86,
+      "printed_page": 82,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 87,
+      "printed_page": 83,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 88,
+      "printed_page": 84,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 89,
+      "printed_page": 85,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.82",
+        "3.83"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 90,
+      "printed_page": 86,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.84"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 91,
+      "printed_page": 87,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 92,
+      "printed_page": 88,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.85",
+        "3.86"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 93,
+      "printed_page": 89,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.87"
+      ],
+      "findings": [
+        "MID-02"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 94,
+      "printed_page": 90,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 95,
+      "printed_page": 91,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 96,
+      "printed_page": 92,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.88",
+        "3.89"
+      ],
+      "findings": [
+        "MID-03"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 97,
+      "printed_page": 93,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 98,
+      "printed_page": 94,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 99,
+      "printed_page": 95,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 100,
+      "printed_page": 96,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.90",
+        "3.91"
+      ],
+      "findings": [
+        "MID-04"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 101,
+      "printed_page": 97,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.92"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 102,
+      "printed_page": 98,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.93",
+        "3.94"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 103,
+      "printed_page": 99,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 104,
+      "printed_page": 100,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.95"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 105,
+      "printed_page": 101,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 106,
+      "printed_page": 102,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.96",
+        "3.97"
+      ],
+      "findings": [
+        "MID-05",
+        "MID-10"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 107,
+      "printed_page": 103,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.98",
+        "3.99"
+      ],
+      "findings": [
+        "MID-06"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 108,
+      "printed_page": 104,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.100",
+        "3.101"
+      ],
+      "findings": [
+        "MID-07"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 109,
+      "printed_page": 105,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.102",
+        "3.103"
+      ],
+      "findings": [
+        "MID-08"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 110,
+      "printed_page": 106,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 111,
+      "printed_page": 107,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 112,
+      "printed_page": 108,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 113,
+      "printed_page": 109,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.104"
+      ],
+      "findings": [
+        "MID-09"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 114,
+      "printed_page": 110,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 115,
+      "printed_page": 111,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.105",
+        "3.106"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 116,
+      "printed_page": 112,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.107",
+        "3.108",
+        "3.109"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 117,
+      "printed_page": 113,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.110",
+        "3.111"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 118,
+      "printed_page": 114,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.112"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 119,
+      "printed_page": 115,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.113",
+        "3.114"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 120,
+      "printed_page": 116,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.115"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 121,
+      "printed_page": 117,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.116",
+        "3.117",
+        "3.118"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 122,
+      "printed_page": 118,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.119",
+        "3.120"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 123,
+      "printed_page": 119,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 124,
+      "printed_page": 120,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.121"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 125,
+      "printed_page": 121,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.122"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 126,
+      "printed_page": 122,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.123"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 127,
+      "printed_page": 123,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 128,
+      "printed_page": 124,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 129,
+      "printed_page": 125,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.124",
+        "3.125"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 130,
+      "printed_page": 126,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.126",
+        "3.127"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 131,
+      "printed_page": 127,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.128"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 132,
+      "printed_page": 128,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 133,
+      "printed_page": 129,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 134,
+      "printed_page": 130,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.129",
+        "3.130"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 135,
+      "printed_page": 131,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.131",
+        "3.132",
+        "3.133"
+      ],
+      "findings": [
+        "MID-11"
+      ],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 136,
+      "printed_page": 132,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.134",
+        "3.135"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 137,
+      "printed_page": 133,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.136",
+        "3.137"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 138,
+      "printed_page": 134,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 139,
+      "printed_page": 135,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 140,
+      "printed_page": 136,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.138"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 141,
+      "printed_page": 137,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.139",
+        "3.140"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 142,
+      "printed_page": 138,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.141",
+        "3.142"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 143,
+      "printed_page": 139,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [
+        "3.143",
+        "3.144",
+        "3.145"
+      ],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    },
+    {
+      "physical_page": 144,
+      "printed_page": 140,
+      "overview_checked": true,
+      "full_page_checked": true,
+      "figures": [],
+      "findings": [],
+      "layout_status": "pass",
+      "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+    }
+  ],
+  "figures": [
+    {
+      "label": "fig:lesson-c3-diagram-24",
+      "number": "3.69",
+      "page": 73
+    },
+    {
+      "label": "fig:orig-c3-3-p022-symmetry-examples",
+      "number": "3.70",
+      "page": 73
+    },
+    {
+      "label": "fig:orig-c3-3-p021-lamina-axes",
+      "number": "3.71",
+      "page": 74
+    },
+    {
+      "label": "fig:orig-c3-3-p014-rod-direction",
+      "number": "3.72",
+      "page": 75
+    },
+    {
+      "label": "fig:lesson-c3-diagram-25",
+      "number": "3.73",
+      "page": 75
+    },
+    {
+      "label": "fig:orig-c3-3-p038-solid-sphere",
+      "number": "3.74",
+      "page": 76
+    },
+    {
+      "label": "fig:lesson-c3-diagram-26",
+      "number": "3.75",
+      "page": 78
+    },
+    {
+      "label": "fig:orig-c3-3-p042-hemisphere-pair",
+      "number": "3.76",
+      "page": 79
+    },
+    {
+      "label": "fig:orig-c3-3-p009-cube-center",
+      "number": "3.77",
+      "page": 79
+    },
+    {
+      "label": "fig:orig-c3-3-p011-cube-vertex",
+      "number": "3.78",
+      "page": 80
+    },
+    {
+      "label": "fig:lesson-c3-diagram-27",
+      "number": "3.79",
+      "page": 81
+    },
+    {
+      "label": "fig:lesson-c3-diagram-28",
+      "number": "3.80",
+      "page": 85
+    },
+    {
+      "label": "fig:orig-c3-3-p047-triangle-masses",
+      "number": "3.81",
+      "page": 85
+    },
+    {
+      "label": "fig:lesson-c3-diagram-29",
+      "number": "3.82",
+      "page": 89
+    },
+    {
+      "label": "fig:orig-c3-3-p024-octant-sphere",
+      "number": "3.83",
+      "page": 89
+    },
+    {
+      "label": "fig:orig-c3-3-p049-gyroscope-axes",
+      "number": "3.84",
+      "page": 90
+    },
+    {
+      "label": "fig:orig-c3-4-p002-fixed-axis-cases",
+      "number": "3.85",
+      "page": 92
+    },
+    {
+      "label": "fig:orig-c3-4-p002-axial-translation",
+      "number": "3.86",
+      "page": 92
+    },
+    {
+      "label": "fig:orig-c3-4-p003-circular-path",
+      "number": "3.87",
+      "page": 93
+    },
+    {
+      "label": "fig:lesson-c3-diagram-30",
+      "number": "3.88",
+      "page": 96
+    },
+    {
+      "label": "fig:orig-c3-4-p008-physical-pendulum",
+      "number": "3.89",
+      "page": 96
+    },
+    {
+      "label": "fig:lesson-c3-diagram-31",
+      "number": "3.90",
+      "page": 100
+    },
+    {
+      "label": "fig:orig-c3-4-p013-bearing-forces",
+      "number": "3.91",
+      "page": 100
+    },
+    {
+      "label": "fig:orig-c3-4-p024-centrifugal-couple",
+      "number": "3.92",
+      "page": 101
+    },
+    {
+      "label": "fig:lesson-c3-diagram-32",
+      "number": "3.93",
+      "page": 102
+    },
+    {
+      "label": "fig:orig-c3-4-p019-tilted-disk-3d",
+      "number": "3.94",
+      "page": 102
+    },
+    {
+      "label": "fig:lesson-c3-diagram-33",
+      "number": "3.95",
+      "page": 104
+    },
+    {
+      "label": "fig:lesson-c3-diagram-34",
+      "number": "3.96",
+      "page": 106
+    },
+    {
+      "label": "fig:orig-c3-4-p009-tipping-cube",
+      "number": "3.97",
+      "page": 106
+    },
+    {
+      "label": "fig:lesson-c3-diagram-35",
+      "number": "3.98",
+      "page": 107
+    },
+    {
+      "label": "fig:orig-c3-4-p011-massive-pulley",
+      "number": "3.99",
+      "page": 107
+    },
+    {
+      "label": "fig:lesson-c3-diagram-36",
+      "number": "3.100",
+      "page": 108
+    },
+    {
+      "label": "fig:orig-c3-4-p018-tilted-disk",
+      "number": "3.101",
+      "page": 108
+    },
+    {
+      "label": "fig:lesson-c3-diagram-37",
+      "number": "3.102",
+      "page": 109
+    },
+    {
+      "label": "fig:orig-c3-4-p027-t-rod-loads",
+      "number": "3.103",
+      "page": 109
+    },
+    {
+      "label": "fig:orig-c3-4-p028-t-rod-accelerations",
+      "number": "3.104",
+      "page": 113
+    },
+    {
+      "label": "fig:orig-c3-5-p002-parallel-planes",
+      "number": "3.105",
+      "page": 115
+    },
+    {
+      "label": "fig:orig-c3-5-p002-rotation-translation",
+      "number": "3.106",
+      "page": 115
+    },
+    {
+      "label": "fig:lesson-c3-diagram-38",
+      "number": "3.107",
+      "page": 116
+    },
+    {
+      "label": "fig:orig-c3-5-p006-instant-center",
+      "number": "3.108",
+      "page": 116
+    },
+    {
+      "label": "fig:orig-c3-5-p007-one-velocity",
+      "number": "3.109",
+      "page": 116
+    },
+    {
+      "label": "fig:orig-c3-5-p007-rolling-contact",
+      "number": "3.110",
+      "page": 117
+    },
+    {
+      "label": "fig:orig-c3-5-p008-nonparallel-velocities",
+      "number": "3.111",
+      "page": 117
+    },
+    {
+      "label": "fig:orig-c3-5-p003-planar-position",
+      "number": "3.112",
+      "page": 118
+    },
+    {
+      "label": "fig:orig-c3-5-p008-opposite-directions",
+      "number": "3.113",
+      "page": 119
+    },
+    {
+      "label": "fig:orig-c3-5-p008-same-direction",
+      "number": "3.114",
+      "page": 119
+    },
+    {
+      "label": "fig:orig-c3-5-p009-instant-translation",
+      "number": "3.115",
+      "page": 120
+    },
+    {
+      "label": "fig:orig-c3-5-p011-body-circle",
+      "number": "3.116",
+      "page": 121
+    },
+    {
+      "label": "fig:orig-c3-5-p011-contact-loci",
+      "number": "3.117",
+      "page": 121
+    },
+    {
+      "label": "fig:orig-c3-5-p011-fixed-circle",
+      "number": "3.118",
+      "page": 121
+    },
+    {
+      "label": "fig:lesson-c3-diagram-39",
+      "number": "3.119",
+      "page": 122
+    },
+    {
+      "label": "fig:orig-c3-5-p012-ladder-loci",
+      "number": "3.120",
+      "page": 122
+    },
+    {
+      "label": "fig:lesson-c3-diagram-40",
+      "number": "3.121",
+      "page": 124
+    },
+    {
+      "label": "fig:orig-c3-5-p041-moving-center",
+      "number": "3.122",
+      "page": 125
+    },
+    {
+      "label": "fig:orig-c3-5-p015-rolling-centers",
+      "number": "3.123",
+      "page": 126
+    },
+    {
+      "label": "fig:lesson-c3-diagram-41",
+      "number": "3.124",
+      "page": 129
+    },
+    {
+      "label": "fig:orig-c3-5-p017-incline-forces",
+      "number": "3.125",
+      "page": 129
+    },
+    {
+      "label": "fig:lesson-c3-diagram-42",
+      "number": "3.126",
+      "page": 130
+    },
+    {
+      "label": "fig:orig-c3-5-p019-unwinding-disc",
+      "number": "3.127",
+      "page": 130
+    },
+    {
+      "label": "fig:orig-c3-5-p020-rolling-resistance",
+      "number": "3.128",
+      "page": 131
+    },
+    {
+      "label": "fig:lesson-c3-diagram-43",
+      "number": "3.129",
+      "page": 134
+    },
+    {
+      "label": "fig:orig-c3-5-p005-wheel-relative",
+      "number": "3.130",
+      "page": 134
+    },
+    {
+      "label": "fig:orig-c3-5-p032-wheel-bottom-acceleration",
+      "number": "3.131",
+      "page": 135
+    },
+    {
+      "label": "fig:orig-c3-5-p033-wheel-left-acceleration",
+      "number": "3.132",
+      "page": 135
+    },
+    {
+      "label": "fig:orig-c3-5-p034-wheel-velocity-field",
+      "number": "3.133",
+      "page": 135
+    },
+    {
+      "label": "fig:lesson-c3-diagram-44",
+      "number": "3.134",
+      "page": 136
+    },
+    {
+      "label": "fig:orig-c3-5-p023-planet-arc",
+      "number": "3.135",
+      "page": 136
+    },
+    {
+      "label": "fig:orig-c3-5-p023-planet-mechanism",
+      "number": "3.136",
+      "page": 137
+    },
+    {
+      "label": "fig:orig-c3-5-p024-planet-velocities",
+      "number": "3.137",
+      "page": 137
+    },
+    {
+      "label": "fig:lesson-c3-diagram-45",
+      "number": "3.138",
+      "page": 140
+    },
+    {
+      "label": "fig:orig-c3-5-p025-groove-geometry",
+      "number": "3.139",
+      "page": 141
+    },
+    {
+      "label": "fig:orig-c3-5-p026-groove-forces",
+      "number": "3.140",
+      "page": 141
+    },
+    {
+      "label": "fig:lesson-c3-diagram-46",
+      "number": "3.141",
+      "page": 142
+    },
+    {
+      "label": "fig:orig-c3-5-p028-two-wheel-mechanism",
+      "number": "3.142",
+      "page": 142
+    },
+    {
+      "label": "fig:lesson-c3-diagram-47",
+      "number": "3.143",
+      "page": 143
+    },
+    {
+      "label": "fig:orig-c3-5-p029-corner-contacts",
+      "number": "3.144",
+      "page": 143
+    },
+    {
+      "label": "fig:orig-c3-5-p029-corner-forces",
+      "number": "3.145",
+      "page": 143
+    }
+  ],
+  "unresolved": false,
+  "recheck_required": false,
+  "write_scope": "本任务仅写入此核查 JSON，未修改主 TeX、原图或其他记录。",
+  "initial_full_review": {
+    "reviewer": "c3_originals_a",
+    "reviewed_at": "2026-10-14",
+    "pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学讲义-完善版.pdf",
+    "pdf_sha256": "e6ef58f086c98636188419333db3753e37dc7e3ca74b725d1537c7657971b4a2",
+    "physical_page_range": [
+      73,
+      144
+    ],
+    "printed_page_range": [
+      69,
+      140
+    ],
+    "page_count_reviewed": 72,
+    "figure_count_reviewed": 77,
+    "figure_range": [
+      "3.69",
+      "3.145"
+    ],
+    "status": "minor_fixes_required",
+    "scope": "最终候选 PDF 的中段交叉视觉核查；未沿用旧稿结论。",
+    "method": [
+      "逐张查看 9 张总览（sheet-073-080 至 sheet-137-144）覆盖 72 页。",
+      "逐页查看 p073.png 至 p144.png；全数 77 幅原图/模型图及图题均放大核查。",
+      "对图3.132同时查看原图高清 PNG，以区分源图颜色与缩放问题。",
+      "核验实际 PDF SHA-256 与父代理给定最终候选 hash 一致。"
+    ],
+    "checks": {
+      "label_clipping": "未发现内容标签被裁切",
+      "diagram_caption_agreement": "除 MID-10 建议明示符号对应之外，无发现图文实质矛盾",
+      "orphan_headings": "未发现",
+      "formula_overflow": "未发现",
+      "footer_caption_collision": "未发现",
+      "background_fragments": "9 幅需清理，见 MID-01 至 MID-09",
+      "label_readability": "图3.132两标签对比度偏低，见 MID-11"
+    },
+    "page80_regression": {
+      "status": "pass",
+      "finding": "“顶点原点的直接积分。”标题、正文与公式分行正常，图3.78在独立行，后续“张量平行轴的逐项校验。”亦独立起段；无原先标题/图片挤在同一行的问题。背景橙线单列为 MID-01。"
+    },
+    "issues": [
+      {
+        "id": "MID-01",
+        "physical_page": 80,
+        "printed_page": 76,
+        "figure": "3.78",
+        "asset_key": "c3-3-p011-cube-vertex",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "白色外框下方混入约 11 pt 橙色背景线；父代理已独立定位源页白框下边 y=227.65，可收紧至 y=228.2 保留完整细框。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-02",
+        "physical_page": 93,
+        "printed_page": 89,
+        "figure": "3.87",
+        "asset_key": "c3-4-p003-circular-path",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "原图四周夹有绿色、橙色主题边条，右边尤为明显。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-03",
+        "physical_page": 96,
+        "printed_page": 92,
+        "figure": "3.89",
+        "asset_key": "c3-4-p008-physical-pendulum",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "原图左上、顶边及右下残留绿色、橙色背景细条。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-04",
+        "physical_page": 100,
+        "printed_page": 96,
+        "figure": "3.91",
+        "asset_key": "c3-4-p013-bearing-forces",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "原图左上大片绿色及顶边残条，底部有橙色小段。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-05",
+        "physical_page": 106,
+        "printed_page": 102,
+        "figure": "3.97",
+        "asset_key": "c3-4-p009-tipping-cube",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "图形上方留有独立橙色横线，未参与任何几何关系。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-06",
+        "physical_page": 107,
+        "printed_page": 103,
+        "figure": "3.99",
+        "asset_key": "c3-4-p011-massive-pulley",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "顶部青色主题条及边缘少量杂色残条位于白色示意图框之外。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-07",
+        "physical_page": 108,
+        "printed_page": 104,
+        "figure": "3.101",
+        "asset_key": "c3-4-p018-tilted-disk",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "原图上方横跨图宽的淡黄色细线与几何无关。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-08",
+        "physical_page": 109,
+        "printed_page": 105,
+        "figure": "3.103",
+        "asset_key": "c3-4-p027-t-rod-loads",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "图形两侧残留青、橙、绿色背景短条。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-09",
+        "physical_page": 113,
+        "printed_page": 109,
+        "figure": "3.104",
+        "asset_key": "c3-4-p028-t-rod-accelerations",
+        "category": "background_fragment",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "原图上沿大片绿色边条及两侧彩色边条来自幻灯片主题框。",
+        "recommendation": "在不改变原图图形、坐标轴、字母及必要外框的前提下，收紧裁切或清除孤立背景残片；修改后重渲染本页复核。"
+      },
+      {
+        "id": "MID-10",
+        "physical_page": 106,
+        "printed_page": 102,
+        "figure": "3.97",
+        "asset_key": "c3-4-p009-tipping-cube",
+        "category": "symbol_mapping",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "图中倾角标作 α，正文和相邻模型图使用 θ 与 θ₀；当前图题仅称“初始角”，未说明符号对应。",
+        "recommendation": "图题补明“图中 α 表示正文的倾角 θ，释放时为 θ₀”。"
+      },
+      {
+        "id": "MID-11",
+        "physical_page": 135,
+        "printed_page": 131,
+        "figure": "3.132",
+        "asset_key": "c3-5-p033-wheel-left-acceleration",
+        "category": "label_contrast",
+        "severity": "minor",
+        "status": "repair_recommended",
+        "finding": "图中 ω、ε 是浅紫色；原图高清 PNG 亦为此颜色。缩放到讲义尺寸后这两个标签对比度明显偏低，其余标签完整可读。",
+        "recommendation": "至少在图题说明 ω 为角速度、ε 表示角加速度（对应正文 α）；如恢复颜色，只针对原标签加深并记录，勿改变图形和方向。"
+      }
+    ],
+    "pages": [
+      {
+        "physical_page": 73,
+        "printed_page": 69,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.69",
+          "3.70"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 74,
+        "printed_page": 70,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.71"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 75,
+        "printed_page": 71,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.72",
+          "3.73"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 76,
+        "printed_page": 72,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.74"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 77,
+        "printed_page": 73,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 78,
+        "printed_page": 74,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.75"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 79,
+        "printed_page": 75,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.76",
+          "3.77"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 80,
+        "printed_page": 76,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.78"
+        ],
+        "findings": [
+          "MID-01"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 81,
+        "printed_page": 77,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.79"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 82,
+        "printed_page": 78,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 83,
+        "printed_page": 79,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 84,
+        "printed_page": 80,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 85,
+        "printed_page": 81,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.80",
+          "3.81"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 86,
+        "printed_page": 82,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 87,
+        "printed_page": 83,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 88,
+        "printed_page": 84,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 89,
+        "printed_page": 85,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.82",
+          "3.83"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 90,
+        "printed_page": 86,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.84"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 91,
+        "printed_page": 87,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 92,
+        "printed_page": 88,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.85",
+          "3.86"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 93,
+        "printed_page": 89,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.87"
+        ],
+        "findings": [
+          "MID-02"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 94,
+        "printed_page": 90,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 95,
+        "printed_page": 91,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 96,
+        "printed_page": 92,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.88",
+          "3.89"
+        ],
+        "findings": [
+          "MID-03"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 97,
+        "printed_page": 93,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 98,
+        "printed_page": 94,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 99,
+        "printed_page": 95,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 100,
+        "printed_page": 96,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.90",
+          "3.91"
+        ],
+        "findings": [
+          "MID-04"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 101,
+        "printed_page": 97,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.92"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 102,
+        "printed_page": 98,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.93",
+          "3.94"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 103,
+        "printed_page": 99,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 104,
+        "printed_page": 100,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.95"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 105,
+        "printed_page": 101,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 106,
+        "printed_page": 102,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.96",
+          "3.97"
+        ],
+        "findings": [
+          "MID-05",
+          "MID-10"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 107,
+        "printed_page": 103,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.98",
+          "3.99"
+        ],
+        "findings": [
+          "MID-06"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 108,
+        "printed_page": 104,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.100",
+          "3.101"
+        ],
+        "findings": [
+          "MID-07"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 109,
+        "printed_page": 105,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.102",
+          "3.103"
+        ],
+        "findings": [
+          "MID-08"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 110,
+        "printed_page": 106,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 111,
+        "printed_page": 107,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 112,
+        "printed_page": 108,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 113,
+        "printed_page": 109,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.104"
+        ],
+        "findings": [
+          "MID-09"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 114,
+        "printed_page": 110,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 115,
+        "printed_page": 111,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.105",
+          "3.106"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 116,
+        "printed_page": 112,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.107",
+          "3.108",
+          "3.109"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 117,
+        "printed_page": 113,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.110",
+          "3.111"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 118,
+        "printed_page": 114,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.112"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 119,
+        "printed_page": 115,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.113",
+          "3.114"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 120,
+        "printed_page": 116,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.115"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 121,
+        "printed_page": 117,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.116",
+          "3.117",
+          "3.118"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 122,
+        "printed_page": 118,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.119",
+          "3.120"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 123,
+        "printed_page": 119,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 124,
+        "printed_page": 120,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.121"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 125,
+        "printed_page": 121,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.122"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 126,
+        "printed_page": 122,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.123"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 127,
+        "printed_page": 123,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 128,
+        "printed_page": 124,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 129,
+        "printed_page": 125,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.124",
+          "3.125"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 130,
+        "printed_page": 126,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.126",
+          "3.127"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 131,
+        "printed_page": 127,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.128"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 132,
+        "printed_page": 128,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 133,
+        "printed_page": 129,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 134,
+        "printed_page": 130,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.129",
+          "3.130"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 135,
+        "printed_page": 131,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.131",
+          "3.132",
+          "3.133"
+        ],
+        "findings": [
+          "MID-11"
+        ],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 136,
+        "printed_page": 132,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.134",
+          "3.135"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 137,
+        "printed_page": 133,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.136",
+          "3.137"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 138,
+        "printed_page": 134,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 139,
+        "printed_page": 135,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 140,
+        "printed_page": 136,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.138"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 141,
+        "printed_page": 137,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.139",
+          "3.140"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 142,
+        "printed_page": 138,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.141",
+          "3.142"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 143,
+        "printed_page": 139,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [
+          "3.143",
+          "3.144",
+          "3.145"
+        ],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      },
+      {
+        "physical_page": 144,
+        "printed_page": 140,
+        "overview_checked": true,
+        "full_page_checked": true,
+        "figures": [],
+        "findings": [],
+        "layout_status": "pass",
+        "notes": "已逐页放大检查标题、公式行、图题、页脚及所有图形。"
+      }
+    ],
+    "figures": [
+      {
+        "label": "fig:lesson-c3-diagram-24",
+        "number": "3.69",
+        "page": 73
+      },
+      {
+        "label": "fig:orig-c3-3-p022-symmetry-examples",
+        "number": "3.70",
+        "page": 73
+      },
+      {
+        "label": "fig:orig-c3-3-p021-lamina-axes",
+        "number": "3.71",
+        "page": 74
+      },
+      {
+        "label": "fig:orig-c3-3-p014-rod-direction",
+        "number": "3.72",
+        "page": 75
+      },
+      {
+        "label": "fig:lesson-c3-diagram-25",
+        "number": "3.73",
+        "page": 75
+      },
+      {
+        "label": "fig:orig-c3-3-p038-solid-sphere",
+        "number": "3.74",
+        "page": 76
+      },
+      {
+        "label": "fig:lesson-c3-diagram-26",
+        "number": "3.75",
+        "page": 78
+      },
+      {
+        "label": "fig:orig-c3-3-p042-hemisphere-pair",
+        "number": "3.76",
+        "page": 79
+      },
+      {
+        "label": "fig:orig-c3-3-p009-cube-center",
+        "number": "3.77",
+        "page": 79
+      },
+      {
+        "label": "fig:orig-c3-3-p011-cube-vertex",
+        "number": "3.78",
+        "page": 80
+      },
+      {
+        "label": "fig:lesson-c3-diagram-27",
+        "number": "3.79",
+        "page": 81
+      },
+      {
+        "label": "fig:lesson-c3-diagram-28",
+        "number": "3.80",
+        "page": 85
+      },
+      {
+        "label": "fig:orig-c3-3-p047-triangle-masses",
+        "number": "3.81",
+        "page": 85
+      },
+      {
+        "label": "fig:lesson-c3-diagram-29",
+        "number": "3.82",
+        "page": 89
+      },
+      {
+        "label": "fig:orig-c3-3-p024-octant-sphere",
+        "number": "3.83",
+        "page": 89
+      },
+      {
+        "label": "fig:orig-c3-3-p049-gyroscope-axes",
+        "number": "3.84",
+        "page": 90
+      },
+      {
+        "label": "fig:orig-c3-4-p002-fixed-axis-cases",
+        "number": "3.85",
+        "page": 92
+      },
+      {
+        "label": "fig:orig-c3-4-p002-axial-translation",
+        "number": "3.86",
+        "page": 92
+      },
+      {
+        "label": "fig:orig-c3-4-p003-circular-path",
+        "number": "3.87",
+        "page": 93
+      },
+      {
+        "label": "fig:lesson-c3-diagram-30",
+        "number": "3.88",
+        "page": 96
+      },
+      {
+        "label": "fig:orig-c3-4-p008-physical-pendulum",
+        "number": "3.89",
+        "page": 96
+      },
+      {
+        "label": "fig:lesson-c3-diagram-31",
+        "number": "3.90",
+        "page": 100
+      },
+      {
+        "label": "fig:orig-c3-4-p013-bearing-forces",
+        "number": "3.91",
+        "page": 100
+      },
+      {
+        "label": "fig:orig-c3-4-p024-centrifugal-couple",
+        "number": "3.92",
+        "page": 101
+      },
+      {
+        "label": "fig:lesson-c3-diagram-32",
+        "number": "3.93",
+        "page": 102
+      },
+      {
+        "label": "fig:orig-c3-4-p019-tilted-disk-3d",
+        "number": "3.94",
+        "page": 102
+      },
+      {
+        "label": "fig:lesson-c3-diagram-33",
+        "number": "3.95",
+        "page": 104
+      },
+      {
+        "label": "fig:lesson-c3-diagram-34",
+        "number": "3.96",
+        "page": 106
+      },
+      {
+        "label": "fig:orig-c3-4-p009-tipping-cube",
+        "number": "3.97",
+        "page": 106
+      },
+      {
+        "label": "fig:lesson-c3-diagram-35",
+        "number": "3.98",
+        "page": 107
+      },
+      {
+        "label": "fig:orig-c3-4-p011-massive-pulley",
+        "number": "3.99",
+        "page": 107
+      },
+      {
+        "label": "fig:lesson-c3-diagram-36",
+        "number": "3.100",
+        "page": 108
+      },
+      {
+        "label": "fig:orig-c3-4-p018-tilted-disk",
+        "number": "3.101",
+        "page": 108
+      },
+      {
+        "label": "fig:lesson-c3-diagram-37",
+        "number": "3.102",
+        "page": 109
+      },
+      {
+        "label": "fig:orig-c3-4-p027-t-rod-loads",
+        "number": "3.103",
+        "page": 109
+      },
+      {
+        "label": "fig:orig-c3-4-p028-t-rod-accelerations",
+        "number": "3.104",
+        "page": 113
+      },
+      {
+        "label": "fig:orig-c3-5-p002-parallel-planes",
+        "number": "3.105",
+        "page": 115
+      },
+      {
+        "label": "fig:orig-c3-5-p002-rotation-translation",
+        "number": "3.106",
+        "page": 115
+      },
+      {
+        "label": "fig:lesson-c3-diagram-38",
+        "number": "3.107",
+        "page": 116
+      },
+      {
+        "label": "fig:orig-c3-5-p006-instant-center",
+        "number": "3.108",
+        "page": 116
+      },
+      {
+        "label": "fig:orig-c3-5-p007-one-velocity",
+        "number": "3.109",
+        "page": 116
+      },
+      {
+        "label": "fig:orig-c3-5-p007-rolling-contact",
+        "number": "3.110",
+        "page": 117
+      },
+      {
+        "label": "fig:orig-c3-5-p008-nonparallel-velocities",
+        "number": "3.111",
+        "page": 117
+      },
+      {
+        "label": "fig:orig-c3-5-p003-planar-position",
+        "number": "3.112",
+        "page": 118
+      },
+      {
+        "label": "fig:orig-c3-5-p008-opposite-directions",
+        "number": "3.113",
+        "page": 119
+      },
+      {
+        "label": "fig:orig-c3-5-p008-same-direction",
+        "number": "3.114",
+        "page": 119
+      },
+      {
+        "label": "fig:orig-c3-5-p009-instant-translation",
+        "number": "3.115",
+        "page": 120
+      },
+      {
+        "label": "fig:orig-c3-5-p011-body-circle",
+        "number": "3.116",
+        "page": 121
+      },
+      {
+        "label": "fig:orig-c3-5-p011-contact-loci",
+        "number": "3.117",
+        "page": 121
+      },
+      {
+        "label": "fig:orig-c3-5-p011-fixed-circle",
+        "number": "3.118",
+        "page": 121
+      },
+      {
+        "label": "fig:lesson-c3-diagram-39",
+        "number": "3.119",
+        "page": 122
+      },
+      {
+        "label": "fig:orig-c3-5-p012-ladder-loci",
+        "number": "3.120",
+        "page": 122
+      },
+      {
+        "label": "fig:lesson-c3-diagram-40",
+        "number": "3.121",
+        "page": 124
+      },
+      {
+        "label": "fig:orig-c3-5-p041-moving-center",
+        "number": "3.122",
+        "page": 125
+      },
+      {
+        "label": "fig:orig-c3-5-p015-rolling-centers",
+        "number": "3.123",
+        "page": 126
+      },
+      {
+        "label": "fig:lesson-c3-diagram-41",
+        "number": "3.124",
+        "page": 129
+      },
+      {
+        "label": "fig:orig-c3-5-p017-incline-forces",
+        "number": "3.125",
+        "page": 129
+      },
+      {
+        "label": "fig:lesson-c3-diagram-42",
+        "number": "3.126",
+        "page": 130
+      },
+      {
+        "label": "fig:orig-c3-5-p019-unwinding-disc",
+        "number": "3.127",
+        "page": 130
+      },
+      {
+        "label": "fig:orig-c3-5-p020-rolling-resistance",
+        "number": "3.128",
+        "page": 131
+      },
+      {
+        "label": "fig:lesson-c3-diagram-43",
+        "number": "3.129",
+        "page": 134
+      },
+      {
+        "label": "fig:orig-c3-5-p005-wheel-relative",
+        "number": "3.130",
+        "page": 134
+      },
+      {
+        "label": "fig:orig-c3-5-p032-wheel-bottom-acceleration",
+        "number": "3.131",
+        "page": 135
+      },
+      {
+        "label": "fig:orig-c3-5-p033-wheel-left-acceleration",
+        "number": "3.132",
+        "page": 135
+      },
+      {
+        "label": "fig:orig-c3-5-p034-wheel-velocity-field",
+        "number": "3.133",
+        "page": 135
+      },
+      {
+        "label": "fig:lesson-c3-diagram-44",
+        "number": "3.134",
+        "page": 136
+      },
+      {
+        "label": "fig:orig-c3-5-p023-planet-arc",
+        "number": "3.135",
+        "page": 136
+      },
+      {
+        "label": "fig:orig-c3-5-p023-planet-mechanism",
+        "number": "3.136",
+        "page": 137
+      },
+      {
+        "label": "fig:orig-c3-5-p024-planet-velocities",
+        "number": "3.137",
+        "page": 137
+      },
+      {
+        "label": "fig:lesson-c3-diagram-45",
+        "number": "3.138",
+        "page": 140
+      },
+      {
+        "label": "fig:orig-c3-5-p025-groove-geometry",
+        "number": "3.139",
+        "page": 141
+      },
+      {
+        "label": "fig:orig-c3-5-p026-groove-forces",
+        "number": "3.140",
+        "page": 141
+      },
+      {
+        "label": "fig:lesson-c3-diagram-46",
+        "number": "3.141",
+        "page": 142
+      },
+      {
+        "label": "fig:orig-c3-5-p028-two-wheel-mechanism",
+        "number": "3.142",
+        "page": 142
+      },
+      {
+        "label": "fig:lesson-c3-diagram-47",
+        "number": "3.143",
+        "page": 143
+      },
+      {
+        "label": "fig:orig-c3-5-p029-corner-contacts",
+        "number": "3.144",
+        "page": 143
+      },
+      {
+        "label": "fig:orig-c3-5-p029-corner-forces",
+        "number": "3.145",
+        "page": 143
+      }
+    ],
+    "unresolved": true,
+    "recheck_required": "父代理汇总修复后，应对所有变更资产所在最终页重新渲染，记录新 hash；本报告只证明上述 hash 版本的检查结果。",
+    "write_scope": "本任务仅写入此核查 JSON，未修改主 TeX、原图或其他记录。"
+  },
+  "regression_reviews": [
+    {
+      "pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+      "physical_pages_reviewed": [
+        73,
+        76,
+        79,
+        80,
+        85,
+        92,
+        93,
+        96,
+        100,
+        106,
+        107,
+        108,
+        109,
+        113,
+        135
+      ],
+      "method": "实际逐页放大最终重渲染PNG；检查全部图形、标签、图题、相邻公式、页脚。",
+      "page_count": 15,
+      "status": "one_minor_fix_required",
+      "resolved_issue_ids": [
+        "MID-01",
+        "MID-02",
+        "MID-03",
+        "MID-04",
+        "MID-05",
+        "MID-06",
+        "MID-08",
+        "MID-09",
+        "MID-10",
+        "MID-11"
+      ],
+      "open_issue_ids": [
+        "MID-07"
+      ],
+      "source_check": "确认circular-path等黄色原图细框应保留；108页淡黄线经PDF图像bbox和PPT slide18.xml确认来自上方文本框底边。",
+      "unchanged_page_evidence": "资料核查/终校影响页检查.json报告196页像素不变；本回归未冒称全量重新目视218页。",
+      "new_layout_issues": []
+    },
+    {
+      "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+      "previous_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+      "physical_pages_reviewed": [
+        108
+      ],
+      "additional_assets_reviewed": [
+        "原图/c3-4-p018-tilted-disk.png"
+      ],
+      "method": "实际查看新108页最终渲染与高清原图，核查黄色底边移除和所有标签/线条保留。",
+      "status": "pass",
+      "resolved_issue_ids": [
+        "MID-07"
+      ],
+      "open_issue_ids": [],
+      "new_layout_issues": [],
+      "unchanged_page_evidence": "资料核查/最终单页修订影响检查.json：相对b792版仅108页像素改变，218页文本完全一致，其余217页像素不变。"
+    }
+  ],
+  "final_pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+  "final_status": "pass",
+  "open_issue_ids": [],
+  "initial_pdf_sha256": "e6ef58f086c98636188419333db3753e37dc7e3ca74b725d1537c7657971b4a2",
+  "final_scope_note": "初轮物理73–144页全量视觉记录完整保存在initial_full_review；随后实际回归15页（73、76、79、80、85、92、93、96、100、106、107、108、109、113、135），末轮实际再看108页。变更影响检查证明本段其余页无需重复渲染审阅。",
+  "final_conclusion": "中段终稿视觉核查通过。初轮11项均已解决：无关背景条及题干底边已移除，图3.97与3.132补齐符号说明；原图前景细框按来源保留。全部回归页未见新标签裁切、线条损伤、图文实质矛盾、公式溢出、标题孤悬或图题/页脚碰撞。"
+}

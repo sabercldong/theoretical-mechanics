@@ -1,0 +1,1671 @@
+{
+  "reviewer": "revision_training_qa_c",
+  "status": "completed",
+  "reviewed_at": "2026-10-18T07:42:48.261365+08:00",
+  "source_decks": {
+    "c5-7": 22,
+    "c5-8": 23,
+    "c5-9": 31
+  },
+  "total_pages": 76,
+  "page_coordinate_system": "PDF points; 720×540; origin top-left; crop_rect_pt=[x0,y0,x1,y1]; page is 1-based",
+  "old_manuscript": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/旧版完整主稿.tex",
+  "old_manuscript_sha256": "662c1126e226c8ee4e905c88490594851bd1081a475b595b6b2add6e1b7122f1",
+  "source_pdf_sha256": {
+    "c5-7": "ce602edfc81aff920c316807491be6146c64409f6300ebcf602106dbcb2e6b48",
+    "c5-8": "2d8e26c230cb22b09f9d637d2757b8d2bc3ae5d6a7f305564f9e4da52c48fb54",
+    "c5-9": "1a1512d93e3724f13f65674141eafd9af7ffcff54ef3ad3642cc1961b2ad5f39"
+  },
+  "method": {
+    "overview": "实际查看全部 14 张联系图，覆盖 76 页；每个有原图页另看原 PNG 全页，原图识别不依据文字提取代替。",
+    "full_page_enlargements": {
+      "c5-7": [
+        16
+      ],
+      "c5-8": [
+        2,
+        3,
+        8,
+        9,
+        10,
+        13,
+        18,
+        20,
+        21
+      ],
+      "c5-9": [
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    "in_memory_crop_verification": "全部 20 处裁框已从源 PDF 在内存实际渲染、拼成五张四格预览并查看；收紧带入标题/页脚的框后，全 20 处再渲染复看。无图片资产写盘。另实际查看 10 处推荐内嵌图，正确应用 SMask 并置于白底，核对黑字、透明底及完整标签。",
+    "reference_reports_used": [
+      "第五章-分析力学/工作文件/源审核-7至9.md",
+      "第五章-分析力学/工作文件/不简化复查-7至9.md"
+    ],
+    "source_files_modified": false,
+    "main_or_assets_created": false,
+    "crop_previews": "first crop review → tighten frames → repeat all 20 crop reviews; complete",
+    "native_asset_rendering": "优先内嵌原图的 10 处给出 xref、SMask、尺寸；预览只在内存正常渲染透明度，未改绘原图。不得仅提取裸 RGB 图导致黑底/黑字丢失。"
+  },
+  "summary": {
+    "figure_occurrences": 20,
+    "retain_static_assets": 18,
+    "duplicate_occurrences": 2,
+    "source_photos": 1,
+    "conceptual_diagrams": 1,
+    "new_substantive_math_omissions_found": 0,
+    "original_image_retention_gap": "旧稿无 includegraphics 原图引用；有图内容主要被 TikZ 或文字替换。源图须与现有正文/解答分析图结合，不能继续仅用重绘图替代。",
+    "native_extraction_recommendations": 10,
+    "compound_asset_note": "p3 势能与相图是两个原图单元，推荐按 preferred_group_crop_rect_pt 合为一个复合资产，保留虚线对应；如此输出文件数可少一个。",
+    "visual_limits": "个别源母版细线/页界覆盖属于原 PDF 呈现；推荐的内嵌原图能避开这些覆盖。源图数学错误保留到正文解释，禁止为了图面整洁重绘或删改源标注。"
+  },
+  "figures": [
+    {
+      "key": "c5-7-p016-parabolic-grid",
+      "deck": "c5-7",
+      "page": 16,
+      "crop_rect_pt": [
+        494,
+        228,
+        678,
+        324
+      ],
+      "caption": "三维旋转抛物坐标的两族正交子午曲线",
+      "old_subsection": "三维抛物坐标中的分离",
+      "old_example_numbers": [
+        65
+      ],
+      "decision": "retain",
+      "notes": "原图是子午截面，绕正文 z 轴旋转成三维坐标曲面；源页柱坐标径向符号 r 对应旧稿 ρ。图中无单独坐标标签，不应补称已画有 ξ、η 轴。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-7.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-7/016.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。"
+    },
+    {
+      "key": "c5-7-p016-prolate-grid",
+      "deck": "c5-7",
+      "page": 16,
+      "crop_rect_pt": [
+        495,
+        348,
+        677,
+        530
+      ],
+      "caption": "共焦椭圆与双曲线组成的长旋转椭球坐标网格",
+      "old_subsection": "长旋转椭球坐标中的分离",
+      "old_example_numbers": [
+        66
+      ],
+      "decision": "retain",
+      "notes": "源图竖轴 z、横轴 x，与正文焦轴取 z 一致；子午图中 ρ=|x|。源图参数 μ、ν 对应正文 ξ=coshμ、η=cosν，μ≥0、0≤ν≤π；不能把图内角 ν 误作绕 z 轴的方位角 ϑ。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-7.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-7/016.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 275,
+        "width_px": 747,
+        "height_px": 747,
+        "source_image_bbox_pt": [
+          495.978,
+          349.342,
+          675.326,
+          528.69
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 0,
+        "transparency_handling": "内嵌图无独立软蒙版。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p002-oscillator-phase",
+      "deck": "c5-8",
+      "page": 2,
+      "crop_rect_pt": [
+        127,
+        279.5,
+        637,
+        515.5
+      ],
+      "caption": "无阻尼谐振子的封闭相椭圆与欠阻尼振子的吸引螺旋",
+      "old_subsection": "状态、相轨迹与维数",
+      "old_example_numbers": [
+        68
+      ],
+      "decision": "retain",
+      "notes": "保留 p、x 轴和“吸引子”引线/黄色标签。源 α 对应旧稿 γ，源 ω 是欠阻尼振荡频率 ω_d；需满足 γ>0、ω₀²>γ²，阻尼相流不适用保相面积的正则哈密顿条件。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/002.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。"
+    },
+    {
+      "key": "c5-8-p003-potential-local",
+      "deck": "c5-8",
+      "page": 3,
+      "crop_rect_pt": [
+        330.2,
+        2.5,
+        701.7,
+        206.8
+      ],
+      "caption": "非对称双势阱势能 V(x)=e^{-x}(x⁴−2x²) 的局部图",
+      "old_subsection": "非对称势阱与分离轨道",
+      "old_example_numbers": [
+        69
+      ],
+      "decision": "retain",
+      "notes": "源横轴仅到 x=3，不能显示 x≈4.249 的外侧势垒；必须在正文说明局部范围，保留旧稿外势垒与无界散射讨论。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/003.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "group": "c5-8-p003-potential-phase-pair",
+      "preferred_group_crop_rect_pt": [
+        330.2,
+        2.5,
+        701.7,
+        509.8
+      ]
+    },
+    {
+      "key": "c5-8-p003-phase-local",
+      "deck": "c5-8",
+      "page": 3,
+      "crop_rect_pt": [
+        330.2,
+        205.8,
+        700.2,
+        509.8
+      ],
+      "caption": "非对称双势阱的局部相轨迹与原点鞍点",
+      "old_subsection": "非对称势阱与分离轨道",
+      "old_example_numbers": [
+        69
+      ],
+      "decision": "retain",
+      "notes": "保留 p、x 轴、虚线投影与“鞍点”引线。图中外环仅是局部内区分支，不能推广为所有正能量轨道均闭合。建议与上方势能图同框保留，以免切断二图之间的虚线对照。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/003.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "group": "c5-8-p003-potential-phase-pair",
+      "preferred_group_crop_rect_pt": [
+        330.2,
+        2.5,
+        701.7,
+        509.8
+      ]
+    },
+    {
+      "key": "c5-8-p008-sector",
+      "deck": "c5-8",
+      "page": 8,
+      "crop_rect_pt": [
+        14,
+        0,
+        283.5,
+        273.5
+      ],
+      "caption": "第一象限四分之一椭圆初始相区",
+      "old_subsection": "相体积守恒与雅可比证明",
+      "old_example_numbers": [
+        70
+      ],
+      "decision": "retain",
+      "notes": "横轴 x、纵轴 p。此图与同页环扇区、圆盘是三种不同初始区域，不能声称三者是同一物质相区的先后演化。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/008.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 128,
+        "width_px": 360,
+        "height_px": 365,
+        "source_image_bbox_pt": [
+          13.663,
+          -0.17,
+          283.635,
+          273.543
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 159,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p008-annular-sector",
+      "deck": "c5-8",
+      "page": 8,
+      "crop_rect_pt": [
+        437,
+        0,
+        706,
+        273.5
+      ],
+      "caption": "第一象限椭圆环扇形初始相区",
+      "old_subsection": "相体积守恒与雅可比证明",
+      "old_example_numbers": [
+        70
+      ],
+      "decision": "retain",
+      "notes": "外、内椭圆界定初区；与左上整扇区面积不同，仅作另一初始分布示例。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/008.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 130,
+        "width_px": 360,
+        "height_px": 365,
+        "source_image_bbox_pt": [
+          436.337,
+          -0.17,
+          706.309,
+          273.543
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 156,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p008-disk",
+      "deck": "c5-8",
+      "page": 8,
+      "crop_rect_pt": [
+        14.5,
+        273.1,
+        284.4,
+        540
+      ],
+      "caption": "偏离原点的圆盘初始相区",
+      "old_subsection": "相体积守恒与雅可比证明",
+      "old_example_numbers": [
+        70
+      ],
+      "decision": "retain",
+      "notes": "右侧圆盘接近图框，底部 x 标签在原 PDF 页面边缘已有裁切；此框保留源可见部分，不补画。并非前两初区的保面积后态。 推荐原生 xref 提取可保全页面底部裁掉的 x 标签；圆盘在 x=2 图框处相切，勿擅补外延图形。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/008.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 132,
+        "width_px": 360,
+        "height_px": 365,
+        "source_image_bbox_pt": [
+          14.457,
+          273.118,
+          284.429,
+          546.831
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 153,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p008-material-domain",
+      "deck": "c5-8",
+      "page": 8,
+      "crop_rect_pt": [
+        502.4,
+        452.2,
+        679.5,
+        540
+      ],
+      "caption": "随相流从 D 变为 gᵗD 的物质区域示意",
+      "old_subsection": "相体积守恒与雅可比证明",
+      "old_example_numbers": [
+        70
+      ],
+      "decision": "retain",
+      "notes": "原图是保面积而可变形的示意。底边在源 PDF 已略超页界，保留原可见图；读为相流映射 gᵗ，不要把它当普通重力加速度 g。 推荐内嵌原图可保留完整底边，避免课件页脚覆盖。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/008.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 144,
+        "width_px": 594,
+        "height_px": 300,
+        "source_image_bbox_pt": [
+          502.413,
+          452.155,
+          679.55,
+          541.616
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 0,
+        "transparency_handling": "内嵌图无独立软蒙版。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p009-sector-repeat",
+      "deck": "c5-8",
+      "page": 9,
+      "crop_rect_pt": [
+        25.5,
+        0,
+        196.2,
+        170.4
+      ],
+      "caption": "椭圆第一象限初区的面积计算示意",
+      "old_subsection": "第一象限椭圆初区的完整积分",
+      "old_example_numbers": [
+        70
+      ],
+      "decision": "duplicate",
+      "notes": "与 p8 左上相区重复；原图一次保留即可，但 p9 的雅可比、初区方向和面积积分均要保留。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/009.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "duplicate_of": "c5-8-p008-sector",
+      "preferred_native_extraction": {
+        "xref": 128,
+        "width_px": 360,
+        "height_px": 365,
+        "source_image_bbox_pt": [
+          25.483,
+          -2.636,
+          196.185,
+          170.447
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 159,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p010-ducks-video-still",
+      "deck": "c5-8",
+      "page": 10,
+      "crop_rect_pt": [
+        42,
+        105,
+        675,
+        441
+      ],
+      "caption": "水面游禽视频静帧：相流和流体变形的直观类比",
+      "old_subsection": "相体积守恒与雅可比证明",
+      "old_example_numbers": [],
+      "decision": "retain",
+      "notes": "这是源课件嵌入视频静帧，含原“ev剪辑”水印；保留原图不去水印。只是辅助类比，不是二维相空间保面积的证明；视频链接在框外，可用正文来源说明承接。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/010.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "kind": "photo_video_still",
+      "preferred_native_extraction": {
+        "xref": 191,
+        "width_px": 1086,
+        "height_px": 576,
+        "source_image_bbox_pt": [
+          42.888,
+          105.931,
+          674.22,
+          440.391
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 207,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p013-theory-domains",
+      "deck": "c5-8",
+      "page": 13,
+      "crop_rect_pt": [
+        124,
+        54,
+        652,
+        211
+      ],
+      "caption": "二十世纪初经典力学向相对论与量子力学拓展的尺度示意",
+      "old_subsection": "经典力学与量子理论的联系",
+      "old_example_numbers": [],
+      "decision": "retain",
+      "notes": "非公式截图，是包含物理尺度的框箭图。r≈10⁻¹⁰ m 只是常见原子尺度示例，量子适用性由作用量等尺度关系决定，不能把该数当统一分界。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/013.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "kind": "conceptual_diagram"
+    },
+    {
+      "key": "c5-8-p018-hydrogen-spectrum",
+      "deck": "c5-8",
+      "page": 18,
+      "crop_rect_pt": [
+        124.7,
+        80.2,
+        595.3,
+        268.4
+      ],
+      "caption": "氢原子从紫外到红外的光谱线与各系列 α 线",
+      "old_subsection": "氢原子的束缚能级与光谱系列",
+      "old_example_numbers": [
+        72
+      ],
+      "decision": "retain",
+      "notes": "保留波长刻度、visible 区域及 Ly/Ba/Pa/Br/Pf/Hu 标记。图中波长轴为示意/对数分布，不能按像素间距线性读波长。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/018.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 370,
+        "width_px": 1280,
+        "height_px": 512,
+        "source_image_bbox_pt": [
+          124.696,
+          80.221,
+          595.276,
+          268.441
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 390,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p018-hydrogen-series",
+      "deck": "c5-8",
+      "page": 18,
+      "crop_rect_pt": [
+        235.3,
+        280.7,
+        565,
+        528
+      ],
+      "caption": "氢原子 Lyman、Balmer、Paschen 系列的跃迁波长示意",
+      "old_subsection": "氢原子的束缚能级与光谱系列",
+      "old_example_numbers": [
+        72
+      ],
+      "decision": "retain",
+      "notes": "圈层 n 和连线标出能级及跃迁；圆圈是历史式示意，不能解读为现代量子态中电子的确定轨道。保留图中文字和波长。 推荐 xref 377 配合 SMask 392 提取，可避开 PDF 页脚覆盖；主图裸 RGB 为黑底并缺可见黑字，禁止直接使用。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/018.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 377,
+        "width_px": 1280,
+        "height_px": 960,
+        "source_image_bbox_pt": [
+          235.276,
+          280.659,
+          565.002,
+          527.953
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 392,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    },
+    {
+      "key": "c5-8-p020-fixed-endpoint-paths",
+      "deck": "c5-8",
+      "page": 20,
+      "crop_rect_pt": [
+        496,
+        38,
+        715,
+        227
+      ],
+      "caption": "固定端点 A、B 之间的经典驻值路径与其他路径",
+      "old_subsection": "路径积分与干涉的物理图像",
+      "old_example_numbers": [],
+      "decision": "retain",
+      "notes": "保留 q(t)、t、t₁、t₂、A、B。蓝线对源中该示意的经典自由运动；一般势中的经典驻值路径不必是直线。图外公式 e^{iS} 应在正文明确写 e^{iS/ℏ}。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/020.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。"
+    },
+    {
+      "key": "c5-8-p021-double-slit",
+      "deck": "c5-8",
+      "page": 21,
+      "crop_rect_pt": [
+        8,
+        2,
+        719,
+        379
+      ],
+      "caption": "双缝、不同路径的振幅叠加与屏上干涉强度",
+      "old_subsection": "双缝示意与概率密度",
+      "old_example_numbers": [
+        74
+      ],
+      "decision": "retain",
+      "notes": "保留源、两缝、蓝红路径、屏及右侧强度曲线。红线路径是路径积分的形式贡献，不是可以同时观察的确定轨迹；不沿用图外每路“概率不同”的粗略表述。T_fi 应作为振幅，先相加再取模平方。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-8.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-8/021.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。"
+    },
+    {
+      "key": "c5-9-p005-string",
+      "deck": "c5-9",
+      "page": 5,
+      "crop_rect_pt": [
+        0,
+        8,
+        68.2,
+        526.5
+      ],
+      "caption": "绷紧弦的 A、B 标记与横向偏移示意",
+      "old_subsection": "绷紧弦的波动方程与边界条件",
+      "old_example_numbers": [
+        75
+      ],
+      "decision": "retain",
+      "notes": "源课件左侧高窄示意，保留 A、B、参考虚线和手形图标；不能把横向位移的夸张形变按比例解释。绘图延伸至 A 上方，作为课件示意，不据它擅改正文固定端的边界条件。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-9.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-9/005.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。"
+    },
+    {
+      "key": "c5-9-p006-string-repeat",
+      "deck": "c5-9",
+      "page": 6,
+      "crop_rect_pt": [
+        0,
+        8,
+        68.2,
+        526.5
+      ],
+      "caption": "由弦元作用量积分至整弦作用量的同一弦示意",
+      "old_subsection": "绷紧弦的波动方程与边界条件",
+      "old_example_numbers": [
+        75
+      ],
+      "decision": "duplicate",
+      "notes": "与 p5 重复，正文原图保留一次即可；p6 从弦元到整弦作用量的积分关系应接续。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-9.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-9/006.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "duplicate_of": "c5-9-p005-string"
+    },
+    {
+      "key": "c5-9-p008-string-modes",
+      "deck": "c5-9",
+      "page": 8,
+      "crop_rect_pt": [
+        0,
+        141,
+        304,
+        526
+      ],
+      "caption": "定端弦从 n=1 到 n=10 的十个横振动模式",
+      "old_subsection": "绷紧弦的波动方程与边界条件；弦的能量、能流与动量的含义",
+      "old_example_numbers": [
+        75,
+        76
+      ],
+      "decision": "retain",
+      "notes": "完整保留 n、A、B、u_n(x,t) 与十种振型；不同幅度是所示时刻的示意，不能用图中幅度比较能量。图外原 E_n 的波长式漏波速平方，且 p_n∝1/λ_n 不能无条件用于经典驻波，须正文更正。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-9.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-9/008.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。"
+    },
+    {
+      "key": "c5-9-p009-drum",
+      "deck": "c5-9",
+      "page": 9,
+      "crop_rect_pt": [
+        538,
+        49,
+        714,
+        122.5
+      ],
+      "caption": "圆形鼓膜的横向形变与径向、环向网格",
+      "old_subsection": "绷紧膜的二维振动",
+      "old_example_numbers": [
+        77
+      ],
+      "decision": "retain",
+      "notes": "保留圆周边界与网格。图为源静态帧，竖向形变为示意；张力是单位长度的拉力（N/m），不同于弦的总张力（N）。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-9.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-9/009.png",
+      "visual_check": "full_page_and_crop_reviewed_then_rechecked",
+      "old_original_asset_status": "旧稿无 includegraphics 原图引用；相关概念部分由 TikZ 图或文字表达，须恢复源图。",
+      "preferred_native_extraction": {
+        "xref": 243,
+        "width_px": 248,
+        "height_px": 130,
+        "source_image_bbox_pt": [
+          537.874,
+          48.841,
+          713.991,
+          122.513
+        ],
+        "reason": "完整内嵌原始图像可避免 PDF 页面母版色带覆盖或页界裁切；不改图、不去水印。",
+        "smask_xref": 245,
+        "transparency_handling": "SMask 一同应用，再在白底正常显示；不可仅使用主图的裸 RGB 像素。",
+        "visual_check": "native_image_with_smask_on_white_reviewed"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "deck": "c5-7",
+      "page": 1,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "四类母函数",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 2,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "新哈密顿函数取零",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 3,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "HJ方程推导",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 4,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "完全积分与作用函数",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 5,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "自治特征函数与常数计数",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 6,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "线性动量Hamiltonian例0",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 7,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "三种自然Hamiltonian",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 8,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "可加分离",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 9,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "各向异性振子分离",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 10,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "振子参数求导",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 11,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "振子一般解",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 12,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "一般变量分离",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 13,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "分离组合是第一积分",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 14,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "连续分离与循环坐标",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 15,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "中心势分离",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 16,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "抛物/椭球坐标网格",
+      "figure_keys": [
+        "c5-7-p016-parabolic-grid",
+        "c5-7-p016-prolate-grid"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-7",
+      "page": 17,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "球坐标势",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 18,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "抛物坐标势",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 19,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "长旋转椭球势",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-7",
+      "page": 20,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "仅作业编号",
+      "figure_keys": [],
+      "nonfigure_classification": "administrative_no_problem_statement"
+    },
+    {
+      "deck": "c5-7",
+      "page": 21,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "备用页",
+      "figure_keys": [],
+      "nonfigure_classification": "administrative_no_problem_statement"
+    },
+    {
+      "deck": "c5-7",
+      "page": 22,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "和式之比的分离",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 1,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "相空间维数",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 2,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "无阻尼和欠阻尼相图",
+      "figure_keys": [
+        "c5-8-p002-oscillator-phase"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 3,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "非对称势与局部相图",
+      "figure_keys": [
+        "c5-8-p003-potential-local",
+        "c5-8-p003-phase-local"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 4,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "系综与代表点",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 5,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "平衡与密度",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 6,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "相流连续方程",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 7,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "刘维尔逐项证明",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 8,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "三种初区和物质区变形",
+      "figure_keys": [
+        "c5-8-p008-sector",
+        "c5-8-p008-annular-sector",
+        "c5-8-p008-disk",
+        "c5-8-p008-material-domain"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 9,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "椭圆初区面积积分",
+      "figure_keys": [
+        "c5-8-p009-sector-repeat"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 10,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "视频照片类比",
+      "figure_keys": [
+        "c5-8-p010-ducks-video-still"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 11,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "近独立粒子分布",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 12,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "平衡统计分布",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 13,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "经典理论与量子/相对论尺度",
+      "figure_keys": [
+        "c5-8-p013-theory-domains"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 14,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "历史论文与对数代换",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 15,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "相位代换",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 16,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "历史变分论文",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 17,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "定态Schr方程解释",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 18,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "氢光谱与跃迁图",
+      "figure_keys": [
+        "c5-8-p018-hydrogen-spectrum",
+        "c5-8-p018-hydrogen-series"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 19,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "经典量子公式表",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-8",
+      "page": 20,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "固定端点路径",
+      "figure_keys": [
+        "c5-8-p020-fixed-endpoint-paths"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 21,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "双缝及干涉",
+      "figure_keys": [
+        "c5-8-p021-double-slit"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-8",
+      "page": 22,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "仅作业编号与参考书提示",
+      "figure_keys": [],
+      "nonfigure_classification": "administrative_no_problem_statement"
+    },
+    {
+      "deck": "c5-8",
+      "page": 23,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "时间平均；源页底部文字已裁切",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 1,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "有限系统到连续系统框架",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 2,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "本节内容提纲",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 3,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "连续介质例子名称",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 4,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "离散至连续作用量",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 5,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "弦元几何及能量",
+      "figure_keys": [
+        "c5-9-p005-string"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-9",
+      "page": 6,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "整弦作用量",
+      "figure_keys": [
+        "c5-9-p006-string-repeat"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-9",
+      "page": 7,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "场变分及弦方程",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 8,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "十个弦模式及能量",
+      "figure_keys": [
+        "c5-9-p008-string-modes"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-9",
+      "page": 9,
+      "visual_reviewed": true,
+      "view_mode": "contact_and_full_page",
+      "summary": "鼓膜图与面积增量",
+      "figure_keys": [
+        "c5-9-p009-drum"
+      ],
+      "nonfigure_classification": null
+    },
+    {
+      "deck": "c5-9",
+      "page": 10,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "膜变分与方程",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 11,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "电磁场L与H",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 12,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "电磁作用量与Maxwell",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 13,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "电磁分量结果",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 14,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "四维指标约定",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 15,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "四维场变分",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 16,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "F矩阵及电磁标量",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 17,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "场论公式总结",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 18,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "对称性导入",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 19,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "平移与能动量守恒",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 20,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "流体能动量张量",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 21,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "Noether流推导",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 22,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "局部至全局守恒",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 23,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "相位变换",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 24,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "时空平移",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 25,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "球面度规",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 26,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "联络推导",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 27,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "测地线与协变导数",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 28,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "公式汇总表",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    },
+    {
+      "deck": "c5-9",
+      "page": 29,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "课程结语",
+      "figure_keys": [],
+      "nonfigure_classification": "administrative_no_problem_statement"
+    },
+    {
+      "deck": "c5-9",
+      "page": 30,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "备用页",
+      "figure_keys": [],
+      "nonfigure_classification": "administrative_no_problem_statement"
+    },
+    {
+      "deck": "c5-9",
+      "page": 31,
+      "visual_reviewed": true,
+      "view_mode": "contact_page",
+      "summary": "连续场作用量补充",
+      "figure_keys": [],
+      "nonfigure_classification": "formula_or_prose_no_original_physical_figure"
+    }
+  ],
+  "source_errors": [
+    {
+      "deck": "c5-7",
+      "pages": [
+        1
+      ],
+      "source_issue": "有限自由度求和上限写成 ∞，四类母函数关系混用 U 记号。",
+      "required_explanation_or_correction": "改为有限 s，并区分 F₁/F₂/F₃/F₄ 与局部非退化条件。",
+      "old_subsection": "四类母函数及其符号",
+      "old_evidence_line": 2080,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-7",
+      "pages": [
+        6
+      ],
+      "source_issue": "H=p+aq² 题中 W、S 的积分项误写 −aq²/3。",
+      "required_explanation_or_correction": "H 不换题；正确积分为 −aq³/3，q=t+β、p=E−a(t+β)²。",
+      "old_subsection": "线性动量哈密顿函数的完整解",
+      "old_evidence_line": 2209,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-7",
+      "pages": [
+        10,
+        11
+      ],
+      "source_issue": "各向异性谐振子的 x、y 振幅及反余弦写统一 k；W₁ 分母写统一 ω。",
+      "required_explanation_or_correction": "分别用 k₁/k₂ 和 ω₁/ω₂；αᵢ=0、转向点与相位展开分支单列。",
+      "old_subsection": "直角坐标分离与二维谐振子",
+      "old_evidence_line": 2244,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-7",
+      "pages": [
+        16,
+        18
+      ],
+      "source_issue": "坐标网格的平面图容易被当作二维坐标；乘 ξ+η 后角动量项漏 1/(2m)。",
+      "required_explanation_or_correction": "说明三维轴对称坐标、子午截面及量纲；分离式应保留 J²/(2mξ)、J²/(2mη)。",
+      "old_subsection": "三维抛物坐标中的分离",
+      "old_evidence_line": 2311,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-7",
+      "pages": [
+        16,
+        19
+      ],
+      "source_issue": "长旋转椭球分离式角动量项遗漏 σ²。",
+      "required_explanation_or_correction": "分母均为 2mσ²，并保留 ξ>1、|η|<1 的局部域和焦点/轴退化说明。",
+      "old_subsection": "长旋转椭球坐标中的分离",
+      "old_evidence_line": 2360,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-7",
+      "pages": [
+        22
+      ],
+      "source_issue": "和式之比题的 Wᵢ 末式漏掉能量参数 E。",
+      "required_explanation_or_correction": "Wᵢ 依赖 E 及分离常数；G≠0，隐函数分支须正则，参数计数为 E 加 s−1 个独立 αᵢ。",
+      "old_subsection": "和式之比的哈密顿函数",
+      "old_evidence_line": 2419,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        2
+      ],
+      "source_issue": "阻尼图需附适用条件，不能与正则相流保体积混同。",
+      "required_explanation_or_correction": "γ>0、ω_d²=ω₀²−γ²>0；p=mq̇ 含包络导数；相面积按 e^{-2γt} 缩小。",
+      "old_subsection": "状态、相轨迹与维数",
+      "old_evidence_line": 2497,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        3
+      ],
+      "source_issue": "源 V 与相图只画局部双阱，未显示右侧外势垒。",
+      "required_explanation_or_correction": "正文保留 x≈4.249、V_B≈4.13847 与无界散射分支；原图明确称局部。",
+      "old_subsection": "非对称势阱与分离轨道",
+      "old_evidence_line": 2533,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        4,
+        5,
+        11,
+        12,
+        23
+      ],
+      "source_issue": "等概率、热平衡、随流密度与定点密度，以及时间平均/系综平均混在一起。",
+      "required_explanation_or_correction": "微正则等概率须有条件；dρ/dt=0 不等于 ∂tρ=0；统计平均相等需遍历/平衡假设，BE/FD 分布补 k_B、μ 与适用范围。",
+      "old_subsection": "平衡分布、单粒子分布与时间平均",
+      "old_evidence_line": 2716,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        8
+      ],
+      "source_issue": "三个不同相区面积不等，不能将其看作同一物质区的时间序列。",
+      "required_explanation_or_correction": "每个图独立表示一个初区，随流变形由 D→gᵗD 示意承接。",
+      "old_subsection": "相体积守恒与雅可比证明",
+      "old_evidence_line": 2646,
+      "old_status": "new_caption_requirement_for_restored_originals"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        9
+      ],
+      "source_issue": "p 为正的第一象限初区与 q=Acosθ,p=−mωAsinθ 的 θ∈[0,π/2] 不一致；源角积分方向表述易错。",
+      "required_explanation_or_correction": "可用 p=+λb sinϑ 时 ϑ̇=−ω，或负号形式 θ₀∈[−π/2,0]；面积仍为 πab/4。",
+      "old_subsection": "第一象限椭圆初区的完整积分",
+      "old_evidence_line": 2685,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_issue": "把 W=Klnψ 的逐点代换与对新泛函驻值串为直接推出薛定谔方程；K=−iℏ 的平方符号需区分。",
+      "required_explanation_or_correction": "保留历史构造与新理论输入的区别，实 K 与相位代换不混用，列出变分及边界条件。原论文公式扫描不作为几何原图资产。",
+      "old_subsection": "对数代换与变分构造的区别",
+      "old_evidence_line": 2797,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        18
+      ],
+      "source_issue": "能级圆图若当真实电子轨道、或只按图像读取光谱位置，会误解模型。",
+      "required_explanation_or_correction": "圈层为能级示意，跃迁满足 hν=E_upper−E_lower，波长由 Rydberg 关系和约化质量给出。",
+      "old_subsection": "氢原子的束缚能级与光谱系列",
+      "old_evidence_line": 2830,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-8",
+      "pages": [
+        20,
+        21
+      ],
+      "source_issue": "源每路径因子写 e^{iS}，且将连续位置传播振幅模平方直接说成普通概率。",
+      "required_explanation_or_correction": "恢复 e^{iS/ℏ} 和时间切片测度；K 先作用于归一化波包，|ψ|² 是位置概率密度；路径振幅相加后取模平方。",
+      "old_subsection": "路径积分与干涉的物理图像；双缝示意与概率密度",
+      "old_evidence_line": 3155,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-9",
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "source_issue": "源从弦元到场方程时未展开边界项、端点条件和常张力近似的全部适用条件。",
+      "required_explanation_or_correction": "保留小斜率、正且恒定线密度/张力、时间与空间边界项、固定/自由端区别；变系数方程应为 ρ_l(x)u_tt−∂x[T(x)u_x]=0。",
+      "old_subsection": "绷紧弦的波动方程与边界条件",
+      "old_evidence_line": 3231,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-9",
+      "pages": [
+        8
+      ],
+      "source_issue": "E_n=π²m(A/λ_n)² 漏波速平方；p_n∝1/λ_n 未区分经典驻波、赝动量和量子关系。",
+      "required_explanation_or_correction": "E_n=π²Mc²A²/λ_n²，固定幅度条件必需；驻波沿弦总正则动量为零，弦材横向机械动量另算。",
+      "old_subsection": "弦的能量、能流与动量的含义",
+      "old_evidence_line": 3264,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-9",
+      "pages": [
+        9,
+        10
+      ],
+      "source_issue": "膜的面张力与弦张力单位不同；源势能密度末尾仅写 V(x) 易混淆二维面积密度。",
+      "required_explanation_or_correction": "ρ_s 为质量/面积、T_s 为力/长度；完整保留叉积面积增量、dxdy、膜方程及边界变分。",
+      "old_subsection": "绷紧膜的二维振动",
+      "old_evidence_line": 3304,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-9",
+      "pages": [
+        11,
+        12,
+        13,
+        16
+      ],
+      "source_issue": "源 p_A 与 E 关系、Ampère 式的位移电流符号/系数，以及正则反解叙述有错。",
+      "required_explanation_or_correction": "Π_A=−ε₀E，φ 无独立速度属约束；SI 中 ∇×B=μ₀j+μ₀ε₀∂tE。四维 F、指标升降和单位约定一起保留。",
+      "old_subsection": "电磁场作用量与麦克斯韦方程；场的共轭动量与约束哈密顿形式",
+      "old_evidence_line": 3368,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-9",
+      "pages": [
+        19,
+        20
+      ],
+      "source_issue": "源相对论流体能动张量把共动 ε、压强系数与低速质量密度混淆。",
+      "required_explanation_or_correction": "+---、u²=c² 时 T^{μν}=(ε+P)u^μu^ν/c²−Pη^{μν}；非相对论 Euler 用 ρ_m，保留完整分量与减去同一实验体积静质量能的低速极限。",
+      "old_subsection": "理想流体的质量、动量与能量方程",
+      "old_evidence_line": 3635,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-9",
+      "pages": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "source_issue": "源 Noether 流的边界通量正负、局域规范与整体相位、复场双变分及平移符号过于简略或不一致。",
+      "required_explanation_or_correction": "统一固定点变分；局部守恒积分为 dQ/dt=−∮j·n dΣ，通量为零才全局守恒；整体相位变分须含 φ、φ*。",
+      "old_subsection": "场的变分恒等式与诺特流；整体相位对称性与电荷流",
+      "old_evidence_line": 3551,
+      "old_status": "corrected_or_explained_in_old"
+    },
+    {
+      "deck": "c5-9",
+      "pages": [
+        25,
+        26,
+        27
+      ],
+      "source_issue": "弧长 ds² 误含 m/2；在常规正号 Γ 定义下源测地线/协变导数误写负号，且把测地线一律称最短曲线。",
+      "required_explanation_or_correction": "ds² 不含质量；仿射方程 q̈ⁱ+Γⁱ_jk q̇ʲq̇ᵏ=0，D_t vⁱ=v̇ⁱ+Γⁱ_jk q̇ʲvᵏ；保留非仿射项与局部/全局最短条件。",
+      "old_subsection": "广义坐标中的度规与动能；协变导数、仿射参数与驻长度",
+      "old_evidence_line": 3737,
+      "old_status": "corrected_or_explained_in_old"
+    }
+  ],
+  "omissions": [
+    {
+      "type": "source_original_figures_missing",
+      "scope": "18 个去重源图（20 处原图出现）",
+      "evidence": "旧版主稿 includegraphics 调用数为 0；逐图已给旧稿锚点。",
+      "required_action": "由主代理提取并保留源原图；现有 TikZ 分析图可继续服务解答，不替代原图。"
+    },
+    {
+      "type": "source_original_caption_conditions",
+      "source": "c5-8 p8",
+      "required_action": "三种初区分别命名，禁止用前后演化图题；D→gᵗD 才是随流物质区示意。"
+    },
+    {
+      "type": "source_data_not_available",
+      "source": "c5-7 p20、c5-8 p22",
+      "required_action": "只有作业编号，源未给题干；不能凭编号新增、补猜条件。"
+    },
+    {
+      "type": "source_page_clipping",
+      "source": "c5-8 p23",
+      "required_action": "源底行已裁切，旧稿时间/系综平均条件已自足表达；不把看不见的截断字句当已恢复原文。"
+    }
+  ],
+  "conclusion": "76 页源资料已实际目视覆盖；原图裁切框及旧稿锚点齐全。重要推导在旧稿已有经勘误表达，本轮未发现新增实质数学遗漏；恢复原图时必须保留报告中的局部范围、初区区别、记号对应和原源勘误解释。",
+  "review_date": "2026-10-18"
+}

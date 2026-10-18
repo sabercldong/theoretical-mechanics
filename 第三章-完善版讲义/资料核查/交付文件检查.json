@@ -1,0 +1,15 @@
+{
+  "pdf_pages": 218,
+  "body_start_pdf_page": 5,
+  "examples": 66,
+  "exercises": 30,
+  "original_assets": 117,
+  "model_figures": 59,
+  "numbered_figures": 176,
+  "source_slides": 224,
+  "source_decks": 6,
+  "warnings": [],
+  "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+  "tex_sha256": "c1e98ede9487e205abb6e44df06380d1fe375e23a248c5e033e18b28569b63e7",
+  "archive_sha256": "d3718708252133e18f3c7b6340e8fdc0ac46305170d3938227101ae508bfe04f"
+}

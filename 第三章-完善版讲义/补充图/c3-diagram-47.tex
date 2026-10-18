@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\draw[thick](0,3)--(0,0)--(3.3,0);
+\draw[fill=soft,thick](1.2,1.2)circle(1.2);
+\draw[force](0,1.2)--(.85,1.2)node[above]{$N_A$};
+\draw[force](0,1.2)--(0,2.3)node[left]{$f_A$};
+\draw[force](1.2,0)--(1.2,.85)node[right]{$N_B$};
+\draw[force](1.2,0)--(.35,0)node[below]{$f_B$};
+\draw[force](1.2,1.2)--(1.2,.35)node[left]{$Q$};
+\draw[->,thick]({1.2+.85*cos(35)},{1.2+.85*sin(35)})arc(35:145:.85)node[above]{$\omega_0$};
+\end{tikzpicture}

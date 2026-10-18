@@ -1,0 +1,1253 @@
+{
+  "status": "pass",
+  "review_completed_at": "2026-10-18T08:29:36.418856+08:00",
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/排版终校基准.pdf",
+  "pdf_sha256": "2e8702728845f7c1e9445b7454c5ea4bf292a443ead708d6110f2cdf7e1fd4a6",
+  "pdf_page_count": 172,
+  "delivery_pdf_path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/第五章-分析力学讲义-完善版.pdf",
+  "physical_page_range": [
+    1,
+    60
+  ],
+  "reviewed_page_count": 60,
+  "reviewed_contact_sheet_count": 10,
+  "scope": "最终重排版本前60页整册排版视觉QA；未扩大数学或内容审查，未修改正文与资产。",
+  "method": "等sheet01至sheet10刷新后，实际重新打开全部10张六页总览，覆盖物理1至60页；另放大p035、p042、p043、p057确认三项原报问题与两幅斜面图。",
+  "baseline_provenance": "父代理将这批172页校样所对应PDF固定为工作文件/排版终校基准.pdf，本代理读取文件确认SHA256与通知相同。后续例44单图角标更新由父代理独立回归，不混入本报告审阅版本。",
+  "contact_sheets": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet01.png",
+      "physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "sha256": "2b79f00a16f56c9dceba4578813a0b6625569911daa5d7244448024503f55a51",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet02.png",
+      "physical_pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sha256": "ae3d37f633dba10626a1f8b7464b611d88f455f55f26732572b526f0baec419c",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet03.png",
+      "physical_pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "sha256": "ecbedba9e571abfb85d665e887380d34f8c80f2d772dd0be8b64e090869613fd",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet04.png",
+      "physical_pages": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "sha256": "10bdcb1728c2d8b0ee0d27a0bed4fad06fda96fc4aecaacff15251c6c433d975",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet05.png",
+      "physical_pages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "sha256": "a1a5fca9894e5608f6f87b5660054cde97dcde9ffee655aa617309dac733e737",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet06.png",
+      "physical_pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "sha256": "b08911206602bcc349ca720fd62c1aa53e1e8d71657f44a11ac207e2421f20d2",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet07.png",
+      "physical_pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "sha256": "203d3a37502cbc19cb2415395f957bd882443379f4c12b75eba39c528c57fdb9",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet08.png",
+      "physical_pages": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "sha256": "fb5f90acd01ff47c85ad45c521852a9d9b06814bf9883c4713e8ebb26fa1cfa2",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet09.png",
+      "physical_pages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "sha256": "1994e3528cb19abb0dbcdcb6ec49c87c8234b1c76899955918bdcd829734439a",
+      "visually_viewed": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet10.png",
+      "physical_pages": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "sha256": "267cf1fa0d462b4b039369b551fdbeb52bf318de602dc05f0a9771925b3e657e",
+      "visually_viewed": true
+    }
+  ],
+  "pages": [
+    {
+      "physical_page": 1,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 2,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 3,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 4,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 5,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 6,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 7,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 8,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 9,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 10,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 11,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 12,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 13,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 14,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 15,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 16,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 17,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 18,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 19,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 20,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 21,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 22,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 23,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 24,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 25,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 26,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 27,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 28,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 29,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 30,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 31,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 32,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 33,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 34,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 35,
+      "overview_viewed": true,
+      "enlarged_viewed": true,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 36,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 37,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 38,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 39,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 40,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 41,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 42,
+      "overview_viewed": true,
+      "enlarged_viewed": true,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 43,
+      "overview_viewed": true,
+      "enlarged_viewed": true,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 44,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 45,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 46,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 47,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 48,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 49,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 50,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 51,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 52,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 53,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 54,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 55,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 56,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 57,
+      "overview_viewed": true,
+      "enlarged_viewed": true,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 58,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 59,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    },
+    {
+      "physical_page": 60,
+      "overview_viewed": true,
+      "enlarged_viewed": false,
+      "open_issue_ids": []
+    }
+  ],
+  "enlarged_evidence": [
+    {
+      "physical_page": 35,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p035.png",
+      "sha256": "6c94f2ec8f6262840de4bcc9242ce2761fd8919d4ade6d161da6cd091b3d3b33"
+    },
+    {
+      "physical_page": 42,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p042.png",
+      "sha256": "ed20f8fc6ae9757672d2f3c01662eb2c810182ea9869503969abe184c1ced461"
+    },
+    {
+      "physical_page": 43,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p043.png",
+      "sha256": "a5b35e61294eb072527785248d4acc896abf84b45d7c6be7f648e5f0d3baf4ea"
+    },
+    {
+      "physical_page": 57,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p057.png",
+      "sha256": "c130038104381af9acb582c8cba296689f652c8152779ad1fb3b4aaa79a4a6ad"
+    }
+  ],
+  "findings": [
+    {
+      "id": "LAYOUT-A-01",
+      "status": "resolved",
+      "severity": "medium",
+      "physical_page": 35,
+      "printed_page": "29",
+      "location": "5.5.1，例16“圆柱顶端绕绳牵引”，图5.64下方",
+      "category": "标题孤悬",
+      "finding": "页末只有独立的“解”字，首个“(1) 坐标、方向与模型关系”段落与解答图全部始于下一页。",
+      "evidence_image": "p035.png",
+      "image_rect_px": [
+        70,
+        817,
+        100,
+        839
+      ],
+      "suggested_fix": "让例16的解答标题与首个解答段落同页；在该\\solution前按需留足空间或设置禁止分页，勿在页末单留“解”。",
+      "source_anchor": "\\solution \\Step{坐标、方向与模型关系} 图~\\ref{fig:solution-ex16}~中，最高点的绳速由柱心平动与圆柱自转同向叠加；地面接触点瞬时静止，静摩擦仍提供转动力矩。",
+      "resolved_at_physical_page": 35,
+      "resolved_at_printed_page": "29",
+      "resolution": "例16解答“解”与“(1) 坐标、方向与模型关系”已同段，后续解答图及推导同页；没有孤悬。",
+      "regression_evidence_image": "p035.png",
+      "regression_pdf_sha256": "2e8702728845f7c1e9445b7454c5ea4bf292a443ead708d6110f2cdf7e1fd4a6"
+    },
+    {
+      "id": "LAYOUT-A-02",
+      "status": "resolved",
+      "severity": "low",
+      "physical_page": 58,
+      "printed_page": "52",
+      "location": "图5.114，两轮纯滚小车与弹簧物块，右上空白区",
+      "category": "原图残片",
+      "finding": "图右上与装置无关的淡橙色L形边框仍在最终成稿中可见。该线位于x_r、k、m₂标记右方，没有物理意义。",
+      "evidence_image": "p058.png",
+      "image_rect_px": [
+        436,
+        361,
+        494,
+        408
+      ],
+      "asset_key": "c5-2-p043-rolling-cart",
+      "suggested_fix": "检查最终嵌入PDF中的排除矩形或原气泡残线；清除这段边线，保持装置线条、x_r、m₁、m₂、k和地面x不变。需以重新编译后的p058复核，不仅以独立资产PNG判断。",
+      "resolved_at_physical_page": 57,
+      "resolved_at_printed_page": "51",
+      "resolution": "图5.114现位于物理57页；右上淡橙色L形残线已消除，装置、x_r、m₁、m₂、k与地面x均保留。",
+      "regression_evidence_image": "p057.png",
+      "regression_pdf_sha256": "2e8702728845f7c1e9445b7454c5ea4bf292a443ead708d6110f2cdf7e1fd4a6"
+    },
+    {
+      "id": "LAYOUT-A-03",
+      "status": "resolved",
+      "severity": "low",
+      "physical_page": 43,
+      "printed_page": "37",
+      "location": "图5.82，移动斜面的速度分解，署名“高”左上方",
+      "category": "原图残片",
+      "finding": "图左上边缘有一条极短淡橙色竖线；与署名、斜面、弹簧或任何图内符号无关。",
+      "evidence_image": "p043.png",
+      "image_rect_px": [
+        208,
+        500,
+        214,
+        512
+      ],
+      "asset_key": "c5-2-p042-wedge-velocities",
+      "suggested_fix": "仅去掉该边界残线或稍微内收该空白角的裁框，保留原有署名残字“高”与速度分解全部标记；需复看最终成稿。",
+      "resolved_at_physical_page": 43,
+      "resolved_at_printed_page": "37",
+      "resolution": "图5.82仍在物理43页、移至页上部；左上淡橙色短线已消除，源署名残字“高”及速度箭头、长度与坐标标记保留。",
+      "regression_evidence_image": "p043.png",
+      "regression_pdf_sha256": "2e8702728845f7c1e9445b7454c5ea4bf292a443ead708d6110f2cdf7e1fd4a6"
+    }
+  ],
+  "open_count": 0,
+  "resolved_count": 3,
+  "final_conclusion": "前60页全部复看通过；原报3项已实际目视确认解决。未见新出现的标题孤悬、图文重叠、文字或公式溢出、整图裁断、异常大空白或标签遮挡。",
+  "notes": [
+    "p042的“高云峰”署名完整，p043源原有残字“高”保留。",
+    "滚轮小车原图的字形横向拉伸属于源图状态，未改画；修复仅清除无关边界残线。",
+    "未复用旧校样的通过结论：本轮重新实际查看全部十张总览。"
+  ],
+  "review_history": [
+    {
+      "status": "review_complete_with_findings",
+      "review_completed_at": "2026-10-18T08:19:51.799911+08:00",
+      "pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/第五章-分析力学讲义-完善版.pdf",
+      "pdf_sha256": "1ee3a6e2d52a4f1d920a322d84477c2f4b55d4ed98064af12dcefe3f68c475dd",
+      "physical_page_range": [
+        1,
+        60
+      ],
+      "reviewed_page_count": 60,
+      "scope": "只做前60页整册排版视觉QA；未重新扩展数学或内容审查，未修改正文与资产。",
+      "method": "实际打开sheet01至sheet10全部10张六页总览，覆盖物理1至60页；对小字号、多图布局及可疑页另打开逐页PNG放大确认。",
+      "contact_sheets": [
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet01.png",
+          "physical_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "sha256": "d20ffb8cadac21f6f88ade079cc3cd83748d0762b52b1a040088dd477baca71b",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet02.png",
+          "physical_pages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sha256": "dc7702f490c22af801346f7ff1b8e327aa9f57efad3cf29bff2e76ed94bdc9c5",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet03.png",
+          "physical_pages": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "sha256": "4e83c1a1313645c7ed1521a0367067ba362122a4a924e193a61d42ce475f9e90",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet04.png",
+          "physical_pages": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "sha256": "e2bb9f20ad5189e2e07a0c675ec69bb59b1e56c4ff402a8fb7b791b291399646",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet05.png",
+          "physical_pages": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "sha256": "62c43b8e99cb4c7b2c3c1786a0d5464d1aa07cb7d2cffd25cfc9652d9d3d05c2",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet06.png",
+          "physical_pages": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "sha256": "920fc419caba2684d200a60d2aa9ab645b90d11a41230e93031054f8623695e7",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet07.png",
+          "physical_pages": [
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ],
+          "sha256": "43a1b49b4d2d47cbe1cf4de5bd954fd2fe1d1f65514db4ac2eca88e913fe0ad5",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet08.png",
+          "physical_pages": [
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ],
+          "sha256": "7878f734966240529552f076bb561bb8fdb2adb391ddc334e71ebe2f6bb92296",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet09.png",
+          "physical_pages": [
+            49,
+            50,
+            51,
+            52,
+            53,
+            54
+          ],
+          "sha256": "64e1db80b35343f80a19f1bc31412594ae2b041861c90ff27f6d3c53ba3126da",
+          "visually_viewed": true
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/sheet10.png",
+          "physical_pages": [
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ],
+          "sha256": "7d90d83a701e4b7935ef4245b9cb4fd03db949b672dbcf86d08645f5459588dd",
+          "visually_viewed": true
+        }
+      ],
+      "pages": [
+        {
+          "physical_page": 1,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 2,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 3,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 4,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 5,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 6,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 7,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 8,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 9,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 10,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 11,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 12,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 13,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 14,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 15,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 16,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 17,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 18,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 19,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 20,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 21,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 22,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 23,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 24,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 25,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 26,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 27,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 28,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 29,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 30,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 31,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 32,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 33,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 34,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 35,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": [
+            "LAYOUT-A-01"
+          ]
+        },
+        {
+          "physical_page": 36,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 37,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 38,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 39,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 40,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 41,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 42,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 43,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": [
+            "LAYOUT-A-03"
+          ]
+        },
+        {
+          "physical_page": 44,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 45,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 46,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 47,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 48,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 49,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 50,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 51,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 52,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 53,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 54,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 55,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 56,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 57,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 58,
+          "overview_viewed": true,
+          "enlarged_viewed": true,
+          "issue_ids": [
+            "LAYOUT-A-02"
+          ]
+        },
+        {
+          "physical_page": 59,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        },
+        {
+          "physical_page": 60,
+          "overview_viewed": true,
+          "enlarged_viewed": false,
+          "issue_ids": []
+        }
+      ],
+      "enlarged_evidence": [
+        {
+          "physical_page": 9,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p009.png",
+          "sha256": "96539ccd830e028c3ca0cd6a044d1e1bdd1483e3fad70c5e1570dd4e5314335f"
+        },
+        {
+          "physical_page": 11,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p011.png",
+          "sha256": "3f5563517e098e5d7b6e937a62b234c0203dd0624d5ec0cad99b1ca9cf784781"
+        },
+        {
+          "physical_page": 14,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p014.png",
+          "sha256": "9215947dbe82c53e2ebb8d4483ac9036cadabc8fd77e06e7cf5c4eb138fe94b6"
+        },
+        {
+          "physical_page": 28,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p028.png",
+          "sha256": "10c87db57ccf9e7da95802c9d7e15352d22304a93af7fbd0ddcb20ddd6399c3c"
+        },
+        {
+          "physical_page": 30,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p030.png",
+          "sha256": "1b1d825630e50e92cd3a9c2c44e7986f379ce3c4374aedad3d2e5f95c14f27b9"
+        },
+        {
+          "physical_page": 35,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p035.png",
+          "sha256": "540dd58ff56431663100b978c28f6f8e73d1f3c208f804df981db078f72646c6"
+        },
+        {
+          "physical_page": 43,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p043.png",
+          "sha256": "274a1a1f1fe710a6c87577b93f0d717b00664e7b9b8a8fe9bb5c778af9ad2566"
+        },
+        {
+          "physical_page": 48,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p048.png",
+          "sha256": "51725d76e34f36320abe3fa4389c991ee2790a7c5c9e05ffb33c093770d238e2"
+        },
+        {
+          "physical_page": 56,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p056.png",
+          "sha256": "982caaa8a51c35847c0533a52b52642073f04e19e6e0f3bcc04815272170ff21"
+        },
+        {
+          "physical_page": 58,
+          "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/整册校样/p058.png",
+          "sha256": "2893e895c6e68dace742f6003655c0b0f84c96e5aa7fa8c54316cd8ea40c1de7"
+        }
+      ],
+      "findings": [
+        {
+          "id": "LAYOUT-A-01",
+          "status": "open",
+          "severity": "medium",
+          "physical_page": 35,
+          "printed_page": "29",
+          "location": "5.5.1，例16“圆柱顶端绕绳牵引”，图5.64下方",
+          "category": "标题孤悬",
+          "finding": "页末只有独立的“解”字，首个“(1) 坐标、方向与模型关系”段落与解答图全部始于下一页。",
+          "evidence_image": "p035.png",
+          "image_rect_px": [
+            70,
+            817,
+            100,
+            839
+          ],
+          "suggested_fix": "让例16的解答标题与首个解答段落同页；在该\\solution前按需留足空间或设置禁止分页，勿在页末单留“解”。",
+          "source_anchor": "\\solution \\Step{坐标、方向与模型关系} 图~\\ref{fig:solution-ex16}~中，最高点的绳速由柱心平动与圆柱自转同向叠加；地面接触点瞬时静止，静摩擦仍提供转动力矩。"
+        },
+        {
+          "id": "LAYOUT-A-02",
+          "status": "open",
+          "severity": "low",
+          "physical_page": 58,
+          "printed_page": "52",
+          "location": "图5.114，两轮纯滚小车与弹簧物块，右上空白区",
+          "category": "原图残片",
+          "finding": "图右上与装置无关的淡橙色L形边框仍在最终成稿中可见。该线位于x_r、k、m₂标记右方，没有物理意义。",
+          "evidence_image": "p058.png",
+          "image_rect_px": [
+            436,
+            361,
+            494,
+            408
+          ],
+          "asset_key": "c5-2-p043-rolling-cart",
+          "suggested_fix": "检查最终嵌入PDF中的排除矩形或原气泡残线；清除这段边线，保持装置线条、x_r、m₁、m₂、k和地面x不变。需以重新编译后的p058复核，不仅以独立资产PNG判断。"
+        },
+        {
+          "id": "LAYOUT-A-03",
+          "status": "open",
+          "severity": "low",
+          "physical_page": 43,
+          "printed_page": "37",
+          "location": "图5.82，移动斜面的速度分解，署名“高”左上方",
+          "category": "原图残片",
+          "finding": "图左上边缘有一条极短淡橙色竖线；与署名、斜面、弹簧或任何图内符号无关。",
+          "evidence_image": "p043.png",
+          "image_rect_px": [
+            208,
+            500,
+            214,
+            512
+          ],
+          "asset_key": "c5-2-p042-wedge-velocities",
+          "suggested_fix": "仅去掉该边界残线或稍微内收该空白角的裁框，保留原有署名残字“高”与速度分解全部标记；需复看最终成稿。"
+        }
+      ],
+      "open_count": 3,
+      "nonissues_checked": [
+        "封面与目录留白属正常版式。",
+        "p9/p11/p14/p30/p48/p56的多模型图与小标签放大后可辨，未见明确裁切。",
+        "p28长行公式与文字在正文宽度内；p48页末公式与编号不碰页脚。",
+        "所有已查看总览未见其他明确的正文或公式越界、图文重叠、整图裁断或异常空白页。"
+      ],
+      "modification_scope": "本代理只写资料核查/整册排版终校-a.json，未修改正文、原图或其他核查记录。",
+      "concurrent_update_note": "实际目视基于审阅开始时PDF哈希1ee3a6e2d52a4f1d920a322d84477c2f4b55d4ed98064af12dcefe3f68c475dd所对应整册校样；父代理并行更新主PDF，写报告时磁盘主PDF已变为新哈希，尚不代表本报告已经审核新PDF。",
+      "current_pdf_sha256_at_report_write_not_reviewed": "9c4812371bef328224a81cf16e7c8d78766ee11d1f779ee1964610b3379bb1ef",
+      "preview_latest_mtime": "2026-10-18T08:15:34.300949+08:00"
+    }
+  ],
+  "modification_scope": "本代理只更新资料核查/整册排版终校-a.json，未修改正文、原图或其他核查记录。"
+}

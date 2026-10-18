@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "fixed_pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/整册终校-v3.pdf",
+  "fixed_pdf_sha256": "09d64ac3bc6842daa8233e1ae36d51448dcadc29db1fc77fec650f369405ff70",
+  "total_pdf_pages": 85,
+  "review_scope": "仅审查 v2 至 v3 指定变化页的实际分页/截断/重叠；图像来源核验沿用冻结资产报告。",
+  "inspected_physical_pages": [
+    60,
+    61,
+    62,
+    64,
+    70,
+    71,
+    77,
+    78,
+    81,
+    84
+  ],
+  "inspection_count": 10,
+  "actual_render_scale": 1.5,
+  "digest_spec": "PyMuPDF page.get_pixmap(matrix=fitz.Matrix(0.8,0.8), alpha=False)，默认 RGB、annots=True；pixmap.digest.hex()。",
+  "blocking_issues": [],
+  "actual_visual_issues": [],
+  "pages": [
+    {
+      "physical_page": 60,
+      "printed_page": 55,
+      "status": "passed",
+      "pixmap_digest_0_8": "0ade8f72e3070ef76d75a9027563aaaf",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "645a94f09778eef953d99bf5ee4e405e73244d98ff26c7b627c5e9a94b5c9535",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p060.png",
+      "notes": "原图 4.75–4.77 和图题完整，例 37 标题、题干及方程在本页；末句正常续到 61 页，无截断或重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 61,
+      "printed_page": 56,
+      "status": "passed",
+      "pixmap_digest_0_8": "c846429c8f0334c61a285b7636754b6f",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "8ad61ae22910d724307f44128af95d0b4adf64af8ad582a5f1b5523627dc6821",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p061.png",
+      "notes": "例 37 收尾承接清楚；摩擦风场图 4.78 及梯度风公式完整，4.8.6 标题跟随正文，末段正常续页。",
+      "issues": []
+    },
+    {
+      "physical_page": 62,
+      "printed_page": 57,
+      "status": "passed",
+      "pixmap_digest_0_8": "eb0847337ab644a5a82c9c8eea8e2881",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "5cf7b2b9cafd270eda058dd999cba872972d2acaa51b7f69e66e3c41f2670bea",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p062.png",
+      "notes": "承接反气旋判别式后进入河道小节；原河流图 4.79 与截面图 4.80 完整，图题距页脚有清晰间隔。",
+      "issues": []
+    },
+    {
+      "physical_page": 64,
+      "printed_page": 59,
+      "status": "passed",
+      "pixmap_digest_0_8": "c0a3ac54032cf4739180d2a1f0b2c8f2",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "7ccd4d1ed08698ec69af04d5e132a45eac824cb53782bf06daa3a2eff3c31a58",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p064.png",
+      "notes": "落体推导、图 4.81、例 40 及角动量解释均完整；重新分页后无孤立标题和溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 70,
+      "printed_page": 65,
+      "status": "passed",
+      "pixmap_digest_0_8": "b7578b3d0968a8872076c242da828183",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "f3d1c0dfc80fb54e0881070cbe652d0e5115f4f6576fe4fd6d5615406b90391a",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p070.png",
+      "notes": "原地心/当地坐标图 4.87 及图题完整；复变量通解和例 44 开头排布正常，末公式在正文区内。",
+      "issues": []
+    },
+    {
+      "physical_page": 71,
+      "printed_page": 66,
+      "status": "passed",
+      "pixmap_digest_0_8": "3a6cea69d2304bf898bd1885fe382ef6",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "ec130581a2f1d69b1d878cc848042dad8ebc1bb8ecdde122dce27a677a428a73",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p071.png",
+      "notes": "例 44 实变量与椭圆图 4.88 清晰；进动方向、周期及纬度小节完整，无新重叠或截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 77,
+      "printed_page": 72,
+      "status": "passed",
+      "pixmap_digest_0_8": "4b68cc25b6ca80e149f11843e4d2e6b7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "ef146511e1b48a502fc6cefdbe143f8766732bc3032f88852770c5fc93d474dd",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p077.png",
+      "notes": "检查表续表、4.11.6 正文和公式索引表均完整；公式索引按行跨页，无行内截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 78,
+      "printed_page": 73,
+      "status": "passed",
+      "pixmap_digest_0_8": "29151ab8be69ae072c60c0028ee6767d",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "c0ad21b8b7c456fe2f5ed7987e0dac91f36ddf2abbbfa711674d29cdefc61395",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p078.png",
+      "notes": "公式索引末行及自测总说明、自测 1–3 完整；各标题均有正文，页底解答没有越界。",
+      "issues": []
+    },
+    {
+      "physical_page": 81,
+      "printed_page": 76,
+      "status": "passed",
+      "pixmap_digest_0_8": "2426326984aacb3156e49dcaf4a44b5e",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "c70428b3e5c38a02dfb56e63408983819f268c8981a2860bf92ab2c2102ec087",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p081.png",
+      "notes": "原先三行独页收尾已与4.12.4及自测13–16连续排版；题干、公式和解答完整，旧留白问题已消失。",
+      "issues": []
+    },
+    {
+      "physical_page": 84,
+      "printed_page": 79,
+      "status": "passed",
+      "pixmap_digest_0_8": "2fd6c8f61472e80a1ac729ff795c09e5",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "2f343768c0f706a58d232729789acfa7d995030f20bfee28af1a829329a1e14b",
+      "visual_inspection": "已实际逐页打开 1.5× 单页 PNG，复核分页、截断、重叠及标题承接",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/终校-v3变化页/p084.png",
+      "notes": "作业题号、学习建议及原图来源索引前20条完整，表格列宽和行距正常，最后一行未接触页脚。",
+      "issues": []
+    }
+  ],
+  "regression_checks": {
+    "numbered_captions_still_contiguous_1_to_94": true,
+    "original_figure_index_rows": 47,
+    "v2_three_line_standalone_page_removed": true
+  }
+}

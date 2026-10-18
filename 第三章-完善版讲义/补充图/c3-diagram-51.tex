@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw[fill=soft,thick](-2,-.3)rectangle(3,0);
+\draw[fill=soft,thick](0,1)circle(1);
+\draw[force](0,0)--(1.1,0)node[right]{$f_{\text{球}}$};
+\draw[force](0,-.2)--(-1.1,-.2)node[below,yshift=-2mm]{$f_{\text{板}}$};
+\draw[force](1.7,-.15)--(3,-.15)node[right]{$v_{\text{板}}$};
+\draw[force](0,1)--(1,1)node[right]{$v_C$};
+\draw[->,thick]({.9*cos(40)},{1+.9*sin(40)})arc(40:150:.9)node[above]{$\omega$};
+\node[left]at(-.65,.75){$m$};\node at(-1.65,-.15){$M$};
+\draw[guide](-2,-.65)--(3,-.65);
+\end{tikzpicture}

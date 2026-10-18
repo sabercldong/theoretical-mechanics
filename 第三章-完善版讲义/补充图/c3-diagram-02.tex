@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\draw[guide](0,0)circle(1.45);
+\foreach \a in {30,150,270}{
+\coordinate(P\a)at(\a:1.45);
+\draw[thick](P\a)++(-.3,-.3)rectangle++(.6,.6);
+\draw[guide](0,0)--(P\a);}
+\node at(0,2.05){座舱方向保持不变};
+\begin{scope}[xshift=5cm]
+\draw[guide](0,0)circle(1.45);
+\foreach \a in {30,150,270}{
+\begin{scope}[rotate=\a]\draw[thick](1.15,-.2)rectangle(1.75,.2);
+\draw[guide](0,0)--(1.45,0);\end{scope}}
+\node at(0,2.05){刚性轮辐上的物体};
+\end{scope}
+\end{tikzpicture}

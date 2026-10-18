@@ -1,0 +1,428 @@
+[
+  {
+    "kind": "ex",
+    "number": 1,
+    "file": "题图/ex01.tex",
+    "model": "frame_gmoving"
+  },
+  {
+    "kind": "ex",
+    "number": 2,
+    "file": "题图/ex02.tex",
+    "model": "frame_gfixed"
+  },
+  {
+    "kind": "ex",
+    "number": 3,
+    "file": "题图/ex03.tex",
+    "model": "frame"
+  },
+  {
+    "kind": "ex",
+    "number": 4,
+    "file": "题图/ex04.tex",
+    "model": "frame"
+  },
+  {
+    "kind": "ex",
+    "number": 5,
+    "file": "题图/ex05.tex",
+    "model": "tube_u"
+  },
+  {
+    "kind": "ex",
+    "number": 6,
+    "file": "题图/ex06.tex",
+    "model": "cart"
+  },
+  {
+    "kind": "ex",
+    "number": 7,
+    "file": "题图/ex07.tex",
+    "model": "zero"
+  },
+  {
+    "kind": "ex",
+    "number": 8,
+    "file": "题图/ex08.tex",
+    "model": "tube_R"
+  },
+  {
+    "kind": "ex",
+    "number": 9,
+    "file": "题图/ex09.tex",
+    "model": "tube_c"
+  },
+  {
+    "kind": "ex",
+    "number": 10,
+    "file": "题图/ex10.tex",
+    "model": "governor"
+  },
+  {
+    "kind": "ex",
+    "number": 11,
+    "file": "题图/ex11.tex",
+    "model": "circle"
+  },
+  {
+    "kind": "ex",
+    "number": 12,
+    "file": "题图/ex12.tex",
+    "model": "circle_reverse"
+  },
+  {
+    "kind": "ex",
+    "number": 13,
+    "file": "题图/ex13.tex",
+    "model": "eccentric"
+  },
+  {
+    "kind": "ex",
+    "number": 14,
+    "file": "题图/ex14.tex",
+    "model": "nested"
+  },
+  {
+    "kind": "ex",
+    "number": 15,
+    "file": "题图/ex15.tex",
+    "model": "precession"
+  },
+  {
+    "kind": "ex",
+    "number": 16,
+    "file": "题图/ex16.tex",
+    "model": "southcar"
+  },
+  {
+    "kind": "ex",
+    "number": 17,
+    "file": "题图/ex17.tex",
+    "model": "axispoint"
+  },
+  {
+    "kind": "ex",
+    "number": 18,
+    "file": "题图/ex18.tex",
+    "model": "four"
+  },
+  {
+    "kind": "ex",
+    "number": 19,
+    "file": "题图/ex19.tex",
+    "model": "belt"
+  },
+  {
+    "kind": "ex",
+    "number": 20,
+    "file": "题图/ex20.tex",
+    "model": "liquid"
+  },
+  {
+    "kind": "ex",
+    "number": 21,
+    "file": "题图/ex21.tex",
+    "model": "flight"
+  },
+  {
+    "kind": "ex",
+    "number": 22,
+    "file": "题图/ex22.tex",
+    "model": "disk"
+  },
+  {
+    "kind": "ex",
+    "number": 23,
+    "file": "题图/ex23.tex",
+    "model": "pendulum"
+  },
+  {
+    "kind": "ex",
+    "number": 24,
+    "file": "题图/ex24.tex",
+    "model": "pendulum"
+  },
+  {
+    "kind": "ex",
+    "number": 25,
+    "file": "题图/ex25.tex",
+    "model": "offset"
+  },
+  {
+    "kind": "ex",
+    "number": 26,
+    "file": "题图/ex26.tex",
+    "model": "rod"
+  },
+  {
+    "kind": "ex",
+    "number": 27,
+    "file": "题图/ex27.tex",
+    "model": "rotliquid"
+  },
+  {
+    "kind": "ex",
+    "number": 28,
+    "file": "题图/ex28.tex",
+    "model": "tube"
+  },
+  {
+    "kind": "ex",
+    "number": 29,
+    "file": "题图/ex29.tex",
+    "model": "tube_u"
+  },
+  {
+    "kind": "ex",
+    "number": 30,
+    "file": "题图/ex30.tex",
+    "model": "spring"
+  },
+  {
+    "kind": "ex",
+    "number": 31,
+    "file": "题图/ex31.tex",
+    "model": "spring"
+  },
+  {
+    "kind": "ex",
+    "number": 32,
+    "file": "题图/ex32.tex",
+    "model": "free"
+  },
+  {
+    "kind": "ex",
+    "number": 33,
+    "file": "题图/ex33.tex",
+    "model": "earth"
+  },
+  {
+    "kind": "ex",
+    "number": 34,
+    "file": "题图/ex34.tex",
+    "model": "earth"
+  },
+  {
+    "kind": "ex",
+    "number": 35,
+    "file": "题图/ex35.tex",
+    "model": "weight"
+  },
+  {
+    "kind": "ex",
+    "number": 36,
+    "file": "题图/ex36.tex",
+    "model": "circle14"
+  },
+  {
+    "kind": "ex",
+    "number": 37,
+    "file": "题图/ex37.tex",
+    "model": "wind"
+  },
+  {
+    "kind": "ex",
+    "number": 38,
+    "file": "题图/ex38.tex",
+    "model": "sink"
+  },
+  {
+    "kind": "ex",
+    "number": 39,
+    "file": "题图/ex39.tex",
+    "model": "drop"
+  },
+  {
+    "kind": "ex",
+    "number": 40,
+    "file": "题图/ex40.tex",
+    "model": "drop_two"
+  },
+  {
+    "kind": "ex",
+    "number": 41,
+    "file": "题图/ex41.tex",
+    "model": "throwup"
+  },
+  {
+    "kind": "ex",
+    "number": 42,
+    "file": "题图/ex42.tex",
+    "model": "throweast"
+  },
+  {
+    "kind": "ex",
+    "number": 43,
+    "file": "题图/ex43.tex",
+    "model": "drop_error"
+  },
+  {
+    "kind": "ex",
+    "number": 44,
+    "file": "题图/ex44.tex",
+    "model": "foucault"
+  },
+  {
+    "kind": "ex",
+    "number": 45,
+    "file": "题图/ex45.tex",
+    "model": "period"
+  },
+  {
+    "kind": "ex",
+    "number": 46,
+    "file": "题图/ex46.tex",
+    "model": "tube"
+  },
+  {
+    "kind": "ex",
+    "number": 47,
+    "file": "题图/ex47.tex",
+    "model": "disk"
+  },
+  {
+    "kind": "tr",
+    "number": 1,
+    "file": "题图/tr01.tex",
+    "model": "frame_gfixed"
+  },
+  {
+    "kind": "tr",
+    "number": 2,
+    "file": "题图/tr02.tex",
+    "model": "circle"
+  },
+  {
+    "kind": "tr",
+    "number": 3,
+    "file": "题图/tr03.tex",
+    "model": "cart"
+  },
+  {
+    "kind": "tr",
+    "number": 4,
+    "file": "题图/tr04.tex",
+    "model": "tube_c"
+  },
+  {
+    "kind": "tr",
+    "number": 5,
+    "file": "题图/tr05.tex",
+    "model": "disk_fixed"
+  },
+  {
+    "kind": "tr",
+    "number": 6,
+    "file": "题图/tr06.tex",
+    "model": "tube_end"
+  },
+  {
+    "kind": "tr",
+    "number": 7,
+    "file": "题图/tr07.tex",
+    "model": "spring"
+  },
+  {
+    "kind": "tr",
+    "number": 8,
+    "file": "题图/tr08.tex",
+    "model": "tube_power"
+  },
+  {
+    "kind": "tr",
+    "number": 9,
+    "file": "题图/tr09.tex",
+    "model": "pendulum"
+  },
+  {
+    "kind": "tr",
+    "number": 10,
+    "file": "题图/tr10.tex",
+    "model": "offset"
+  },
+  {
+    "kind": "tr",
+    "number": 11,
+    "file": "题图/tr11.tex",
+    "model": "rod"
+  },
+  {
+    "kind": "tr",
+    "number": 12,
+    "file": "题图/tr12.tex",
+    "model": "pendulum"
+  },
+  {
+    "kind": "tr",
+    "number": 13,
+    "file": "题图/tr13.tex",
+    "model": "earth"
+  },
+  {
+    "kind": "tr",
+    "number": 14,
+    "file": "题图/tr14.tex",
+    "model": "weight"
+  },
+  {
+    "kind": "tr",
+    "number": 15,
+    "file": "题图/tr15.tex",
+    "model": "inertialcircle"
+  },
+  {
+    "kind": "tr",
+    "number": 16,
+    "file": "题图/tr16.tex",
+    "model": "cyclone"
+  },
+  {
+    "kind": "tr",
+    "number": 17,
+    "file": "题图/tr17.tex",
+    "model": "drop"
+  },
+  {
+    "kind": "tr",
+    "number": 18,
+    "file": "题图/tr18.tex",
+    "model": "throwup"
+  },
+  {
+    "kind": "tr",
+    "number": 19,
+    "file": "题图/tr19.tex",
+    "model": "thrownorth"
+  },
+  {
+    "kind": "tr",
+    "number": 20,
+    "file": "题图/tr20.tex",
+    "model": "throweast"
+  },
+  {
+    "kind": "tr",
+    "number": 21,
+    "file": "题图/tr21.tex",
+    "model": "foucault"
+  },
+  {
+    "kind": "tr",
+    "number": 22,
+    "file": "题图/tr22.tex",
+    "model": "period_compare"
+  },
+  {
+    "kind": "tr",
+    "number": 23,
+    "file": "题图/tr23.tex",
+    "model": "spring"
+  },
+  {
+    "kind": "tr",
+    "number": 24,
+    "file": "题图/tr24.tex",
+    "model": "frame_force"
+  }
+]

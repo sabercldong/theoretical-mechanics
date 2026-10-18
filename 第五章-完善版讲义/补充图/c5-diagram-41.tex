@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\draw[thick](0,0)--(7,0);\draw[thick](0,0)--(0,1.1);\draw[thick](7,0)--(7,1.1);
+\draw[spring](0,.55)--(2.8,.55);\draw[fill=soft](2.8,.2)rectangle(3.8,.9);\draw[spring](3.8,.55)--(7,.55);
+\node at(3.3,.55){$m$};\node[above]at(1.4,.65){$k$};\node[above]at(5.4,.65){$k$};
+\draw[thick](3.3,.2)--(4.1,-1.8);\fill(4.1,-1.8)circle(5pt)node[right=7.0pt]{$m$};\draw[guide](3.3,.2)--(3.3,-2);
+\node[right=4pt]at(3.7,-.7){$l$};\draw(3.3,-.42)arc(-90:-68.1986:.62);\node[left]at(3.24,-.6){$\theta$};\draw[force](3.3,1.5)--(4.2,1.5)node[right]{$x$};
+\end{tikzpicture}

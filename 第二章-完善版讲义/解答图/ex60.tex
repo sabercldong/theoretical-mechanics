@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](0,0)rectangle(2.1,.6);\node at(1,.3){$m(t)$};\draw[->,thick](.4,1)--(1.8,1)node[right]{$v>0$};\draw[->,thick](-.3,.4)--(-1.4,.4)node[left]{$U_{\rm rel}=-u$};\draw[->](1,-.4)--(.1,-.4)node[left]{$\mu_fmg$};\node at(1,-1){射弹质量流率 $q$};\node at(1,-1.6){相对喷速模型：$U=v-u$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\dd(mv)/\dd t+qU=-\mu_fmg$\\[6pt]$\Downarrow$\\[6pt]$U=-u\quad\hbox{或}\quad U=v-u$};
+\end{tikzpicture}

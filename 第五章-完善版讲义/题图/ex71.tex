@@ -1,0 +1,2 @@
+% 两个更新顺序给出不同的平面线性映射；先动量后位置相当于两次剪切，能保存有向相面积。
+\begin{tikzpicture}\draw[->](-2.5,0)--(2.8,0)node[right]{$q$};\draw[->](0,-1.9)--(0,2.1)node[above]{$p$};\draw[ink,thick](0,0)ellipse(1.4 and .95);\draw[muted,domain=0:730,samples=180]plot({1.4*(1+.0006*\x)*cos(\x)},{-.95*(1+.0006*\x)*sin(\x)});\node at(0,-2.3){显式欧拉扩张；辛欧拉有界条件 $h\omega<2$};\end{tikzpicture}

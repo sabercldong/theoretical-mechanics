@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "pdf_pages": 100,
+  "examples": 47,
+  "training_questions": 24,
+  "question_figures": 71,
+  "original_figures": 47,
+  "body_figures": 47,
+  "colored_callouts_removed": true,
+  "source_appendix_removed": true,
+  "compile_warnings": [],
+  "pdf_sha256": "ca8fd6fc310aed38babe3308d8f2075f213c2981142236f5f9eccba87817668d",
+  "archive_sha256": "60ab48e67566b24a1b076aec1adcd943ec0780433a8e5ce696f9ac69db5128f7",
+  "tex_sha256": "f467a9cda3b2013f0e6094aea343bf0cd82a49e614d065feb9e16c5a4a860f27",
+  "pdf_bytes": 6376319,
+  "archive_bytes": 97228070
+}

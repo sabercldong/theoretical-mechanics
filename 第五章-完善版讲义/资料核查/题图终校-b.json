@@ -1,0 +1,583 @@
+{
+  "report_type": "figure_atlas_visual_qa",
+  "generated_at": "2026-10-18T08:03:04.995837+08:00",
+  "scope": {
+    "atlas_pages": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "page_count": 18,
+    "figure_count": 52,
+    "examples": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86
+    ],
+    "exercises": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "method": "实际查看全部18张834×1179 PNG；对疑似遮挡与边框拥挤区域直接从同一图册PDF放大；对波形、坐标和符号问题读取题图/解答图TeX确认。只写报告，未改主稿或资产。",
+  "limitations": "图册PNG有少数旧预览，源图正被父代理修改；相关项独立标为source_changed_pending_visual_regression，不能以源代码已修代替刷新后的视觉核查。报告内字体大小来自图册PDF，而非屏幕像素估计。",
+  "summary": {
+    "checked_pages": 18,
+    "checked_figures": 52,
+    "repair_findings": 11,
+    "source_changed_pending_visual_regression": 3,
+    "conclusion": "已完成后半逐题图册初轮视觉QA。主要需改驻波波数、二维振动原点、移动圆/赤道模型对应、黑球遮字、角弧及小字号。页面外边界未见裁切；当前存在源图已修但PNG未刷新的3组，需最终局部回归。"
+  },
+  "issues": [
+    {
+      "id": "V01-standing-mode",
+      "figures": [
+        "5.76 / ex76",
+        "5.103 / tr17"
+      ],
+      "atlas_pages": [
+        26,
+        35
+      ],
+      "severity": "major",
+      "category": "图文物理不一致",
+      "status": "needs_fix",
+      "problem": "实线在0至l间画出两个完整正弦周期，即4个半波，却标n=2、λ₂=l。图中只标0、l/2、l的节点，也漏掉画出的另外两个节点。",
+      "recommended_change": "保留n=2标签时，将0≤x≤4.5的曲线改为sin(80x)，并把A的竖向箭头移到第一波峰x=1.125；虚线同步调整。或者完整改成n=4、λ₄=l/2并标齐节点。",
+      "evidence": "两个源图均使用sin(160*x)，x域0:4.5，总相位720°，不是n=2所需360°。"
+    },
+    {
+      "id": "V02-oscillator-origin",
+      "figures": [
+        "5.62 / ex62"
+      ],
+      "atlas_pages": [
+        21
+      ],
+      "severity": "moderate",
+      "category": "坐标与题设不符",
+      "status": "needs_fix",
+      "problem": "两个零中心谐振子的Lissajous轨道被整体平移到x、y正象限；坐标轴原点在曲线左下，未穿过振动中心。与x=A sin…、y=B sin…及二次中心势不符。",
+      "recommended_change": "让x、y轴穿过曲线中心；去掉参数式中的常数位移，或把绘图原点明确平移到振动中心。",
+      "evidence": "源图plot为x=2+1.5sin t、y=1.4+1.1sin(2t+35°)，轴却仍从(0,0)出发。"
+    },
+    {
+      "id": "V03-moving-circle",
+      "figures": [
+        "5.87 / tr01"
+      ],
+      "atlas_pages": [
+        29
+      ],
+      "severity": "moderate",
+      "category": "题图模型不符",
+      "status": "needs_fix",
+      "problem": "题目是圆周沿+x方向以速度v平移，题图却画两条向下平移的非圆曲线。没有圆心(vt,0)、右向v或外法向，桥接说明“圆心沿水平箭头移动”在图上找不到对应。",
+      "recommended_change": "改成两个稍微向右平移的圆周或同一圆周及圆心位移箭头；标v、圆心、外法向n、切向δr及含牵连项的实位移。",
+      "evidence": "实际查看029.png；题图/tr01.tex使用两条纵向相差1的三次曲线，没有圆或水平v箭头。"
+    },
+    {
+      "id": "V04-equator",
+      "figures": [
+        "5.105 / tr19"
+      ],
+      "atlas_pages": [
+        35
+      ],
+      "severity": "moderate",
+      "category": "初值与轨道方向不符",
+      "status": "needs_fix",
+      "problem": "左图实线是倾斜约30°的大圆，赤道另用虚线标出；右图与题设却明确θ=π/2、r=R(cosφ,sinφ,0)，轨道应就是赤道。",
+      "recommended_change": "让实线轨道与赤道重合，保留竖直z轴并标方位角或Ω方向；倾斜大圆只用于一般球面自由运动例86。",
+      "evidence": "源图使用rotate=30的椭圆作为实线轨道，径向点在(1.732,1)。"
+    },
+    {
+      "id": "V05-ball-labels",
+      "figures": [
+        "5.89 / tr03",
+        "5.90 / tr04",
+        "5.91 / tr05"
+      ],
+      "atlas_pages": [
+        30,
+        31
+      ],
+      "severity": "moderate",
+      "category": "标签遮挡",
+      "status": "needs_fix",
+      "problem": "质量标签m、m₂与黑色球重叠。放大后tr03的m下缘被球覆盖；tr04的m₂仅露出字母后半和下标；tr05的m左侧被球边缘遮住。",
+      "recommended_change": "球心上的标签增加超过球半径的xshift/yshift，或用独立node放在球外；不要只用node[right]/[above]并让其锚点仍在球心。",
+      "evidence": "对图册PDF相应区域以3倍分辨率实际放大确认。"
+    },
+    {
+      "id": "V06-turning-label",
+      "figures": [
+        "5.99 / tr13"
+      ],
+      "atlas_pages": [
+        33
+      ],
+      "severity": "moderate",
+      "category": "标注与轴线重叠",
+      "status": "needs_fix",
+      "problem": "“转折点”文字放在q轴上，横轴线穿过文字。",
+      "recommended_change": "将文字移到转折点右上方，或设白色背景和合适内边距；箭头仍指向p=0的顶点。",
+      "evidence": "源图node[right] at(1.3,0)与q轴y=0重合。"
+    },
+    {
+      "id": "V07-normalized-phase",
+      "figures": [
+        "5.58 / ex58"
+      ],
+      "atlas_pages": [
+        20
+      ],
+      "severity": "moderate",
+      "category": "角度弧与定义不符",
+      "status": "needs_fix",
+      "problem": "P的圆弧画到45°，实际径向线与q轴夹角约35°，弧端没有落在径向线上；题目P=atan2(p/κ,q)本来就是归一化相位，不是原(q,p)椭圆的欧氏极角。",
+      "recommended_change": "仿例60用与椭圆相同纵横比例的参数弧，并注明P为归一化相位；或改用缩放相坐标画圆后再标普通角。",
+      "evidence": "源椭圆半轴2和1.4、径向点(1.414,.99)，实际角atan(.99/1.414)≈35°；角弧却为arc(0:45:.7)。"
+    },
+    {
+      "id": "V08-spring-anchors",
+      "figures": [
+        "5.95 / tr09"
+      ],
+      "atlas_pages": [
+        32
+      ],
+      "severity": "moderate",
+      "category": "边界条件图示缺失",
+      "status": "needs_fix",
+      "problem": "两个外侧弹簧都悬空结束，没有墙或固定端符号。图所对应的K=k[[2,−1],[−1,2]]要求外侧弹簧另一端固定。",
+      "recommended_change": "补左右固定墙/固定端符号，或明确标“固定”；保持两个质量块与三个k不变。",
+      "evidence": "题图/tr09.tex只画三条弹簧线段；最外侧端点(−1,0)、(5.3,0)均无约束标记。"
+    },
+    {
+      "id": "V09-integral-illustration",
+      "figures": [
+        "5.98 / tr12"
+      ],
+      "atlas_pages": [
+        33
+      ],
+      "severity": "minor",
+      "category": "图中未定义变量",
+      "status": "needs_fix",
+      "problem": "训练12仅讨论G=q−pt/m，左图却复用训练15的矩形剪切图并出现a、b、bt/m，没有说明a、b的定义，也未在左图标出G作为初始位置。",
+      "recommended_change": "可改为单粒子水平相轨迹并标q₀=G；若保留相区剪切图，补初始相区的a、b定义及G=q−pt/m=q₀的对应说明。",
+      "evidence": "实际查看033.png并核对题图/tr12.tex，确为矩形相区图。"
+    },
+    {
+      "id": "V10-small-figure-text",
+      "figures": [
+        "5.60 / ex60",
+        "5.65 / ex65",
+        "5.66 / ex66",
+        "5.68 / ex68",
+        "5.72 / ex72"
+      ],
+      "atlas_pages": [
+        20,
+        22,
+        23,
+        24
+      ],
+      "severity": "moderate",
+      "category": "缩放后文字过小",
+      "status": "needs_fix",
+      "problem": "左侧模型自带的多行说明和公式被整体缩入6.2cm；实际打印字号约5.86–6.83pt，能级下标约4.23pt。图册常规尺寸下这些说明明显小于右侧公式，阅读吃力。",
+      "recommended_change": "把长说明移至图题/正文或模型下方，以减小原图自然宽度；图内关键文字尽量保持8pt以上。尤其例60与68可分拆模型说明，例72可让能级图占更大宽度。",
+      "evidence": "已实际看图；PDF文字几何辅助确认：ex60为6.09pt、ex65为6.60pt、ex66为6.83pt、ex68为5.86pt、ex72为6.37pt（下标4.23pt）。"
+    },
+    {
+      "id": "V11-box-padding",
+      "figures": [
+        "5.81 / ex81"
+      ],
+      "atlas_pages": [
+        27
+      ],
+      "severity": "minor",
+      "category": "边框内边距不足",
+      "status": "needs_fix",
+      "problem": "电磁流程图三个框内的底行及左右端公式几乎贴着框线，特别是B_t/E_t下标和左框E首字；并非外部裁切，但阅读观感拥挤。",
+      "recommended_change": "给三个draw节点显式inner sep（如3pt）并略增框高/宽，防止外层inner sep=0传入。",
+      "evidence": "以2倍分辨率放大流程图确认，底行下标距下框线不足正常文字留白。"
+    },
+    {
+      "id": "R01-coulomb-removed",
+      "figures": [
+        "5.64 / ex64"
+      ],
+      "atlas_pages": [
+        22
+      ],
+      "severity": "moderate",
+      "category": "旧预览待刷新",
+      "status": "source_changed_pending_visual_regression",
+      "problem": "当前022.png仍显示库仑力−κ e_r/r²及与半径线接近的x轴，但已读到题图/ex64.tex的新版本移除了该力并分开x/y轴。",
+      "recommended_change": "重新渲染图册并回看图5.64；当前源改动方向正确，尚未据旧PNG宣告视觉通过。",
+      "evidence": "新源图使用独立x/y轴、P点与r标签，没有κ力。"
+    },
+    {
+      "id": "R02-sphere-normal",
+      "figures": [
+        "5.88 / tr02"
+      ],
+      "atlas_pages": [
+        30
+      ],
+      "severity": "moderate",
+      "category": "旧预览待刷新",
+      "status": "source_changed_pending_visual_regression",
+      "problem": "030.png中R标签与x轴端部重叠；已读到新源图将x轴改向右下，将R留在径向右上。",
+      "recommended_change": "刷新后确认R与P及球边缘均留足间距。",
+      "evidence": "新源题图/tr02.tex已采用独立x/y轴和向外R。"
+    },
+    {
+      "id": "R03-momentum-label",
+      "figures": [
+        "5.97 / tr11"
+      ],
+      "atlas_pages": [
+        33
+      ],
+      "severity": "minor",
+      "category": "旧预览待刷新",
+      "status": "source_changed_pending_visual_regression",
+      "problem": "033.png仍标b(q)或f_q且底部P=p−b(q)，与训练11的f(q,t)不一致；新源已经改为f_q和P=p−f_q。",
+      "recommended_change": "刷新后确认符号正确；可再标出实线/虚线各代表p还是P，避免向上箭头被理解为p到P的变换方向。",
+      "evidence": "已读题图/tr11.tex的新内容。"
+    }
+  ],
+  "pages": [
+    {
+      "page": 19,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/019.png",
+      "sha256_at_report": "da205515d87b11756c4979c9d9c333633add3ccfb4de3ee0ffed97c842d9c7f7",
+      "figures": [
+        "5.55 / ex55",
+        "5.56 / ex56",
+        "5.57 / ex57"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 20,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/020.png",
+      "sha256_at_report": "dd84d8ec67f1e5bb42235cbfc07cae0d2154aa9271299ae9ea32f46ba048c81b",
+      "figures": [
+        "5.58 / ex58",
+        "5.59 / ex59",
+        "5.60 / ex60"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V07-normalized-phase",
+        "V10-small-figure-text"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 21,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/021.png",
+      "sha256_at_report": "dcb6b31b717a9d0c5522a8ea432c5eaf953f53e8db7822dff2480e3539b355ba",
+      "figures": [
+        "5.61 / ex61",
+        "5.62 / ex62",
+        "5.63 / ex63"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V02-oscillator-origin"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 22,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/022.png",
+      "sha256_at_report": "c5e2af41cc3d0646671843aa0e43d39d4ac023f5fbe9f32bc99b6ec5155eefab",
+      "figures": [
+        "5.64 / ex64",
+        "5.65 / ex65",
+        "5.66 / ex66"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V10-small-figure-text",
+        "R01-coulomb-removed"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 23,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/023.png",
+      "sha256_at_report": "3dbf2a68de1d8a49653b5e987583f2626aaaae5ebb6c7fcb47170490f02a1211",
+      "figures": [
+        "5.67 / ex67",
+        "5.68 / ex68",
+        "5.69 / ex69"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V10-small-figure-text"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 24,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/024.png",
+      "sha256_at_report": "8f739eb00407941983ed766d9b7c1d4c1c978202d7b1f947d4ccb10db37ac06a",
+      "figures": [
+        "5.70 / ex70",
+        "5.71 / ex71",
+        "5.72 / ex72"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V10-small-figure-text"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 25,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/025.png",
+      "sha256_at_report": "04e447edc4b04d146c4d0f42db67ea2183e7fefa3c9edf344b1986a68d33bc27",
+      "figures": [
+        "5.73 / ex73",
+        "5.74 / ex74",
+        "5.75 / ex75"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 26,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/026.png",
+      "sha256_at_report": "11fb5a67e421ec11ef194ea87c1a7e0b5f5e5af1e6f950a85ad89f39ca92f50f",
+      "figures": [
+        "5.76 / ex76",
+        "5.77 / ex77",
+        "5.78 / ex78"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V01-standing-mode"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 27,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/027.png",
+      "sha256_at_report": "1a3f3d4ad999844b6f02611644ea9b86ca2f427e0574e8a31f2cd56f0b01b573",
+      "figures": [
+        "5.79 / ex79",
+        "5.80 / ex80",
+        "5.81 / ex81"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V11-box-padding"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 28,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/028.png",
+      "sha256_at_report": "9344149baabc909c0612fa449d61c562fec14f018bb024e8f2dbe458b1de1da0",
+      "figures": [
+        "5.82 / ex82",
+        "5.83 / ex83",
+        "5.84 / ex84"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 29,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/029.png",
+      "sha256_at_report": "4d6ac17f94b63dbe2d8210f6c2137f4f017b1fd75b28e2d9f54329628c5e4ffd",
+      "figures": [
+        "5.85 / ex85",
+        "5.86 / ex86",
+        "5.87 / tr01"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V03-moving-circle"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 30,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/030.png",
+      "sha256_at_report": "5126ff0a6a36dba0ed86c315ce15afa735763842eb534733adf804033dc3da22",
+      "figures": [
+        "5.88 / tr02",
+        "5.89 / tr03",
+        "5.90 / tr04"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V05-ball-labels",
+        "R02-sphere-normal"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 31,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/031.png",
+      "sha256_at_report": "5cf21b2857585084ad58b8634e1b50bae12f585434268bd11f1ed7cd0531e6a1",
+      "figures": [
+        "5.91 / tr05",
+        "5.92 / tr06",
+        "5.93 / tr07"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V05-ball-labels"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 32,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/032.png",
+      "sha256_at_report": "d7b27ffa5b07d44fb7109b73db7d9e224fd95d199ed4f730606a840a65e5d091",
+      "figures": [
+        "5.94 / tr08",
+        "5.95 / tr09",
+        "5.96 / tr10"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V08-spring-anchors"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 33,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/033.png",
+      "sha256_at_report": "bf04fca17657308027eacbb91929f967c756108441499edabdc0b3943adfa795",
+      "figures": [
+        "5.97 / tr11",
+        "5.98 / tr12",
+        "5.99 / tr13"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V06-turning-label",
+        "V09-integral-illustration",
+        "R03-momentum-label"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 34,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/034.png",
+      "sha256_at_report": "d595c36f8308a2a9be1dcc096325448da9cf3aec14ec115019d1bb02b8a27967",
+      "figures": [
+        "5.100 / tr14",
+        "5.101 / tr15",
+        "5.102 / tr16"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 35,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/035.png",
+      "sha256_at_report": "c600f338a35b33a9e9c8be331543aaea5fa7f8dcd1267799b747cec2ac9444b6",
+      "figures": [
+        "5.103 / tr17",
+        "5.104 / tr18",
+        "5.105 / tr19"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [
+        "V01-standing-mode",
+        "V04-equator"
+      ],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    },
+    {
+      "page": 36,
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/036.png",
+      "sha256_at_report": "651d209b3baf86eedbde82a327fcd15bb79afad37cfe9cc26291955fe5d50d8c",
+      "figures": [
+        "5.106 / tr20"
+      ],
+      "actually_viewed": true,
+      "issue_ids": [],
+      "notes": "逐张总览已查看；未发现图册页面外边界裁切。具体局部问题见issues。"
+    }
+  ]
+}

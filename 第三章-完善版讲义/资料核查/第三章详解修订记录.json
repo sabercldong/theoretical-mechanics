@@ -1,0 +1,878 @@
+{
+  "answers": 96,
+  "main_answers_rewritten": 39,
+  "all_original_solution_explanations_outside_answer_blocks_preserved": true,
+  "original_figures": 117,
+  "body_figures": 59,
+  "question_figures": 96,
+  "steps": 339,
+  "old_characters": 68715,
+  "new_characters": 96753,
+  "records": [
+    {
+      "kind": "example",
+      "number": 1,
+      "title": "曲线平动的速度与加速度",
+      "old_characters": 323,
+      "new_characters": 748,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 2,
+      "title": "更换基点后的位置分解",
+      "old_characters": 218,
+      "new_characters": 792,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 3,
+      "title": "定点转动中一点的速度",
+      "old_characters": 627,
+      "new_characters": 773,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 4,
+      "title": "转台上的水平轴圆盘",
+      "old_characters": 831,
+      "new_characters": 879,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 5,
+      "title": "倾斜轴陀螺的角速度",
+      "old_characters": 919,
+      "new_characters": 967,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 6,
+      "title": "悬挂杆端圆盘的两种约束",
+      "old_characters": 280,
+      "new_characters": 751,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 7,
+      "title": "铰接摆杆端的旋转圆盘",
+      "old_characters": 748,
+      "new_characters": 944,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 8,
+      "title": "匀速进动陀螺的本体分量",
+      "old_characters": 933,
+      "new_characters": 1100,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 9,
+      "title": "理想地球的姿态描述",
+      "old_characters": 259,
+      "new_characters": 710,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 10,
+      "title": "同步自转卫星",
+      "old_characters": 162,
+      "new_characters": 673,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 11,
+      "title": "固定顶点圆锥的无滑动滚动",
+      "old_characters": 947,
+      "new_characters": 1108,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 12,
+      "title": "匀速曲柄带动的连杆",
+      "old_characters": 329,
+      "new_characters": 803,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 13,
+      "title": "由姿态矩阵提取非奇异欧拉角",
+      "old_characters": 200,
+      "new_characters": 805,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 14,
+      "title": "两次直角转动为何不能当作矢量相加",
+      "old_characters": 444,
+      "new_characters": 803,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 15,
+      "title": "同向与反向平行力的合成",
+      "old_characters": 726,
+      "new_characters": 759,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 16,
+      "title": "扳手上的力偶",
+      "old_characters": 321,
+      "new_characters": 672,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 17,
+      "title": "不能合成单力的空间力系",
+      "old_characters": 149,
+      "new_characters": 611,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 18,
+      "title": "粗糙地面上靠光滑棱边的均匀杆",
+      "old_characters": 2246,
+      "new_characters": 2251,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 19,
+      "title": "两根直角刚接杆的悬挂平衡",
+      "old_characters": 1227,
+      "new_characters": 1239,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 20,
+      "title": "同时接触竖墙和棱边的光滑杆",
+      "old_characters": 1163,
+      "new_characters": 1175,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 21,
+      "title": "光滑半球碗中的均匀杆",
+      "old_characters": 1565,
+      "new_characters": 1575,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 22,
+      "title": "圆柱木材堆积与运输的建模研究",
+      "old_characters": 1180,
+      "new_characters": 1191,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 23,
+      "title": "小块组装后的总惯量",
+      "old_characters": 513,
+      "new_characters": 806,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 24,
+      "title": "质心平动能与定点转动能的一致性",
+      "old_characters": 480,
+      "new_characters": 733,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 25,
+      "title": "均匀矩形薄片与椭圆薄片",
+      "old_characters": 1393,
+      "new_characters": 1406,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 26,
+      "title": "均匀圆柱与细杆",
+      "old_characters": 1273,
+      "new_characters": 1286,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 27,
+      "title": "均匀实心球的惯量",
+      "old_characters": 1352,
+      "new_characters": 1363,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 28,
+      "title": "均匀实心椭球的惯量",
+      "old_characters": 1161,
+      "new_characters": 1210,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 29,
+      "title": "均匀实心半球：球心与质心原点",
+      "old_characters": 1595,
+      "new_characters": 1600,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 30,
+      "title": "同一个正方体在两个原点下的惯量",
+      "old_characters": 908,
+      "new_characters": 921,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 31,
+      "title": "顶点正方体的三根正交主轴",
+      "old_characters": 1924,
+      "new_characters": 1923,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 32,
+      "title": "顶点长方体的惯量与数值主轴",
+      "old_characters": 2212,
+      "new_characters": 2212,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 33,
+      "title": "长方体绕体对角线的方向惯量",
+      "old_characters": 823,
+      "new_characters": 872,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 34,
+      "title": "三个质点组成的等边三角刚体",
+      "old_characters": 1213,
+      "new_characters": 1218,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 35,
+      "title": "第一卦限球体的惯量、角动量与主轴",
+      "old_characters": 4850,
+      "new_characters": 4832,
+      "steps": 7,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 36,
+      "title": "顶点固定正方体的斜轴转动",
+      "old_characters": 1152,
+      "new_characters": 1157,
+      "steps": 3,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 37,
+      "title": "固定点上方的圆盘陀螺动能",
+      "old_characters": 1823,
+      "new_characters": 1834,
+      "steps": 2,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 38,
+      "title": "恒定力矩驱动圆盘",
+      "old_characters": 215,
+      "new_characters": 667,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 39,
+      "title": "均匀杆端点物理摆",
+      "old_characters": 230,
+      "new_characters": 854,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 40,
+      "title": "悬点位置如何影响小振动周期",
+      "old_characters": 168,
+      "new_characters": 690,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 41,
+      "title": "质心在轴上仍有轴承压力",
+      "old_characters": 335,
+      "new_characters": 870,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 42,
+      "title": "点质量转子的单平面和双平面校正",
+      "old_characters": 515,
+      "new_characters": 819,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 43,
+      "title": "立方体绕地面水平棱倾倒",
+      "old_characters": 502,
+      "new_characters": 779,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 44,
+      "title": "有惯量定滑轮的两重物系统",
+      "old_characters": 376,
+      "new_characters": 743,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 45,
+      "title": "倾斜薄圆盘的最大轴承压力",
+      "old_characters": 614,
+      "new_characters": 1122,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 46,
+      "title": "T形双杆的瞬时角加速度与轴反力",
+      "old_characters": 567,
+      "new_characters": 924,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 47,
+      "title": "等速拖动梯子的两条极迹",
+      "old_characters": 424,
+      "new_characters": 801,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 48,
+      "title": "圆柱沿粗糙斜面滚下：三种解法",
+      "old_characters": 678,
+      "new_characters": 878,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 49,
+      "title": "固定轻绳上退绕下落的圆盘",
+      "old_characters": 280,
+      "new_characters": 742,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 50,
+      "title": "变速纯滚动轮的四点运动",
+      "old_characters": 485,
+      "new_characters": 979,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 51,
+      "title": "固定轮外侧的行星轮",
+      "old_characters": 392,
+      "new_characters": 850,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 52,
+      "title": "圆槽内圆柱的方程、反力与振动",
+      "old_characters": 898,
+      "new_characters": 1123,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "example",
+      "number": 53,
+      "title": "双轮提升装置",
+      "old_characters": 520,
+      "new_characters": 838,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 54,
+      "title": "墙角圆柱的停止转动时间",
+      "old_characters": 538,
+      "new_characters": 801,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 55,
+      "title": "等长曲柄滑块：基点法、投影法与瞬心法",
+      "old_characters": 622,
+      "new_characters": 1019,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 56,
+      "title": "不等长曲柄滑块的加速度",
+      "old_characters": 590,
+      "new_characters": 992,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 57,
+      "title": "球与活动板由滑动过渡到纯滚动",
+      "old_characters": 778,
+      "new_characters": 984,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 58,
+      "title": "飞机转弯时螺旋桨点的速度与加速度",
+      "old_characters": 617,
+      "new_characters": 1227,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 59,
+      "title": "三根主轴转动的线性稳定性",
+      "old_characters": 366,
+      "new_characters": 951,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 60,
+      "title": "给定惯量和角速度的自由陀螺",
+      "old_characters": 395,
+      "new_characters": 1169,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 61,
+      "title": "定常进动的两支角速率",
+      "old_characters": 314,
+      "new_characters": 824,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 62,
+      "title": "只有轴向自转的倾斜释放",
+      "old_characters": 491,
+      "new_characters": 1122,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 63,
+      "title": "检验一个不能直接消掉的闭环积分",
+      "old_characters": 271,
+      "new_characters": 747,
+      "steps": 3,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 64,
+      "title": "弱磁场中的经典轨道拉莫尔变换",
+      "old_characters": 403,
+      "new_characters": 947,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 65,
+      "title": "各向同性谐振子对二阶项的检验",
+      "old_characters": 425,
+      "new_characters": 987,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "example",
+      "number": 66,
+      "title": "从给定陀螺磁比计算载频和脉冲时间",
+      "old_characters": 397,
+      "new_characters": 1048,
+      "steps": 4,
+      "rewritten": true
+    },
+    {
+      "kind": "exercise",
+      "number": 1,
+      "title": "距离不变是否意味着相对位置矢量不变？",
+      "old_characters": 548,
+      "new_characters": 813,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 2,
+      "title": "同样沿圆周运动的座舱和刚性轮辐有何区别？",
+      "old_characters": 497,
+      "new_characters": 761,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 3,
+      "title": "能否直接把两个有限转角当矢量相加？",
+      "old_characters": 671,
+      "new_characters": 976,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 4,
+      "title": "已知两点速度方向平行，能否必然找到有限瞬心？",
+      "old_characters": 507,
+      "new_characters": 744,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 5,
+      "title": "欧拉角 $\\theta=0$ 时，哪些角仍可确定？",
+      "old_characters": 466,
+      "new_characters": 811,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 6,
+      "title": "为什么轴向角速度不一定等于欧拉角自转率？",
+      "old_characters": 718,
+      "new_characters": 1050,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 7,
+      "title": "平面三点取矩为零为什么要求三点不共线？",
+      "old_characters": 508,
+      "new_characters": 739,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 8,
+      "title": "有静摩擦的无滑滚动为何可以守恒机械能？",
+      "old_characters": 463,
+      "new_characters": 734,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 9,
+      "title": "取矩中心改动时主矢和主矩怎样变化？",
+      "old_characters": 527,
+      "new_characters": 803,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 10,
+      "title": "三力定理可以用于含一个独立力偶的物体吗？",
+      "old_characters": 402,
+      "new_characters": 626,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 11,
+      "title": "细杆斜轴的方向惯量",
+      "old_characters": 573,
+      "new_characters": 866,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 12,
+      "title": "球的平行轴惯量",
+      "old_characters": 502,
+      "new_characters": 768,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 13,
+      "title": "均匀实心半球从球心移到质心，哪个惯量不变？",
+      "old_characters": 587,
+      "new_characters": 892,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 14,
+      "title": "重根主惯量的主轴是否唯一？",
+      "old_characters": 565,
+      "new_characters": 826,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 15,
+      "title": "均匀圆环与圆盘滚下同一斜面",
+      "old_characters": 630,
+      "new_characters": 979,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 16,
+      "title": "物理摆悬点过质心时会怎样？",
+      "old_characters": 481,
+      "new_characters": 740,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 17,
+      "title": "静平衡是否保证动平衡？",
+      "old_characters": 590,
+      "new_characters": 936,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 18,
+      "title": "轮子匀速纯滚动时底部点加速度",
+      "old_characters": 546,
+      "new_characters": 825,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 19,
+      "title": "外滚行星轮半径相等时转速比",
+      "old_characters": 501,
+      "new_characters": 756,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 20,
+      "title": "光滑支承上的球板系统哪个量守恒？",
+      "old_characters": 740,
+      "new_characters": 1037,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 21,
+      "title": "无外力矩是否保证角速度在空间恒定？",
+      "old_characters": 558,
+      "new_characters": 859,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 22,
+      "title": "三种主轴中哪一根自由转动不稳定？",
+      "old_characters": 775,
+      "new_characters": 1055,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 23,
+      "title": "对称自由陀螺的空间进动率",
+      "old_characters": 526,
+      "new_characters": 844,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 24,
+      "title": "重陀螺有哪些守恒量？",
+      "old_characters": 715,
+      "new_characters": 1003,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 25,
+      "title": "高速重陀螺的慢进动率",
+      "old_characters": 714,
+      "new_characters": 1062,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 26,
+      "title": "重陀螺回环轨迹的判别",
+      "old_characters": 515,
+      "new_characters": 793,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 27,
+      "title": "正、负陀螺磁比的拉莫尔转向",
+      "old_characters": 591,
+      "new_characters": 964,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 28,
+      "title": "共振角频率与普通频率的换算",
+      "old_characters": 498,
+      "new_characters": 769,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 29,
+      "title": "磁偶极能有额外半因子吗？",
+      "old_characters": 423,
+      "new_characters": 718,
+      "steps": 4,
+      "rewritten": false
+    },
+    {
+      "kind": "exercise",
+      "number": 30,
+      "title": "磁场加倍时频率和理想翻转脉冲怎样变化？",
+      "old_characters": 503,
+      "new_characters": 805,
+      "steps": 4,
+      "rewritten": false
+    }
+  ],
+  "tex_sha256": "c044dacc5962251fde9397df5bf1a5c383f5cf0f81da10246d6bde80d0bb5f9d"
+}

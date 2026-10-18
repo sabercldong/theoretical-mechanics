@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,2);\coordinate(A)at(0,0);\coordinate(C)at(.29,1.203);
+\draw[thick](-2.6,0)--(2.8,0);
+\draw[fill=soft,thick]({-2*cos(20)},{2-2*sin(20)})arc(200:380:2)--cycle;
+\draw[guide](O)--(A);\draw[ink,thick](O)--(C);\fill(O)circle(2pt)node[above]{$O$};\fill(C)circle(3pt)node[right=5.0pt]{$C$};\fill(A)circle(2pt)node[below]{$A$};
+\draw(0,1.4)arc(-90:-70:.6);\node[left]at(-.1,1.35){$\theta$};\node[right]at(.4,1.65){$d$};\node[left]at(0,.75){$r$};
+\node[align=center]at(.1,-1.05){$O=(0,r)$, $C=(d\sin\theta,r-d\cos\theta)$\\接触点在圆弧上};
+\end{tikzpicture}

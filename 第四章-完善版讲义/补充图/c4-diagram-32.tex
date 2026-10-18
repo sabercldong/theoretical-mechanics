@@ -1,0 +1,5 @@
+\begin{tikzpicture}[x=1cm,y=.9cm]
+\draw[guide](-4,0)--(4,0)node[right]{赤道};\draw[guide](-4,1.9)--(4,1.9)node[right]{北纬低纬带};\draw[guide](-4,-1.9)--(4,-1.9)node[right]{南纬低纬带};
+\foreach \x in {-2,0,2}{\draw[force](\x,1.65)..controls(\x-.1,.95)and(\x-.45,.5)..(\x-.85,.15);\draw[force](\x,-1.65)..controls(\x-.1,-.95)and(\x-.45,-.5)..(\x-.85,-.15);}
+\node[fill=white]at(0,1.1){东北信风};\node[fill=white]at(0,-1.1){东南信风};\draw[->](-4.5,-2.6)--(-2.7,-2.6)node[right]{东};
+\end{tikzpicture}

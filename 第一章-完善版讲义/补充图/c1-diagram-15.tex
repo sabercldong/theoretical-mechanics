@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=.72]
+\draw[->](-.5,0)--(13.3,0)node[right]{$X$};
+\draw[->](0,-3)--(0,1.2)node[above]{$Y$};
+\draw[ink,thick,domain=0:720,samples=361,variable=\t]
+ plot({\t*pi/180+sin(\t)},{cos(\t)-1});
+\fill[ink](0,0)circle(2pt)node[above left]{$O$};
+\draw[force]({pi/2+1},-1)--++(.35,-.35);
+\foreach \x in {1,3,5,7,9}{\node at(\x,-2.6){$\odot$};}
+\node[right]at(9.7,-2.6){$\vect B$ 向外};
+\draw[force](12.6,-1.9)--(12.6,-.6)node[right]{$\vect E$};
+\draw[force](1,.6)--(3,.6)node[above]{$\vect v_d$};
+\foreach \xx/\lab in {3.14159265/\pi,6.28318531/2\pi,9.42477796/3\pi,12.56637061/4\pi}
+ {\draw(\xx,0)--(\xx,.08)node[above,font=\small]{$\lab$};}
+\draw(0,-2)--(-.1,-2)node[left]{$-2$};
+\node at(6.2,-3.55){$X=\omega_c x/v_d,\quad Y=\omega_c y/v_d,\quad v_d=E/B>0$};
+\node at(6.2,-4.15){$\omega_c>0,\quad V=2v_d,\quad 0\leq\omega_ct\leq4\pi$};
+\end{tikzpicture}

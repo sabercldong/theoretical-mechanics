@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\draw[thick](0,-.5)--(0,3);
+\draw[fill=soft](1.559,-.5)--(1.559,.9)--(4.5,.9)--(4.5,-.5)--cycle;
+\draw[line width=2pt,ink](0,0)--(4.157,2.4);
+\fill(0,0)circle(2pt)node[left]{$O$};
+\fill(1.559,.9)circle(2pt)node[below left]{$B$};
+\draw[force](0,0)--(.9,0)node[midway,below]{$R$};
+\draw[force](1.559,.9)--(1.059,1.766)node[above]{$N$};
+\draw[force](2.078,1.2)--(2.078,.1)node[right]{$P$};
+\draw[guide](0,0)--(2.078,0);
+\draw[<->,muted](0,-.85)--(1.559,-.85)node[midway,below]{$d$};
+\draw(.6,0)arc(0:30:.6); \node at(.8,.25){$\theta$};
+\end{tikzpicture}

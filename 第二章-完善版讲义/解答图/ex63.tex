@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\foreach \x/\y in {0/0,1.3/.4,2.3/1.7,.4/2.2,-.6/1.2}{\fill(\x,\y)circle(3pt);}\draw[dashed](0,0)--(1.3,.4)--(2.3,1.7)--(.4,2.2)--(-.6,1.2)--cycle;\fill(.7,1.1)circle(2pt)node[below]{$C$};\draw[->](.7,1.1)--(2.3,1.7)node[midway,above]{$\vect r_i^{\prime}$};\node at(.7,-.8){束缚内部运动：各对只计一次};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$W=\sum_{i<j}-Gm_im_j/r_{ij}=U$\\[6pt]$\Downarrow$\\[6pt]$2\overline T+\overline U=0,\quad E=-\overline T$};
+\end{tikzpicture}

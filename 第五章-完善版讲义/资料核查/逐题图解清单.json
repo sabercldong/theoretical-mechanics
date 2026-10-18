@@ -1,0 +1,744 @@
+[
+  {
+    "key": "ex01",
+    "fig": 2,
+    "a": "\\dot x=R\\dot\\varphi\\cos\\theta",
+    "b": "\\dot y=R\\dot\\varphi\\sin\\theta",
+    "bridge": "盘面切向由航向角 $\\theta$ 决定；沿路径累积的两分量会随航向变化，不能只按终态自转角计算位移。"
+  },
+  {
+    "key": "ex02",
+    "fig": "four_models",
+    "a": "s=N_{\\rm coord}-k",
+    "b": "s=1,2,1,3",
+    "bridge": "摆长、球半径与直线滚动约束各消去一个独立位置变量；定点刚体还保留三个姿态参数。"
+  },
+  {
+    "key": "ex03",
+    "fig": 4,
+    "a": "\\dd s^2=(a^2+b^2)\\dd u^2",
+    "b": "T=\\tfrac12m(a^2+b^2)\\dot u^2",
+    "bridge": "螺旋线的轴向升高和水平绕转都由同一参数 $u$ 决定，弧长中两部分的平方相加。"
+  },
+  {
+    "key": "ex04",
+    "fig": "atwood_pair",
+    "a": "y_{\\rm left}+y_{\\rm right}=C",
+    "b": "y_{\\rm lower}=y+s",
+    "bridge": "主绳把两侧位移联系起来，却不固定下面弹簧的长度 $s$；驱动环的整体角 $\\alpha(t)$ 已由外界规定。"
+  },
+  {
+    "key": "ex05",
+    "fig": "tangent_pair",
+    "a": "\\delta\\vect r=l\\vect e_\\theta\\delta\\theta",
+    "b": "\\delta\\vect r_{S^2}=R\\vect e_\\theta\\delta\\theta+R\\sin\\theta\\vect e_\\phi\\delta\\phi",
+    "bridge": "圆周切向对应单摆唯一变分方向；球面的两个切向箭头分别对应独立的极角、方位角变分。"
+  },
+  {
+    "key": "ex06",
+    "fig": "pendulum_force",
+    "a": "\\delta W=F\\delta x-mg\\delta y",
+    "b": "Q_\\theta=Fl\\cos\\theta-mgl\\sin\\theta",
+    "bridge": "水平力沿 $+x$、重力沿 $-y$；两力分别与摆球切向位移投影相乘，产生正负不同的广义力。"
+  },
+  {
+    "key": "ex07",
+    "fig": 8,
+    "a": "\\delta W=Q_1\\delta\\theta_1+Q_2\\delta\\theta_2",
+    "b": "Q_1=Q_2=0",
+    "bridge": "两杆角互相独立；第二杆重心随铰点 $A$ 移动，因此第一角的重力系数还包含整根第二杆的重量。"
+  },
+  {
+    "key": "ex08",
+    "fig": 9,
+    "a": "x_B=2a\\cos\\phi",
+    "b": "\\delta x_B=-2a\\sin\\phi\\,\\delta\\phi",
+    "bridge": "点 $A,C$ 的切向虚位移共用 $\\delta\\phi$；滑块 $B$ 只作水平位移，不能再赋予独立竖向变分。"
+  },
+  {
+    "key": "ex09",
+    "fig": 10,
+    "a": "y_C=l\\sin\\theta-d\\tan\\theta",
+    "b": "\\cos^3\\theta=d/l",
+    "bridge": "固定棱边 $O$ 限制杆与墙的交点高度；杆重心 $C$ 的高度随两种几何效应同时变化。"
+  },
+  {
+    "key": "ex10",
+    "fig": 11,
+    "a": "m_{AB}=\\sigma a,\\quad m_{BC}=\\sigma b",
+    "b": "\\tan\\theta=b^2/(a^2+2ab)",
+    "bridge": "两段质心位置分别按各自杆长和质量加权；铰点 $A$ 的反力不作虚功。"
+  },
+  {
+    "key": "ex11",
+    "fig": 12,
+    "a": "\\delta x_B=-r\\frac{\\sin(\\phi+\\psi)}{\\cos\\psi}\\delta\\phi",
+    "b": "F_A=F_B\\frac{\\sin(\\phi+\\psi)}{\\cos\\psi}",
+    "bridge": "曲柄的切向力与弧向虚位移同向；滑块位移受连杆长度约束，符号由右正方向确定。"
+  },
+  {
+    "key": "ex12",
+    "fig": 13,
+    "a": "\\nabla z=\\lambda\\nabla f",
+    "b": "z_{\\min}=\\tfrac12;\\quad z=1,9",
+    "bridge": "投影图中的直线和偏心圆是允许位置；沿约束交线改变位置时，驻值点的高度一阶变化为零。"
+  },
+  {
+    "key": "ex13",
+    "fig": 15,
+    "a": "y_B=\\sqrt{4l^2-x^2},\\quad x=DE",
+    "b": "N=-P/\\sqrt3",
+    "bridge": "中点横杆长度是所选位移 $x$；将横杆拆去，向外的正试探力与顶点下降的虚功相联系。"
+  },
+  {
+    "key": "ex14",
+    "fig": 16,
+    "a": "T_2\\sin\\theta_2=F_2",
+    "b": "T_1\\sin\\theta_1=F_2-F_1",
+    "bridge": "下绳的拉力对两球方向相反；上绳承受两球总重，水平分量对应两外力的代数和。"
+  },
+  {
+    "key": "ex15",
+    "fig": 17,
+    "a": "\\vect v=\\dot r\\vect e_r+r\\dot\\phi\\vect e_\\phi",
+    "b": "p_\\phi=mr^2\\dot\\phi=J",
+    "bridge": "径向和横向速度互相垂直，横向分量中的半径因子是离心项和角动量积分的共同来源。"
+  },
+  {
+    "key": "ex16",
+    "fig": 18,
+    "a": "\\dot y=2\\dot x,\\quad \\omega_s=\\dot x/R",
+    "b": "a_y=\\frac{8mg}{3M+8m}",
+    "bridge": "最高点的绳速由柱心平动与圆柱自转同向叠加；地面接触点瞬时静止，静摩擦仍提供转动力矩。"
+  },
+  {
+    "key": "ex17",
+    "fig": 19,
+    "a": "\\omega_1=\\dot y/(2r),\\quad\\omega_2=\\dot y/r",
+    "b": "T=\\tfrac74m\\dot y^2",
+    "bridge": "两盘的接触绳速相同，角速度由各自半径决定；两转动惯量都须折算到同一重物速度。"
+  },
+  {
+    "key": "ex18",
+    "fig": 20,
+    "a": "T=\\tfrac m2(\\dot r^2+r^2\\dot\\theta^2)",
+    "b": "m\\ddot r-mr\\dot\\theta^2+k(r-a)-mg\\cos\\theta=0",
+    "bridge": "弹簧实际长度 $r$ 和偏角 $\\theta$ 均可独立变化；沿径向与切向投影时，重力分别带余弦和正弦因子。"
+  },
+  {
+    "key": "ex19",
+    "fig": 21,
+    "a": "\\tfrac7{10}m\\rho^2\\dot\\theta^2=mg\\rho(1-\\cos\\theta)",
+    "b": "N=\\tfrac{mg}{7}(17\\cos\\theta-10)",
+    "bridge": "法向反力作用在接触处并沿两球心连线；上坡静摩擦提供自转，必须先与摩擦上限比较。"
+  },
+  {
+    "key": "ex20",
+    "fig": 22,
+    "a": "\\vect v_B=\\dot x\\vect e_x+l\\dot\\phi\\vect e_\\phi",
+    "b": "T_{\\rm cross}=m_2l\\dot x\\dot\\phi\\cos\\phi",
+    "bridge": "摆球绝对速度是悬点平移与绕悬点运动的矢量和；两箭头的投影产生不能丢掉的动能交叉项。"
+  },
+  {
+    "key": "ex21",
+    "fig": 23,
+    "a": "\\vect v_m=\\dot x\\vect e_x+\\dot s\\vect e_s",
+    "b": "\\Omega^2=\\frac{k(M+m)}{m(M+m\\sin^2\\alpha)}",
+    "bridge": "沿坡向上的 $\\dot s$ 与斜面向右的 $\\dot x$ 夹角为 $\\alpha$，因此速度平方产生正的余弦交叉项。"
+  },
+  {
+    "key": "ex22",
+    "fig": 24,
+    "a": "v_C=(R+r)\\dot\\phi=r\\omega_s",
+    "b": "\\omega_{\\rm rel}=\\omega_s-\\dot\\phi=R\\dot\\phi/r",
+    "bridge": "接触点固定不动，把行星轮的公转速度与绝对自转联系；相对曲柄自转须再减去曲柄转速。"
+  },
+  {
+    "key": "ex23",
+    "fig": 8,
+    "a": "T=\\tfrac A2\\dot\\theta_1^2+\\tfrac B2\\dot\\theta_2^2+C\\cos\\Delta\\dot\\theta_1\\dot\\theta_2",
+    "b": "\\Delta=\\theta_1-\\theta_2",
+    "bridge": "两杆重心和铰点 $A$ 的速度共同进入动能；两角的差决定交叉项，端点水平力仍按其虚位移求广义力。"
+  },
+  {
+    "key": "ex24",
+    "fig": "cyclic_three",
+    "a": "p_\\phi=ma^2\\sin^2\\theta\\dot\\phi",
+    "b": "\\dot p_\\phi=0",
+    "bridge": "碗面上纬向速度为 $a\\sin\\theta\\dot\\phi$；绕竖直轴的对称性使方位角不显含于拉格朗日函数。"
+  },
+  {
+    "key": "ex25",
+    "fig": "tube_horizontal",
+    "a": "\\ddot r=\\omega^2r",
+    "b": "r=a\\cosh\\omega t",
+    "bridge": "管的方向随规定角速率转动，径向相对速度与横向牵连速度互相垂直；离管条件是 $r=l$。"
+  },
+  {
+    "key": "ex26",
+    "fig": "tube_vertical",
+    "a": "y=r\\sin\\omega t",
+    "b": "\\ddot r-\\omega^2r=-g\\sin\\omega t",
+    "bridge": "径向正方向沿管，重力在该方向的投影随时间变为 $-mg\\sin\\omega t$，势能显含时间。"
+  },
+  {
+    "key": "ex27",
+    "fig": 26,
+    "a": "X=\\frac{m_1x_1+m_2x_2}{M},\\quad s=x_2-x_1",
+    "b": "\\mu\\ddot s+(k-\\mu\\omega^2)s=ka",
+    "bridge": "质心坐标描述整体离轴运动，弹性绳长描述两球相对运动；固定转速产生的二次项分别进入两者。"
+  },
+  {
+    "key": "ex28",
+    "fig": 27,
+    "a": "\\vect r=a(1+\\cos\\theta)\\vect e_1+a\\sin\\theta\\vect e_2",
+    "b": "\\ddot\\theta+\\omega^2\\sin\\theta=0",
+    "bridge": "转轴在环上一点 $O$，不能把它当成环心；环心的牵连速度与珠的相对速度在绝对动能中耦合。"
+  },
+  {
+    "key": "ex29",
+    "fig": 28,
+    "a": "p_y=4m\\dot y+m\\dot s=0",
+    "b": "\\ddot s+\\frac{4g}{3a}(s-2a)=0",
+    "bridge": "主绳让质量 $2m$ 与上球反向运动，下球还增加相对长度 $s$；消去循环速度后有效质量为 $3m/4$。"
+  },
+  {
+    "key": "ex30",
+    "fig": 29,
+    "a": "h=r^2\\dot\\theta,\\quad h^2=\\tfrac92ga^3",
+    "b": "\\dot r^2+\\frac{h^2}{2r^2}+gr=\\tfrac{13}{4}ga",
+    "bridge": "孔下球的位移为 $l-r$，两球都贡献径向动能；桌面球的切向运动由绕孔角动量守恒决定。"
+  },
+  {
+    "key": "ex31",
+    "fig": 30,
+    "a": "\\mu=m/2,\\quad J=\\mu av/\\sqrt2",
+    "b": "\\tfrac{mv^2}{4}=\\tfrac{mv^2}{128}+\\tfrac92ka^2",
+    "bridge": "初态相对速度有径向和横向两分量；在最大伸长处仅径向速度为零，绕质心转动动能仍须保留。"
+  },
+  {
+    "key": "ex32",
+    "fig": 31,
+    "a": "A=2m_1+2I/r^2",
+    "b": "\\ddot u+\\frac{k(A+m_2)}{Am_2}u=0",
+    "bridge": "两轮转动由无滑动条件与车架速度联系；循环积分含转动折算项，地面摩擦可改变真实水平动量。"
+  },
+  {
+    "key": "ex33",
+    "fig": 33,
+    "a": "\\dd t=\\frac{\\sqrt{1+y'^2}}{\\sqrt{2gy}}\\dd x",
+    "b": "x=a(u-\\sin u),\\ y=a(1-\\cos u)",
+    "bridge": "沿轨道下降获得的速度取决于深度 $y$；弧长元和速度之比决定时间泛函，最低点后须连续改变斜率支。"
+  },
+  {
+    "key": "ex34",
+    "fig": 34,
+    "a": "\\frac{\\sigma gy+\\lambda}{\\sqrt{1+y'^2}}=H",
+    "b": "y=a\\cosh\\frac{x-x_0}{a}+y_0",
+    "bridge": "链元两端张力的水平分量相同，长度乘数决定高度平移；最低点两侧以双曲余弦统一表示。"
+  },
+  {
+    "key": "ex35",
+    "fig": 35,
+    "a": "\\dd A=2\\pi y\\sqrt{1+y'^2}\\dd x",
+    "b": "y=a\\cosh\\frac{x-x_0}{a}",
+    "bridge": "母线高度 $y$ 是旋转半径，直接乘入窄环带面积；两端圆环给两个参数边界条件，半径不能任意平移。"
+  },
+  {
+    "key": "ex36",
+    "fig": "geodesic_isoperimetric",
+    "a": "\\vect L\\cdot\\vect r=0",
+    "b": "\\kappa=\\text{常数},\\quad A_{\\max}=l^2/(4\\pi)",
+    "bridge": "球面上的固定过心平面截出大圆；平面闭曲线的外法向变分使面积与周长的一阶变化通过曲率相联系。"
+  },
+  {
+    "key": "ex37",
+    "fig": 36,
+    "a": "ct'(x)=n_1\\sin\\theta_1-n_2\\sin\\theta_2",
+    "b": "n_1\\sin\\theta_1=n_2\\sin\\theta_2",
+    "bridge": "两条光路在界面交点连接，两个角都从法线量起；改变交点会同时改变两段长度，不能各自独立取极值。"
+  },
+  {
+    "key": "ex38",
+    "fig": "action_paths",
+    "a": "x=x_*+\\eta,\\quad\\eta(t_1)=\\eta(t_2)=0",
+    "b": "S[x]-S[x_*]=\\tfrac m2\\int\\dot\\eta^2\\dd t",
+    "bridge": "扰动曲线与直线轨道具有相同两端点，分部积分的端点差因此为零；剩余平方积分判定本例最小性。"
+  },
+  {
+    "key": "ex39",
+    "fig": 27,
+    "a": "A=\\dot\\theta+\\omega(1+\\cos\\theta)",
+    "b": "\\delta S=-ma^2\\int(\\ddot\\theta+\\omega^2\\sin\\theta)\\delta\\theta\\dd t",
+    "bridge": "滑珠的相对角沿环心定义；固定两时刻的位置使角变分端点为零，速度变分须先分部积分再消项。"
+  },
+  {
+    "key": "ex40",
+    "fig": 37,
+    "a": "p_\\psi=c_3,\\quad p_\\phi=c_z",
+    "b": "\\dot\\phi=\\frac{c_z-c_3\\cos\\theta}{I\\sin^2\\theta}",
+    "bridge": "竖直轴进动与本体轴自转是两个不同的对称方向；本体轴角速度为 $\\dot\\psi+\\dot\\phi\\cos\\theta$。"
+  },
+  {
+    "key": "ex41",
+    "fig": 38,
+    "a": "v_C=(R-r)\\dot\\theta=r\\omega_s",
+    "b": "\\omega_0^2=\\frac{5g}{7(R-r)}",
+    "bridge": "圆柱内滚动的球心轨道半径是 $R-r$，接触点 $A$ 瞬时静止，球心平动与球自转可合为绕 $A$ 的动能。"
+  },
+  {
+    "key": "ex42",
+    "fig": 39,
+    "a": "AC^2=r^2+d^2-2rd\\cos\\theta",
+    "b": "\\omega_0^2=\\frac{gd}{3r^2/2-2rd}",
+    "bridge": "圆心保持离地高度 $r$，偏心质心随 $\\theta$ 升降；接触点到质心的距离决定瞬时惯量。"
+  },
+  {
+    "key": "ex43",
+    "fig": 40,
+    "a": "Q_\\pm=(x_1\\pm x_2)/\\sqrt2",
+    "b": "\\omega_+^2=k/m,\\quad\\omega_-^2=(k+2k')/m",
+    "bridge": "同相位移不改变中间弹簧长度，反相位移加倍改变它的长度；和差方向正好将两种能量同时对角化。"
+  },
+  {
+    "key": "ex44",
+    "fig": "cart_modes",
+    "a": "\\det(K-\\lambda M)=0",
+    "b": "\\lambda^2-(\\omega_s^2+2\\omega_p^2)\\lambda+\\omega_s^2\\omega_p^2=0",
+    "bridge": "滑块位移与摆球转角的混合惯性来自悬点移动；两侧弹簧的变式只把刚度 $k$ 替换为 $2k$。"
+  },
+  {
+    "key": "ex45",
+    "fig": 42,
+    "a": "\\det(K-\\lambda M)=0",
+    "b": "\\omega_\\pm^2=(2\\pm\\sqrt2)g/l",
+    "bridge": "两杆角均是相对竖直的绝对角；慢模式同相、快模式反相，下球振幅由耦合矩阵给出而非任意指定。"
+  },
+  {
+    "key": "ex46",
+    "fig": "legendre",
+    "a": "u=f'(x)=ax",
+    "b": "g(u)=ux-f(x)=u^2/(2a)",
+    "bridge": "抛物线切线的斜率是新变量 $u$，纵截距为 $-g(u)$；变换先解斜率关系，再计算截距。"
+  },
+  {
+    "key": "ex47",
+    "fig": "particle_line",
+    "a": "p=m\\dot x",
+    "b": "\\dot x=H_p,\\quad\\dot p=-H_x",
+    "bridge": "位置 $x$ 与动量 $p$ 共同指定初态，势能曲线的局部斜率决定力的负方向。"
+  },
+  {
+    "key": "ex48",
+    "fig": 17,
+    "a": "p_r=m\\dot r,\\quad p_\\phi=mr^2\\dot\\phi",
+    "b": "\\dot p_r=p_\\phi^2/(mr^3)-V'(r)",
+    "bridge": "径向动量对应径向速度，方位角动量对应横向转动；对哈密顿函数按固定动量求径向偏导才能得到离心项。"
+  },
+  {
+    "key": "ex49",
+    "fig": 25,
+    "a": "p_\\theta=ma^2\\dot\\theta",
+    "b": "\\dot p_\\theta=\\frac{p_\\phi^2\\cos\\theta}{ma^2\\sin^3\\theta}-mga\\sin\\theta",
+    "bridge": "纬圈半径 $a\\sin\\theta$ 使方位角动量系数随极角变化；正则偏导须保留此几何因子。"
+  },
+  {
+    "key": "ex50",
+    "fig": 22,
+    "a": "p=A(q)\\dot q,\\quad\\det A=m_2l^2D",
+    "b": "D=m_1+m_2\\sin^2\\phi>0",
+    "bridge": "悬点的平移与摆的转动形成对称速度矩阵；正行列式允许在任意角度唯一反解两个速度。"
+  },
+  {
+    "key": "ex51",
+    "fig": 22,
+    "a": "D_0=1+\\sin^2\\phi",
+    "b": "H=\\tfrac12(p_x\\dot x+p_\\phi\\dot\\phi)+V",
+    "bridge": "等质量并不消除交叉惯性；动能二次齐次性提供勒让德变换的半系数，但角度依赖仍留在分母中。"
+  },
+  {
+    "key": "ex52",
+    "fig": "osc_phase",
+    "a": "\\ddot q+\\omega^2q=0",
+    "b": "q=q_0\\cos\\omega t+\\frac{p_0}{m\\omega}\\sin\\omega t",
+    "bridge": "相椭圆右端的力沿负动量方向，因而轨道顺时针；初始位置和动量分别决定余弦、正弦系数。"
+  },
+  {
+    "key": "ex53",
+    "fig": "coulomb_sphere",
+    "a": "p_\\theta=mr^2\\dot\\theta",
+    "b": "J^2=p_\\theta^2+p_\\phi^2/\\sin^2\\theta",
+    "bridge": "径向吸引力沿核与电子连线，绕核力矩为零；球坐标的速度尺度产生两个角动量项。"
+  },
+  {
+    "key": "ex54",
+    "fig": 44,
+    "a": "L_x=yp_z-zp_y",
+    "b": "\\{L_x,L_y\\}=L_z",
+    "bridge": "角动量三个分量依次绕三条坐标轴定义；泊松括号逐坐标相乘相减，交换两项会改变结果符号。"
+  },
+  {
+    "key": "ex55",
+    "fig": "angular_algebra",
+    "a": "\\{L_x,H\\}=\\{L_y,H\\}=0",
+    "b": "\\{\\{L_x,L_y\\},H\\}=0",
+    "bridge": "两项已知守恒量通过括号生成第三方向的旋转量，Jacobi 恒等式把该括号的时间导数拆成两个零项。"
+  },
+  {
+    "key": "ex56",
+    "fig": "classical_spread",
+    "a": "\\Delta q\\Delta p=E/\\omega",
+    "b": "A\\to0:\\quad\\Delta q\\Delta p\\to0",
+    "bridge": "经典相点和任意小椭圆都可作为状态；相椭圆面积随振幅缩小，而基本泊松括号不随轨道大小改变。"
+  },
+  {
+    "key": "ex57",
+    "fig": "canonical_map",
+    "a": "\\{Q,P\\}=Q_qP_p-Q_pP_q",
+    "b": "\\{aq,p/a\\}=\\{\\ln q,qp\\}=1",
+    "bridge": "正则缩放一方向伸长、另一方向压缩，保存有向相面积；对数坐标仅覆盖 $q>0$ 的半平面。"
+  },
+  {
+    "key": "ex58",
+    "fig": "action_order",
+    "a": "Q=\\tfrac12(\\kappa q^2+p^2/\\kappa)",
+    "b": "\\{Q,P\\}=1",
+    "bridge": "椭圆半径平方标记新坐标 $Q$，其绕行角为新动量 $P$；原点没有唯一角度，必须在局部角支工作。"
+  },
+  {
+    "key": "ex59",
+    "fig": "moving_origin",
+    "a": "Q=q-a(t),\\quad P=p",
+    "b": "K=H-\\dot aP",
+    "bridge": "移动原点的速度必须从绝对速度扣除；母函数的显含时间项正是这项相对运动修正。"
+  },
+  {
+    "key": "ex60",
+    "fig": 45,
+    "a": "K=\\omega_1P_1+\\omega_2P_2",
+    "b": "\\dot P_i=0,\\quad\\dot Q_i=\\omega_i",
+    "bridge": "每条相椭圆由作用量 $P_i$ 标记，角变量沿轨道匀速增长；面积积分的归一化给出 $P_i=E_i/\\omega_i$。"
+  },
+  {
+    "key": "ex61",
+    "fig": "hj_linear",
+    "a": "S=E(q-t)-aq^3/3",
+    "b": "q=t+\\beta,\\quad p=E-aq^2",
+    "bridge": "能量水平线在相平面中是抛物线，$\\dot q=1$ 规定沿横轴向右；参数导数给时间原点常数。"
+  },
+  {
+    "key": "ex62",
+    "fig": "two_osc",
+    "a": "W=W_x(x,E_x)+W_y(y,E_y)",
+    "b": "\\partial_{E_i}S=\\beta_i",
+    "bridge": "两个振动方向各有独立能量和相位；坐标的转折点对应动量为零，根式积分须按运动方向换支。"
+  },
+  {
+    "key": "ex63",
+    "fig": 17,
+    "a": "p_r^2=2m[E-V(r)]-J^2/r^2",
+    "b": "S=J\\phi+\\int p_r\\dd r-Et",
+    "bridge": "径向运动由有效势限制，方位角由同一常量 $J$ 控制；主函数对两个参数求导分别恢复时间和轨道。"
+  },
+  {
+    "key": "ex64",
+    "fig": "sphere_coords",
+    "a": "\\frac{p_\\theta^2}{2m}+\\frac{J^2}{2m\\sin^2\\theta}+b(\\theta)=\\alpha",
+    "b": "p_r^2=2m[E-a(r)-\\alpha/r^2]",
+    "bridge": "方位角仍是循环方向，但极角势使完整旋转对称性失去；角向分离常数作为径向有效势的系数。"
+  },
+  {
+    "key": "ex65",
+    "fig": 46,
+    "a": "\\dd s^2=h_\\xi^2\\dd\\xi^2+h_\\eta^2\\dd\\eta^2+\\xi\\eta\\dd\\vartheta^2",
+    "b": "H=E\\ \\Longrightarrow\\ F_\\xi=\\alpha,\\ F_\\eta=-\\alpha",
+    "bridge": "两族子午抛物线正交，旋转得到轴对称坐标面；先由线元得到尺度，再把能量方程乘以 $\\xi+\\eta$ 分离。"
+  },
+  {
+    "key": "ex66",
+    "fig": 47,
+    "a": "p_i=mh_i^2\\dot q_i",
+    "b": "H=E\\ \\Longrightarrow\\ F_\\xi=\\alpha,\\ F_\\eta=-\\alpha",
+    "bridge": "椭圆与双曲线共用焦点 $z=\\pm\\sigma$；焦距决定所有尺度因子的长度量纲，能量项在两分离式中符号不同。"
+  },
+  {
+    "key": "ex67",
+    "fig": "separation",
+    "a": "f_i-Eg_i=\\alpha_i,\\quad\\sum_i\\alpha_i=0",
+    "b": "\\det S_{q\\gamma}=\\pm G/\\prod_iD_i",
+    "bridge": "每条分离曲线只涉及一对变量，分离常数之和受约束；能量与其余独立常数共同构成完全积分参数。"
+  },
+  {
+    "key": "ex68",
+    "fig": 48,
+    "a": "\\nabla\\cdot\\dot{\\vect z}=-2\\gamma",
+    "b": "\\mathcal A(t)=e^{-2\\gamma t}\\mathcal A(0)",
+    "bridge": "无阻尼相椭圆闭合，欠阻尼轨道向内螺旋；相区缩小由流场散度决定，不能将其归入保守哈密顿流。"
+  },
+  {
+    "key": "ex69",
+    "fig": 49,
+    "a": "p=\\pm\\sqrt{2m[E-V(x)]}",
+    "b": "\\lambda^2=-V''(x_*)/m",
+    "bridge": "势能曲线与能量线的交点给径向转折位置；图中远处正势垒必须保留，才能区分跨阱闭轨和向右逃逸。"
+  },
+  {
+    "key": "ex70",
+    "fig": "phase_sector",
+    "a": "q=\\lambda a\\cos\\vartheta,\\quad p=\\lambda b\\sin\\vartheta",
+    "b": "\\dd q\\dd p=ab\\lambda\\dd\\lambda\\dd\\vartheta",
+    "bridge": "第一象限椭圆扇区随哈密顿流顺时针移动，角宽与半径范围保持，面积应按雅可比积分而非外接矩形估计。"
+  },
+  {
+    "key": "ex71",
+    "fig": "euler_flow",
+    "a": "\\det A_{\\rm explicit}=1+h^2\\omega^2",
+    "b": "\\det A_{\\rm symplectic}=1",
+    "bridge": "两个更新顺序给出不同的平面线性映射；先动量后位置相当于两次剪切，能保存有向相面积。"
+  },
+  {
+    "key": "ex72",
+    "fig": "simple_levels",
+    "a": "\\mu\\kappa/(\\hbar^2\\chi)=n_r+l+1=n",
+    "b": "E_n=-\\mu\\kappa^2/(2\\hbar^2n^2)",
+    "bridge": "负能级在电离限下逐渐密集；原点正则和远处衰减共同限制径向级数，使能量由连续值变为离散值。"
+  },
+  {
+    "key": "ex73",
+    "fig": "quantum_spread",
+    "a": "\\Vert f\\Vert ^2\\Vert g\\Vert ^2\\ge\\lvert\\langle f,g\\rangle\\rvert^2",
+    "b": "\\Delta x\\Delta p\\ge\\hbar/2",
+    "bridge": "位置、动量分布的宽度是同一量子态的二阶矩；它们通过态向量内积和不可交换算符联系。"
+  },
+  {
+    "key": "ex74",
+    "fig": 55,
+    "a": "I=\\lvert\\psi_1\\rvert^2+\\lvert\\psi_2\\rvert^2+2\\Re(\\psi_1^*\\psi_2)",
+    "b": "I=4\\lvert\\psi_1\\rvert^2\\cos^2(\\Delta\\phi/2)",
+    "bridge": "两条路径在同一屏点叠加复振幅，路径差改变相位差；交叉项不能在叠加前当作两独立概率相加。"
+  },
+  {
+    "key": "ex75",
+    "fig": 57,
+    "a": "\\delta S_{\\rm bulk}=\\int(-\\rho_lu_{tt}+\\mathcal T u_{xx})\\delta u",
+    "b": "\\omega_n=n\\pi\\sqrt{\\mathcal T/\\rho_l}/l",
+    "bridge": "两端位移为零选择正弦振型，内部曲率通过张力给横向加速度；初形和初速度各确定一组时间系数。"
+  },
+  {
+    "key": "ex76",
+    "fig": "standing_mode",
+    "a": "\\int_0^l\\sin^2k_nx\\dd x=\\int_0^l\\cos^2k_nx\\dd x=l/2",
+    "b": "E_n=MA^2\\omega_n^2/4",
+    "bridge": "振型节点固定，位移与速度的时间相位相差四分之一周期；空间平方积分使动能和势能系数完全相同。"
+  },
+  {
+    "key": "ex77",
+    "fig": 58,
+    "a": "\\mathcal L=\\rho_su_t^2/2-\\mathcal T_s\\lVert\\nabla u\\rVert^2/2",
+    "b": "\\omega_{nm}=\\pi c\\sqrt{n^2/a^2+m^2/b^2}",
+    "bridge": "矩形膜两组固定边分别选择一个正弦因子；面元斜率的两个方向同时贡献弹性势能。"
+  },
+  {
+    "key": "ex78",
+    "fig": "elastic_waves",
+    "a": "\\rho_m\\vect u_{tt}=(\\lambda+\\mu)\\nabla\\nabla\\cdot\\vect u+\\mu\\nabla^2\\vect u",
+    "b": "c_L^2=(\\lambda+2\\mu)/\\rho_m,\\quad c_T^2=\\mu/\\rho_m",
+    "bridge": "纵向位移平行传播方向，横向位移与其垂直；只有纵向分量贡献体积压缩，故两波速不同。"
+  },
+  {
+    "key": "ex79",
+    "fig": "sound_wave",
+    "a": "\\delta\\rho_t+\\rho_0\\nabla\\cdot\\vect v=0",
+    "b": "\\delta\\rho_{tt}-c_s^2\\nabla^2\\delta\\rho=0",
+    "bridge": "压缩区与稀疏区交替，压强梯度驱动流速；对连续方程求时间导数后可用动量方程消去速度。"
+  },
+  {
+    "key": "ex80",
+    "fig": "water_wave",
+    "a": "\\phi\\propto\\cosh k(z+h)e^{i(kx-\\omega t)}",
+    "b": "\\omega^2=gk\\tanh(kh)",
+    "bridge": "底面无穿透选取双曲余弦的深度分布；自由面上的垂向流速与压力条件把表面位移联系到速度势。"
+  },
+  {
+    "key": "ex81",
+    "fig": 59,
+    "a": "\\delta_\\phi S\\Rightarrow\\nabla\\cdot\\vect E=\\rho_e/\\varepsilon_0",
+    "b": "\\delta_A S\\Rightarrow\\nabla\\times\\vect B=\\mu_0\\vect j+\\mu_0\\varepsilon_0\\vect E_t",
+    "bridge": "电场和磁场先由两个势定义，另外两条无源方程成为恒等式；独立势变分给出有源方程和相应边界项。"
+  },
+  {
+    "key": "ex82",
+    "fig": "symmetry",
+    "a": "\\mathcal J=\\vect p\\cdot\\vect\\xi-\\mathcal E\\tau",
+    "b": "\\vect\\xi=\\vect\\alpha\\times\\vect r\\Rightarrow\\mathcal J=\\vect\\alpha\\cdot\\vect L",
+    "bridge": "平移箭头指定线动量方向，绕轴转动指定角动量分量，时间平移对应能量；对称方向须被约束和外场共同保留。"
+  },
+  {
+    "key": "ex83",
+    "fig": "complex_phase",
+    "a": "\\Delta\\phi=i\\phi,\\quad\\Delta\\phi^*=-i\\phi^*",
+    "b": "j^\\mu=i(\\phi\\partial^\\mu\\phi^*-\\phi^*\\partial^\\mu\\phi)",
+    "bridge": "复场在复平面上整体转相位，模长不变；对场及共轭场分别求导得到同一守恒流的两部分。"
+  },
+  {
+    "key": "ex84",
+    "fig": "energy_flux",
+    "a": "e=\\rho_lu_t^2/2+\\mathcal T u_x^2/2",
+    "b": "\\partial_te+\\partial_x(-\\mathcal T u_xu_t)=0",
+    "bridge": "一段弦的能量变化由两端能流差决定；能流方向由局部斜率与横向速度的乘积给出。"
+  },
+  {
+    "key": "ex85",
+    "fig": "fluid_cell",
+    "a": "\\partial_t\\rho_m+\\nabla\\cdot(\\rho_m\\vect v)=0",
+    "b": "\\rho_mD_t\\vect v=-\\nabla P+\\vect f",
+    "bridge": "控制体各面的质量通量和压强应力共同进入局部守恒；展开动量输运后，密度导数项由质量方程消去。"
+  },
+  {
+    "key": "ex86",
+    "fig": 61,
+    "a": "g_{\\theta\\theta}=R^2,\\quad g_{\\phi\\phi}=R^2\\sin^2\\theta",
+    "b": "\\ddot\\theta-\\sin\\theta\\cos\\theta\\dot\\phi^2=0",
+    "bridge": "球面切向速度的两个分量由度规计量；半径反力不产生绕球心力矩，空间角动量把轨道限制在过心平面。"
+  },
+  {
+    "key": "tr01",
+    "fig": "moving_circle",
+    "a": "(x-vt)\\delta x+y\\delta y=0",
+    "b": "\\mathcal P=Nv n_x",
+    "bridge": "圆心沿水平箭头移动；同一时刻的切向虚位移垂直反力，真实位移还包含圆心平移。"
+  },
+  {
+    "key": "tr02",
+    "fig": "sphere_normal",
+    "a": "\\nabla\\widetilde f=\\nabla f/(2a)",
+    "b": "\\widetilde\\lambda=2a\\lambda",
+    "bridge": "球面外法向与半径同向；改变约束函数的尺度只改变梯度长度，不改变真实反力。"
+  },
+  {
+    "key": "tr03",
+    "fig": "inverted_pendulum",
+    "a": "T+mg=0\\quad(\\theta=\\pi)",
+    "b": "T=-mg<0",
+    "bridge": "倒立绳球的重力和绳张力都指向下方，无法静力平衡；换刚杆后可由向上推力提供平衡。"
+  },
+  {
+    "key": "tr04",
+    "fig": 22,
+    "a": "\\frac\\dd{\\dd t}(\\dot x\\cos\\phi)=\\ddot x\\cos\\phi-\\dot x\\dot\\phi\\sin\\phi",
+    "b": "l\\ddot\\phi+\\ddot x\\cos\\phi+g\\sin\\phi=0",
+    "bridge": "悬点速度在摆切线方向上的投影随角度改变，时间导数与动能的角度偏导含同一交叉项。"
+  },
+  {
+    "key": "tr05",
+    "fig": "tube_horizontal",
+    "a": "N=2m\\omega\\dot r",
+    "b": "\\dot E=N\\omega r=2m\\omega^2r\\dot r",
+    "bridge": "反力沿管的横向，与牵连速度同向；它对相对径向位移不作功，却向球输送真实能量。"
+  },
+  {
+    "key": "tr06",
+    "fig": "momentum_shift",
+    "a": "p=m\\dot q+b(q)",
+    "b": "H=\\frac{(p-b)^2}{2m}+V(q)",
+    "bridge": "相平面纵坐标在每个位置平移 $b(q)$；机械速度取决于 $p-b$，不能把新的共轭动量直接除以质量。"
+  },
+  {
+    "key": "tr07",
+    "fig": "natural_boundary",
+    "a": "y''=-1,\\quad y'(1)=0",
+    "b": "y=x-x^2/2",
+    "bridge": "左端位置固定，右端仅在竖向自由；右端任意变分使斜率为零，而不是把该端位置额外固定。"
+  },
+  {
+    "key": "tr08",
+    "fig": "coordinate_scale",
+    "a": "q=Q/c",
+    "b": "\\omega^2=(k/c^2)/(a_0/c^2)=k/a_0",
+    "bridge": "坐标轴尺度改变时，同一物理振幅的数字变化；动能与势能的二次系数按同一比例变换。"
+  },
+  {
+    "key": "tr09",
+    "fig": "unequal_modes",
+    "a": "2\\lambda^2-6\\lambda+3=0",
+    "b": "a_+^{\\mathsf T}Ma_-=0",
+    "bridge": "两块质量不同，普通坐标长度不再是正确的模式内积；质量矩阵决定两振幅向量的正交权重。"
+  },
+  {
+    "key": "tr10",
+    "fig": "degenerate_modes",
+    "a": "K-\\omega^2M=0",
+    "b": "\\omega^2=k/m,\\quad\\dim\\ker=2",
+    "bridge": "二维各向同性振子的两个坐标方向等价；在重根处整个平面都是本征子空间，单列余子式不能选出基。"
+  },
+  {
+    "key": "tr11",
+    "fig": "momentum_shift",
+    "a": "p=P+f_q,\\quad Q=q",
+    "b": "K=H(Q,P+f_Q,t)+f_t",
+    "bridge": "动量平移既可随位置也可随时间改变；相空间变换图中的竖向位移改变时间导数，须由 $f_t$ 抵消。"
+  },
+  {
+    "key": "tr12",
+    "fig": "free_single",
+    "a": "G_t=-p/m,\\quad\\{G,H\\}=p/m",
+    "b": "\\frac{\\dd G}{\\dd t}=0",
+    "bridge": "自由粒子相流沿水平方向剪切；从当前位置减去已行距离 $pt/m$ 就得到不变的初始位置。"
+  },
+  {
+    "key": "tr13",
+    "fig": "constant_force",
+    "a": "p^2=2m(E-Fq)",
+    "b": "q=q_0+p_0t/m-Ft^2/(2m)",
+    "bridge": "真实力沿势能增加的反方向，动量随时间线性改变；相轨道在转折点由正动量支接到负支。"
+  },
+  {
+    "key": "tr14",
+    "fig": "canonical_circle",
+    "a": "Q=\\sqrt{m\\omega}\\,q,\\quad P=p/\\sqrt{m\\omega}",
+    "b": "K=\\tfrac\\omega2(Q^2+P^2)",
+    "bridge": "对位置和动量作互逆缩放，把椭圆的两半轴统一；圆面积仍等于原相椭圆面积。"
+  },
+  {
+    "key": "tr15",
+    "fig": "free_shear",
+    "a": "q-pt/m=q_0\\in(0,a)",
+    "b": "\\mathcal A(t)=ab",
+    "bridge": "上下边动量不变，较高动量的顶边移动得更多；斜边是随流物质边界，面积应沿斜边围成的区域计算。"
+  },
+  {
+    "key": "tr16",
+    "fig": "phase_sector",
+    "a": "\\rho=F(H)\\Rightarrow\\{\\rho,H\\}=0",
+    "b": "C=\\beta\\omega/(2\\pi)",
+    "bridge": "完整能量壳上的指数分布对转动不变，单个象限的初区则随轨道旋转，沿流密度仍保持。"
+  },
+  {
+    "key": "tr17",
+    "fig": "standing_mode",
+    "a": "T=\\rho_llA^2\\omega_n^2\\sin^2\\omega_nt/4",
+    "b": "E=\\rho_llA^2\\omega_n^2/4",
+    "bridge": "定端正弦振型的平方空间积分为 $l/2$；动能与势能的时间互补使总能量保持不变。"
+  },
+  {
+    "key": "tr18",
+    "fig": 60,
+    "a": "Q=\\int_\\Omega j^0\\dd V",
+    "b": "\\dot Q=-\\oint_{\\partial\\Omega}\\vect j\\cdot\\vect n\\dd S",
+    "bridge": "边界外法向规定正出流，区域内总荷的减少量恰等于净流出量；局部无源并不关闭边界。"
+  },
+  {
+    "key": "tr19",
+    "fig": "equator",
+    "a": "\\theta=\\pi/2,\\quad\\phi=\\phi_0+\\Omega t",
+    "b": "\\vect r=R(\\cos\\phi,\\sin\\phi,0)",
+    "bridge": "赤道是过球心平面的截线，速度沿其切向；极点处方位角不唯一与真实运动奇异是不同问题。"
+  },
+  {
+    "key": "tr20",
+    "fig": "wkb",
+    "a": "Q_{\\rm quantum}\\sim\\hbar^2/(2ml_A^2)",
+    "b": "Q_{\\rm quantum}/T\\sim(\\hbar/(pl_A))^2",
+    "bridge": "振幅包络和快速变化相位有不同空间尺度；波长远短于包络尺度时，量子势才可相对经典动能忽略。"
+  }
+]

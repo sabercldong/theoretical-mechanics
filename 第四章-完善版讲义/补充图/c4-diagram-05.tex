@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=.9]
+\coordinate(O)at(0,0);\coordinate(A)at(2.8,.7);\coordinate(P)at(4.3,3.1);
+\draw[->](O)--(1.5,0)node[right]{$X$};\draw[->](O)--(0,2.2)node[above]{$Y$};
+\draw[->,muted](A)--++(1.7,.45)node[right]{$x'$};\draw[->,muted](A)--++(-.5,1.8)node[above]{$y'$};
+\draw[force](O)--(A)node[pos=.37,below=7pt]{$\vect r_O$};\draw[force](A)--(P)node[midway,right]{$\vect r$};
+\draw[force](O)--(P)node[midway,above left]{$\vect R$};
+\node[below left]at(O){$O$};\node[below right]at(A){$O'$};\fill[ink](P)circle(2.5pt)node[above]{$P$};
+\node[anchor=west,align=left]at(5,1.6){原点加速度 $\vect a_O$\\与坐标轴转动分别计入};
+\end{tikzpicture}

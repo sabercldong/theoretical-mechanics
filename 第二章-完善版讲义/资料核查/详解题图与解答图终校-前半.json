@@ -1,0 +1,1242 @@
+{
+  "reviewer": "independent_visual_qa_front",
+  "reviewed_at": "2026-10-17T19:25:10.565656+08:00",
+  "scope": {
+    "question_issues_rereviewed": [
+      3,
+      5,
+      8,
+      12,
+      20,
+      22,
+      24,
+      26,
+      29,
+      30,
+      32,
+      34,
+      39,
+      40,
+      42,
+      43,
+      45,
+      46
+    ],
+    "question_atlas_images_actually_viewed": [
+      "工作文件/题图总览PNG/atlas-01.png",
+      "工作文件/题图总览PNG/atlas-02.png",
+      "工作文件/题图总览PNG/atlas-03.png",
+      "工作文件/题图总览PNG/atlas-04.png",
+      "工作文件/题图总览PNG/atlas-05.png",
+      "工作文件/题图总览PNG/atlas-06.png",
+      "工作文件/题图总览PNG/atlas-07.png",
+      "工作文件/题图总览PNG/atlas-08.png"
+    ],
+    "solution_examples": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "solution_atlas_images_actually_viewed": [
+      "工作文件/解答图总览PNG/atlas-01.png",
+      "工作文件/解答图总览PNG/atlas-02.png",
+      "工作文件/解答图总览PNG/atlas-03.png",
+      "工作文件/解答图总览PNG/atlas-04.png",
+      "工作文件/解答图总览PNG/atlas-05.png",
+      "工作文件/解答图总览PNG/atlas-06.png",
+      "工作文件/解答图总览PNG/atlas-07.png",
+      "工作文件/解答图总览PNG/atlas-08.png",
+      "工作文件/解答图总览PNG/atlas-09.png",
+      "工作文件/解答图总览PNG/atlas-10.png",
+      "工作文件/解答图总览PNG/atlas-11.png",
+      "工作文件/解答图总览PNG/atlas-12.png"
+    ],
+    "all_48_solution_source_calculation_panels_read": true,
+    "source_mapping": "工作文件/解答图与推导对应.json"
+  },
+  "method": "重新用view_image读取已重渲PNG，未沿用旧截图；实际查看8页题图和12页解答图，对照全部48条计算关系及原题设。对参考系/符号疑点补读主文的相关定义。",
+  "overall_status": "passed",
+  "summary": "例1–48全部解答图、原18题题图修复及6项收尾改动均已实际查看并复验通过。例35最后的|f|标签已移离左端质量点，题图与解答图同步清楚；当前未解决问题为0。",
+  "question_rereview": [
+    {
+      "example": 3,
+      "status": "fixed_passed",
+      "finding": "旧内弧穿a已解除，但新a节点与“厚半球壳”标题同位，需再次避让。"
+    },
+    {
+      "example": 5,
+      "status": "fixed_passed",
+      "finding": "已改为两条竖直边界及上方水平dx尺寸，清楚。"
+    },
+    {
+      "example": 8,
+      "status": "fixed_passed",
+      "finding": "滑块标签已移出块外，左杆参数已避开杆线。"
+    },
+    {
+      "example": 12,
+      "status": "fixed_passed",
+      "finding": "入车箭头已精确60°；其数字标签仍与车顶横线相交，需上移。"
+    },
+    {
+      "example": 20,
+      "status": "fixed_passed",
+      "finding": "两猴不同初始高度、s/s′尺寸与a/a′箭头已分开，正确。"
+    },
+    {
+      "example": 22,
+      "status": "fixed_passed",
+      "finding": "B,m已移到左上，FB径向箭头不再穿字。"
+    },
+    {
+      "example": 24,
+      "status": "fixed_passed",
+      "finding": "ω独立外弧已清楚显示顺时针，m标签与球点分离。"
+    },
+    {
+      "example": 26,
+      "status": "fixed_passed",
+      "finding": "题图改为压缩初态、零速度与弹簧力；解答图单独采用经过原长状态，模型状态正确。"
+    },
+    {
+      "example": 29,
+      "status": "fixed_passed",
+      "finding": "已补下球mg且下球标签移到左下。"
+    },
+    {
+      "example": 30,
+      "status": "fixed_passed",
+      "finding": "已补下球mg，N/f/mg三向受力清楚。"
+    },
+    {
+      "example": 32,
+      "status": "fixed_passed",
+      "finding": "q已放到地面、K从q竖直向上发出，接触正确。"
+    },
+    {
+      "example": 34,
+      "status": "fixed_passed",
+      "finding": "K已从球2发出，v在右侧分开。"
+    },
+    {
+      "example": 39,
+      "status": "fixed_passed",
+      "finding": "最近点Q的OQ=(-.6,1.3)，图示切向(.91,.42)，点积为0；路径在Q连续且局部最近，修复有效。"
+    },
+    {
+      "example": 40,
+      "status": "fixed_passed",
+      "finding": "C已偏置，d1=m2L/M和d2=m1L/M、总长及总质量关系明确。"
+    },
+    {
+      "example": 42,
+      "status": "fixed_passed",
+      "finding": "碰后说明已上移，与V0/2箭头分开。"
+    },
+    {
+      "example": 43,
+      "status": "fixed_passed",
+      "finding": "M/a标签均已移离速度箭头或绳。"
+    },
+    {
+      "example": 45,
+      "status": "fixed_passed",
+      "finding": "已用相对质心的水平速度增量，避免将对地速度方向硬设为后退。"
+    },
+    {
+      "example": 46,
+      "status": "fixed_passed",
+      "finding": "两水平速度增量和零总动量关系明确，初瞬竖直速度为零的要求满足。"
+    }
+  ],
+  "solution_review": [
+    {
+      "example": 1,
+      "source": "解答图/ex01.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-01.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\vect r=\\vect a+u(\\vect b-\\vect a)+v(\\vect c-\\vect a)",
+        "\\vect R=(\\vect a+\\vect b+\\vect c)/3"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 2,
+      "source": "解答图/ex02.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-01.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "M=\\sigma\\pi(R^2-2r^2)",
+        "Y_C=-\\sqrt3Rr^2/[2(R^2-2r^2)]"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 3,
+      "source": "解答图/ex03.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-01.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "A(z)=\\pi(a^2-z^2)",
+        "Z_{\\rm shell}=3(b^4-a^4)/[8(b^3-a^3)]"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": [
+        "ex03-shell-radius-caption"
+      ]
+    },
+    {
+      "example": 4,
+      "source": "解答图/ex04.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-01.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\bar x(z)=4a(1-z/h)/(3\\pi)",
+        "X_C=a/\\pi,\\quad Z_C=h/4"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 5,
+      "source": "解答图/ex05.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-02.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\dd A=(a-kx^2)\\dd x",
+        "Y_C=3a/5"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 6,
+      "source": "解答图/ex06.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-02.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "x=2u,\\ y=4v,\\ z=8w",
+        "\\vect R=(1/2,1,2)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": [
+        "ex06-plane-equation-edge"
+      ]
+    },
+    {
+      "example": 7,
+      "source": "解答图/ex07.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-02.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\dd m=\\rho_0(1+z/a)\\pi(a^2-z^2)\\dd z",
+        "M=11\\pi\\rho_0a^3/12,\\quad Z_C=23a/55"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 8,
+      "source": "解答图/ex08.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-02.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\vect P=\\sum_i m_i\\vect v_i",
+        "X_C=l(2m_1+2m_2)\\cos\\theta/(2m_1+m_2)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 9,
+      "source": "解答图/ex09.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-03.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\vect R=\\vect R_0+\\vect V_0t+\\vect g t^2/2",
+        "\\sum_i m_i\\vect r_i=M\\vect R"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 10,
+      "source": "解答图/ex10.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-03.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\vect a_C=-m_2e\\omega^2\\vect e_r/(m_1+m_2)",
+        "\\vect N=(D\\sin\\omega t,G-D\\cos\\omega t)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 11,
+      "source": "解答图/ex11.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-03.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "MU+m(U+V\\cos\\alpha)=0",
+        "U=-mV\\cos\\alpha/(M+m)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 12,
+      "source": "解答图/ex12.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-03.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "150v_*=100+50(2\\cos60^\\circ)",
+        "v_{\\rm cart}=1+\\sqrt3/6"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": [
+        "ex12-speed-label-roof"
+      ]
+    },
+    {
+      "example": 13,
+      "source": "解答图/ex13.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-04.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\Delta V_j=-mv/[M+(N-j+1)m]",
+        "|V_{\\rm seq}|=\\sum_{j=1}^N mv/[M+jm]"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 14,
+      "source": "解答图/ex14.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-04.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "(m_A+m_B)\\dot X+m_Bl\\dot\\theta\\cos\\theta=0",
+        "k^2=(m_A+m_B)g/(m_Al)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 15,
+      "source": "解答图/ex15.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-04.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "m_1x_1+m_2x_2=m_2L",
+        "x_{\\rm meet}=m_2L/(m_1+m_2)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 16,
+      "source": "解答图/ex16.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-04.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "v_{Ar}=v_{Br}=J\\cos\\alpha/(m_A+m_B)",
+        "K=m_AJ\\cos\\alpha/(m_A+m_B)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 17,
+      "source": "解答图/ex17.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-05.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "m_1u=m_2w,\\quad h=wt+gt^2/2",
+        "t=u/g,\\quad u^2=gh/(m_1/m_2+1/2)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 18,
+      "source": "解答图/ex18.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-05.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\vect s=(vt,-ut),\\quad\\vect p=(mv,0)",
+        "L_{A,z}^{\\rm abs}=muvt,\\quad L_{A,z}^{\\rm rel}=0"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 19,
+      "source": "解答图/ex19.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-05.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "v_A=u,\\quad v_B=v-u",
+        "(2mr^2+I_p)u=mr^2v"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 20,
+      "source": "解答图/ex20.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-05.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "ma-m^{\\prime}a^{\\prime}=(m^{\\prime}-m)g",
+        "t^2=2(ms-m^{\\prime}s^{\\prime})/[(m^{\\prime}-m)g]"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 21,
+      "source": "解答图/ex21.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-06.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "V_C=J/(2m),\\quad I_C=ml^2/2",
+        "\\omega=J/(ml)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 22,
+      "source": "解答图/ex22.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-06.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\vect\\tau_C=\\vect s\\times(\\vect F_B-\\vect F_A)",
+        "\\vect F=k\\vect r\\ \\Rightarrow\\ \\vect\\tau_C=0"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 23,
+      "source": "解答图/ex23.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-06.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "W_{\\rm int}=\\oint f\\dd r",
+        "W=(f_{\\rm high}-f_{\\rm low})(r_{\\max}-r_{\\min})"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 24,
+      "source": "解答图/ex24.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-06.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "T=m\\Omega^2R^2+m\\omega^2r^2",
+        "L_{O,z}=2m\\Omega R^2-2m\\omega r^2"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 25,
+      "source": "解答图/ex25.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-07.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\hbox{单次示例：}\\quad E_{\\rm mech}=MgH+MV^2/2",
+        "m_{\\rm food}=E_{\\rm mech}/(\\eta q_{\\rm food})"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": [
+        "ex25-energy-budget-scope"
+      ]
+    },
+    {
+      "example": 26,
+      "source": "解答图/ex26.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-07.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "m_1\\vect v_1+m_2\\vect v_2=\\vect0",
+        "|p_1|=|p_2|=\\delta\\sqrt{\\mu k}"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": [
+        "ex26-vector-momentum-notation"
+      ]
+    },
+    {
+      "example": 27,
+      "source": "解答图/ex27.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-07.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\mu w^2/2=Gm_1m_2/a",
+        "w=\\sqrt{2G(m_1+m_2)/a}"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 28,
+      "source": "解答图/ex28.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-07.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "(I_t+mr^2)\\omega=(I_t+ml^2/4)\\omega_0",
+        "v_{\\rm out}^2=\\dot r_{\\rm out}^2+l^2\\omega_{\\rm out}^2"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 29,
+      "source": "解答图/ex29.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-08.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\dot\\theta^2=4g(\\cos\\alpha-\\cos\\theta)/[l(1+\\sin^2\\theta)]",
+        "N>0\\quad(\\alpha\\le\\theta<\\pi/2)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 30,
+      "source": "解答图/ex30.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-08.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\dot\\theta^2=2g(\\cos\\alpha-\\cos\\theta)/l",
+        "|f|\\le\\mu_sN\\quad\\hbox{取首次越界}"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 31,
+      "source": "解答图/ex31.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-08.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "N(0^+)=mg(2-\\Lambda)",
+        "\\Lambda>2:\\quad\\ddot y_1(0^+)=g(\\Lambda/2-1)>0"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 32,
+      "source": "解答图/ex32.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-08.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "m_{\\rm eff}^{-1}=M^{-1}+b_n^2/I_C",
+        "K=-(1+e)m_{\\rm eff}v_n^-"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 33,
+      "source": "解答图/ex33.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-09.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "y_2/l=(1-\\tau^2+\\cos2\\tau)/2",
+        "\\tau_*=0.8900586\\ldots,\\quad y_1>0"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 34,
+      "source": "解答图/ex34.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-09.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "1/m_{\\rm eff}=1/(2m)+(l/2)^2/I_C=1/m",
+        "K=(1+e)mv,\\quad v_{2y}^+=ev"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 35,
+      "source": "解答图/ex35.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-09.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "N=9mg\\cos\\theta/5,\\quad f=-12mg\\sin\\theta/5",
+        "\\mu_s=4\\tan\\alpha/3"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": [
+        "ex35-friction-arrow-component"
+      ]
+    },
+    {
+      "example": 36,
+      "source": "解答图/ex36.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-09.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "R=a/3+v_0t/3,\\quad\\ddot q+\\omega^2(q-a)=0",
+        "x_1=R+2q/3,\\quad x_2=R-q/3"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 37,
+      "source": "解答图/ex37.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-10.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\mu\\ddot{\\vect r}=-K\\vect r/r^3",
+        "T^2=4\\pi^2a_r^3/[G(m_S+m_E)]"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 38,
+      "source": "解答图/ex38.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-10.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "R_1=M_2L/(M_1+M_2)",
+        "\\Omega^2=G(M_1+M_2)/L^3"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 39,
+      "source": "解答图/ex39.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-10.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\mu v_\\infty^2/2=L^2/(2\\mu a^2)+mc/(2a^2)",
+        "a^2=\\rho^2+3c/(2v_\\infty^2)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 40,
+      "source": "解答图/ex40.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-10.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "I_C=\\mu L^2,\\quad I_C\\omega=Jd_1",
+        "V_C=J/M,\\quad\\omega=J/(m_1L)"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 41,
+      "source": "解答图/ex41.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-11.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "E_{\\rm rel}=mv_0^2/4,\\quad L=mav_0/2",
+        "\\beta x_*^2(x_*-1)=x_*+1"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 42,
+      "source": "解答图/ex42.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-11.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\mu=2m/3,\\quad E_{\\rm rel}=mV_0^2/12",
+        "E_{\\rm rel}=mV_0^2/108+2ka^2"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 43,
+      "source": "解答图/ex43.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-11.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\vect r_\\pm=(x_M-a\\sin\\phi,\\pm a\\cos\\phi)",
+        "\\dot\\phi^2=Mv^2/[a^2(M+2m\\sin^2\\phi)]"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 44,
+      "source": "解答图/ex44.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-11.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "r_1+r_2=4a,\\quad |L_1|=mav,\\quad |L_2|=3mav",
+        "1=\\dot r_1^2/v^2+[x^{-2}+9(4-x)^{-2}]/2"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 45,
+      "source": "解答图/ex45.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-12.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "W\\delta v_H+w\\delta v_O=0",
+        "x_H-x_O=u v_0\\sin\\alpha/g"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 46,
+      "source": "解答图/ex46.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-12.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "E=\\mu w^2/2,\\quad t_d=v/g",
+        "d=(v/g)\\sqrt{2E/\\mu}"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 47,
+      "source": "解答图/ex47.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-12.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "m_1v_1+m_2v_2=m_1u,\\quad v_2-v_1=u",
+        "v_1=(m_1-m_2)u/M,\\quad v_2=2m_1u/M"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    },
+    {
+      "example": 48,
+      "source": "解答图/ex48.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-12.png",
+      "actually_viewed": true,
+      "calculation_checked": [
+        "\\Theta=2\\theta,\\quad |v_1|=u\\cos\\theta",
+        "E_1/E_{\\rm in}=\\cos^2\\theta"
+      ],
+      "formula_status": "passed",
+      "model_layout_status": "passed",
+      "issues": []
+    }
+  ],
+  "body_reference_checks": [
+    {
+      "example": 1,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 2,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 3,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 4,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 5,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 6,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 7,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 8,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 9,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 10,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 11,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 12,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 13,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 14,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 15,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 16,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 17,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 18,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 19,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 20,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 21,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 22,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 23,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 24,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 25,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 26,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 27,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 28,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 29,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 30,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 31,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 32,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 33,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 34,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 35,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 36,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 37,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 38,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 39,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 40,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 41,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 42,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 43,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 44,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 45,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 46,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 47,
+      "invocations": 1,
+      "explicit_references": 1
+    },
+    {
+      "example": 48,
+      "invocations": 1,
+      "explicit_references": 1
+    }
+  ],
+  "issues": [
+    {
+      "example": 3,
+      "id": "ex03-shell-radius-caption",
+      "severity": "readability",
+      "scope": [
+        "question",
+        "solution"
+      ],
+      "detail": "a节点(.15,−.65)与“厚半球壳”标题(0,−.65)重叠，渲染中a被标题覆盖。",
+      "fix": "将a置于壳内空白并以径向线/引线标注，避开标题。",
+      "status": "fixed_passed"
+    },
+    {
+      "example": 6,
+      "id": "ex06-plane-equation-edge",
+      "severity": "readability",
+      "scope": [
+        "question",
+        "solution"
+      ],
+      "detail": "4x+2y+z=8文字放在四面体斜边上，斜边穿过开头字符。",
+      "fix": "将方程放到图外右上。",
+      "status": "fixed_passed"
+    },
+    {
+      "example": 12,
+      "id": "ex12-speed-label-roof",
+      "severity": "readability",
+      "scope": [
+        "question",
+        "solution"
+      ],
+      "detail": "2,60°标签随箭头终点落到车顶横线上。",
+      "fix": "将入车速度标签上移至车顶上方空白。",
+      "status": "fixed_passed"
+    },
+    {
+      "example": 25,
+      "id": "ex25-energy-budget-scope",
+      "severity": "scope_clarity",
+      "scope": [
+        "solution"
+      ],
+      "detail": "Emech=MgH+MV²/2只表示一次上升与从静止平动加速；题设还包括转动和重复动作，主文已完整计入，图右宜限定范围。",
+      "fix": "注明“一次升高和平动示例”，或将ΔTC、重复与损耗纳入图式。",
+      "status": "fixed_passed"
+    },
+    {
+      "example": 26,
+      "id": "ex26-vector-momentum-notation",
+      "severity": "minor_notation",
+      "scope": [
+        "solution"
+      ],
+      "detail": "图中两速度为相反方向的矢量，而正文末步把v1/v2作为正速率；图右未加粗m1v1+m2v2=0容易与正速率混淆。",
+      "fix": "将该式明确写为m1*vect(v1)+m2*vect(v2)=0。",
+      "status": "fixed_passed"
+    },
+    {
+      "example": 35,
+      "id": "ex35-friction-arrow-component",
+      "severity": "minor_notation",
+      "scope": [
+        "question",
+        "solution"
+      ],
+      "detail": "左上摩擦箭头标f，但右式f=−12mg sinθ/5使用沿杆向右下为正的有向分量；正文定义正确，图中未给该正向。",
+      "fix": "实际左上箭头标|f|，并补沿杆向右下的e正向或注明有向分量约定。",
+      "status": "fixed_passed"
+    }
+  ],
+  "current_open_issue_count": 0,
+  "material_physics_issue_count": 0,
+  "scaling_readability": "解答图按模型与右侧计算区分开排，当前总览中未见面板覆盖或公式裁切。题图总览改为单列6图，尺寸差异属于总览排版；本报告不将总览缩放大小当成主稿实际字号。主稿最终PDF尚需检查嵌入后的可读性。",
+  "hashes": {
+    "question": {
+      "atlas-01.png": "a5bf0f31d59681ab6b93e2fa8fb833adde9ddcab528ec89f261dbee515b75589",
+      "atlas-02.png": "314c10f88447231f8ba7dc19c579743b3a2e7176ddd94dd912d20e2bd1815394",
+      "atlas-03.png": "e67e168684c6c84c928b4334646799056c79f6924a779f847d0d7eeea51a3f04",
+      "atlas-04.png": "8a85633d4203c2feca8b47e414c3ac57fc41ae78f23f4025ca72fa425e61c6be",
+      "atlas-05.png": "5877ddd9ac38cdee63a093e80533add3dd4949b4b12517baff8c83687daccce6",
+      "atlas-06.png": "e12027fe538cf0973ce63c42b1257e387659cd2aa51a68fb752fcef50aa75508",
+      "atlas-07.png": "a75fcfa087ef0022483b6e2d799e7709db89da3917c1e1bbaa3c647d30e66609",
+      "atlas-08.png": "28cd4e39e4cc516ca9d7fb425b1e58f04bb5ca2a6128339680ff9155d0d5ade1"
+    },
+    "solution": {
+      "atlas-01.png": "680b6502e28efcc226000b590ecf2d8e46dd1397e52fb4ac8b2e3546c6ed6bb4",
+      "atlas-02.png": "a7bb6caeeab450176b44482551eadbdd7468957b0795f9f809d2c7d3b0a0a2ff",
+      "atlas-03.png": "bf11c982d130a98dbf3da35dac72153ee771452de26977da4ff871107735e320",
+      "atlas-04.png": "1edf627ae4d5821d368cddd30349b8cb0de66898f300dea19b3e7786ebd8ce41",
+      "atlas-05.png": "f247faf470771c5631e080d19c8e8f8538a0d5f3b7cafff078516888896f2ff0",
+      "atlas-06.png": "d19309292e12932eb2aa8d9fe17dd9ae67f4d20681bda7183fbded7c44e12d75",
+      "atlas-07.png": "3fc4a40ab25963156f60039d29a839f36181778bec921595705f1582adaf7e46",
+      "atlas-08.png": "49898710a6e517a45d0563d51dbcefcb09b3a00cd3b87de1868e7eb52265dbc4",
+      "atlas-09.png": "24670935e6e12bf1db0aea4f786ebb81a41e5d36f82548e1131b7dcda75d1505",
+      "atlas-10.png": "edd674f842c98b8986acfdb1469a2a81fb5fd6b530fce12c14ddabe4a031ef55",
+      "atlas-11.png": "3c651870d04a1a16a2548f70e4b57689a40663411dc179c74fa7a7bf43c0b648",
+      "atlas-12.png": "ce7fe3c228dee08031b98a381aa0a104bc5e974aa172b3743b71f6de944e3817"
+    }
+  },
+  "limits": [
+    "仅只读主稿和图源；未修改别人文件。",
+    "旧初查历史见详解题图复核-前半.json，本报告独立记录本轮终校与修复复验。",
+    "本次结论覆盖题图及解答图图集；没有据此宣称最新153页主稿全文或新增提示段落删除要求已审完。"
+  ],
+  "current_issues": [],
+  "repair_rereview_round_1": {
+    "reviewed_at": "2026-10-17T19:28:59.140190+08:00",
+    "images_actually_viewed": [
+      "工作文件/修复复验PNG/fix-01.png",
+      "工作文件/修复复验PNG/fix-02.png",
+      "工作文件/修复复验PNG/fix-03.png",
+      "工作文件/修复复验PNG/fix-04.png",
+      "工作文件/修复复验PNG/fix-05.png",
+      "工作文件/修复复验PNG/fix-06.png"
+    ],
+    "examples_in_order": [
+      3,
+      6,
+      12,
+      26,
+      25,
+      35
+    ],
+    "passed_examples": [
+      3,
+      6,
+      12,
+      26,
+      25
+    ],
+    "ex35_physics": "正向e沿杆右下，实际摩擦箭头左上标|f|，与右式有向f<0已一致。",
+    "ex35_remaining": "|f|标签碰左端黑球，需再次避让。",
+    "new_issue": {
+      "example": 35,
+      "id": "ex35-friction-label-overlap-mass",
+      "severity": "readability",
+      "scope": [
+        "question",
+        "solution"
+      ],
+      "detail": "|f|标签锚在摩擦箭头端点(−.8,.4)上左侧，文字变宽后压到左端黑球(−1,.5)及m；fix-06上、下均实际可见。",
+      "fix": "将|f|独立放到(−.45,.85)附近或箭头中段上方，避开左球。",
+      "status": "open"
+    },
+    "hashes": {
+      "fix-01.png": "9656440848f5815141b791bcce1f0b67dcc3e1bcf52351d4ad3ec161f72dd37e",
+      "fix-02.png": "676e6c7a50ebc4d4026739737ec8354fed973b667058a7afaac70caae344c5f6",
+      "fix-03.png": "a29e869f96fd5504838394ea3b40d5eed95d344824b9ec78102f554d639fa674",
+      "fix-04.png": "d1012434616c76a28308b0955b8514f0c3dd631da32ea61ac25d1b23f0315dd7",
+      "fix-05.png": "20b4c996630ccca02409f81605fe12104334721f50dab0d4b287034ee3fd4dc3",
+      "fix-06.png": "d120b5c746974766ca0a498626cf34d99a2ce97d294994690c670dc4d42ed145"
+    }
+  },
+  "final_rereview": {
+    "reviewed_at": "2026-10-17T19:32:50.070604+08:00",
+    "image": "工作文件/修复复验PNG/fix-06.png",
+    "actually_viewed": true,
+    "example": 35,
+    "status": "fixed_passed",
+    "finding": "上题图、下解答图中的|f|均移到摩擦箭头中段上方空白，与左端m和球点、法向箭头分离；e正向和有向f<0关系仍正确。",
+    "sha256": "2151b43029361cb97ce71e99e3d5f7257663a75a4f970f31fc736cc00aa730e7",
+    "new_issue_count": 0
+  }
+}

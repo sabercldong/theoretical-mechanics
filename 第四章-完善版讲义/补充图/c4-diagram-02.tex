@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=.9]
+\coordinate(O)at(0,0);\coordinate(H)at(0,1.5);
+\coordinate(B)at({2.6*cos(-45)},{1.5+.65*sin(-45)});
+\coordinate(C)at({2.6*cos(-15)},{1.5+.65*sin(-15)});
+\draw[->](0,-.3)--(0,3.55)node[above]{$\Om$};
+\draw[guide](H)ellipse(2.6 and .65);
+\draw[force](O)--(B)node[midway,below]{$\vect b$};
+\draw[guide](O)--(C);\node[right=5pt]at(C){$\vect b+\Delta\vect b$};
+\draw[force](B)--(C)node[midway,above=5pt]{$\Delta\vect b$};
+\draw[force,muted](H)--(B)node[midway,above left]{$\vect b_\perp$};
+\fill(H)circle(1.5pt)node[left]{$H$};\node[below left]at(O){$O$};
+\node[align=left,anchor=west]at(4.4,2.25){有限转角：端点差为弦\\无穷小极限：变化沿切线\\$\dd\vect b=(\Om\times\vect b)\dd t$\\$|\dd\vect b|=b_\perp\dd\theta$};
+\end{tikzpicture}

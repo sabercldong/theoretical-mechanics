@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-.15,-.5)--(-.15,3);\draw[thick](.15,-.5)--(.15,3);\fill(0,0)circle(2pt)node[left=5pt]{$O$};\coordinate(A)at(1.2,-.5);\coordinate(B)at(0,2.2);\draw[thick](0,0)--(A)node[midway,below]{$a$};\draw[very thick](A)--(B)node[midway,right]{$L$};\draw[fill=white](-.22,2)rectangle(.22,2.4);\node[left]at(-.3,2.2){$B$};\fill(A)circle(2pt)node[right]{$A$};\draw[->](0,-.5)--(0,-1.3)node[below]{$\xi$};\draw[->](0,0)--(2.2,0)node[right]{$\eta$};\node at(.75,.45){$q$};\node at(.3,1.4){$\psi$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$L\sin\psi=a\sin q$\\[6pt]$\Downarrow$\\[6pt]$L\cos\psi\dot\psi=a\Omega\cos q$};
+\end{tikzpicture}

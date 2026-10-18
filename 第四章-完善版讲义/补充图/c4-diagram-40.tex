@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.9]
+\draw[ink,thick](0,3.0)--(0,0)--(5,0)--(5,3.0);
+\fill[soft](0,0)--(5,0)--(5,2.5)--(0,1.7)--cycle;
+\draw[ink,thick](0,1.7)--(5,2.5);\draw[guide](0,1.7)--(5,1.7);
+\draw[<->](5.5,1.7)--(5.5,2.5)node[midway,right]{$\Delta\eta$};
+\draw[<->](0,-.45)--(5,-.45)node[midway,below]{$B$};
+\fill(2.5,1.05)circle(2pt);\draw[force](2.5,1.05)--(3.9,1.05)node[below=5pt]{$a_C=fU$};\draw[force](2.5,1.05)--(1.1,1.05)node[below=5pt]{$a_p=-g\,\partial_n\eta$};
+\node[above]at(0,3){左岸};\node[above]at(5,3){右岸};
+\node[anchor=west,align=left]at(7,1.8){北半球横断面\\$\otimes$：水流向纸内\\水面坡度已夸大};
+\end{tikzpicture}

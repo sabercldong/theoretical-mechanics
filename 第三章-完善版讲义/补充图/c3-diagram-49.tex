@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(A)at(1.6,1.6);
+\coordinate(B)at(3.2,0);\coordinate(P)at(3.2,3.2);
+\draw[thick](-.4,0)--(4.3,0);
+\draw[line width=2pt,ink](O)--(A)--(B);
+\draw[guide](A)--(P)--(B);
+\draw[fill=soft](2.95,-.2)rectangle(3.45,.2);
+\foreach \N in {O,A,B,P}{\fill(\N)circle(2pt)node[above left]{$\N$};}
+\draw[force](A)--(.9,2.3)node[left]{$v_A$};
+\draw[force](B)--(1.8,0)node[below]{$v_B$};
+\node[below]at(.8,.8){$l$};\node[right]at(2.4,.8){$l$};
+\end{tikzpicture}

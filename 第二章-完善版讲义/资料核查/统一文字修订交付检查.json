@@ -1,0 +1,26 @@
+{
+  "chapter": 2,
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/PDF/第二章-质点组力学讲义.pdf",
+  "official_pdf": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/第二章-质点组力学讲义-完善版.pdf",
+  "source_zip": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/可编辑源码/第二章-质点组力学-完善版LaTeX源码及图片.zip",
+  "official_zip": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/第二章-质点组力学-完善版LaTeX源码及图片.zip",
+  "top_directory": "第二章-质点组力学源码",
+  "main_filename": "第二章-质点组力学讲义-完善版.tex",
+  "pages": 152,
+  "examples": 66,
+  "exercises": 24,
+  "original_assets": 43,
+  "diagram_files": {
+    "补充图": 22,
+    "题图": 90,
+    "解答图": 90
+  },
+  "embedded_TikZ": 0,
+  "zip_entries": 247,
+  "warnings": [],
+  "pdf_sha256": "6703e3451404001237c628227c352bcdf04a76ea0a31431d718c7b0941f8cd4e",
+  "tex_sha256": "484aa42259f9eacbd5f2cc5c9326fa7f6425022d8917dff5de020f391ea9fd8d",
+  "zip_sha256": "f962daa243484c2502d40cbaa129eafd08b1d00e43b9673401bfe115fb513562",
+  "pdf_bytes": 2114951,
+  "zip_bytes": 2448488
+}

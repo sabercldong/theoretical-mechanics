@@ -1,0 +1,37 @@
+{
+  "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+  "pages": 218,
+  "last_change_pixel_pages": [
+    108
+  ],
+  "last_change_text_pages": [],
+  "last_change_unchanged_pages": 217,
+  "previous_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+  "pixel_changed_pages_from_initial_full_review": [
+    48,
+    64,
+    66,
+    68,
+    72,
+    73,
+    76,
+    79,
+    80,
+    85,
+    92,
+    93,
+    96,
+    100,
+    106,
+    107,
+    108,
+    109,
+    113,
+    135,
+    146,
+    172,
+    184
+  ],
+  "unchanged_pages_from_initial_full_review": 195,
+  "syntax_check": "qpdf --check required by packaging; PyMuPDF did not repair file"
+}

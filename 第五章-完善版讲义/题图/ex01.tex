@@ -1,0 +1,31 @@
+% 盘面切向由航向角 $\theta$ 决定；沿路径累积的两分量会随航向变化，不能只按终态自转角计算位移。
+\begin{tikzpicture}[scale=.94]
+\node at(2.1,3.95){俯视：航向角 $\theta$};
+\draw[->](-.2,0)--(4.6,0)node[right]{$x$};
+\draw[->](0,-.2)--(0,3.35)node[above]{$y$};
+\coordinate(P)at(2.3,1.5);
+% Both one-sided Bezier tangent vectors are positive multiples of (1,1.2).
+% The short plate projection leaves the incoming tangent visible.
+\draw[ink,dashed,line width=.7pt](.35,.35)..controls(.85,.30)and(1.40,.42)..(P)
+ ..controls(3.20,2.58)and(3.65,2.78)..(4.15,2.72);
+\draw[ink,line width=2pt]($(P)+(-.18,-.216)$)--($(P)+(.18,.216)$);
+\fill(P)circle(2.5pt)node[below right]{$(x,y)$};
+\draw[force](P)--++(.896,1.0752)node[above right]{$\vect v$};
+\draw[muted,densely dotted](P)--++(1.7,0);
+\draw($(P)+(.72,0)$)arc(0:50.19443:.72);
+\node at(3.22,1.88){$\theta$};
+\node[anchor=west,align=left]at(.05,-.75){粗线：竖直盘面的俯视投影\\虚线：盘心投影的运动轨迹};
+\begin{scope}[xshift=7.5cm]
+\node at(0,3.8){侧视：自转角 $\varphi$};
+\draw[thick](-1.5,.35)--(1.8,.35);
+\draw[ink,thick](0,1.55)circle(1.2);
+\fill(0,1.55)circle(2pt)node[left]{$C$};
+\draw[ink](0,1.55)--(0,.35)node[midway,left]{$R$};
+\draw[force](0,1.55)--(1.75,1.55)node[right]{$v$};
+\draw[->](-.425,2.286)arc(120:-40:.85);
+\node[right]at(.85,2.18){$\varphi$};
+\node[align=center]at(.1,-.45){$v=R\dot\varphi$\\（图示正向滚动）};
+\end{scope}
+\node[align=center]at(4.1,-1.55){$\dot x=R\dot\varphi\cos\theta,\qquad
+\dot y=R\dot\varphi\sin\theta$};
+\end{tikzpicture}

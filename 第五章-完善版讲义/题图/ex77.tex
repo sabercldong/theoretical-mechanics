@@ -1,0 +1,17 @@
+% 矩形膜两组固定边分别选择一个正弦因子；面元斜率的两个方向同时贡献弹性势能。
+\begin{tikzpicture}
+% Orthographic oblique view of u=h(1-r^2/R^2), R=2, h=1.15, base y-projection .35.
+\draw[guide](0,0)ellipse(2 and .7);
+\foreach \a in {-1.6,-.8,0,.8,1.6}{
+\pgfmathsetmacro{\edge}{sqrt(4-\a*\a)}
+\draw[ink,thin,domain=-\edge:\edge,samples=45]
+ plot(\x,{.35*\a+1.15*(1-(\x*\x+\a*\a)/4)});
+\draw[ink,thin,domain=-\edge:\edge,samples=45]
+ plot(\a,{.35*\x+1.15*(1-(\x*\x+\a*\a)/4)});
+}
+\draw[ink,thick](-2,0)arc(180:360:2 and .7);
+\draw[guide](-2,0)--(2,0);
+\draw[force](0,0)--(0,1.15);\draw[muted,thin](.12,.58)--(2.35,.95);\node[anchor=west]at(2.35,.95){$u(0,0,t)$};
+\fill(0,1.15)circle(2pt);
+\node[align=center]at(0,-1.2){横向位移从平衡面量至膜面\\竖向变形作放大示意};
+\end{tikzpicture}

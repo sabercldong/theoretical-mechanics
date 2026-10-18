@@ -1,0 +1,1411 @@
+[
+  {
+    "key": "c3-5-p002-parallel-planes",
+    "deck": "c3-5",
+    "page": 2,
+    "topic": "平面平行运动中的平行截面",
+    "caption": "平面平行运动中的平行截面",
+    "crop_rect_pt": [
+      456.4,
+      366.7,
+      634.6,
+      552.2
+    ],
+    "insert_after": "角速度垂直运动平面，$\\vect\\omega=\\omega\\vect k$。",
+    "related_model_indices": [],
+    "notes": "提取内嵌完整位图，恢复幻灯片底部被遮挡的平面 I；不使用截断页面截图。 已与内嵌原图及原页视觉核对。",
+    "xref": 47,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p002-parallel-planes.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p002-parallel-planes.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "8a4cd67273ca29e337630cc72acb25224c744898cc67f6753627523642c6b283",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "aa03e1e3ad56b11643ba9b318669cdeddd9576f92db8431ee819eaa962d5f802"
+  },
+  {
+    "key": "c3-5-p002-rotation-translation",
+    "deck": "c3-5",
+    "page": 2,
+    "topic": "刚体的转动轴与平面内平移",
+    "caption": "刚体的转动轴与平面内平移",
+    "crop_rect_pt": [
+      14.1,
+      321,
+      418.3,
+      570.9
+    ],
+    "insert_after": "角速度垂直运动平面，$\\vect\\omega=\\omega\\vect k$。",
+    "related_model_indices": [],
+    "notes": "原课件动画的代表静帧，裁去原媒体留白。 已与内嵌原图及原页视觉核对。",
+    "xref": 32,
+    "pixel_crop": [
+      175,
+      49,
+      419,
+      304
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p002-rotation-translation.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p002-rotation-translation.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "69857a51dac6de16cfc93e7ece3581fca46495aa43f611178be624e79a8c56df",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "68b59870f48fdb223663110038be21d8b66964c465b450d44a0e251656f049a9"
+  },
+  {
+    "key": "c3-5-p003-planar-position",
+    "deck": "c3-5",
+    "page": 3,
+    "topic": "基点位置与相对位置的矢量合成",
+    "caption": "基点位置与相对位置的矢量合成",
+    "crop_rect_pt": [
+      498,
+      6,
+      701,
+      205
+    ],
+    "insert_after": "所谓平移加转动是一种运动描述的分解，不表示刚体先平移再转动两个独立过程。",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p003-planar-position.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p003-planar-position.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "aeb94f64d677ff1af993144aaec4f034ec9b794bc8ccd5e0a8ace6c8ca4e52c3",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "15d0a1c569885f7dfe6f3875b73de404d6b963c978d250f48eef0567fd231a12"
+  },
+  {
+    "key": "c3-5-p005-wheel-relative",
+    "deck": "c3-5",
+    "page": 5,
+    "topic": "匀速纯滚动车轮各点的相对速度与向心加速度",
+    "caption": "匀速纯滚动车轮各点的相对速度与向心加速度；此图左右轮缘分别记为 $D,B$，与本节正文的 $B,D$ 对调",
+    "crop_rect_pt": [
+      153,
+      35,
+      578,
+      217
+    ],
+    "insert_after": "\\figend{速度瞬心在底部，其材料加速度仍向上}",
+    "related_model_indices": [
+      43
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p005-wheel-relative.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p005-wheel-relative.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "f809e5ddbd21991e61ef528a5075cc6c0d4e4d9a721bef1d9e83202f2d1c3e0c",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "2cb5e21a003eab11274d3fd9a22fb34b5e31116f0ffcb656f30b31f4dc489c4a"
+  },
+  {
+    "key": "c3-5-p006-instant-center",
+    "deck": "c3-5",
+    "page": 6,
+    "topic": "平面运动的速度瞬心与垂直距离",
+    "caption": "平面运动的速度瞬心与垂直距离；图中 $C$ 为瞬心，正文记为 $P$",
+    "crop_rect_pt": [
+      505,
+      5,
+      695,
+      267
+    ],
+    "insert_after": "\\figend{平面速度场可以在一瞬间等效为绕瞬心转动}",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p006-instant-center.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p006-instant-center.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "f727a37c89394bd7f3794aed662df15a5bb7b20a93608aee66ba252192971cb6",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "2c19e68cf33f8d5724c75e1b5c73ca71aa34cd2ebb07fdab7b90fc5d5e5ca495"
+  },
+  {
+    "key": "c3-5-p007-one-velocity",
+    "deck": "c3-5",
+    "page": 7,
+    "topic": "由一点速度和角速度确定瞬心",
+    "caption": "由一点速度和角速度确定瞬心",
+    "crop_rect_pt": [
+      564.6,
+      53.7,
+      715.2,
+      227.6
+    ],
+    "insert_after": "\\figend{平面速度场可以在一瞬间等效为绕瞬心转动}",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 306,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p007-one-velocity.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p007-one-velocity.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "48af3ab4f1f120dc7f8ff2f6f58ea4d79e215ed518a7925adece51b2f2e0481b",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "72b5051f11508936526e9f2a7eaad723f9112ff0f0e02733c6e73def09387c0d"
+  },
+  {
+    "key": "c3-5-p007-rolling-contact",
+    "deck": "c3-5",
+    "page": 7,
+    "topic": "固定曲面上纯滚动时，接触点为速度瞬心",
+    "caption": "固定曲面上纯滚动时，接触点为速度瞬心",
+    "crop_rect_pt": [
+      536.9,
+      377.5,
+      677.2,
+      510.1
+    ],
+    "insert_after": "\\figend{平面速度场可以在一瞬间等效为绕瞬心转动}",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 308,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p007-rolling-contact.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p007-rolling-contact.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "95e5e585bb532599b6c47fc878ed8a0ed45377d98509e8cfae97e5f34f29d6af",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "127f24d49081ed95d0ad08489a88e26cf242caf53ca5356f0cd4b9254b587151"
+  },
+  {
+    "key": "c3-5-p008-nonparallel-velocities",
+    "deck": "c3-5",
+    "page": 8,
+    "topic": "两条不平行速度的法线相交于瞬心",
+    "caption": "两条不平行速度的法线相交于瞬心",
+    "crop_rect_pt": [
+      551.1,
+      13.8,
+      713.1,
+      176.4
+    ],
+    "insert_after": "\\figend{平面速度场可以在一瞬间等效为绕瞬心转动}",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 337,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p008-nonparallel-velocities.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p008-nonparallel-velocities.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "5b37ba0d8d9edad7ff7002f0da35097b975b00c0472547f1ebd216f4e4717d68",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "47b83861088f7adca6d6bdbf515db13133992aaa7dfa4d44cf9bdf62eddd868a"
+  },
+  {
+    "key": "c3-5-p008-same-direction",
+    "deck": "c3-5",
+    "page": 8,
+    "topic": "两点同向且不等速时，瞬心位于两点之外",
+    "caption": "两点同向且不等速时，瞬心位于两点之外",
+    "crop_rect_pt": [
+      382.6,
+      292.4,
+      541.6,
+      468.1
+    ],
+    "insert_after": "同向且大小不等时瞬心在两点之外；反向时位于两点之间；",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 344,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p008-same-direction.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p008-same-direction.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "d9f24e4a51e68da1d1b45fbfb6615be0272378d76130e7ab11b4d3be596fa322",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "64f67ecf5309b28f5eaf789d97f06356d2d08ba4519fed046db975e6980750ef"
+  },
+  {
+    "key": "c3-5-p008-opposite-directions",
+    "deck": "c3-5",
+    "page": 8,
+    "topic": "两点反向运动时，瞬心位于两点之间",
+    "caption": "两点反向运动时，瞬心位于两点之间",
+    "crop_rect_pt": [
+      548.9,
+      289.9,
+      710.2,
+      468.1
+    ],
+    "insert_after": "同向且大小不等时瞬心在两点之外；反向时位于两点之间；",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 335,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p008-opposite-directions.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p008-opposite-directions.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "0b09f3139686133164743c990c347656327f361b777c454cd4bb8aebba883d6c",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "0a1d067a9dd522878674b31e8fba261904b59586566bb8a0e823e62effdcb05f"
+  },
+  {
+    "key": "c3-5-p009-instant-translation",
+    "deck": "c3-5",
+    "page": 9,
+    "topic": "不同位置的两点速度相同，对应瞬时平移",
+    "caption": "不同位置的两点速度相同，对应瞬时平移",
+    "crop_rect_pt": [
+      405,
+      270,
+      719.9,
+      451
+    ],
+    "insert_after": "若 $u_A=u_B\\ne0$，则 $\\omega=0$，整个速度场是瞬时平移，有限瞬心不存在。",
+    "related_model_indices": [
+      38
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p009-instant-translation.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p009-instant-translation.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "dca51bc01e6bb911b962a5458c4b09ad253bbe204756498439383027bcbeca2b",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "bd00a7d55c86497bf6ad7d0aa9b303712c37fd342380628eda3a21ea76460fb5"
+  },
+  {
+    "key": "c3-5-p011-contact-loci",
+    "deck": "c3-5",
+    "page": 11,
+    "topic": "滚动过程中依次成为瞬心的空间位置与材料位置",
+    "caption": "滚动过程中依次成为瞬心的空间位置与材料位置",
+    "crop_rect_pt": [
+      41,
+      147,
+      265,
+      310
+    ],
+    "insert_after": "极迹上的位置是依次改变的几何位置，通常不是同一材料点的轨迹。",
+    "related_model_indices": [
+      39,
+      40
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p011-contact-loci.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p011-contact-loci.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "e598312906251928f55a4415be770cfbf313ab7f3e890594f91d2cbcfe5c3c1f",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "7c6f8f16782a42898f016d5255560479a50d98c07b99c491646b6e0c9819c40a"
+  },
+  {
+    "key": "c3-5-p011-fixed-circle",
+    "deck": "c3-5",
+    "page": 11,
+    "topic": "空间极迹为直线",
+    "caption": "空间极迹为直线；蓝点标识当前接触位置",
+    "crop_rect_pt": [
+      310,
+      144,
+      718,
+      280
+    ],
+    "insert_after": "极迹上的位置是依次改变的几何位置，通常不是同一材料点的轨迹。",
+    "related_model_indices": [],
+    "notes": "提取课件内嵌原始静帧，完整保留空间极迹的直线。 已与内嵌原图及原页视觉核对。",
+    "xref": 439,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p011-fixed-circle.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p011-fixed-circle.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "0fb8844e1d47eecee2e1c62fd154058fcf10457bb82dd11f8782d8f0386032dd",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "b50e7354592b5b1d6c944c62a99b1584f2a5b6cc1ece1efd1cc14aab7f9f11ea"
+  },
+  {
+    "key": "c3-5-p011-body-circle",
+    "deck": "c3-5",
+    "page": 11,
+    "topic": "本体极迹为轮缘圆",
+    "caption": "本体极迹为轮缘圆；接触材料点随滚动而改变",
+    "crop_rect_pt": [
+      44.9,
+      132.4,
+      697.1,
+      513.1
+    ],
+    "insert_after": "极迹上的位置是依次改变的几何位置，通常不是同一材料点的轨迹。",
+    "related_model_indices": [],
+    "notes": "原课件动画采用导出的代表静帧；保留轮缘、轴箭头及地面，裁去大块空白。 已与内嵌原图及原页视觉核对。",
+    "xref": 431,
+    "pixel_crop": [
+      323,
+      258,
+      800,
+      414
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p011-body-circle.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p011-body-circle.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "2e463827033063d46b08062bb71a32f40a0a534e5254f2c510737f9e711529d2",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "975ae8a15a55cf817cef6b00f4e8a020f0a6d5ee6068adf9791ed7241ca70a1a"
+  },
+  {
+    "key": "c3-5-p012-ladder-loci",
+    "deck": "c3-5",
+    "page": 12,
+    "topic": "梯子的空间与本体极迹",
+    "caption": "梯子的空间与本体极迹；课件以 $C$ 表示瞬心，正文以 $P$ 表示，课件 $\\xi,\\eta$ 与正文 $q_1,q_2$ 的轴向约定不同",
+    "crop_rect_pt": [
+      10,
+      150,
+      206,
+      368
+    ],
+    "insert_after": "\\figend{梯子端点的速度法线与空间极迹}",
+    "related_model_indices": [
+      39,
+      40
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p012-ladder-loci.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p012-ladder-loci.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "de8dc1dde47552cd9393f6f951bf69e5b8b5b7634bbd4e3d9646cc87da68e603",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "b4b1648885e1cc0d11401303347d3f74a1117ac24bcbd4af620df2b6ffca3ef9"
+  },
+  {
+    "key": "c3-5-p015-rolling-centers",
+    "deck": "c3-5",
+    "page": 15,
+    "topic": "斜面上各瞬间的接触位置依次成为速度瞬心",
+    "caption": "斜面上各瞬间的接触位置依次成为速度瞬心",
+    "crop_rect_pt": [
+      156,
+      213,
+      493,
+      455
+    ],
+    "insert_after": "一般连杆或梯子的瞬心到质心距离可能变化，不能直接套简式。",
+    "related_model_indices": [
+      41
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p015-rolling-centers.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p015-rolling-centers.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "957e83a514f769c79fc0e28e1ca937f4e376d878f69ea7f7333a004ce287a3e2",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "f00979cf96ff8ad66761b292f0b8c6ec12cda7b6e56a6bba8847c624df60bab8"
+  },
+  {
+    "key": "c3-5-p017-incline-forces",
+    "deck": "c3-5",
+    "page": 17,
+    "topic": "圆柱沿斜面纯滚动的受力",
+    "caption": "圆柱沿斜面纯滚动的受力；原图倾角 $\\alpha$ 对应正文 $\\beta$，图示斜面上升方向与正文坐标选择相反",
+    "crop_rect_pt": [
+      498,
+      21,
+      706,
+      192
+    ],
+    "insert_after": "\\figend{无滑滚动的摩擦方向由平移与转动共同决定}",
+    "related_model_indices": [
+      41
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p017-incline-forces.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p017-incline-forces.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "0f3fff0a356237f0d1ebae6730f6892d0b48b165cec5146a444049557b7b192d",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "2602ac02f03ea0967d4e93d355b88d98c7c4825867249569c0f1fb664d213639"
+  },
+  {
+    "key": "c3-5-p019-unwinding-disc",
+    "deck": "c3-5",
+    "page": 19,
+    "topic": "固定轻绳上退绕下落的圆盘",
+    "caption": "固定轻绳上退绕下落的圆盘；原图重量 $P$ 对应正文 $mg$",
+    "crop_rect_pt": [
+      94,
+      142,
+      222,
+      338
+    ],
+    "insert_after": "\\figend{固定绳段使绳盘接触点成为速度瞬心}",
+    "related_model_indices": [
+      42
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p019-unwinding-disc.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p019-unwinding-disc.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "364b8d08f75ca61375f03763735b5f46e3b103f02640cad485b9dc09c020a35d",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "10f835c817971bfbbdb9bbd673b0bd3184c6df0a12d010f3cc36c90ec02d28a1"
+  },
+  {
+    "key": "c3-5-p020-rolling-resistance",
+    "deck": "c3-5",
+    "page": 20,
+    "topic": "接触变形使法向力作用线向前偏移，产生滚动阻力矩",
+    "caption": "接触变形使法向力作用线向前偏移，产生滚动阻力矩",
+    "crop_rect_pt": [
+      421,
+      364,
+      609,
+      538
+    ],
+    "insert_after": "产生阻碍转动的矩 $M_{\\text{滚}}=Nb$。",
+    "related_model_indices": [],
+    "notes": "保留原图法向力、切向力、运动箭头与地面。 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p020-rolling-resistance.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p020-rolling-resistance.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "971c759193bda0e11aa703f83163c94b7903d580de021518bc783f792bf9f854",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "fdc3af58255c97be93f582d7669916edf8668974aa79f27a39513e97ec3ec52a"
+  },
+  {
+    "key": "c3-5-p023-planet-mechanism",
+    "deck": "c3-5",
+    "page": 23,
+    "topic": "固定轮外侧行星轮的机构",
+    "caption": "固定轮外侧行星轮的机构；原图转臂角速度 $\\omega$ 对应正文 $\\Omega$",
+    "crop_rect_pt": [
+      500,
+      47,
+      682,
+      253
+    ],
+    "insert_after": "\\figend{绝对自转包含转臂的转动，不能只用相对弧长比}",
+    "related_model_indices": [
+      44
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p023-planet-mechanism.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p023-planet-mechanism.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "4f8173094f9372f96aa05ccb753d4aa01e1ffdef29ad2cb6059e2d8c7969e225",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "65538be380aa80d0f9da20254520b1c95926b89466df0836c8106af4d14140ac"
+  },
+  {
+    "key": "c3-5-p023-planet-arc",
+    "deck": "c3-5",
+    "page": 23,
+    "topic": "外滚行星轮的接触弧长与相对转角",
+    "caption": "外滚行星轮的接触弧长与相对转角；绝对自转还包含转臂转角",
+    "crop_rect_pt": [
+      50,
+      170,
+      241,
+      376
+    ],
+    "insert_after": "\\figend{绝对自转包含转臂的转动，不能只用相对弧长比}",
+    "related_model_indices": [
+      44
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p023-planet-arc.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p023-planet-arc.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "5c6aebeef8991a37dc66f252da497c2e11d8f0c21d60ff74f6f3f9b9905b0dec",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "6af3c6164572409c92571c5a24db572f30854ef8d9b540dfddaef77e5f5f2082"
+  },
+  {
+    "key": "c3-5-p024-planet-velocities",
+    "deck": "c3-5",
+    "page": 24,
+    "topic": "行星轮指定点 $M$ 的速度合成",
+    "caption": "行星轮指定点 $M$ 的速度合成；原图 $\\omega^{\\prime}$ 表示绝对自转角速度",
+    "crop_rect_pt": [
+      442,
+      207,
+      679,
+      427
+    ],
+    "insert_after": "\\figend{绝对自转包含转臂的转动，不能只用相对弧长比}",
+    "related_model_indices": [
+      44
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p024-planet-velocities.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p024-planet-velocities.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "3cb81034c5b75af95086eef17ea3380a20c75e8c66eaf232e9fe9c430ddf2a16",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "d33bd705a02009d71d4e2e12598c9de4628a1442353c7a09386b4a2e1a41b5a3"
+  },
+  {
+    "key": "c3-5-p025-groove-geometry",
+    "deck": "c3-5",
+    "page": 25,
+    "topic": "圆槽与圆柱的接触几何，圆心轨迹半径为 $R-r$",
+    "caption": "圆槽与圆柱的接触几何，圆心轨迹半径为 $R-r$",
+    "crop_rect_pt": [
+      222,
+      248,
+      511,
+      478
+    ],
+    "insert_after": "\\figend{槽内滚动的法向力、切向力与圆心轨迹}",
+    "related_model_indices": [
+      45
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p025-groove-geometry.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p025-groove-geometry.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "689e0c30afcb1fd632194806281816a3d6cbc1b76c86d80b794ed49d6f4ea542",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "8c54fc8429f0a55db3529111074885c8936f2f2ac261463b8665d834fa87e311"
+  },
+  {
+    "key": "c3-5-p026-groove-forces",
+    "deck": "c3-5",
+    "page": 26,
+    "topic": "圆槽内圆柱的切向与法向加速度及接触力",
+    "caption": "圆槽内圆柱的切向与法向加速度及接触力；原图自转正向按顺时针，正文按逆时针",
+    "crop_rect_pt": [
+      373,
+      8,
+      715,
+      192
+    ],
+    "insert_after": "\\figend{槽内滚动的法向力、切向力与圆心轨迹}",
+    "related_model_indices": [
+      45
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p026-groove-forces.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p026-groove-forces.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "687e153c41edb9e0312f107303ed75205ed00a947f3edc72885de4494ff57ca1",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "4c2eafb1a547ea6296d3e3e7531a97559eba3ab8811fd3a097d1cb954cc621cf"
+  },
+  {
+    "key": "c3-5-p028-two-wheel-mechanism",
+    "deck": "c3-5",
+    "page": 28,
+    "topic": "双轮提升装置的原始绕绳形式",
+    "caption": "双轮提升装置的原始绕绳形式",
+    "crop_rect_pt": [
+      468,
+      99.8,
+      720,
+      300
+    ],
+    "insert_after": "\\figend{两个固定轮的转动惯量共同进入提升加速度}",
+    "related_model_indices": [
+      46
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 921,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p028-two-wheel-mechanism.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p028-two-wheel-mechanism.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "426ad20761dd18410eb5f377bfc8e75f2af3963f983e60d7530d8461bf95ee2f",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "7ed8b427d6a27a6d8dbe7621554e4f9d9fe634062ff3dc033a2f0826c8d9dc38"
+  },
+  {
+    "key": "c3-5-p028-two-wheel-forces",
+    "deck": "c3-5",
+    "page": 28,
+    "topic": "双轮和悬挂物的受力",
+    "caption": "双轮和悬挂物的受力；自由绳段两端 $T,T^{\\prime}$ 大小相等，悬挂段张力另记为 $S$",
+    "crop_rect_pt": [
+      0,
+      282,
+      256.2,
+      500.3
+    ],
+    "insert_after": "\\figend{双轮逐对象取矩：顶部两绳力对两轮的矩符号相反}",
+    "related_model_indices": [
+      46,
+      48
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 923,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p028-two-wheel-forces.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p028-two-wheel-forces.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "3a33308a130f2a63bf6d82d5c3e84d001b5636feaaf0b97b07c4868cd3b0f039",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "ea51b35c7e933da8f95a77e5223fa7a64a89a801b09934d4e2d14bdb903ae91d"
+  },
+  {
+    "key": "c3-5-p029-corner-contacts",
+    "deck": "c3-5",
+    "page": 29,
+    "topic": "墙角圆柱的两个接触点与初始逆时针转向",
+    "caption": "墙角圆柱的两个接触点与初始逆时针转向",
+    "crop_rect_pt": [
+      522,
+      156,
+      694.7,
+      335.9
+    ],
+    "insert_after": "\\figend{初始转向决定两个接触是否能够持续保持}",
+    "related_model_indices": [
+      47
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 948,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p029-corner-contacts.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p029-corner-contacts.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "08c6ebf1b5e0d50dc6b2c4f9748a5eb67cd88a490861e1f47d0fb02841a09acb",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "28ab19c5cabba48785649c36583118d877fd9e42cc562cf765b5c415d6a34b7f"
+  },
+  {
+    "key": "c3-5-p029-corner-forces",
+    "deck": "c3-5",
+    "page": 29,
+    "topic": "墙角圆柱的法向力与摩擦力",
+    "caption": "墙角圆柱的法向力与摩擦力",
+    "crop_rect_pt": [
+      504,
+      349.2,
+      680.3,
+      516
+    ],
+    "insert_after": "\\figend{初始转向决定两个接触是否能够持续保持}",
+    "related_model_indices": [
+      47
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 946,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p029-corner-forces.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p029-corner-forces.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "2cd4acbf046814c22038e772c44f053e101625d37660ea40607b2b0269173553",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "5a260b393e7bf124e99de2d9388597a86d96f89d3d0403d0a7d5a16ab8056b9c"
+  },
+  {
+    "key": "c3-5-p032-wheel-bottom-acceleration",
+    "deck": "c3-5",
+    "page": 32,
+    "topic": "轮底接触材料点的水平加速度分量相消，法向分量向上",
+    "caption": "轮底接触材料点的水平加速度分量相消，法向分量向上",
+    "crop_rect_pt": [
+      469,
+      295,
+      699,
+      527
+    ],
+    "insert_after": "\\figend{速度瞬心在底部，其材料加速度仍向上}",
+    "related_model_indices": [
+      43
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p032-wheel-bottom-acceleration.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p032-wheel-bottom-acceleration.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "c2ad0f23ff3c42883a66997292c6a3fa0909017b17f279280d0c6a804a453063",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "4e0f24f3f2300afcdece83ac3e8d54e40b254e3632d516301be228b9a5a2d05d"
+  },
+  {
+    "key": "c3-5-p033-wheel-left-acceleration",
+    "deck": "c3-5",
+    "page": 33,
+    "topic": "轮缘左侧点的相对切向与法向加速度",
+    "caption": "轮缘左侧点的相对切向与法向加速度",
+    "crop_rect_pt": [
+      422,
+      224,
+      690,
+      459
+    ],
+    "insert_after": "\\figend{速度瞬心在底部，其材料加速度仍向上}",
+    "related_model_indices": [
+      43
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p033-wheel-left-acceleration.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p033-wheel-left-acceleration.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "17736c837b5db921ad467cb9a0bb16497924edb788736e13d1848b261944f229",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "77b32f3393982a967f88d3bab8181a5f443bd6d78a733fd0ff091e86c864c600"
+  },
+  {
+    "key": "c3-5-p034-wheel-velocity-field",
+    "deck": "c3-5",
+    "page": 34,
+    "topic": "纯滚动车轮的速度场与底部瞬心",
+    "caption": "纯滚动车轮的速度场与底部瞬心",
+    "crop_rect_pt": [
+      376,
+      122,
+      635,
+      348
+    ],
+    "insert_after": "\\figend{速度瞬心在底部，其材料加速度仍向上}",
+    "related_model_indices": [
+      43
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p034-wheel-velocity-field.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p034-wheel-velocity-field.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "efbf7d85355cb61afa5b8303e3f62ba4cacb95f7c62469a21bea004c3ca9d5f6",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "62a3bffc6c73b5c33ad8fe99f310ba81245fb4de89bee295dd137a60444abd27"
+  },
+  {
+    "key": "c3-5-p035-equal-link-mechanism",
+    "deck": "c3-5",
+    "page": 35,
+    "topic": "等长曲柄滑块的机构与曲柄端点速度",
+    "caption": "等长曲柄滑块的机构与曲柄端点速度",
+    "crop_rect_pt": [
+      462,
+      0,
+      720,
+      179.9
+    ],
+    "insert_after": "\\figend{等长机构在 $45^\\circ$ 位置的速度瞬心}",
+    "related_model_indices": [
+      49
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 1107,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p035-equal-link-mechanism.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p035-equal-link-mechanism.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "253432379a1d54deb880c054ca9709de5c34c69dbad7b4f02cc923b5ba86cfdc",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "261122bf313a0cedc79a13d575fda89da80a4e6480f86e721c9e56240652daa4"
+  },
+  {
+    "key": "c3-5-p035-equal-link-velocities",
+    "deck": "c3-5",
+    "page": 35,
+    "topic": "基点法中的连杆相对速度与滑块绝对速度",
+    "caption": "基点法中的连杆相对速度与滑块绝对速度",
+    "crop_rect_pt": [
+      436.5,
+      295.2,
+      693.9,
+      503.9
+    ],
+    "insert_after": "\\figend{等长机构在 $45^\\circ$ 位置的速度瞬心}",
+    "related_model_indices": [
+      49
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 1116,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p035-equal-link-velocities.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p035-equal-link-velocities.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "5b34a323ba480dc4082cc91922d322d32db9bf549d00f8ffc25ef159ab0bf392",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "30eb4ed583a4161bdfb355caea61de81e3e10455bda68448f2e6f68d24359f48"
+  },
+  {
+    "key": "c3-5-p036-equal-link-center",
+    "deck": "c3-5",
+    "page": 36,
+    "topic": "等长连杆的瞬心 $P$ 及两端速度",
+    "caption": "等长连杆的瞬心 $P$ 及两端速度",
+    "crop_rect_pt": [
+      442.1,
+      213.3,
+      690,
+      435.3
+    ],
+    "insert_after": "\\figend{等长机构在 $45^\\circ$ 位置的速度瞬心}",
+    "related_model_indices": [
+      49
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 1141,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p036-equal-link-center.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p036-equal-link-center.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "5ffb3eac2c867910fda448767b8b7591af2235295aed182f38bed31e89aafe0f",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "82952f1fe4ef5511e33472e2379db94349cd3d5df18ee95b504e978f9c3b01f7"
+  },
+  {
+    "key": "c3-5-p037-unequal-link-mechanism",
+    "deck": "c3-5",
+    "page": 37,
+    "topic": "不等长曲柄滑块在 $45^\\circ$、$30^\\circ$ 位置的几何",
+    "caption": "不等长曲柄滑块在 $45^\\circ$、$30^\\circ$ 位置的几何",
+    "crop_rect_pt": [
+      172,
+      132,
+      465,
+      320
+    ],
+    "insert_after": "\\figend{位置角给出连杆长度，速度约束先确定连杆角速度}",
+    "related_model_indices": [
+      50
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p037-unequal-link-mechanism.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p037-unequal-link-mechanism.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "96424391325800695e2827d82320e69b1d5d84c562d8d434a10670c31c11055b",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "ce3f6df3caba7ee932b2d3bf6e5d5d1187dd53fb7276055039ed6e7136c71b9e"
+  },
+  {
+    "key": "c3-5-p038-unequal-link-acceleration",
+    "deck": "c3-5",
+    "page": 38,
+    "topic": "不等长连杆的加速度分解",
+    "caption": "不等长连杆的加速度分解；相对切向箭头为假定正向，计算结果可为负值",
+    "crop_rect_pt": [
+      333,
+      108,
+      622,
+      284
+    ],
+    "insert_after": "\\figend{位置角给出连杆长度，速度约束先确定连杆角速度}",
+    "related_model_indices": [
+      50
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p038-unequal-link-acceleration.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p038-unequal-link-acceleration.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "ffbee0b78c71a70c570a145a1b0b5cf1c2ea6e43a3fa20ac80f302a9bfa238ec",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "970ae3dd5089a56dfc7c4cb109bf0dcd137c3de245c755c07f6e533aa2feaf83"
+  },
+  {
+    "key": "c3-5-p039-ball-board",
+    "deck": "c3-5",
+    "page": 39,
+    "topic": "移动板与球的接触",
+    "caption": "移动板与球的接触；球与板须分别列动力学方程",
+    "crop_rect_pt": [
+      546,
+      232,
+      707,
+      379
+    ],
+    "insert_after": "\\figend{球与板有相对运动，必须作为两个动力学研究对象}",
+    "related_model_indices": [
+      51
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p039-ball-board.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p039-ball-board.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "5323d04ebab392ac87d690f2a0c01c1b76d0b5ff7fbedbcc3cf152cee18681af",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "1783db042d56a3e82c48f2405f49915a54f66a7c5fae8b71855fb33715a93e0e"
+  },
+  {
+    "key": "c3-5-p041-moving-center",
+    "deck": "c3-5",
+    "page": 41,
+    "topic": "移动瞬心 $A$ 与质心 $C$ 的相对位置",
+    "caption": "移动瞬心 $A$ 与质心 $C$ 的相对位置",
+    "crop_rect_pt": [
+      366,
+      218,
+      650,
+      431
+    ],
+    "insert_after": "这只是瞬时动能表达，动力学取矩还需核查移动点项。",
+    "related_model_indices": [],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-5-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p041-moving-center.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-5-p041-moving-center.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "3bb5e25cd4e00bd47adba9f9777d9900e122b709733e78d45aeb00f7c0ff1d39",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "817fbe88d8bd548834132800e93befcdbe5d469524c945a1907fa17f4d99483f"
+  },
+  {
+    "key": "c3-6-p004-perpendicular-radius",
+    "deck": "c3-6",
+    "page": 4,
+    "topic": "点到瞬时转轴的垂直矢量",
+    "caption": "点到瞬时转轴的垂直矢量；原图 $\\vect R$ 对应正文 $\\vect r_\\perp$",
+    "crop_rect_pt": [
+      500,
+      199,
+      703,
+      411
+    ],
+    "insert_after": "转动加速度也不一定沿点的实际轨道切线。",
+    "related_model_indices": [
+      3
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-6-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p004-perpendicular-radius.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p004-perpendicular-radius.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "ee015d005b39a65a384d4ad5a5b99cb72f7cb3801e7dd68fd7f387e8073b7b96",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "2f9bdc5f7ec149580ab542557c7fe2182d98cd088832384c18d128cb68b37317"
+  },
+  {
+    "key": "c3-6-p005-propeller-motion",
+    "deck": "c3-6",
+    "page": 5,
+    "topic": "螺旋桨自转与飞机沿圆轨道转弯",
+    "caption": "螺旋桨自转与飞机沿圆轨道转弯",
+    "crop_rect_pt": [
+      -91.5,
+      17.1,
+      508.5,
+      533
+    ],
+    "insert_after": "\\figend{飞机随动轴组与桨上点的相对位置}",
+    "related_model_indices": [
+      52
+    ],
+    "notes": "从内嵌原图恢复完整代表帧，避开源幻灯片叠加文本。 已与内嵌原图及原页视觉核对。",
+    "xref": 109,
+    "pixel_crop": [
+      251,
+      198,
+      718,
+      506
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p005-propeller-motion.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p005-propeller-motion.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "96775ce341185f52734e8be01c0e09d6b36757786ad0bec9249d5643833ee5df",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "0653985c30b445f8fcc923c65b1d08c0913f0a6c8713dc974901ebf794ada95a"
+  },
+  {
+    "key": "c3-6-p005-propeller-axes",
+    "deck": "c3-6",
+    "page": 5,
+    "topic": "螺旋桨计算用的随动基矢、叶尖 $B$ 与轨道中心 $O$",
+    "caption": "螺旋桨计算用的随动基矢、叶尖 $B$ 与轨道中心 $O$",
+    "crop_rect_pt": [
+      475,
+      139,
+      688,
+      363
+    ],
+    "insert_after": "\\figend{飞机随动轴组与桨上点的相对位置}",
+    "related_model_indices": [
+      52
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-6-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p005-propeller-axes.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p005-propeller-axes.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "c812833b4dad46c33854c47264ce524387553b06a972b0e55dc0f3d681712548",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "ee002886347d13e8ac4f5e6e5a9ac4ca0d56efa7b334594bfac9a7555e536f97"
+  },
+  {
+    "key": "c3-6-p009-euler-portrait",
+    "deck": "c3-6",
+    "page": 9,
+    "topic": "莱昂哈德·欧拉",
+    "caption": "莱昂哈德·欧拉",
+    "crop_rect_pt": [
+      508.5,
+      270,
+      710.3,
+      535.5
+    ],
+    "insert_after": "与欧拉运动学联立，方程确定姿态与角速度。",
+    "related_model_indices": [],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 211,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p009-euler-portrait.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p009-euler-portrait.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "0a93491a7f6a68b5311873727f2d1e9957ee493a46e925180d40fe4eca0ecc79",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "b634378d12c00b83299bdff3595c4c506799fd830ec325274f5b298041879171"
+  },
+  {
+    "key": "c3-6-p015-free-top-disc",
+    "deck": "c3-6",
+    "page": 15,
+    "topic": "自由对称刚体的角速度与角动量方向",
+    "caption": "自由对称刚体的角速度与角动量方向；原图角动量记为 $\\vect J$，正文记为 $\\vect L$",
+    "crop_rect_pt": [
+      93,
+      8,
+      257,
+      251
+    ],
+    "insert_after": "\\figend{自由对称陀螺中角动量与角速度的夹角顺序取决于惯量比}",
+    "related_model_indices": [
+      53
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-6-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p015-free-top-disc.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p015-free-top-disc.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "ff79b746fad0f4965a9e9f6cdb048c110656dad1440c7e94437642cb0a5d93da",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "c07148ca38786a316126497f34e4cad12fdba028c86ebfc61fd7164677b3c00b"
+  },
+  {
+    "key": "c3-6-p015-free-top-section",
+    "deck": "c3-6",
+    "page": 15,
+    "topic": "自由转动的剖切视图",
+    "caption": "自由转动的剖切视图；三矢量夹角顺序须由主惯量比判断",
+    "crop_rect_pt": [
+      486,
+      0,
+      639,
+      272
+    ],
+    "insert_after": "\\figend{自由对称陀螺中角动量与角速度的夹角顺序取决于惯量比}",
+    "related_model_indices": [
+      53
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-6-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p015-free-top-section.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p015-free-top-section.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "c12adffc1dfa26feabcd87785c208bcccb405e7686f7ed37cb70120b7ca1e504",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "2a81db8ef9bb95cf16bb7a4e4040bf91c2e7b4925b3f824788d87c2b28c746d9"
+  },
+  {
+    "key": "c3-6-p016-poinsot-tangent",
+    "deck": "c3-6",
+    "page": 16,
+    "topic": "惯量椭球、接触半径与不可变平面的距离",
+    "caption": "惯量椭球、接触半径与不可变平面的距离",
+    "crop_rect_pt": [
+      538,
+      58,
+      697,
+      178
+    ],
+    "insert_after": "\\figend{潘索构造：角速度沿接触半径，角动量垂直切平面}",
+    "related_model_indices": [
+      54
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-6-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p016-poinsot-tangent.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p016-poinsot-tangent.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "71fe7d9f9ef47ab3cc1cde1bc47a31aa195d6a6c86594ab8e0f3825f7ecf2db7",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "e61d3d465c2485646d1bc3a2f2ac3883dd1a3d8993628a028013610e8a0b738f"
+  },
+  {
+    "key": "c3-6-p017-poinsot-ellipsoid",
+    "deck": "c3-6",
+    "page": 17,
+    "topic": "惯量椭球在不可变平面上作无滑动几何滚动",
+    "caption": "惯量椭球在不可变平面上作无滑动几何滚动",
+    "crop_rect_pt": [
+      163.7,
+      161.7,
+      590.3,
+      418.2
+    ],
+    "insert_after": "\\figend{潘索构造：角速度沿接触半径，角动量垂直切平面}",
+    "related_model_indices": [
+      54
+    ],
+    "notes": " 已与内嵌原图及原页视觉核对。",
+    "xref": 445,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p017-poinsot-ellipsoid.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p017-poinsot-ellipsoid.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "bfbf4df9b44b1dbdbbe58c381c11895da612a75bfbdd85df5410d236bf478773",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "b46f3921f014cf77ee2ed59e1cfe83bb16b3a97992c26b87eff676ae6cb7b213"
+  },
+  {
+    "key": "c3-6-p018-heavy-top",
+    "deck": "c3-6",
+    "page": 18,
+    "topic": "重陀螺的倾斜对称轴、自转与重力",
+    "caption": "重陀螺的倾斜对称轴、自转与重力",
+    "crop_rect_pt": [
+      435,
+      233,
+      604,
+      471
+    ],
+    "insert_after": "\\figend{重力作用线不通过固定点时，重力对固定点产生力矩}",
+    "related_model_indices": [
+      55
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-6-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p018-heavy-top.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p018-heavy-top.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "662b08585f9063aedc3a8fa6cb8c513e8b79683c8867710c546194010273d93f",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "ebfd3eaf92dfe76f0ba8de51f0b83726adff96215bd59fd71a48d6bd26fa3d3d"
+  },
+  {
+    "key": "c3-6-p021-nutation-tracks",
+    "deck": "c3-6",
+    "page": 21,
+    "topic": "单位球面上的重陀螺轴迹：单向、回环与尖点三种形态",
+    "caption": "单位球面上的重陀螺轴迹：单向、回环与尖点三种形态",
+    "crop_rect_pt": [
+      92,
+      116.5,
+      603.3,
+      374.7
+    ],
+    "insert_after": "\\figend{重陀螺方程积分得到的两个章动周期：单向、回环与尖点；箭头表示时间方向}",
+    "related_model_indices": [
+      56
+    ],
+    "notes": "原图内书籍编号为其原始标记，保留完整。 已与内嵌原图及原页视觉核对。",
+    "xref": 629,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p021-nutation-tracks.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p021-nutation-tracks.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "c51b394e9c207df66b597fcf1176e145fe38852f0a1ca0df23cb4957d56f5f14",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "d3815e137b848045535894fe73eff10875f2a1fd888508bbc224fea6f6654411"
+  },
+  {
+    "key": "c3-6-p022-magnetic-ring",
+    "deck": "c3-6",
+    "page": 22,
+    "topic": "磁场中的电流圆环及其磁矩方向",
+    "caption": "磁场中的电流圆环及其磁矩方向",
+    "crop_rect_pt": [
+      560,
+      55,
+      707,
+      215
+    ],
+    "insert_after": "\\figend{均匀带电圆环的磁矩与角动量；负电荷时两者反向}",
+    "related_model_indices": [
+      57
+    ],
+    "notes": " 已在原页与独立导出图之间核对箭头、角标和端点。去除课件背景及页脚；相邻正文公式不属于图示，已排除。",
+    "xref": null,
+    "pixel_crop": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/c3-6-clean-source.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p022-magnetic-ring.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p022-magnetic-ring.png",
+    "extraction_method": "pdf_vector_crop",
+    "sha256_pdf": "205f8a9c542687225b5e6f8532c5db6895f499cf3de703315cecb2e9430b3855",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "b79f2d85a1e128b62a698c103623ef7368f56ef35eb81e5a33ef2ad1f64f02c7"
+  },
+  {
+    "key": "c3-6-p025-magnetic-precession",
+    "deck": "c3-6",
+    "page": 25,
+    "topic": "不同初始取向的磁偶极进动",
+    "caption": "不同初始取向的磁偶极进动；竖直轴为磁场方向",
+    "crop_rect_pt": [
+      -129.3,
+      0,
+      441.4,
+      539.9
+    ],
+    "insert_after": "\\figend{进动的角动量端点位于固定圆锥上，转向取决于陀螺磁比符号}",
+    "related_model_indices": [
+      58
+    ],
+    "notes": "提取原始插图本体，排除源页中不正确的“进动动能”公式；保留完整进动圆锥与坐标轴。 已与内嵌原图及原页视觉核对。",
+    "xref": 744,
+    "pixel_crop": [
+      178,
+      30,
+      679,
+      605
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "original_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p025-magnetic-precession.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-6-p025-magnetic-precession.png",
+    "extraction_method": "embedded_original_image",
+    "sha256_pdf": "3e4ea904ccc9fc8b89a79e64ba9638d22a4c9e123c1e758136b03f81acb4c724",
+    "visual_review": "passed_after_crop_fix_and_verify",
+    "sha256_png": "8d7c3647b839e8fe6d79be99de14b480fdf8b4cf0c33e8361daeb5bb23986b9c"
+  }
+]

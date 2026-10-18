@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\coordinate(A)at(0,0);\coordinate(B)at(3,0);\coordinate(C)at(1,1.8);
+\draw[guide](A)--(B)--(C)--cycle;
+\foreach \P in {A,B,C}{\fill(\P)circle(2pt)node[above left]{$\P$};}
+\node[align=center]at(1.5,-.9){$M_A=M_B=M_C=0$\\三点不共线};
+\begin{scope}[xshift=6cm]
+\draw[guide](0,0)--(3,0);
+\foreach \x/\n in {0/A,1.5/B,3/C}{\fill(\x,0)circle(2pt)node[above]{$\n$};}
+\draw[force](.5,0)--(2.5,0);
+\node[align=center]at(1.5,-.9){三点共线时\\仍可有沿线的合力};
+\end{scope}
+\end{tikzpicture}

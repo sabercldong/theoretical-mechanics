@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.95]
+\draw[ink,thick](-.8,0)--(4.1,0);\draw[guide](0,0)--(0,4);
+\draw[ink,thick,domain=0:1,samples=90,->]plot({1.2*\x^3},{3.7*(1-\x^2)});
+\fill(0,3.7)circle(3pt);\fill(1.2,0)circle(3pt);
+\coordinate(P)at(.2592,2.368);\fill(P)circle(2pt);
+\draw[force](P)--++(.27216,-.9324)node[below left]{$\vect v'$};
+\draw[force](P)--++(1.15,0)node[above]{$F_{C,E}\vect e_E$};
+\draw[<->](-.55,0)--(-.55,3.7)node[midway,left]{$h$};\draw[<->](0,-.5)--(1.2,-.5)node[midway,below]{$d_E$};
+\node[anchor=west,align=left]at(4.8,2.3){东—天平面的一阶投影\\$x\propto t^3,\quad z=h-gt^2/2$\\速度箭头沿图示切线\\横向比例已夸大};\draw[->](2.3,.35)--(3.9,.35)node[right]{东};
+\end{tikzpicture}

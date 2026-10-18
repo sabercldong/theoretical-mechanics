@@ -1,0 +1,941 @@
+{
+  "scope": "c3-5 and c3-6",
+  "pages": [
+    {
+      "deck": "c3-5",
+      "page": 1,
+      "topic": "定轴运动回顾",
+      "lecture_location": "3.6.1",
+      "notes": "回顾定轴速度、加速度、惯量、动力学与约束方程，无独立教学图。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-5",
+      "page": 2,
+      "topic": "平面平行运动定义",
+      "lecture_location": "3.7.1",
+      "notes": "保留平行截面图与运动代表帧；由内嵌媒体恢复原页底部被遮挡的平面。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p002-parallel-planes",
+        "c3-5-p002-rotation-translation"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 3,
+      "topic": "平面运动三个自由度与速度场",
+      "lecture_location": "3.7.1",
+      "notes": "正文以三变量建立平面速度场；保留基点与相对位置矢量图。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p003-planar-position"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 4,
+      "topic": "平面加速度分解",
+      "lecture_location": "3.7.1",
+      "notes": "加速度的平移、切向、向心三项均保留；图与上一页重复，不再重复提取。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-5",
+      "page": 5,
+      "topic": "匀角速度滚动轮的四点运动",
+      "lecture_location": "3.7.5",
+      "notes": "原图 B、D 标签与正文相反，caption 已说明；正文通过 a=0 包含本页特例。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p005-wheel-relative"
+      ],
+      "example_title": "变速纯滚动轮的四点运动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 6,
+      "topic": "转动瞬心定义与距离",
+      "lecture_location": "3.7.1",
+      "notes": "正文区分瞬心与固定铰，图中 C 对应正文 P。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p006-instant-center"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 7,
+      "topic": "一点速度与角速度、固定面纯滚动确定瞬心",
+      "lecture_location": "3.7.1",
+      "notes": "保留两种几何图；正文使用有向位置式。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p007-one-velocity",
+        "c3-5-p007-rolling-contact"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 8,
+      "topic": "不平行速度与同反向平行速度确定瞬心",
+      "lecture_location": "3.7.1",
+      "notes": "三种几何图均提取，与正文三个分支一一对应。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p008-nonparallel-velocities",
+        "c3-5-p008-same-direction",
+        "c3-5-p008-opposite-directions"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 9,
+      "topic": "瞬时平移与无穷远瞬心",
+      "lecture_location": "3.7.1",
+      "notes": "保留两种同速位置图；正文另讨论整个刚体瞬时静止时的不唯一性。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p009-instant-translation"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 10,
+      "topic": "瞬心求法总览",
+      "lecture_location": "3.7.1",
+      "notes": "与第6至9页内容重复，正文保留全部判据；不重复提取汇总图。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-5",
+      "page": 11,
+      "topic": "空间极迹、本体极迹与材料瞬心加速度",
+      "lecture_location": "3.7.2",
+      "notes": "保留接触材料点图和两个动画代表静帧；正文指出瞬心材料加速度一般非零。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p011-contact-loci",
+        "c3-5-p011-fixed-circle",
+        "c3-5-p011-body-circle"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 12,
+      "topic": "等速拖动梯子的两条极迹",
+      "lecture_location": "3.7.2",
+      "notes": "保留原图；原课件坐标 ξ、η 与正文 q1、q2 不同，图题已提示。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p012-ladder-loci"
+      ],
+      "example_title": "等速拖动梯子的两条极迹"
+    },
+    {
+      "deck": "c3-5",
+      "page": 13,
+      "topic": "平面动力学与面外约束",
+      "lecture_location": "3.7.3",
+      "notes": "正文给平面三式与面外约束，并说明实际惯量非对角元的符号约定。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-5",
+      "page": 14,
+      "topic": "瞬心动能与机械能守恒",
+      "lecture_location": "3.7.3",
+      "notes": "保留质心动能分解与瞬心惯量的推导，区分动能表达和动力学取矩。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-5",
+      "page": 15,
+      "topic": "瞬心到质心定距时的简式",
+      "lecture_location": "3.7.3",
+      "notes": "保留斜面多个瞬时位置图；正文同时保留一般移动瞬心运输项。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p015-rolling-centers"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 16,
+      "topic": "斜面圆柱滚动能量法",
+      "lecture_location": "3.7.4",
+      "notes": "正文包含能量法的加速度推导，原图与第17页相同。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "圆柱沿粗糙斜面滚下：三种解法"
+    },
+    {
+      "deck": "c3-5",
+      "page": 17,
+      "topic": "斜面圆柱滚动动力学法",
+      "lecture_location": "3.7.4",
+      "notes": "保留受力图，图题说明倾角和方向约定；无滑条件完整。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p017-incline-forces"
+      ],
+      "example_title": "圆柱沿粗糙斜面滚下：三种解法"
+    },
+    {
+      "deck": "c3-5",
+      "page": 18,
+      "topic": "斜面圆柱滚动瞬心法",
+      "lecture_location": "3.7.4",
+      "notes": "正文第三法和三法消元均保留；受力图不重复提取。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "圆柱沿粗糙斜面滚下：三种解法"
+    },
+    {
+      "deck": "c3-5",
+      "page": 19,
+      "topic": "固定绳退绕圆盘的三种解法",
+      "lecture_location": "3.7.4",
+      "notes": "保留绳、盘、支承和T/P箭头；原页称滑轮，正文明确其一绳退绕模型。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p019-unwinding-disc"
+      ],
+      "example_title": "固定轻绳上退绕下落的圆盘"
+    },
+    {
+      "deck": "c3-5",
+      "page": 20,
+      "topic": "滚动阻力",
+      "lecture_location": "3.7.4",
+      "notes": "保留接触变形图与阻力矩定义；正文明确长度系数和无量纲系数区别。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p020-rolling-resistance"
+      ]
+    },
+    {
+      "deck": "c3-5",
+      "page": 21,
+      "topic": "教材作业题号",
+      "lecture_location": "3.11.2",
+      "notes": "源页仅列3.20、3.22、3.26，无题干；正文自测保留相应方法，球板3.22见3.7.7。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-5",
+      "page": 22,
+      "topic": "补充材料标题页",
+      "lecture_location": "3.7.5—3.7.7",
+      "notes": "纯分隔页，不含独立知识或图。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-5",
+      "page": 23,
+      "topic": "行星轮接触弧长与绝对角速度",
+      "lecture_location": "3.7.5",
+      "notes": "保留机构和弧长图；caption 说明原 ω 与正文 Ω。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p023-planet-mechanism",
+        "c3-5-p023-planet-arc"
+      ],
+      "example_title": "固定轮外侧的行星轮"
+    },
+    {
+      "deck": "c3-5",
+      "page": 24,
+      "topic": "行星轮指定轮缘点的速度",
+      "lecture_location": "3.7.5",
+      "notes": "保留速度平行四边形；正文明确AM垂直OA条件。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p024-planet-velocities"
+      ],
+      "example_title": "固定轮外侧的行星轮"
+    },
+    {
+      "deck": "c3-5",
+      "page": 25,
+      "topic": "圆槽内圆柱题设与几何",
+      "lecture_location": "3.7.6",
+      "notes": "保留几何图；字体恢复副本中将确定的Symbol私用码恢复为ϕ。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p025-groove-geometry"
+      ],
+      "example_title": "圆槽内圆柱的方程、反力与振动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 26,
+      "topic": "圆槽切向动力学与非线性方程",
+      "lecture_location": "3.7.6",
+      "notes": "保留受力和加速度图；原图顺时针自转正向与正文逆时针正向在图题说明。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p026-groove-forces"
+      ],
+      "example_title": "圆槽内圆柱的方程、反力与振动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 27,
+      "topic": "圆槽反力和微振动周期",
+      "lecture_location": "3.7.6",
+      "notes": "正文同时含完整反力、接触条件、静摩擦许可与有限振幅周期。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "圆槽内圆柱的方程、反力与振动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 28,
+      "topic": "双轮提升装置",
+      "lecture_location": "3.7.6",
+      "notes": "机构和受力图均保留；原页将角动量式称动能定理，正文已正确区分。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p028-two-wheel-mechanism",
+        "c3-5-p028-two-wheel-forces"
+      ],
+      "example_title": "双轮提升装置"
+    },
+    {
+      "deck": "c3-5",
+      "page": 29,
+      "topic": "墙角圆柱受力与转动",
+      "lecture_location": "3.7.6",
+      "notes": "初始转向图和受力图均保留；正文说明接触维持与反转分支。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p029-corner-contacts",
+        "c3-5-p029-corner-forces"
+      ],
+      "example_title": "墙角圆柱的停止转动时间"
+    },
+    {
+      "deck": "c3-5",
+      "page": 30,
+      "topic": "墙角圆柱停止时间",
+      "lecture_location": "3.7.6",
+      "notes": "逐项对照反力和角减速度；正文额外说明停止后的静摩擦切换。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "墙角圆柱的停止转动时间"
+    },
+    {
+      "deck": "c3-5",
+      "page": 31,
+      "topic": "变速圆轮题设",
+      "lecture_location": "3.7.5",
+      "notes": "同一基础圆轮图由第32、33页带加速度箭头的图完整涵盖。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "变速纯滚动轮的四点运动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 32,
+      "topic": "底部材料点的加速度",
+      "lecture_location": "3.7.5",
+      "notes": "保留全图并恢复ω、ε；原页页码位于地面内，已仅删除页码文本。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p032-wheel-bottom-acceleration"
+      ],
+      "example_title": "变速纯滚动轮的四点运动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 33,
+      "topic": "左轮缘点的加速度",
+      "lecture_location": "3.7.5",
+      "notes": "保留切向/法向图；源式将相对速度标为v_B，正文区分绝对与相对速度。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p033-wheel-left-acceleration"
+      ],
+      "example_title": "变速纯滚动轮的四点运动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 34,
+      "topic": "用瞬心求轮缘四点速度",
+      "lecture_location": "3.7.5",
+      "notes": "保留完整速度场；正文也回答固定曲线轨道时vC=Rω的适用条件。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p034-wheel-velocity-field"
+      ],
+      "example_title": "变速纯滚动轮的四点运动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 35,
+      "topic": "等长连杆基点法",
+      "lecture_location": "3.7.7",
+      "notes": "机构图和速度合成图均保留；原图ω对应正文Ω。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p035-equal-link-mechanism",
+        "c3-5-p035-equal-link-velocities"
+      ],
+      "example_title": "等长曲柄滑块：基点法、投影法与瞬心法"
+    },
+    {
+      "deck": "c3-5",
+      "page": 36,
+      "topic": "等长连杆投影法与瞬心法",
+      "lecture_location": "3.7.7",
+      "notes": "保留瞬心图；正文说明投影关系不能单独给全部速度信息。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p036-equal-link-center"
+      ],
+      "example_title": "等长曲柄滑块：基点法、投影法与瞬心法"
+    },
+    {
+      "deck": "c3-5",
+      "page": 37,
+      "topic": "不等长连杆加速度题设",
+      "lecture_location": "3.7.7",
+      "notes": "保留完整机构和45°/30°角；A标签完整。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p037-unequal-link-mechanism"
+      ],
+      "example_title": "不等长曲柄滑块的加速度"
+    },
+    {
+      "deck": "c3-5",
+      "page": 38,
+      "topic": "不等长连杆加速度分量",
+      "lecture_location": "3.7.7",
+      "notes": "保留原假定方向图并在caption说明切向箭头为假定正向；正文给准确有向结果。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p038-unequal-link-acceleration"
+      ],
+      "example_title": "不等长曲柄滑块的加速度"
+    },
+    {
+      "deck": "c3-5",
+      "page": 39,
+      "topic": "球与板分别列动力学方程",
+      "lecture_location": "3.7.7",
+      "notes": "保留原球板图，排除相邻正文；各对象力和接触相对速度均由正文完整解释。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p039-ball-board"
+      ],
+      "example_title": "球与活动板由滑动过渡到纯滚动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 40,
+      "topic": "球板达到相对纯滚动的时间",
+      "lecture_location": "3.7.7",
+      "notes": "正文保留相同接触速度条件，并补全速度、耗散与板长条件。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "球与活动板由滑动过渡到纯滚动"
+    },
+    {
+      "deck": "c3-5",
+      "page": 41,
+      "topic": "一般移动瞬心角动量方程",
+      "lecture_location": "3.7.3",
+      "notes": "保留瞬心A、质心C示意；正文提供运输项推导及定距条件。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-5-p041-moving-center"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 1,
+      "topic": "定点运动、三个自由度与极面",
+      "lecture_location": "3.8.1",
+      "notes": "复用 c3-1-p014-euler-angles 原图及对应正文图；同图的 c3-6 p001 版本去重归档，不单独插入。正文说明三个自由度及极面的几何含义。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "reused_original_figure_keys": [
+        "c3-1-p014-euler-angles"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 2,
+      "topic": "定点运动的欧拉运动学",
+      "lecture_location": "3.3.2、3.8.1",
+      "notes": "欧拉角三个分量与正文Z-X-Z约定一致；复用 c3-1-p014-euler-angles 原图及对应正文图，不重复插图。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "reused_original_figure_keys": [
+        "c3-1-p014-euler-angles"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 3,
+      "topic": "定点加速度双叉积与垂轴分量",
+      "lecture_location": "3.8.1",
+      "notes": "正文保留等价矢量恒等式和瞬时轴退化说明。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 4,
+      "topic": "转动加速度与向轴加速度",
+      "lecture_location": "3.8.1",
+      "notes": "保留r/R/ω图，图题说明R对应正文r_perp。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p004-perpendicular-radius"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 5,
+      "topic": "飞机转弯时螺旋桨速度题设",
+      "lecture_location": "3.8.1",
+      "notes": "保留完整动画代表帧和有水印的原轴图；水印未删除。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p005-propeller-motion",
+        "c3-6-p005-propeller-axes"
+      ],
+      "example_title": "圆轨道上飞机螺旋桨的叶尖运动"
+    },
+    {
+      "deck": "c3-6",
+      "page": 6,
+      "topic": "螺旋桨叶尖速度求解",
+      "lecture_location": "3.8.1",
+      "notes": "正文逐项给径向、切向、竖直分量；图与第5页重复。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "圆轨道上飞机螺旋桨的叶尖运动"
+    },
+    {
+      "deck": "c3-6",
+      "page": 7,
+      "topic": "螺旋桨叶尖加速度求解",
+      "lecture_location": "3.8.1",
+      "notes": "核对基矢导数、总角加速度与交叉项；正文明确非零运输项。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "example_title": "圆轨道上飞机螺旋桨的叶尖运动"
+    },
+    {
+      "deck": "c3-6",
+      "page": 8,
+      "topic": "定点动力学与约束反力",
+      "lecture_location": "3.8.2",
+      "notes": "正文分别处理欧拉方程、动能与支承反力。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 9,
+      "topic": "本体主轴简化与欧拉肖像",
+      "lecture_location": "3.8.2",
+      "notes": "保留欧拉肖像；正文解释常惯量与变基矢两种效应。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p009-euler-portrait"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 10,
+      "topic": "基矢导数和运输公式",
+      "lecture_location": "3.2.3、3.8.2",
+      "notes": "正文有完整逐分量推导。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 11,
+      "topic": "欧拉动力学方程",
+      "lecture_location": "3.8.2",
+      "notes": "三式循环符号与正文一致，联立欧拉运动学确定姿态。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 12,
+      "topic": "定点转动动能及机械能",
+      "lecture_location": "3.8.2",
+      "notes": "正文保持1/2乘完整二次型，并验证功率式。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 13,
+      "topic": "对称自由陀螺的本体解",
+      "lecture_location": "3.8.4",
+      "notes": "正文给有向本体频率、初相位及退化情况。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 14,
+      "topic": "自由陀螺欧拉角积分",
+      "lecture_location": "3.8.4",
+      "notes": "正文以L/A表达空间进动率，避免cosθ=0时的表观除零；欧拉坐标复用 c3-1-p014-euler-angles 原图及对应正文图，不重复插图。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [],
+      "reused_original_figure_keys": [
+        "c3-1-p014-euler-angles"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 15,
+      "topic": "自由陀螺方向几何",
+      "lecture_location": "3.8.4",
+      "notes": "两幅三维原图均保留；原课件断言角速度与轴总在角动量两侧过强，正文按C/A区分。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p015-free-top-disc",
+        "c3-6-p015-free-top-section"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 16,
+      "topic": "潘索惯量椭球构造",
+      "lecture_location": "3.8.5",
+      "notes": "保留半径与切平面图；正文区分几何无滑动与真实支承。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p016-poinsot-tangent"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 17,
+      "topic": "惯量椭球和空间极迹照片图",
+      "lecture_location": "3.8.5",
+      "notes": "保留课件扫描图的全部标记；正文完整说明两条极迹。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p017-poinsot-ellipsoid"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 18,
+      "topic": "重陀螺模型和重力矩",
+      "lecture_location": "3.9.1",
+      "notes": "保留重力/轴向/进动示意图，排除相邻方程。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p018-heavy-top"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 19,
+      "topic": "重陀螺的轴向角速度常数",
+      "lecture_location": "3.9.1、3.9.2",
+      "notes": "正文明确s=ω3为常数而非ψdot为常数，原图重复。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 20,
+      "topic": "重陀螺能量与竖直角动量守恒",
+      "lecture_location": "3.9.2",
+      "notes": "源黄色框能量式未将1/2明确乘全部三项；正文标准动能已正确给出。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 21,
+      "topic": "重陀螺三类球面轴迹",
+      "lecture_location": "3.9.5",
+      "notes": "原三联图完整提取；保留原图内书籍编号，普通讲义图题另行编号。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p021-nutation-tracks"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 22,
+      "topic": "带电圆环和陀螺磁比",
+      "lecture_location": "3.10.1",
+      "notes": "保留圆环磁矩图；正文用带符号q并区分核自旋模型。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p022-magnetic-ring"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 23,
+      "topic": "闭合电流磁矩与磁力矩",
+      "lecture_location": "3.10.2",
+      "notes": "原磁矩积分缺1/2且分部积分说明有误，正文均已纠正；不导入错误公式。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 24,
+      "topic": "拉莫尔进动角速度与能量",
+      "lecture_location": "3.10.3、3.10.4",
+      "notes": "进动率本身可用，源“进动动能=-μB/2”不成立；正文已区分能量与角速度。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 25,
+      "topic": "不同取向的进动与自旋轨道项",
+      "lecture_location": "3.10.3、3.10.4",
+      "notes": "只提取完整进动插图，排除错误能量公式；正文用Thomas修正解释自旋轨道半因子。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": [
+        "c3-6-p025-magnetic-precession"
+      ]
+    },
+    {
+      "deck": "c3-6",
+      "page": 26,
+      "topic": "教材作业题号",
+      "lecture_location": "3.11.3",
+      "notes": "仅列3.30、3.31、3.33，无题干；定点与磁进动方法在自测中保留。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 27,
+      "topic": "第三章小结：运动学、惯量和平面运动",
+      "lecture_location": "3.11.4",
+      "notes": "源欧拉运动学第二行下标及符号、平面动能项有误；正文对应公式均已正确。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    },
+    {
+      "deck": "c3-6",
+      "page": 28,
+      "topic": "第三章小结：一般运动与欧拉动力学",
+      "lecture_location": "3.11.4",
+      "notes": "正文方法表和四类核查保留本页内容；无独立教学图。",
+      "visual_review": "逐页总览；图示页与关键公式放大核对",
+      "original_figure_keys": []
+    }
+  ],
+  "source_errors": [
+    {
+      "deck": "c3-5",
+      "page": 33,
+      "issue": "源页用v_B标注相对速度，若读为绝对速度将漏轮心速度。",
+      "lecture_location": "3.7.5",
+      "status": "baseline_already_correct",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-5",
+      "page": 28,
+      "issue": "源页把合并系统角动量定理称作动能定理。",
+      "lecture_location": "3.7.6",
+      "status": "baseline_already_correct",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-5",
+      "page": 38,
+      "issue": "相对切向箭头为假定方向；负标量不等于正文逆时针角加速度为负。",
+      "lecture_location": "3.7.7",
+      "status": "caption_explains_convention",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-6",
+      "page": 15,
+      "issue": "“角速度与z轴落在角动量两侧”只适用于特定惯量次序。",
+      "lecture_location": "3.8.4",
+      "status": "baseline_already_distinguishes_C_greater_or_less_A",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-6",
+      "page": 20,
+      "issue": "黄色能量框1/2未明确乘完整二次型。",
+      "lecture_location": "3.9.2",
+      "status": "baseline_already_correct",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-6",
+      "page": 23,
+      "issue": "磁矩线积分缺1/2；“第二项积分为零”的说法不成立，须闭环分部积分。",
+      "lecture_location": "3.10.2",
+      "status": "baseline_already_correct",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-6",
+      "page": 24,
+      "issue": "不能用进动角速度替代刚体真实角速度定义所谓进动动能，也不能将磁偶极能写成-μ·B/2。",
+      "lecture_location": "3.10.4",
+      "status": "baseline_already_correct",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-6",
+      "page": 25,
+      "issue": "自旋轨道半因子应由Thomas修正解释，不能归因于经典磁进动动能。",
+      "lecture_location": "3.10.4",
+      "status": "baseline_already_correct",
+      "new_patch_needed": false
+    },
+    {
+      "deck": "c3-6",
+      "page": 27,
+      "issue": "欧拉角速度第二行重复下标x、θdot项符号错误；平面运动的质心平动动能不能省略。",
+      "lecture_location": "3.3.2、3.7.3",
+      "status": "baseline_already_correct",
+      "new_patch_needed": false
+    }
+  ],
+  "font_recovery": [
+    {
+      "source": "ppt/slides/slide25.xml",
+      "original": "",
+      "source_codepoint": "U+F06A",
+      "target": "ϕ",
+      "target_codepoint": "U+03D5"
+    },
+    {
+      "source": "ppt/slides/slide25.xml",
+      "original": "",
+      "source_codepoint": "U+F06A",
+      "target": "ϕ",
+      "target_codepoint": "U+03D5"
+    },
+    {
+      "source": "ppt/slides/slide25.xml",
+      "original": "",
+      "source_codepoint": "U+F06A",
+      "target": "ϕ",
+      "target_codepoint": "U+03D5"
+    },
+    {
+      "source": "ppt/slides/slide26.xml",
+      "original": "",
+      "source_codepoint": "U+F06A",
+      "target": "ϕ",
+      "target_codepoint": "U+03D5"
+    },
+    {
+      "source": "ppt/slides/slide29.xml",
+      "original": "",
+      "source_codepoint": "U+F077",
+      "target": "ω",
+      "target_codepoint": "U+03C9"
+    },
+    {
+      "source": "ppt/slides/slide32.xml",
+      "original": "",
+      "source_codepoint": "U+F065",
+      "target": "ε",
+      "target_codepoint": "U+03B5"
+    },
+    {
+      "source": "ppt/slides/slide32.xml",
+      "original": "",
+      "source_codepoint": "U+F077",
+      "target": "ω",
+      "target_codepoint": "U+03C9"
+    },
+    {
+      "source": "ppt/slides/slide33.xml",
+      "original": "",
+      "source_codepoint": "U+F065",
+      "target": "ε",
+      "target_codepoint": "U+03B5"
+    },
+    {
+      "source": "ppt/slides/slide33.xml",
+      "original": "",
+      "source_codepoint": "U+F077",
+      "target": "ω",
+      "target_codepoint": "U+03C9"
+    },
+    {
+      "source": "ppt/slides/slide34.xml",
+      "original": "",
+      "source_codepoint": "U+F077",
+      "target": "ω",
+      "target_codepoint": "U+03C9"
+    },
+    {
+      "source": "ppt/slides/slide34.xml",
+      "original": "",
+      "source_codepoint": "U+F077",
+      "target": "ω",
+      "target_codepoint": "U+03C9"
+    },
+    {
+      "source": "ppt/slides/slide35.xml",
+      "original": " ",
+      "source_codepoint": "U+F077",
+      "target": "ω",
+      "target_codepoint": "U+03C9"
+    },
+    {
+      "source": "ppt/slides/slide35.xml",
+      "original": " ",
+      "source_codepoint": "U+F06A",
+      "target": "ϕ",
+      "target_codepoint": "U+03D5"
+    },
+    {
+      "source": "ppt/slides/slide37.xml",
+      "original": "",
+      "source_codepoint": "U+F077",
+      "target": "ω",
+      "target_codepoint": "U+03C9"
+    }
+  ],
+  "font_recovery_validation": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-c/font-recovery-validation.json",
+  "text_patch_suggestions": [],
+  "original_figure_count": 50,
+  "review_status": "passed_after_fix_and_verify",
+  "unresolved_figure_defects": [],
+  "retention": "全部现有59幅模型图均由父代理保留；本组未编辑主TeX。",
+  "original_figure_count_by_deck": {
+    "c3-5": 38,
+    "c3-6": 12
+  },
+  "deduplicated_originals": [
+    {
+      "key": "c3-6-p001-fixed-point-euler",
+      "reuses": "c3-1-p014-euler-angles",
+      "reason": "几何和内容重复；c3-1图保留节点轴线更完整，资产保留存档但不再插入。"
+    }
+  ]
+}

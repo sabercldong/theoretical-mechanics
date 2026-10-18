@@ -1,0 +1,22 @@
+[
+  {
+    "file": "理论力学-c4-1.pptx",
+    "sha256": "188d883036e58657d36cf074c79bb8a6fffc72bf2ba80545eae5e420613afcf7",
+    "slides": 30,
+    "fresh_pdf": "工作文件/源课件PDF/理论力学-c4-1.pdf",
+    "fresh_pdf_pages": 30,
+    "fresh_pdf_sha256": "8f1a5cf967da3aed79922e536200f21569e46b5bb16da17705c6a864cf19c35c",
+    "export_hidden_slides": true,
+    "use_tagged_pdf": false
+  },
+  {
+    "file": "理论力学-c4-2.pptx",
+    "sha256": "52f4dac7f5535b9f8391af00bfdc9dd8491c171d19dcdd838c1a8dc0c336c642",
+    "slides": 45,
+    "fresh_pdf": "工作文件/源课件PDF/理论力学-c4-2.pdf",
+    "fresh_pdf_pages": 45,
+    "fresh_pdf_sha256": "f3bae5c009e9ab07163b23dc3e15682ed212b6e225d11fb305d48fa648979dea",
+    "export_hidden_slides": true,
+    "use_tagged_pdf": false
+  }
+]

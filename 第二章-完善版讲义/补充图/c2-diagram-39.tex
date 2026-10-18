@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1.05]
+\draw[->](-.4,0)--(5.1,0)node[right]{$v_x$};
+\draw[->](0,-1.6)--(0,2.2)node[above]{$v_y$};
+\coordinate(C)at(2.6,0);
+\coordinate(Pone)at(3.38625235,1.03528124);
+\coordinate(Ptwo)at(1.36924534,.41862031);
+\coordinate(T)at(1.95,1.12583302);
+\draw[ink,thick](C)circle(1.3);
+\draw[guide](0,0)--(3.92,1.1985);
+\draw[guide](0,0)--(2.73,1.57617);
+\draw[force](0,0)--(C)node[midway,below]{$V$};
+\draw[force](0,0)--(Pone);
+\draw[force](C)--(Pone)node[pos=.65,right]{$v'_1$};
+\draw[muted,thick](C)--(Ptwo);
+\fill[ink](Pone)circle(2.5pt)node[above right]{$P_1$};
+\fill[ink](Ptwo)circle(2.5pt)node[above left]{$P_2$};
+\fill[muted](T)circle(2pt)node[above left]{$T$};
+\draw[thin](.65,0)arc(0:17:.65);
+\node at(.98,.12){$\theta$};
+\node[align=left,anchor=west]at(4.05,.9){$\theta=17^\circ$\\$\theta_{\max}=30^\circ$};
+\node[align=center]at(2.6,-1.85){同向射线交于 $P_1,P_2$；$OT$ 为切线};
+\end{tikzpicture}

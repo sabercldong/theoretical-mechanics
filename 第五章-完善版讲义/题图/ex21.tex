@@ -1,0 +1,14 @@
+% 沿坡向上的 $\dot s$ 与斜面向右的 $\dot x$ 夹角为 $\alpha$，因此速度平方产生正的余弦交叉项。
+\begin{tikzpicture}
+\draw[thick](-.5,-.2)--(5,-.2);
+\draw[fill=soft,thick](0,0)--(4,0)--(4,2.5)--cycle;
+\node at(3,1){$M$};
+\begin{scope}[rotate=32.005383]
+\draw[fill=white](1.4,0)rectangle(2.2,.55);\node at(1.8,.275){$m$};
+\draw[spring](2.2,.275)--(4.45,.275);
+\draw[thick](4.45,0)--(4.45,.6);
+\draw[force](1.2,.95)--(2.7,.95)node[above]{$s$};
+\end{scope}
+\draw(.7,0)arc(0:32.005383:.7);\node at(1,.27){$\alpha$};
+\draw[force](1,-.7)--(3,-.7)node[right]{$x$};
+\end{tikzpicture}

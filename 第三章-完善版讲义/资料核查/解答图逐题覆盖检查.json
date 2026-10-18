@@ -1,0 +1,779 @@
+{
+  "status": "passed",
+  "questions": 96,
+  "standalone_question_diagrams": 96,
+  "solution_stage_diagrams": 96,
+  "explicit_figure_references": 96,
+  "all_diagrams_editable_tikz": true,
+  "integration": "after modelling step and before subsequent calculation",
+  "rows": [
+    {
+      "key": "ex01",
+      "feature": "中心 $C$ 的圆周轨迹与固定的 $\\overrightarrow{CP}$",
+      "caption": "例1的计算示意",
+      "note": "以图~\\ref{fig:solution-ex01}~中中心 $C$ 的圆周轨迹与固定的 $\\overrightarrow{CP}$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect r_P=\\vect r_C+\\vect\\rho_P",
+      "second_relation": "\\dot{\\vect\\rho}_P=0\\ \\Rightarrow\\ \\vect v_P=\\vect v_C"
+    },
+    {
+      "key": "ex02",
+      "feature": "三角形 $OCA$ 的有向位置分解",
+      "caption": "例2的计算示意",
+      "note": "以图~\\ref{fig:solution-ex02}~中三角形 $OCA$ 的有向位置分解为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect r_{OA}=\\vect r_{OC}+\\vect r_{CA}",
+      "second_relation": "\\vect v_A-\\vect v_C=\\vect\\omega\\times\\vect r_{CA}"
+    },
+    {
+      "key": "ex03",
+      "feature": "从固定点 $O$ 指向 $A$ 的位置矢量",
+      "caption": "例3的计算示意",
+      "note": "以图~\\ref{fig:solution-ex03}~中从固定点 $O$ 指向 $A$ 的位置矢量为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect v_A=\\vect\\omega\\times\\vect r_{OA}",
+      "second_relation": "\\vect v_A=(1,-7,-5)\\ \\mathrm{m/s}"
+    },
+    {
+      "key": "ex04",
+      "feature": "竖直 $\\vect k$ 轴与水平 $\\vect e_r$ 轴",
+      "caption": "例4的计算示意",
+      "note": "以图~\\ref{fig:solution-ex04}~中竖直 $\\vect k$ 轴与水平 $\\vect e_r$ 轴为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect\\omega=\\Omega\\vect k+\\omega\\vect e_r",
+      "second_relation": "\\vect\\alpha=\\Omega\\omega\\vect e_\\varphi"
+    },
+    {
+      "key": "ex05",
+      "feature": "本体轴 $\\vect n$ 在竖直与径向的投影",
+      "caption": "例5的计算示意",
+      "note": "以图~\\ref{fig:solution-ex05}~中本体轴 $\\vect n$ 在竖直与径向的投影为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect n=\\sin\\theta\\vect e_r+\\cos\\theta\\vect k",
+      "second_relation": "\\omega_3=\\omega+\\Omega\\cos\\theta"
+    },
+    {
+      "key": "ex06",
+      "feature": "两种盘面法线对应的不同转轴",
+      "caption": "例6的计算示意",
+      "note": "以图~\\ref{fig:solution-ex06}~中两种盘面法线对应的不同转轴为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect\\omega_1=\\Omega\\vect k+\\omega\\vect n",
+      "second_relation": "\\vect\\omega_2=(\\Omega+\\omega)\\vect k"
+    },
+    {
+      "key": "ex07",
+      "feature": "圆心 $A$ 及材料点 $B,C$ 的有向半径",
+      "caption": "例7的计算示意",
+      "note": "以图~\\ref{fig:solution-ex07}~中圆心 $A$ 及材料点 $B,C$ 的有向半径为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect\\omega=\\omega_1\\vect e_3+\\omega_2\\vect e_1",
+      "second_relation": "\\vect v_P=\\vect v_A+\\vect\\omega\\times\\vect r_{AP}"
+    },
+    {
+      "key": "ex08",
+      "feature": "节点轴和本体 $z$ 轴的投影关系",
+      "caption": "例8的计算示意",
+      "note": "以图~\\ref{fig:solution-ex08}~中节点轴和本体 $z$ 轴的投影关系为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\omega_z=\\Omega\\cos\\theta_0+\\omega",
+      "second_relation": "\\dot\\psi=\\omega\\ne\\omega_z"
+    },
+    {
+      "key": "ex09",
+      "feature": "固定轴倾角 $\\varepsilon$ 与地球本体轴 $z$",
+      "caption": "例9的计算示意",
+      "note": "以图~\\ref{fig:solution-ex09}~中固定轴倾角 $\\varepsilon$ 与地球本体轴 $z$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\dot\\theta=\\dot\\varphi=0",
+      "second_relation": "\\vect\\omega=\\dot\\psi\\vect e_z"
+    },
+    {
+      "key": "ex10",
+      "feature": "由卫星指向 $O$ 的标记方向",
+      "caption": "例10的计算示意",
+      "note": "以图~\\ref{fig:solution-ex10}~中由卫星指向 $O$ 的标记方向为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\mathsf R=R_z(\\pi+\\Omega t)",
+      "second_relation": "\\vect\\omega=\\Omega\\vect k"
+    },
+    {
+      "key": "ex11",
+      "feature": "接触母线 $\\vect u$ 与最高圆周位置 $A$",
+      "caption": "例11的计算示意",
+      "note": "以图~\\ref{fig:solution-ex11}~中接触母线 $\\vect u$ 与最高圆周位置 $A$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect\\omega=\\omega\\cos\\alpha\\vect u",
+      "second_relation": "|\\vect v_A|=h|\\omega|\\sin2\\alpha"
+    },
+    {
+      "key": "ex12",
+      "feature": "连杆 $BA$ 向水平轴的投影",
+      "caption": "例12的计算示意",
+      "note": "以图~\\ref{fig:solution-ex12}~中连杆 $BA$ 向水平轴的投影为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "L\\sin\\psi=a\\sin q",
+      "second_relation": "L\\cos\\psi\\dot\\psi=a\\Omega\\cos q"
+    },
+    {
+      "key": "ex13",
+      "feature": "倾角 $\\theta$ 与节点方向的矩阵投影",
+      "caption": "例13的计算示意",
+      "note": "以图~\\ref{fig:solution-ex13}~中倾角 $\\theta$ 与节点方向的矩阵投影为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "R_{33}=\\cos\\theta",
+      "second_relation": "(R_{13},-R_{23})=\\sin\\theta(\\sin\\varphi,\\cos\\varphi)"
+    },
+    {
+      "key": "ex14",
+      "feature": "同一初始标记方向在两种转序下的像",
+      "caption": "例14的计算示意",
+      "note": "以图~\\ref{fig:solution-ex14}~中同一初始标记方向在两种转序下的像为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "R_xR_y\\vect e_z=\\vect e_x",
+      "second_relation": "R_yR_x\\vect e_z=-\\vect e_y"
+    },
+    {
+      "key": "ex15",
+      "feature": "两条平行作用线的横向坐标 $x_1,x_2$",
+      "caption": "例15的计算示意",
+      "note": "以图~\\ref{fig:solution-ex15}~中两条平行作用线的横向坐标 $x_1,x_2$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "F=F_1+F_2",
+      "second_relation": "x_RF=x_1F_1+x_2F_2"
+    },
+    {
+      "key": "ex16",
+      "feature": "两条反向力的作用线间垂距 $d$",
+      "caption": "例16的计算示意",
+      "note": "以图~\\ref{fig:solution-ex16}~中两条反向力的作用线间垂距 $d$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect F_{\\rm main}=0",
+      "second_relation": "\\vect M_A=\\vect M_O=Fd\\vect k"
+    },
+    {
+      "key": "ex17",
+      "feature": "同轴的主矢 $F\\vect k$ 和主矩 $C\\vect k$",
+      "caption": "例17的计算示意",
+      "note": "以图~\\ref{fig:solution-ex17}~中同轴的主矢 $F\\vect k$ 和主矩 $C\\vect k$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect F\\cdot\\vect M_O=FC\\ne0",
+      "second_relation": "\\vect F\\cdot(\\vect r\\times\\vect F)=0"
+    },
+    {
+      "key": "ex18",
+      "feature": "杆上接触点 $B$ 的法线和 $A$ 处的摩擦分解",
+      "caption": "例18的计算示意",
+      "note": "以图~\\ref{fig:solution-ex18}~中杆上接触点 $B$ 的法线和 $A$ 处的摩擦分解为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "N_1\\,AB=Pl\\cos\\varphi",
+      "second_relation": "f=N_1\\sin\\varphi,\\quad N_2=P-N_1\\cos\\varphi"
+    },
+    {
+      "key": "ex19",
+      "feature": "两杆中点重力的水平力臂",
+      "caption": "例19的计算示意",
+      "note": "以图~\\ref{fig:solution-ex19}~中两杆中点重力的水平力臂为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "m_1x_1+m_2x_2=0",
+      "second_relation": "\\tan\\theta=b^2/(a^2+2ab)"
+    },
+    {
+      "key": "ex20",
+      "feature": "墙面水平法线和棱边处的杆法线",
+      "caption": "例20的计算示意",
+      "note": "以图~\\ref{fig:solution-ex20}~中墙面水平法线和棱边处的杆法线为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "OB=d/\\cos\\theta",
+      "second_relation": "N_B\\,OB=Pl\\cos\\theta"
+    },
+    {
+      "key": "ex21",
+      "feature": "碗心 $O$、碗内端 $B$ 和碗缘 $C$ 的弦关系",
+      "caption": "例21的计算示意",
+      "note": "以图~\\ref{fig:solution-ex21}~中碗心 $O$、碗内端 $B$ 和碗缘 $C$ 的弦关系为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "BC=c=2r\\cos\\theta",
+      "second_relation": "l=4c-8r^2/c"
+    },
+    {
+      "key": "ex22",
+      "feature": "相邻圆柱的法向接触与底层侧推位置",
+      "caption": "例22的计算示意",
+      "note": "以图~\\ref{fig:solution-ex22}~中相邻圆柱的法向接触与底层侧推位置为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect f_{ij}=N_{ij}\\vect n_{ij}+\\tau_{ij}\\vect t_{ij}",
+      "second_relation": "\\sum\\vect F_i=0,\\quad\\sum\\vect M_i=0"
+    },
+    {
+      "key": "ex23",
+      "feature": "两个部件中心到横向轴的距离 $a$",
+      "caption": "例23的计算示意",
+      "note": "以图~\\ref{fig:solution-ex23}~中两个部件中心到横向轴的距离 $a$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\Delta\\mathsf I=ma^2\\operatorname{diag}(0,1,1)",
+      "second_relation": "\\mathsf I_C=2\\mathsf I_0+2\\Delta\\mathsf I"
+    },
+    {
+      "key": "ex24",
+      "feature": "固定端 $O$、杆中点 $C$ 与全长 $L$",
+      "caption": "例24的计算示意",
+      "note": "以图~\\ref{fig:solution-ex24}~中固定端 $O$、杆中点 $C$ 与全长 $L$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "v_C=|\\omega|L/2",
+      "second_relation": "T=mv_C^2/2+I_C\\omega^2/2"
+    },
+    {
+      "key": "ex25",
+      "feature": "矩形全边长与椭圆半轴的区别",
+      "caption": "例25的计算示意",
+      "note": "以图~\\ref{fig:solution-ex25}~中矩形全边长与椭圆半轴的区别为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_z=I_x+I_y",
+      "second_relation": "I_x^{\\rm rect}=mb^2/12,\\quad I_x^{\\rm ell}=mb^2/4"
+    },
+    {
+      "key": "ex26",
+      "feature": "圆柱中心轴 $z$ 与横向距离",
+      "caption": "例26的计算示意",
+      "note": "以图~\\ref{fig:solution-ex26}~中圆柱中心轴 $z$ 与横向距离为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_z=ma^2/2",
+      "second_relation": "I_x=I_y=m(3a^2+L^2)/12"
+    },
+    {
+      "key": "ex27",
+      "feature": "过球心的任意轴与半径 $a$",
+      "caption": "例27的计算示意",
+      "note": "以图~\\ref{fig:solution-ex27}~中过球心的任意轴与半径 $a$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_x=I_y=I_z",
+      "second_relation": "I=2ma^2/5"
+    },
+    {
+      "key": "ex28",
+      "feature": "椭球的三条几何半轴",
+      "caption": "例28的计算示意",
+      "note": "以图~\\ref{fig:solution-ex28}~中椭球的三条几何半轴为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "x=au,\\ y=bv,\\ z=cw",
+      "second_relation": "I_x=m(b^2+c^2)/5"
+    },
+    {
+      "key": "ex29",
+      "feature": "球心 $O$ 到质心 $C$ 的轴向位移",
+      "caption": "例29的计算示意",
+      "note": "以图~\\ref{fig:solution-ex29}~中球心 $O$ 到质心 $C$ 的轴向位移为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "OC=3a/8",
+      "second_relation": "I_{Cx}=I_{Ox}-m(3a/8)^2"
+    },
+    {
+      "key": "ex30",
+      "feature": "正方体顶点 $O$ 与质心 $C$",
+      "caption": "例30的计算示意",
+      "note": "以图~\\ref{fig:solution-ex30}~中正方体顶点 $O$ 与质心 $C$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect d=\\overrightarrow{OC}=a(1,1,1)/2",
+      "second_relation": "\\mathsf I_O=\\mathsf I_C+m(d^2\\mathsf1-\\vect d\\vect d^{\\mathsf T})"
+    },
+    {
+      "key": "ex31",
+      "feature": "从顶点指向对顶点的体对角线",
+      "caption": "例31的计算示意",
+      "note": "以图~\\ref{fig:solution-ex31}~中从顶点指向对顶点的体对角线为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect n_1=(1,1,1)/\\sqrt3",
+      "second_relation": "I_1=ma^2/6,\\quad I_2=I_3=11ma^2/12"
+    },
+    {
+      "key": "ex32",
+      "feature": "顶点三条棱与质心位置",
+      "caption": "例32的计算示意",
+      "note": "以图~\\ref{fig:solution-ex32}~中顶点三条棱与质心位置为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\mathsf I_O\\vect n=\\lambda\\vect n",
+      "second_relation": "\\det(\\mathsf I_O-\\lambda\\mathsf1)=0"
+    },
+    {
+      "key": "ex33",
+      "feature": "通过顶点和质心的同一体对角线",
+      "caption": "例33的计算示意",
+      "note": "以图~\\ref{fig:solution-ex33}~中通过顶点和质心的同一体对角线为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect n=(a,b,c)/\\sqrt{a^2+b^2+c^2}",
+      "second_relation": "I_{\\vect n}=\\vect n^{\\mathsf T}\\mathsf I_C\\vect n"
+    },
+    {
+      "key": "ex34",
+      "feature": "三个离散质量到各坐标轴的距离",
+      "caption": "例34的计算示意",
+      "note": "以图~\\ref{fig:solution-ex34}~中三个离散质量到各坐标轴的距离为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_{ij}=\\sum m(r^2\\delta_{ij}-x_ix_j)",
+      "second_relation": "\\mathsf I\\vect n=\\lambda\\vect n"
+    },
+    {
+      "key": "ex35",
+      "feature": "第一卦限球体的三个坐标边界",
+      "caption": "例35的计算示意",
+      "note": "以图~\\ref{fig:solution-ex35}~中第一卦限球体的三个坐标边界为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "x,y,z\\ge0,\\quad x^2+y^2+z^2\\le a^2",
+      "second_relation": "\\vect L=\\mathsf I\\vect\\omega,\\quad T=\\vect\\omega^{\\mathsf T}\\mathsf I\\vect\\omega/2"
+    },
+    {
+      "key": "ex36",
+      "feature": "顶点固定时的质心位置矢量",
+      "caption": "例36的计算示意",
+      "note": "以图~\\ref{fig:solution-ex36}~中顶点固定时的质心位置矢量为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect v_C=\\vect\\omega\\times\\vect r_{OC}",
+      "second_relation": "T=mv_C^2/2+\\vect\\omega^{\\mathsf T}\\mathsf I_C\\vect\\omega/2"
+    },
+    {
+      "key": "ex37",
+      "feature": "固定支点 $O$ 至盘心的距离 $h$",
+      "caption": "例37的计算示意",
+      "note": "以图~\\ref{fig:solution-ex37}~中固定支点 $O$ 至盘心的距离 $h$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "A=m(a^2/4+h^2),\\quad C=ma^2/2",
+      "second_relation": "T=A(\\dot\\theta^2+\\dot\\varphi^2\\sin^2\\theta)/2+C\\omega_3^2/2"
+    },
+    {
+      "key": "ex38",
+      "feature": "两个相反方向的力矩",
+      "caption": "例38的计算示意",
+      "note": "以图~\\ref{fig:solution-ex38}~中两个相反方向的力矩为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_z\\alpha=M-M_f",
+      "second_relation": "\\omega=\\alpha t,\\quad q-q_0=\\alpha t^2/2"
+    },
+    {
+      "key": "ex39",
+      "feature": "杆中点重力与铰轴 $O$ 的力臂",
+      "caption": "例39的计算示意",
+      "note": "以图~\\ref{fig:solution-ex39}~中杆中点重力与铰轴 $O$ 的力臂为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "M_O=-mg(L/2)\\sin q",
+      "second_relation": "I_O\\ddot q=M_O"
+    },
+    {
+      "key": "ex40",
+      "feature": "悬轴 $O$ 与质心 $C$ 的距离 $h$",
+      "caption": "例40的计算示意",
+      "note": "以图~\\ref{fig:solution-ex40}~中悬轴 $O$ 与质心 $C$ 的距离 $h$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\ell_{\\rm eq}=h+k^2/h",
+      "second_relation": "\\partial\\ell_{\\rm eq}/\\partial h=0\\ \\Rightarrow\\ h=k"
+    },
+    {
+      "key": "ex41",
+      "feature": "杆倾角 $\\beta$ 与沿轴分开的两个轴承",
+      "caption": "例41的计算示意",
+      "note": "以图~\\ref{fig:solution-ex41}~中杆倾角 $\\beta$ 与沿轴分开的两个轴承为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_{xz}=-ml^2\\sin\\beta\\cos\\beta/12",
+      "second_relation": "L\\Delta R_{Bx}=I_{xz}\\omega^2"
+    },
+    {
+      "key": "ex42",
+      "feature": "不同轴向坐标的两个校正平面",
+      "caption": "例42的计算示意",
+      "note": "以图~\\ref{fig:solution-ex42}~中不同轴向坐标的两个校正平面为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect U_a+\\vect U_b=-\\vect U",
+      "second_relation": "z_a\\vect U_a+z_b\\vect U_b=-\\vect V"
+    },
+    {
+      "key": "ex43",
+      "feature": "抬起底面后质心 $C$ 的高度",
+      "caption": "例43的计算示意",
+      "note": "以图~\\ref{fig:solution-ex43}~中抬起底面后质心 $C$ 的高度为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "y_C=a(\\sin\\theta+\\cos\\theta)/2",
+      "second_relation": "I_O\\dot\\theta^2/2+mg y_C=mg y_C(\\theta_0)"
+    },
+    {
+      "key": "ex44",
+      "feature": "左右两段绳上的不同张力",
+      "caption": "例44的计算示意",
+      "note": "以图~\\ref{fig:solution-ex44}~中左右两段绳上的不同张力为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "T_1-mg=ma,\\quad2mg-T_2=2ma",
+      "second_relation": "(T_2-T_1)r=I\\alpha,\\quad a=r\\alpha"
+    },
+    {
+      "key": "ex45",
+      "feature": "盘法线与实际转轴的夹角 $\\beta$",
+      "caption": "例45的计算示意",
+      "note": "以图~\\ref{fig:solution-ex45}~中盘法线与实际转轴的夹角 $\\beta$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_{xz}=mr^2\\sin2\\beta/8",
+      "second_relation": "(a+b)D=I_{xz}\\omega^2"
+    },
+    {
+      "key": "ex46",
+      "feature": "两个杆中点的重力作用位置",
+      "caption": "例46的计算示意",
+      "note": "以图~\\ref{fig:solution-ex46}~中两个杆中点的重力作用位置为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_O=17mL^2/12,\\quad x_C=3L/4",
+      "second_relation": "\\vect R_O-2mg\\vect j=2m\\vect a_C"
+    },
+    {
+      "key": "ex47",
+      "feature": "两端速度法线交点 $P$",
+      "caption": "例47的计算示意",
+      "note": "以图~\\ref{fig:solution-ex47}~中两端速度法线交点 $P$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "P=(x,y),\\quad x^2+y^2=l^2",
+      "second_relation": "q_1=y^2/l,\\quad q_2=-xy/l"
+    },
+    {
+      "key": "ex48",
+      "feature": "同一个接触点出发的法向与切向反力",
+      "caption": "例48的计算示意",
+      "note": "以图~\\ref{fig:solution-ex48}~中同一个接触点出发的法向与切向反力为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "m\\ddot x=mg\\sin\\beta-f",
+      "second_relation": "I_C|\\alpha|=fa,\\quad\\ddot x=a|\\alpha|"
+    },
+    {
+      "key": "ex49",
+      "feature": "圆盘左侧切点处的向上张力",
+      "caption": "例49的计算示意",
+      "note": "以图~\\ref{fig:solution-ex49}~中圆盘左侧切点处的向上张力为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "ma=mg-T,\\quad I_C\\alpha=-Tr",
+      "second_relation": "a=-r\\alpha\\ \\Rightarrow\\ a=2g/3"
+    },
+    {
+      "key": "ex50",
+      "feature": "当前处于四个方位的材料点",
+      "caption": "例50的计算示意",
+      "note": "以图~\\ref{fig:solution-ex50}~中当前处于四个方位的材料点为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\omega=-v/R,\\quad\\alpha=-a/R",
+      "second_relation": "\\vect a_P=\\vect a_O+\\vect\\alpha\\times\\vect r_{OP}-\\omega^2\\vect r_{OP}"
+    },
+    {
+      "key": "ex51",
+      "feature": "两轮接触点与垂直于 $OA$ 的半径 $AM$",
+      "caption": "例51的计算示意",
+      "note": "以图~\\ref{fig:solution-ex51}~中两轮接触点与垂直于 $OA$ 的半径 $AM$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "0=(R+r)\\Omega-r\\omega",
+      "second_relation": "\\omega=(1+R/r)\\Omega"
+    },
+    {
+      "key": "ex52",
+      "feature": "圆槽心 $O$ 至圆柱心 $C$ 的距离 $q$",
+      "caption": "例52的计算示意",
+      "note": "以图~\\ref{fig:solution-ex52}~中圆槽心 $O$ 至圆柱心 $C$ 的距离 $q$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "q=R-r,\\quad r\\dot\\theta=-q\\dot\\varphi",
+      "second_relation": "3q\\ddot\\varphi/2+g\\sin\\varphi=0"
+    },
+    {
+      "key": "ex53",
+      "feature": "两轮之间和悬挂段的两种张力",
+      "caption": "例53的计算示意",
+      "note": "以图~\\ref{fig:solution-ex53}~中两轮之间和悬挂段的两种张力为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "M_1/r_1-P_3=(P_3/g+I_A/r_1^2+I_B/r_2^2)a",
+      "second_relation": "T-S=I_Ba/r_2^2"
+    },
+    {
+      "key": "ex54",
+      "feature": "墙面和地面的四个接触力",
+      "caption": "例54的计算示意",
+      "note": "以图~\\ref{fig:solution-ex54}~中墙面和地面的四个接触力为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "N_A=f_B,\\quad N_B+f_A=Q",
+      "second_relation": "I_C\\dot\\omega=-r(f_A+f_B)"
+    },
+    {
+      "key": "ex55",
+      "feature": "曲柄端 $A$ 与滑块 $B$ 的同杆约束",
+      "caption": "例55的计算示意",
+      "note": "以图~\\ref{fig:solution-ex55}~中曲柄端 $A$ 与滑块 $B$ 的同杆约束为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "v_{By}=0\\ \\Rightarrow\\ \\omega_{AB}=-\\Omega",
+      "second_relation": "v_{Bx}=-2l\\Omega\\sin\\varphi"
+    },
+    {
+      "key": "ex56",
+      "feature": "曲柄的 $45^\\circ$ 位置和连杆的 $30^\\circ$ 位置",
+      "caption": "例56的计算示意",
+      "note": "以图~\\ref{fig:solution-ex56}~中曲柄的 $45^\\circ$ 位置和连杆的 $30^\\circ$ 位置为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "L\\sin30^\\circ=R\\sin45^\\circ",
+      "second_relation": "a_{By}=0\\ \\Rightarrow\\ \\alpha_{AB}=2\\Omega^2/(3\\sqrt3)"
+    },
+    {
+      "key": "ex57",
+      "feature": "球底部接触点与活动板的相对滑动",
+      "caption": "例57的计算示意",
+      "note": "以图~\\ref{fig:solution-ex57}~中球底部接触点与活动板的相对滑动为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "u=v_C+r\\omega-v_{\\rm board}",
+      "second_relation": "u(t_*)=0,\\quad t_* =2Mv/[(7M+2m)\\mu g]"
+    },
+    {
+      "key": "ex58",
+      "feature": "桨点 $B$ 在 $\\vect i,\\vect k$ 平面内的半径",
+      "caption": "例58的计算示意",
+      "note": "以图~\\ref{fig:solution-ex58}~中桨点 $B$ 在 $\\vect i,\\vect k$ 平面内的半径为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect r_{AB}=l(\\sin\\vartheta\\vect i+\\cos\\vartheta\\vect k)",
+      "second_relation": "\\dot{\\vect i}=\\Omega\\vect j,\\quad\\dot{\\vect j}=-\\Omega\\vect i"
+    },
+    {
+      "key": "ex59",
+      "feature": "三根不同主惯量轴及横向扰动",
+      "caption": "例59的计算示意",
+      "note": "以图~\\ref{fig:solution-ex59}~中三根不同主惯量轴及横向扰动为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_i\\dot\\omega_i=(I_j-I_k)\\omega_j\\omega_k",
+      "second_relation": "\\ddot u+\\nu^2u=0\\quad\\hbox{or}\\quad\\ddot u-\\lambda^2u=0"
+    },
+    {
+      "key": "ex60",
+      "feature": "位于同一子午面内的 $\\vect\\omega,\\vect L,\\vect e_3$",
+      "caption": "例60的计算示意",
+      "note": "以图~\\ref{fig:solution-ex60}~中位于同一子午面内的 $\\vect\\omega,\\vect L,\\vect e_3$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\tan\\alpha=w/s,\\quad\\tan\\theta=Aw/(Cs)",
+      "second_relation": "\\dot\\varphi=L/A,\\quad\\dot\\psi=-(C-A)s/A"
+    },
+    {
+      "key": "ex61",
+      "feature": "重力矩与固定倾角 $\\theta_0$",
+      "caption": "例61的计算示意",
+      "note": "以图~\\ref{fig:solution-ex61}~中重力矩与固定倾角 $\\theta_0$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "A\\Omega^2\\cos\\theta_0-Cs\\Omega+mgl=0",
+      "second_relation": "\\Omega_\\pm=4\\pm\\sqrt{14}\\ \\mathrm{s^{-1}}"
+    },
+    {
+      "key": "ex62",
+      "feature": "倾斜释放时的轴线与重力方向",
+      "caption": "例62的计算示意",
+      "note": "以图~\\ref{fig:solution-ex62}~中倾斜释放时的轴线与重力方向为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\dot\\theta(0)=\\dot\\varphi(0)=0",
+      "second_relation": "\\ddot\\theta(0)=mgl\\sin\\theta_0/A"
+    },
+    {
+      "key": "ex63",
+      "feature": "圆周的有向切线 $\\dd\\vect s$ 与径矢 $\\vect r$",
+      "caption": "例63的计算示意",
+      "note": "以图~\\ref{fig:solution-ex63}~中圆周的有向切线 $\\dd\\vect s$ 与径矢 $\\vect r$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect B\\cdot\\dd\\vect s=-Br\\sin\\chi\\dd\\chi",
+      "second_relation": "B\\oint y\\dd x=-\\pi Br^2"
+    },
+    {
+      "key": "ex64",
+      "feature": "中心力轨道与磁场方向",
+      "caption": "例64的计算示意",
+      "note": "以图~\\ref{fig:solution-ex64}~中中心力轨道与磁场方向为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect\\Omega=-q\\vect B/(2m)",
+      "second_relation": "m\\vect a'= -\\nabla U+m\\vect\\Omega\\times(\\vect\\Omega\\times\\vect r)"
+    },
+    {
+      "key": "ex65",
+      "feature": "谐振子横向圆偏振与磁场方向",
+      "caption": "例65的计算示意",
+      "note": "以图~\\ref{fig:solution-ex65}~中谐振子横向圆偏振与磁场方向为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\ddot w'+(\\omega_c^2+\\Omega^2)w'=0",
+      "second_relation": "\\sigma_\\pm=\\Omega\\pm\\sqrt{\\omega_c^2+\\Omega^2}"
+    },
+    {
+      "key": "ex66",
+      "feature": "纵向静场与横向共振旋转场",
+      "caption": "例66的计算示意",
+      "note": "以图~\\ref{fig:solution-ex66}~中纵向静场与横向共振旋转场为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\omega_0=|\\gamma|B_0,\\quad\\omega_1=|\\gamma|B_1",
+      "second_relation": "\\beta=\\omega_1\\tau\\ \\Rightarrow\\ \\tau_{90}=\\pi/(2\\omega_1)"
+    },
+    {
+      "key": "tr01",
+      "feature": "连线 $AB$ 与垂直于它的相对速度",
+      "caption": "训练题1的计算示意",
+      "note": "以图~\\ref{fig:solution-tr01}~中连线 $AB$ 与垂直于它的相对速度为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect r\\cdot\\vect r=l^2",
+      "second_relation": "\\vect r\\cdot(\\vect v_B-\\vect v_A)=0"
+    },
+    {
+      "key": "tr02",
+      "feature": "相同圆周轨迹下的固定姿态座舱",
+      "caption": "训练题2的计算示意",
+      "note": "以图~\\ref{fig:solution-tr02}~中相同圆周轨迹下的固定姿态座舱为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\dot{\\vect b}_P=0\\ \\Rightarrow\\ \\vect v_P=\\vect v_A",
+      "second_relation": "\\hbox{轮辐:}\\quad\\vect v_P=\\Omega\\vect k\\times\\vect r_{OP}"
+    },
+    {
+      "key": "tr03",
+      "feature": "标记 $\\vect e_z$ 经两种转动顺序的结果",
+      "caption": "训练题3的计算示意",
+      "note": "以图~\\ref{fig:solution-tr03}~中标记 $\\vect e_z$ 经两种转动顺序的结果为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "R_yR_x\\vect e_z=-\\vect e_y",
+      "second_relation": "R_xR_y\\vect e_z=\\vect e_x"
+    },
+    {
+      "key": "tr04",
+      "feature": "$A,B$ 两点沿 $y$ 的速度差",
+      "caption": "训练题4的计算示意",
+      "note": "以图~\\ref{fig:solution-tr04}~中$A,B$ 两点沿 $y$ 的速度差为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\omega=(w-u)/d",
+      "second_relation": "x_P=-ud/(w-u),\\quad y_P=0"
+    },
+    {
+      "key": "tr05",
+      "feature": "重合的 $z,\\zeta$ 轴和水平面内的合角",
+      "caption": "训练题5的计算示意",
+      "note": "以图~\\ref{fig:solution-tr05}~中重合的 $z,\\zeta$ 轴和水平面内的合角为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\theta=0\\ \\Rightarrow\\ R=R_z(\\varphi+\\psi)",
+      "second_relation": "\\chi=\\varphi+\\psi\\quad\\hbox{唯一确定}"
+    },
+    {
+      "key": "tr06",
+      "feature": "进动方向在本体轴 $\\vect n$ 上的投影",
+      "caption": "训练题6的计算示意",
+      "note": "以图~\\ref{fig:solution-tr06}~中进动方向在本体轴 $\\vect n$ 上的投影为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect e_\\zeta\\cdot\\vect n=\\cos\\theta",
+      "second_relation": "\\omega_3=\\dot\\psi+\\dot\\varphi\\cos\\theta"
+    },
+    {
+      "key": "tr07",
+      "feature": "由不共线三点形成的有向面积",
+      "caption": "训练题7的计算示意",
+      "note": "以图~\\ref{fig:solution-tr07}~中由不共线三点形成的有向面积为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\Delta=x_{AB}y_{AD}-y_{AB}x_{AD}\\ne0",
+      "second_relation": "F_x=F_y=M_A=0"
+    },
+    {
+      "key": "tr08",
+      "feature": "接触点的静摩擦和纯滚动约束",
+      "caption": "训练题8的计算示意",
+      "note": "以图~\\ref{fig:solution-tr08}~中接触点的静摩擦和纯滚动约束为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect v_P=\\vect v_C+\\vect\\omega\\times\\vect r_{CP}=0",
+      "second_relation": "\\mathcal P_f=-fv+fa|\\omega|=0"
+    },
+    {
+      "key": "tr09",
+      "feature": "从 $O,A$ 指向同一作用点 $P_i$ 的位置关系",
+      "caption": "训练题9的计算示意",
+      "note": "以图~\\ref{fig:solution-tr09}~中从 $O,A$ 指向同一作用点 $P_i$ 的位置关系为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect r_{AP_i}=\\vect r_{OP_i}-\\vect r_{OA}",
+      "second_relation": "\\vect M_A=\\vect M_O-\\vect r_{OA}\\times\\vect F"
+    },
+    {
+      "key": "tr10",
+      "feature": "不共点的三个力及抵消其合矩的独立力偶",
+      "caption": "训练题10的计算示意",
+      "note": "以图~\\ref{fig:solution-tr10}~中不共点的三个力及抵消其合矩的独立力偶为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\sum\\vect F_i=0,\\quad\\sum M_i=-aF",
+      "second_relation": "M_c=+aF\\ \\Rightarrow\\ \\sum M=0"
+    },
+    {
+      "key": "tr11",
+      "feature": "过质心的转轴与杆的夹角 $\\beta$",
+      "caption": "训练题11的计算示意",
+      "note": "以图~\\ref{fig:solution-tr11}~中过质心的转轴与杆的夹角 $\\beta$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "d_\\perp=|s\\sin\\beta|",
+      "second_relation": "I_\\beta=\\int d_\\perp^2\\dd m=mL^2\\sin^2\\beta/12"
+    },
+    {
+      "key": "tr12",
+      "feature": "平行球心轴和偏置轴之间的垂距 $d$",
+      "caption": "训练题12的计算示意",
+      "note": "以图~\\ref{fig:solution-tr12}~中平行球心轴和偏置轴之间的垂距 $d$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "d_\\perp^2=(x-d)^2+y^2",
+      "second_relation": "I=I_C+md^2"
+    },
+    {
+      "key": "tr13",
+      "feature": "半球质心沿对称轴的移动",
+      "caption": "训练题13的计算示意",
+      "note": "以图~\\ref{fig:solution-tr13}~中半球质心沿对称轴的移动为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "z_C=3a/8",
+      "second_relation": "I_{Cx}=I_{Ox}-mz_C^2,\\quad I_{Cz}=I_{Oz}"
+    },
+    {
+      "key": "tr14",
+      "feature": "重根平面内可以旋转的正交方向",
+      "caption": "训练题14的计算示意",
+      "note": "以图~\\ref{fig:solution-tr14}~中重根平面内可以旋转的正交方向为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\mathsf I\\vect u=A\\vect u,\\quad u_z=0",
+      "second_relation": "\\vect e_1'\\cdot\\vect e_2'=0"
+    },
+    {
+      "key": "tr15",
+      "feature": "两个圆轮与同一斜面的接触",
+      "caption": "训练题15的计算示意",
+      "note": "以图~\\ref{fig:solution-tr15}~中两个圆轮与同一斜面的接触为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\ddot x=g\\sin\\beta/(1+k)",
+      "second_relation": "k_{\\rm ring}=1,\\quad k_{\\rm disk}=1/2"
+    },
+    {
+      "key": "tr16",
+      "feature": "悬点至质心的距离 $h$",
+      "caption": "训练题16的计算示意",
+      "note": "以图~\\ref{fig:solution-tr16}~中悬点至质心的距离 $h$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "I_O=I_C+mh^2",
+      "second_relation": "I_O\\ddot\\theta+mgh\\sin\\theta=0"
+    },
+    {
+      "key": "tr17",
+      "feature": "轴上质心与倾斜杆造成的轴承力偶",
+      "caption": "训练题17的计算示意",
+      "note": "以图~\\ref{fig:solution-tr17}~中轴上质心与倾斜杆造成的轴承力偶为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect M_C=\\vect\\omega\\times\\vect L_C",
+      "second_relation": "d\\vect e_z\\times\\Delta\\vect R_B=\\vect M_C"
+    },
+    {
+      "key": "tr18",
+      "feature": "当前底部材料点 $P$ 与轮心 $C$",
+      "caption": "训练题18的计算示意",
+      "note": "以图~\\ref{fig:solution-tr18}~中当前底部材料点 $P$ 与轮心 $C$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect v_P=0",
+      "second_relation": "\\vect a_P=-\\omega^2\\vect r_{CP}=(v^2/R)\\vect j"
+    },
+    {
+      "key": "tr19",
+      "feature": "外滚轮接触点相对轮心的向内半径",
+      "caption": "训练题19的计算示意",
+      "note": "以图~\\ref{fig:solution-tr19}~中外滚轮接触点相对轮心的向内半径为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\omega_{\\rm abs}=(1+R/r)\\Omega",
+      "second_relation": "\\omega_{\\rm rel}=\\omega_{\\rm abs}-\\Omega"
+    },
+    {
+      "key": "tr20",
+      "feature": "球相对板的初始滑动与摩擦冲量",
+      "caption": "训练题20的计算示意",
+      "note": "以图~\\ref{fig:solution-tr20}~中球相对板的初始滑动与摩擦冲量为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "u=v_b-R\\omega-V",
+      "second_relation": "J_* =2mMv/(7M+2m)"
+    },
+    {
+      "key": "tr21",
+      "feature": "非主轴角速度与固定角动量的关系",
+      "caption": "训练题21的计算示意",
+      "note": "以图~\\ref{fig:solution-tr21}~中非主轴角速度与固定角动量的关系为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\vect L=A\\vect\\omega+(C-A)s\\vect e_3",
+      "second_relation": "\\dot{\\vect\\omega}=-(C-A)s\\dot{\\vect e}_3/A"
+    },
+    {
+      "key": "tr22",
+      "feature": "中间惯量轴上的主转动与横向扰动",
+      "caption": "训练题22的计算示意",
+      "note": "以图~\\ref{fig:solution-tr22}~中中间惯量轴上的主转动与横向扰动为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\dot x=-az,\\quad\\dot z=-bx",
+      "second_relation": "\\ddot x=abx,\\quad ab>0"
+    },
+    {
+      "key": "tr23",
+      "feature": "本体轴绕固定角动量的圆锥运动",
+      "caption": "训练题23的计算示意",
+      "note": "以图~\\ref{fig:solution-tr23}~中本体轴绕固定角动量的圆锥运动为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\dot{\\vect e}_3=(\\vect L/A)\\times\\vect e_3",
+      "second_relation": "\\dot\\varphi=L/A,\\quad\\dot\\psi=-(C-A)s/A"
+    },
+    {
+      "key": "tr24",
+      "feature": "竖直方向和本体对称轴上的两个角动量投影",
+      "caption": "训练题24的计算示意",
+      "note": "以图~\\ref{fig:solution-tr24}~中竖直方向和本体对称轴上的两个角动量投影为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "P=C\\omega_3,\\quad K=L_\\zeta",
+      "second_relation": "E=T+mgl\\cos\\theta"
+    },
+    {
+      "key": "tr25",
+      "feature": "重陀螺的倾角与进动方向",
+      "caption": "训练题25的计算示意",
+      "note": "以图~\\ref{fig:solution-tr25}~中重陀螺的倾角与进动方向为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "A\\Omega^2\\cos\\theta_0-P\\Omega+mgl=0",
+      "second_relation": "\\Omega_{\\rm slow}\\simeq mgl/P"
+    },
+    {
+      "key": "tr26",
+      "feature": "章动允许区间内的候选零进动位置 $K/P$",
+      "caption": "训练题26的计算示意",
+      "note": "以图~\\ref{fig:solution-tr26}~中章动允许区间内的候选零进动位置 $K/P$为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\operatorname{sgn}\\dot\\varphi=\\operatorname{sgn}(K-Pu)",
+      "second_relation": "u_* =K/P\\in(u_-,u_+)"
+    },
+    {
+      "key": "tr27",
+      "feature": "磁场方向及角动量的进动圆锥",
+      "caption": "训练题27的计算示意",
+      "note": "以图~\\ref{fig:solution-tr27}~中磁场方向及角动量的进动圆锥为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\dot{\\vect L}=\\gamma\\vect L\\times\\vect B",
+      "second_relation": "\\vect\\Omega_L=-\\gamma\\vect B"
+    },
+    {
+      "key": "tr28",
+      "feature": "一周相位 $2\\pi$ 与普通频率",
+      "caption": "训练题28的计算示意",
+      "note": "以图~\\ref{fig:solution-tr28}~中一周相位 $2\\pi$ 与普通频率为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "\\omega_0=|\\gamma|B",
+      "second_relation": "f_0=\\omega_0/(2\\pi)"
+    },
+    {
+      "key": "tr29",
+      "feature": "两能级的完整间距",
+      "caption": "训练题29的计算示意",
+      "note": "以图~\\ref{fig:solution-tr29}~中两能级的完整间距为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "E_\\pm=\\mp\\gamma\\hbar B/2",
+      "second_relation": "|\\Delta E|=\\hbar\\omega_0=|\\gamma|\\hbar B"
+    },
+    {
+      "key": "tr30",
+      "feature": "纵向载频与横向翻转场的独立作用",
+      "caption": "训练题30的计算示意",
+      "note": "以图~\\ref{fig:solution-tr30}~中纵向载频与横向翻转场的独立作用为依据，先写出图右侧第一行的几何或动力学关系，再代入其下方的计算式。",
+      "first_relation": "B_0\\mapsto2B_0\\ \\Rightarrow\\ \\omega_0\\mapsto2\\omega_0",
+      "second_relation": "B_1\\ \\hbox{固定}\\ \\Rightarrow\\ \\tau_{90},\\tau_{180}\\ \\hbox{不变}"
+    }
+  ]
+}

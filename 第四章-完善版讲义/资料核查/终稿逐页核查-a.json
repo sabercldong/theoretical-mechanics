@@ -1,0 +1,367 @@
+{
+  "status": "passed_with_minor_typographic_suggestion",
+  "fixed_pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/首段终校.pdf",
+  "fixed_pdf_sha256": "66a024295074bd72c32331d2c7755ec0769e9fc276f51bc381a31e6197797be0",
+  "total_pdf_pages": 81,
+  "inspected_physical_pages": [
+    1,
+    25
+  ],
+  "inspection_count": 25,
+  "figures_reviewed": "图4.1–4.25（全部实际逐页查看，含原图和模型）",
+  "digest_spec": {
+    "library": "PyMuPDF",
+    "matrix": [
+      0.8,
+      0.8
+    ],
+    "alpha": false,
+    "colorspace": "RGB default",
+    "annots": true,
+    "digest": "Pixmap.digest.hex()"
+  },
+  "blocking_issues": [],
+  "minor_findings": [
+    {
+      "id": "caption_single_character_tail",
+      "physical_page": 6,
+      "figure": "4.2",
+      "severity": "cosmetic",
+      "description": "图题第二行仅最后一个“记”，不影响信息但可缩短图题改善。",
+      "suggested_caption": "空间轴 $\\xi,\\eta,\\zeta$ 与本体轴 $x,y,z$；共同原点为两组三轴交点，体内 $O$ 仅为原图点标记",
+      "requires_content_change": false,
+      "resolution": "父代理已采用简洁图题写入最终编译override；此报告仍针对固定旧校样SHA，修订后该页由父代理复看。"
+    }
+  ],
+  "pages": [
+    {
+      "physical_page": 1,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "c88c154ea8692114b736979c294c5bc8",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "879b5122a07d425c8b68ad6218cf1e9b22d75fd4ef8469bf4fd80441323473df",
+      "notes": "封面标题层级、速度/加速度通式和中心旋转示意完整；有意留白，无碰撞。",
+      "issues": []
+    },
+    {
+      "physical_page": 2,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "02404f30501a2f3f1f3775b4f7714e94",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "7f9c57aa22d0b26ac57d8e03ba7812470d3365e5a3c1789e81c0095e4df2af0d",
+      "notes": "阅读说明、符号表及检查提示均完整；r与R及Omega的含义清楚；表格不溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 3,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "daadb8048255b30895dc9414ec3683e3",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "141fe6dc669a170448d1e034113affb39879b7b50c78c53dfdffe16f4f28fac4",
+      "notes": "目录4.1–4.4条目、引导点与页码清楚，无重叠。最终新图引发页码变化应由父代理复核。",
+      "issues": []
+    },
+    {
+      "physical_page": 4,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "37aeee4ff847906aa2da268dc4cb964a",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "010f34f4455dd3281f1a6a58e3250bd61c6573f95e3f77051bf01175f9480bb0",
+      "notes": "目录4.5–4.8无截断，长题目与页码保持间距。",
+      "issues": []
+    },
+    {
+      "physical_page": 5,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "2d5bfc13c42c180e836fc5b5b5ded4d9",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "ce7e1c014061cd718e866c999dc31a037ef5eaf4b24384237bf9764a4b80fd3e",
+      "notes": "目录4.9–4.12及附录条目均可读；页码可能随后半新图更新。",
+      "issues": []
+    },
+    {
+      "physical_page": 6,
+      "status": "passed_with_minor_note",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "b0e947c9381cf2d3ba2576459d195d45",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "8fd40a98554c99a5d08cd8649fc773598ce7795fe3bc28e658b39be4ba893408",
+      "notes": "图4.1固定/动轴分解、图4.2原课件空间/本体轴均完整。图题已澄清两个O标记；有一处单字尾行排版建议。",
+      "issues": [
+        "caption_single_character_tail"
+      ]
+    },
+    {
+      "physical_page": 7,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "923dc6dce27334d5fe065322d05794e7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "61b26a99eb67af6c3c003c97d2c711288332fcfae01b5bb26ecd4caff1631e8c",
+      "notes": "例1完整相邻；微小转动图4.3的端点差、垂轴投影和角速度标签可辨；4.1.3标题后保留完整推导开始。",
+      "issues": []
+    },
+    {
+      "physical_page": 8,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "2a85cadc382ae91c8d406f47413da743",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "3bef30effaca82f03659d60f5dcc03a67424b9492727fb60fa9dd3f7669a0e4d",
+      "notes": "运输公式收束与例2连贯；旋转矩阵与反对称矩阵完整，编号不碰正文。",
+      "issues": []
+    },
+    {
+      "physical_page": 9,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "d76148a5288baffbafc23483bd72edb9",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "5295bf9152ac4d95a28ae701f73d2c167734ab4f35c03b26db48eb74eeb11948",
+      "notes": "例3及例4题干、解答保持相邻；正交性求导与角速度恢复式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 10,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "4029f90df047025d9fdb4988faa69001",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "db70924efb4bf1fe11699abcdfaffef9ec1deb3de69411dc0d747f9b97f0f333",
+      "notes": "4.1.6多级角速度求导及交叉项清楚；下方空白为下一主节另页起始的安排，无孤立内容。",
+      "issues": []
+    },
+    {
+      "physical_page": 11,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "0ed2a5e9be80487b5e5fed154fd27370",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "65612b92627421aadb22f3b6a08370fd8a9a2b01605ef4c8fba1de693b80bfd1",
+      "notes": "图4.4共原点轴与图4.5速度平行四边形完整，矢量方向一致；v′、vt、v可辨。",
+      "issues": []
+    },
+    {
+      "physical_page": 12,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "e3fdb7e540389b8c77042bd46449547b",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "4fab3ce8fb65aca9ce47675c6f476a73924d38622b3ee4f2e8951f6573129e38",
+      "notes": "两份科氏项完整合并；图4.6M/P/O、角theta、距离R均完整且图题映射R_perp；例5完整留在本页。",
+      "issues": []
+    },
+    {
+      "physical_page": 13,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "a4e137e7b369eed4f0ca9e1b5b565614",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "6db352eee0f81b4d37f4d88801fd99eb0cd716f86fe64aeb67e24ea3e0b919b8",
+      "notes": "图4.7模型的向轴箭头与图4.8原图R箭头指向相反的物理含义有明确正文/图题解释；Omega=0检查完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 14,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "6f2a813345b7267555b16abcfa637d84",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "51ec41636495ddb12d8b65c7aaceec65d9c8a9abefaa1f849363277c78a6060b",
+      "notes": "一般动系通式与中间平动系推导完整；图4.9位置三角形与例6题解相邻；末行短句属于正常段落换行，无截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 15,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "58d1e1ea7df60389ec95833019edce3c",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "5d9770c08037b0a993ac20427dee7ec353949ac26659231971375e440b72980f",
+      "notes": "平面分量、复数公式、五项特例及例7完整；字号一致，无过宽公式。",
+      "issues": []
+    },
+    {
+      "physical_page": 16,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "5b71bbc496d7ad5af3c6b44a0a542a5d",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "a4b008edffdb4cc7340bb12cda5a22b53ec296a0f10784f9c23de459fef79893",
+      "notes": "例8两个指定半径答案齐全；图4.10直管原图“质点/直管”与全部箭头完整，图4.11模型方向与源图对应。",
+      "issues": []
+    },
+    {
+      "physical_page": 17,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "08c5503fb6d9c0ca5f6b97dc39c4d364",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "a601258988ad1efe8eb936d5bcb00e1ab20f980ace5f45804467382593952d21",
+      "notes": "例9正根分支及续接说明完整；图4.12固定/动轴与管上坐标说明准确；惯性圆轨迹推导跨页自然。",
+      "issues": []
+    },
+    {
+      "physical_page": 18,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "9f30c165c47bcdeded95808db2182ea3",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "1f1b32fe081647ae874a27a401e400dadfae6dcf90f260223ffadeafcea7d8f3",
+      "notes": "半圆图4.13轨迹/速度方向与首次向外阶段一致；调速器公式竖直分量沿e_z，速率平方和正确显示。",
+      "issues": []
+    },
+    {
+      "physical_page": 19,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "1510963b983daa888cb34321083df1f7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "2a8519dd9b1c1b6fc16733b1c444667dd34a69a36544b21def318539c8fd83cf",
+      "notes": "图4.14模型相对速度在子午面、牵连速度向纸内；图4.15原图B点和杆完整恢复，i/j/k映射清楚；例10题解连贯。",
+      "issues": []
+    },
+    {
+      "physical_page": 20,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "7fdda3f9392f6a0cd07975a9c0c978c1",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0c2dd7ba5cf6a90750bf768ffcbbbe6bd26a35aaafb6e858d64577b122ed89b9",
+      "notes": "调速器完整加速度与转矩式可读；4.3.5/例11标题后保留完整题干、解答与最终加速度式。",
+      "issues": []
+    },
+    {
+      "physical_page": 21,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "276356518951f8ececcee8f7d18f4a31",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "b1bac19e3cc97e06fbd66140e702d9e55e91e13fcd1e41cd5d2223db3c9d5707",
+      "notes": "图4.16同向/反向模型与图4.17顺时针原图通过有符号Omega/nu图题一致；例12与例13题干解答未被图分割。",
+      "issues": []
+    },
+    {
+      "physical_page": 22,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "2b19cd4f946a5a5921a06b2cbbfd75be",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "00d7e167cc6198ea7082500c7ba8a991964299d591abcb8974374ae78a81acf9",
+      "notes": "图4.18偏心槽向量无标签碰撞；例14完整；轮轴原图4.19包含底座、轴、轮和原水印，未裁断。页末留白对应下一完整例题起页。",
+      "issues": []
+    },
+    {
+      "physical_page": 23,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "c717f641dc7dd4bdf3fb5b2c46421de6",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "bcbacc3d2a4497fae50727807a25dfa014ccf628c315711eeccef9ec8f633343",
+      "notes": "例15题干、两框架角速度和角加速度齐全；图4.20/4.21角速度映射正确，顶部z/底部x/y全，图题无重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 24,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "7e7168eacbe90f32797a2c40115f43b1",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "d8bce84c5abdab4f1a625715553c8ebc886624924cae0a60e22bb24b01fbb6bc",
+      "notes": "图4.22锥体原图完整，alpha/h只作原几何标记；例16的速度及加速度两行和模长表达完整，无跨栏截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 25,
+      "status": "passed",
+      "visual_inspection": "实际打开1.5倍单页PNG检查；非仅缩略图",
+      "pixmap_digest_0_8": "afdef80218df562409e8fb708c1ec4ea",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "e9c0ed59b40f18fb23ee529a06c296c5c659c0c061575912e49397646502609d",
+      "notes": "图4.23子午面、图4.24局部东-北-上模型、图4.25三维地球全部完整，纬度/速度符号映射及东向=-i说明清楚，科氏力与变换项方向区分。",
+      "issues": []
+    }
+  ],
+  "final_reuse_rule": "最终PDF如对应页0.8倍pixmap.digest一致，可复用本页检查；目录随页码更新须单独复看；图题微调页须复看。",
+  "parent_handoff": "25页digest已经提供；未经像素一致性确认不得将本固定校样hash当作最终成品hash。"
+}

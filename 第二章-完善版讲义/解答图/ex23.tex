@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[->,gray](0,0)--(3.6,0)node[right]{$r$};\draw[->,gray](0,0)--(0,2.7)node[above]{$f$};\draw[->,thick](.7,1.9)--(2.7,1.9);\draw[->,thick](2.7,1.9)--(2.7,.6);\draw[->,thick](2.7,.6)--(.7,.6);\draw[->,thick](.7,.6)--(.7,1.9);\node at(1.7,1.2){$\oint f\dd r>0$};\node at(1.8,-.7){主动内力循环};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$W_{\rm int}=\oint f\dd r$\\[6pt]$\Downarrow$\\[6pt]$W=(f_{\rm high}-f_{\rm low})(r_{\max}-r_{\min})$};
+\end{tikzpicture}

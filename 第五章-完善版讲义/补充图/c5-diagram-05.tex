@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\draw[ink,thick](-2,.05)..controls(-1.5,.75)and(-1,.45)..(-.6,.39)
+ --(1,.15)..controls(1.4,.09)and(1.7,.25)..(2,.55);
+\draw[guide](-2,-.95)..controls(-1.5,-.25)and(-1,-.55)..(-.6,-.61)
+ --(1,-.85)..controls(1.4,-.91)and(1.7,-.75)..(2,-.45);
+\coordinate(P)at(0,.3);\coordinate(Q)at(.6,-.79);
+\fill(P)circle(3pt)node[above left]{$P$};
+\draw[force](P)--(.9,.165)node[above right]{$\delta\vect r$};
+\draw[force](P)--(Q)node[below right]{$\dd\vect r$};
+\fill(Q)circle(2pt);
+\node[left]at(-2,.05){$t$};\node[left]at(-2,-.95){$t+\dd t$};
+\node[align=left,anchor=west]at(3,.1){虚位移：固定时刻的切向变化\\实位移：含约束随时间的移动};
+\end{tikzpicture}

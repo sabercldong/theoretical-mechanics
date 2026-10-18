@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.95]
+\foreach \p/\start/\finish/\a/\b/\ang/\view in
+{0/0/50/\xi/N/\varphi/\zeta,1/90/140/\zeta/z/\theta/N,2/0/45/N/x/\psi/z}{
+\begin{scope}[xshift={4.6*\p cm}]
+\fill(0,0)circle(2pt)node[below left]{$O$};
+\draw[->,thick](0,0)--(\start:1.65)node[anchor=south west]{$\a$};
+\draw[force](0,0)--(\finish:1.65)node[above]{$\b$};
+\draw[->] (\start:.85)arc(\start:\finish:.85);
+\node at({(\start+\finish)/2}:1.15){$\ang$};
+\node[align=center,font=\small]at(0,-.85){从正 $\view$ 轴端看向 $O$\\正转向为逆时针};
+\end{scope}}
+\end{tikzpicture}

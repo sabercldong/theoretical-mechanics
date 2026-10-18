@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\coordinate(A)at(0,0);\coordinate(B)at(4,0);
+\draw[thick](A)--(B);\fill[ink](A)circle(4pt)node[below]{$A$};\fill[ink](B)circle(4pt)node[below]{$B$};
+\draw[force](B)--++(1.3,.8)node[right]{$\vect J$};\draw[guide](B)--++(1.6,0);
+\draw[force](A)--++(1,0)node[above]{$K$};\draw[force](B)--++(-1,0)node[above]{$K$};
+\draw[force](B)--++(.65,1.1)node[above]{$\vect v_B$};
+\node at(4.8,.2){$\alpha$};\node[fill=white,inner sep=1pt]at(4.15,.7){$\beta$};
+\end{tikzpicture}

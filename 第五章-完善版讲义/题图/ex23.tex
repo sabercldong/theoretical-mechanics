@@ -1,0 +1,8 @@
+% 两杆重心和铰点 $A$ 的速度共同进入动能；两角的差决定交叉项，端点水平力仍按其虚位移求广义力。
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(A)at(1.6,-2);\coordinate(B)at(3.8,-3.2);
+\draw[very thick,ink](O)--(A)--(B);\foreach \p in {O,A,B}{\fill(\p)circle(3pt)node[above right=5.0pt]{$\p$};}
+\draw[guide](O)--(0,-2);\draw[guide](A)--++(0,-1.7);\draw[force](B)--++(1.4,0)node[right]{$F$};
+\draw[force](.8,-1)--++(0,-1)node[below]{$m_1g$};\draw[force](2.7,-2.6)--++(0,-1)node[below]{$m_2g$};
+\draw(0,-.65)arc(-90:-51.3402:.65);\node at(.25,-.92){$\theta_1$};\draw(1.6,-2.65)arc(-90:-28.6105:.65);\node at(1.95,-2.92){$\theta_2$};\node[above right]at(.9,-1){$l_1$};\node[above]at(2.8,-2.5){$l_2$};
+\end{tikzpicture}

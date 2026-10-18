@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=.8]
+\foreach \xx/\sg/\name in {0/-1/北半球：顺时针,6/1/南半球：逆时针}{\begin{scope}[shift={(\xx,0)}]
+\draw[fill=soft](-.55,-2)rectangle(0,2);\draw[fill=soft](4,-2)rectangle(4.55,2);
+\node[rotate=90]at(-.28,0){西边界};\node[rotate=90]at(4.28,0){东边界};
+\draw[ink,thick](2,0)ellipse(1.55 and 1.4);
+\foreach \ang in {0,90,180,270}{\draw[force]({2+1.55*cos(\ang)},{1.4*sin(\ang)})arc(\ang:{\ang+\sg*40}:1.55 and 1.4);}
+\node at(2,2.5){\name};\node[align=center]at(2,-2.6){副热带环流示意\\上北、右东};
+\end{scope}}
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "pdf": "工作文件/整册终校-v3.pdf",
+  "sha256": "09d64ac3bc6842daa8233e1ae36d51448dcadc29db1fc77fec650f369405ff70",
+  "pages": [
+    {
+      "page": 4,
+      "status": "passed",
+      "notes": "目录页码、标题层次和点线均清晰，无重叠或截断。"
+    },
+    {
+      "page": 5,
+      "status": "passed",
+      "notes": "末段目录与原图索引条目正常，页码已经随新分页更新。"
+    }
+  ]
+}

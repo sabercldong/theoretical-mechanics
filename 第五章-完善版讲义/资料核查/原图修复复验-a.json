@@ -1,0 +1,209 @@
+{
+  "status": "pass",
+  "reviewed_after_parent_confirmation": "79图全部重提成功",
+  "scope": "只复看原终校a报告所列9图；未扩展其他资产或题图册",
+  "reviewed_count": 9,
+  "resolved_count": 9,
+  "open_count": 0,
+  "method": "首轮逐幅打开9份最终PNG实际目视；最后一次仅重看p41/p42新PNG，另外7份PNG哈希与已通过版完全一致。记录当前全部9份PDF及PNG SHA256，且全部PDF哈希与实际原图清单一致。",
+  "final_pipeline_note": "父代理已取消字体子集；纯资源裁剪前后独立进程像素比对由父代理执行并报告79项通过。p41/p42最终改用归档原始逐页PNG同坐标裁切，保留原署名与原像素内容。本代理独立确认最终9项视觉结果及当前哈希。",
+  "manifest_sha256": "3a46824d90d254313d8abaa5f0fada2ef6c68104285954bacc125783321478a2",
+  "results": [
+    {
+      "issue_id": "ASSET-A-01",
+      "key": "c5-1-p010-ideal-hinge",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p010-ideal-hinge.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p010-ideal-hinge.png",
+      "pdf_sha256": "b53bec99120bbfff71b7a87838dc70ecb09302be845340705fa00a287a0c9b5c",
+      "png_sha256": "cf1f4fa98c32b613edab73899d4419c59b750214f1c8c55b95291d1c77315002",
+      "actual_crop_rect_pt": [
+        407.0,
+        115.0,
+        606.0,
+        246.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/白底课件/理论力学-c5-1.pdf",
+      "visual_finding": "浅绿上边线已清除，δr、N/N′及两杆完整。",
+      "regression_evidence": "此前实际逐幅目视通过；本次确认PNG SHA256完全未变。"
+    },
+    {
+      "issue_id": "ASSET-A-02",
+      "key": "c5-1-p014-pendulum-displacement",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p014-pendulum-displacement.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p014-pendulum-displacement.png",
+      "pdf_sha256": "6d07de340e68d43a737415c91559dbbcb67abe1490cbcc8a1f1ed180be5c2849",
+      "png_sha256": "220bec7c7f301edf0aba11319a9942ec541797425e9911b4938f03c42ce3a290",
+      "actual_crop_rect_pt": [
+        612.0,
+        22.0,
+        704.0,
+        145.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/白底课件/理论力学-c5-1.pdf",
+      "visual_finding": "蓝括号已清除，悬挂横梁、θ、r与摆球完整。",
+      "regression_evidence": "此前实际逐幅目视通过；本次确认PNG SHA256完全未变。"
+    },
+    {
+      "issue_id": "ASSET-A-03",
+      "key": "c5-1-p018-two-rods-static",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p018-two-rods-static.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-1-p018-two-rods-static.png",
+      "pdf_sha256": "996918a32b7dee92ca2cfe2578a8150dbab365fda5692d07ae195e1039322d7f",
+      "png_sha256": "5f37b6b65dcb2c9b3df25c9035f24f2a491d3fdcbb35ed4047743ff86c1dfd42",
+      "actual_crop_rect_pt": [
+        428.0,
+        47.0,
+        667.0,
+        214.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/白底课件/理论力学-c5-1.pdf",
+      "visual_finding": "左侧β/小字残片清除；最终O/x/y/A/B/F/P₁/P₂均恢复正常，无空框，αβ及方向完整。",
+      "regression_evidence": "此前实际逐幅目视通过；本次确认PNG SHA256完全未变。"
+    },
+    {
+      "issue_id": "ASSET-A-04",
+      "key": "c5-2-p020-hoop-moving-axes",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p020-hoop-moving-axes.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p020-hoop-moving-axes.png",
+      "pdf_sha256": "9ab61e7b4c720f94e12f2158a04201936e1f1588e72d9544169c02e286765e19",
+      "png_sha256": "ba5e2a71e1579c76c41d3b552f0df1423c0901c0b592cae023113af4fd77c15b",
+      "actual_crop_rect_pt": [
+        448.0,
+        0.0,
+        699.0,
+        180.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/白底课件/理论力学-c5-2.pdf",
+      "visual_finding": "左边粉线已去，蓝色x′/y′、上部虚线及环内标记完整。",
+      "regression_evidence": "此前实际逐幅目视通过；本次确认PNG SHA256完全未变。"
+    },
+    {
+      "issue_id": "ASSET-A-05",
+      "key": "c5-2-p029-free-two-balls",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p029-free-two-balls.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p029-free-two-balls.png",
+      "pdf_sha256": "a3a41cc40726d6ddf0990fde60b572996e98add3f7dd596d0d710cecab6ac46a",
+      "png_sha256": "e28c75f0ef305466c4ee5dfc33b6fe78ff52426e37d0b0690fca5adadd3b03d4",
+      "actual_crop_rect_pt": [
+        615.0,
+        10.0,
+        718.0,
+        168.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/白底课件/理论力学-c5-2.pdf",
+      "visual_finding": "粉色顶边和右下点清除，双球、弹簧及45°完整。",
+      "regression_evidence": "此前实际逐幅目视通过；本次确认PNG SHA256完全未变。"
+    },
+    {
+      "issue_id": "ASSET-A-06",
+      "key": "c5-2-p043-rolling-cart",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p043-rolling-cart.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p043-rolling-cart.png",
+      "pdf_sha256": "23f1f15753ee2406c0d2cea6fdf372e50a700adf27aa7481ea683a0898b5701f",
+      "png_sha256": "ff8b514c03e731eaee10d4b4e228ffb379058a3ba1695fe3f23e6541d2e5f799",
+      "actual_crop_rect_pt": [
+        207.0,
+        316.0,
+        521.0,
+        479.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/白底课件/理论力学-c5-2.pdf",
+      "visual_finding": "右上极淡蓝线已清除，装置、x_r、m₁/m₂、k及地面x全部保留。",
+      "regression_evidence": "此前实际逐幅目视通过；本次确认PNG SHA256完全未变。"
+    },
+    {
+      "issue_id": "ASSET-A-07",
+      "key": "c5-3-p004-function-variation",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p004-function-variation.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-3-p004-function-variation.png",
+      "pdf_sha256": "56c36e74e96eed1fc3d0bd372b205fdad1d754651b843ee718c71fc9d078e4a8",
+      "png_sha256": "d1e7109c47544e14b34747b3bd240b04a79f9a10e5736be7690601c37c058662",
+      "actual_crop_rect_pt": [
+        426.0,
+        339.0,
+        670.0,
+        524.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/白底课件/理论力学-c5-3.pdf",
+      "visual_finding": "A、y(x)、y+δy恢复正确，B只保留原字母而无页码4叠盖，双曲线/轴/端点完整。",
+      "regression_evidence": "此前实际逐幅目视通过；本次确认PNG SHA256完全未变。"
+    },
+    {
+      "issue_id": "ASSET-A-08",
+      "key": "c5-2-p041-wedge-apparatus",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p041-wedge-apparatus.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p041-wedge-apparatus.png",
+      "pdf_sha256": "e45c72b973ada8bb990732c5382307dfa136ca6b52245944f7c66d160d7e3795",
+      "png_sha256": "a00fdf08b4da8ffedbdb1a35b1895915d939c16efdc516693f47521261fe0ec7",
+      "actual_crop_rect_pt": [
+        173.0,
+        246.0,
+        349.0,
+        402.0
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "visual_finding": "左上原署名“高云峰”现已完整保留；斜面、弹簧、物块、轮子、地面及m/M/α全部可见，无背景残片或新增遮挡。",
+      "regression_evidence": "本次单独打开最终PNG实际目视确认。",
+      "extraction_method": "archived_original_slide_png_crop",
+      "actual_source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/041.png",
+      "source_png_sha256": "922c4a97cbc9b0928de41e749e354ec94faab4900db551d28403d1ace713dff5"
+    },
+    {
+      "issue_id": "ASSET-A-09",
+      "key": "c5-2-p042-wedge-velocities",
+      "status": "resolved",
+      "asset_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p042-wedge-velocities.pdf",
+      "asset_png": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/原图/c5-2-p042-wedge-velocities.png",
+      "pdf_sha256": "0c8401a2300125d0a323591f35c5bbe208f40958a8c91a095627ef32c4600bab",
+      "png_sha256": "354719c3c7e33cda35f26401a81a2c326c78ccbacdb5066e3d7fc0f09a01a915",
+      "actual_crop_rect_pt": [
+        449.75,
+        136.0,
+        671.7,
+        298.94
+      ],
+      "actual_source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-2.pdf",
+      "visual_finding": "左上原署名残字“高”已保留（归档源图本来如此）；彩色边条已清除，速度箭头、坐标轴、x/x_r/o/o′、l+δ_s、α、斜面与弹簧全部完整。",
+      "regression_evidence": "本次单独打开最终PNG实际目视确认。",
+      "extraction_method": "archived_original_slide_png_crop",
+      "actual_source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-2/042.png",
+      "source_png_sha256": "03db8d4502b032e8f501bcbfd4a9f9d9132a3425179df82fb217150f78744454"
+    }
+  ],
+  "intermediate_preview_incidents": "前次半成品PNG出现p18字母空框、p4图块替换等；最终这两项已消失。旧中间图不作为最终版本证据。",
+  "modification_scope": "本代理只写本报告，没有修改资产、源课件、正文或其他记录。",
+  "review_completed_at": "2026-10-18T08:15:08.878674+08:00",
+  "final_conclusion": "原终校所列9项全部解决；实际目视最后两署名图，并以PNG哈希确认其余7幅保持已审内容。未发现本轮范围内其他应修项。",
+  "regression_history": [
+    {
+      "previous_manifest_sha256": "1bffe738a06f515d639f03a99888c6e7f5a823c56d017bfc332c0e3cbbf871a9",
+      "state": "此前7项通过、2项因源PDF缺失署名待修；本次归档PNG裁剪修复已全部关闭。",
+      "previous_open_items": [
+        {
+          "issue_id": "ASSET-A-08",
+          "key": "c5-2-p041-wedge-apparatus",
+          "previous_status": "open",
+          "previous_pdf_sha256": "0f3b2508ffc039beb3015d6b0a1208ce28d149bf0e556a965d27130d4af44dee",
+          "previous_png_sha256": "fe3cc339653d5b312644d64f0d481e274727a868703de018d79c716f588b37eb",
+          "previous_visual_finding": "装置线条完整，但源左上署名高云峰仍缺失，当前PNG左上180×60全白。"
+        },
+        {
+          "issue_id": "ASSET-A-09",
+          "key": "c5-2-p042-wedge-velocities",
+          "previous_status": "open",
+          "previous_pdf_sha256": "2ae9d5f16dd16344ebcf6505f3bcbb46d1c7381bb4a93a8f0017a15afa3c4402",
+          "previous_png_sha256": "0e9143e3f1da55a15d9d4b69c3ede7c5cc0b475272afef901e4393373b23817c",
+          "previous_visual_finding": "内框已清除彩条，全部速度/坐标/长度标签完整，但源左上署名残字高仍缺失。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "changed_assets": [
+    "c3-3-p005-mass-element",
+    "c3-3-p009-cube-center",
+    "c3-3-p011-cube-vertex",
+    "c3-3-p013-parallel-axes",
+    "c3-3-p013-perpendicular-axes",
+    "c3-3-p014-rod-direction",
+    "c3-3-p015-body-bases",
+    "c3-3-p019-paired-symmetry",
+    "c3-3-p021-lamina-axes",
+    "c3-3-p022-symmetry-examples",
+    "c3-3-p024-octant-sphere",
+    "c3-3-p038-solid-sphere",
+    "c3-3-p042-hemisphere-pair",
+    "c3-3-p047-triangle-masses",
+    "c3-4-p002-fixed-axis-cases",
+    "c3-4-p003-circular-path",
+    "c3-4-p008-physical-pendulum",
+    "c3-4-p009-tipping-cube",
+    "c3-4-p011-massive-pulley",
+    "c3-4-p013-bearing-forces",
+    "c3-4-p018-tilted-disk",
+    "c3-4-p019-tilted-disk-3d",
+    "c3-4-p024-centrifugal-couple",
+    "c3-4-p027-t-rod-loads",
+    "c3-4-p028-t-rod-accelerations",
+    "c3-6-p018-heavy-top"
+  ],
+  "caption_changes": {
+    "c3-2-p007-couple": "等大反向的非共线二力构成力偶；图中为顺时针力偶，例~\\ref{ex:c3-16} 取两力反向后的逆时针情形",
+    "c3-4-p009-tipping-cube": "立方体绕地面棱转动的截面；图中 $\\alpha$ 对应正文倾角 $\\theta$，释放时为 $\\theta_0$",
+    "c3-5-p033-wheel-left-acceleration": "轮缘左侧点的相对切向与法向加速度；图中浅色 $\\omega$ 为角速度，$\\varepsilon$ 对应正文角加速度 $\\alpha$",
+    "c3-5-p028-two-wheel-forces": "双轮和悬挂物的受力；$T,T^{\\prime}$ 大小相等，悬挂段张力为 $S$。原图 $\\varepsilon_1,\\varepsilon_2$ 分别以各轮提升重物时的转向为正，正文两轮统一取逆时针为正",
+    "c3-6-p021-nutation-tracks": "单位球面上的重陀螺轴迹：单向、回环与尖点；原图上、下边界分别为 $\\theta_2=\\theta_{\\min}$、$\\theta_1=\\theta_{\\max}$"
+  },
+  "pre_change_pdf_sha256": "e6ef58f086c98636188419333db3753e37dc7e3ca74b725d1537c7657971b4a2",
+  "source_background_validation": [
+    {
+      "source": "/Users/dongxingxi/Downloads/理论力学/理论力学-c3-3.pptx",
+      "working_copy": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-source-figures.pptx",
+      "changed_zip_entries": [
+        "ppt/slideMasters/slideMaster1.xml"
+      ],
+      "all_slide_xml_and_media_byte_identical": true
+    },
+    {
+      "source": "/Users/dongxingxi/Downloads/理论力学/理论力学-c3-4.pptx",
+      "working_copy": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-source-figures.pptx",
+      "changed_zip_entries": [
+        "ppt/slideMasters/slideMaster1.xml"
+      ],
+      "all_slide_xml_and_media_byte_identical": true
+    },
+    {
+      "source": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-3-original-labels.pptx",
+      "working_copy": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-3-labels-figures.pptx",
+      "changed_zip_entries": [
+        "ppt/slideMasters/slideMaster1.xml"
+      ],
+      "all_slide_xml_and_media_byte_identical": true
+    },
+    {
+      "source": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-4-original-labels.pptx",
+      "working_copy": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/模板背景剥离/c3-4-labels-figures.pptx",
+      "changed_zip_entries": [
+        "ppt/slideMasters/slideMaster1.xml"
+      ],
+      "all_slide_xml_and_media_byte_identical": true
+    }
+  ],
+  "last_local_fix": {
+    "key": "c3-4-p018-tilted-disk",
+    "crop_rect_before": [
+      133,
+      163,
+      563,
+      377
+    ],
+    "crop_rect_after": [
+      133.0,
+      164.0,
+      563.0,
+      377.0
+    ],
+    "reason": "移除上方题干位图底边约0.53pt淡黄细线；坐标标签完整保留。"
+  }
+}

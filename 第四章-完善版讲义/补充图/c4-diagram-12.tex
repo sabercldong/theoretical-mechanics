@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=1.05]
+\draw[ink](0,0)circle(2);\draw[guide](-2.4,0)--(2.5,0);\draw[->](0,-2.4)--(0,2.7)node[above]{$\Om_E$};
+\coordinate(P)at(1.532,1.286);\draw[force](0,0)--(P)node[midway,above left]{$R\vect e_U$};
+\draw[force](P)--++(-.77,.92)node[above]{$\vect e_N$};\draw[force](P)--++(.64,-.77)node[right]{$-u\vect e_N$};
+\draw[->](.7,0)arc(0:40:.7);\node at(.99,.35){$\lambda$};\fill[ink](P)circle(3pt);
+\node[anchor=west,align=left]at(3.4,1.0){$\vect e_E$ 向纸内：$\otimes$\\向东速度 $\Omega_ER\cos\lambda$\\$2\Om_E\times(-u\vect e_N)$ 向东\\科氏惯性力向西：$\odot$};\node[right=10pt]at(P){$\otimes\ \vect e_E$};
+\end{tikzpicture}

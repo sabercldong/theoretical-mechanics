@@ -1,0 +1,843 @@
+{
+  "status": "passed_with_nonblocking_layout_observation",
+  "fixed_pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/整册终校-v1.pdf",
+  "fixed_pdf_sha256": "18776e234c4eed66127dbbbdef95d6bdf7ba6ca6362adaa5e09ccd2625c36127",
+  "total_pdf_pages": 87,
+  "inspected_physical_pages": [
+    57,
+    87
+  ],
+  "inspection_count": 31,
+  "actual_render_scale": 1.5,
+  "digest_spec": "PyMuPDF page.get_pixmap(matrix=fitz.Matrix(0.8,0.8), alpha=False)，默认 RGB、annots=True；pixmap.digest.hex()，比较时保持同一参数。",
+  "figures_reviewed": [
+    "4.68",
+    "4.69",
+    "4.70",
+    "4.71",
+    "4.72",
+    "4.73",
+    "4.74",
+    "4.75",
+    "4.76",
+    "4.77",
+    "4.78",
+    "4.79",
+    "4.80",
+    "4.81",
+    "4.82",
+    "4.83",
+    "4.84",
+    "4.85",
+    "4.86",
+    "4.87",
+    "4.88",
+    "4.89",
+    "4.90",
+    "4.91",
+    "4.92",
+    "4.93",
+    "4.94"
+  ],
+  "blocking_issues": [],
+  "nonblocking_observations": [
+    {
+      "id": "page60_whitespace",
+      "physical_page": 60,
+      "printed_page": 55,
+      "severity": "cosmetic",
+      "description": "海流汇总表及脚注之后留白偏大。下一页地转平衡说明、模型图及原图组完整；当前版可接受，若父级另作版式紧凑化可优化此处。",
+      "requires_content_change": false,
+      "sent_to_parent": true
+    }
+  ],
+  "pages": [
+    {
+      "physical_page": 57,
+      "pixmap_digest_0_8": "7f5d8c83cb4154eb5901acb761683835",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "42f6276050d3ecc01735c9c8de4b6f7455715b4612e5287198ebc5a668b7898e",
+      "printed_page": 52,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p057.png",
+      "notes": "原图 4.68 气压带/风带与模型图 4.69 两半球箭头、风来向和赤道辐合一致；标签、图题、脚注齐全，版面无溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 58,
+      "pixmap_digest_0_8": "719a0256a3e97cc89fc3766fab794e95",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "ddceba7d1ffb0a20f4c2e1ca0fc5a12ce1eca24fb42a842f187e3be9d1899c51",
+      "printed_page": 53,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p058.png",
+      "notes": "原图 4.70 海流全景、图例和边界完整；模型 4.71 北顺南逆与副热带环流正文相符。后续小标题与解释同页，无孤悬。",
+      "issues": []
+    },
+    {
+      "physical_page": 59,
+      "pixmap_digest_0_8": "50df2989364b651c156dc5f1fb5aee67",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0cb2387fc440535fa107f2966ca481a1db6ee850f78df8f361b28447eeb3263a",
+      "printed_page": 54,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p059.png",
+      "notes": "模型图 4.72/4.73 海盆、具名洋流和东西方向文字可辨；箭头、寒暖颜色、向高纬支流与正文对应，图题完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 60,
+      "pixmap_digest_0_8": "7e75176c0be441bb64cbaaa3758a86b2",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "5ef7eca538cea857011e9f865f42d9a83dec32d1776d1ce0a088cad2f9e39b84",
+      "printed_page": 55,
+      "status": "passed_with_nonblocking_layout_observation",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p060.png",
+      "notes": "海流汇总表各行和多行单元格完整，末行及脚注清晰。下方留白偏大；下一页地转平衡开头与图组完整，属非阻断版式观察。",
+      "issues": [
+        "page60_whitespace"
+      ]
+    },
+    {
+      "physical_page": 61,
+      "pixmap_digest_0_8": "58647fe382c370feb48f8d03210921e6",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "bd3f6540e436fd15efe3d293ffc8e52e8c3ba78b688197680c8332cd66654ac0",
+      "printed_page": 56,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p061.png",
+      "notes": "4.8.5 标题、地转方程和图 4.74–4.76 相邻完整。图 4.75 右侧中央圆箭头的源错误已由图题明确指出应改顺时针，未被正文默默沿用；卫星图完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 62,
+      "pixmap_digest_0_8": "0d50ebd1ba0328486f002d734e2aeeec",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0058c093b7361654317db02349e612c9d290df8832a0160125c588f57834d1c8",
+      "printed_page": 57,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p062.png",
+      "notes": "南半球卫星原图 4.77 完整；例 37 的题干、公式和结论同页。摩擦风推导未截断，低压辐合/高压辐散说明完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 63,
+      "pixmap_digest_0_8": "cffc6d8c520cbbffa3bbf8da13955694",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "e7569f27e4dcad49c6f6c1b49aa1f196c3f1b6de2931e15d876e67b8bf935daf",
+      "printed_page": 58,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p063.png",
+      "notes": "图 4.78 四组气流旋向与径向分量符合其半球/压强标签；4.8.6 梯度风方程与判别条件完整。页尾余白位于小节边界，未割裂题解。",
+      "issues": []
+    },
+    {
+      "physical_page": 64,
+      "pixmap_digest_0_8": "e33338ec1cca049f4cf4a74b57864dde",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "416c6e5efa127707d2e432f99d94e90abf4cc832d2fa22c1a87d75af01893a86",
+      "printed_page": 59,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p064.png",
+      "notes": "4.8.7 原图 4.79 保全标题、两岸及红速度/科氏箭头；近似条件与原图说明相邻。图 4.80 水面右高、压强力向左，符合正文横向坐标与流向约定。",
+      "issues": []
+    },
+    {
+      "physical_page": 65,
+      "pixmap_digest_0_8": "7113fa98a732823cdfb211baec785516",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "58b09968fac3892219ef6c7abecb1cd41bdecc527c403e1d94e8640b25abc803",
+      "printed_page": 60,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p065.png",
+      "notes": "承接河道数量级及车辆两侧支持力推导，公式清晰；例 38 完整。4.9/4.9.1 标题与三分量方程同页，符号定义完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 66,
+      "pixmap_digest_0_8": "70bf6f20917e8f92c0f251c2286460af",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "efe71b8bd592c68ce379e5956bbda03629d62f93ec3314d97f38b840f1093cb1",
+      "printed_page": 61,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p066.png",
+      "notes": "例 39 落体推导和图 4.81 东偏方向一致；例 40 数值题及角动量解释完整，公式根号、分式和右侧编号无裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 67,
+      "pixmap_digest_0_8": "2a49ada01e7d4993457ba9ae64934c21",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "82cc2a4f6b3cc415e8885049086b47edadf74545a61937574c5b43be2ebdc7cc",
+      "printed_page": 62,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p067.png",
+      "notes": "例 41 上抛西偏推导和图 4.82 返回点位于西侧一致。4.9.5 三分量轨迹、飞行时间根式和修正式完整，跨页仅继续解释。",
+      "issues": []
+    },
+    {
+      "physical_page": 68,
+      "pixmap_digest_0_8": "650886a0a501af9a10f0144bc1e366f7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "788d728df1558fb38439b55074f312f52f3846bc934582a66c72b0cdf4da1197",
+      "printed_page": 63,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p068.png",
+      "notes": "承接时间修正项，落点两式齐全；例 42、43 题解完整邻接，实验分离初速误差与高度依赖的公式无溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 69,
+      "pixmap_digest_0_8": "0413d6d051d3e92212229fda0a18349e",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "1e3c04568c0b8185e5b25eba6cb627dfc14bda7cafe885e318287d3313540b2a",
+      "printed_page": 64,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p069.png",
+      "notes": "精确常系数模型、罗德里格斯展开、三分量积分和二阶展开均排版完整；近似边界说明未裁切，页尾为小节结束。",
+      "issues": []
+    },
+    {
+      "physical_page": 70,
+      "pixmap_digest_0_8": "b6801a607c441639c8f963139a8b6154",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "2280dc7428d3949bfebb50f9f35030f9d3bfd36a5f62a9b2ba7b70308e6c2b8a",
+      "printed_page": 65,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p070.png",
+      "notes": "4.10/4.10.1 标题与原图 4.83 相邻。装置和外立面双图完整；方程 4.42、1851 年版画 4.84 和史料脚注清晰，无图题分离。",
+      "issues": []
+    },
+    {
+      "physical_page": 71,
+      "pixmap_digest_0_8": "6ba0c2341c351fa63716a07f5204929f",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "149ae6bf9528b66f1fd4282b916a6114c3a6feac2b81b56cb369519162d2167b",
+      "printed_page": 66,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p071.png",
+      "notes": "约束及阶次公式完整，原图 4.85 保全地面刻度与悬挂剖面。模型图 4.86 东北天方向、回复力与北半球科氏力箭头不矛盾。",
+      "issues": []
+    },
+    {
+      "physical_page": 72,
+      "pixmap_digest_0_8": "de3376700de2cf1d30a08d0b8768060f",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "fcbb369893ae0f0db95d60e44889ed646c4217c8b442be15f8142c9da8f17a30",
+      "printed_page": 67,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p072.png",
+      "notes": "原图 4.87 完整保留地心轴/当地轴和纬度符号；图题明确 φ 对应 λ。复变量变换的所有导数、通解和初条件常量完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 73,
+      "pixmap_digest_0_8": "cb87208e8b6c4accbbc0f7a2f13eb521",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "dee4b62c3bf6468857cd03b06eaed749464e0f7f75d8a736d008185a96b4d12b",
+      "printed_page": 68,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p073.png",
+      "notes": "例 44 初条件、实变量通解和直线条件完整；图 4.88 极细椭圆示意及慢旋转定义相符，短轴夸张已说明。余白位于小节边界。",
+      "issues": []
+    },
+    {
+      "physical_page": 74,
+      "pixmap_digest_0_8": "f45739a0763ec85635b36a8fab0454ef",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "a2cf581af7873fed31d8e3d330cf75f0eaac2db924a2cc68d0128b3faa8bff59",
+      "printed_page": 69,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p074.png",
+      "notes": "进动公式及北顺南逆结论清晰。原图 4.89 中 ω0/ω 与正文符号差异由图题说明；紫色小方块按源图保留。原图 4.90 装置照片和图题完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 75,
+      "pixmap_digest_0_8": "d6d7fbca36c418e1e1eeb90037d1e3ae",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "7d1e69328b1d718590f0e59b83104103f75340f9e98b465637efbf45b082c025",
+      "printed_page": 70,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p075.png",
+      "notes": "图 4.91 慢时刻主轴及顺时针箭头完整；例 45、地面刻度换算和两个圆偏振模式/能量式连续清晰，无漏行。",
+      "issues": []
+    },
+    {
+      "physical_page": 76,
+      "pixmap_digest_0_8": "f0c8a76875458009c7f26198cb93f6d4",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "4755a65a9a8e22ed42cfb4b324bae5a34de8857713089243d9d2b16e93c78455",
+      "printed_page": 71,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p076.png",
+      "notes": "图 4.92 测量流程框及文字不重叠，原图 4.93 人像完整。4.11/4.11.1 与功率方程同页，公式续行和末段完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 77,
+      "pixmap_digest_0_8": "911e1709e5063dd39fc8908d98cb1f91",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "9902b22a7aba87e9133fb2eb91bafa53b530983ee0d4951a1b3375c1d7a9d194",
+      "printed_page": 72,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p077.png",
+      "notes": "雅可比量条件、与惯性能量关系、例 46 及变速导数式完整；数学粗体、上点及分式可辨，未见挤压或溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 78,
+      "pixmap_digest_0_8": "7cdda3d7fcc88061a612b81abc19c9d7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "d127d5d73b19d9edc3b132b27a78078747bb4cf62d2c769c72ede8c63a6dfbb7",
+      "printed_page": 73,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p078.png",
+      "notes": "例 47 完整；拉格朗日量、正则动量和能量变换各式排版清晰。图 4.94 两种解题路径框内文字完整，箭头无重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 79,
+      "pixmap_digest_0_8": "7efdbc361073074e59072adfda9fd72c",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "6dd6291dfdc64ab4ed2cd7316d7172cecf78e86d63efa62b2343336634197cb5",
+      "printed_page": 74,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p079.png",
+      "notes": "检查清单表、前章联系及公式索引起始行完整；跨页索引表按整行断开，未拆开某一公式。",
+      "issues": []
+    },
+    {
+      "physical_page": 80,
+      "pixmap_digest_0_8": "ab0b26c208add7b5b857cf7eb5970e63",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "ea7285c34f52888afa1f546eb4dbd37c522a6e6cdf771c905d595a8e9a3e563a",
+      "printed_page": 75,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p080.png",
+      "notes": "公式索引续表重复表头、公式编号和条件完整；4.12 与自测 1/2 题解同页，未形成单独题干页。",
+      "issues": []
+    },
+    {
+      "physical_page": 81,
+      "pixmap_digest_0_8": "51680f90a342669a7b5fc150768b23e5",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "5c42688f26bb3ee1d430a0fec1ca0b88e25f1c4905c482b81b8edae49986af12",
+      "printed_page": 76,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p081.png",
+      "notes": "自测 3–6 的题干、解答、积分/反双曲函数表达完整。4.12.2 与后续题目邻接，表述无被页边截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 82,
+      "pixmap_digest_0_8": "8249486e6dcfe13bb5297e436b06b1a7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "c1535595e5abb90a82c2f842cba51804d1f98d63ea0dd11ad7b63194674fd593",
+      "printed_page": 77,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p082.png",
+      "notes": "自测 7–10 题解齐全；稳定性分支、临界条件与数值计算公式清晰，无题干/解答分离。",
+      "issues": []
+    },
+    {
+      "physical_page": 83,
+      "pixmap_digest_0_8": "c452773966173c118318c6229acfc9bf",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "8648c8240c3e31870ccae6edb29611c0c0fb7e17bb6cdd0978506caf8a050917",
+      "printed_page": 78,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p083.png",
+      "notes": "自测 11–14 题干和解答完整；临界四次势、有效重力分量、称重差式无缺字或公式裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 84,
+      "pixmap_digest_0_8": "b81443681655ca94cfa9d5906a4f0c62",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "b158f61818b84672d2a876c96e361c2aef247ffe334303c167056427cdcf7c11",
+      "printed_page": 79,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p084.png",
+      "notes": "自测 15–19 题解完整；惯性圆、梯度风、落体/上抛与水平抛射各式未拆断，页尾结论完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 85,
+      "pixmap_digest_0_8": "1e1c84789fac297fd5c628faf858d6e6",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "86a1c7797c884ff04a782cd866b891d09d566cbe9f26280053d4e62f3eb2b2ea",
+      "printed_page": 80,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p085.png",
+      "notes": "自测 20–24 题解完整；静态势条件和末尾学习检查提示完整，浅色提示框文字未超出框或页边。",
+      "issues": []
+    },
+    {
+      "physical_page": 86,
+      "pixmap_digest_0_8": "340c87f12af85d67e15875144e2d9bd0",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "b76e71361b036b61a01be8043e3eae9c41f2c8f7cd6280af9360d365315dd65d",
+      "printed_page": 81,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p086.png",
+      "notes": "原教材作业号 c4-1:4.1/4.2/4.3 与 c4-2:4.7/4.10/4.12 保留完整；学习与复习建议完整。来源索引首段表头和 20 条图号链接清晰、目标正确。",
+      "issues": []
+    },
+    {
+      "physical_page": 87,
+      "pixmap_digest_0_8": "60f49f9eeb26458ad110e5972e932e88",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "9633b0de4ced63a9a93447c92a2b34ae1afd25492ab0d87605fe8098ee400e7a",
+      "printed_page": 82,
+      "status": "passed",
+      "visual_inspection": "已实际打开本页 1.5× 单页 PNG 逐页阅读，非仅接触表或文字抽取检查",
+      "preview_file": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/终稿后段预览/p087.png",
+      "notes": "来源索引续页重复表头，余下 27 条图号、主题、原课件页码完整。共 47 条索引链接全部定位对应图；最后一行及底线完整。",
+      "issues": []
+    }
+  ],
+  "supplemental_toc_checks": [
+    {
+      "physical_page": 3,
+      "status": "passed",
+      "pixmap_digest_0_8": "a6f051ff155d9ec5347db89af689cb86",
+      "notes": "实际查看当前固定 PDF 目录页，文字、引导线、页码清晰；后段节号页码和两附录正文 81 页与实际内容一致。"
+    },
+    {
+      "physical_page": 4,
+      "status": "passed",
+      "pixmap_digest_0_8": "efe798f0e1f42ff4ae22e7c7bd4aac84",
+      "notes": "实际查看当前固定 PDF 目录页，文字、引导线、页码清晰；后段节号页码和两附录正文 81 页与实际内容一致。"
+    },
+    {
+      "physical_page": 5,
+      "status": "passed",
+      "pixmap_digest_0_8": "4466b8c0d20c08efd9b807b89e4a8cff",
+      "notes": "实际查看当前固定 PDF 目录页，文字、引导线、页码清晰；后段节号页码和两附录正文 81 页与实际内容一致。"
+    }
+  ],
+  "cross_reference_checks": {
+    "figure_captions_count": 94,
+    "figure_numbers_sequential": true,
+    "source_index_count": 47,
+    "all_source_index_links_correct": true,
+    "source_index_links": [
+      {
+        "figure": "4.2",
+        "index_physical_page": 86,
+        "target_physical_page": 6,
+        "correct": true
+      },
+      {
+        "figure": "4.4",
+        "index_physical_page": 86,
+        "target_physical_page": 11,
+        "correct": true
+      },
+      {
+        "figure": "4.6",
+        "index_physical_page": 86,
+        "target_physical_page": 12,
+        "correct": true
+      },
+      {
+        "figure": "4.8",
+        "index_physical_page": 86,
+        "target_physical_page": 13,
+        "correct": true
+      },
+      {
+        "figure": "4.10",
+        "index_physical_page": 86,
+        "target_physical_page": 16,
+        "correct": true
+      },
+      {
+        "figure": "4.12",
+        "index_physical_page": 86,
+        "target_physical_page": 17,
+        "correct": true
+      },
+      {
+        "figure": "4.15",
+        "index_physical_page": 86,
+        "target_physical_page": 19,
+        "correct": true
+      },
+      {
+        "figure": "4.17",
+        "index_physical_page": 86,
+        "target_physical_page": 21,
+        "correct": true
+      },
+      {
+        "figure": "4.19",
+        "index_physical_page": 86,
+        "target_physical_page": 22,
+        "correct": true
+      },
+      {
+        "figure": "4.20",
+        "index_physical_page": 86,
+        "target_physical_page": 23,
+        "correct": true
+      },
+      {
+        "figure": "4.22",
+        "index_physical_page": 86,
+        "target_physical_page": 24,
+        "correct": true
+      },
+      {
+        "figure": "4.23",
+        "index_physical_page": 86,
+        "target_physical_page": 25,
+        "correct": true
+      },
+      {
+        "figure": "4.25",
+        "index_physical_page": 86,
+        "target_physical_page": 25,
+        "correct": true
+      },
+      {
+        "figure": "4.26",
+        "index_physical_page": 86,
+        "target_physical_page": 27,
+        "correct": true
+      },
+      {
+        "figure": "4.28",
+        "index_physical_page": 86,
+        "target_physical_page": 29,
+        "correct": true
+      },
+      {
+        "figure": "4.30",
+        "index_physical_page": 86,
+        "target_physical_page": 30,
+        "correct": true
+      },
+      {
+        "figure": "4.31",
+        "index_physical_page": 86,
+        "target_physical_page": 31,
+        "correct": true
+      },
+      {
+        "figure": "4.33",
+        "index_physical_page": 86,
+        "target_physical_page": 32,
+        "correct": true
+      },
+      {
+        "figure": "4.35",
+        "index_physical_page": 86,
+        "target_physical_page": 33,
+        "correct": true
+      },
+      {
+        "figure": "4.39",
+        "index_physical_page": 86,
+        "target_physical_page": 36,
+        "correct": true
+      },
+      {
+        "figure": "4.40",
+        "index_physical_page": 87,
+        "target_physical_page": 37,
+        "correct": true
+      },
+      {
+        "figure": "4.42",
+        "index_physical_page": 87,
+        "target_physical_page": 39,
+        "correct": true
+      },
+      {
+        "figure": "4.45",
+        "index_physical_page": 87,
+        "target_physical_page": 41,
+        "correct": true
+      },
+      {
+        "figure": "4.47",
+        "index_physical_page": 87,
+        "target_physical_page": 43,
+        "correct": true
+      },
+      {
+        "figure": "4.49",
+        "index_physical_page": 87,
+        "target_physical_page": 44,
+        "correct": true
+      },
+      {
+        "figure": "4.50",
+        "index_physical_page": 87,
+        "target_physical_page": 45,
+        "correct": true
+      },
+      {
+        "figure": "4.54",
+        "index_physical_page": 87,
+        "target_physical_page": 48,
+        "correct": true
+      },
+      {
+        "figure": "4.55",
+        "index_physical_page": 87,
+        "target_physical_page": 49,
+        "correct": true
+      },
+      {
+        "figure": "4.56",
+        "index_physical_page": 87,
+        "target_physical_page": 49,
+        "correct": true
+      },
+      {
+        "figure": "4.57",
+        "index_physical_page": 87,
+        "target_physical_page": 50,
+        "correct": true
+      },
+      {
+        "figure": "4.60",
+        "index_physical_page": 87,
+        "target_physical_page": 53,
+        "correct": true
+      },
+      {
+        "figure": "4.63",
+        "index_physical_page": 87,
+        "target_physical_page": 54,
+        "correct": true
+      },
+      {
+        "figure": "4.64",
+        "index_physical_page": 87,
+        "target_physical_page": 55,
+        "correct": true
+      },
+      {
+        "figure": "4.66",
+        "index_physical_page": 87,
+        "target_physical_page": 56,
+        "correct": true
+      },
+      {
+        "figure": "4.68",
+        "index_physical_page": 87,
+        "target_physical_page": 57,
+        "correct": true
+      },
+      {
+        "figure": "4.70",
+        "index_physical_page": 87,
+        "target_physical_page": 58,
+        "correct": true
+      },
+      {
+        "figure": "4.75",
+        "index_physical_page": 87,
+        "target_physical_page": 61,
+        "correct": true
+      },
+      {
+        "figure": "4.76",
+        "index_physical_page": 87,
+        "target_physical_page": 61,
+        "correct": true
+      },
+      {
+        "figure": "4.77",
+        "index_physical_page": 87,
+        "target_physical_page": 62,
+        "correct": true
+      },
+      {
+        "figure": "4.79",
+        "index_physical_page": 87,
+        "target_physical_page": 64,
+        "correct": true
+      },
+      {
+        "figure": "4.83",
+        "index_physical_page": 87,
+        "target_physical_page": 70,
+        "correct": true
+      },
+      {
+        "figure": "4.84",
+        "index_physical_page": 87,
+        "target_physical_page": 70,
+        "correct": true
+      },
+      {
+        "figure": "4.85",
+        "index_physical_page": 87,
+        "target_physical_page": 71,
+        "correct": true
+      },
+      {
+        "figure": "4.87",
+        "index_physical_page": 87,
+        "target_physical_page": 72,
+        "correct": true
+      },
+      {
+        "figure": "4.89",
+        "index_physical_page": 87,
+        "target_physical_page": 74,
+        "correct": true
+      },
+      {
+        "figure": "4.90",
+        "index_physical_page": 87,
+        "target_physical_page": 74,
+        "correct": true
+      },
+      {
+        "figure": "4.93",
+        "index_physical_page": 87,
+        "target_physical_page": 76,
+        "correct": true
+      }
+    ],
+    "appendix_outline_target_physical_page": 86,
+    "appendix_printed_page": 81,
+    "notes": "固定 PDF 的目录与书签均将原课件作业题号、课件原图来源索引定位到物理 86 页/正文 81 页。源图目录 47 项与整合清单数量一致。"
+  },
+  "source_specific_notes": [
+    "图 4.75 源图反气旋中央圆箭头有误，图题已具体纠正，正文与模型图使用正确旋向。",
+    "图 4.89 紫方块属于当前嵌入原图，按父级指示保留，未抹改。",
+    "原图 4.87 的 φ 与原图 4.89 的角速度符号映射已在图题交代。"
+  ],
+  "final_reuse_rule": "此报告只对应上述固定校样 SHA256。最终 PDF 仅在对应页面 0.8× pixmap.digest 完全一致时可复用本页结论；任何目录、图题、裁图或排版变化页由父级重新渲染复看。",
+  "ownership": "仅写本报告及原图核查-a/终稿后段预览临时核查材料，未修改正文源文件或他人资产。"
+}

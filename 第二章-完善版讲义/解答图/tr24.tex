@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[->,gray](0,-1.8)--(0,2.5)node[above]{$U$};\draw[->,gray](0,0)--(3.6,0)node[right]{$r$};\draw[thick,domain=.4:3.2,samples=35]plot(\x,{-.7/\x});\draw[thick,dashed,domain=0:2.4,samples=25]plot(\x,{.35*\x*\x});\node at(1,-1.3){$U_{-1}$};\node at(2.5,1.8){$U_2$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$W=U_{-1}-2U_2$\\[6pt]$\Downarrow$\\[6pt]$2\overline T=-\overline U_{-1}+2\overline U_2\quad(\tau\to\infty)$};
+\end{tikzpicture}

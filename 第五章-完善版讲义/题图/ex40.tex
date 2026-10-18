@@ -1,0 +1,18 @@
+% 竖直轴进动与本体轴自转是两个不同的对称方向；本体轴角速度为 $\dot\psi+\dot\phi\cos\theta$。
+\begin{tikzpicture}[x={(1cm,0cm)},y={(-.7cm,.4cm)},z={(0cm,1cm)}]
+% ZXZ convention: n=(cos phi,sin phi,0), e=z' cross n; phi=30, theta=35, psi=60 degrees.
+\draw[->](0,0,0)--(3,0,0)node[right]{$X$};
+\draw[->](0,0,0)--(0,2.7,0)node[above left]{$Y$};
+\draw[->](0,0,0)--(0,0,3.1)node[above]{$Z$};
+\draw[ink,thick]({-.8*cos(30)},{-.8*sin(30)},0)--({2.8*cos(30)},{2.8*sin(30)},0)node[below right]{$n$};
+\draw[force](0,0,0)--({2.8*sin(35)*sin(30)},{-2.8*sin(35)*cos(30)},{2.8*cos(35)})node[above right]{$z'$};
+\draw[ink,thick](0,0,0)--({2.3*(cos(60)*cos(30)-sin(60)*cos(35)*sin(30))},{2.3*(cos(60)*sin(30)+sin(60)*cos(35)*cos(30))},{2.3*sin(60)*sin(35)})node[above left]{$x'$};
+\draw[->,domain=0:30,samples=25]plot({.9*cos(\x)},{.9*sin(\x)},0);
+\node at(1.2,0,-.25){$\phi$};
+\draw[->,domain=0:35,samples=25]plot({1.5*sin(\x)*sin(30)},{-1.5*sin(\x)*cos(30)},{1.5*cos(\x)});
+\node at(.55,0,1.3){$\theta$};
+\draw[->,domain=0:60,samples=40]plot({1.15*(cos(\x)*cos(30)-sin(\x)*cos(35)*sin(30))},{1.15*(cos(\x)*sin(30)+sin(\x)*cos(35)*cos(30))},{1.15*sin(\x)*sin(35)});
+\node at(-.55,0,.7){$\psi$};
+\fill(0,0,0)circle(2pt)node[below left]{$O$};
+\node[align=center]at(.6,0,-1.15){$n$：节点线，$\phi:X\to n$\\$\theta:Z\to z'$, $\psi:n\to x'$\\三维投影，纸面夹角不等于空间角};
+\end{tikzpicture}

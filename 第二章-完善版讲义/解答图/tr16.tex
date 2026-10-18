@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[dashed](0,0)circle(.9);\draw[dashed](0,0)circle(1.65);\fill(0,0)circle(2pt)node[below]{$C$};\fill(-.9,0)circle(5pt)node[above]{$M_1$};\fill(1.65,0)circle(3pt)node[above]{$M_2$};\draw[<->](-.9,-2.05)--(1.65,-2.05)node[midway,below]{$L$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$T\propto L^{3/2}/\sqrt{M_1+M_2}$\\[6pt]$\Downarrow$\\[6pt]$M_{\rm tot}\mapsto2M_{\rm tot}:\quad T^{\prime}=T/\sqrt2$};
+\end{tikzpicture}

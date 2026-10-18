@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[->,gray](0,-.3)--(0,3.15)node[above]{$\zeta,\vect k$};\draw[->,thick](0,0)--(1.65,2.65)node[above right]{$\vect n$};\draw[thick,rotate around={-32:(1,1.6)}](1,1.6)ellipse(.8 and .2);\draw(0,.8)arc(90:58:.8);\node at(.4,1.02){$\theta$};\node[below left]at(0,0){$O$};\node at(2,1.5){$\omega$};\draw[->](-.4,2.55)arc(180:0:.4 and .15);\node[left]at(-.45,2.55){$\Omega$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect e_\zeta\cdot\vect n=\cos\theta$\\[6pt]$\Downarrow$\\[6pt]$\omega_3=\dot\psi+\dot\varphi\cos\theta$};
+\end{tikzpicture}

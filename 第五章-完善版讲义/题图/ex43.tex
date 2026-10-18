@@ -1,0 +1,5 @@
+% 同相位移不改变中间弹簧长度，反相位移加倍改变它的长度；和差方向正好将两种能量同时对角化。
+\begin{tikzpicture}
+\draw[thick](-.5,0)--(7,0);\draw[very thick](0,0)--(0,1.2);\draw[very thick](6.7,0)--(6.7,1.2);\draw[spring](0,.5)--(1.5,.5);\draw[fill=soft](1.5,.2)rectangle(2.3,.8);\draw[spring](2.3,.5)--(4.4,.5);\draw[fill=soft](4.4,.2)rectangle(5.2,.8);\draw[spring](5.2,.5)--(6.7,.5);\node at(1.9,.5){$m$};\node at(4.8,.5){$m$};\node at(.7,.9){$k$};\node at(3.4,.9){$k'$};\node at(6,.9){$k$};
+\draw[force](1.9,-.7)--(2.7,-.7);\draw[force](4.8,-.7)--(5.6,-.7);\node[left]at(1,-.7){同相};\draw[force](1.9,-1.4)--(2.7,-1.4);\draw[force](4.8,-1.4)--(4,-1.4);\node[left]at(1,-1.4){反相};
+\end{tikzpicture}

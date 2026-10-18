@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+\begin{scope}
+\draw[->](0,0)--(4.3,0)node[right]{$t$};
+\draw[->](0,-.8)--(0,1.2)node[above]{$D(t)$};
+\draw[ink,thick]plot[domain=0:4,samples=100](\x,{.6*sin(180*\x)});
+\node[align=center]at(2,-1.4){经典周期运动\\$\overline{\dot D}=0$};
+\end{scope}
+\begin{scope}[shift={(6,0)}]
+\draw[->](0,0)--(4.3,0)node[right]{$t$};
+\draw[->](0,-.8)--(0,1.2)node[above]{$\langle\hat D\rangle$};
+\draw[ink,line width=1.2pt](.1,0)--(4,0);
+\node[align=center]at(2,-1.4){量子束缚定态\\$\dd\langle\hat D\rangle/\dd t=0$};
+\end{scope}
+\end{tikzpicture}

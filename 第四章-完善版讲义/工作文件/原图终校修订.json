@@ -1,0 +1,11 @@
+{
+  "c4-2-p004-force-directions": {
+    "max_height_cm": 8.2
+  },
+  "c4-1-p002-reference-axes": {
+    "caption": "空间轴 $\\xi,\\eta,\\zeta$ 与本体轴 $x,y,z$；共同原点为两组三轴交点，体内 $O$ 仅为原图点标记"
+  },
+  "c4-2-p007-offset-forces": {
+    "caption": "相对平衡小球的重力、张力与离心力；$F_T$ 对应正文张力 $T$，箭头仅示方向"
+  }
+}

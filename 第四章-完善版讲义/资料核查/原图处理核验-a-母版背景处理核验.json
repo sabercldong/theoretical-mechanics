@@ -1,0 +1,17 @@
+{
+  "source_ppt": "/Users/dongxingxi/Downloads/理论力学/理论力学-c4-1.pptx",
+  "source_sha256": "188d883036e58657d36cf074c79bb8a6fffc72bf2ba80545eae5e420613afcf7",
+  "working_ppt": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-a/c4-1-white-master.pptx",
+  "working_sha256": "69b1be60ba2d3e90c5a311a8c9b591446d58f986e6c246e413c0b7946c4d8a93",
+  "changed_entries": [
+    "ppt/slideMasters/slideMaster1.xml"
+  ],
+  "operations": [
+    {
+      "entry": "ppt/slideMasters/slideMaster1.xml",
+      "removed": "master background picture",
+      "id": "rId2"
+    }
+  ],
+  "all_slide_xml_and_media_byte_identical": true
+}

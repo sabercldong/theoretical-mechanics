@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=.8]
+\draw[->](0,0)--(4.6,0)node[right]{$X$};\draw[->](0,0)--(0,2.2)node[above]{$Y$};
+\draw[ink,very thick,->](0,0)--(4,0);\node at(2,1.2){惯性系：直线};
+\begin{scope}[shift={(8,0)}]
+\draw[->](-2.2,0)--(2.2,0)node[right]{$x$};\draw[->](0,-2.7)--(0,2.2)node[left]{$y$};
+\draw[ink,thick,domain=0:155,samples=110,->]plot({\x/60*cos(\x)},{-\x/60*sin(\x)});
+\node at(0,2.7){动系：$r=ut,\ \theta=-\Omega t$};
+\end{scope}
+\end{tikzpicture}

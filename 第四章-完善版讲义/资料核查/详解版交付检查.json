@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "pdf_pages": 116,
+  "examples": 47,
+  "training_questions": 24,
+  "question_figures": 71,
+  "original_figures": 47,
+  "body_figures": 47,
+  "all_answers_expanded": true,
+  "solution_steps": 226,
+  "colored_callouts_removed": true,
+  "source_appendix_removed": true,
+  "compile_warnings": [],
+  "pdf_sha256": "94b7f689fcb13d3dfc4626ca1060715bcf1d9e752ecf15cd9a510876707e6b71",
+  "archive_sha256": "2c3bb0e78cbdc725ced790cd5faea360262b55a089534c224e482cbbff962d18",
+  "tex_sha256": "8b4555e2035b8669d743220bb350f035302410da107fc033eeccd8a85c0a82c7",
+  "pdf_bytes": 6507371,
+  "archive_bytes": 97244047
+}

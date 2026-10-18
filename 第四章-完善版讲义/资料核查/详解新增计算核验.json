@@ -1,0 +1,351 @@
+{
+  "status": "passed",
+  "sympy_version": "1.14.0",
+  "symbolic_checks": 44,
+  "all_passed": true,
+  "checks": [
+    {
+      "item": "旋转矩阵的反对称角速度矩阵",
+      "passed": true,
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "item": "规定径向匀速运动的绝对加速度",
+      "passed": true,
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "item": "加速平动原点的旋转管",
+      "passed": true,
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "item": "偏心圆槽的完整加速度",
+      "passed": true,
+      "residuals": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "item": "恒绝对速率轨道约束",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "恒速径向运动的圆轨道",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "轴上摆倾斜分支的小振动频率",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "偏置悬点平面内小振动频率",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "临界质点摆的四次有效势",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "临界均匀杆的四次有效势",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "均匀杆的质量一阶矩",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "均匀杆的惯量和离心力矩质量因子",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "分布离心力的等效作用点",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "旋转液体自由表面的体积约束",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "自由滑珠微分方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "自由滑珠初位置",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "自由滑珠初速度",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "稳定弹簧方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "稳定弹簧初位置",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "稳定弹簧初速度",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "临界弹簧方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "临界弹簧初位置",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "临界弹簧初速度",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "超临界弹簧方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "超临界弹簧初位置",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "超临界弹簧初速度",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "无真实力粒子的动系x方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "无真实力粒子的动系y方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "纬线行驶的天向加速度投影",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "纬线运动的北向引导加速度",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "惯性圆x动力学",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "惯性圆y动力学",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "惯性圆的圆心和半径",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "梯度风气旋分支的二次方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "竖直上抛返回时的东西速度",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "竖直上抛返回时的西向位移",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "东向水平抛射的落地时间一阶修正",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "东向水平抛射射程含时间修正",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "傅科摆完整静止释放解的方程",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "傅科摆初位置",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "傅科摆初速度",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "双弹簧雅可比量守恒",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "双弹簧惯性机械能变化率",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    },
+    {
+      "item": "旋转坐标中均匀力势的显式时间导数",
+      "passed": true,
+      "residuals": [
+        "0"
+      ]
+    }
+  ],
+  "numerical_results": {
+    "轴上摆倾角_deg": 57.01329291752108,
+    "轴上摆小振动角频率": 5.03278142669527,
+    "偏置摆角速率": 3.547708537680885,
+    "偏置摆小振动角频率": 3.6353194717590553,
+    "50m_下落时间": 3.1927542840705043,
+    "50m_东偏米": 0.006720914682307594,
+    "100m_下落时间": 4.515236409857309,
+    "100m_东偏米": 0.01552128760412319,
+    "500m_下落时间": 10.096375546923044,
+    "500m_东偏米": 0.1735332709057215,
+    "东抛时间修正": 0.0023732855663796924,
+    "东抛射程修正": 0.25284984424209245,
+    "东抛北向偏移": -0.1051234243770059,
+    "车辆支持力差": 6.187564758830569,
+    "巴黎_进动小时": 31.781123570665248,
+    "北京_进动小时": 37.31314014702884,
+    "北纬60_进动小时": 27.6371800358382,
+    "67m摆快周期": 16.420363465515862
+  },
+  "scope": "核验本轮展开解答所用的关键模型、初值、投影、积分、守恒量和数值；不把这些检查声称为每一句文字的独立证明。"
+}

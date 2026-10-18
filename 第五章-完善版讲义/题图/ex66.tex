@@ -1,0 +1,8 @@
+% 椭圆与双曲线共用焦点 $z=\pm\sigma$；焦距决定所有尺度因子的长度量纲，能量项在两分离式中符号不同。
+\begin{tikzpicture}[scale=.8]
+\draw[->](-3,0)--(3,0)node[right]{$x$};\draw[->](0,-3.3)--(0,3.3)node[above]{$z$};
+\foreach \a in {1.4,2,2.7}{\pgfmathsetmacro{\b}{sqrt(\a*\a-1)}\draw[ink](0,0)ellipse(\b cm and \a cm);}
+\foreach \a in {.35,.65}{\pgfmathsetmacro{\b}{sqrt(1-\a*\a)}\draw[muted,domain=-1.7:1.7,samples=60]plot({\b*(exp(\x)-exp(-\x))/2},{\a*(exp(\x)+exp(-\x))/2});\draw[muted,domain=-1.7:1.7,samples=60]plot({\b*(exp(\x)-exp(-\x))/2},{-\a*(exp(\x)+exp(-\x))/2});}
+\fill(0,1)circle(3pt)node[right=5.0pt]{$+\sigma$};\fill(0,-1)circle(3pt)node[right=5.0pt]{$-\sigma$};
+\node[anchor=west,align=left]at(3.8,1){共焦椭圆与双曲线\\子午平面 $y=0$，$\rho=|x|$\\绕 $z$ 轴旋转成曲面};
+\end{tikzpicture}

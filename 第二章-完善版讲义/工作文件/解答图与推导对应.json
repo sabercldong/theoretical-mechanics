@@ -1,0 +1,722 @@
+[
+  {
+    "key": "ex01",
+    "feature": "顶点 $A,B,C$ 与中线交点 $G$",
+    "caption": "例1的分析与计算",
+    "note": "图~\\ref{fig:solution-ex01}~中顶点 $A,B,C$ 与中线交点 $G$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect r=\\vect a+u(\\vect b-\\vect a)+v(\\vect c-\\vect a)",
+    "second_relation": "\\vect R=(\\vect a+\\vect b+\\vect c)/3"
+  },
+  {
+    "key": "ex02",
+    "feature": "位于 $y=\\sqrt3R/4$ 的两个负质量圆孔",
+    "caption": "例2的分析与计算",
+    "note": "图~\\ref{fig:solution-ex02}~中位于 $y=\\sqrt3R/4$ 的两个负质量圆孔，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "M=\\sigma\\pi(R^2-2r^2)",
+    "second_relation": "Y_C=-\\sqrt3Rr^2/[2(R^2-2r^2)]"
+  },
+  {
+    "key": "ex03",
+    "feature": "半球的水平截面和厚壳内外半径",
+    "caption": "例3的分析与计算",
+    "note": "图~\\ref{fig:solution-ex03}~中半球的水平截面和厚壳内外半径，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "A(z)=\\pi(a^2-z^2)",
+    "second_relation": "Z_{\\rm shell}=3(b^4-a^4)/[8(b^3-a^3)]"
+  },
+  {
+    "key": "ex04",
+    "feature": "$x\\ge0$ 半圆截面的形心及顶点高度",
+    "caption": "例4的分析与计算",
+    "note": "图~\\ref{fig:solution-ex04}~中$x\\ge0$ 半圆截面的形心及顶点高度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\bar x(z)=4a(1-z/h)/(3\\pi)",
+    "second_relation": "X_C=a/\\pi,\\quad Z_C=h/4"
+  },
+  {
+    "key": "ex05",
+    "feature": "两条竖直边界间宽为 $\\dd x$ 的面积条",
+    "caption": "例5的分析与计算",
+    "note": "图~\\ref{fig:solution-ex05}~中两条竖直边界间宽为 $\\dd x$ 的面积条，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dd A=(a-kx^2)\\dd x",
+    "second_relation": "Y_C=3a/5"
+  },
+  {
+    "key": "ex06",
+    "feature": "三条截距为 $2,4,8$ 的坐标棱",
+    "caption": "例6的分析与计算",
+    "note": "图~\\ref{fig:solution-ex06}~中三条截距为 $2,4,8$ 的坐标棱，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "x=2u,\\ y=4v,\\ z=8w",
+    "second_relation": "\\vect R=(1/2,1,2)"
+  },
+  {
+    "key": "ex07",
+    "feature": "高度 $z$ 的截面及其密度权重",
+    "caption": "例7的分析与计算",
+    "note": "图~\\ref{fig:solution-ex07}~中高度 $z$ 的截面及其密度权重，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dd m=\\rho_0(1+z/a)\\pi(a^2-z^2)\\dd z",
+    "second_relation": "M=11\\pi\\rho_0a^3/12,\\quad Z_C=23a/55"
+  },
+  {
+    "key": "ex08",
+    "feature": "两根等长杆的中点和沿水平轴移动的滑块 $B$",
+    "caption": "例8的分析与计算",
+    "note": "图~\\ref{fig:solution-ex08}~中两根等长杆的中点和沿水平轴移动的滑块 $B$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect P=\\sum_i m_i\\vect v_i",
+    "second_relation": "X_C=l(2m_1+2m_2)\\cos\\theta/(2m_1+m_2)"
+  },
+  {
+    "key": "ex09",
+    "feature": "爆炸点 $C$ 后的质心轨迹与重力方向",
+    "caption": "例9的分析与计算",
+    "note": "图~\\ref{fig:solution-ex09}~中爆炸点 $C$ 后的质心轨迹与重力方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect R=\\vect R_0+\\vect V_0t+\\vect g t^2/2",
+    "second_relation": "\\sum_i m_i\\vect r_i=M\\vect R"
+  },
+  {
+    "key": "ex10",
+    "feature": "偏心转子在初始上方的位置",
+    "caption": "例10的分析与计算",
+    "note": "图~\\ref{fig:solution-ex10}~中偏心转子在初始上方的位置，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect a_C=-m_2e\\omega^2\\vect e_r/(m_1+m_2)",
+    "second_relation": "\\vect N=(D\\sin\\omega t,G-D\\cos\\omega t)"
+  },
+  {
+    "key": "ex11",
+    "feature": "倾斜炮管方向与炮身的水平反冲",
+    "caption": "例11的分析与计算",
+    "note": "图~\\ref{fig:solution-ex11}~中倾斜炮管方向与炮身的水平反冲，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "MU+m(U+V\\cos\\alpha)=0",
+    "second_relation": "U=-mV\\cos\\alpha/(M+m)"
+  },
+  {
+    "key": "ex12",
+    "feature": "跳入的 $60^\\circ$ 水平投影与跳出的相对速度",
+    "caption": "例12的分析与计算",
+    "note": "图~\\ref{fig:solution-ex12}~中跳入的 $60^\\circ$ 水平投影与跳出的相对速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "150v_*=100+50(2\\cos60^\\circ)",
+    "second_relation": "v_{\\rm cart}=1+\\sqrt3/6"
+  },
+  {
+    "key": "ex13",
+    "feature": "同一车上各人的同时或依次离车",
+    "caption": "例13的分析与计算",
+    "note": "图~\\ref{fig:solution-ex13}~中同一车上各人的同时或依次离车，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\Delta V_j=-mv/[M+(N-j+1)m]",
+    "second_relation": "|V_{\\rm seq}|=\\sum_{j=1}^N mv/[M+jm]"
+  },
+  {
+    "key": "ex14",
+    "feature": "摆长 $l$、角度 $\\theta$ 与水平活动支点",
+    "caption": "例14的分析与计算",
+    "note": "图~\\ref{fig:solution-ex14}~中摆长 $l$、角度 $\\theta$ 与水平活动支点，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "(m_A+m_B)\\dot X+m_Bl\\dot\\theta\\cos\\theta=0",
+    "second_relation": "k^2=(m_A+m_B)g/(m_Al)"
+  },
+  {
+    "key": "ex15",
+    "feature": "两质点到相遇点的互补距离",
+    "caption": "例15的分析与计算",
+    "note": "图~\\ref{fig:solution-ex15}~中两质点到相遇点的互补距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "m_1x_1+m_2x_2=m_2L",
+    "second_relation": "x_{\\rm meet}=m_2L/(m_1+m_2)"
+  },
+  {
+    "key": "ex16",
+    "feature": "冲量沿 $AB$ 的径向分量与垂直分量",
+    "caption": "例16的分析与计算",
+    "note": "图~\\ref{fig:solution-ex16}~中冲量沿 $AB$ 的径向分量与垂直分量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "v_{Ar}=v_{Br}=J\\cos\\alpha/(m_A+m_B)",
+    "second_relation": "K=m_AJ\\cos\\alpha/(m_A+m_B)"
+  },
+  {
+    "key": "ex17",
+    "feature": "人向上、球向下与沟底高度差",
+    "caption": "例17的分析与计算",
+    "note": "图~\\ref{fig:solution-ex17}~中人向上、球向下与沟底高度差，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "m_1u=m_2w,\\quad h=wt+gt^2/2",
+    "second_relation": "t=u/g,\\quad u^2=gh/(m_1/m_2+1/2)"
+  },
+  {
+    "key": "ex18",
+    "feature": "移动点 $A$ 到粒子的有向位置矢量",
+    "caption": "例18的分析与计算",
+    "note": "图~\\ref{fig:solution-ex18}~中移动点 $A$ 到粒子的有向位置矢量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect s=(vt,-ut),\\quad\\vect p=(mv,0)",
+    "second_relation": "L_{A,z}^{\\rm abs}=muvt,\\quad L_{A,z}^{\\rm rel}=0"
+  },
+  {
+    "key": "ex19",
+    "feature": "A侧绳上升与B侧绳下降的速度约束",
+    "caption": "例19的分析与计算",
+    "note": "图~\\ref{fig:solution-ex19}~中A侧绳上升与B侧绳下降的速度约束，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "v_A=u,\\quad v_B=v-u",
+    "second_relation": "(2mr^2+I_p)u=mr^2v"
+  },
+  {
+    "key": "ex20",
+    "feature": "两猴到轮轴水平面的不同高度 $s,s^{\\prime}$",
+    "caption": "例20的分析与计算",
+    "note": "图~\\ref{fig:solution-ex20}~中两猴到轮轴水平面的不同高度 $s,s^{\\prime}$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "ma-m^{\\prime}a^{\\prime}=(m^{\\prime}-m)g",
+    "second_relation": "t^2=2(ms-m^{\\prime}s^{\\prime})/[(m^{\\prime}-m)g]"
+  },
+  {
+    "key": "ex21",
+    "feature": "下端冲量 $J$ 到质心 $C$ 的垂直力臂",
+    "caption": "例21的分析与计算",
+    "note": "图~\\ref{fig:solution-ex21}~中下端冲量 $J$ 到质心 $C$ 的垂直力臂，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "V_C=J/(2m),\\quad I_C=ml^2/2",
+    "second_relation": "\\omega=J/(ml)"
+  },
+  {
+    "key": "ex22",
+    "feature": "杆与 $OC$ 夹 $45^\\circ$ 时的两个径向外力",
+    "caption": "例22的分析与计算",
+    "note": "图~\\ref{fig:solution-ex22}~中杆与 $OC$ 夹 $45^\\circ$ 时的两个径向外力，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect\\tau_C=\\vect s\\times(\\vect F_B-\\vect F_A)",
+    "second_relation": "\\vect F=k\\vect r\\ \\Rightarrow\\ \\vect\\tau_C=0"
+  },
+  {
+    "key": "ex23",
+    "feature": "$f-r$ 平面上有方向的闭合路径",
+    "caption": "例23的分析与计算",
+    "note": "图~\\ref{fig:solution-ex23}~中$f-r$ 平面上有方向的闭合路径，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "W_{\\rm int}=\\oint f\\dd r",
+    "second_relation": "W=(f_{\\rm high}-f_{\\rm low})(r_{\\max}-r_{\\min})"
+  },
+  {
+    "key": "ex24",
+    "feature": "质心的逆时针公转与两球的顺时针自转",
+    "caption": "例24的分析与计算",
+    "note": "图~\\ref{fig:solution-ex24}~中质心的逆时针公转与两球的顺时针自转，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "T=m\\Omega^2R^2+m\\omega^2r^2",
+    "second_relation": "L_{O,z}=2m\\Omega R^2-2m\\omega r^2"
+  },
+  {
+    "key": "ex25",
+    "feature": "单次升高 $H$ 和从静止加速到 $V$ 的示例过程",
+    "caption": "例25的分析与计算",
+    "note": "图~\\ref{fig:solution-ex25}~中单次升高 $H$ 和从静止加速到 $V$ 的示例过程，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\hbox{单次示例：}\\quad E_{\\rm mech}=MgH+MV^2/2",
+    "second_relation": "m_{\\rm food}=E_{\\rm mech}/(\\eta q_{\\rm food})"
+  },
+  {
+    "key": "ex26",
+    "feature": "弹簧经过原长时相反方向的两速度",
+    "caption": "例26的分析与计算",
+    "note": "图~\\ref{fig:solution-ex26}~中弹簧经过原长时相反方向的两速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "m_1\\vect v_1+m_2\\vect v_2=\\vect0",
+    "second_relation": "|p_1|=|p_2|=\\delta\\sqrt{\\mu k}"
+  },
+  {
+    "key": "ex27",
+    "feature": "两球距离从 $a$ 缩到 $a/2$ 时的相向速度",
+    "caption": "例27的分析与计算",
+    "note": "图~\\ref{fig:solution-ex27}~中两球距离从 $a$ 缩到 $a/2$ 时的相向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\mu w^2/2=Gm_1m_2/a",
+    "second_relation": "w=\\sqrt{2G(m_1+m_2)/a}"
+  },
+  {
+    "key": "ex28",
+    "feature": "固定端 $O$、可变球半径 $r$ 与切向转动",
+    "caption": "例28的分析与计算",
+    "note": "图~\\ref{fig:solution-ex28}~中固定端 $O$、可变球半径 $r$ 与切向转动，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "(I_t+mr^2)\\omega=(I_t+ml^2/4)\\omega_0",
+    "second_relation": "v_{\\rm out}^2=\\dot r_{\\rm out}^2+l^2\\omega_{\\rm out}^2"
+  },
+  {
+    "key": "ex29",
+    "feature": "两球的水平质心约束及上球高度 $l\\cos\\theta$",
+    "caption": "例29的分析与计算",
+    "note": "图~\\ref{fig:solution-ex29}~中两球的水平质心约束及上球高度 $l\\cos\\theta$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dot\\theta^2=4g(\\cos\\alpha-\\cos\\theta)/[l(1+\\sin^2\\theta)]",
+    "second_relation": "N>0\\quad(\\alpha\\le\\theta<\\pi/2)"
+  },
+  {
+    "key": "ex30",
+    "feature": "下端固定时的法向 $N$ 与有符号摩擦 $f$",
+    "caption": "例30的分析与计算",
+    "note": "图~\\ref{fig:solution-ex30}~中下端固定时的法向 $N$ 与有符号摩擦 $f$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dot\\theta^2=2g(\\cos\\alpha-\\cos\\theta)/l",
+    "second_relation": "|f|\\le\\mu_sN\\quad\\hbox{取首次越界}"
+  },
+  {
+    "key": "ex31",
+    "feature": "上端冲量产生的离地参数 $\\Lambda$",
+    "caption": "例31的分析与计算",
+    "note": "图~\\ref{fig:solution-ex31}~中上端冲量产生的离地参数 $\\Lambda$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "N(0^+)=mg(2-\\Lambda)",
+    "second_relation": "\\Lambda>2:\\quad\\ddot y_1(0^+)=g(\\Lambda/2-1)>0"
+  },
+  {
+    "key": "ex32",
+    "feature": "接触点 $q$ 的法线与质心偏置力臂",
+    "caption": "例32的分析与计算",
+    "note": "图~\\ref{fig:solution-ex32}~中接触点 $q$ 的法线与质心偏置力臂，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "m_{\\rm eff}^{-1}=M^{-1}+b_n^2/I_C",
+    "second_relation": "K=-(1+e)m_{\\rm eff}v_n^-"
+  },
+  {
+    "key": "ex33",
+    "feature": "离地后两端旋转高度与首次接触事件",
+    "caption": "例33的分析与计算",
+    "note": "图~\\ref{fig:solution-ex33}~中离地后两端旋转高度与首次接触事件，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "y_2/l=(1-\\tau^2+\\cos2\\tau)/2",
+    "second_relation": "\\tau_*=0.8900586\\ldots,\\quad y_1>0"
+  },
+  {
+    "key": "ex34",
+    "feature": "水平杆右端球2承受的法向冲量",
+    "caption": "例34的分析与计算",
+    "note": "图~\\ref{fig:solution-ex34}~中水平杆右端球2承受的法向冲量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "1/m_{\\rm eff}=1/(2m)+(l/2)^2/I_C=1/m",
+    "second_relation": "K=(1+e)mv,\\quad v_{2y}^+=ev"
+  },
+  {
+    "key": "ex35",
+    "feature": "桌沿 $O$ 处沿杆正向 $\\vect e$ 与实际摩擦 $|f|$ 的分解",
+    "caption": "例35的分析与计算",
+    "note": "图~\\ref{fig:solution-ex35}~中桌沿 $O$ 处沿杆正向 $\\vect e$ 与实际摩擦 $|f|$ 的分解，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "N=9mg\\cos\\theta/5,\\quad f=-12mg\\sin\\theta/5",
+    "second_relation": "\\mu_s=4\\tan\\alpha/3"
+  },
+  {
+    "key": "ex36",
+    "feature": "右球 $m$ 与左球 $2m$ 的相对距离",
+    "caption": "例36的分析与计算",
+    "note": "图~\\ref{fig:solution-ex36}~中右球 $m$ 与左球 $2m$ 的相对距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "R=a/3+v_0t/3,\\quad\\ddot q+\\omega^2(q-a)=0",
+    "second_relation": "x_1=R+2q/3,\\quad x_2=R-q/3"
+  },
+  {
+    "key": "ex37",
+    "feature": "两天体到同一个质心 $C$ 的反向位置",
+    "caption": "例37的分析与计算",
+    "note": "图~\\ref{fig:solution-ex37}~中两天体到同一个质心 $C$ 的反向位置，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\mu\\ddot{\\vect r}=-K\\vect r/r^3",
+    "second_relation": "T^2=4\\pi^2a_r^3/[G(m_S+m_E)]"
+  },
+  {
+    "key": "ex38",
+    "feature": "两星间距 $L$ 与质心半径之和",
+    "caption": "例38的分析与计算",
+    "note": "图~\\ref{fig:solution-ex38}~中两星间距 $L$ 与质心半径之和，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "R_1=M_2L/(M_1+M_2)",
+    "second_relation": "\\Omega^2=G(M_1+M_2)/L^3"
+  },
+  {
+    "key": "ex39",
+    "feature": "$\\rho>0$ 时最近点 $Q$ 处垂直于径矢 $OQ$ 的切向速度",
+    "caption": "例39的分析与计算",
+    "note": "图~\\ref{fig:solution-ex39}~中$\\rho>0$ 时最近点 $Q$ 处垂直于径矢 $OQ$ 的切向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\mu v_\\infty^2/2=L^2/(2\\mu a^2)+mc/(2a^2)",
+    "second_relation": "a^2=\\rho^2+3c/(2v_\\infty^2)"
+  },
+  {
+    "key": "ex40",
+    "feature": "偏置质心 $C$ 与下端到质心的距离 $d_1$",
+    "caption": "例40的分析与计算",
+    "note": "图~\\ref{fig:solution-ex40}~中偏置质心 $C$ 与下端到质心的距离 $d_1$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "I_C=\\mu L^2,\\quad I_C\\omega=Jd_1",
+    "second_relation": "V_C=J/M,\\quad\\omega=J/(m_1L)"
+  },
+  {
+    "key": "ex41",
+    "feature": "初始横向速度与相对角动量",
+    "caption": "例41的分析与计算",
+    "note": "图~\\ref{fig:solution-ex41}~中初始横向速度与相对角动量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "E_{\\rm rel}=mv_0^2/4,\\quad L=mav_0/2",
+    "second_relation": "\\beta x_*^2(x_*-1)=x_*+1"
+  },
+  {
+    "key": "ex42",
+    "feature": "碰后左端粘连质量 $2m$ 的横向速度",
+    "caption": "例42的分析与计算",
+    "note": "图~\\ref{fig:solution-ex42}~中碰后左端粘连质量 $2m$ 的横向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\mu=2m/3,\\quad E_{\\rm rel}=mV_0^2/12",
+    "second_relation": "E_{\\rm rel}=mV_0^2/108+2ka^2"
+  },
+  {
+    "key": "ex43",
+    "feature": "两端对称位置与中球之间的半绳长度 $a$",
+    "caption": "例43的分析与计算",
+    "note": "图~\\ref{fig:solution-ex43}~中两端对称位置与中球之间的半绳长度 $a$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect r_\\pm=(x_M-a\\sin\\phi,\\pm a\\cos\\phi)",
+    "second_relation": "\\dot\\phi^2=Mv^2/[a^2(M+2m\\sin^2\\phi)]"
+  },
+  {
+    "key": "ex44",
+    "feature": "光滑钉两侧可变径向长度与各自的切向速度",
+    "caption": "例44的分析与计算",
+    "note": "图~\\ref{fig:solution-ex44}~中光滑钉两侧可变径向长度与各自的切向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "r_1+r_2=4a,\\quad |L_1|=mav,\\quad |L_2|=3mav",
+    "second_relation": "1=\\dot r_1^2/v^2+[x^{-2}+9(4-x)^{-2}]/2"
+  },
+  {
+    "key": "ex45",
+    "feature": "最高点处两物体相对质心的水平速度增量",
+    "caption": "例45的分析与计算",
+    "note": "图~\\ref{fig:solution-ex45}~中最高点处两物体相对质心的水平速度增量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "W\\delta v_H+w\\delta v_O=0",
+    "second_relation": "x_H-x_O=u v_0\\sin\\alpha/g"
+  },
+  {
+    "key": "ex46",
+    "feature": "最高点的水平爆炸增量及相同下落时间",
+    "caption": "例46的分析与计算",
+    "note": "图~\\ref{fig:solution-ex46}~中最高点的水平爆炸增量及相同下落时间，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "E=\\mu w^2/2,\\quad t_d=v/g",
+    "second_relation": "d=(v/g)\\sqrt{2E/\\mu}"
+  },
+  {
+    "key": "ex47",
+    "feature": "入射球与初始静止靶的同一直线速度",
+    "caption": "例47的分析与计算",
+    "note": "图~\\ref{fig:solution-ex47}~中入射球与初始静止靶的同一直线速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "m_1v_1+m_2v_2=m_1u,\\quad v_2-v_1=u",
+    "second_relation": "v_1=(m_1-m_2)u/M,\\quad v_2=2m_1u/M"
+  },
+  {
+    "key": "ex48",
+    "feature": "两条互相垂直的等质量出射速度",
+    "caption": "例48的分析与计算",
+    "note": "图~\\ref{fig:solution-ex48}~中两条互相垂直的等质量出射速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\Theta=2\\theta,\\quad |v_1|=u\\cos\\theta",
+    "second_relation": "E_1/E_{\\rm in}=\\cos^2\\theta"
+  },
+  {
+    "key": "ex49",
+    "feature": "实验室入射方向及对应的相对散射偏角",
+    "caption": "例49的分析与计算",
+    "note": "图~\\ref{fig:solution-ex49}~中实验室入射方向及对应的相对散射偏角，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "b=K\\cot(\\Theta/2)/(2E_{\\rm rel})",
+    "second_relation": "f_C=[K/(4E_{\\rm rel})]^2\\sin^{-4}(\\Theta/2)"
+  },
+  {
+    "key": "ex50",
+    "feature": "同一射线与速度圆的两个交点 $P_+,P_-$",
+    "caption": "例50的分析与计算",
+    "note": "图~\\ref{fig:solution-ex50}~中同一射线与速度圆的两个交点 $P_+,P_-$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\Theta_1=\\theta+\\arcsin(2\\sin\\theta)",
+    "second_relation": "\\Theta_2=\\theta+\\pi-\\arcsin(2\\sin\\theta)"
+  },
+  {
+    "key": "ex51",
+    "feature": "两交点对应的速度长度与质心偏角",
+    "caption": "例51的分析与计算",
+    "note": "图~\\ref{fig:solution-ex51}~中两交点对应的速度长度与质心偏角，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "D_\\pm=\\lambda\\cos\\theta\\pm\\sqrt{1-\\lambda^2\\sin^2\\theta}",
+    "second_relation": "f_L=\\sum_{j\\ \\rm allowed} f_C(\\Theta_j)D_j^2/h"
+  },
+  {
+    "key": "ex52",
+    "feature": "中点与端点到固定铰 $A$ 的不同距离",
+    "caption": "例52的分析与计算",
+    "note": "图~\\ref{fig:solution-ex52}~中中点与端点到固定铰 $A$ 的不同距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "mv_0L/2=I_A\\omega,\\quad I_A=9mL^2/4",
+    "second_relation": "v_{\\rm mid}=v_0/9,\\quad J_{A,x}=-2mv_0/9"
+  },
+  {
+    "key": "ex53",
+    "feature": "对地静止的小块与运动主体的粘连",
+    "caption": "例53的分析与计算",
+    "note": "图~\\ref{fig:solution-ex53}~中对地静止的小块与运动主体的粘连，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "(m+\\delta m)v_+=mv",
+    "second_relation": "\\Delta T_{\\rm loss}=m\\delta m v^2/[2(m+\\delta m)]"
+  },
+  {
+    "key": "ex54",
+    "feature": "向后的相对喷速与向上的主体速度",
+    "caption": "例54的分析与计算",
+    "note": "图~\\ref{fig:solution-ex54}~中向后的相对喷速与向上的主体速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "m\\dot v=-mg-c\\dot m",
+    "second_relation": "v=v_0+c\\ln(m_0/m)-gt"
+  },
+  {
+    "key": "ex55",
+    "feature": "发射台上的单向支持力及离台阈值",
+    "caption": "例55的分析与计算",
+    "note": "图~\\ref{fig:solution-ex55}~中发射台上的单向支持力及离台阈值，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "N=mg-cq\\ge0\\quad(v=0)",
+    "second_relation": "m_L=cq/g,\\quad t_L=(m_0-m_L)/q"
+  },
+  {
+    "key": "ex56",
+    "feature": "静止来流进入向下运动的雨滴",
+    "caption": "例56的分析与计算",
+    "note": "图~\\ref{fig:solution-ex56}~中静止来流进入向下运动的雨滴，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dd[(M+\\lambda t)v]/\\dd t=(M+\\lambda t)g",
+    "second_relation": "v=g(Mt+\\lambda t^2/2)/(M+\\lambda t)"
+  },
+  {
+    "key": "ex57",
+    "feature": "球形雨滴的半径增长与静止来流",
+    "caption": "例57的分析与计算",
+    "note": "图~\\ref{fig:solution-ex57}~中球形雨滴的半径增长与静止来流，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dot r=c_s/(4\\pi\\rho)=\\lambda",
+    "second_relation": "v=g(r^4-a^4)/(4\\lambda r^3)"
+  },
+  {
+    "key": "ex58",
+    "feature": "自由下落直段和已静止的地面绳堆",
+    "caption": "例58的分析与计算",
+    "note": "图~\\ref{fig:solution-ex58}~中自由下落直段和已静止的地面绳堆，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "R=\\sigma gh+\\sigma v^2,\\quad v^2=2gh",
+    "second_relation": "R=3\\sigma gh\\quad(0\\le h<l)"
+  },
+  {
+    "key": "ex59",
+    "feature": "同速链条的水平段与悬垂段",
+    "caption": "例59的分析与计算",
+    "note": "图~\\ref{fig:solution-ex59}~中同速链条的水平段与悬垂段，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\sigma l\\dot x^2/2-\\sigma gx^2/2=-\\sigma gl^2/8",
+    "second_relation": "x=(l/2)\\cosh(\\sqrt{g/l}\\,t)"
+  },
+  {
+    "key": "ex60",
+    "feature": "相对枪喷出方向与有符号对地子弹速度",
+    "caption": "例60的分析与计算",
+    "note": "图~\\ref{fig:solution-ex60}~中相对枪喷出方向与有符号对地子弹速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dd(mv)/\\dd t+qU=-\\mu_fmg",
+    "second_relation": "U=-u\\quad\\hbox{或}\\quad U=v-u"
+  },
+  {
+    "key": "ex61",
+    "feature": "自由粒子随时间伸长的位置矢量",
+    "caption": "例61的分析与计算",
+    "note": "图~\\ref{fig:solution-ex61}~中自由粒子随时间伸长的位置矢量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "D(\\tau)-D(0)=mv^2\\tau",
+    "second_relation": "2\\overline T+\\overline W=mv^2\\ne0"
+  },
+  {
+    "key": "ex62",
+    "feature": "有界振动位置与速度的周期相位",
+    "caption": "例62的分析与计算",
+    "note": "图~\\ref{fig:solution-ex62}~中有界振动位置与速度的周期相位，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "D=-mA^2\\omega\\sin2\\omega t/2",
+    "second_relation": "2\\overline T+\\overline W=[D(\\tau)-D(0)]/\\tau"
+  },
+  {
+    "key": "ex63",
+    "feature": "质心系内各粒子的相对位置与成对引力",
+    "caption": "例63的分析与计算",
+    "note": "图~\\ref{fig:solution-ex63}~中质心系内各粒子的相对位置与成对引力，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "W=\\sum_{i<j}-Gm_im_j/r_{ij}=U",
+    "second_relation": "2\\overline T+\\overline U=0,\\quad E=-\\overline T"
+  },
+  {
+    "key": "ex64",
+    "feature": "平衡点两侧振动的弹簧势能",
+    "caption": "例64的分析与计算",
+    "note": "图~\\ref{fig:solution-ex64}~中平衡点两侧振动的弹簧势能，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "W=x(-kx)=-2U",
+    "second_relation": "\\overline T=\\overline U=kA^2/4"
+  },
+  {
+    "key": "ex65",
+    "feature": "中心距离小于硬核距离 $d$ 的禁入区",
+    "caption": "例65的分析与计算",
+    "note": "图~\\ref{fig:solution-ex65}~中中心距离小于硬核距离 $d$ 的禁入区，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "f(r)=-1\\ (r<d),\\quad f(r)=0\\ (r>d)",
+    "second_relation": "B_2=-2\\pi\\int f r^2\\dd r=2\\pi d^3/3"
+  },
+  {
+    "key": "ex66",
+    "feature": "硬核和吸引壳在 $d,a$ 两处的分段边界",
+    "caption": "例66的分析与计算",
+    "note": "图~\\ref{fig:solution-ex66}~中硬核和吸引壳在 $d,a$ 两处的分段边界，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "f=-1,\\quad e^{\\epsilon/(k_B\\Theta)}-1,\\quad0",
+    "second_relation": "B_2=2\\pi[d^3-(a^3-d^3)(e^{\\epsilon/(k_B\\Theta)}-1)]/3"
+  },
+  {
+    "key": "tr01",
+    "feature": "相距 $a$ 的两条反向力作用线",
+    "caption": "训练题1的分析与计算",
+    "note": "图~\\ref{fig:solution-tr01}~中相距 $a$ 的两条反向力作用线，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect F_1+\\vect F_2=0",
+    "second_relation": "\\vect\\tau_O=-aF\\vect k"
+  },
+  {
+    "key": "tr02",
+    "feature": "靠近重球的质心 $C$ 及两段距离",
+    "caption": "训练题2的分析与计算",
+    "note": "图~\\ref{fig:solution-tr02}~中靠近重球的质心 $C$ 及两段距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "m_1d_1=m_2d_2,\\quad d_1+d_2=L",
+    "second_relation": "m_2=3m_1:\\quad d_1=3L/4"
+  },
+  {
+    "key": "tr03",
+    "feature": "半径 $a$ 的上半圆线元",
+    "caption": "训练题3的分析与计算",
+    "note": "图~\\ref{fig:solution-tr03}~中半径 $a$ 的上半圆线元，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dd m=\\lambda a\\dd\\varphi",
+    "second_relation": "Y_C=a\\int_0^\\pi\\sin\\varphi\\dd\\varphi/\\pi=2a/\\pi"
+  },
+  {
+    "key": "tr04",
+    "feature": "密度随 $x$ 增大的杆段",
+    "caption": "训练题4的分析与计算",
+    "note": "图~\\ref{fig:solution-tr04}~中密度随 $x$ 增大的杆段，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "M=3\\lambda_0L/2,\\quad J=5\\lambda_0L^2/6",
+    "second_relation": "X_C=J/M=5L/9"
+  },
+  {
+    "key": "tr05",
+    "feature": "偏向正 $x$ 的孔心 $H$",
+    "caption": "训练题5的分析与计算",
+    "note": "图~\\ref{fig:solution-tr05}~中偏向正 $x$ 的孔心 $H$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "J_x=-\\sigma\\pi r^2d",
+    "second_relation": "X_C=-r^2d/(R^2-r^2)"
+  },
+  {
+    "key": "tr06",
+    "feature": "恒定外力和质心初始动量的不同方向",
+    "caption": "训练题6的分析与计算",
+    "note": "图~\\ref{fig:solution-tr06}~中恒定外力和质心初始动量的不同方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect P=\\vect P_0+\\vect Ft",
+    "second_relation": "\\vect R=\\vect R_0+\\vect P_0t/M+\\vect Ft^2/(2M)"
+  },
+  {
+    "key": "tr07",
+    "feature": "匀速平移的新参考系及各粒子速度减量",
+    "caption": "训练题7的分析与计算",
+    "note": "图~\\ref{fig:solution-tr07}~中匀速平移的新参考系及各粒子速度减量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\vect v_i^{\\prime}=\\vect v_i-\\vect U",
+    "second_relation": "T^{\\prime}=T-\\vect U\\cdot\\vect P+MU^2/2"
+  },
+  {
+    "key": "tr08",
+    "feature": "水平炮管的出膛速度与炮身反冲",
+    "caption": "训练题8的分析与计算",
+    "note": "图~\\ref{fig:solution-tr08}~中水平炮管的出膛速度与炮身反冲，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "v-U=V\\quad\\hbox{或}\\quad v=V",
+    "second_relation": "U=-mV/(M+m)\\quad\\hbox{或}\\quad U=-mV/M"
+  },
+  {
+    "key": "tr09",
+    "feature": "A、B两侧绳速度相反的约束",
+    "caption": "训练题9的分析与计算",
+    "note": "图~\\ref{fig:solution-tr09}~中A、B两侧绳速度相反的约束，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "(2mr^2+I_p)u=mr^2v",
+    "second_relation": "I_p=mr^2:\\quad v_A=v/3,\\quad v_B=2v/3"
+  },
+  {
+    "key": "tr10",
+    "feature": "移动点 $A$ 引入的力臂变化",
+    "caption": "训练题10的分析与计算",
+    "note": "图~\\ref{fig:solution-tr10}~中移动点 $A$ 引入的力臂变化，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dot{\\vect L}_A=\\vect\\tau_A-\\vect v_A\\times\\vect P",
+    "second_relation": "\\vect\\tau_A=0\\ \\Rightarrow\\ \\dot{\\vect L}_A=-\\vect v_A\\times\\vect P"
+  },
+  {
+    "key": "tr11",
+    "feature": "任意移动基点 $A$ 及其速度",
+    "caption": "训练题11的分析与计算",
+    "note": "图~\\ref{fig:solution-tr11}~中任意移动基点 $A$ 及其速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "T=\\tfrac12Mv_A^2+T_{\\rm rel}+\\vect v_A\\cdot(\\vect P-M\\vect v_A)",
+    "second_relation": "A=C:\\quad\\vect P-M\\vect v_A=0"
+  },
+  {
+    "key": "tr12",
+    "feature": "球到固定端的半径与管的转动惯量",
+    "caption": "训练题12的分析与计算",
+    "note": "图~\\ref{fig:solution-tr12}~中球到固定端的半径与管的转动惯量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\omega_{\\rm out}/\\omega_0=(4\\eta+3)/[4(\\eta+3)]",
+    "second_relation": "\\eta\\to0:\\quad\\omega_{\\rm out}\\to\\omega_0/4"
+  },
+  {
+    "key": "tr13",
+    "feature": "杆倒平前两端的水平速度和上球竖直速度",
+    "caption": "训练题13的分析与计算",
+    "note": "图~\\ref{fig:solution-tr13}~中杆倒平前两端的水平速度和上球竖直速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "v_{1x}=-l\\dot\\theta\\cos\\theta/2",
+    "second_relation": "v_{1x}\\to0,\\quad v_{2y}\\to-\\sqrt{2gl\\cos\\alpha}"
+  },
+  {
+    "key": "tr14",
+    "feature": "一般初始悬长 $x_0$ 与下滑方向",
+    "caption": "训练题14的分析与计算",
+    "note": "图~\\ref{fig:solution-tr14}~中一般初始悬长 $x_0$ 与下滑方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\ddot x=(g/l)x",
+    "second_relation": "v_{\\rm exit}^2=v_0^2+g(l^2-x_0^2)/l"
+  },
+  {
+    "key": "tr15",
+    "feature": "相对圆轨道的弹簧张力与切向速度",
+    "caption": "训练题15的分析与计算",
+    "note": "图~\\ref{fig:solution-tr15}~中相对圆轨道的弹簧张力与切向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "k(r_0-a)r_0^3=L^2/\\mu",
+    "second_relation": "W^{\\prime\\prime}(r_0)=k(4-3a/r_0)>0"
+  },
+  {
+    "key": "tr16",
+    "feature": "两星间距 $L$ 与共同质心的轨道",
+    "caption": "训练题16的分析与计算",
+    "note": "图~\\ref{fig:solution-tr16}~中两星间距 $L$ 与共同质心的轨道，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "T\\propto L^{3/2}/\\sqrt{M_1+M_2}",
+    "second_relation": "M_{\\rm tot}\\mapsto2M_{\\rm tot}:\\quad T^{\\prime}=T/\\sqrt2"
+  },
+  {
+    "key": "tr17",
+    "feature": "位置的 $x,y$ 分量及不同线性回复系数",
+    "caption": "训练题17的分析与计算",
+    "note": "图~\\ref{fig:solution-tr17}~中位置的 $x,y$ 分量及不同线性回复系数，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\ddot x=-\\omega_x^2x,\\quad\\ddot y=-\\omega_y^2y",
+    "second_relation": "\\dot L_z=\\mu(\\omega_x^2-\\omega_y^2)xy"
+  },
+  {
+    "key": "tr18",
+    "feature": "从原点作速度圆切线形成的直角三角形",
+    "caption": "训练题18的分析与计算",
+    "note": "图~\\ref{fig:solution-tr18}~中从原点作速度圆切线形成的直角三角形，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\sin\\theta_{\\max}=1/3",
+    "second_relation": "\\max(E_2/E_{\\rm in})=3/4\\quad(\\Theta=\\pi)"
+  },
+  {
+    "key": "tr19",
+    "feature": "等质量的半角关系及出射角域",
+    "caption": "训练题19的分析与计算",
+    "note": "图~\\ref{fig:solution-tr19}~中等质量的半角关系及出射角域，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "\\dd\\Omega_C/\\dd\\Omega_L=4\\cos\\theta",
+    "second_relation": "f_L=\\cos\\theta/\\pi,\\quad P(\\theta\\le\\theta_0)=\\sin^2\\theta_0"
+  },
+  {
+    "key": "tr20",
+    "feature": "碰后共同速度对应的质心平移",
+    "caption": "训练题20的分析与计算",
+    "note": "图~\\ref{fig:solution-tr20}~中碰后共同速度对应的质心平移，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "V=m_1u/(m_1+m_2)",
+    "second_relation": "\\Delta T=\\mu u^2/2"
+  },
+  {
+    "key": "tr21",
+    "feature": "相对排气方向和燃烧段质量变化",
+    "caption": "训练题21的分析与计算",
+    "note": "图~\\ref{fig:solution-tr21}~中相对排气方向和燃烧段质量变化，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "q=m_f/t_b,\\quad m_0=2m_f",
+    "second_relation": "v_b=c\\ln2-gt_b"
+  },
+  {
+    "key": "tr22",
+    "feature": "静止凝结物的入流与下落方向",
+    "caption": "训练题22的分析与计算",
+    "note": "图~\\ref{fig:solution-tr22}~中静止凝结物的入流与下落方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "z=\\lambda t/M\\ll1,\\quad\\ln(1+z)=z-z^2/2+\\cdots",
+    "second_relation": "s=gt^2/2-\\lambda gt^3/(6M)+O(\\lambda^2)"
+  },
+  {
+    "key": "tr23",
+    "feature": "两体相对位置与成对力的点积",
+    "caption": "训练题23的分析与计算",
+    "note": "图~\\ref{fig:solution-tr23}~中两体相对位置与成对力的点积，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "W_{12}=\\vect r_{12}\\cdot\\vect F_{12}",
+    "second_relation": "[W]=[D]/[t]=\\mathrm{kg\\,m^2\\,s^{-2}}"
+  },
+  {
+    "key": "tr24",
+    "feature": "两种幂次势能的不同齐次性",
+    "caption": "训练题24的分析与计算",
+    "note": "图~\\ref{fig:solution-tr24}~中两种幂次势能的不同齐次性，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。",
+    "first_relation": "W=U_{-1}-2U_2",
+    "second_relation": "2\\overline T=-\\overline U_{-1}+2\\overline U_2\\quad(\\tau\\to\\infty)"
+  }
+]

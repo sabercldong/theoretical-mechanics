@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.95]
+\draw[guide](0,-.4)--(0,4.1)node[above]{旋转轴};\coordinate(A)at(0,3.4);\coordinate(P)at(1.6,.63);
+\draw[ink,thick](A)--(P)node[midway,right]{$l$};\fill(P)circle(4pt)node[below right]{$m$};
+\draw(0,2.55)arc(-90:-60:.85);\node at(.35,2.35){$\theta$};
+\draw[force](P)--++(.9695,.56)node[above right]{$\vect v'$};
+\node[draw=ink,circle,inner sep=1.2pt,fill=white]at(P){$\otimes$};
+\node[anchor=west,align=left]at(3.8,2.85){$\Om$ 向上，$\vect e_r$ 向右\\$\vect e_\theta$ 垂直纸面向里\\$\vect v_t=\Omega l\sin\theta\vect e_\theta$\\$\vect v'\perp\vect v_t,\quad\dot\theta>0$};
+\draw[guide](0,.63)--(P);\draw[<->](0,.12)--(1.6,.12)node[midway,below]{$l\sin\theta$};
+\node[align=center]at(1.05,-.65){$\otimes$：牵连速度向纸内};
+\end{tikzpicture}

@@ -1,0 +1,68 @@
+[
+  {
+    "file": "理论力学-c3-1.pptx",
+    "sha256": "fac2f6b13e7a5ef8615dc99254ff9207a5bfe6361776ed25db51f8dcc72d83d7",
+    "slides": 51,
+    "cached_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-刚体力学/工作文件/课件渲染/理论力学-c3-1.pdf",
+    "cached_pdf_pages": 51,
+    "media_count": 220,
+    "fresh_pdf": "第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-1.pdf",
+    "fresh_pdf_sha256": "7912fe59a50ae5b614a845e3e614db9a0ac2b0dcc84c03edbaf690635e355d96",
+    "fresh_pdf_pages": 51
+  },
+  {
+    "file": "理论力学-c3-2.pptx",
+    "sha256": "37f2c225a9eda836d128857824f0222b7c76cd394f6d8c14717bac83193f83fc",
+    "slides": 26,
+    "cached_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-刚体力学/工作文件/课件渲染/理论力学-c3-2.pdf",
+    "cached_pdf_pages": 26,
+    "media_count": 176,
+    "fresh_pdf": "第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-2.pdf",
+    "fresh_pdf_sha256": "d2cc4a07120ad97942575b97ba8f5b14812299a5cb8a69ab07b82c0c62ce6b48",
+    "fresh_pdf_pages": 26
+  },
+  {
+    "file": "理论力学-c3-3.pptx",
+    "sha256": "ae22d0ca054dc3287fe16bfd6542be3d6671d4b7edadd2b82fbed3db6194e577",
+    "slides": 50,
+    "cached_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-刚体力学/工作文件/课件渲染/理论力学-c3-3.pdf",
+    "cached_pdf_pages": 50,
+    "media_count": 154,
+    "fresh_pdf": "第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "fresh_pdf_sha256": "23acd00c1efe9b5863083026468452ef63df24f7313087dcf910d7c4ba3117c6",
+    "fresh_pdf_pages": 50
+  },
+  {
+    "file": "理论力学-c3-4.pptx",
+    "sha256": "b3b10f75ab1246e741c402fe1f4b6a14e075bfa174c9be6760efc4d2b71b2a4d",
+    "slides": 28,
+    "cached_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-刚体力学/工作文件/课件渲染/理论力学-c3-4.pdf",
+    "cached_pdf_pages": 28,
+    "media_count": 166,
+    "fresh_pdf": "第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "fresh_pdf_sha256": "b94c261cfa40a8c66d4f1d7ae781cebd629de16e4b30fd1cb9eb42326161d05f",
+    "fresh_pdf_pages": 28
+  },
+  {
+    "file": "理论力学-c3-5.pptx",
+    "sha256": "6682cdcf81f69ae0088873d318ec48672526487a1ce32daca97db3328f524b6b",
+    "slides": 41,
+    "cached_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-刚体力学/工作文件/课件渲染/理论力学-c3-5.pdf",
+    "cached_pdf_pages": 41,
+    "media_count": 251,
+    "fresh_pdf": "第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-5.pdf",
+    "fresh_pdf_sha256": "7557aba6e09e50ce1147ff0f3174ece07a368730f17fa8a184f24568dab2898e",
+    "fresh_pdf_pages": 41
+  },
+  {
+    "file": "理论力学-c3-6.pptx",
+    "sha256": "6be6faff3da0e8096ec67aa685e5ccf655f507f9c2b21510bb8711843acb5418",
+    "slides": 28,
+    "cached_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-刚体力学/工作文件/课件渲染/理论力学-c3-6.pdf",
+    "cached_pdf_pages": 28,
+    "media_count": 99,
+    "fresh_pdf": "第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-6.pdf",
+    "fresh_pdf_sha256": "47b17aee8c48435a0a4faa371214f0902c3715f9caad8d7dfcaf7daa4413878d",
+    "fresh_pdf_pages": 28
+  }
+]

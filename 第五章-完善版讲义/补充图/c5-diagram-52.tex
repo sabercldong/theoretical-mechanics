@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=1cm,y=.7cm]
+\draw[->](-.5,-6.8)--(-.5,1)node[above]{$E$};\fill[soft](0,0)rectangle(4.3,.6);\draw[guide](0,0)--(4.3,0)node[right]{$E=0$：电离限};
+\draw[ink,thick](0,-6.4)--(4,-6.4)node[right]{$n=1,\ E=-E_R$};
+\draw[ink,thick](0,-1.6)--(4,-1.6)node[right]{$n=2,\ E=-E_R/4$};
+\draw[ink,thick](0,-.7111)--(4,-.7111)node[right]{$n=3,\ E=-E_R/9$};
+\draw[ink](0,-.4)--(3.3,-.4);\draw[ink](0,-.256)--(3.3,-.256);
+\draw[force](1,-.7111)--(1,-1.6);\draw[force](2.4,-1.6)--(2.4,-6.4);\node[right]at(2.4,-4){$h\nu=E_u-E_l$};
+\node[anchor=west,align=left]at(5,-4.5){能级间隔随 $n$ 增大而缩小\\束缚能为负，电离阈值为零};
+\end{tikzpicture}

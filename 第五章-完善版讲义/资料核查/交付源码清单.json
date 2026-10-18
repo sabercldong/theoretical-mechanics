@@ -1,0 +1,1430 @@
+{
+  "file_count": 356,
+  "files": [
+    {
+      "path": "第五章-分析力学讲义-完善版.tex",
+      "sha256": "90eed40cc7868622c277ecc2a7f34c447d7590a51931f2e2337e7a6d7f9959e5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "294e1a99a0e42b3c0434a3c43907ac54250a2dc277604d12f01e577f940ed44d"
+    },
+    {
+      "path": "原图/c5-1-p002-fixed-pivot.pdf",
+      "sha256": "c9257dbdb898fc495345e9cf3d04c9fdcff172e3ac6a60159f296e094713f673"
+    },
+    {
+      "path": "原图/c5-1-p002-moving-pivot.pdf",
+      "sha256": "31b8891d918e73905de7c87d67bbbf04c71188cf06500705bf442a6be8664b6d"
+    },
+    {
+      "path": "原图/c5-1-p003-rigid-pendulum.pdf",
+      "sha256": "94aab14416eeba30b21fcade9c937eb6e77b1837f8a0b2cd59197d20ef0075d5"
+    },
+    {
+      "path": "原图/c5-1-p003-string-pendulum.pdf",
+      "sha256": "8d9f44dbef20ed17322dd658fa2d4909d1f4d38154f7b6c35a6918c4620fa790"
+    },
+    {
+      "path": "原图/c5-1-p004-straight-rolling-disk.pdf",
+      "sha256": "9f33fb467d0e650c4afba864d27f5cd8d4d1d0a14704569a12203fadb37fe39b"
+    },
+    {
+      "path": "原图/c5-1-p007-driven-hoop.pdf",
+      "sha256": "bb12a3ad7046d77fe7944863a0ab1d51746de9dd9b11d17f37b3e8bf35b99c1a"
+    },
+    {
+      "path": "原图/c5-1-p007-elastic-atwood.pdf",
+      "sha256": "fdd0450915f025c22adf00b0e8e1f337b1fa7f29c4ca46ed78181e059ec656ea"
+    },
+    {
+      "path": "原图/c5-1-p007-euler-angles.pdf",
+      "sha256": "00953b734cba76b7d8f9319e014936efaf37e75c05214f3b8d6be0b3c03db120"
+    },
+    {
+      "path": "原图/c5-1-p007-helix.pdf",
+      "sha256": "d959d3122ca98579a6acd6b3cc92037913d0cb73c8f38cfe09b4391b782f1718"
+    },
+    {
+      "path": "原图/c5-1-p007-planar-fixed-body.pdf",
+      "sha256": "f7823ea00c757fa9bddfe4ef278bdc78bdc5f87f397d7b0ca7c5d527ed1bbcc6"
+    },
+    {
+      "path": "原图/c5-1-p008-linkage-virtual.pdf",
+      "sha256": "7e607b9f7a9a85a47a89c47b101ebda96ea53e50339a1253d64e07be567ef164"
+    },
+    {
+      "path": "原图/c5-1-p008-surface-virtual.pdf",
+      "sha256": "4fbe4be2be5628df2cc20aab7190cf84c12cec68ad69a60cf6564fc99dda830f"
+    },
+    {
+      "path": "原图/c5-1-p010-ideal-hinge.pdf",
+      "sha256": "b53bec99120bbfff71b7a87838dc70ecb09302be845340705fa00a287a0c9b5c"
+    },
+    {
+      "path": "原图/c5-1-p010-rolling-contact.pdf",
+      "sha256": "ac66f22fda0ef11de3dae4a77e45bc3d3924deff555828aa9ee51d09b2045e89"
+    },
+    {
+      "path": "原图/c5-1-p010-smooth-support.pdf",
+      "sha256": "78bd4f544bdda09ecc065553b792b674809b711e3c61cc1addc6f9c01de9bfa8"
+    },
+    {
+      "path": "原图/c5-1-p014-pendulum-displacement.pdf",
+      "sha256": "5d97268093b5fa82aa5d632cb459754d8a1700824d223fbf41914f3f94e848db"
+    },
+    {
+      "path": "原图/c5-1-p016-wall-edge-rod.pdf",
+      "sha256": "64bd2f81e4533cfa6301ff410ca047b84324abfb68f9051e07ec9d817c8a5a0d"
+    },
+    {
+      "path": "原图/c5-1-p018-two-rods-static.pdf",
+      "sha256": "996918a32b7dee92ca2cfe2578a8150dbab365fda5692d07ae195e1039322d7f"
+    },
+    {
+      "path": "原图/c5-1-p020-paraboloid-cylinder.pdf",
+      "sha256": "9b42824eafa8b44d8ccdf5b665e140e3c1f1b5c2ba13e00707df6a9418c4373a"
+    },
+    {
+      "path": "原图/c5-1-p020-paraboloid-plane.pdf",
+      "sha256": "070aecea45ec898e583d2aa94b1d74cede59f942a90447bff526ea7db63c87b3"
+    },
+    {
+      "path": "原图/c5-1-p024-three-rods-released.pdf",
+      "sha256": "f3995625ced8d2ed63c0063c00792da2b2741d42fa97225dc3eeb4077fc1fd26"
+    },
+    {
+      "path": "原图/c5-1-p028-steering-disk.pdf",
+      "sha256": "01cc22054e4b5f091417f6c2c1676761ccf33f25482b9502f482f0645aefb721"
+    },
+    {
+      "path": "原图/c5-1-p029-three-point-linkage.pdf",
+      "sha256": "c7e58b54eaa4b06b2db4a08b5975a8a61d21db147e773cfe92c4ebe9f6019e94"
+    },
+    {
+      "path": "原图/c5-1-p031-right-angle-rod.pdf",
+      "sha256": "59ad650f3a7c643c3236f0b995e15de353b09cc70f04c95db4170f64b3de9d36"
+    },
+    {
+      "path": "原图/c5-1-p032-crank-forces.pdf",
+      "sha256": "5d3011c5446db3e731fc1165c9c82499bf40e3a2d5cd40ce96beec86177ac238"
+    },
+    {
+      "path": "原图/c5-1-p033-crank-virtual.pdf",
+      "sha256": "1626ac99dde6974354440b79585090411b39ec5b9bb37890d33ecff65cc9a96a"
+    },
+    {
+      "path": "原图/c5-1-p034-two-balls-tensions.pdf",
+      "sha256": "d0fad4181c3dc3eb374f8084b8eeaf5c1a162dff73d476a878d0f57e82436b96"
+    },
+    {
+      "path": "原图/c5-2-p010-top-string-cylinder.pdf",
+      "sha256": "9ac63dfbd8bacf70b875de5da69247a992534de3aa74cca33745545b205216f2"
+    },
+    {
+      "path": "原图/c5-2-p011-two-pulleys.pdf",
+      "sha256": "2380a84b27c1c6b2f65c36de25b535b4f70f83064bd137930f31eabc69758603"
+    },
+    {
+      "path": "原图/c5-2-p012-spring-pendulum.pdf",
+      "sha256": "53f175e7c0e9451dce1abf37733286e88a61b4f435fc63fa422cc5a0814f0c34"
+    },
+    {
+      "path": "原图/c5-2-p019-rotating-tube.pdf",
+      "sha256": "438267e84218d5728c1c580816393e4a7b6183d5779a4d36dc36a2292e6d72d5"
+    },
+    {
+      "path": "原图/c5-2-p020-hoop-moving-axes.pdf",
+      "sha256": "9ab61e7b4c720f94e12f2158a04201936e1f1588e72d9544169c02e286765e19"
+    },
+    {
+      "path": "原图/c5-2-p025-tube-two-balls.pdf",
+      "sha256": "fd24fa288f10f1670bafe18d0684c0e4b5695f7acf23da8840256f3f6e26000c"
+    },
+    {
+      "path": "原图/c5-2-p026-ball-on-sphere.pdf",
+      "sha256": "b2d6cff958c066c9bbe5e9703630571bc43e1e20dc6d3414ea743ffcddca8b0f"
+    },
+    {
+      "path": "原图/c5-2-p027-table-hole-balls.pdf",
+      "sha256": "e7bc929a3aea944e2282fa9e6322c9662b16166708289574770e609ec34175a5"
+    },
+    {
+      "path": "原图/c5-2-p029-free-two-balls.pdf",
+      "sha256": "a3a41cc40726d6ddf0990fde60b572996e98add3f7dd596d0d710cecab6ac46a"
+    },
+    {
+      "path": "原图/c5-2-p031-planet-gear.pdf",
+      "sha256": "19814e8389c0afc5d462a5179991071982de62424232b0b57b02ed0190e898df"
+    },
+    {
+      "path": "原图/c5-2-p035-two-rods-dynamic.pdf",
+      "sha256": "ae8af303d351ff9af7d7ab5bce95420e6dfbaf0f20f31284ecdd17b6e5bb9419"
+    },
+    {
+      "path": "原图/c5-2-p036-slider-pendulum.pdf",
+      "sha256": "010b65c2801aa8d2c5374f4cc8a57fc0fb357c79997c2def840af06e87b9cd63"
+    },
+    {
+      "path": "原图/c5-2-p041-wedge-apparatus.pdf",
+      "sha256": "3c68a9bd36003940f6b88945831e646d236d6411bfb2b1729aced76e1ff80a6f"
+    },
+    {
+      "path": "原图/c5-2-p042-wedge-velocities.pdf",
+      "sha256": "3272e579ac580bfe0923b610c7cb52bf51b7b150976a98188f51c4ffe49182eb"
+    },
+    {
+      "path": "原图/c5-2-p043-rolling-cart.pdf",
+      "sha256": "f9e58a36227d476d1110d4aeac4617a4b01058951ac72ee5bc71f67812396438"
+    },
+    {
+      "path": "原图/c5-3-p003-brachistochrone-paths.pdf",
+      "sha256": "60794458c4f8f8b37244a065824e6e7bfd7e6383a7964b3fa5956c45be04bf3e"
+    },
+    {
+      "path": "原图/c5-3-p004-function-variation.pdf",
+      "sha256": "56c36e74e96eed1fc3d0bd372b205fdad1d754651b843ee718c71fc9d078e4a8"
+    },
+    {
+      "path": "原图/c5-3-p009-surface-boundaries.pdf",
+      "sha256": "76098b0d00244d208f1c15640036274edc043ad007784df950416988e31d71c1"
+    },
+    {
+      "path": "原图/c5-3-p010-catenary-family.pdf",
+      "sha256": "65502de5726f6f969a0f8d8ccf735e223ea1464420e137cc5e04d1f29a7e33ed"
+    },
+    {
+      "path": "原图/c5-3-p010-cycloid-family.pdf",
+      "sha256": "f2497d77bb31459ee2f8558a735ddcd898e935e39a5d0c2ca272fc02223b547b"
+    },
+    {
+      "path": "原图/c5-3-p010-revolution-mesh.pdf",
+      "sha256": "5a6cddee209525c1818aa672f9033ee0cd506e4d6973a999aa5e4c5166a61e41"
+    },
+    {
+      "path": "原图/c5-3-p011-particle-refraction.pdf",
+      "sha256": "d82353f96e071b317cc793b3e83b1be47be8a9ad5b62b57974c3849a0ac40249"
+    },
+    {
+      "path": "原图/c5-3-p013-fermat-refraction.pdf",
+      "sha256": "0dcd22ed6fa562e3c73aac2ab8703fd1fe6c353e683df29d4329942fc11abd2b"
+    },
+    {
+      "path": "原图/c5-3-p014-action-path-family.pdf",
+      "sha256": "a691b459ac7f14ea703ff459d94d5a74a79ad30b133b4ee2ae7c5812c3f52ecf"
+    },
+    {
+      "path": "原图/c5-3-p020-action-variation.pdf",
+      "sha256": "6fe31808f9d93b08d54ab23c69d094749a1a27a0b8805c5d22d557de8659c952"
+    },
+    {
+      "path": "原图/c5-4-p005-ball-inner-roll.pdf",
+      "sha256": "c400d4d046649dcb0d994b3273723eaa9868fc10faacbc74b188cb356b009a1f"
+    },
+    {
+      "path": "原图/c5-4-p006-half-cylinder.pdf",
+      "sha256": "9267826062f92fa69fcc2fb3d35638ee67b557021ffce010870623e885ededc6"
+    },
+    {
+      "path": "原图/c5-4-p009-three-springs.pdf",
+      "sha256": "bb19ef0ad0defa83974af0da5d49d8ef9e62f7dcaa9211df17befcf6129836a5"
+    },
+    {
+      "path": "原图/c5-4-p011-three-spring-animation.pdf",
+      "sha256": "bdef6a68a28520f2f48c6d372032c1cf5c4a0f6ce422868c5a9eddeb802d9a92"
+    },
+    {
+      "path": "原图/c5-4-p018-slider-pendulum-velocity.pdf",
+      "sha256": "23b26da6c30f106fc1925742b8b0a763f5dfd58d2fd2c36d70c99304de8d9c5a"
+    },
+    {
+      "path": "原图/c5-4-p020-slider-release-frame.pdf",
+      "sha256": "99d1937ee015ea4f81af5d2f14f228ad33c7e64e96b6c4397f880269669eedbf"
+    },
+    {
+      "path": "原图/c5-4-p021-double-spring-pendulum.pdf",
+      "sha256": "229a617d482b4ab2ca6be3dbeb90c6a8bb9487c52ab2ff7d5ed9a7b32b6e5093"
+    },
+    {
+      "path": "原图/c5-4-p024-double-pendulum.pdf",
+      "sha256": "92153b2635bdd6e417b4fb7da1305c9690713a33a2f52c32550b1ac72ce0c43b"
+    },
+    {
+      "path": "原图/c5-5-p015-rotating-tube.pdf",
+      "sha256": "b2f1a65cad387dcc19d7dee4dd57110b89115a2c639a1710daa02a96137bba12"
+    },
+    {
+      "path": "原图/c5-7-p016-parabolic-grid.pdf",
+      "sha256": "7fef9e89244ef7372cb114d84f85aa53c8620e5aab184b09f4631fbac8693ccd"
+    },
+    {
+      "path": "原图/c5-7-p016-prolate-grid.pdf",
+      "sha256": "211b17adbae08461f282e93d1b236fed9f3f963b24941dc8a0f51c5267e0f675"
+    },
+    {
+      "path": "原图/c5-8-p002-oscillator-phase.pdf",
+      "sha256": "e8c075f5f88a1ba17c736ecd5653ed7e496cd97c73c7de965e4b2f4d076b2b45"
+    },
+    {
+      "path": "原图/c5-8-p003-phase-local.pdf",
+      "sha256": "c587e8cd1b91927c21e96f5e78cefedf41d466ef0cfe18bbdc5c98c26bd6ad3c"
+    },
+    {
+      "path": "原图/c5-8-p003-potential-local.pdf",
+      "sha256": "a18da0a8fcf0ee735ab7bc222b686b166a0c64652b8f140d328718f0cdfb39fe"
+    },
+    {
+      "path": "原图/c5-8-p008-annular-sector.pdf",
+      "sha256": "73e6e1fbca7af2274f35a14bc5410c7e0a4e01864e47e69dd09906cefc789868"
+    },
+    {
+      "path": "原图/c5-8-p008-disk.pdf",
+      "sha256": "b70c24d375199648535a430d104485ced75c2443166a2c48c125781068e28ae3"
+    },
+    {
+      "path": "原图/c5-8-p008-material-domain.pdf",
+      "sha256": "4f5f6359fe7e4b05c7015bd66e41fb669e4554e6621f3f59a0ac1ec6298666e9"
+    },
+    {
+      "path": "原图/c5-8-p008-sector.pdf",
+      "sha256": "2245799ce1fee248609b7d0c22f76a1d33ad142444cc9faf9f6d761877e18438"
+    },
+    {
+      "path": "原图/c5-8-p010-ducks-video-still.pdf",
+      "sha256": "fc21e1e537483530bc461ff217e82bc3477171787ca55de673027523735a3cff"
+    },
+    {
+      "path": "原图/c5-8-p013-theory-domains.pdf",
+      "sha256": "dc8c9871b550489dd9b7166b8dea5418ff4a7e9e322e6ee19ed370b7a13092ee"
+    },
+    {
+      "path": "原图/c5-8-p018-hydrogen-series.pdf",
+      "sha256": "2e219035983a17d6a09dbcc65c8a8188e6510416a822cc30166ecf2cee4fc77d"
+    },
+    {
+      "path": "原图/c5-8-p018-hydrogen-spectrum.pdf",
+      "sha256": "9820bd2f43a289741c15ddf917ea4c6668f553a8432e97f5ee0cef078330b1ea"
+    },
+    {
+      "path": "原图/c5-8-p020-fixed-endpoint-paths.pdf",
+      "sha256": "9e11a620c3f07da3248b5fe4daeecfb16b93c4699d73fadfe8f0231f1fbcd3ff"
+    },
+    {
+      "path": "原图/c5-8-p021-double-slit.pdf",
+      "sha256": "bb05d43ed063baffbdd2a3d2d3e43ced51dfc73dc16f2b90b45312b4e1481a0d"
+    },
+    {
+      "path": "原图/c5-9-p005-string.pdf",
+      "sha256": "63a19e67975a9ef040d3e9c4fb5da9024275f9ec16bb0b8f588814136449d16b"
+    },
+    {
+      "path": "原图/c5-9-p008-string-modes.pdf",
+      "sha256": "972d2fe50f4845be9de3525753626d3d68c50cfa496e442ac1e28dff43abf517"
+    },
+    {
+      "path": "原图/c5-9-p009-drum.pdf",
+      "sha256": "3a685abcac04a48a7fd596076dbb17df8632c8daa056a6f4efe81f97d4ddb70c"
+    },
+    {
+      "path": "补充图/c5-diagram-01.tex",
+      "sha256": "9cca0b51ad39d16f2facd920bfebf4c0dae711f55fe8bc5d1cf1c17d32e588d0"
+    },
+    {
+      "path": "补充图/c5-diagram-02.tex",
+      "sha256": "bf87707dcb52333114b16d145d4303e136c98b855f42f747e503c304fe08cd8e"
+    },
+    {
+      "path": "补充图/c5-diagram-03.tex",
+      "sha256": "55fedc00dc7223927dd359141a80e33ba31da450363a8c678e2e0af6523034d9"
+    },
+    {
+      "path": "补充图/c5-diagram-04.tex",
+      "sha256": "3ab91c81562bebb048a7ee39edc226b183fdc3244ff7647f79e2db0c545d29b0"
+    },
+    {
+      "path": "补充图/c5-diagram-05.tex",
+      "sha256": "2f7f62160716130ae7ff2df5350666d5f9103e0893d9f916b799d27ce17f1044"
+    },
+    {
+      "path": "补充图/c5-diagram-06.tex",
+      "sha256": "7b909f35975f99d53727534c645a4ddb4b08788782c3331f4cb4fbf47ec23e3e"
+    },
+    {
+      "path": "补充图/c5-diagram-07.tex",
+      "sha256": "5cf33fff8f16b33787bf26b8aa46761aa2188ec77d381a37b448b153365c9839"
+    },
+    {
+      "path": "补充图/c5-diagram-08.tex",
+      "sha256": "d14c12dd2f91b9db5575dbd17b96cedd751fda55ec2e04b0bf1a1aa0271cea0b"
+    },
+    {
+      "path": "补充图/c5-diagram-09.tex",
+      "sha256": "8da5b37f88598162c1b371c9b64d2a60cbdc44cfb3002ad7534c560518fc0758"
+    },
+    {
+      "path": "补充图/c5-diagram-10.tex",
+      "sha256": "04cf7124bdf826f30ff4f89bda6355b53b92cfe8b1ac4211b1af0509581e9ae1"
+    },
+    {
+      "path": "补充图/c5-diagram-11.tex",
+      "sha256": "0033dc34cac5eb8bc9ec5f3b9932df78fdd4a70cb5a09e7336b84541b895688e"
+    },
+    {
+      "path": "补充图/c5-diagram-12.tex",
+      "sha256": "c040e16663d17a164d648dc40d58b795f855a4db17e76761061c2d7a330fe87e"
+    },
+    {
+      "path": "补充图/c5-diagram-13.tex",
+      "sha256": "f404b68881e863e95fa977d638dbd6f2477fcdac1d3f6f7e9c565e23f1f86ee6"
+    },
+    {
+      "path": "补充图/c5-diagram-14.tex",
+      "sha256": "08c622168219a1de73119f22f44aad32889de26642178ab181aab73220446c52"
+    },
+    {
+      "path": "补充图/c5-diagram-15.tex",
+      "sha256": "88c74feef9caa38ce1b1bcb9da21161f78f5511c7f7411312edae26428b45d1f"
+    },
+    {
+      "path": "补充图/c5-diagram-16.tex",
+      "sha256": "c7122c7d519008d2ec69034e8475fb99216d16aba8fa500c7c60176ccf231a0a"
+    },
+    {
+      "path": "补充图/c5-diagram-17.tex",
+      "sha256": "0557bfdd8aeb32c74c3f8bf38a3e79782522087bca19e9abe13ae2f8aa0cdd07"
+    },
+    {
+      "path": "补充图/c5-diagram-18.tex",
+      "sha256": "dfd47134d8bffa0699d6d822bb71ee84567afc1f868c01581c3d4522371e36e1"
+    },
+    {
+      "path": "补充图/c5-diagram-19.tex",
+      "sha256": "09e48233e12be9dcbec4efb2ea67fb0de0481a3f9469700e4aacd496ec066202"
+    },
+    {
+      "path": "补充图/c5-diagram-20.tex",
+      "sha256": "a4de2c458e8c566ffa7e2255a5f369ab5ac5662b2b7f607eebe30f72e69d49ad"
+    },
+    {
+      "path": "补充图/c5-diagram-21.tex",
+      "sha256": "8e15bb7862052cd4e25e24626e2f4813ad85256d00bd2533ac1ab3fcd745f272"
+    },
+    {
+      "path": "补充图/c5-diagram-22.tex",
+      "sha256": "948d833b137034519edfe0128bccaaf07f62c1fdbd48d307083f81eaf4ee308e"
+    },
+    {
+      "path": "补充图/c5-diagram-23.tex",
+      "sha256": "32666e7eeeecfd3b5e85d8ed4f6776aa72e6e2f62b9394e8c59d31c8c8ca97d2"
+    },
+    {
+      "path": "补充图/c5-diagram-24.tex",
+      "sha256": "5382310c0c8ce7bd55fc8594c1de117c0b710db7f7c70c738f67ae2ad7ace16e"
+    },
+    {
+      "path": "补充图/c5-diagram-25.tex",
+      "sha256": "9d75d2a2ab1941b67782f81da0e611d556bb69fdbb6758487ca8ce59723695ce"
+    },
+    {
+      "path": "补充图/c5-diagram-26.tex",
+      "sha256": "ab4de9f1437b56256adac485799420b24222a37a4d7691453d98f71908560b9a"
+    },
+    {
+      "path": "补充图/c5-diagram-27.tex",
+      "sha256": "bf0e2303a7e2845e64ac1045aaf1c12fe94a31c612e210467d7e9a26e5d2204f"
+    },
+    {
+      "path": "补充图/c5-diagram-28.tex",
+      "sha256": "c58f14955ab0b56f5428b9b08ada491847351bb1a8220627446b406d0c57ca4b"
+    },
+    {
+      "path": "补充图/c5-diagram-29.tex",
+      "sha256": "5f6d16a9e21bc0e7426c1f580cea68eed5d87eb7678d00ac2718419587d26326"
+    },
+    {
+      "path": "补充图/c5-diagram-30.tex",
+      "sha256": "a153f62334313a515ad877404dcf56f355f9ced917dd55bb8472a8d0bd442901"
+    },
+    {
+      "path": "补充图/c5-diagram-31.tex",
+      "sha256": "ee29d04c80d95798565c079a9b89dfef0e170e8ad07f650bb603ce686cf08aad"
+    },
+    {
+      "path": "补充图/c5-diagram-32.tex",
+      "sha256": "bbc4f1e2ff3b5874fca671600b3332dee2475be6bcb62685e47d088d99fa4e78"
+    },
+    {
+      "path": "补充图/c5-diagram-33.tex",
+      "sha256": "f437769bd4f98d4d5ed8c1d8772c75e1f0057385e6cea01cd160bbdcf4e97a64"
+    },
+    {
+      "path": "补充图/c5-diagram-34.tex",
+      "sha256": "8692fb97e7c05feb7c3c6753afb164c6d6de6d102041599df5b4409a764b9d90"
+    },
+    {
+      "path": "补充图/c5-diagram-35.tex",
+      "sha256": "3975b4fa57152da87db45b1a574c7504cd069df62c68ff0cce3f39f596675edc"
+    },
+    {
+      "path": "补充图/c5-diagram-36.tex",
+      "sha256": "4596511af6236df61813c2c929455b0bceeafdd96dadf3477eb7fd448d8f342c"
+    },
+    {
+      "path": "补充图/c5-diagram-37.tex",
+      "sha256": "e5a50d8a3f3bdb38b79651bc20a9ddda8f1ae928e2f7245aea693a555cca1809"
+    },
+    {
+      "path": "补充图/c5-diagram-38.tex",
+      "sha256": "bd81e8dc2127443bdef6e956effca25316ac4882ba20b79ac374b26d482089e9"
+    },
+    {
+      "path": "补充图/c5-diagram-39.tex",
+      "sha256": "e939821ef11f9700fa1492c34352ccd1bfb528f11a7b1371927a865fb2e99537"
+    },
+    {
+      "path": "补充图/c5-diagram-40.tex",
+      "sha256": "78147f7323e53398d32dbb812a930dd2e595c9395b6ce78e5ca2053c98e92006"
+    },
+    {
+      "path": "补充图/c5-diagram-41.tex",
+      "sha256": "72d36916a84fc9cdae83e529c83ea8ddb4b80c4b2c91ed1d8144fc9a374e820a"
+    },
+    {
+      "path": "补充图/c5-diagram-42.tex",
+      "sha256": "7eaa8aab417b0d5289a2229e7e7cf7b6d2a1ffd823780d2fc398738a08d00080"
+    },
+    {
+      "path": "补充图/c5-diagram-43.tex",
+      "sha256": "2f2ab8ec4ef677e8c0da1a2e54a570d879f65a0fcd9c3130722acf76f2d50b49"
+    },
+    {
+      "path": "补充图/c5-diagram-44.tex",
+      "sha256": "d2f4cd6ca0feac76c3920f0a749a4414f9a96cb34e9a35167b6511897379e02e"
+    },
+    {
+      "path": "补充图/c5-diagram-45.tex",
+      "sha256": "0c85636fce6d0712016e960ab95977cb3a9ec06f01ad83851a396f4d7e1b072b"
+    },
+    {
+      "path": "补充图/c5-diagram-46.tex",
+      "sha256": "e165d516914feafa82ef68e04b404cb45078fed7632225766bf43d87ccfa4e06"
+    },
+    {
+      "path": "补充图/c5-diagram-47.tex",
+      "sha256": "edf3e6e953bf49140139bfef9b65d981e5b22163cd9f6440c2af01818d9bf90d"
+    },
+    {
+      "path": "补充图/c5-diagram-48.tex",
+      "sha256": "0ea316b20fa0effe164a93e7702c40b07448a9925b98b6766ec550af0ce9cb7e"
+    },
+    {
+      "path": "补充图/c5-diagram-49.tex",
+      "sha256": "6f36379b550094c241299a83e2d3c3f09c8ac7e68df755b6df5ae1052f9d53fb"
+    },
+    {
+      "path": "补充图/c5-diagram-50.tex",
+      "sha256": "8d0a49b005e034eedcf5c3fda4dc490addbeba4955cf2ce5ecc94f8b1ce027ac"
+    },
+    {
+      "path": "补充图/c5-diagram-51.tex",
+      "sha256": "2a99f6ff8e169fad476df4a929cd48267089e513939d73fb568daf6959d19dce"
+    },
+    {
+      "path": "补充图/c5-diagram-52.tex",
+      "sha256": "f9f62d22b4bee3b0ef3f7b3bf2de3b5c1d4682b164e222e1d6e22dcfc9333207"
+    },
+    {
+      "path": "补充图/c5-diagram-53.tex",
+      "sha256": "bc2e0149664d54245346d879b556aa84595ee2cbb8284b459d6b9d37527bb8d5"
+    },
+    {
+      "path": "补充图/c5-diagram-54.tex",
+      "sha256": "5ca7d2329671a74f729f418cea238b9a561c410cb251b7a85995ee8ded09eeb2"
+    },
+    {
+      "path": "补充图/c5-diagram-55.tex",
+      "sha256": "c6801f887310f0bb702c15dfeed9083b8ce396437f5f3713b0162dc81edd93d5"
+    },
+    {
+      "path": "补充图/c5-diagram-56.tex",
+      "sha256": "4dd37df8d7ff93a7ad48d6c4fb13e0c93735e4b3d2c7e6d66520d527c506d92f"
+    },
+    {
+      "path": "补充图/c5-diagram-57.tex",
+      "sha256": "f22e30145e124e00935653c281d47869965d2b92a5af156df02017c8a87c9738"
+    },
+    {
+      "path": "补充图/c5-diagram-58.tex",
+      "sha256": "0c1be882252cc1fb46f28c35bc3fa2906ad292feedb57cb4ce8a0373a391985d"
+    },
+    {
+      "path": "补充图/c5-diagram-59.tex",
+      "sha256": "82951241547bf2d9ba3dbf25b886039b44dc341b5873cbd623ae4648d1bfa1e4"
+    },
+    {
+      "path": "补充图/c5-diagram-60.tex",
+      "sha256": "69c6856c9daf08e2d0f52ced9f4c23e059ecc61e75bfd7b5f663fe4a68c2c6c4"
+    },
+    {
+      "path": "补充图/c5-diagram-61.tex",
+      "sha256": "e508012e05c93b35d43d3541e53ca110f3ee8caedfd1dab32fcf90086212f602"
+    },
+    {
+      "path": "补充图/c5-diagram-62.tex",
+      "sha256": "1626439c711e96696300f57aecd2dd179fc2b32772c12d377d16c4246809ba90"
+    },
+    {
+      "path": "补充图/c5-equal-cart.tex",
+      "sha256": "7f893d96f8e763bc46926cffcc3078775c6da1fd9018f97515e5d101210c2c4f"
+    },
+    {
+      "path": "题图/ex01.tex",
+      "sha256": "e1d6b92310d5ca892fbfd4da0a26d62d0ac68d25d3206cfc659cb42cd7101e2d"
+    },
+    {
+      "path": "题图/ex02.tex",
+      "sha256": "59336a2aa65016e4da5cc77d74a5b206074f5d151e27cbd5fe335efbc883c224"
+    },
+    {
+      "path": "题图/ex03.tex",
+      "sha256": "ea77302b55fdf58f9617ac8aeb5b68372b439d2091cbf9c445ab9be135cc00ba"
+    },
+    {
+      "path": "题图/ex04.tex",
+      "sha256": "9dfd2aa780172bab7f2f0cb9db1d850dd40a0c0f897fecffc02a8f8e84290249"
+    },
+    {
+      "path": "题图/ex05.tex",
+      "sha256": "0152109691b428b4599705d20198eaf9cb97eff720d27bf0f6fb1bba6df0f3ec"
+    },
+    {
+      "path": "题图/ex06.tex",
+      "sha256": "c31a0da7dbcd7a581a23c0d89567d7a8ba620c258df304da78a469237ba474c0"
+    },
+    {
+      "path": "题图/ex07.tex",
+      "sha256": "5ba31a11dd5fd82e4d53db2aa647f83f443fb683014f6af0fa359c354e140a95"
+    },
+    {
+      "path": "题图/ex08.tex",
+      "sha256": "e72bc58d3cdb37fa63e29189ef4132c8a1b60fbdddaf1bfc9568937c962432b9"
+    },
+    {
+      "path": "题图/ex09.tex",
+      "sha256": "4136f7caafa32b0ff0c81cd2363ddc5c14e5c3e96e02d193ec8f21fae3affa9f"
+    },
+    {
+      "path": "题图/ex10.tex",
+      "sha256": "51296faf881a20bfcfdd119fc13c16076fd735e9df9e36711bb333d84f7b1632"
+    },
+    {
+      "path": "题图/ex11.tex",
+      "sha256": "d43fa7a4f800cf6abdccce9e973727e068c08b42dacc8c50d069ee8e62252b73"
+    },
+    {
+      "path": "题图/ex12.tex",
+      "sha256": "6e1ea127c36f819196ed885131be1ef12abc5c0cfe66034ccf0b5212804f9436"
+    },
+    {
+      "path": "题图/ex13.tex",
+      "sha256": "0f81cf62d3fc04f0f5ba6764088607870543d6a97fd7f42516dd0ec434063199"
+    },
+    {
+      "path": "题图/ex14.tex",
+      "sha256": "d5fa89ba6e2f65521dd632718a846bafddeffcdab0ee891a1564c1c598d62c44"
+    },
+    {
+      "path": "题图/ex15.tex",
+      "sha256": "fc04336fcb6a072379599136b930bcb3e263acee85adaeec041132453f1a3065"
+    },
+    {
+      "path": "题图/ex16.tex",
+      "sha256": "674f2e04ff74f7ea60f9880f2601ed07b223ce60399e22315d0a1b22ad5668a6"
+    },
+    {
+      "path": "题图/ex17.tex",
+      "sha256": "1f1f733d3b37f9222e797be39422f823896cbb4416d367ed4829b75db4b14150"
+    },
+    {
+      "path": "题图/ex18.tex",
+      "sha256": "89b5fc06caad84dcc4896d95515faa6db109339fc40c8950a79d8957d5820858"
+    },
+    {
+      "path": "题图/ex19.tex",
+      "sha256": "c4b135ae4421b772108fd3f791b0a39f24525e8056af43d6f23912ae93d5bbb0"
+    },
+    {
+      "path": "题图/ex20.tex",
+      "sha256": "17c5a89a12e2b6a2e33ae8ec65508981860f35437db7874f1781ebbdd78f6772"
+    },
+    {
+      "path": "题图/ex21.tex",
+      "sha256": "04ea4c4ecd39ace30f089e3b503043931b2e8f1c7e09d55f3bd699b385d0a0a4"
+    },
+    {
+      "path": "题图/ex22.tex",
+      "sha256": "9e6ef419ace421ee8df190b600b86e97c979749334fe23326b6241dee5e674ba"
+    },
+    {
+      "path": "题图/ex23.tex",
+      "sha256": "08275dde781bccfb26c735d443e0743192a4f6cdf1ec0e3e429d54e7513433f9"
+    },
+    {
+      "path": "题图/ex24.tex",
+      "sha256": "e88fe5fc6a4e8a2802796b2022172557d990760ebcc165f2e3cb3d3d27a3dade"
+    },
+    {
+      "path": "题图/ex25.tex",
+      "sha256": "a0d88a799d4d022e49f4fb8e23006a11ece07f8ab60c3e59116d60842fb8b9d0"
+    },
+    {
+      "path": "题图/ex26.tex",
+      "sha256": "258a77f615c64f4e76383fa51ba1dd8e6b5f642692c1541197049e37b7e304af"
+    },
+    {
+      "path": "题图/ex27.tex",
+      "sha256": "1a4c704cbb3f88e55c23c4d55ba44233c87e312868a338664d839ec37fbd2718"
+    },
+    {
+      "path": "题图/ex28.tex",
+      "sha256": "f22a7347b7ac129d76a981cc6d29f67342fa4d3b4e0aa12a1050b34919343ced"
+    },
+    {
+      "path": "题图/ex29.tex",
+      "sha256": "7ed61ddcdf8705bfedf8782d375e02887181d96ca29579a39c3dd9ec8c4edf55"
+    },
+    {
+      "path": "题图/ex30.tex",
+      "sha256": "611f876565e799164de0eacd9da5a4be98a25ffeeed046c4e07a8aad9e3e1a59"
+    },
+    {
+      "path": "题图/ex31.tex",
+      "sha256": "f817dd0372e5965ff8ee5259120c4af7d889308cd5676c92b8e6f3f6fcd44e4a"
+    },
+    {
+      "path": "题图/ex32.tex",
+      "sha256": "dbbff9ef0f9599cae4af3da061260a03579bd60c43bd08b039e8303789d18c6b"
+    },
+    {
+      "path": "题图/ex33.tex",
+      "sha256": "99cf62f6b64d4d88b634564adf59f589e119fb8321de7ae4a6d6aaff82f1e935"
+    },
+    {
+      "path": "题图/ex34.tex",
+      "sha256": "75ab61960dd4323cc42a75e2b8f63ae0dd92bb4f7003fce6c74b1d7690affd11"
+    },
+    {
+      "path": "题图/ex35.tex",
+      "sha256": "269ac0f73ace454a6010a0f593145e4b6372a018639c67bfb7a8c5ffba2205e6"
+    },
+    {
+      "path": "题图/ex36.tex",
+      "sha256": "7ff8a02c8148b902942acc091bc57922703a9eb7b0272a73d2d671bb0384a38a"
+    },
+    {
+      "path": "题图/ex37.tex",
+      "sha256": "b1c3e4ddcdc47b1bbd282fbb945df96bf300666fe6646e3acaf7a60acc106570"
+    },
+    {
+      "path": "题图/ex38.tex",
+      "sha256": "06b44b7447997911124c348a669bbb13d165f9d266711be615bb920c11613e43"
+    },
+    {
+      "path": "题图/ex39.tex",
+      "sha256": "ae9db334a45a6b0a8fc1a61b7973eef1d72470b7b5dc48d73b50625efd725f89"
+    },
+    {
+      "path": "题图/ex40.tex",
+      "sha256": "ebe626b25655037abc7873ef08f3c2974f6d112665ed527734e761d392100f2b"
+    },
+    {
+      "path": "题图/ex41.tex",
+      "sha256": "35689c8e94f5a6a69553fe9148b01d39ac7501d9ecb6831c97317edaec464a9f"
+    },
+    {
+      "path": "题图/ex42.tex",
+      "sha256": "4070e1f0318429b60952dce2f98a2916a8aa0fb43a83ab6e18c6173226236086"
+    },
+    {
+      "path": "题图/ex43.tex",
+      "sha256": "05393e8cc5fa07d706fda0b9b61f7fa1a08a88ff20f581e98e50852e889dda34"
+    },
+    {
+      "path": "题图/ex44.tex",
+      "sha256": "4e7290a967a942b420dd4062aaa4cb06ae60bd30d20dca820ffa30eb9d90f65b"
+    },
+    {
+      "path": "题图/ex45.tex",
+      "sha256": "a48437e65226922e87261edbb8da4018f24c3b005ac1fa5413aff2a2b77e1c7d"
+    },
+    {
+      "path": "题图/ex46.tex",
+      "sha256": "b4238bb88488bd4b63f54384995858af6f655aa1230c90a6a889d48d7e792c96"
+    },
+    {
+      "path": "题图/ex47.tex",
+      "sha256": "42d7dec06bf7d2afb697e68090d3080ab07db3971528d57f6c67261910f8e1eb"
+    },
+    {
+      "path": "题图/ex48.tex",
+      "sha256": "83bb6c018533efb46edc09ca44b2a3674aec62811391bffb1cc3cef16ac27e5a"
+    },
+    {
+      "path": "题图/ex49.tex",
+      "sha256": "69ba75ef26bf1f0af5a2c71807304e213156fa6940400f141eba3a28de866330"
+    },
+    {
+      "path": "题图/ex50.tex",
+      "sha256": "f5dc7112a2a45ab9556aa9443cf12d2f1a2b1458f152d95d7977c33c58289949"
+    },
+    {
+      "path": "题图/ex51.tex",
+      "sha256": "b4386a72644f2c3f775112d881eabce189f3120d4fed3cd536ff3d2e1991f91c"
+    },
+    {
+      "path": "题图/ex52.tex",
+      "sha256": "addfb11b52ce06f2647a88251d22feba4db3a35e778b4396c6433d93530be18d"
+    },
+    {
+      "path": "题图/ex53.tex",
+      "sha256": "206ce7091040a5cad09a6dca0a4973dae28fbe385a4cee93e7f4bb39c5c4c9c7"
+    },
+    {
+      "path": "题图/ex54.tex",
+      "sha256": "5130c3c39d759d064a7b7540654d9341ffca939e94881bf1f9789d90304e5d9e"
+    },
+    {
+      "path": "题图/ex55.tex",
+      "sha256": "3703ec70a5a97ba591a31b115e521cf99441d210c166d243eec5965231b13cf1"
+    },
+    {
+      "path": "题图/ex56.tex",
+      "sha256": "8e2800646858d880b7a6534694ab0f1e8a5a98008ef4232e36451a385bc20db6"
+    },
+    {
+      "path": "题图/ex57.tex",
+      "sha256": "f50be0dbcbc81521666e847568069e56a753403d84cef062d3bb3f99f3e71837"
+    },
+    {
+      "path": "题图/ex58.tex",
+      "sha256": "c5ca9e3cf27f193fc82d974675129c358900278cda33b21ff39900a8e1ae3abc"
+    },
+    {
+      "path": "题图/ex59.tex",
+      "sha256": "5b0f712378521d641f6078fb4052329f6a3a2876a2f128089c6e442af94d04bb"
+    },
+    {
+      "path": "题图/ex60.tex",
+      "sha256": "5235d7f2e4d675e4a08e67f538c18473466e81af5bdd57d0e729dbb7f1c9a931"
+    },
+    {
+      "path": "题图/ex61.tex",
+      "sha256": "b793a27901b641d3930dcb2cb5030dc312456ba4b6405bb6107346694ab8c7d2"
+    },
+    {
+      "path": "题图/ex62.tex",
+      "sha256": "d5ae03993c4fd34ced197823c99f823b026ee50d4b1b0ed915b62344e794aa58"
+    },
+    {
+      "path": "题图/ex63.tex",
+      "sha256": "01f7904774b9c2cf656bf88f09d30412a6d4d87da393efbaee87646bff7b5171"
+    },
+    {
+      "path": "题图/ex64.tex",
+      "sha256": "6ed00c0b745fa88839168d38a1e3e99177da071a6e3d939b86fef7446974ae6b"
+    },
+    {
+      "path": "题图/ex65.tex",
+      "sha256": "1b537473d152acd9f3e6ea8e14458eb34dacc5e56b6e8a6e6d5bcffb0686a37b"
+    },
+    {
+      "path": "题图/ex66.tex",
+      "sha256": "40e638a7442414fc99b2249ddf85597f9c1aa2360ac8d166cdd4e57cf70a6122"
+    },
+    {
+      "path": "题图/ex67.tex",
+      "sha256": "52ea162dab513f0c8893a5a2ca8810e5eea0cd54625fccbac85c1550ac7f5790"
+    },
+    {
+      "path": "题图/ex68.tex",
+      "sha256": "65f070e68ec69a7e786ad68e3c35ee0e8e3aa613fa15c5d58ab2817e77589664"
+    },
+    {
+      "path": "题图/ex69.tex",
+      "sha256": "34ba757f7d113d27719ad65d6a18cb8763524ec8d2cba62861335bae009a5f83"
+    },
+    {
+      "path": "题图/ex70.tex",
+      "sha256": "f74142b79d09214a567302d55c65a35343514f303f1b75996767393337ed33cb"
+    },
+    {
+      "path": "题图/ex71.tex",
+      "sha256": "9f3fb0da6453e00c04ccead3a5943318b5715707b9723609491ace9efae99c2b"
+    },
+    {
+      "path": "题图/ex72.tex",
+      "sha256": "0b335b4a595c78cd369a94e6b510ea8cd403e0d8f1cca8ce2098e9f8d57acdf1"
+    },
+    {
+      "path": "题图/ex73.tex",
+      "sha256": "72481104a2e2ac379e71680f8b9262a2404e0ac271152f809fbf863a37058cbd"
+    },
+    {
+      "path": "题图/ex74.tex",
+      "sha256": "79acb2d85ed624ca30261c8c37873c92d6db335622fea96662da143852cbd8db"
+    },
+    {
+      "path": "题图/ex75.tex",
+      "sha256": "9b86618c25cc62e15b3d873fd19d2deb6261aa71e3bc755907649b0f16bf99f2"
+    },
+    {
+      "path": "题图/ex76.tex",
+      "sha256": "7896efba84f6417559fd456f563a651f6699bf38c839e64f157079d297d758b0"
+    },
+    {
+      "path": "题图/ex77.tex",
+      "sha256": "05d3d2a52b8db07def0cbc8c99b382bfd58fb1d4066c8ddc0d072e6aa6663e67"
+    },
+    {
+      "path": "题图/ex78.tex",
+      "sha256": "8f0a8246a8577fc3c5eee145438c58ccb161ef373e743baa068a68353fa38ae5"
+    },
+    {
+      "path": "题图/ex79.tex",
+      "sha256": "5d511af2f444eb055904ce1d6fc3c53d51dd2303cf310855b4b8f3a447006cf7"
+    },
+    {
+      "path": "题图/ex80.tex",
+      "sha256": "b1fad072db16dbe404ef8003ac8ef2c2981008633c745b1da0b81d85509981c0"
+    },
+    {
+      "path": "题图/ex81.tex",
+      "sha256": "d0b3ea32d0e24e316ade524c2e11be61621a854a7fc6d04e9b05d2a5b85a8257"
+    },
+    {
+      "path": "题图/ex82.tex",
+      "sha256": "b29e13bc91447b0723af419dae8aac77ec2c8ebeed395ae6072ea03183fc67c9"
+    },
+    {
+      "path": "题图/ex83.tex",
+      "sha256": "9a52c894cb963406e0c8f2a5c630ee3fd4518c2698b47044316dbc569a25a5f3"
+    },
+    {
+      "path": "题图/ex84.tex",
+      "sha256": "035e93923d8712ac0d69d134e26f59097951bfd4df8711bb973edf2f8dc5751f"
+    },
+    {
+      "path": "题图/ex85.tex",
+      "sha256": "a9fed3e370808e67827dfbf87a05ee5c96e34ca4fae6d5fdea1191ed16e33b03"
+    },
+    {
+      "path": "题图/ex86.tex",
+      "sha256": "22beb548ceefdbd63474ef7fa8d28c39df6bb5d77cb0cf26aeb6420d2c6268e0"
+    },
+    {
+      "path": "题图/tr01.tex",
+      "sha256": "82c384442163b7bfb2c56484bc3007cb0eb98a750443820d45ed40a7c90d8188"
+    },
+    {
+      "path": "题图/tr02.tex",
+      "sha256": "acd7a9b1de93ee5febd8deb5afb8d48d92cee1e641ddca88fab4a524c04b1d25"
+    },
+    {
+      "path": "题图/tr03.tex",
+      "sha256": "3d981ec4d5645c3b980d8ef3996c4a5175683830886e9ab17b8d4f9fb40bd6a1"
+    },
+    {
+      "path": "题图/tr04.tex",
+      "sha256": "c6dd24979b15c83e0c365ee9f2ada3bcdd6644fe25ec33ebb619d96b8a5e35e3"
+    },
+    {
+      "path": "题图/tr05.tex",
+      "sha256": "431a0bf3888841d826aa066a221922bbd89194563687d56d99cde6c76d60e6c0"
+    },
+    {
+      "path": "题图/tr06.tex",
+      "sha256": "6ca6aa5373c7c9255253e0eae4efcd2baf767e39a88c51d35df94620e1254b85"
+    },
+    {
+      "path": "题图/tr07.tex",
+      "sha256": "eadc9ebafe0c6f9db13de0c416f9b2d2f3cabea2923c3f66a8630cbab2d0ec14"
+    },
+    {
+      "path": "题图/tr08.tex",
+      "sha256": "cc2b390a33108cc2d5aad3ef3fa9c94b3578d8e0821b30c4d005c711bd005e4a"
+    },
+    {
+      "path": "题图/tr09.tex",
+      "sha256": "5c8e7d562f879edb322c175efb7192fd45f3433de100c71865c067ab75f486d7"
+    },
+    {
+      "path": "题图/tr10.tex",
+      "sha256": "4005acab0046e32781ea1f34165c7acb7954471c027ec2b2f06136e2c0dc9ede"
+    },
+    {
+      "path": "题图/tr11.tex",
+      "sha256": "50b9b587ecafef1eb35787e8f2e7987714f3119739d9332d53b30aade913a15c"
+    },
+    {
+      "path": "题图/tr12.tex",
+      "sha256": "b363c6057fd797f087c9ff27ea0bc44c9fc2c58dc103eced36d82281a526436b"
+    },
+    {
+      "path": "题图/tr13.tex",
+      "sha256": "288459ba86fb7081dce56537bd6941a8b202e6394e0a6b22a33502c534aad91d"
+    },
+    {
+      "path": "题图/tr14.tex",
+      "sha256": "827576c8337780c9a2b172f69834168c9003a78c842f002dbb1d1ac70fb990fe"
+    },
+    {
+      "path": "题图/tr15.tex",
+      "sha256": "258ceff4069368479fed0de30c6e594d289a678ac1c9b0710dce26b6236a0d6f"
+    },
+    {
+      "path": "题图/tr16.tex",
+      "sha256": "ca004868f2a212a7a49227332d5147b880bb53c6ed154bd87deb65df35663790"
+    },
+    {
+      "path": "题图/tr17.tex",
+      "sha256": "7d545807e909bdc3333a419c9a4106c80815e74ac9d970b7733fa8fa065632c4"
+    },
+    {
+      "path": "题图/tr18.tex",
+      "sha256": "70c07192007d0b3d443bfa3d11c8ec7b7bf131ebb8eab16fd60559844defe212"
+    },
+    {
+      "path": "题图/tr19.tex",
+      "sha256": "29e7fae59de1150b38f00e77caad5eca251c1710d53c449845d44d27eac6f8ec"
+    },
+    {
+      "path": "题图/tr20.tex",
+      "sha256": "740cc0a19ea5028db2968b14dc27b1b1750e669fa82b7160a1a94b10e3b88f8e"
+    },
+    {
+      "path": "解答图/ex01.tex",
+      "sha256": "5feee42df74502490283471880288d13f0d425648fd22be896aea30dabf3009f"
+    },
+    {
+      "path": "解答图/ex02.tex",
+      "sha256": "7564774c0fd0f46435575bce52cdfe70489e5710a822a677b5762caf8dde77a2"
+    },
+    {
+      "path": "解答图/ex03.tex",
+      "sha256": "b27e27b8f11855260209281b6bbe82b27f979d5ac466deb88213d241a08a5a63"
+    },
+    {
+      "path": "解答图/ex04.tex",
+      "sha256": "88e5bfd8f8849ec88375d865666f6881c864ffcd7bd9152b5d67353f9c5c9426"
+    },
+    {
+      "path": "解答图/ex05.tex",
+      "sha256": "198b09250663035f289c0f471bfcb17cbf26f25ff4ed92fa9d8813d6d418ba6b"
+    },
+    {
+      "path": "解答图/ex06.tex",
+      "sha256": "30d1f3bf6e414156dcb768977b0c260e5102c6ceb7ea4b8785da2da62c164926"
+    },
+    {
+      "path": "解答图/ex07.tex",
+      "sha256": "fe08e98567697a8645d7cb0568da2d380f50401635165d60f923f168ed16d1a6"
+    },
+    {
+      "path": "解答图/ex08.tex",
+      "sha256": "092588a860131ab5a1429de529dd976be059d15a03ea6575fdc9a4e6dca7ac74"
+    },
+    {
+      "path": "解答图/ex09.tex",
+      "sha256": "487b8b7a89bd0b259803cfffdcabe4a270192d98fbeec5093906c57a52817f02"
+    },
+    {
+      "path": "解答图/ex10.tex",
+      "sha256": "b177543e28589aeda2a8c547dbcdb48f6206d946775ce80d6fde802f763d0a10"
+    },
+    {
+      "path": "解答图/ex11.tex",
+      "sha256": "cb6dad227389963d79d62066a0c550e5647b7772897b8e8185de865b4e6621d5"
+    },
+    {
+      "path": "解答图/ex12.tex",
+      "sha256": "9c1c418c7393dfe7bea573a69d83907b16046483f1fbd48c4271b988897506a2"
+    },
+    {
+      "path": "解答图/ex13.tex",
+      "sha256": "53a37092e47ce9efd879a48f5937f0c39d833591dd58b5c6540e1b3aa10161e2"
+    },
+    {
+      "path": "解答图/ex14.tex",
+      "sha256": "e24e6ea65ddcaf749938f3e2d559e71ae7bd6f8aac5bc05a1c05458f6ff6b515"
+    },
+    {
+      "path": "解答图/ex15.tex",
+      "sha256": "cc26bb5028a5185a4ee3fed3ee252c01918e0bf96f351bff8a2a319812313123"
+    },
+    {
+      "path": "解答图/ex16.tex",
+      "sha256": "f8313c0a8bc1a65e6ca4e27a2712aa3e794c3830f41d80c041324a08ceb6dfd6"
+    },
+    {
+      "path": "解答图/ex17.tex",
+      "sha256": "2fe1f2c8ef77bc5bbf6a3b46384e943f40931afe954c804a87ed4b9e811a7f71"
+    },
+    {
+      "path": "解答图/ex18.tex",
+      "sha256": "00bb5c412607a9121934b8d0a2e1fcc06756dcbe723ee7dbd8d1d79cf963d4a2"
+    },
+    {
+      "path": "解答图/ex19.tex",
+      "sha256": "f1dc487a83afc21905b76a3726dc1f765582a6916436dc69c6ff0688d1248a7e"
+    },
+    {
+      "path": "解答图/ex20.tex",
+      "sha256": "8bc98221f01d693aec811e2facd44f7eb710d47958e3458b2b681dabd9cb821e"
+    },
+    {
+      "path": "解答图/ex21.tex",
+      "sha256": "9bb41ffe2d9da7dd69f290d5fdd52b773241a5a5a2666639e2719ab69f780724"
+    },
+    {
+      "path": "解答图/ex22.tex",
+      "sha256": "bcd58e1b29067289115f791559ca76fbd5cd8b847871dafc55e5ccebf471406c"
+    },
+    {
+      "path": "解答图/ex23.tex",
+      "sha256": "f90f1b0cf365836a1745bca8b315d3cbd098501f798125fd98476663e0c499cd"
+    },
+    {
+      "path": "解答图/ex24.tex",
+      "sha256": "0e91eb1d4f73edb5519261dd478d7f4b9672865da5c1446792600a6a81caa74b"
+    },
+    {
+      "path": "解答图/ex25.tex",
+      "sha256": "1a5111a06a98d279eed672ee54e6370db7b6e62ab7eb0a695f68a7611942d2ae"
+    },
+    {
+      "path": "解答图/ex26.tex",
+      "sha256": "e9e0d8c1577aa45bce6b1b5de64a73bb1bc736960fa651cfaf81017f45f83aa1"
+    },
+    {
+      "path": "解答图/ex27.tex",
+      "sha256": "9af7ddbe394509885d5d623a655a0c585e46282c8dd7b2fccd867561df7a121e"
+    },
+    {
+      "path": "解答图/ex28.tex",
+      "sha256": "93befbb302e2ad3a35b6de00aa1882addb780c7f1a4f26f67c4d2e52a91a7b35"
+    },
+    {
+      "path": "解答图/ex29.tex",
+      "sha256": "56ba4830d4109fb76ee8540526ebd21372d016f29c1528d75747479a4cc13b6e"
+    },
+    {
+      "path": "解答图/ex30.tex",
+      "sha256": "98e79c0be576fc5d4979ad81e3771dc45bf0e4e0d0353a3f0e997eb456b78cb0"
+    },
+    {
+      "path": "解答图/ex31.tex",
+      "sha256": "4010914cb5eb6fcbf3a01f8f06d214f93a2d104807efaf89d542e758e01591c0"
+    },
+    {
+      "path": "解答图/ex32.tex",
+      "sha256": "d2013420eff6707df3886de834e2502689112e8788e44b4b75a7e5b986a771f8"
+    },
+    {
+      "path": "解答图/ex33.tex",
+      "sha256": "103ae1aa4fbb3b4db86b478b99e4c7a38b8f26b8f29a62f827b173f69cb849f1"
+    },
+    {
+      "path": "解答图/ex34.tex",
+      "sha256": "a950271e6c721d8c74e478b8753eb5319b92ac3051b8b1aa3f2bb94ffdb5ce3b"
+    },
+    {
+      "path": "解答图/ex35.tex",
+      "sha256": "513d6c9a36b7090d72e95e725dac525e327bc0866d08ce210a391992171f089d"
+    },
+    {
+      "path": "解答图/ex36.tex",
+      "sha256": "6c519497af61ef0e07592e16d5f4d1c9ba2f394cedc5409bce4ab3ce343e5b60"
+    },
+    {
+      "path": "解答图/ex37.tex",
+      "sha256": "4b4eda65aa9e9d5f42c8341af727fe564c6b810a468e7cb7e7e3d4452a1fed88"
+    },
+    {
+      "path": "解答图/ex38.tex",
+      "sha256": "e20f8ae1b9da658c3019c54a8037ad767cc4d2a9b9d09cd86b12107d6d2f8d78"
+    },
+    {
+      "path": "解答图/ex39.tex",
+      "sha256": "9465a78493f81348594c33c966237d92889e1a96f436eb2acfdf8ceae8e772f7"
+    },
+    {
+      "path": "解答图/ex40.tex",
+      "sha256": "0726da075fe1ecc48149813eaa20f99c878615579f7b4f7193c9720bd068f671"
+    },
+    {
+      "path": "解答图/ex41.tex",
+      "sha256": "07545648dbd251205fa0ada3e7a01aae9f177adc5c861ef059a0b22bf85b678f"
+    },
+    {
+      "path": "解答图/ex42.tex",
+      "sha256": "f4b0911e38d976be9cd2d61b3fcc8e61cfef78f9f1f40f16e62bef35cdb29c1d"
+    },
+    {
+      "path": "解答图/ex43.tex",
+      "sha256": "e209e5ef6e0621dc4bb1853137fdf2001d556f3d11339dc2f3fb1b6816a5d37e"
+    },
+    {
+      "path": "解答图/ex44.tex",
+      "sha256": "fce3a67386420d856ee5a5285425ed10aa3f375ca4467b4b84dbafa2b5c1e431"
+    },
+    {
+      "path": "解答图/ex45.tex",
+      "sha256": "fa531a09857e7f787e4d74f01003801b06394b1b4aa71847cc18be27db56abb1"
+    },
+    {
+      "path": "解答图/ex46.tex",
+      "sha256": "df588ff0147d665125cb6194b7fb45b7eba5078fe8c9394384e864fbea740104"
+    },
+    {
+      "path": "解答图/ex47.tex",
+      "sha256": "363aa17402431e27cc8e2e505f0d1496a679efde55774dabf65c00b0f944f055"
+    },
+    {
+      "path": "解答图/ex48.tex",
+      "sha256": "4bddeb91a0fad276f5745d2efc60b4ec3928ad401fef19151ece1fe3f438578a"
+    },
+    {
+      "path": "解答图/ex49.tex",
+      "sha256": "8fca146d4e36848fdd4a573ece0c1a1e76d1a4f7c0c55e88366154b8e5a357f9"
+    },
+    {
+      "path": "解答图/ex50.tex",
+      "sha256": "104ea63c7ae89c6c7a88ca66ce07c541cc198ba092bcba55bd99992df5b0e4fe"
+    },
+    {
+      "path": "解答图/ex51.tex",
+      "sha256": "2be2b38dad51d8512bcf4822a8cc51bb8fd9eb611e71edcf0b623a07290b766c"
+    },
+    {
+      "path": "解答图/ex52.tex",
+      "sha256": "65dac8b46e37b4787f752e7de3e10a9713fec639847cc0a62785010db23f3e7e"
+    },
+    {
+      "path": "解答图/ex53.tex",
+      "sha256": "5e2b518faa5989ce68a6602733994ef7fbfd43efcd8857a2c1297f90d310c866"
+    },
+    {
+      "path": "解答图/ex54.tex",
+      "sha256": "b8c1acabe8752e5540a7dcabe3675292c546f4e3713d01268e3b6accbf5ace79"
+    },
+    {
+      "path": "解答图/ex55.tex",
+      "sha256": "e4ed2f392f82502c4260d7dad238e20fa52375c812d5575cea6193382d25c165"
+    },
+    {
+      "path": "解答图/ex56.tex",
+      "sha256": "ee249730fe23eaab6d806fd42f2b89b703b0dd9fdb526b301803c2e670675d50"
+    },
+    {
+      "path": "解答图/ex57.tex",
+      "sha256": "055a6d75ae4a4a354d7b623d6cfeb7ca72f6201849798cf0b38df1976fc6551f"
+    },
+    {
+      "path": "解答图/ex58.tex",
+      "sha256": "492382ab761e4a7efadabcb2abdbfb5206e3276a6fa99fbc3de7f13b3cea02e0"
+    },
+    {
+      "path": "解答图/ex59.tex",
+      "sha256": "617c531ed0106b294fd52401a0b68bfb8fdca9269b78b1492ee9ffb8434ebab0"
+    },
+    {
+      "path": "解答图/ex60.tex",
+      "sha256": "7b30ef04973e30d9d2e7cc7ad8ce2a4f601c785f1a75aba85729ca7b5046dba0"
+    },
+    {
+      "path": "解答图/ex61.tex",
+      "sha256": "8beb27bdbcc1c50975e7003a5fbfbdfd079f775398596ab8e8c63260ec69a028"
+    },
+    {
+      "path": "解答图/ex62.tex",
+      "sha256": "6d24ed4b1d161fdd7986354991c5511f7950ddb891fc3b82f4313cf06561c2e2"
+    },
+    {
+      "path": "解答图/ex63.tex",
+      "sha256": "75d9684214a7dbb74dcc0115f4f5d346e6cf9d318d30fe53dc96f9d5129aae90"
+    },
+    {
+      "path": "解答图/ex64.tex",
+      "sha256": "7883be46f9cd376699cfa0b1ff4fd5d0194628a0c6d2bca0cde4142250679f71"
+    },
+    {
+      "path": "解答图/ex65.tex",
+      "sha256": "3b2d15a309523e9e8b77761deb31a27775e0acdb535fddb2a2833be54b0a3c75"
+    },
+    {
+      "path": "解答图/ex66.tex",
+      "sha256": "a0c437fc378d2e362483607c9907a0af94d4e08c9e034be930695cfe7983c8b1"
+    },
+    {
+      "path": "解答图/ex67.tex",
+      "sha256": "e7bcfec906d0c93e2bac9889d97c86c12b59c6126e704bcd93029de961732a88"
+    },
+    {
+      "path": "解答图/ex68.tex",
+      "sha256": "852fadb711b7444489a240319b1473e3d46ca6c2875a5694cb57982e5c7ba182"
+    },
+    {
+      "path": "解答图/ex69.tex",
+      "sha256": "b224d0e07f8e73960a196648af2c2c3c113cbb830a1196c361f90ae7390c6166"
+    },
+    {
+      "path": "解答图/ex70.tex",
+      "sha256": "d281d310e4daa9e92b9a53b19981d51c913d0d454d7bb07c6f55aad1f4ac9d23"
+    },
+    {
+      "path": "解答图/ex71.tex",
+      "sha256": "13e1a3318bf90be248eccacc83b21f12aeae5a012c2d50461bb3cd4a4f6cacc9"
+    },
+    {
+      "path": "解答图/ex72.tex",
+      "sha256": "ec75508a4f4a45896265a03f225278def0c472cc2214260f6dcc9335893e6d73"
+    },
+    {
+      "path": "解答图/ex73.tex",
+      "sha256": "5ca543b9d3ca96ab6539481a7093e14a93bc3f1e3c9ede3799b7155bcb769a02"
+    },
+    {
+      "path": "解答图/ex74.tex",
+      "sha256": "8b11fcafaa696b109764522493a3b53427849e67f193f0dcc855484f3c816474"
+    },
+    {
+      "path": "解答图/ex75.tex",
+      "sha256": "8e3e211d66411c81381c8b4e5e861bfab592ae0692d1939ad61aed50822acab9"
+    },
+    {
+      "path": "解答图/ex76.tex",
+      "sha256": "f059f1c2d44e815a6ee22e2d0a4aa2c91a2a85a1837f9be35a9ed0bb6a5c8dec"
+    },
+    {
+      "path": "解答图/ex77.tex",
+      "sha256": "95c8619b2c2b86e14817fda6e102a4188f45a40c4475f08352f61900b3257ce1"
+    },
+    {
+      "path": "解答图/ex78.tex",
+      "sha256": "f573e2a739079599acb744430178ddc187bc1e418789e22f1cf026525296237d"
+    },
+    {
+      "path": "解答图/ex79.tex",
+      "sha256": "f6b1963b4c0063c8cfe74b3d61772b7ef250b573db96979f9102e140228f19a2"
+    },
+    {
+      "path": "解答图/ex80.tex",
+      "sha256": "f4d51867ec13903a116710c26a70429af26a24985c149d5b3aa8bb7ce78cc257"
+    },
+    {
+      "path": "解答图/ex81.tex",
+      "sha256": "3dbc8a8804f4fff40e788f80bf8d4cb919d4c0a1c601141c9c50d0ef94d25e2f"
+    },
+    {
+      "path": "解答图/ex82.tex",
+      "sha256": "a33575da474aa2a18b310234ff19d603ad2c16ae9466f47575d3da0d76704eb8"
+    },
+    {
+      "path": "解答图/ex83.tex",
+      "sha256": "1c5bae511073da91cc5c194cbad3f92e02ee6b2e619e0009d5669f33aaf80b57"
+    },
+    {
+      "path": "解答图/ex84.tex",
+      "sha256": "8f6ab1e5582f7d74a9a3d2e76a18e95fb63c51d99113219fe49bea2f08569792"
+    },
+    {
+      "path": "解答图/ex85.tex",
+      "sha256": "503967c02c5d7a45a7ad6b678a0c2b52f4818b70ebf6236eeda4e043bacdc3c5"
+    },
+    {
+      "path": "解答图/ex86.tex",
+      "sha256": "dcb9b26fb3d2ed5113b69cfb241d4b83b6dce0096052a6ea698942000816f839"
+    },
+    {
+      "path": "解答图/tr01.tex",
+      "sha256": "b09e26fd341b131af0e19d5e28be22c579e441b7474485153784a6137a2cdf06"
+    },
+    {
+      "path": "解答图/tr02.tex",
+      "sha256": "a7732f1ae86651bcc8bf8f8d44dedc01d1ab95f544ac18defcdb6288b570058d"
+    },
+    {
+      "path": "解答图/tr03.tex",
+      "sha256": "9b18e348a16361b644f1f06163f6ad5a2a8a2aa8390f16fb19be89dcf05dcfb3"
+    },
+    {
+      "path": "解答图/tr04.tex",
+      "sha256": "940a5746c7bda8ac8813753a024ed43fe74da3cf9a4c435dd90d10b1d13203ea"
+    },
+    {
+      "path": "解答图/tr05.tex",
+      "sha256": "584fecb373573cc6d0f4361a57666272c7dfca2de5dc8057939aa113e720854b"
+    },
+    {
+      "path": "解答图/tr06.tex",
+      "sha256": "8eb8fe0e6f699e784da3c16d2fdf30e480dc08fab7fe4f7deaae9601c5a91b1d"
+    },
+    {
+      "path": "解答图/tr07.tex",
+      "sha256": "7d1c0275d7c1a3f25056da2c0c50462ef6fa5d5b80fcf5dbcde065c48016386c"
+    },
+    {
+      "path": "解答图/tr08.tex",
+      "sha256": "4168335203624a4ac2bd29b0acc118ebd76122a531e91a7d0ab84c20fe3acf1e"
+    },
+    {
+      "path": "解答图/tr09.tex",
+      "sha256": "33d9b08ed698fa88967161ce4a56eb3e54187e2e8d7f93491625a0ce6eff2248"
+    },
+    {
+      "path": "解答图/tr10.tex",
+      "sha256": "e473b081455acf6065149a3cccb2161a266e7831e01c80b84c2a4970e805ba25"
+    },
+    {
+      "path": "解答图/tr11.tex",
+      "sha256": "c508924615fa551c32bed0ac2d2e455bb6dd3ef004f85472de7950b61acebe0b"
+    },
+    {
+      "path": "解答图/tr12.tex",
+      "sha256": "a89d9657a3dc294361ba3880fb2dee1df8104e7c5a27f67221bd419c0ebaa5c1"
+    },
+    {
+      "path": "解答图/tr13.tex",
+      "sha256": "b91e92d3307193864d911407f6e33f4a754f4c2c0c1fa867d699f6a968a49149"
+    },
+    {
+      "path": "解答图/tr14.tex",
+      "sha256": "143e63062be4ac79de4654634fc533cb2af39a3ef3184365351505edb3e2c852"
+    },
+    {
+      "path": "解答图/tr15.tex",
+      "sha256": "d21bf7006820d4529127e731c12924a696dc2af0d9e80df2279d86bd8da2e769"
+    },
+    {
+      "path": "解答图/tr16.tex",
+      "sha256": "5f5fd1c97fc5e7bcfeb0796f53a22c5ddc559575390291e8dbf1af5fea996e41"
+    },
+    {
+      "path": "解答图/tr17.tex",
+      "sha256": "c7aa5b30f4c2e56f17f5a8e600cbcdf09143becb968d256ba3236a1b9fc4f9f2"
+    },
+    {
+      "path": "解答图/tr18.tex",
+      "sha256": "ee699a86c3210da631f76000326d1a68522e798850a0720bc0508383043af610"
+    },
+    {
+      "path": "解答图/tr19.tex",
+      "sha256": "1a74081e3d1b765ef11c3deb4443126646503d9089974192e07ada4809bd8618"
+    },
+    {
+      "path": "解答图/tr20.tex",
+      "sha256": "b1e2c442989104371de4a65e725e9ef9e5b9d17077df0095bc2ff210c1ef8765"
+    }
+  ],
+  "zip_sha256": "2d11066045330905feaa85debb36ef950a0a412df8eb6d846e1db6d0f809a5a9"
+}

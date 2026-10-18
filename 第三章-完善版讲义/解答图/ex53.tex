@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw(-1.2,1.5)circle(.6);\draw(1.2,1.5)circle(.6);\draw(-1.2,2.1)--(1.2,2.1);\draw(1.8,1.5)--(1.8,-.3);\draw(1.5,-.8)rectangle(2.1,-.3);\node at(-1.2,1.5){$A$};\node at(1.2,1.5){$B$};\node[right]at(2.1,-.5){$C,P_3$};\node at(-1.3,.5){$P_1,r_1$};\node at(1,.5){$P_2,r_2$};\node at(0,2.4){$T$};\node[right]at(1.8,.5){$S$};\draw[->](-1.2,2.3)arc(90:190:.8);\node at(-1.6,2.7){$M_1$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$M_1/r_1-P_3=(P_3/g+I_A/r_1^2+I_B/r_2^2)a$\\[6pt]$\Downarrow$\\[6pt]$T-S=I_Ba/r_2^2$};
+\end{tikzpicture}

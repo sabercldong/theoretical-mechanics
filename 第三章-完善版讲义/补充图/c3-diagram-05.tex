@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,2);\coordinate(A)at(0,-.1);
+\draw[thick](-1.7,2)--(1.7,2);
+\draw[force](O)--(2.7,2)node[right]{$\omega_1\vect e_3$};
+\node[above]at(-.8,2){水平铰轴};
+\draw[line width=2pt,ink](O)--(A)node[midway,left]{$l$};
+\draw[thick,fill=soft]plot[domain=0:360,samples=81]({1.5*cos(\x)-.65*sin(\x)},{-.1-.4*sin(\x)});
+\draw[->](A)--(2.15,-.1)node[right]{$\vect e_3$};
+\draw[->](A)--(-1.04,-.74)node[below left]{$\vect e_2$};
+\draw[force](A)--(0,-1.5)node[below]{$\omega_2\vect e_1$};
+\fill(O)circle(3pt)node[above right,yshift=1mm]{$O$};\fill(A)circle(2pt)node[above left]{$A$};
+\fill(1.5,-.1)circle(2pt)node[above]{$C$};
+\fill(-.65,-.5)circle(2pt)node[left]{$B$};
+\node[align=left,anchor=west]at(2.65,.3){$q=s=0$\\[2mm]$\vect\omega=\omega_1\vect e_3+\omega_2\vect e_1$};
+\end{tikzpicture}

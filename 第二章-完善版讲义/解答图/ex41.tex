@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\fill(0,0)circle(4pt)node[below]{$1,m$};\fill(2.7,0)circle(4pt)node[below]{$2,m$};\draw[decorate,decoration={zigzag,segment length=5pt,amplitude=2pt}](.15,0)--(2.55,0);\draw[->,thick](0,0)--(0,1.6)node[above]{$v_0$};\draw[<->](0,-.65)--(2.7,-.65)node[midway,below]{$a$};\node at(1.4,.6){$k$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$E_{\rm rel}=mv_0^2/4,\quad L=mav_0/2$\\[6pt]$\Downarrow$\\[6pt]$\beta x_*^2(x_*-1)=x_*+1$};
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-1.4,-.4)rectangle(2.1,0);\draw(.1,.8)circle(.8);\fill(.1,.8)circle(2pt)node[right]{$m,r$};\node at(1.7,-.2){$M$};\draw[->](.6,-.9)--(1.9,-.9)node[midway,below]{$v$};\node at(-.3,2){球初始静止};\node at(.2,-1.7){下支承光滑};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$u=v_C+r\omega-v_{\rm board}$\\[6pt]$\Downarrow$\\[6pt]$u(t_*)=0,\quad t_* =2Mv/[(7M+2m)\mu g]$};
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.15]
+\foreach \panel in {0,1,2}{
+\begin{scope}[xshift={4*\panel cm}]
+\draw[guide,->](0,0)--(1.65,0)node[right,font=\scriptsize]{$\xi$};
+\draw[guide,->](0,0)--(-.9075,-.5775)node[below,font=\scriptsize]{$\eta$};
+\draw[guide,->](0,0)--(0,1.65);
+\fill(0,0)circle(1.5pt);
+\ifnum\panel=0
+\draw[force](0,0)--(1.11188,-.24406)node[below]{$N$};
+\draw[force](0,0)--(-1.51979,-.52339)node[left]{$H$};
+\draw[force](0,0)--(0,1.65)node[above]{$\zeta$};
+\node at(0,-1.2){绕 $\zeta$ 轴转 $\varphi$};
+\fi
+\ifnum\panel=1
+\draw[force](0,0)--(1.11188,-.24406)node[below]{$N$};
+\draw[force](0,0)--(-1.07466,.79663)node[left]{$H'$};
+\draw[force](0,0)--(1.07466,1.53682)node[above]{$z$};
+\node at(0,-1.2){绕 $N$ 轴转 $\theta$};
+\fi
+\ifnum\panel=2
+\draw[force](0,0)--(1.41238,-.50181)node[below right]{$x$};
+\draw[force](0,0)--(-.62956,.66511)node[left]{$y$};
+\draw[force](0,0)--(1.07466,1.53682)node[above]{$z$};
+\node at(0,-1.2){绕 $z$ 轴转 $\psi$};
+\fi
+\end{scope}}
+\end{tikzpicture}

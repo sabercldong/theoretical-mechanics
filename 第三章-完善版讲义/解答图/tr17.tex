@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](0,-.5)--(0,3);\draw[very thick](-.65,.2)--(.65,2.3)node[right]{$L,m$};\fill(0,1.25)circle(2pt)node[left]{$C$};\draw(-.3,-.15)rectangle(.3,.15);\draw(-.3,2.55)rectangle(.3,2.85);\node[left]at(-.35,0){$A$};\node[left]at(-.35,2.7){$B$};\draw[<->](1.2,0)--(1.2,2.7)node[midway,right]{$d$};\node at(.2,2.1){$\beta$};\node[above]at(0,3){$z,\Omega$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect M_C=\vect\omega\times\vect L_C$\\[6pt]$\Downarrow$\\[6pt]$d\vect e_z\times\Delta\vect R_B=\vect M_C$};
+\end{tikzpicture}

@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw[->,thick](0,-.35)--(0,2.9)node[above]{$\vect B$};
+\draw[guide](0,1.8)ellipse(1.25 and .4);
+\coordinate(P)at({1.25*cos(330)},{1.8+.4*sin(330)});
+\draw[force](0,0)--(P)node[right]{$\vect L$};
+\draw[guide](0,0)--({1.25*cos(210)},{1.8+.4*sin(210)});
+\draw[->,thick]({1.25*cos(210)},{1.8+.4*sin(210)})arc(210:330:1.25 and .4);
+\fill(P)circle(2pt);
+\node[align=left,anchor=west]at(1.8,1.4){$\gamma<0$ 示例\\沿正 $\vect B$ 端看：逆时针};
+\node at(.7,-1){$\vect\Omega_L=-\gamma\vect B$};
+\end{tikzpicture}

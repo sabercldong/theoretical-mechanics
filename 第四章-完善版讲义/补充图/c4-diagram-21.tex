@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=.95]
+\coordinate(O)at(0,3.4);\coordinate(P)at(1.7,.45);\coordinate(C)at(.85,1.925);\coordinate(D)at(1.1333,1.4333);
+\draw[guide](0,-.1)--(0,4.0);\draw[ink,very thick](O)--(P)node[pos=.78,right]{$L$};
+\fill[ink](C)circle(2.5pt)node[left]{$C$};\draw[force](C)--++(0,-1.0)node[left]{$Mg$};
+\fill[ink](D)circle(1.5pt);\draw[force](D)--++(1.5,0)node[right]{$\vect F_{\rm cf}$};
+\draw[->](0,2.55)arc(-90:-60:.85);\node at(.35,2.37){$\varphi$};
+\node[anchor=west,align=left]at(5.2,2.95){$I_O=ML^2/3$\\重力矩含 $ML/2$\\离心力矩含 $ML^2/3$\\离心合力作用于 $s=2L/3$};
+\end{tikzpicture}

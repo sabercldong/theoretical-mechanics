@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "symbolic_checks": 41,
+  "checks": [
+    {
+      "name": "抛物线弓形面积",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "抛物线弓形一阶矩",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "梯度半球质量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "梯度半球质心矩",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "线密度梯度质量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "线密度梯度质心矩",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "半圆细线质心",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "不等双球冲量惯量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "下端冲量转速",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "冲量平动转动总能",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "弹簧原长动能",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "跳车两阶段末动量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "移动点绝对角动量",
+      "passed": true,
+      "residual": "Matrix([[0], [0], [0]])"
+    },
+    {
+      "name": "移动点相对角动量",
+      "passed": true,
+      "residual": "Matrix([[0], [0], [0]])"
+    },
+    {
+      "name": "粗地双球水平反力",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "粗地双球竖直反力",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "水平双球有效质量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "强冲量初始支持力",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "自由弹簧两球总动量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "自由弹簧相对初值",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "自由弹簧速度初值",
+      "passed": true,
+      "residual": "Matrix([[0], [0]])"
+    },
+    {
+      "name": "弹簧转折因式",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "绕钉径向转折因式",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "一维弹性动量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "一维弹性能量",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "一维粘连损失",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "等质量出射正交",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "各向同性半角归一化",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "重球切线能量最大",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "恒流火箭高度导数",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "恒流火箭加速度",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "恒增长雨滴动量方程",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "恒增长雨滴位移导数",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "恒增长雨滴加速度",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "球形凝结雨滴动量方程",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "球形凝结雨滴加速度",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "链条双曲函数运动方程",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "链条能量恒等式",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "有限时间位力微分恒等式",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "谐振子周期平均动能",
+      "passed": true,
+      "residual": "0"
+    },
+    {
+      "name": "硬球位力体积",
+      "passed": true,
+      "residual": "0"
+    }
+  ],
+  "numeric_checks": {
+    "强冲量首碰": {
+      "tau": 0.8900586117066734,
+      "lower_height": 0.20779566772678915
+    },
+    "散射两支": {
+      "CM_degrees": [
+        63.160177799818335,
+        156.83982220018166
+      ],
+      "D": [
+        2.6088294726395223,
+        1.1499410105041112
+      ],
+      "Jacobian": [
+        9.330379112534088,
+        1.8128381462468204
+      ],
+      "cross_section_contribution": [
+        124.05164878203243,
+        1.968266975968583
+      ]
+    },
+    "绕钉转折根": 1.653165286319349,
+    "延迟火箭": {
+      "vb": 0.1931471805599453,
+      "zb": 0.028426409720027357
+    }
+  },
+  "scope": "对新增长推导及关键公式的确定性核验，不代替题干、图形与物理条件的人工审阅"
+}

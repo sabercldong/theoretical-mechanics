@@ -1,0 +1,21 @@
+% 法向反力作用在接触处并沿两球心连线；上坡静摩擦提供自转，必须先与摩擦上限比较。
+\begin{tikzpicture}[scale=.95]
+\coordinate(O)at(0,0);\coordinate(C)at(1.31,{2.62*cos(30)});
+\coordinate(A)at(.9,{1.8*cos(30)});
+\draw[ink,thick](O)circle(1.8);\draw[fill=soft](C)circle(.82);
+\draw[guide](O)--(0,3.3);\draw[ink](O)--(C);
+\fill(O)circle(2pt)node[below left]{$O$};\fill(C)circle(2pt)node[above right]{$C$};
+\fill(A)circle(2pt)node[left]{$A$};
+\draw(0,.8)arc(90:60:.8);\node at(.3,1.1){$\theta$};
+\node[left]at(.35,.7){$R$};\node[right]at(1.12,1.94){$r$};
+\node at(.2,-2.25){接触几何：$OC=R+r$};
+\begin{scope}[xshift=5.7cm,yshift=1.2cm]
+\coordinate(D)at(0,0);\coordinate(K)at(-.41,{-.82*cos(30)});
+\draw[fill=soft,thick](D)circle(.82);\fill(D)circle(2pt);
+\fill(K)circle(2pt)node[below left]{$A$};
+\draw[force](K)--++(.95,{1.9*cos(30)})node[above right]{$N$};
+\draw[force](K)--++({-.95*cos(30)},.475)node[above left]{$f$};
+\draw[force](D)--(0,-1.5)node[below]{$mg$};
+\node[align=center]at(0,-2.65){小球受力\\$N,f$ 作用于接触点};
+\end{scope}
+\end{tikzpicture}

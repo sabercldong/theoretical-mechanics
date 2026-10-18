@@ -1,0 +1,5 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\node (S) at(0,2.3){$S$};\node (S1) at(2.2,2.3){$S_1$};\node (S2) at(4.4,2.3){$S_2$};
+\draw[->,shorten <=4pt,shorten >=4pt](S)--(S1)node[midway,above]{$\Om_1$};\draw[->,shorten <=4pt,shorten >=4pt](S1)--(S2)node[midway,above]{$\Om_{21}$};
+\fill(1,0)circle(2pt)node[left]{$O$};\draw[->](1,0)--(3.7,1.2)node[midway,above]{$\vect r$};\fill(3.7,1.2)circle(3pt)node[right]{$P$};\node at(2.6,-.55){$P$ 固定在 $S_2$};
+\end{tikzpicture}

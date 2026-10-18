@@ -1,0 +1,377 @@
+{
+  "source_sha256": "52f4dac7f5535b9f8391af00bfdc9dd8491c171d19dcdd838c1a8dc0c336c642",
+  "working_copy": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/原图核查-b/c4-2-compatible.pptx",
+  "changes": [
+    {
+      "entry": "ppt/slides/slide7.xml",
+      "change": "unicode Symbol compatibility",
+      "mapping": [
+        {
+          "original": "U+F077",
+          "replacement": "ω",
+          "count": 2
+        },
+        {
+          "original": "U+F06A",
+          "replacement": "φ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entry": "ppt/slides/slide32.xml",
+      "change": "unicode Symbol compatibility",
+      "mapping": [
+        {
+          "original": "U+F077",
+          "replacement": "ω",
+          "count": 2
+        },
+        {
+          "original": "U+F06A",
+          "replacement": "φ",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entry": "ppt/slides/slide34.xml",
+      "change": "unicode Symbol compatibility",
+      "mapping": [
+        {
+          "original": "U+F077",
+          "replacement": "ω",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "entry": "ppt/slides/slide35.xml",
+      "change": "unicode Symbol compatibility",
+      "mapping": [
+        {
+          "original": "U+F077",
+          "replacement": "ω",
+          "count": 3
+        },
+        {
+          "original": "U+F0B4",
+          "replacement": "×",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entry": "ppt/slides/slide36.xml",
+      "change": "unicode Symbol compatibility",
+      "mapping": [
+        {
+          "original": "U+F077",
+          "replacement": "ω",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "entry": "ppt/slides/slide37.xml",
+      "change": "unicode Symbol compatibility",
+      "mapping": [
+        {
+          "original": "U+F06C",
+          "replacement": "λ",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "entry": "ppt/slideMasters/slideMaster1.xml",
+      "change": "remove original decorative master raster only, retained chapter footer textbox"
+    }
+  ],
+  "validation": "原课件保持不变。工作副本仅作下列可追溯操作：私用Symbol字符按明确映射替换；移除列明的模板图片、页码/页脚及为隔离原图而移除的邻接题干/正文对象。所有媒体字节均与原课件一致，全部保留对象的位移、尺寸、旋转、翻转参数与原课件一致。",
+  "presentation_template_cleanup": [
+    {
+      "entry": "ppt/slides/slide1.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide2.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide3.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide4.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide5.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide6.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide7.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide8.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide9.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide10.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide11.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide12.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide13.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide14.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide15.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide16.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide17.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide18.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide19.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide20.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide21.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide22.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide23.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide23.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide24.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide25.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide26.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide27.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide28.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide29.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide30.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide31.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide32.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide33.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide34.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide34.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide35.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide35.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide36.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide36.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide37.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide37.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide38.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide38.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide39.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide40.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide40.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide41.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide41.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide42.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide42.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide43.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide43.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide44.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide44.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slides/slide45.xml",
+      "remove": "explicit template raster image1.jpeg"
+    },
+    {
+      "entry": "ppt/slides/slide45.xml",
+      "remove": "slide-number textbox"
+    },
+    {
+      "entry": "ppt/slideMasters/slideMaster1.xml",
+      "remove": "master chapter footer textbox"
+    }
+  ],
+  "figure_isolation": [
+    {
+      "entry": "ppt/slides/slide21.xml",
+      "removed_text": "（三）气旋-反气旋",
+      "purpose": "isolate original figure from adjoining question/body text only"
+    },
+    {
+      "entry": "ppt/slides/slide21.xml",
+      "removed_text": "在气压梯度力和地转偏向力的共同作用下，大气并不是径直对准低气压中心流动，也不是沿辐射方向从高气压中心流出。低气压的气流在北半球向右偏转成按逆时针方向流动的大旋涡，在南半球向左转成按顺时针方向流动的大旋",
+      "purpose": "isolate original figure from adjoining question/body text only"
+    },
+    {
+      "entry": "ppt/slides/slide34.xml",
+      "removed_text": "第四章",
+      "purpose": "isolate original figure from adjoining question/body text only"
+    },
+    {
+      "entry": "ppt/slides/slide34.xml",
+      "removed_text": "例  题 4",
+      "purpose": "isolate original figure from adjoining question/body text only"
+    },
+    {
+      "entry": "ppt/slides/slide34.xml",
+      "removed_text": "    开有矩形槽的大盘以等角速度ω绕O轴旋转。矩形槽内安置物块-弹簧系统，物块P的质量为m，弹簧的刚度系数为k 。初始状态下，物块处于大盘圆心O ，这时弹簧不变形。",
+      "purpose": "isolate original figure from adjoining question/body text only"
+    },
+    {
+      "entry": "ppt/slides/slide34.xml",
+      "removed_text": "求：1、物块的相对运动微分方程；    2、物块对槽壁的侧压力。",
+      "purpose": "isolate original figure from adjoining question/body text only"
+    }
+  ],
+  "final_verification": {
+    "source_sha256": "52f4dac7f5535b9f8391af00bfdc9dd8491c171d19dcdd838c1a8dc0c336c642",
+    "working_copy_sha256": "12798a284b261a83a4ae101fbc8ccc275720397cc90f7d3f91b4d19be0a9181c",
+    "all_source_media_unchanged": true,
+    "media_count": 125,
+    "retained_shape_geometry_checks": 796,
+    "geometry_mismatches": [],
+    "unicode_substitution_count": 17,
+    "hidden_slide_numbers": [
+      35,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "final_original_figure_count": 33
+  }
+}

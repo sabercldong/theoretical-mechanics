@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\draw[fill=soft,thick](0,0)circle(.9);
+\draw[fill=soft,thick](3,0)circle(.9);
+\draw[thick](0,.9)--(3,.9)arc(90:0:.9)--(3.9,-2);
+\draw[fill=soft](3.55,-2.6)rectangle(4.25,-2)node[midway]{$C$};
+\node at(0,0){$A$};\node at(3,0){$B$};
+\draw[->,thick]({1.08*cos(220)},{1.08*sin(220)})arc(220:500:1.08)node[left]{$M_1$};
+\node[above]at(1.5,.9){$T$};\node[right]at(3.9,-1){$S$};
+\end{tikzpicture}

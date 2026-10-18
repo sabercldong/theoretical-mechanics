@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "pdf_pages": 218,
+  "source_slides_mapped": 224,
+  "examples": 66,
+  "selftests_with_solutions": 30,
+  "original_figure_assets": 117,
+  "editable_model_figures": 59,
+  "total_numbered_figures": 176,
+  "complete_body_preserved": true,
+  "visual_review": "初轮整册审查，终校所有变化页实际回归通过；完整记录见前段、中段、后段报告。",
+  "no_supplemental_drawing_label": true,
+  "portable_build": "在新独立目录解压源码包，以XeLaTeX重新编译；218页文本与像素一致。",
+  "pdf_structure_check": "交付PDF与源码独立编译PDF均通过qpdf检查。",
+  "source_ppts_unchanged": true,
+  "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+  "archive_sha256": "d3718708252133e18f3c7b6340e8fdc0ac46305170d3938227101ae508bfe04f"
+}

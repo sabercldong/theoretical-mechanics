@@ -1,0 +1,807 @@
+[
+  {
+    "key": "sec:c4-1",
+    "title": "转动基矢与矢量求导",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-1.1",
+    "title": "同一个矢量，两种观察方式",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-1",
+    "title": "动系分量恒定的矢量",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-1.2",
+    "title": "从微小转动到基矢的导数",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-1.3",
+    "title": "矢量导数的运输公式",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-2",
+    "title": "惯性空间中固定的水平矢量",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-1.4",
+    "title": "旋转矩阵与角速度的反对称矩阵",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-3",
+    "title": "平面转动矩阵的直接核验",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-1.5",
+    "title": "正交性的保持与瞬时角速度的唯一性",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-4",
+    "title": "相同竖轴方向不代表相同参考系",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-1.6",
+    "title": "角速度自身的求导与多级参考系",
+    "kind": "subsection"
+  },
+  {
+    "key": "sec:c4-2",
+    "title": "速度与加速度的完整变换",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-2.1",
+    "title": "原点重合时的速度合成",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-2.2",
+    "title": "逐项求导得到加速度",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-5",
+    "title": "沿旋转径向轴匀速滑动",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-2.3",
+    "title": "向轴分量与空间转动的几何",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-2.4",
+    "title": "原点平动并同时转动的动系",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-6",
+    "title": "加速小车上的转动径向管",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-2.5",
+    "title": "平面变换的分量与复数形式",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-2.6",
+    "title": "特殊情形、量纲与极限检查",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-7",
+    "title": "科氏项为零的三种情形",
+    "kind": "example"
+  },
+  {
+    "key": "sec:c4-3",
+    "title": "旋转装置的运动学分析",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-3.1",
+    "title": "转动直管中的匀速质点",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-8",
+    "title": "两处半径的绝对速度与加速度",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-3.2",
+    "title": "绝对速率恒定时的径向运动",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-9",
+    "title": "旋转射线上的恒绝对速率运动",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-3.3",
+    "title": "离心调速器小球的速度",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-10",
+    "title": "给定摆角与摆角速度的调速器",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-3.4",
+    "title": "调速器的加速度与驱动转矩",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-3.5",
+    "title": "圆盘圆槽中的同向与反向运动",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-11",
+    "title": "同心圆槽中的绝对加速度",
+    "kind": "example"
+  },
+  {
+    "key": "ex:c4-12",
+    "title": "相对运动存在但质点绝对静止",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-3.6",
+    "title": "偏心圆槽与多级转动框架",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-13",
+    "title": "圆槽中心不在转盘轴上",
+    "kind": "example"
+  },
+  {
+    "key": "ex:c4-14",
+    "title": "改变框架不应改变绝对速度",
+    "kind": "example"
+  },
+  {
+    "key": "ex:c4-15",
+    "title": "进动框架与完全随体框架的区别",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-3.7",
+    "title": "沿地球经线南行汽车的绝对运动",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-16",
+    "title": "在球面上匀速南行",
+    "kind": "example"
+  },
+  {
+    "key": "sec:c4-4",
+    "title": "非惯性系中的牛顿方程",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-4.1",
+    "title": "从惯性系方程逐项移项",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-4.2",
+    "title": "离心力的方向、大小与势能",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-17",
+    "title": "位于转轴上的固定点",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-4.3",
+    "title": "欧拉惯性力与非匀速转动",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-4.4",
+    "title": "科氏力、右手规则与相对功率",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-18",
+    "title": "水平转盘上的四个方向",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-4.5",
+    "title": "旋转皮带的惯性效应",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-19",
+    "title": "两直跨段中点的径向比较",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-4.6",
+    "title": "加速飞行器中的有效重力",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-20",
+    "title": "舱内理想液柱的压强差",
+    "kind": "example"
+  },
+  {
+    "key": "ex:c4-21",
+    "title": "轨迹弯曲时的载荷因子",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-4.7",
+    "title": "建立动系动力学方程的完整步骤",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-22",
+    "title": "固定在加速转盘上的物块所需摩擦力",
+    "kind": "example"
+  },
+  {
+    "key": "sec:c4-5",
+    "title": "相对平衡与稳定性",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-5.1",
+    "title": "相对平衡的条件与有效势",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-5.2",
+    "title": "轴上悬点的旋转单摆",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-23",
+    "title": "相对平衡角、张力与临界转速",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-5.3",
+    "title": "平衡分支的小振动与临界点",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-24",
+    "title": "数值相对平衡与小振动",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-5.4",
+    "title": "悬点偏离转轴的旋转单摆",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-25",
+    "title": "偏置悬点的平衡角与张力",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-5.5",
+    "title": "旋转框架中的均匀复摆",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-26",
+    "title": "匀速旋转铰轴上的均匀细杆",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-5.6",
+    "title": "调速器的平衡、摩擦与反馈",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-5.7",
+    "title": "旋转液面的有效势应用",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-27",
+    "title": "匀速旋转液体的自由表面",
+    "kind": "example"
+  },
+  {
+    "key": "sec:c4-6",
+    "title": "旋转约束中的运动与反力",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-6.1",
+    "title": "光滑径向直管中的自由滑珠",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-28",
+    "title": "相对运动、侧壁反力与竖直支持力",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-6.2",
+    "title": "变转速管与受控匀速滑动",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-29",
+    "title": "使珠子相对管匀速向外的驱动力",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-6.3",
+    "title": "双弹簧滑块的方程与三个转速区间",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-30",
+    "title": "两端弹簧与径向槽中的小物块",
+    "kind": "example"
+  },
+  {
+    "key": "ex:c4-31",
+    "title": "振动周期与槽壁压力",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-6.4",
+    "title": "弹簧滑块的势能、摩擦与阻尼",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-6.5",
+    "title": "惯性系自由运动在旋转坐标中的轨迹",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-32",
+    "title": "经过轴心的匀速直线运动",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-6.6",
+    "title": "真实能量增长与旋转驱动的功",
+    "kind": "subsection"
+  },
+  {
+    "key": "sec:c4-7",
+    "title": "地球自转与有效重力",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-7.1",
+    "title": "当地坐标与自转角速度的分解",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-7.2",
+    "title": "静止物体的有效重力及方向",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-7.3",
+    "title": "数量级、测得的重力与模型边界",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-33",
+    "title": "赤道与中纬度的离心修正",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-7.4",
+    "title": "球形模型与纬度重力近似式的区别",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-34",
+    "title": "能否由离心效应复现全部赤道—极点重力差",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-7.5",
+    "title": "东西向运动的称重效应",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-35",
+    "title": "沿纬线行驶时的支持力",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-7.6",
+    "title": "公转、自由落体地心系与潮汐",
+    "kind": "subsection"
+  },
+  {
+    "key": "sec:c4-8",
+    "title": "水平运动、惯性圆与大气环流",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-8.1",
+    "title": "当地科氏力的三个分量",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-8.2",
+    "title": "仅受水平科氏力的惯性圆",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-36",
+    "title": "由十四小时周期反求纬度",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-8.3",
+    "title": "信风的偏转与环流条件",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-8.4",
+    "title": "气压带、三圈环流与海盆环流",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-8.5",
+    "title": "地转平衡与气旋、反气旋",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-37",
+    "title": "直线等压线对应的地转风",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-8.6",
+    "title": "圆形流的曲率与梯度风",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-8.7",
+    "title": "河道、轨道与小尺度偏转的数量级",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-38",
+    "title": "小容器中的旋涡是否能判别半球",
+    "kind": "example"
+  },
+  {
+    "key": "sec:c4-9",
+    "title": "自由落体与抛体的自转偏转",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-9.1",
+    "title": "局部运动方程与一阶近似",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-9.2",
+    "title": "从相对静止释放的落体偏东",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-39",
+    "title": "落体偏移的积分推导",
+    "kind": "example"
+  },
+  {
+    "key": "ex:c4-40",
+    "title": "百米与五百米落体的数量级",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-9.3",
+    "title": "角动量解释与释放初条件",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-9.4",
+    "title": "竖直上抛后返回原高度",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-41",
+    "title": "上抛的落点为什么偏西",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-9.5",
+    "title": "任意初速度的抛体与落地时间修正",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-42",
+    "title": "从百米高处向东水平抛出",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-9.6",
+    "title": "偏东轨迹、时间尺度与实验测量",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-43",
+    "title": "由多次落体区分释放偏差与自转偏转",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-9.7",
+    "title": "常重力科氏模型的精确形式与二阶边界",
+    "kind": "subsection"
+  },
+  {
+    "key": "sec:c4-10",
+    "title": "傅科摆与振动平面的进动",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-10.1",
+    "title": "实验几何与小振幅水平运动",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-10.2",
+    "title": "复变量变换与完整通解",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-10.3",
+    "title": "相对静止释放与严格的直线振动条件",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-44",
+    "title": "沿东向拉开后相对静止释放",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-10.4",
+    "title": "进动方向、周期与纬度",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-45",
+    "title": "巴黎、北京与极点",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-10.5",
+    "title": "两个圆偏振模式与守恒能量",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-10.6",
+    "title": "实验中的阻尼、补能与方向误差",
+    "kind": "subsection"
+  },
+  {
+    "key": "sec:c4-11",
+    "title": "能量、角动量与统一解题方法",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-11.1",
+    "title": "动系的功率方程",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-11.2",
+    "title": "雅可比量与惯性系能量的关系",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-46",
+    "title": "自由径向滑珠的两种守恒检查",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-11.3",
+    "title": "变转速时的能量交换",
+    "kind": "subsection"
+  },
+  {
+    "key": "ex:c4-47",
+    "title": "固定半径物块随盘加速",
+    "kind": "example"
+  },
+  {
+    "key": "sub:c4-11.4",
+    "title": "从旋转坐标的拉格朗日量看科氏项",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-11.5",
+    "title": "两类问题的计算顺序",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-11.6",
+    "title": "与前三章运动定理的连接",
+    "kind": "subsection"
+  },
+  {
+    "key": "sub:c4-11.7",
+    "title": "本章公式索引",
+    "kind": "subsection"
+  },
+  {
+    "key": "sec:c4-12",
+    "title": "综合自测与详细解答",
+    "kind": "section"
+  },
+  {
+    "key": "sub:c4-12.1",
+    "title": "矢量求导与运动变换",
+    "kind": "subsection"
+  },
+  {
+    "key": "test:c4-1",
+    "title": "固定惯性矢量的动系分量",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-2",
+    "title": "已知相对圆周运动求绝对加速度",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-3",
+    "title": "加速平动原点上的旋转管",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-4",
+    "title": "恒绝对速率的径向滑珠能走多久",
+    "kind": "exercise"
+  },
+  {
+    "key": "sub:c4-12.2",
+    "title": "约束力、惯性力与旋转滑块",
+    "kind": "subsection"
+  },
+  {
+    "key": "test:c4-5",
+    "title": "转盘上静止物体的最大转速",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-6",
+    "title": "径向自由珠抵达管端的时间",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-7",
+    "title": "双弹簧的临界转速与零初条件",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-8",
+    "title": "侧壁反力是否做功",
+    "kind": "exercise"
+  },
+  {
+    "key": "sub:c4-12.3",
+    "title": "相对平衡与稳定性",
+    "kind": "subsection"
+  },
+  {
+    "key": "test:c4-9",
+    "title": "轴上旋转单摆的两类分支",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-10",
+    "title": "偏置悬点摆的数值平衡",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-11",
+    "title": "均匀旋转杆的稳定倾角",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-12",
+    "title": "临界竖直摆是否不稳定",
+    "kind": "exercise"
+  },
+  {
+    "key": "sub:c4-12.4",
+    "title": "地球重力与水平运动",
+    "kind": "subsection"
+  },
+  {
+    "key": "test:c4-13",
+    "title": "有效重力是否沿地心径向",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-14",
+    "title": "东西向车辆的称重差",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-15",
+    "title": "北半球初始向东的惯性圆",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-16",
+    "title": "等压线与气旋方向",
+    "kind": "exercise"
+  },
+  {
+    "key": "sub:c4-12.5",
+    "title": "自由落体与抛体",
+    "kind": "subsection"
+  },
+  {
+    "key": "test:c4-17",
+    "title": "从五十米高处落体的偏移",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-18",
+    "title": "上抛与落下的东西力为何不抵消位移",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-19",
+    "title": "向北水平抛射的落点修正",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-20",
+    "title": "东向水平抛射的时间修正是否可忽略",
+    "kind": "exercise"
+  },
+  {
+    "key": "sub:c4-12.6",
+    "title": "傅科摆与能量综合",
+    "kind": "subsection"
+  },
+  {
+    "key": "test:c4-21",
+    "title": "复解是否符合静止释放",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-22",
+    "title": "进动周期与惯性圆周期的比较",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-23",
+    "title": "旋转弹簧系统的雅可比量",
+    "kind": "exercise"
+  },
+  {
+    "key": "test:c4-24",
+    "title": "恒速转动系中的静态势与惯性静态势",
+    "kind": "exercise"
+  }
+]

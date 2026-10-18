@@ -1,0 +1,5 @@
+\begin{tikzpicture}[node distance=7mm,every node/.style={font=\small,align=center},box/.style={draw=ink,rounded corners=2pt,minimum height=12mm,text width=25mm}]
+\node[box](a){转速上升};\node[box,right=of a](b){小球外移};\node[box,right=of b](c){阀门关小};\node[box,right=of c](d){驱动减弱};
+\draw[force](a)--(b);\draw[force](b)--(c);\draw[force](c)--(d);
+\draw[force](d.south)--++(0,-.6)-|(a.south);\node[below=3pt]at(4.5,-1.2){反馈使转速趋向下降};
+\end{tikzpicture}

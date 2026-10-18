@@ -1,0 +1,1342 @@
+{
+  "reviewer": "c3_originals_b",
+  "status": "completed",
+  "source_decks": {
+    "c5-4": 30,
+    "c5-5": 29,
+    "c5-6": 27
+  },
+  "total_pages": 86,
+  "page_coordinate_system": "PDF points; 720×540; origin top-left",
+  "old_manuscript": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/旧版完整主稿.tex",
+  "old_manuscript_sha256": "662c1126e226c8ee4e905c88490594851bd1081a475b595b6b2add6e1b7122f1",
+  "source_pdf_sha256": {
+    "c5-4": "a71105be96e18b91de80d5a180540fd4a0811d679ecc5a83fbf6f78697db595f",
+    "c5-5": "2dd9750a3dd4d671186b9d2ac228cd04bf75f2e240f2d3a249279aee16b514f7",
+    "c5-6": "34f131b648d85ec7dd3028164f9a874978ef6c33e89c4855ab56e8f0bdb924b4"
+  },
+  "method": {
+    "overview": "All 15 contact sheets actually viewed, covering all 86 pages.",
+    "full_page_enlargements": {
+      "c5-4": [
+        5,
+        6,
+        9,
+        11,
+        17,
+        18,
+        20,
+        21,
+        24,
+        27
+      ],
+      "c5-5": [
+        12,
+        15,
+        16,
+        17,
+        21,
+        22
+      ],
+      "c5-6": [
+        25
+      ]
+    },
+    "crop_previews": "Every retain crop rendered from source PDF in memory and visually checked; c5-4 p6 left edge and c5-5 p15 frame margins adjusted and rechecked.",
+    "reference_reports_used": [
+      "第五章-分析力学/工作文件/源审核-4至6.md",
+      "第五章-分析力学/工作文件/不简化复查-4至6.md"
+    ],
+    "source_files_modified": false,
+    "main_or_assets_created": false
+  },
+  "summary": {
+    "figure_occurrences": 16,
+    "retain_static_assets": 9,
+    "duplicate_occurrences": 7,
+    "c5_6_nonformula_figures": 0,
+    "source_photos": 0,
+    "main_content_omission_count": 2,
+    "symbol_export_anomalies": "未发现应保留图中存在空框、缺字或未解释私用字符；存在母版色带、页面裁边及低分辨率扫描，逐图已记录。"
+  },
+  "figures": [
+    {
+      "key": "c5-4-p005-ball-inner-roll",
+      "deck": "c5-4",
+      "page": 5,
+      "crop_rect_pt": [
+        544,
+        0,
+        720,
+        175
+      ],
+      "caption": "均匀实心球在固定圆柱内表面纯滚动；O为圆柱轴心，O′为球心，A为接触点",
+      "old_subsection": "5.9.2 球在圆柱内表面滚动",
+      "old_example_numbers": [
+        41
+      ],
+      "decision": "retain",
+      "notes": "原图O′对应正文球心C，球心轨道半径为R−r；ω_s在旧稿按速率使用。图形本身完整，但紧贴源页上、右边缘，圆外有课件母版色带；矩形裁剪不能去掉所有底纹，可优先从原PPT提原图或移除母版后裁剪，不重绘。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/005.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p006-half-cylinder",
+      "deck": "c5-4",
+      "page": 6,
+      "crop_rect_pt": [
+        535,
+        0,
+        720,
+        123
+      ],
+      "caption": "半圆柱摇摆的圆心O、质心C和瞬时接触点A；OC=d=4r/(3π)",
+      "old_subsection": "5.9.3 半圆柱的摇摆",
+      "old_example_numbers": [
+        42
+      ],
+      "decision": "retain",
+      "notes": "θ从竖直向下量至OC；原图显示向左偏转姿态，旧稿模型显示向右偏转，能量式依赖cosθ而不受影响。裁剪左界不可退回518pt，否则混入正文末字“柱”；535pt只截短无标记地面线。顶边仍有母版细绿条，建议去母版后同坐标裁剪。所有几何标号与红色d公式应保留。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/006.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p009-three-springs",
+      "deck": "c5-4",
+      "page": 9,
+      "crop_rect_pt": [
+        195.56,
+        0.23,
+        502.27,
+        88.98
+      ],
+      "caption": "三根同劲度弹簧连接两个等质量滑块；原图x₁、x₂为位置，正文x₁、x₂为平衡位置偏移",
+      "old_subsection": "5.9.6 两滑块与三弹簧的模式",
+      "old_example_numbers": [
+        43
+      ],
+      "decision": "retain",
+      "notes": "原页位置x₁=a+q₁、x₂=2a+q₂；正文推广为中间k′，源题对应k′=k。图题必须解释原图位置标号与正文位移符号不同。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/009.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p010-three-springs-repeat",
+      "deck": "c5-4",
+      "page": 10,
+      "crop_rect_pt": [
+        195.56,
+        0.23,
+        502.27,
+        88.98
+      ],
+      "caption": "三弹簧两滑块的和差坐标解耦",
+      "old_subsection": "5.9.6 两滑块与三弹簧的模式",
+      "old_example_numbers": [
+        43
+      ],
+      "decision": "duplicate",
+      "notes": "与第9页完全重复，正文一次保留原图即可，不能因此省略该页和差方程。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/010.png",
+      "visual_check": "full_page_reviewed",
+      "duplicate_of": "c5-4-p009-three-springs"
+    },
+    {
+      "key": "c5-4-p011-three-spring-animation",
+      "deck": "c5-4",
+      "page": 11,
+      "crop_rect_pt": [
+        127.53,
+        220.42,
+        577.5,
+        250.38
+      ],
+      "caption": "三弹簧两质点动画的共同初始外形；同相、反相和叠加运动的方向由模态关系确定",
+      "old_subsection": "5.9.6 两滑块与三弹簧的模式",
+      "old_example_numbers": [
+        43
+      ],
+      "decision": "retain",
+      "notes": "上、中、下三个600×40内嵌静态图SHA256相同：998f9748acb6b3ec41765ae2cceeea3466380f842bf90e9516bf2e76eaab2128。静态原图只收一次即可，不可把同一首帧宣称为显示三个不同瞬时振型。若父代理从原PPT取得非初始动画帧，可重新选择并检查模式方向。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/011.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p011-antiphase-frame",
+      "deck": "c5-4",
+      "page": 11,
+      "crop_rect_pt": [
+        127.53,
+        343.67,
+        577.5,
+        373.64
+      ],
+      "caption": "反相振动动画的静态首帧",
+      "old_subsection": "5.9.6 两滑块与三弹簧的模式",
+      "old_example_numbers": [
+        43
+      ],
+      "decision": "duplicate_static_animation_frame",
+      "notes": "第二幅属于反相动画，但PDF中实际图像与第一幅字节相同；保留来源记录，合并静态展示。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/011.png",
+      "visual_check": "full_page_reviewed",
+      "duplicate_of": "c5-4-p011-three-spring-animation"
+    },
+    {
+      "key": "c5-4-p011-superposition-frame",
+      "deck": "c5-4",
+      "page": 11,
+      "crop_rect_pt": [
+        127.53,
+        453.32,
+        577.5,
+        483.28
+      ],
+      "caption": "双模叠加动画的静态首帧",
+      "old_subsection": "5.9.6 两滑块与三弹簧的模式",
+      "old_example_numbers": [
+        43
+      ],
+      "decision": "duplicate_static_animation_frame",
+      "notes": "第三幅属于双模叠加动画，但PDF中实际图像与第一幅字节相同；保留来源记录，合并静态展示。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/011.png",
+      "visual_check": "full_page_reviewed",
+      "duplicate_of": "c5-4-p011-three-spring-animation"
+    },
+    {
+      "key": "c5-4-p017-slider-pendulum-repeat",
+      "deck": "c5-4",
+      "page": 17,
+      "crop_rect_pt": [
+        389.76,
+        82.86,
+        713.74,
+        278.45
+      ],
+      "caption": "弹簧滑块单摆的几何与摆球速度合成",
+      "old_subsection": "5.9.7 滑块单摆的频率、振幅比与初值",
+      "old_example_numbers": [
+        44
+      ],
+      "decision": "duplicate",
+      "notes": "与第18页及c5-5第16、17页同一540×326原图。第18页四周留白更适合提取。此页题干强调光滑水平面、轻杆长l、两质量均m和单根弹簧k，均须在例题落实。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/017.png",
+      "visual_check": "full_page_reviewed",
+      "duplicate_of": "c5-4-p018-slider-pendulum-velocity"
+    },
+    {
+      "key": "c5-4-p018-slider-pendulum-velocity",
+      "deck": "c5-4",
+      "page": 18,
+      "crop_rect_pt": [
+        392.37,
+        2.64,
+        716.34,
+        198.23
+      ],
+      "caption": "滑块A的平移速度与摆球B相对A的切向速度合成为v_B；原图φ对应小振动正文θ",
+      "old_subsection": "5.9.7 滑块单摆的频率、振幅比与初值",
+      "old_example_numbers": [
+        44
+      ],
+      "decision": "retain",
+      "notes": "保留x、k、A、B、l、φ、x点、lφ点及v_B全部标记。适合也在5.10.6例50/51引用：该处正文用φ，与原图相同。原图x的水平尺寸标记表示弹簧伸长，图中角为对向下竖直的绝对角。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/018.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p020-slider-release-frame",
+      "deck": "c5-4",
+      "page": 20,
+      "crop_rect_pt": [
+        135.01,
+        212.97,
+        584.99,
+        527.95
+      ],
+      "caption": "弹簧滑块与单摆从偏斜姿态释放的动画代表帧",
+      "old_subsection": "5.9.7 滑块单摆的频率、振幅比与初值",
+      "old_example_numbers": [
+        44
+      ],
+      "decision": "retain",
+      "notes": "整幅无符号模型图保留，独立于带速度箭头的原图。源规定x(0)=0、θ(0)=θ₀且两初速为零，旧稿已给C±与直接解。此图不是方向箭头图，不应从单帧自行读取速度。原动画画幅左右和下沿正好为线端，可在提取后外加空白边距但不改内部图形。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/020.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p021-double-spring-pendulum",
+      "deck": "c5-4",
+      "page": 21,
+      "crop_rect_pt": [
+        530.11,
+        99.89,
+        698.4,
+        248.46
+      ],
+      "caption": "滑块两侧各装一根劲度k的弹簧，平移合成刚度为2k",
+      "old_subsection": "5.9.7 滑块单摆的频率、振幅比与初值",
+      "old_example_numbers": [
+        44
+      ],
+      "decision": "retain",
+      "notes": "独立变式，必须保留，不能与单弹簧图去重。图中只在左弹簧旁标k，正文和图题需明确两根均为k；l、m、θ完整。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/021.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p024-double-pendulum",
+      "deck": "c5-4",
+      "page": 24,
+      "crop_rect_pt": [
+        540,
+        83.96,
+        671.22,
+        268
+      ],
+      "caption": "两根等长轻杆串接的双单摆；θ₁、θ₂分别从各自竖直向下方向量起",
+      "old_subsection": "5.9.8 双单摆的非正交原坐标与简正坐标",
+      "old_example_numbers": [
+        45
+      ],
+      "decision": "retain",
+      "notes": "源扫描分辨率有限但l、m、θ₁、θ₂仍可辨；第二角不是两杆相对角。裁剪保留两条竖直虚线及下球质量m，排除下方空白。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/024.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-4-p027-double-pendulum-repeat",
+      "deck": "c5-4",
+      "page": 27,
+      "crop_rect_pt": [
+        576,
+        131.98,
+        707.22,
+        316
+      ],
+      "caption": "双单摆的两条绝对角与简正坐标",
+      "old_subsection": "5.9.8 双单摆的非正交原坐标与简正坐标",
+      "old_example_numbers": [
+        45
+      ],
+      "decision": "duplicate",
+      "notes": "与第24页同一原图；不要一并裁入左侧带错误q₂标号的逆变换或下方错误动能式。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-4.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-4/027.png",
+      "visual_check": "full_page_reviewed",
+      "duplicate_of": "c5-4-p024-double-pendulum"
+    },
+    {
+      "key": "c5-5-p015-rotating-tube",
+      "deck": "c5-5",
+      "page": 15,
+      "crop_rect_pt": [
+        392,
+        20,
+        717,
+        136
+      ],
+      "caption": "光滑直管绕O以角速度ω旋转；原图初始半径a、管长2a",
+      "old_subsection": "5.10.5 哈密顿函数与机械能的区别；5.6.3 匀速转动直管中的小球",
+      "old_example_numbers": [
+        25
+      ],
+      "decision": "retain",
+      "notes": "旧稿前节例25给一般管长l并已明确l=2a特例；在5.10.5应引用同一原图说明H与机械能不同。裁剪顶部20pt可避开粉色框线，仍保留y标号；右界717pt保留x同时避开边框。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-5.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-5/015.png",
+      "visual_check": "full_page_and_crop_reviewed"
+    },
+    {
+      "key": "c5-5-p016-slider-pendulum-repeat",
+      "deck": "c5-5",
+      "page": 16,
+      "crop_rect_pt": [
+        406.18,
+        177.82,
+        711.35,
+        362.07
+      ],
+      "caption": "单弹簧滑块单摆的速度合成与正则动量",
+      "old_subsection": "5.10.6 耦合系统的哈密顿函数",
+      "old_example_numbers": [
+        50,
+        51
+      ],
+      "decision": "duplicate",
+      "notes": "与c5-4第17/18页原图相同，适合通过图号引用而不重复制作资产；此处正文φ与原图一致。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-5.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-5/016.png",
+      "visual_check": "full_page_reviewed",
+      "duplicate_of": "c5-4-p018-slider-pendulum-velocity"
+    },
+    {
+      "key": "c5-5-p017-slider-pendulum-repeat",
+      "deck": "c5-5",
+      "page": 17,
+      "crop_rect_pt": [
+        210.78,
+        0,
+        515.96,
+        176.4
+      ],
+      "caption": "利用速度合成构造等质量滑块摆的哈密顿函数",
+      "old_subsection": "5.10.6 耦合系统的哈密顿函数",
+      "old_example_numbers": [
+        51
+      ],
+      "decision": "duplicate",
+      "notes": "同一540×326原图，重复来源登记；不要把下方纯公式作为原图追加。",
+      "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源PDF/理论力学-c5-5.pdf",
+      "source_png": "/Users/dongxingxi/Downloads/理论力学/第五章-分析力学/资料核查/源逐页图/理论力学-c5-5/017.png",
+      "visual_check": "full_page_reviewed",
+      "duplicate_of": "c5-4-p018-slider-pendulum-velocity"
+    }
+  ],
+  "pages": [
+    {
+      "deck": "c5-4",
+      "page": 1,
+      "topic": "变分与作用量回顾",
+      "old_lecture_location": "5.7/5.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 2,
+      "topic": "单自由度势能二次展开",
+      "old_lecture_location": "5.9.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 3,
+      "topic": "动能展开与小量阶数",
+      "old_lecture_location": "5.9.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 4,
+      "topic": "小振动方程及成立条件",
+      "old_lecture_location": "5.9.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 5,
+      "topic": "实心球内滚动",
+      "old_lecture_location": "5.9.2",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p005-ball-inner-roll"
+      ],
+      "content_status": "method_compressed_see_b-method-01"
+    },
+    {
+      "deck": "c5-4",
+      "page": 6,
+      "topic": "半圆柱摇摆",
+      "old_lecture_location": "5.9.3",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p006-half-cylinder"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 7,
+      "topic": "多自由度二次型",
+      "old_lecture_location": "5.9.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 8,
+      "topic": "矩阵运动方程及简正坐标",
+      "old_lecture_location": "5.9.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 9,
+      "topic": "三弹簧双滑块原模型",
+      "old_lecture_location": "5.9.6",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p009-three-springs"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 10,
+      "topic": "和差坐标解耦",
+      "old_lecture_location": "5.9.6",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p010-three-springs-repeat"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 11,
+      "topic": "同相反相与模态叠加",
+      "old_lecture_location": "5.9.6",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p011-three-spring-animation",
+        "c5-4-p011-antiphase-frame",
+        "c5-4-p011-superposition-frame"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 12,
+      "topic": "归一化简正坐标",
+      "old_lecture_location": "5.9.6",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 13,
+      "topic": "单频试探与特征方程",
+      "old_lecture_location": "5.9.6",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 14,
+      "topic": "三弹簧久期根与振幅比",
+      "old_lecture_location": "5.9.6",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 15,
+      "topic": "一般久期方程",
+      "old_lecture_location": "5.9.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 16,
+      "topic": "余子式构造模态",
+      "old_lecture_location": "5.9.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 17,
+      "topic": "单弹簧滑块单摆精确几何",
+      "old_lecture_location": "5.5.5/5.9.7",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p017-slider-pendulum-repeat"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 18,
+      "topic": "平衡位置与线性方程",
+      "old_lecture_location": "5.9.7",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p018-slider-pendulum-velocity"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 19,
+      "topic": "滑块摆频率及通解",
+      "old_lecture_location": "5.9.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 20,
+      "topic": "指定静止释放初值",
+      "old_lecture_location": "5.9.7",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p020-slider-release-frame"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 21,
+      "topic": "双侧弹簧变式",
+      "old_lecture_location": "5.9.7",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p021-double-spring-pendulum"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 22,
+      "topic": "作业题号",
+      "old_lecture_location": "原课件作业题号",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "no_independent_problem_statement"
+    },
+    {
+      "deck": "c5-4",
+      "page": 23,
+      "topic": "补充资料标题",
+      "old_lecture_location": "5.9.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "no_independent_problem_statement"
+    },
+    {
+      "deck": "c5-4",
+      "page": 24,
+      "topic": "双单摆二次拉格朗日函数",
+      "old_lecture_location": "5.9.8",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p024-double-pendulum"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 25,
+      "topic": "双摆久期根",
+      "old_lecture_location": "5.9.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 26,
+      "topic": "振幅比与通解",
+      "old_lecture_location": "5.9.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 27,
+      "topic": "双摆简正坐标",
+      "old_lecture_location": "5.9.8",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-4-p027-double-pendulum-repeat"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 28,
+      "topic": "简正方程与频率",
+      "old_lecture_location": "5.9.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 29,
+      "topic": "同时对角化",
+      "old_lecture_location": "5.9.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-4",
+      "page": 30,
+      "topic": "独立模态叠加",
+      "old_lecture_location": "5.9.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 1,
+      "topic": "小振动回顾",
+      "old_lecture_location": "5.9.4–5.9.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 2,
+      "topic": "Hamilton形式动机",
+      "old_lecture_location": "5.10",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 3,
+      "topic": "数学Legendre变换",
+      "old_lecture_location": "5.10.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 4,
+      "topic": "力学Legendre变换",
+      "old_lecture_location": "5.10.2",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 5,
+      "topic": "完整微分与正则方程",
+      "old_lecture_location": "5.10.2",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 6,
+      "topic": "正则方程与状态信息",
+      "old_lecture_location": "5.10.2",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 7,
+      "topic": "相空间作用量变分",
+      "old_lecture_location": "5.10.3",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 8,
+      "topic": "独立变分得正则方程",
+      "old_lecture_location": "5.10.3",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 9,
+      "topic": "自由粒子",
+      "old_lecture_location": "5.10.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 10,
+      "topic": "一维势场质点",
+      "old_lecture_location": "5.10.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 11,
+      "topic": "平面中心力",
+      "old_lecture_location": "5.10.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 12,
+      "topic": "球形碗质点",
+      "old_lecture_location": "5.10.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 13,
+      "topic": "循环积分与H守恒",
+      "old_lecture_location": "5.6.1/5.10.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 14,
+      "topic": "Hamilton与机械能",
+      "old_lecture_location": "5.6.2/5.10.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 15,
+      "topic": "旋转直管",
+      "old_lecture_location": "5.6.3/5.10.5",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-5-p015-rotating-tube"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 16,
+      "topic": "滑块摆动量反解",
+      "old_lecture_location": "5.10.6",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-5-p016-slider-pendulum-repeat"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 17,
+      "topic": "二次齐次性构造H",
+      "old_lecture_location": "5.10.6",
+      "visually_reviewed": true,
+      "figure_keys": [
+        "c5-5-p017-slider-pendulum-repeat"
+      ],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 18,
+      "topic": "H的二次近似",
+      "old_lecture_location": "5.10.6",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 19,
+      "topic": "正则方程解题流程",
+      "old_lecture_location": "5.4/5.10各例",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 20,
+      "topic": "一维谐振子",
+      "old_lecture_location": "5.10.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 21,
+      "topic": "固定核库仑模型",
+      "old_lecture_location": "5.10.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 22,
+      "topic": "库仑六个正则方程",
+      "old_lecture_location": "5.10.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 23,
+      "topic": "消动量恢复二阶方程",
+      "old_lecture_location": "5.10.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 24,
+      "topic": "作业题号",
+      "old_lecture_location": "原课件作业题号",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "no_independent_problem_statement"
+    },
+    {
+      "deck": "c5-5",
+      "page": 25,
+      "topic": "补充资料标题",
+      "old_lecture_location": "5.10.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "no_independent_problem_statement"
+    },
+    {
+      "deck": "c5-5",
+      "page": 26,
+      "topic": "热力学Legendre变换",
+      "old_lecture_location": "5.10.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 27,
+      "topic": "Hamilton形式比较",
+      "old_lecture_location": "5.10",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 28,
+      "topic": "相空间及量子联系",
+      "old_lecture_location": "5.14.1/5.15.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-5",
+      "page": 29,
+      "topic": "辛数值算法与应用",
+      "old_lecture_location": "5.14.8",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 1,
+      "topic": "Hamilton与能量回顾",
+      "old_lecture_location": "5.6.2/5.10",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 2,
+      "topic": "泊松括号定义与演化",
+      "old_lecture_location": "5.11.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 3,
+      "topic": "显时与不显时运动积分",
+      "old_lecture_location": "5.11.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 4,
+      "topic": "基本括号与统一演化",
+      "old_lecture_location": "5.11.2",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 5,
+      "topic": "一般相变量括号",
+      "old_lecture_location": "5.11.2/5.11.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 6,
+      "topic": "泊松代数性质",
+      "old_lecture_location": "5.11.3",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 7,
+      "topic": "泊松定理",
+      "old_lecture_location": "5.11.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 8,
+      "topic": "总角动量守恒例题",
+      "old_lecture_location": "5.11.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 9,
+      "topic": "角动量括号逐项计算",
+      "old_lecture_location": "5.11.3",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 10,
+      "topic": "泊松定理局限",
+      "old_lecture_location": "5.11.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 11,
+      "topic": "正则变换定义",
+      "old_lecture_location": "5.12.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 12,
+      "topic": "一形式与母函数条件",
+      "old_lecture_location": "5.12.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 13,
+      "topic": "其他三类母函数",
+      "old_lecture_location": "5.12.2",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 14,
+      "topic": "源例2正则检验",
+      "old_lecture_location": "5.12.3",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 15,
+      "topic": "母函数解题步骤",
+      "old_lecture_location": "5.12.2",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 16,
+      "topic": "二维谐振子母函数",
+      "old_lecture_location": "5.12.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 17,
+      "topic": "代入H与循环积分",
+      "old_lecture_location": "5.12.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 18,
+      "topic": "谐振子轨道解",
+      "old_lecture_location": "5.12.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 19,
+      "topic": "K=0与HJ过渡",
+      "old_lecture_location": "5.13.1",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 20,
+      "topic": "作业题号",
+      "old_lecture_location": "原课件作业题号",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "no_independent_problem_statement"
+    },
+    {
+      "deck": "c5-6",
+      "page": 21,
+      "topic": "补充资料标题",
+      "old_lecture_location": "5.11后续",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "no_independent_problem_statement"
+    },
+    {
+      "deck": "c5-6",
+      "page": 22,
+      "topic": "泊松定理Jacobi证明",
+      "old_lecture_location": "5.11.4",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 23,
+      "topic": "时间平均与量子期望",
+      "old_lecture_location": "5.11.6/5.15",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 24,
+      "topic": "错误经典不确定类比",
+      "old_lecture_location": "5.11.6/5.15.7",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 25,
+      "topic": "经典类比的证伪题",
+      "old_lecture_location": "5.11.6",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "question_expression_compressed_see_b-question-02"
+    },
+    {
+      "deck": "c5-6",
+      "page": 26,
+      "topic": "一般复合守恒命题",
+      "old_lecture_location": "5.11.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    },
+    {
+      "deck": "c5-6",
+      "page": 27,
+      "topic": "直角谐振子及中心力应用",
+      "old_lecture_location": "5.11.5",
+      "visually_reviewed": true,
+      "figure_keys": [],
+      "content_status": "covered_in_old_manuscript"
+    }
+  ],
+  "source_errors": [
+    {
+      "deck": "c5-4",
+      "page": 3,
+      "issue": "由位力定理时间平均推瞬时速度与位移成比例不成立。",
+      "old_manuscript_status": "5.9.1已改为小量阶数分析。"
+    },
+    {
+      "deck": "c5-4",
+      "page": 4,
+      "issue": "任意平衡附近均简谐的说法缺少非退化稳定条件；c/a₀中的c应与k统一。",
+      "old_manuscript_status": "5.9.1已限定a₀>0和k>0，并解释k=0、k<0。"
+    },
+    {
+      "deck": "c5-4",
+      "page": 7,
+      "issue": "势能Taylor二阶Hessian项缺1/2。",
+      "old_manuscript_status": "5.9.4已正确写1/2。"
+    },
+    {
+      "deck": "c5-4",
+      "page": 8,
+      "issue": "L对q偏导漏负号，原最终运动方程仍正确。",
+      "old_manuscript_status": "5.9.4分量推导明确负号。"
+    },
+    {
+      "deck": "c5-4",
+      "page": 11,
+      "issue": "上方第二个逆变换应q₂=(ξ₁−ξ₂)/2，源误为加号。",
+      "old_manuscript_status": "5.9.6使用正确逆变换；提图必须避开上部错误公式。"
+    },
+    {
+      "deck": "c5-4",
+      "page": 16,
+      "issue": "第一行余子式法缺非零列及秩s−1条件。",
+      "old_manuscript_status": "5.9.5已补3×3计算与秩/零列限制。"
+    },
+    {
+      "deck": "c5-4",
+      "page": 20,
+      "issue": "两个模态系数都印作C₁，第二个应为C₂。",
+      "old_manuscript_status": "5.9.7使用C±并完成初值消元；本页只提无公式的动画图。"
+    },
+    {
+      "deck": "c5-4",
+      "page": 27,
+      "issue": "逆变换第二式左侧q₂应为θ₂；动能第一模系数应1+1/√2，源两项均为减号。",
+      "old_manuscript_status": "5.9.8中对应u_−为低频模，系数正负已正确。"
+    },
+    {
+      "deck": "c5-5",
+      "page": 7,
+      "issue": "相空间作用量分部积分的边界项前应为正号，源为负。",
+      "old_manuscript_status": "5.10.3已写正号。"
+    },
+    {
+      "deck": "c5-5",
+      "page": 12,
+      "issue": "p点θ中的离心项应正：pφ²cosθ/(ma²sin³θ)，源为负。",
+      "old_manuscript_status": "例49已正确。实际放大源页确认该负号错误。"
+    },
+    {
+      "deck": "c5-5",
+      "page": 21,
+      "issue": "题干文本有叠压与右边缘截断，不能直接把整页当讲义图；核电荷+Ze和球坐标模型仍可核定。",
+      "old_manuscript_status": "例53题干及三动量定义完整，使用正确固定核库仑模型。"
+    },
+    {
+      "deck": "c5-5",
+      "page": 22,
+      "additional_pages": [
+        23
+      ],
+      "issue": "φ点分子误为pφ²，应为一次pφ。",
+      "old_manuscript_status": "例53六式和三二阶式已修正并逐项消元。"
+    },
+    {
+      "deck": "c5-6",
+      "page": 4,
+      "issue": "“没有正负号差别”只是统一写法，不能理解为正则方程符号相同。",
+      "old_manuscript_status": "5.11.2明确负号包含于J。"
+    },
+    {
+      "deck": "c5-6",
+      "page": 12,
+      "issue": "正则变换边界条件不能一般地由旧q固定推出新Q固定。",
+      "old_manuscript_status": "5.12.1用内部紧支变分并保留端点项提醒，已修复逻辑。"
+    },
+    {
+      "deck": "c5-6",
+      "page": 22,
+      "issue": "证明把沿流导数直接写成与H的括号，默认函数不显含时间。",
+      "old_manuscript_status": "5.11.4已用D=∂t+{·,H}证明一般显时版本。"
+    },
+    {
+      "deck": "c5-6",
+      "page": 25,
+      "additional_pages": [
+        23,
+        24
+      ],
+      "issue": "经典不确定下限类比为假；积分第二根号误重复φ而非ψ，且与上一式不等价（漏1/2及绝对值）；量纲也缺作用量尺度。",
+      "old_manuscript_status": "例56给三种有效反例，未把错误源式当定理；具体待证伪题式仍可补明。"
+    }
+  ],
+  "omissions": [
+    {
+      "id": "b-method-01",
+      "deck": "c5-4",
+      "page": 5,
+      "old_example": 41,
+      "old_location": "5.9.2 球在圆柱内表面滚动",
+      "type": "source_method_compressed",
+      "finding": "旧稿保留题干、结果和接触检验，但源接触点瞬心法及Euler偏导链被质心分解和直接给方程替代。",
+      "suggestion": "在原图旁补I_A=I_C+mr²=7mr²/5，T=I_Aω_s²/2=7m(R−r)²θ点²/10，再列L_θ点=7md²θ点/5、L_θ=−mgd sinθ，得到精确方程后线性化。ω_s为速率或需明确有向关系，不能与θ点默认同向。"
+    },
+    {
+      "id": "b-question-02",
+      "deck": "c5-6",
+      "page": 25,
+      "old_example": 56,
+      "old_location": "5.11.6 经典涨落与量子不确定关系的区别",
+      "type": "source_question_expression_compressed",
+      "finding": "旧稿已完整证伪经典普适下限，且一般有限时间平均在5.15给出；源“判断该不等式是否成立”的候选表达未明确陈列。",
+      "suggestion": "在例56题干定义有限时间标准差，并明确提出待证伪类比；若写量纲一致候选，应引入任意正作用量尺度s₀，ΔfΔg ?≥ (s₀/2)|平均{f,g}|，随即用旧稿自由粒子反例否定。注明原积分式重复φ、漏绝对值和1/2，不把源误式作为有效结论。"
+    }
+  ],
+  "conclusion": "源页中的所有独立几何模型均已定位；推荐9幅静态原图，另登记7处重复（其中第11页两个重复动画首帧有不同语义）。几何图本身未发现需改变物理内容的错误。旧稿主要题设、初值、公式与推导链已存在，尚有2项原方法/题式表达压缩；原图需由主代理统一提取与插入，不能用本文审阅代替最终裁图验收。"
+}

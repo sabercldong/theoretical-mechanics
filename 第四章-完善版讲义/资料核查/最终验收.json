@@ -1,0 +1,525 @@
+{
+  "status": "passed",
+  "pdf_pages": 85,
+  "final_pdf_sha256": "39b057b903b80c341ba18487a6beadf866a358040410136190ec3ebb05b041dd",
+  "reviewed_uncompressed_pdf_sha256": "09d64ac3bc6842daa8233e1ae36d51448dcadc29db1fc77fec650f369405ff70",
+  "page_review_coverage": [
+    {
+      "page": 1,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 1
+    },
+    {
+      "page": 2,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 2
+    },
+    {
+      "page": 3,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 3
+    },
+    {
+      "page": 4,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-目录.json",
+      "review_page": 4
+    },
+    {
+      "page": 5,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-目录.json",
+      "review_page": 5
+    },
+    {
+      "page": 6,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 6
+    },
+    {
+      "page": 7,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 7
+    },
+    {
+      "page": 8,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 8
+    },
+    {
+      "page": 9,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 9
+    },
+    {
+      "page": 10,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 10
+    },
+    {
+      "page": 11,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 11
+    },
+    {
+      "page": 12,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 12
+    },
+    {
+      "page": 13,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 13
+    },
+    {
+      "page": 14,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 14
+    },
+    {
+      "page": 15,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 15
+    },
+    {
+      "page": 16,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 16
+    },
+    {
+      "page": 17,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 17
+    },
+    {
+      "page": 18,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 18
+    },
+    {
+      "page": 19,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 19
+    },
+    {
+      "page": 20,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 20
+    },
+    {
+      "page": 21,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 21
+    },
+    {
+      "page": 22,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 22
+    },
+    {
+      "page": 23,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 23
+    },
+    {
+      "page": 24,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 24
+    },
+    {
+      "page": 25,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 25
+    },
+    {
+      "page": 26,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 26
+    },
+    {
+      "page": 27,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 27
+    },
+    {
+      "page": 28,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-a.json",
+      "review_page": 28
+    },
+    {
+      "page": 29,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-a.json",
+      "review_page": 29
+    },
+    {
+      "page": 30,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 30
+    },
+    {
+      "page": 31,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 31
+    },
+    {
+      "page": 32,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 32
+    },
+    {
+      "page": 33,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 33
+    },
+    {
+      "page": 34,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 34
+    },
+    {
+      "page": 35,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 35
+    },
+    {
+      "page": 36,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 36
+    },
+    {
+      "page": 37,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 37
+    },
+    {
+      "page": 38,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 38
+    },
+    {
+      "page": 39,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 39
+    },
+    {
+      "page": 40,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 40
+    },
+    {
+      "page": 41,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 41
+    },
+    {
+      "page": 42,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 42
+    },
+    {
+      "page": 43,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 43
+    },
+    {
+      "page": 44,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 44
+    },
+    {
+      "page": 45,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 45
+    },
+    {
+      "page": 46,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 46
+    },
+    {
+      "page": 47,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 47
+    },
+    {
+      "page": 48,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 48
+    },
+    {
+      "page": 49,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 49
+    },
+    {
+      "page": 50,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 50
+    },
+    {
+      "page": 51,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 51
+    },
+    {
+      "page": 52,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 52
+    },
+    {
+      "page": 53,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-b.json",
+      "review_page": 53
+    },
+    {
+      "page": 54,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 55
+    },
+    {
+      "page": 55,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 56
+    },
+    {
+      "page": 56,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 57
+    },
+    {
+      "page": 57,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-b.json",
+      "review_page": 58
+    },
+    {
+      "page": 58,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 59
+    },
+    {
+      "page": 59,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 60
+    },
+    {
+      "page": 60,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 60
+    },
+    {
+      "page": 61,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 61
+    },
+    {
+      "page": 62,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 62
+    },
+    {
+      "page": 63,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 64
+    },
+    {
+      "page": 64,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 64
+    },
+    {
+      "page": 65,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 66
+    },
+    {
+      "page": 66,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 67
+    },
+    {
+      "page": 67,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 68
+    },
+    {
+      "page": 68,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 69
+    },
+    {
+      "page": 69,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 70
+    },
+    {
+      "page": 70,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 70
+    },
+    {
+      "page": 71,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 71
+    },
+    {
+      "page": 72,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 73
+    },
+    {
+      "page": 73,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 74
+    },
+    {
+      "page": 74,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 75
+    },
+    {
+      "page": 75,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 76
+    },
+    {
+      "page": 76,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 77
+    },
+    {
+      "page": 77,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 77
+    },
+    {
+      "page": 78,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 78
+    },
+    {
+      "page": 79,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 80
+    },
+    {
+      "page": 80,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 81
+    },
+    {
+      "page": 81,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 81
+    },
+    {
+      "page": 82,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 84
+    },
+    {
+      "page": 83,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 85
+    },
+    {
+      "page": 84,
+      "method": "直接视觉复查",
+      "review": "终稿变化页核查-v3-c.json",
+      "review_page": 84
+    },
+    {
+      "page": 85,
+      "method": "正文区域像素与已审阅页一致",
+      "review": "终稿逐页核查-v2-c.json",
+      "review_page": 87
+    }
+  ],
+  "pagination_issue_resolution": "v2 第 50、82 页的孤立尾段已通过页面构建同步修订消除，v3 对应第 50、81 页直接视觉复查通过。",
+  "source_slides": 75,
+  "examples": 47,
+  "selftests_with_answers": 24,
+  "original_figures": 47,
+  "editable_model_figures": 47,
+  "portable_compilation": "独立临时目录解包编译，85 页文字与渲染像素全部一致，零警告；最后仅追加核查记录，编译输入哈希保持一致。"
+}

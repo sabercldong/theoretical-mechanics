@@ -1,0 +1,722 @@
+[
+  {
+    "kind": "example",
+    "n": 1,
+    "title": "三角形薄片与三个顶点质点",
+    "stem": "\\label{ex:c2-1}\n均匀三角形薄片顶点为 $\\vect a,\\vect b,\\vect c$，求质心，并与三个等质量顶点质点比较。\n",
+    "answer": "\\solution 用重心坐标\n$\\vect r=\\vect a+u(\\vect b-\\vect a)+v(\\vect c-\\vect a)$，\n$u\\ge0,v\\ge0,u+v\\le1$。面积元中的常数雅可比在分子、分母中约去。\n积分域面积为 $1/2$，而\n\\[\n\\int_0^1\\!\\int_0^{1-u}u\\,\\dd v\\,\\dd u=\\frac16,\\qquad\n\\int_0^1\\!\\int_0^{1-u}v\\,\\dd v\\,\\dd u=\\frac16.\n\\]\n故 $\\bar u=\\bar v=1/3$，\n\\begin{equation}\n\\vect R=\\frac{\\vect a+\\vect b+\\vect c}{3}.\n\\end{equation}\n三个等质量顶点质点给出完全相同的质心。若 $D=(\\vect b+\\vect c)/2$，\n则 $\\vect R=\\vect a+\\frac23(\\vect D-\\vect a)$，质心将每条中线按 $2:1$ 分割。\n\n",
+    "length": 446
+  },
+  {
+    "kind": "example",
+    "n": 2,
+    "title": "圆盘挖去两个相同圆孔",
+    "stem": "\\label{ex:c2-2}\n半径为 $R$ 的均匀圆盘挖去两个半径为 $r$ 的孔。两孔中心到圆盘中心的距离均为 $R/2$，夹角为 $60^\\circ$，关于竖直轴对称且位于上半盘。设孔不重叠，求剩余薄片质心。\n",
+    "answer": "\\solution 以圆盘中心为原点，$y$ 向上。孔中心\n\\[\n(x_1,y_1)=\\left(-\\frac R4,\\frac{\\sqrt3R}4\\right),\\qquad\n(x_2,y_2)=\\left(\\frac R4,\\frac{\\sqrt3R}4\\right).\n\\]\n原盘质量 $M_0=\\sigma\\pi R^2$，每孔质量 $m=\\sigma\\pi r^2$。于是\n\\begin{equation}\nX=0,\\qquad\nY=\\frac{-m(y_1+y_2)}{M_0-2m}\n=-\\frac{\\sqrt3Rr^2}{2(R^2-2r^2)}.\n\\end{equation}\n孔在上方，剩余薄片的质心必向下偏移，负号可由这一几何检查判定。两孔中心距为 $R/2$，故不重叠要求 $r\\le R/4$，此时孔也包含在原盘内。\n",
+    "length": 372
+  },
+  {
+    "kind": "example",
+    "n": 3,
+    "title": "均匀实心半球与厚半球壳",
+    "stem": "\\label{ex:c2-3}\n求半径为 $a$ 的均匀实心半球的质心；再求内半径为 $a$、外半径为 $b$ 的均匀厚半球壳质心。\n",
+    "answer": "\\solution 以赤道平面为 $z=0$，半球位于 $z\\ge0$。实心半球横截面积\n$A(z)=\\pi(a^2-z^2)$，所以\n\\[\nV=\\int_0^aA(z)\\dd z=\\frac{2\\pi a^3}{3},\\qquad\n\\int z\\dd V=\\int_0^a\\pi z(a^2-z^2)\\dd z=\\frac{\\pi a^4}{4}.\n\\]\n因此 $X=Y=0$，$Z=3a/8$。\n\n另用球坐标 $z=s\\cos\\theta$，$\\dd V=s^2\\sin\\theta\\,\\dd s\\,\\dd\\theta\\,\\dd\\phi$，\n$0\\le\\theta\\le\\pi/2$，可得\n\\[\n\\int z\\dd V=\n\\int_0^{2\\pi}\\!\\dd\\phi\\int_0^{\\pi/2}\\!\\cos\\theta\\sin\\theta\\,\\dd\\theta\n\\int_0^a s^3\\dd s=\\frac{\\pi a^4}{4}.\n\\]\n厚半球壳由两实心半球相减：\n\\begin{equation}\nZ=\\frac{3(b^4-a^4)}{8(b^3-a^3)}.\n\\end{equation}\n$a=0$ 时恢复实心结果 $3b/8$；薄壳极限 $b\\to a$ 给出 $Z=a/2$。\n实心半球与薄半球壳的质心不同，不能混用。\n\n",
+    "length": 571
+  },
+  {
+    "kind": "example",
+    "n": 4,
+    "title": "圆锥及其沿轴剖开的半圆锥",
+    "stem": "\\label{ex:c2-4}\n均匀圆锥底面半径为 $a$，高为 $h$。求完整圆锥的质心，以及沿包含轴的平面剖开、保留 $x\\ge0$ 部分后的质心。\n",
+    "answer": "\\solution 先以顶点为原点、沿轴向下取 $s$。截面半径 $as/h$，截面积\n$\\pi a^2s^2/h^2$。故\n\\[\n\\bar s=\\frac{\\int_0^h s^3\\dd s}{\\int_0^h s^2\\dd s}=\\frac{3h}{4}.\n\\]\n以底面为 $z=0$、向上为正，则 $Z=h/4$。\n\n半圆锥仍有 $Z=h/4$，$Y=0$。高度 $z$ 处截面为半径\n$r=a(1-z/h)$ 的半圆盘，其面积为 $\\pi r^2/2$，面积对 $yz$ 平面的矩为\n\\[\n\\int_{x\\ge0}x\\,\\dd A\n=\\int_{-\\pi/2}^{\\pi/2}\\!\\cos\\phi\\,\\dd\\phi\\int_0^r s^2\\dd s\n=\\frac{2r^3}{3}.\n\\]\n积分得半圆锥体积 $V=\\pi a^2h/6$，一阶矩为\n$\\int_0^h(2/3)a^3(1-z/h)^3\\dd z=a^3h/6$。所以\n\\begin{equation}\n(X,Y,Z)=\\left(\\frac a\\pi,0,\\frac h4\\right).\n\\end{equation}\n\n",
+    "length": 498
+  },
+  {
+    "kind": "example",
+    "n": 5,
+    "title": "抛物线围成的均匀薄片",
+    "stem": "\\label{ex:c2-5}\n均匀薄片由 $y=kx^2$ 与 $y=a$ 围成，其中 $k,a>0$。求质心。\n",
+    "answer": "\\solution 关于 $y$ 轴对称，故 $X=0$。令 $b=\\sqrt{a/k}$，\n\\[\nA=\\int_{-b}^b(a-kx^2)\\dd x=\\frac43ab,\n\\]\n\\[\n\\int y\\,\\dd A=\\frac12\\int_{-b}^b(a^2-k^2x^4)\\dd x\n=\\frac45a^2b.\n\\]\n于是 $Y=3a/5$。取适当坐标单位使 $k=1$，即得到 $y=x^2$ 的特例。\n\n",
+    "length": 206
+  },
+  {
+    "kind": "example",
+    "n": 6,
+    "title": "由坐标平面截出的四面体",
+    "stem": "\\label{ex:c2-6}\n均匀四面体由 $x=0,y=0,z=0$ 和 $4x+2y+z=8$ 围成，求质心。\n",
+    "answer": "\\solution 截距为 $a=2,b=4,c=8$。作变量变换\n$x=au,y=bv,z=cw$，积分域为\n$u,v,w\\ge0,u+v+w\\le1$。单纯形中四个重心坐标\n$u,v,w,1-u-v-w$ 地位对称且和为1，因此平均均为 $1/4$。\n也可直接计算\n\\[\n\\int\\dd u\\dd v\\dd w=\\frac16,\\quad\n\\int u\\,\\dd u\\dd v\\dd w=\\frac1{24}.\n\\]\n故\n\\begin{equation}\n(X,Y,Z)=\\left(\\frac a4,\\frac b4,\\frac c4\\right)=\\left(\\frac12,1,2\\right).\n\\end{equation}\n\n",
+    "length": 320
+  },
+  {
+    "kind": "example",
+    "n": 7,
+    "title": "具有轴向密度梯度的实心半球",
+    "stem": "\\label{ex:c2-7}\n上半球半径为 $a$，密度随高度变化为 $\\rho(z)=\\rho_0(1+z/a)$。求质量及质心。\n",
+    "answer": "\\solution 仍取水平截面，$\\dd m=\\rho_0(1+z/a)\\pi(a^2-z^2)\\dd z$。对称性给 $X=Y=0$。展开并积分：\n\\begin{align*}\nM&=\\rho_0\\pi\\int_0^a\\left(a^2-z^2+az-z^3/a\\right)\\dd z\\\\\n&=\\rho_0\\pi a^3\\left(1-\\frac13+\\frac12-\\frac14\\right)\n=\\frac{11}{12}\\rho_0\\pi a^3,\\\\\nMZ&=\\rho_0\\pi\\int_0^a\\left(a^2z-z^3+az^2-z^4/a\\right)\\dd z\\\\\n&=\\rho_0\\pi a^4\\left(\\frac12-\\frac14+\\frac13-\\frac15\\right)\n=\\frac{23}{60}\\rho_0\\pi a^4.\n\\end{align*}\n因此 $Z=23a/55\\approx0.41818a$。它高于均匀半球的 $3a/8$，符合上方更密的分布；同时仍在 $0<Z<a$ 内。\n\n",
+    "length": 468
+  },
+  {
+    "kind": "example",
+    "n": 8,
+    "title": "等长曲柄连杆机构",
+    "stem": "\\label{ex:c2-8}\n曲柄 $OA$ 和连杆 $AB$ 长度均为 $l$，均匀且质量均为 $m_1$。\n滑块 $B$ 的质量为 $m_2$，沿水平轴运动。曲柄以恒角速度 $\\omega$ 转动，\n$\\theta=\\omega t$ 从正水平轴起算。取连续运动支\n$A=(l\\cos\\theta,l\\sin\\theta)$、$B=(2l\\cos\\theta,0)$。求质心轨迹、总动量大小和方向。\n",
+    "answer": "\\solution 两杆质心分别为\n\\[\nC_1=\\left(\\frac l2\\cos\\theta,\\frac l2\\sin\\theta\\right),\\quad\nC_2=\\left(\\frac{3l}2\\cos\\theta,\\frac l2\\sin\\theta\\right).\n\\]\n令 $M=2m_1+m_2$，则\n\\begin{equation}\nX=\\frac{2(m_1+m_2)l}{M}\\cos\\omega t,\\qquad\nY=\\frac{m_1l}{M}\\sin\\omega t.\n\\end{equation}\n定义 $a_C=2(m_1+m_2)l/M$、$b_C=m_1l/M$，消去时间得\n$X^2/a_C^2+Y^2/b_C^2=1$。总动量\n\\begin{equation}\nP_x=-2(m_1+m_2)l\\omega\\sin\\omega t,\\qquad\nP_y=m_1l\\omega\\cos\\omega t,\n\\end{equation}\n\\[\n|\\vect P|=l|\\omega|\\sqrt{4(m_1+m_2)^2\\sin^2\\omega t+\nm_1^2\\cos^2\\omega t}.\n\\]\n方向沿质心椭圆轨迹切线，单位方向向量为 $\\vect P/|\\vect P|$。\n在 $P_x=0$ 的时刻，应直接用分量判断方向，不能只用 $\\tan\\beta=P_y/P_x$。\n",
+    "length": 610
+  },
+  {
+    "kind": "example",
+    "n": 9,
+    "title": "爆炸后的质心仍受同一外场控制",
+    "stem": "\\label{ex:c2-9}\n总质量 $M$ 的物体在均匀重力中抛出，于时刻 $t_0$ 瞬间爆成若干碎片。忽略空气阻力，求爆炸后各碎片质量加权位置与未爆炸轨道的关系。\n",
+    "answer": "\\solution 爆炸期间内冲量成对抵消，故 $\\sum_i m_i\\vect v_i^+=M\\vect V^-$。碎片从同一位置 $\\vect R_0$ 出发，各自满足\n\\[\n\\vect r_i(t)=\\vect R_0+\\vect v_i^+(t-t_0)\n+\\frac12\\vect g(t-t_0)^2.\n\\]\n加权求和，\n\\[\n\\vect R(t)=\\frac{\\sum_i m_i\\vect r_i(t)}M\n=\\vect R_0+\\vect V^-(t-t_0)+\\frac12\\vect g(t-t_0)^2.\n\\]\n质心继续沿未爆炸时的抛物线运动。爆炸可以增加内部动能，使碎片分散，但不改变质心在共同均匀场中的方程。若某些碎片先落地并受地面力，整个碎片系统的合外力改变，后续质心不再沿原抛物线。\n\n\n",
+    "length": 360
+  },
+  {
+    "kind": "example",
+    "n": 10,
+    "title": "固定机座上的偏心电动机",
+    "stem": "\\label{ex:c2-10}\n定子质量为 $m_1$，质心固定在 $O$；转子质量为 $m_2$，质心到 $O$ 的偏心距为 $e$。\n按原图所示取逆时针为正，转子以恒定角速度 $\\omega>0$ 转动，初始质心在 $O$ 正上方。\n求机座对整个电动机的支承合力。\n",
+    "answer": "\\solution 取 $x$ 向右，$y$ 向上，转子质心位置\n$\\vect r_2=e(-\\sin\\omega t,\\cos\\omega t)$。总动量与其导数为\n\\[\n\\vect P=m_2e\\omega(-\\cos\\omega t,-\\sin\\omega t),\\quad\n\\dot{\\vect P}=m_2e\\omega^2(\\sin\\omega t,-\\cos\\omega t).\n\\]\n支承合力 $\\vect N$ 与重力满足\n$\\vect N-(m_1+m_2)g\\vect e_y=\\dot{\\vect P}$，故\n\\begin{equation}\nN_x=m_2e\\omega^2\\sin\\omega t,\\qquad\nN_y=(m_1+m_2)g-m_2e\\omega^2\\cos\\omega t.\n\\end{equation}\n支承力包含静载与旋转不平衡载荷。若还要求机座所受支承力偶，\n必须另外使用角动量定理；仅凭质心运动定理不能求出力偶。\n",
+    "length": 434
+  },
+  {
+    "kind": "example",
+    "n": 11,
+    "title": "可自由后退的炮车",
+    "stem": "\\label{ex:c2-11}\n质量为 $M$ 的炮车在光滑水平轨道上静止。炮弹质量为 $m$，\n相对炮车的出膛速度为 $V$，与水平线成向上角 $\\alpha$。\n求发射后炮车速度、炮弹在地面系中的速度和方向。\n",
+    "answer": "\\solution 以炮弹水平发射方向为正。若炮车速度为 $U$，\n则炮弹地面系速度为 $(V\\cos\\alpha+U,V\\sin\\alpha)$。\n水平动量守恒：\n\\[\nMU+m(V\\cos\\alpha+U)=0.\n\\]\n因此\n\\begin{equation}\nU=-\\frac{m}{M+m}V\\cos\\alpha,\\quad\nv_x=\\frac{M}{M+m}V\\cos\\alpha,\\quad v_y=V\\sin\\alpha.\n\\end{equation}\n\\[\nv=V\\sqrt{\\sin^2\\alpha+\\frac{M^2}{(M+m)^2}\\cos^2\\alpha},\n\\qquad \\tan\\theta=\\frac{M+m}{M}\\tan\\alpha\n\\]\n（末式适用于 $v_x>0$ 的角度区间）。\n如果给定的是炮弹对地速度而不是相对炮车速度，水平动量方程中的速度就应直接取对地分量。两种题设不能混用。\n",
+    "length": 412
+  },
+  {
+    "kind": "example",
+    "n": 12,
+    "title": "人跳上车再向后跳离",
+    "stem": "\\label{ex:c2-12}\n小车质量 $100\\,\\mathrm{kg}$，以 $1\\,\\mathrm{m/s}$ 向右运动。\n质量 $50\\,\\mathrm{kg}$ 的人以 $2\\,\\mathrm{m/s}$、与水平成 $60^\\circ$ 的方向向右下跳上车，\n落稳后与车共同运动；随后以相对车 $1\\,\\mathrm{m/s}$、向左上与水平成 $30^\\circ$ 的速度跳离。\n忽略水平外力，求两个阶段的小车速度。\n",
+    "answer": "\\solution 落车前人的水平速度为 $2\\cos60^\\circ=1\\,\\mathrm{m/s}$，\n因此共同速度\n\\[\nu=\\frac{100\\times1+50\\times2\\cos60^\\circ}{150}\n=1\\,\\mathrm{m/s}.\n\\]\n跳离后若车速度为 $U$，人的对地水平速度为 $U-\\cos30^\\circ$。\n于是\n\\[\n150u=100U+50(U-\\cos30^\\circ),\n\\]\n\\begin{equation}\nU=1+\\frac{\\sqrt3}{6}\\,\\mathrm{m/s}\\approx1.289\\,\\mathrm{m/s}.\n\\end{equation}\n着落阶段可以有机械能损失；跳离阶段人的肌肉做功。两阶段均使用水平动量守恒，\n但均不应无条件使用机械能守恒。\n\n",
+    "length": 361
+  },
+  {
+    "kind": "example",
+    "n": 13,
+    "title": "多人同时跳车与依次跳车",
+    "stem": "\\label{ex:c2-13}\n小车质量为 $M$，载有 $N$ 个质量均为 $m$ 的人，初始静止。\n每人离车时沿同一水平正方向，相对离车后小车速度为 $v$。\n比较同时跳离与逐个跳离时小车的最终速度。\n",
+    "answer": "\\solution 同时离车时，若车速度为 $U$，每人的对地速度均为 $U+v$。\n\\begin{equation}\nU_{\\text{同时}}=-\\frac{Nm}{M+Nm}v.\n\\end{equation}\n依次离车时，设第 $k$ 人跳前共同速度为 $U_{k-1}$，跳后车与剩余人的速度为 $U_k$。\n以该瞬间“车、未离车的人、正在离车的人”为系统，\n\\[\n[M+(N-k+1)m]U_{k-1}\n=[M+(N-k)m]U_k+m(U_k+v).\n\\]\n故\n\\begin{equation}\nU_k-U_{k-1}=-\\frac{m}{M+(N-k+1)m}v,\\qquad\nU_{\\text{依次}}=-v\\sum_{j=1}^{N}\\frac{m}{M+jm}.\n\\end{equation}\n每项分母不大于 $M+Nm$，且 $N>1$ 时至少一项严格较小，因而\n$|U_{\\text{依次}}|>|U_{\\text{同时}}|$。\n差异来自每次跳离时车上剩余质量不同；各人的最终对地速度也不同。\n\n",
+    "length": 461
+  },
+  {
+    "kind": "example",
+    "n": 14,
+    "title": "可水平移动的支座与摆球",
+    "stem": "\\label{ex:c2-14}\n质量为 $m_A$ 的支座可在光滑水平面上移动。轻杆长 $l$，\n下端摆球质量为 $m_B$，摆角 $\\theta$ 从向下竖直方向起算。\n初始系统静止，摆角为 $\\theta_0$。若给定小振动形式\n$\\theta=\\theta_0\\cos kt$，求支座速度及最大速率。\n",
+    "answer": "\\solution 支座坐标为 $X$，球坐标为\n$(X+l\\sin\\theta,-l\\cos\\theta)$。水平总动量为零：\n\\[\n(m_A+m_B)\\dot X+m_Bl\\dot\\theta\\cos\\theta=0.\n\\]\n因此\n\\begin{equation}\n\\dot X=\\frac{m_Bl}{m_A+m_B}\\,k\\theta_0\\sin kt\n\\cos(\\theta_0\\cos kt).\n\\end{equation}\n若 $|\\theta_0|<\\pi/2$，余弦非负且不超过1；在\n$\\cos kt=0$、$|\\sin kt|=1$ 时两因子同时达到上界，故\n\\[\n|\\dot X|_{\\max}=\\frac{m_Bl}{m_A+m_B}\\,k|\\theta_0|.\n\\]\n位置形式的守恒为\n\\[\nX+\\frac{m_Bl}{m_A+m_B}\\sin\\theta\n=X(0)+\\frac{m_Bl}{m_A+m_B}\\sin\\theta_0.\n\\]\n若摆角来自系统自身的小振动而非外部指定，消去 $\\dot X$ 后\n\\[\nT\\simeq\\frac12\\frac{m_Am_B}{m_A+m_B}l^2\\dot\\theta^2,\\qquad\nU\\simeq\\frac12m_Bgl\\theta^2,\n\\]\n从而 $k^2=(m_A+m_B)g/(m_Al)$。前面保留余弦的速度表达式，是给定运动形式的精确代入；\n谐振形式本身仍属于小振幅近似。\n",
+    "length": 634
+  },
+  {
+    "kind": "example",
+    "n": 15,
+    "title": "太空中两人相互拉绳",
+    "stem": "\\label{ex:c2-15}\n两人在可忽略外力的空间中静止，相距 $L$，质量分别为 $m_1,m_2$。\n两人拉紧轻绳直到相遇，求相遇点。\n",
+    "answer": "\\solution 初始总动量为零，质心保持在初始位置。取第一人初始位置为0、\n第二人为 $L$，相遇时两人位置相同，必等于质心：\n\\[\nx_{\\text{遇}}=\\frac{m_2}{m_1+m_2}L.\n\\]\n二人走过的距离之比为 $s_1:s_2=m_2:m_1$。\n瞬时速度满足 $m_1v_1+m_2v_2=0$。拉力大小影响到达时间，\n但不改变相遇位置。若有推进器、第三个锚点或显著外力，结论应重新审查。\n\n",
+    "length": 210
+  },
+  {
+    "kind": "example",
+    "n": 16,
+    "title": "冲量作用于由轻绳连接的两个小球",
+    "stem": "\\label{ex:c2-16}\n质量为 $m_A,m_B$ 的小球由拉直的不可伸长轻绳连接，在光滑水平面上静止。\n给 $B$ 一个与 $A\\to B$ 方向成 $\\alpha$ 的冲量 $J$，\n$0\\le\\alpha<\\pi/2$。已知冲量后 $B$ 的速度大小为 $v_B$，求其方向和 $J$。\n",
+    "answer": "\\solution 取绳方向为 $x$，横向为 $y$。冲量的向外分量使轻绳绷紧，\n绳的约束冲量为 $K$。绳长在冲量后必须满足两端径向相对速度为零：\n\\[\nm_Av_{Ax}=K,\\quad m_Bv_{Bx}=J\\cos\\alpha-K,\\quad\nv_{Ax}=v_{Bx}=\\frac{J\\cos\\alpha}{m_A+m_B}.\n\\]\n横向分量给出 $v_{Ay}=0$、$v_{By}=J\\sin\\alpha/m_B$，所以\n\\begin{equation}\n\\tan\\beta=\\frac{m_A+m_B}{m_B}\\tan\\alpha,\\qquad\nJ=\\frac{v_B}{\\sqrt{\\cos^2\\alpha/(m_A+m_B)^2+\\sin^2\\alpha/m_B^2}}.\n\\end{equation}\n同时 $K=m_AJ\\cos\\alpha/(m_A+m_B)$。\n若冲量方向使两球趋于靠近，柔绳会松弛，这组径向约束便不适用。\n若冲量作用时间很短，外冲量中输入的功取决于施力过程；不能从总动量方程单独推断其数值。\n\n",
+    "length": 472
+  },
+  {
+    "kind": "example",
+    "n": 17,
+    "title": "借助小球反弹延长越过深沟的运动",
+    "stem": "\\label{ex:c2-17}\n人质量为 $m_1$，小球质量为 $m_2$。二者在高度 $h$ 的沟沿开始运动。\n抛球后人的竖直初速度为 $u>0$，球的竖直初速度为 $-w$；\n两者水平速度相同且为 $v$。小球与水平沟底、以及随后与人的接触均理想弹性。\n要求球到沟底的时刻正好是人达到最高点的时刻。求 $u,w$，\n并分析此后能否重复同一过程。\n",
+    "answer": "\\solution 设抛球前二者竖直总动量为零，内部抛掷使\n$m_1u=m_2w$。人的上升时间为 $t_a=u/g$；球在这段时间下降 $h$：\n\\[\nh=wt_a+\\frac12gt_a^2\n=\\left(\\frac{m_1}{m_2}+\\frac12\\right)\\frac{u^2}{g}.\n\\]\n因此\n\\begin{equation}\nu=\\sqrt{\\frac{gh}{m_1/m_2+1/2}},\\qquad\nw=\\frac{m_1}{m_2}u.\n\\end{equation}\n球触地前向下速率为 $w+u$，弹性反弹后以此速率向上。\n再经过 $t_a$，球回到原高度且速度为 $+w$；人也回到原高度，\n速度为 $-u$。两者水平位移相同，因此可在该时刻相遇。\n接触前竖直总动量仍为 $-m_1u+m_2w=0$。\n一维弹性碰撞在质心系中使双方速度反向，所以碰撞后人重新具有 $+u$，\n球具有 $-w$，下一周期重复。\n\n每个周期耗时 $2u/g$，水平前进 $2vu/g$。在平整沟底、理想反弹、\n准确接触且无空气阻力的模型中，重复反弹能够延长人的悬空时间。\n然而初次抛掷必须提供\n\\[\nE_{\\text{初}}=\\frac12m_1u^2+\\frac12m_2w^2\n=\\frac12m_1u^2\\left(1+\\frac{m_1}{m_2}\\right)\n\\]\n的竖直动能；球重力势能在下降和返回过程中交换而不被凭空创造。\n球的反弹和人与球的接触条件若不能实现，周期延续也就不能实现。\n",
+    "length": 656
+  },
+  {
+    "kind": "example",
+    "n": 18,
+    "title": "无外力矩仍不守恒的移动点角动量",
+    "stem": "\\label{ex:c2-18}\n自由质点质量为 $m$，在 $(vt,0)$ 运动；参考点 $A=(0,ut)$，两坐标轴不旋转。求关于 $A$ 的两种角动量。\n",
+    "answer": "\\solution $\\vect s=(vt,-ut)$、$\\vect v=(v,0)$，所以\n$L_A^{\\rm abs}=muvt$，导数为 $muv$。真实力及其力矩均为零，但\n$-\\vect v_A\\times\\vect P=-(0,u)\\times(mv,0)=muv\\vect e_z$，正好给出变化率。\n相对速度为 $(v,-u)$，与 $\\vect s$ 平行，因此 $L_A^{\\rm rel}=0$。由于 $A$ 匀速，$\\vect a_A=0$，其导数也为零。这一例子说明同一参考点配合不同速度定义，会得到不同量；写守恒式以前必须先写出定义。\n\n\n",
+    "length": 285
+  },
+  {
+    "kind": "example",
+    "n": 19,
+    "title": "等质量猴子爬绳与滑轮惯量",
+    "stem": "\\label{ex:c2-19}\n两只质量均为 $m$ 的猴子 $A,B$，开始静止并位于同一高度，\n抓住轻绳两端。绳越过半径 $r$ 的无摩擦滑轮。\n$B$ 以相对绳向上的速度 $v(t)$ 爬绳，$A$ 仅抓紧绳子。\n比较二者对地上升速度；再考虑滑轮有转动惯量 $I_p$、绳与轮不打滑的情形。\n",
+    "answer": "\\solution 设 $A$ 所在绳段对地向上速度为 $u$，则另一侧绳段向下速度为 $u$。\n因此 $v_A=u$、$v_B=v-u$。\n关于轮轴取 $A$ 上升时角动量为正。两只猴子的重力矩相消，\n轮轴支承力无力矩。轻轮情形有\n\\[\nmr\\,u-mr(v-u)=0,\n\\]\n故 $v_A=v_B=v/2$。初始高度相同，则两者始终同高，也同时到达同高目标。\n若初始高度不同，速度相同不等于同时到达。\n\n有轮惯量时必须把轮计入系统，其角动量为 $I_pu/r$：\n\\[\nmr\\,u-mr(v-u)+\\frac{I_pu}{r}=0.\n\\]\n于是\n\\begin{equation}\nv_A=\\frac{mr^2}{2mr^2+I_p}v,\\qquad\nv_B=\\frac{mr^2+I_p}{2mr^2+I_p}v.\n\\end{equation}\n$I_p>0$ 时爬绳者上升更快。若绳可在滑轮上滑动，\n就不能以 $\\omega_p=u/r$ 代替滑轮角速度，必须另给接触条件。\n",
+    "length": 441
+  },
+  {
+    "kind": "example",
+    "n": 20,
+    "title": "不等质量猴子同时爬到轮轴高度",
+    "stem": "\\label{ex:c2-20}\n$A,B$ 的质量分别为 $m,m'$，开始到轮轴水平面的距离为 $s,s'$。\n二者从静止开始，均以恒定的对地向上加速度爬绳。\n滑轮和绳均为轻质，求二者同时到达所需时间。\n",
+    "answer": "\\solution 分别记绝对加速度为 $a,a'$。两侧张力相同：\n$ma=T-mg$、$m'a'=T-m'g$。消去 $T$ 得\n\\[\nma-m'a'=(m'-m)g.\n\\]\n也可直接对轮轴用角动量定理得到同一式。\n同时到达要求 $a=2s/t^2$、$a'=2s'/t^2$，所以\n\\begin{equation}\nt=\\sqrt{\\frac{2(ms-m's')}{(m'-m)g}}.\n\\end{equation}\n对 $m'\\ne m$，根号中的量必须为正；若 $m'>m$，则必须\n$ms>m's'$。相应 $a,a'$ 都为正，张力为正。\n若 $m=m'$，必须 $s=s'$ 才可能同时到达，且时间不能由这些条件单独确定；\n若 $s\\ne s'$，此从静止恒加速度模型无同时到达解。\n\n",
+    "length": 352
+  },
+  {
+    "kind": "example",
+    "n": 21,
+    "title": "竖直轻杆连接的双球自由平抛",
+    "stem": "\\label{ex:c2-21}\n两小球质量均为 $m$，由长 $l$ 的刚性轻杆连接，开始杆竖直。\n下球受到向右冲量 $J$，同时系统与支架分离且释放过程不附加冲量。\n求两球在均匀重力场中的位置。\n",
+    "answer": "\\solution 以初始质心为原点，$x$ 向右、$y$ 向上。\n冲量与初始杆垂直，下球速度为 $J/m$，上球速度为0。\n质心速度 $V=J/(2m)$，关于质心角动量 $L_C=Jl/2$，\n转动惯量 $I_C=ml^2/2$，故恒角速度 $\\omega=J/(ml)$。\n重力对质心合力矩为零。\n\\begin{equation}\n\\vect R=\\left(Vt,-\\frac12gt^2\\right),\\qquad\n\\vect r'_1=\\frac l2(\\sin\\omega t,-\\cos\\omega t),\\quad\n\\vect r'_2=-\\vect r'_1.\n\\end{equation}\n于是\n\\[\nx_1=Vt+\\frac l2\\sin\\omega t,\\quad y_1=-\\frac12gt^2-\\frac l2\\cos\\omega t,\n\\]\n\\[\nx_2=Vt-\\frac l2\\sin\\omega t,\\quad y_2=-\\frac12gt^2+\\frac l2\\cos\\omega t.\n\\]\n$t=0$ 时位置分别为 $(0,-l/2)$、$(0,l/2)$；\n求导恢复初速度 $(J/m,0)$ 与 $(0,0)$，检验了符号。\n若 $J=40\\,\\mathrm{N\\,s}$、$m=1\\,\\mathrm{kg}$、$l=10\\,\\mathrm m$，\n则 $V=20\\,\\mathrm{m/s}$、$\\omega=4\\,\\mathrm{s^{-1}}$。\n单球轨迹是平抛质心轨迹与圆周相对运动的合成，通常不是抛物线。\n",
+    "length": 682
+  },
+  {
+    "kind": "example",
+    "n": 22,
+    "title": "中心斥力场中的刚杆双球",
+    "stem": "\\label{ex:c2-22}\n两等质量 $m$ 小球由刚性轻杆连接，初始静止，\n杆与质心到力心 $O$ 的连线成 $45^\\circ$。分别讨论每球所受中心斥力\n$\\vect F=k\\vect r$ 与 $\\vect F=c\\vect r/r^3$，其中 $k,c>0$。\n",
+    "answer": "\\solution 记两球位置为 $\\vect r_A=\\vect R-\\vect s$、\n$\\vect r_B=\\vect R+\\vect s$。线性场中\n\\[\n\\vect F_{\\rm tot}=2k\\vect R,\\qquad\n\\vect\\tau_C=(-\\vect s)\\times k(\\vect R-\\vect s)\n+\\vect s\\times k(\\vect R+\\vect s)=0.\n\\]\n初始内部角动量为零，杆的转动惯量固定，故杆方向不变。\n质心满足 $\\ddot{\\vect R}=(k/m)\\vect R$，\n从静止释放时 $\\vect R(t)=\\vect R(0)\\cosh(\\sqrt{k/m}\\,t)$，\n沿原径向直线向外运动。\n\n平方反比场中\n\\[\n\\vect F_{\\rm tot}=c\\left(\\frac{\\vect r_A}{r_A^3}\n+\\frac{\\vect r_B}{r_B^3}\\right),\n\\quad\n\\vect\\tau_C=c\\left(\\frac1{r_A^3}-\\frac1{r_B^3}\\right)\n\\vect R\\times\\vect r_B.\n\\]\n若 $A$ 更靠近力心，则 $r_A<r_B$，其力更大；合力一般不沿 $OC$，\n质心会产生横向加速度，杆也产生转动。\n各球真实外力均指向自身径向，因此 $\\vect\\tau_O=0$，\n总角动量始终为初始值0；轨道与内部角动量可以各自非零，但彼此抵消。\n若改为平方反比引力，全部真实力与初始力矩均反向。\n\n非均匀场中的姿态和轨道通常耦合，但特殊对称姿态可使力矩为零。\n这种耦合本身不等于已经证明运动混沌。\n",
+    "length": 717
+  },
+  {
+    "kind": "example",
+    "n": 23,
+    "title": "秋千为何越荡越高",
+    "stem": "\\label{ex:c2-23}\n把人和脚踏板作为两质点系统，连接件的长度固定、悬点固定，\n但人可以主动改变人与脚踏板的相对距离 $r$。\n为什么没有外界牵引，机械能仍可增加？\n",
+    "answer": "\\solution 理想固定绳的张力对系统不做功，重力功已计入势能。\n人的肌肉作用是系统内部的主动作用，它可以使相对位置改变。\n取促使距离增大的内力分量为 $f$，一周期中\n\\[\n\\Delta(T+U_g)=\\oint f\\,\\dd r.\n\\]\n如果增距阶段的力大于缩距阶段的力，$f$--$r$ 图的有向回路面积为正，\n机械能增加。能量来自人体化学能；把化学能也计入完整能量账目后，\n总能量仍遵守守恒。\n",
+    "length": 203
+  },
+  {
+    "kind": "example",
+    "n": 24,
+    "title": "双球的公转与自转",
+    "stem": "\\label{ex:c2-24}\n两球质量均为 $m$，距中点 $A$ 均为 $r$，以角速率 $\\omega$ 绕 $A$ 顺时针转动。\n$A$ 以角速率 $\\Omega$ 沿半径 $R$ 绕固定点 $O$ 逆时针运动。\n两种转动在同一平面，求动能与关于 $O$ 的角动量。\n",
+    "answer": "\\solution 自转角速率相对于不旋转的质心平动系定义。\n\\[\nT=m\\Omega^2R^2+m\\omega^2r^2,\\qquad\nL_{O,z}=2m\\Omega R^2-2m\\omega r^2.\n\\]\n动能中无公转、自转交叉项。若瞬时自转轴改为平行质心速度方向，\n且自转角速度矢量为 $\\vect\\omega$，则\n\\[\n\\vect L_O=2m\\Omega R^2\\vect e_z+2mr^2\\vect\\omega.\n\\]\n两项正交时，$|\\vect L_O|=2m\\sqrt{\\Omega^2R^4+\\omega^2r^4}$，\n动能表达式保持上述形式。\n如果要求转动平面持续跟随质心速度转向，还须另给进动运动；\n此时不能把该运动的角速度遗漏。\n\n",
+    "length": 333
+  },
+  {
+    "kind": "example",
+    "n": 25,
+    "title": "运动能量与食物热值的估算",
+    "stem": "\\label{ex:c2-25}\n质量为 $100\\,\\mathrm{kg}$ 的运动者完成上升、加速和转动动作。\n给定食物热值为每 $100\\,\\mathrm g$ 含 $246\\,\\mathrm{kcal}$，\n建立估算其最低食物消耗的方法。\n",
+    "answer": "\\solution 将运动分段，估计 $\\Delta(MgH)$、\n$\\Delta(MV^2/2)$、$\\Delta T_C$，并计入碰撞、摩擦及制动后再次加速的损失。\n净机械能变化小，并不说明运动过程中能量消耗小；不可把反复加速所需功漏掉。\n热值换算 $1\\,\\mathrm{kcal}=4184\\,\\mathrm J$，故\n\\[\nq_{\\text{食}}=10.29264\\,\\mathrm{MJ/kg},\\qquad\nm_{\\text{食}}=\\frac{E_{\\text{机械}}}{\\eta q_{\\text{食}}}.\n\\]\n$\\eta$ 是化学能转为所估机械功的效率。取 $\\eta=1$ 仅给理论下限。\n没有高度、速度、动作次数、耗散和效率数据，不能得到唯一数值答案；\n这些量需实际测量或明示估计值。\n\n",
+    "length": 360
+  },
+  {
+    "kind": "example",
+    "n": 26,
+    "title": "一对弹簧内力的功可以增加总动能",
+    "stem": "\\label{ex:c2-26}\n两球由理想弹簧连接，在无外力空间内从压缩量 $\\delta$ 的静止状态释放。弹簧劲度为 $k$、原长为 $a$，忽略碰撞且振幅小于 $a$。求经过原长时的动能分配。\n",
+    "answer": "\\solution 初态总动量为零，始终 $m_1\\vect v_1=-m_2\\vect v_2=\\vect p$。弹簧能减少 $k\\delta^2/2$，转为总动能，\n\\[\nT_1+T_2=\\frac{p^2}{2m_1}+\\frac{p^2}{2m_2}\n=\\frac{p^2}{2\\mu}=\\frac12k\\delta^2.\n\\]\n因此 $p=\\delta\\sqrt{\\mu k}$，$T_1/T_2=m_2/m_1$。轻球速度与动能较大。内力合力为零，质心不动；内力总功却等于弹簧能的减少，并不为零。若把弹簧势能和两球动能共同计入，机械能保持不变。\n\n",
+    "length": 280
+  },
+  {
+    "kind": "example",
+    "n": 27,
+    "title": "两自由质点因引力相向运动",
+    "stem": "\\label{ex:c2-27}\n两质点质量 $m_1,m_2$，初始静止、相距 $a$，无外力，\n相互吸引力大小 $Gm_1m_2/r^2$。求距离变为 $a/2$ 时的速度。\n",
+    "answer": "\\solution 令 $\\vect e$ 从质点1指向质点2。质心静止，\n$m_1v_1=m_2v_2$，这里 $v_1,v_2$ 均为正速率。\n能量守恒给\n\\[\n\\frac12m_1v_1^2+\\frac12m_2v_2^2\n=Gm_1m_2\\left(\\frac{2}{a}-\\frac1a\\right).\n\\]\n消元得\n\\[\n\\vect v_1=m_2\\sqrt{\\frac{2G}{a(m_1+m_2)}}\\,\\vect e,\\qquad\n\\vect v_2=-m_1\\sqrt{\\frac{2G}{a(m_1+m_2)}}\\,\\vect e.\n\\]\n另一解法使用折合质量 $\\mu=m_1m_2/(m_1+m_2)$：\n$\\mu(v_1+v_2)^2/2=Gm_1m_2/a$，得到相对速率\n$v_1+v_2=\\sqrt{2G(m_1+m_2)/a}$，再按反质量比分配。\n",
+    "length": 393
+  },
+  {
+    "kind": "example",
+    "n": 28,
+    "title": "自由旋转管中的小球从管口射出",
+    "stem": "\\label{ex:c2-28}\n均匀水平细管长 $l$、质量 $M_t$，绕一端竖直光滑轴自由转动。\n管内小球质量 $m$，与管壁无摩擦。初始角速度为 $\\omega_0\\ne0$，\n球在管中点，相对管静止。求出管时的径向速率与绝对速率。\n",
+    "answer": "\\solution 管的转动惯量 $I_t=M_tl^2/3$。\n轴承力关于轴的力矩为零且固定轴不做功；重力势能恒定。\n设球半径为 $r$，管角速度为 $\\omega$，则\n\\[\n(I_t+mr^2)\\omega=(I_t+ml^2/4)\\omega_0.\n\\]\n整体动能守恒：\n\\[\n\\frac12(I_t+mr^2)\\omega^2+\\frac12m\\dot r^2\n=\\frac12(I_t+ml^2/4)\\omega_0^2.\n\\]\n$r=l$ 时\n\\begin{equation}\n\\omega_{\\rm out}=\\frac{4M_t+3m}{4(M_t+3m)}\\omega_0,\\qquad\nv_r^2=\\frac{3(4M_t+3m)}{16(M_t+3m)}l^2\\omega_0^2.\n\\end{equation}\n球的绝对速度是 $\\vect v=v_r\\er+l\\omega_{\\rm out}\\et$，因此\n\\begin{equation}\nv_{\\rm out}=\n\\frac{l|\\omega_0|}{4(M_t+3m)}\n\\sqrt{(4M_t+3m)(7M_t+12m)}.\n\\end{equation}\n管壁无摩擦只意味着球相对管的滑动方向不受摩擦。\n管壁法向力在惯性系可以对球做功，球的动能并不单独守恒。\n若管被电机强制保持恒角速度，电机做功，必须改用另一套能量收支。\n",
+    "length": 605
+  },
+  {
+    "kind": "example",
+    "n": 29,
+    "title": "光滑地面上由轻杆连接的双球",
+    "stem": "\\label{ex:c2-29}\n两个质量均为 $m$ 的质点由长 $l$ 的刚性轻杆连接，\n下球1接触水平光滑地面，上球2位于右上方。杆与竖直方向夹角为\n$\\theta$，初始 $\\theta=\\alpha$，$0<\\alpha<\\pi/2$，从静止释放。\n求上球首次碰地前的两球速度。\n",
+    "answer": "\\solution 取 $x$ 向右、$y$ 向上，下球初始位置为0。\n水平质心固定及杆长约束给\n\\[\nx_1=-\\frac l2(\\sin\\theta-\\sin\\alpha),\\quad y_1=0,\\qquad\nx_2=\\frac l2(\\sin\\theta+\\sin\\alpha),\\quad y_2=l\\cos\\theta.\n\\]\n于是\n$v_{1x}=-(l/2)\\cos\\theta\\dot\\theta$、\n$v_{2x}=(l/2)\\cos\\theta\\dot\\theta$、\n$v_{2y}=-l\\sin\\theta\\dot\\theta$。\n能量为\n\\[\nT=\\frac{ml^2}{4}(1+\\sin^2\\theta)\\dot\\theta^2,\\qquad\nU=mgl\\cos\\theta.\n\\]\n守恒给\n\\begin{equation}\n\\dot\\theta^2=\\frac{4g(\\cos\\alpha-\\cos\\theta)}\n{l(1+\\sin^2\\theta)}.\n\\end{equation}\n下球向左速率与上球竖直向下速率分别为\n\\[\nu=\\cos\\theta\\sqrt{\\frac{gl(\\cos\\alpha-\\cos\\theta)}{1+\\sin^2\\theta}},\\qquad\n|v_{2y}|=2\\sin\\theta\n\\sqrt{\\frac{gl(\\cos\\alpha-\\cos\\theta)}{1+\\sin^2\\theta}}.\n\\]\n两水平速度大小相同、方向相反。\n支持力可由 $N-2mg=m\\ddot y_2$ 求出：\n\\[\nN=mg\\,\\frac{4-4\\cos\\alpha\\cos\\theta+2\\cos^2\\theta}\n{(2-\\cos^2\\theta)^2}>0.\n\\]\n故该接地支在 $\\alpha\\le\\theta<\\pi/2$ 自洽。\n",
+    "length": 800
+  },
+  {
+    "kind": "example",
+    "n": 30,
+    "title": "粗糙地面上先不滑动的双球",
+    "stem": "\\label{ex:c2-30}\n保持上一例的几何与释放条件，地面最大静摩擦系数为 $\\mu_s$。\n若下球尚未移动，求所需支持力、摩擦力及起滑条件。\n",
+    "answer": "\\solution 此阶段上球绕固定下球转动。\n\\[\n\\dot\\theta^2=\\frac{2g}{l}(\\cos\\alpha-\\cos\\theta),\\qquad\n\\ddot\\theta=\\frac gl\\sin\\theta.\n\\]\n上球速度 $v=l\\dot\\theta$，加速度分量为\n\\[\na_x=l(\\cos\\theta\\ddot\\theta-\\sin\\theta\\dot\\theta^2),\\quad\na_y=-l(\\sin\\theta\\ddot\\theta+\\cos\\theta\\dot\\theta^2).\n\\]\n下球加速度为零，全系统水平合力等于 $ma_x$，\n竖直合力 $N-2mg=ma_y$。以摩擦向右为正，得到\n\\begin{equation}\nN=mg(1-2\\cos\\alpha\\cos\\theta+3\\cos^2\\theta),\\quad\nf=mg(3\\cos\\theta-2\\cos\\alpha)\\sin\\theta.\n\\end{equation}\n静止接触需要 $N\\ge0$ 且 $|f|\\le\\mu_sN$。\n摩擦方向在\n\\[\n\\theta_0=\\arccos\\left(\\frac23\\cos\\alpha\\right)\n\\]\n处改变。起滑时满足\n\\begin{equation}\n\\mu_s=\\frac{|(3\\cos\\theta-2\\cos\\alpha)\\sin\\theta|}\n{1-2\\cos\\alpha\\cos\\theta+3\\cos^2\\theta}.\n\\end{equation}\n释放瞬间 $\\theta=\\alpha$，这条静止接触分支还须满足\n\\[\n\\mu_s\\ge\\frac{\\sin\\alpha\\cos\\alpha}{1+\\cos^2\\alpha}.\n\\]\n若不满足，下球自释放即起滑，应直接采用滑动阶段方程，\n不能沿静止分支寻找一个更晚的临界交点。\n初态满足许可条件时，沿 $\\theta$ 增大方向寻找\\textbf{首次越出}\n$|f|\\le\\mu_sN$ 许可区间的临界点；仅与边界相切而仍留在许可区间内，不意味着起滑。\n在 $f>0$ 支首次越过上界时，所需向右摩擦不足，下球开始向左滑；\n若此前始终可维持静止，而在 $f<0$ 支首次越过下界，则下球开始向右滑。\n若 $\\mu_s$ 不小于整段 $|f|/N$ 的最大值，\n则上球首次碰地以前下球不滑动；这一结论不涉及碰撞后的阶段。\n\n取 $\\alpha\\to0^+$ 的极限，最大需求约为 $2.041885$，\n发生于 $\\theta\\simeq1.492775\\,\\mathrm{rad}$。\n精确 $\\alpha=0$ 且初速为0是竖直平衡解，必须有微小偏角或初始扰动才会倒下。\n由起滑求得的是最大静摩擦系数，不是动摩擦系数。\n\n",
+    "length": 1182
+  },
+  {
+    "kind": "example",
+    "n": 31,
+    "title": "上球受水平冲量后的接地运动与离地分支",
+    "stem": "\\label{ex:c2-31}\n两等质量 $m$ 小球由长 $l$ 的轻刚杆连接，开始竖直静止，\n下球在光滑地面，上球受到向右冲量 $J$。\n求首次再次碰地之前的运动。\n",
+    "answer": "\\solution 冲量后上球水平速度 $J/m$、下球速度0，\n$V=J/(2m)$、$\\dot\\theta(0)=J/(ml)$。\n若下球保持接地，水平质心作匀速运动：\n\\[\nx_1=Vt-\\frac l2\\sin\\theta,\\ y_1=0;\\qquad\nx_2=Vt+\\frac l2\\sin\\theta,\\ y_2=l\\cos\\theta.\n\\]\n动能减去固定的质心水平动能后，能量式给\n\\begin{equation}\n\\dot\\theta^2=\n\\frac{J^2/(m^2l^2)+(4g/l)(1-\\cos\\theta)}\n{1+\\sin^2\\theta}.\n\\end{equation}\n取向右倒下的正支，时间由完整求积式确定：\n\\[\nt=\\int_0^{\\theta(t)}\n\\sqrt{\\frac{1+\\sin^2\\phi}\n{J^2/(m^2l^2)+(4g/l)(1-\\cos\\phi)}}\\,\\dd\\phi.\n\\]\n令 $\\Lambda=J^2/(m^2gl)$，支持力\n\\[\nN(\\theta)=mg\\frac{4-(4+\\Lambda)\\cos\\theta+2\\cos^2\\theta}\n{(2-\\cos^2\\theta)^2},\\quad N(0)=mg(2-\\Lambda).\n\\]\n$\\Lambda\\le2$ 时，在 $0\\le\\theta\\le\\pi/2$ 支持力非负，\n上述接地解可用到上球首次碰地。\n$\\Lambda>2$ 时，地面不能向下拉住下球，因此下球立即离地。\n离地后质心自由平抛，角速度 $\\omega=J/(ml)$ 恒定：\n\\[\nx_1=Vt-\\frac l2\\sin\\omega t,\\quad\ny_1=\\frac l2-\\frac12gt^2-\\frac l2\\cos\\omega t,\n\\]\n\\[\nx_2=Vt+\\frac l2\\sin\\omega t,\\quad\ny_2=\\frac l2-\\frac12gt^2+\\frac l2\\cos\\omega t.\n\\]\n下一次碰撞发生在某端点首次从正高度返回 $y=0$ 的正时间，\n应作接触事件判定后切换方程。\n\n若地面粗糙，必须再给 $\\mu_s,\\mu_k$。以 $x=x_1$，\n在下球接地而上球未接地时，闭合运动方程为\n\\begin{align}\n2m\\ddot x+ml(\\cos\\theta\\ddot\\theta-\\sin\\theta\\dot\\theta^2)&=f,\\\\\nl\\ddot\\theta+\\cos\\theta\\ddot x&=g\\sin\\theta,\\\\\nN&=2mg-ml(\\sin\\theta\\ddot\\theta+\\cos\\theta\\dot\\theta^2).\n\\end{align}\n滑动时 $f=-\\mu_kN\\,\\operatorname{sgn}\\dot x$；\n静止接触时 $\\dot x=\\ddot x=0$ 且 $|f|\\le\\mu_sN$。\n$N$ 降到0并有分离趋势时切换为自由飞行。\n能量损失率为 $\\dot E=f\\dot x=-\\mu_kN|\\dot x|$。\n给定摩擦系数与初值后，可按这些分段方程积分得到唯一相应模型的运动，\n不能仅说“有摩擦”就给出一条通用轨迹。\n",
+    "length": 1370
+  },
+  {
+    "kind": "example",
+    "n": 32,
+    "title": "连接质点组与光滑地面的弹性及非弹性碰撞",
+    "stem": "\\label{ex:c2-32}\n给出刚杆连接双球与地面碰撞时的正确瞬时规则，\n并解释能否把全系统竖直动量简单反向。\n",
+    "answer": "\\solution 设发生接触的端点法向速度为 $v_n$，地面静止，\n恢复系数为 $0\\le e\\le1$，应施加\n\\[\nv_n^+=-e\\,v_n^-.\n\\]\n$e=1$ 为弹性法向碰撞，$e<1$ 有法向能量损失。\n光滑地面切向外冲量为零，系统总水平动量守恒。\n同时必须满足杆约束\n\\[\n(\\vect v_2^+-\\vect v_1^+)\\cdot(\\vect r_2-\\vect r_1)=0\n\\]\n及各端点的冲量方程。\n\n对单一接触端点 $q$，用整个刚性双球的质量 $M$、质心惯量 $I_C$、\n端点相对质心矢量 $\\vect s_q$ 表示。若法向冲量为 $K\\vect n$，\n\\[\n\\vect V^+=\\vect V^-+\\frac K M\\vect n,\\qquad\n\\omega^+=\\omega^-+\\frac K{I_C}(\\vect s_q\\times\\vect n)_z.\n\\]\n接触点法向速度的增量为\n$K[1/M+(\\vect s_q\\times\\vect n)_z^2/I_C]$，故\n\\begin{equation}\nK=-\\frac{(1+e)v_n^-}\n{1/M+(\\vect s_q\\times\\vect n)_z^2/I_C}.\n\\end{equation}\n接近地面时 $v_n^-<0$，$K>0$。以此求质心和转动速度变化，\n再还原两球速度，杆的速度约束自然得到满足。\n同时多点接触须联立多个冲量和接触条件，不能逐个随意反射。\n\n全系统竖直动量一般不整体反向。只有特定构形下，\n例如首次杆水平、上球撞地且下球原法向速度为0，\n杆的瞬时长度约束沿水平，才允许上球竖直分量独立反向。\n",
+    "length": 718
+  },
+  {
+    "kind": "example",
+    "n": 33,
+    "title": "强冲量后的第一次碰地事件",
+    "stem": "\\label{ex:c2-33}\n取 $\\Lambda=4$，求哪一球先碰地及碰撞位置。用 $l$、$\\sqrt{l/g}$ 作长度和时间单位。\n",
+    "answer": "\\solution 令 $\\tau=t\\sqrt{g/l}$，自由飞行角速率满足 $\\omega\\sqrt{l/g}=2$，两球轨迹为\n\\[\n\\frac{x_{1,2}}l=\\tau\\mp\\frac12\\sin2\\tau,\\qquad\n\\frac{y_{1,2}}l=\\frac12(1-\\tau^2\\mp\\cos2\\tau).\n\\]\n初始下球 $y_1(0)=0$，展开得 $y_1/l=\\tau^2/2+O(\\tau^4)>0$，所以零时刻不是新的碰撞。寻找从正高度返回零的第一个正根，上球方程为 $1-\\tau^2+\\cos2\\tau=0$，得到\n\\[\n\\tau_*=0.890059,\\quad \\theta_*=1.780117,\\quad\nx_1/l=0.400972,\\quad x_2/l=1.379145.\n\\]\n此时下球高度仍为正，所以上球先碰地。下球高度的下一零点约在 $\\tau=1.391557$，它属于未计第一次碰撞的自由轨迹延长线，不能用于实际后续运动。碰后需按恢复系数重新求速度并再次判断接触。\n\n",
+    "length": 465
+  },
+  {
+    "kind": "example",
+    "n": 34,
+    "title": "杆水平时上球碰地的速度更新",
+    "stem": "\\label{ex:c2-34}\n两球均为 $m$，杆长 $l$，碰前杆水平。下球瞬时竖直速度为0，上球向下速度为 $v$；只对上球施加碰撞法向冲量。求碰后竖直速度及能量损失。\n",
+    "answer": "\\solution 质心竖直速度 $V_y^-=-v/2$，若上球在右，角速度 $\\omega^-=-v/l$。$M=2m$、$I_C=ml^2/2$、$\\ell_n=l/2$，故 $m_{\\rm eff}=m$。于是\n\\[\nK=(1+e)mv,\\quad V_y^+=\\frac{ev}{2},\\quad\n\\omega^+=\\frac{ev}{l}.\n\\]\n还原端点速度，$v_{1y}^+=V_y^+-\\omega^+l/2=0$，\n$v_{2y}^+=V_y^++\\omega^+l/2=ev$。能量损失为 $(1-e^2)mv^2/2$。该特殊姿态允许一个球的竖直速度独立反向；倾斜姿态下必须同时更新质心和转动，不能照抄此结果。\n\n对于同时发生的多个接触，须对每个接触写法向速度条件，并以同一组质心、角速度变化联立求冲量。求得冲量还要满足非负性；若某接触需要负冲量，就不能把它视为本次碰撞的主动接触。持续静止支承与新发生的碰撞也应分别建模。\n\n",
+    "length": 426
+  },
+  {
+    "kind": "example",
+    "n": 35,
+    "title": "两端载质点的轻粗杆绕桌沿转动",
+    "stem": "\\label{ex:c2-35}\n长 $l$ 的轻杆两端各装质量 $m$ 的质点，初始水平。\n桌沿到左端距离为 $l/3$，到右端距离为 $2l/3$，右端悬空。\n释放后先绕桌沿 $O$ 不滑动转动；杆向下转至与水平夹角 $\\alpha$ 时刚开始滑动。\n采用桌沿角点的法向垂直杆、摩擦沿杆的接触模型，求 $\\mu_s$。\n",
+    "answer": "\\solution 质心到 $O$ 距离为 $l/6$，转动惯量\n$I_O=5ml^2/9$。以向下转角 $\\theta$ 为正，\n\\[\n\\frac12I_O\\dot\\theta^2=\\frac{mgl}{3}\\sin\\theta,\\quad\n\\dot\\theta^2=\\frac{6g}{5l}\\sin\\theta,\\quad\n\\ddot\\theta=\\frac{3g}{5l}\\cos\\theta.\n\\]\n质心位置 $(l\\cos\\theta/6,-l\\sin\\theta/6)$。\n由 $2m\\vect a_C=\\vect R_{\\text{接}}-2mg\\vect e_y$ 得\n\\[\nR_x=-\\frac35mg\\sin\\theta\\cos\\theta,\\qquad\nR_y=\\frac35mg(3+\\sin^2\\theta).\n\\]\n沿杆单位矢量 $\\vect e=(\\cos\\theta,-\\sin\\theta)$，\n法向 $\\vect n=(\\sin\\theta,\\cos\\theta)$，故\n\\[\nN=\\vect R_{\\text{接}}\\cdot\\vect n=\\frac95mg\\cos\\theta,\\qquad\nf=\\vect R_{\\text{接}}\\cdot\\vect e=-\\frac{12}{5}mg\\sin\\theta.\n\\]\n起滑时\n\\begin{equation}\n\\mu_s=\\frac{|f|}{N}\\bigg|_{\\theta=\\alpha}=\\frac43\\tan\\alpha.\n\\end{equation}\n这里确定的是静摩擦阈值。只有另设 $\\mu_k=\\mu_s$ 才能把它作为动摩擦系数。\n若采用不同的桌面接触几何，法向方向也会不同，不能混用本例公式。\n",
+    "length": 754
+  },
+  {
+    "kind": "example",
+    "n": 36,
+    "title": "自由弹簧两球的完整时间解",
+    "stem": "\\label{ex:c2-36}\n光滑直线上两球质量为 $m_1=m,m_2=2m$，用劲度 $k$、原长 $a$ 的无质量弹簧连接。初始 $x_1=a,x_2=0,v_1=v_0>0,v_2=0$。假设振幅足够小，使两球不交换左右顺序。求两球运动及能量分解。\n",
+    "answer": "\\solution 令 $q=x_1-x_2$，$M=3m,\\mu=2m/3$。质心与相对方程为\n\\[\n\\ddot R=0,\\qquad \\mu\\ddot q=-k(q-a),\\qquad\n\\omega=\\sqrt{3k/(2m)}.\n\\]\n由初态 $R(0)=a/3,\\dot R(0)=v_0/3,q(0)=a,\\dot q(0)=v_0$，得\n\\[\nR=\\frac a3+\\frac{v_0t}{3},\\qquad q=a+\\frac{v_0}{\\omega}\\sin\\omega t.\n\\]\n反解坐标，\n\\begin{align*}\nx_1&=a+\\frac{v_0t}{3}+\\frac{2v_0}{3\\omega}\\sin\\omega t,\\\\\nx_2&=\\frac{v_0t}{3}-\\frac{v_0}{3\\omega}\\sin\\omega t,\\\\\nv_1&=\\frac{v_0}{3}(1+2\\cos\\omega t),\\quad\nv_2=\\frac{v_0}{3}(1-\\cos\\omega t).\n\\end{align*}\n不交换顺序的充分条件为 $v_0/\\omega<a$。总动量 $mv_1+2mv_2=mv_0$ 恒定；能量为\n\\[\nT_{\\rm CM}=\\frac{mv_0^2}{6},\\qquad\nE_{\\rm rel}=\\frac12\\mu v_0^2=\\frac{mv_0^2}{3},\\qquad\nE=\\frac12mv_0^2.\n\\]\n相对能量中 $T_C=(mv_0^2/3)\\cos^2\\omega t$、\n$U=(mv_0^2/3)\\sin^2\\omega t$ 交换，质心平动能不变。两球各自的动能则随时间变化，不能单独守恒。\n\n",
+    "length": 742
+  },
+  {
+    "kind": "example",
+    "n": 37,
+    "title": "日地两体的相对轨道与双方公转",
+    "stem": "\\label{ex:c2-37}\n太阳、地球质量为 $m_S,m_E$，只计两体万有引力。\n求相对运动方程、轨道参数，并说明固定太阳近似。\n",
+    "answer": "\\solution 令 $K=Gm_Sm_E$，则\n\\[\n\\mu\\ddot{\\vect r}=-K\\frac{\\vect r}{r^3},\\qquad\nU=-\\frac Kr,\\qquad \\frac K\\mu=G(m_S+m_E).\n\\]\n取 $u=1/r$，由 $\\dot\\phi=L/(\\mu r^2)$，\n$\\dot r=-(L/\\mu)u'$，\n$\\ddot r-r\\dot\\phi^2=-(L^2/\\mu^2)u^2(u''+u)$。\n径向方程因此化为\n\\[\nu''+u=\\frac{\\mu K}{L^2}.\n\\]\n其解\n\\begin{equation}\nr=\\frac{p}{1+e\\cos(\\phi-\\phi_0)},\\qquad\np=\\frac{L^2}{\\mu K},\\quad\ne^2=1+\\frac{2E_{\\rm rel}L^2}{\\mu K^2}.\n\\end{equation}\n$E_{\\rm rel}<0$ 为椭圆，$E_{\\rm rel}=0$ 为抛物线，\n$E_{\\rm rel}>0$ 为双曲线；非零角动量情形下这些轨道均为圆锥曲线。\n束缚轨道半长轴 $a_r=-K/(2E_{\\rm rel})$，\n周期\n\\[\n\\mathcal T=2\\pi\\sqrt{\\frac{a_r^3}{G(m_S+m_E)}}.\n\\]\n在静止质心系中，双方分别位于\n$\\vect r_S=(m_E/M)\\vect r$、\n$\\vect r_E=-(m_S/M)\\vect r$，都绕共同质心运动。\n$m_S\\gg m_E$ 时，$\\mu\\simeq m_E$、$M\\simeq m_S$，\n太阳的质心偏移很小，才可近似把太阳作为固定力心。\n",
+    "length": 729
+  },
+  {
+    "kind": "example",
+    "n": 38,
+    "title": "圆形双星的周期",
+    "stem": "\\label{ex:c2-38}\n两星质量为 $M_1,M_2$，距离恒为 $L$，只受相互引力，求周期。\n",
+    "answer": "\\solution 质心两侧半径为\n$r_1=M_2L/(M_1+M_2)$、$r_2=M_1L/(M_1+M_2)$。\n对第一星\n\\[\nM_1\\omega^2r_1=\\frac{GM_1M_2}{L^2}\n\\Rightarrow \\omega^2=\\frac{G(M_1+M_2)}{L^3}.\n\\]\n因此\n\\[\n\\mathcal T=2\\pi\\sqrt{\\frac{L^3}{G(M_1+M_2)}}.\n\\]\n相对折合质点方程给 $\\mu\\omega^2L=GM_1M_2/L^2$，\n得到同一结果。距离 $L$ 是两星间距，不能当作每颗星的轨道半径。\n\n",
+    "length": 280
+  },
+  {
+    "kind": "example",
+    "n": 39,
+    "title": "可反冲的反立方斥力靶的最近距离",
+    "stem": "\\label{ex:c2-39}\n入射质点质量 $m$，靶质量 $2m$，靶在远离入射粒子时静止。\n入射相对速度为 $v_\\infty$，冲量参数为 $\\rho$。\n两者只受大小 $mc/r^3$ 的中心斥力，$c>0$。求最近间距。\n",
+    "answer": "\\solution $\\mu=2m/3$，相对势能 $U=mc/(2r^2)$，\n\\[\nE_{\\rm rel}=\\frac12\\mu v_\\infty^2,\\qquad L=\\mu\\rho v_\\infty.\n\\]\n最近处 $r=a$，径向速率为零，故\n\\[\n\\frac12\\mu v_\\infty^2\n=\\frac{\\mu^2\\rho^2v_\\infty^2}{2\\mu a^2}+\\frac{mc}{2a^2}.\n\\]\n于是\n\\begin{equation}\na=\\sqrt{\\rho^2+\\frac{3c}{2v_\\infty^2}}.\n\\end{equation}\n$\\rho=0$ 时仍有正的最近距离；$c\\to0$ 时趋于 $|\\rho|$。\n靶会反冲，不能用入射粒子的实验室角动量代替相对角动量。\n",
+    "length": 356
+  },
+  {
+    "kind": "example",
+    "n": 40,
+    "title": "不等质量轻杆双球的一端受横向冲量",
+    "stem": "\\label{ex:c2-40}\n质量为 $m_1,m_2$ 的两球由长 $L$ 的刚性轻杆连接，\n初始在光滑水平面静止，杆沿 $y$ 轴，球1在下。\n$t=0$ 给球1向右冲量 $J$。以初始质心为原点，求任意时刻的位置。\n",
+    "answer": "\\solution 质心速度为 $J/M$；球到质心的距离\n$d_1=m_2L/M$、$d_2=m_1L/M$。\n质心系角动量为 $Jd_1$，转动惯量为 $\\mu L^2$，故\n$\\omega=J/(m_1L)$。于是\n\\[\n\\vect r_1(t)=\\left(\\frac{Jt}{M}+d_1\\sin\\omega t,-d_1\\cos\\omega t\\right),\n\\]\n\\[\n\\vect r_2(t)=\\left(\\frac{Jt}{M}-d_2\\sin\\omega t,d_2\\cos\\omega t\\right).\n\\]\n初瞬速度分别为 $(J/m_1,0)$、$(0,0)$。\n各自轨迹是匀速平移和圆周相对运动的合成；不同质量时圆周半径不同。\n求角速度时应使用 $v'_1/d_1$，不能使用绝对速度 $v_1/d_1$。\n",
+    "length": 370
+  },
+  {
+    "kind": "example",
+    "n": 41,
+    "title": "横向冲量后的等质量自由弹簧",
+    "stem": "\\label{ex:c2-41}\n两球质量均为 $m$，由劲度系数 $k>0$、原长 $a$ 的轻弹簧连接，\n初始静止且弹簧处于原长。给一个球横向冲量，使其初速度为 $v_0>0$，\n另一球仍静止。求两球间距的最小值和最大值。\n",
+    "answer": "\\solution $\\mu=m/2$，质心速度为 $v_0/2$，\n初始相对速度大小为 $v_0$ 且垂直弹簧。\n相对角动量与能量为\n\\[\nL=\\frac{mav_0}{2},\\qquad E_{\\rm rel}=\\frac{mv_0^2}{4}.\n\\]\n有效势\n\\[\nU_{\\rm eff}(r)=\\frac{ma^2v_0^2}{4r^2}+\\frac12k(r-a)^2.\n\\]\n转折点满足\n\\[\n\\frac{a^2v_0^2}{r^2}+\\frac{2k}{m}(r-a)^2=v_0^2.\n\\]\n初始 $r=a,\\dot r=0$，$\\ddot r=v_0^2/a>0$，\n故原长是内侧转折点而不是圆轨道，$r_{\\min}=a$。\n令 $x=r/a$、$\\beta=2ka^2/(mv_0^2)$，外侧根满足\n\\begin{equation}\n\\beta x^2(x-1)=x+1,\\qquad x>1.\n\\end{equation}\n左侧对应有效势在其最低点外侧上升至初始能量；\n唯一大于1的物理解 $x_*$ 给出 $r_{\\max}=ax_*$。\n也可把条件写为 $\\beta x^3-\\beta x^2-x-1=0$，数值求根。\n$\\beta\\gg1$ 时最大伸长小；$k\\to0$ 时没有有限最大距离。\n$v_0=0$ 时两球保持静止，间距恒为 $a$。\n\n",
+    "length": 591
+  },
+  {
+    "kind": "example",
+    "n": 42,
+    "title": "粘连碰撞后弹簧最大伸长为三倍原长",
+    "stem": "\\label{ex:c2-42}\n两个质量均为 $m$ 的小球由原长 $a$、劲度系数 $k$ 的弹簧连接，\n静止在光滑水平面。另一个质量 $m$ 的质点以速率 $V_0$，\n垂直弹簧撞击球1并粘住。若此后最大间距为 $3a$，求 $V_0$。\n",
+    "answer": "\\solution 短碰撞中有限弹簧力冲量可忽略，\n粘连后球1组质量为 $2m$、速率为 $V_0/2$，球2仍静止。\n碰撞损失动能 $mV_0^2/4$，机械能不能跨碰撞守恒。\n\n碰后总质量为 $3m$、质心速率为 $V_0/3$、折合质量为 $2m/3$。\n相对能量和角动量\n\\[\nE_{\\rm rel}=\\frac{mV_0^2}{4}-\\frac{mV_0^2}{6}\n=\\frac{mV_0^2}{12},\\qquad\nL=\\mu a\\frac{V_0}{2}=\\frac{maV_0}{3}.\n\\]\n最大间距处 $\\dot r=0$，但仍有角向运动：\n\\[\n\\frac{mV_0^2}{12}\n=\\frac{(maV_0/3)^2}{2(2m/3)(3a)^2}\n+\\frac12k(3a-a)^2\n=\\frac{mV_0^2}{108}+2ka^2.\n\\]\n解得\n\\begin{equation}\nV_0=3a\\sqrt{\\frac{3k}{m}}.\n\\end{equation}\n初始径向加速度向外，故 $r=a$ 为内侧转折点，\n$r=3a$ 为外侧转折点；最大伸长不等于两球相对速度全部为零。\n",
+    "length": 507
+  },
+  {
+    "kind": "example",
+    "n": 43,
+    "title": "轻绳中点受冲击后三球的首次相碰",
+    "stem": "\\label{ex:c2-43}\n总长为 $2a$ 的轻绳两端各绑质量 $m$ 的小球，中点绑质量 $M$ 的小球。\n初始绳拉直，系统在光滑水平面静止。\n给中间球垂直于绳的初速度 $v$，两半绳各长 $a$。\n设两端首次相碰时间为 $\\tau$，求中间球此时前进距离与碰前绳张力，\n并给出 $\\tau$ 的求积式。\n",
+    "answer": "\\solution 以中间球初始位置为原点，初始绳沿 $y$ 轴，中球向 $+x$ 运动。\n质心速度为 $V_C=Mv/(M+2m)$。\n设两半绳各从初始竖直方向转过 $\\phi$，两端位置为\n$(x_M-a\\sin\\phi,\\pm a\\cos\\phi)$。\n水平动量守恒给\n\\[\n\\dot x_M=V_C+\\frac{2ma}{M+2m}\\cos\\phi\\,\\dot\\phi.\n\\]\n将其代入三球动能，机械能守恒化为\n\\[\n\\dot\\phi^2=\\frac{Mv^2}{a^2(M+2m\\sin^2\\phi)}.\n\\]\n首次相碰 $\\phi=\\pi/2$，所以\n\\begin{equation}\n\\tau=\\frac av\\int_0^{\\pi/2}\n\\sqrt{1+\\frac{2m}{M}\\sin^2\\phi}\\,\\dd\\phi.\n\\end{equation}\n初始质心在原点，碰前中球相对质心前方距离为 $2ma/(M+2m)$，故\n\\begin{equation}\nb=x_M(\\tau)=\\frac{Mv\\tau+2ma}{M+2m}.\n\\end{equation}\n临碰时三球的 $x$ 速度都为 $V_C$；两端 $y$ 速度为 $\\pm v_y$。\n能量给\n\\[\n\\frac12Mv^2=\\frac12(M+2m)V_C^2+mv_y^2,\\qquad\nv_y^2=\\frac{M}{M+2m}v^2.\n\\]\n中球加速度为 $-2T/M$，端球沿绳加速度为 $T/m$，\n两者的相对向心加速度满足\n\\[\n\\frac{v_y^2}{a}=\\frac Tm+\\frac{2T}{M}.\n\\]\n所以\n\\begin{equation}\nT_{\\text{碰前}}=\\frac{mM^2v^2}{(M+2m)^2a}.\n\\end{equation}\n不能把随中球运动的加速系当作惯性系，直接写 $mv_y^2/a=T$。\n以上守恒用于两端相碰前；碰后的状态需另给碰撞性质。\n",
+    "length": 841
+  },
+  {
+    "kind": "example",
+    "n": 44,
+    "title": "长度为 $4a$ 的绳绕光滑固定钉",
+    "stem": "\\label{ex:c2-44}\n两球质量均为 $m$，由长 $4a$ 的不可伸长轻绳连接，\n初始绳拉直，二者在光滑水平面上以相同速度 $v$ 垂直绳运动。\n绳在距球1为 $a$ 的位置遇到固定光滑细钉，此后可滑过钉，\n两侧张力相同。假定两球不碰撞，求球1距钉最大值与绳张力极值。\n",
+    "answer": "\\solution 绳绷紧时 $r_1+r_2=4a$，\n初始 $r_1=a,r_2=3a$，$\\dot r_1=\\dot r_2=0$。\n初速度与两侧径向均垂直，接触理想钉不必产生速度突变。\n每球的张力指向钉，故各自角动量守恒，其模为\n\\[\n|L_1|=mav,\\qquad |L_2|=3mav.\n\\]\n全系统能量守恒：\n\\[\nmv^2=m\\dot r_1^2+\\frac{L_1^2}{2mr_1^2}\n+\\frac{L_2^2}{2mr_2^2}.\n\\]\n令 $x=r_1/a$，则\n\\begin{equation}\n\\frac{\\dot r_1^2}{v^2}\n+\\frac12\\left[\\frac1{x^2}+\\frac9{(4-x)^2}\\right]=1.\n\\end{equation}\n转折点满足 $2=1/x^2+9/(4-x)^2$，整理得\n\\[\n(x-1)(x^3-7x^2+4x+8)=0.\n\\]\n初始 $\\ddot r_1=v^2/(3a)>0$，可达区间为\n$1\\le x\\le x_*$；其中 $x_*$ 是 $(1,2)$ 中的唯一三次根。\n\\begin{equation}\nr_{1,\\min}=a,\\qquad r_{1,\\max}=1.6531652863\\,a.\n\\end{equation}\n两径向方程相加，利用 $\\ddot r_1+\\ddot r_2=0$：\n\\[\n2T=m(r_1\\dot\\theta_1^2+r_2\\dot\\theta_2^2).\n\\]\n因此\n\\begin{equation}\nT=\\frac{ma^2v^2}{2}\\left[\\frac1{r_1^3}+\\frac9{r_2^3}\\right]\n=\\frac{mv^2}{2a}\\left[\\frac1{x^3}+\\frac9{(4-x)^3}\\right].\n\\end{equation}\n对 $x$ 求导，驻点满足 $(4-x)^4=9x^4$，\n即 $x_T=4/(1+\\sqrt3)$，位于可达区间，二阶导数为正。\n\\begin{equation}\nT_{\\min}=\\frac{7+4\\sqrt3}{32}\\frac{mv^2}{a}.\n\\end{equation}\n端点值为 $T(1)=2mv^2/(3a)$、\n$T(x_*)\\simeq0.4588166541\\,mv^2/a$。故\n\\begin{equation}\nT_{\\max}=\\frac23\\frac{mv^2}{a}.\n\\end{equation}\n整个区间 $T>0$，绳保持绷紧，验证了模型。\n若把绳上某个材料点绑死在钉上，则两侧长度固定，\n这是另一题，不能使用上述径向往返运动解。\n",
+    "length": 1144
+  },
+  {
+    "kind": "example",
+    "n": 45,
+    "title": "携物抛体在最高点水平分离",
+    "stem": "\\label{ex:c2-45}\n重量为 $W$ 的人携带重量为 $w$ 的物体，以速率 $v_0$、\n仰角 $\\alpha$ 从地面起跳。到最高点时将物体水平向后抛出，\n使人相对物体的向前水平速度为 $u>0$，两者初瞬竖直速度均为0。\n无空气阻力，落地与起跳处等高。求人相对不分离时预定落点的偏移和两落点间距。\n",
+    "answer": "\\solution 两质量为 $W/g,w/g$，最高点原水平速度为 $v_0\\cos\\alpha$。\n质心系中\n\\[\nWv'_1+wv'_2=0,\\quad v'_1-v'_2=u\n\\Rightarrow v'_1=\\frac w{W+w}u,\\quad v'_2=-\\frac W{W+w}u.\n\\]\n下落时间为 $t_d=v_0\\sin\\alpha/g$，原定射程\n$R_0=v_0^2\\sin2\\alpha/g$。\n\\begin{equation}\nx_1=R_0+\\frac w{W+w}ut_d,\\qquad\nx_2=R_0-\\frac W{W+w}ut_d.\n\\end{equation}\n人前移 $\\Delta x_1=wu v_0\\sin\\alpha/[(W+w)g]$，\n两落点间距为 $ut_d$。\n另一解法是在地面系直接写水平动量守恒与相对速度条件，\n得到相同末态速度；质心系法先消去共同平移，更便于检查。\n质量加权落点仍为 $R_0$。\n\n",
+    "length": 433
+  },
+  {
+    "kind": "example",
+    "n": 46,
+    "title": "炮弹最高点爆炸后的碎片间距",
+    "stem": "\\label{ex:c2-46}\n总质量为 $m_1+m_2$ 的炮弹从地面射出，水平初速度为 $u$、\n竖直初速度为 $v>0$。最高点炸成两块，释放能量 $E$ 全部转为两块的相对平动动能。\n初瞬速度变化沿水平，求落地间距。\n",
+    "answer": "\\solution 爆炸后共同下落时间 $t_d=v/g$。\n折合质量 $\\mu=m_1m_2/(m_1+m_2)$，\n$E=\\mu w^2/2$，相对速率 $w=\\sqrt{2E/\\mu}$。\n因此\n\\begin{equation}\nd=\\frac vg\\sqrt{\\frac{2E(m_1+m_2)}{m_1m_2}}.\n\\end{equation}\n若块1取得前向增量，\n$v_{1x}=u+(m_2/M)w$、$v_{2x}=u-(m_1/M)w$。\n水平初速度 $u$ 只移动两落点，不改变间距。\n若另要求两碎片均向前，须有 $u\\ge(m_1/M)w$；\n释放能量过大时块2可向后。\n用动量和能量直接联立也能求解，必须从总能量中扣除不变的质心平动能。\n\n",
+    "length": 333
+  },
+  {
+    "kind": "example",
+    "n": 47,
+    "title": "静止靶的一维弹性碰撞",
+    "stem": "\\label{ex:c2-47}\n$m_1$ 以速率 $u$ 撞静止的 $m_2$，求碰后速度与靶获得的能量比例。\n",
+    "answer": "\\solution 代入 $e=1,u_2=0$：\n\\[\nv_1=\\frac{m_1-m_2}{M}u,\\qquad\nv_2=\\frac{2m_1}{M}u,\n\\quad\n\\frac{T_2}{T_{\\text{入}}}=\\frac{4m_1m_2}{(m_1+m_2)^2}.\n\\]\n等质量时入射者停止、靶以 $u$ 离开；重靶使轻入射者反弹；\n极轻靶可具有大于 $u$ 的速度但取得的能量比例仍不超过1。\n速率、动量和能量的质量权重不同，不能仅比较速度判断能量大小。\n\n",
+    "length": 237
+  },
+  {
+    "kind": "example",
+    "n": 48,
+    "title": "等质量散射与中子减速的运动学",
+    "stem": "\\label{ex:c2-48}\n将中子与质子近似为等质量、非相对论弹性碰撞，靶初始静止，\n求中子出射能量与实验室散射角的关系。\n",
+    "answer": "\\solution 一般质量比下\n\\[\n\\frac{T_{1,\\text{出}}}{T_{1,\\text{入}}}\n=\\frac{1+\\lambda^2+2\\lambda\\cos\\Theta}{(1+\\lambda)^2}.\n\\]\n$\\lambda=1$、$\\theta=\\Theta/2$ 给\n\\[\nT_{1,\\text{出}}=T_{1,\\text{入}}\\cos^2\\theta,\\qquad\nT_{2,\\text{出}}=T_{1,\\text{入}}\\sin^2\\theta.\n\\]\n出射两速度正交，因为动量式 $u\\vect e_x=\\vect v_1+\\vect v_2$\n与能量式 $u^2=v_1^2+v_2^2$ 相比，得到 $\\vect v_1\\cdot\\vect v_2=0$。\n一般靶质量下，最大能量转移比例为 $4\\lambda/(1+\\lambda)^2$；\n质量接近有利于单次弹性碰撞减速。具体介质中的多次散射还依赖截面，\n不能仅用此运动学比例决定全部慢化效果。\n",
+    "length": 447
+  },
+  {
+    "kind": "example",
+    "n": 49,
+    "title": "库仑散射在两个参考系中的截面",
+    "stem": "\\label{ex:c2-49}\n两粒子相互作用势能为 $K/r$，$K>0$。\n实验室入射速率 $u$、靶初始静止。\n给出用于角度变换的相对能量及质心系截面。\n",
+    "answer": "\\solution 初始相对速率是 $u$，\n\\[\nE_{\\rm rel}=\\frac12\\mu u^2\n=\\frac{m_2}{M}T_{1,\\text{入}}.\n\\]\n例如在非相对论、忽略屏蔽和核力的点电荷模型中，\n$\\alpha$ 粒子与金原子核分别带电 $Z_1q_{\\rm e}$、$Z_2q_{\\rm e}$，\n$q_{\\rm e}>0$ 是元电荷，$\\epsilon_0$ 是真空介电常数，故\n\\[\nK=\\frac{Z_1Z_2q_{\\rm e}^{\\,2}}{4\\pi\\epsilon_0},\\qquad\n\\mu=\\frac{m_\\alpha m_{\\rm Au}}{m_\\alpha+m_{\\rm Au}}.\n\\]\n无外力时质心匀速运动；相对质点满足\n$\\mu\\ddot{\\vect r}=(K/r^2)\\er$。\n设冲量参数 $b>0$，相对角动量大小 $L=\\mu ub$，\n以最近点方向为极角 $\\phi=0$，令 $w=1/r$。斥力的 Binet 方程及其解为\n\\[\nw''+w=-\\frac{\\mu K}{L^2},\\qquad\nr=\\frac{p}{e_{\\rm orb}\\cos\\phi-1},\\qquad\np=\\frac{L^2}{\\mu K}.\n\\]\n这里 $e_{\\rm orb}$ 是轨道离心率，与元电荷区分。\n由相对能量得\n\\[\ne_{\\rm orb}^{\\,2}=1+\\frac{2E_{\\rm rel}L^2}{\\mu K^2}>1,\n\\]\n所以轨道为斥力双曲线，仅 $e_{\\rm orb}\\cos\\phi>1$ 的支可取。\n两条渐近方向满足 $\\cos\\phi_\\infty=1/e_{\\rm orb}$，\n入、出射速度的散射角为 $\\Theta=\\pi-2\\phi_\\infty$，于是\n\\[\n\\cot\\frac\\Theta2=\\tan\\phi_\\infty\n=\\sqrt{e_{\\rm orb}^{\\,2}-1}=\\frac{2E_{\\rm rel}b}{K}.\n\\]\n因此中心斥力轨道给冲量参数\n$b=K\\cot(\\Theta/2)/(2E_{\\rm rel})$。\n正碰 $b=0$ 时不采用除以 $L^2$ 的轨道推导，而由极限得到 $\\Theta=\\pi$。\n轴对称入射束中环形面积 $\\dd\\sigma=2\\pi b|\\dd b|$，所以\n\\[\nf_C(\\Theta)=\\frac{b}{\\sin\\Theta}\\left|\\frac{\\dd b}{\\dd\\Theta}\\right|\n=\\left(\\frac{K}{4E_{\\rm rel}}\\right)^2\n\\frac1{\\sin^4(\\Theta/2)}.\n\\]\n再按对应的质量比选择角支，代入立体角雅可比求 $f_L$。\n这里能量必须是相对运动能量；直接代入实验室入射能量会改变系数。\n理想无限程库仑力在极小角区间有发散，具体总截面讨论还须说明角度范围或屏蔽模型。\n\n",
+    "length": 1246
+  },
+  {
+    "kind": "example",
+    "n": 50,
+    "title": "质量比二的同一实验室角对应两种散射",
+    "stem": "\\label{ex:c2-50}\n取 $\\lambda=2$、$\\theta=20^\\circ$，求两质心散射角及立体角变换因子。\n",
+    "answer": "\\solution $\\theta_{\\max}=30^\\circ$，给定角度在双支区内。\n由 $\\Theta_1=\\theta+\\arcsin(2\\sin\\theta)$、\n$\\Theta_2=\\theta+\\pi-\\arcsin(2\\sin\\theta)$，得\n\\[\n\\Theta_1\\approx63.16018^\\circ,\\quad\n\\Theta_2\\approx156.83982^\\circ,\n\\quad D_1\\approx2.608829,\\quad D_2\\approx1.149941.\n\\]\n立体角因子分别为 $D_1^2/h\\approx9.330379$、\n$D_2^2/h\\approx1.812838$。同一实验室探测方向的粒子数包含两种初始碰撞参数，不应只选偏折较小的一支。\n\n",
+    "length": 356
+  },
+  {
+    "kind": "example",
+    "n": 51,
+    "title": "库仑散射的实验室系截面显式式",
+    "stem": "\\label{ex:c2-51}\n沿用 $K/r$ 的排斥势，靶初始静止，入射粒子质量比为 $\\lambda$。求实验室系的每立体角截面。\n",
+    "answer": "\\solution 设实验室入射能量为 $E_L=m_1u^2/2$，则\n$E_{\\rm rel}=E_L/(1+\\lambda)$，质心截面\n$f_C=(K/(4E_{\\rm rel}))^2\\sin^{-4}(\\Theta/2)$。记\n$A_K=K/(4E_{\\rm rel})$。对于 $\\lambda>1$，逐支代入，\n\\begin{equation}\n\\boxed{f_L(\\theta)=\\frac{4A_K^2}{h}\n\\left[\\frac{D_+^2}{(1-c_+)^2}\n+\\frac{D_-^2}{(1-c_-)^2}\\right].}\n\\end{equation}\n范围为 $0<\\theta<\\arcsin(1/\\lambda)$。当 $\\lambda<1$，同式只保留正号项、角范围扩展到 $0<\\theta<\\pi$。等质量时\n\\[\n\\boxed{f_L(\\theta)=4A_K^2\\frac{\\cos\\theta}{\\sin^4\\theta}},\n\\qquad0<\\theta<\\pi/2.\n\\]\n实际角域积分应对每支用相同的初、末角条件计算；直接在完整角域积分库仑截面会受到前向发散影响。\n\n例如质量比二、实验室角 $20^\\circ$ 时，两支对 $f_L/A_K^2$ 的贡献分别约为 $124.052$ 与 $1.968$，合计约 $126.020$。这里各支因子先由速度圆算出，再乘该支自己的质心截面；不能仅把两支 Jacobian 相加后乘任意一个角度的截面。\n\n",
+    "length": 656
+  },
+  {
+    "kind": "example",
+    "n": 52,
+    "title": "中点粘连碰撞：三种动量解法为何失效",
+    "stem": "\\label{ex:c2-52}\n轻刚杆长 $L$，上端铰接于固定点 $A$，初始竖直向下。\n中点固连质量 $4m$ 的球，下端固连质量 $m$ 的球。\n另有质量 $m$ 的入射球以水平速率 $v_0$ 撞中点并粘住。\n求中点碰后速度。\n",
+    "answer": "\\solution 三种貌似合理的式子分别给出\n\\[\nmv_0=5mv\\Rightarrow v=\\frac{v_0}{5},\\qquad\nmv_0=6mv\\Rightarrow v=\\frac{v_0}{6},\\qquad\nmv_0=5mv+m(2v)\\Rightarrow v=\\frac{v_0}{7}.\n\\]\n第一式忽略刚杆对中点的横向冲量；\n第二式既忽略铰轴外冲量，又误令不同半径点速率相同；\n第三式采用了正确的刚杆速率比，但仍误用全系统水平动量守恒。\n铰轴在短碰撞中可以传递不可忽略的外冲量。\n\n关于固定铰点 $A$，铰轴冲量力矩为零，重力角冲量可忽略。\n中点速率为 $v$ 时，下端速率为 $2v$。角动量守恒给\n\\[\nmv_0\\frac L2=5mv\\frac L2+m(2v)L,\n\\]\n因此\n\\begin{equation}\nv=\\frac{v_0}{9},\\quad v_{\\text{下}}=\\frac{2v_0}{9},\\quad\n\\omega=\\frac{2v_0}{9L}.\n\\end{equation}\n等价惯量解为 $I_A=5m(L/2)^2+mL^2=9mL^2/4$，\n$\\omega=(mv_0L/2)/I_A$。\n碰后水平动量为 $7mv_0/9$，故铰轴水平冲量\n$J_{A,x}=-2mv_0/9$；这直接证明总水平动量不守恒。\n碰后动能为 $mv_0^2/18$，低于初始 $mv_0^2/2$，\n符合完全非弹性撞击。\n\n若把刚杆替换为两段初始竖直的柔绳，绳初瞬只传轴向拉力，\n中点的水平冲量不会立即强制下端取得两倍水平速度。\n此理想瞬时模型中，中点团水平速度为 $v_0/5$，下端初瞬水平速度为0。\n柔绳只限制连线方向的相对速度，不能传递刚杆的横向约束。\n之后绳倾斜或松弛时，必须重新处理后续运动。\n\n关于 $A$ 的角动量守恒仅用于碰撞瞬间。\n之后杆偏离竖直，重力一般产生力矩，不能继续宣称角动量恒定。\n",
+    "length": 830
+  },
+  {
+    "kind": "example",
+    "n": 53,
+    "title": "吸收静止小块时的机械能损失",
+    "stem": "\\label{ex:c2-53}\n质量 $m$、速度 $v$ 的主体无外冲量地吸收静止质量 $\\delta m$，二者粘连。求共同速度和损失的动能，并给微元极限。\n",
+    "answer": "\\solution 动量守恒给 $v_+=mv/(m+\\delta m)$。碰后动能为\n$T_+=m^2v^2/[2(m+\\delta m)]$，故\n\\[\nT_--T_+=\\frac12\\frac{m\\delta m}{m+\\delta m}v^2>0.\n\\]\n微元极限损失率为 $\\dot E_{\\rm loss}=\\dot m v^2/2$。动量通量式可以确定减速，但不会自动保证机械能守恒；粘连、凝结和制停通常伴随耗散。\n\n\n",
+    "length": 216
+  },
+  {
+    "kind": "example",
+    "n": 54,
+    "title": "无外力火箭与竖直火箭",
+    "stem": "\\label{ex:c2-54}\n火箭质量为 $m(t)$，燃气相对火箭向后喷出的速率恒为 $c>0$。\n求无外力时的速度变化；再求恒流率 $q>0$、竖直向上飞行且向下排气、\n均匀重力下的速度与高度。\n",
+    "answer": "\\solution 沿前进方向为正，燃气惯性速度 $u=v-c$，\n$\\dot m<0$。变质量方程为\n\\[\nm\\dot v=F_{\\rm ext}-c\\dot m.\n\\]\n无外力时积分得\n\\begin{equation}\nv-v_0=c\\ln\\frac{m_0}{m}.\n\\end{equation}\n这不是恒推力假设，而是恒相对喷速假设。\n竖直恒流率模型 $m=m_0-qt$、$F_{\\rm ext}=-mg$，\n\\[\n\\dot v=\\frac{cq}{m_0-qt}-g,\n\\qquad\nv(t)=v_0+c\\ln\\frac{m_0}{m_0-qt}-gt.\n\\]\n从 $z(0)=z_0$ 积分：\n\\begin{equation}\nz(t)=z_0+v_0t+c\\left[t-\\frac{m_0-qt}{q}\n\\ln\\frac{m_0}{m_0-qt}\\right]-\\frac12gt^2.\n\\end{equation}\n求导可恢复 $v(t)$；$q\\to0$ 时恢复无喷气的抛体运动。\n公式仅用于燃烧阶段，质量应始终不小于干质量 $m_f>0$。\n燃烧结束时刻 $t_b=(m_0-m_f)/q$，以后质量不变，按外力重新积分。\n\n若 $q=\\alpha m_0$，则\n\\[\nv(t)=v_0-c\\ln(1-\\alpha t)-gt,\\quad\n\\dot v=\\frac{\\alpha c}{1-\\alpha t}-g.\n\\]\n若 $v_0\\ge0$，从初瞬起全程严格加速上升的自由飞行条件是 $\\alpha c>g$。\n在某个后来的时刻，仅需 $\\alpha c>g(1-\\alpha t)$。\n若初始推力不足而火箭仍在发射台上，发射台支持力必须计入，\n不能把自由飞行解延伸到穿过地面的负高度。\n\n",
+    "length": 759
+  },
+  {
+    "kind": "example",
+    "n": 55,
+    "title": "初始推力不足的竖直火箭",
+    "stem": "\\label{ex:c2-55}\n火箭初始质量 $m_0$、干质量 $m_f$，从水平发射台静止燃烧。恒质量流率为 $q>0$，相对向后喷速为 $c$，重力恒定，无空气阻力。燃烧结束 $t_b=(m_0-m_f)/q$。求起飞条件及起飞后运动。\n",
+    "answer": "\\solution 燃烧时 $m(t)=m_0-qt$、推力为 $cq$。仍在台上时 $v=0,z=z_0$，支持力\n$N=m(t)g-cq$。地面只能提供 $N\\ge0$，当质量降至 $m_L=cq/g$ 时达到离台阈值。\n\n若 $cq>m_0g$，从零时刻起飞；若 $m_fg<cq<m_0g$，先在台上燃烧，起飞时刻\n\\[\nt_L=\\frac{m_0-cq/g}{q},\\qquad m(t_L)=m_L.\n\\]\n若 $cq\\le m_fg$，燃烧结束前都不能产生向上的自由飞行；等号只在熄火瞬间达到零支持力，不能形成有限上升过程。初始等号 $cq=m_0g$ 时燃烧随即减轻质量，可视为 $t_L=0$ 的极限。\n\n对于实际起飞的支，记 $\\Delta t=t-t_L$、$m_L=m(t_L)$、$v(t_L)=0$。自由飞行方程为 $m\\dot v=cq-mg$。积分得\n\\[\nv(t)=c\\ln\\frac{m_L}{m(t)}-g\\Delta t,\n\\]\n\\[\nz(t)-z_0=c\\left[\\Delta t-\\frac{m(t)}q\\ln\\frac{m_L}{m(t)}\\right]\n-\\frac12g\\Delta t^2,\\qquad t_L\\le t\\le t_b.\n\\]\n延迟起飞时不能继续使用 $m_0$ 作对数起始质量，因为此前主体速度始终为零。熄火后令 $v_b=v(t_b),z_b=z(t_b)$，有\n\\[\nv=v_b-g(t-t_b),\\quad z=z_b+v_b(t-t_b)-\\frac12g(t-t_b)^2.\n\\]\n若 $v_b>0$，最高点时间为 $t_b+v_b/g$，高度为 $z_b+v_b^2/(2g)$。\n\n例如取 $m_0=3m_f$、$q=2m_f/t_b$、$c=gt_b$，推力初始不足，$m_L=2m_f$、$t_L=t_b/2$。熄火结果为\n\\[\n\\frac{v_b}{gt_b}=\\ln2-\\frac12\\approx0.193147,\n\\quad\\frac{z_b-z_0}{gt_b^2}=\\frac38-\\frac12\\ln2\\approx0.0284264.\n\\]\n这组例子显示“全程自由飞行”和“先燃烧后起飞”具有不同初值与时间区间。\n\n",
+    "length": 961
+  },
+  {
+    "kind": "example",
+    "n": 56,
+    "title": "恒质量增长率的雨滴：速度与下落距离",
+    "stem": "\\label{ex:c2-56}\n雨滴初始质量为 $M$，从静止下落，每单位时间凝结质量为 $\\lambda>0$。\n水蒸气相对地面静止，忽略空气阻力与浮力。求速度和距离。\n",
+    "answer": "\\solution 向下为正，$m=M+\\lambda t$、$u=0$、$F=mg$，\n\\[\n\\frac{\\dd[(M+\\lambda t)v]}{\\dd t}=(M+\\lambda t)g.\n\\]\n积分得\n\\[\nv=g\\frac{Mt+\\lambda t^2/2}{M+\\lambda t}\n=\\frac12gt+\\frac{Mg}{2\\lambda}\n-\\frac{M^2g}{2\\lambda(M+\\lambda t)}.\n\\]\n再次积分：\n\\begin{equation}\ns(t)=\\frac14gt^2+\\frac{Mg}{2\\lambda}t\n-\\frac{M^2g}{2\\lambda^2}\\ln\\left(1+\\frac{\\lambda t}{M}\\right).\n\\end{equation}\n负的对数项使 $s'(0)=0$。$\\lambda\\to0$ 时，\n$v\\to gt$、$s\\to gt^2/2$。\n小时间展开\n$s=gt^2/2-\\lambda gt^3/(6M)+O(t^4)$。\n\\[\n\\dot v=\\frac g2+\\frac{gM^2}{2(M+\\lambda t)^2},\n\\]\n从 $g$ 渐近至 $g/2$。没有阻力时此模型没有有限终端速度。\n\n",
+    "length": 548
+  },
+  {
+    "kind": "example",
+    "n": 57,
+    "title": "质量增长率与表面积成正比的球形雨滴",
+    "stem": "\\label{ex:c2-57}\n球形雨滴密度为 $\\rho$，初始半径为 $a$、初速0，\n质量增长率 $\\dot m=c_s r^2$，$c_s>0$。\n凝结物质对地静止，无空气阻力。求半径、速度和加速度。\n",
+    "answer": "\\solution $m=4\\pi\\rho r^3/3$，故\n$4\\pi\\rho r^2\\dot r=c_s r^2$，\n令 $\\lambda=c_s/(4\\pi\\rho)$，得到 $r=a+\\lambda t$。\n动量积分\n\\[\nmv=\\int_0^t m(\\tau)g\\,\\dd\\tau\n=\\frac{4\\pi\\rho}{3}\\frac g{4\\lambda}\n[(a+\\lambda t)^4-a^4].\n\\]\n所以\n\\begin{equation}\nv=\\frac g{4\\lambda}\\left[a+\\lambda t-\\frac{a^4}{(a+\\lambda t)^3}\\right],\n\\quad\n\\dot v=\\frac g4\\left[1+3\\left(\\frac a{a+\\lambda t}\\right)^4\\right].\n\\end{equation}\n初始加速度为 $g$，长期渐近为 $g/4$，仍无有限终端速度。\n若把增长率写为 $\\dot m=km^{2/3}$，则\n$m^{1/3}=m_0^{1/3}+kt/3$，\n半径为 $r=[m_0^{1/3}+kt/3]/(4\\pi\\rho/3)^{1/3}$。\n立方根不能误写成平方根。\n若增长来自扫掠流体而增长率还依赖 $v$，\n则是另一模型，须同时修改 $m(t)$ 与动量方程。\n\n",
+    "length": 586
+  },
+  {
+    "kind": "example",
+    "n": 58,
+    "title": "软绳落地的冲击力与地面总反力",
+    "stem": "\\label{ex:c2-58}\n均匀软绳长 $l$、线密度 $\\sigma$，开始竖直，\n下端刚触地，松开上端。绳柔软、无回弹，落地部分立即静止，\n堆积高度忽略且不向下落直段施加牵拉。\n上端已下降 $h$ 时，求落点制动力及地面对全绳的总反力。\n",
+    "answer": "\\solution 下落直段自由落体，\n$v=\\dot h$、$\\dot v=g$、$v^2=2gh$。\n每单位时间有 $\\sigma v$ 的质量被制停，\n其动量变化率为 $\\sigma v^2$。\n因此仅制停新落地绳元的冲击力\n\\[\nN_{\\rm impact}=\\sigma v^2=2\\sigma gh.\n\\]\n已堆积绳长 $h$，重量为 $\\sigma hg$，故总反力\n\\begin{equation}\nR=\\sigma hg+N_{\\rm impact}=3\\sigma gh,\\qquad 0\\le h<l.\n\\end{equation}\n另一解法对全绳这个固定成员系统写动量定理。\n取向下为正，全绳动量 $P=\\sigma(l-h)v$，\n\\[\n\\dot P=\\sigma(l-h)g-\\sigma v^2=\\sigma lg-R,\n\\]\n得到同一结果。\n若取包含制停过程的变质量主体，流出微元最终速度为0，\n其制动力要包含在外力中；若边界选在冲击区上方，\n流出微元速度为 $v$，自由直段端部牵拉为0。\n系统边界与通量速度必须匹配。\n\n$h\\to l^-$ 的下落阶段反力极限为 $3\\sigma gl$，\n但全部落地静止以后反力为 $\\sigma lg$。\n不能把运动末端极限当作停止后的静态值。\n",
+    "length": 560
+  },
+  {
+    "kind": "example",
+    "n": 59,
+    "title": "均匀链条从光滑桌沿滑落",
+    "stem": "\\label{ex:c2-59}\n链条总长 $l$、线密度 $\\sigma$，水平部分在光滑桌面，\n竖直悬垂长度为 $x$，全链沿既定路径以共同速率 $\\dot x$ 运动。\n桌沿设有保持路径的理想光滑导槽，不产生碰撞耗能。\n初始 $x_0=l/2$、速率0，求离桌前运动及离桌瞬间速率。\n",
+    "answer": "\\solution 固定成员全链动能 $T=\\sigma l\\dot x^2/2$，\n以桌面为势能零点，竖直段势能 $U=-\\sigma gx^2/2$。\n能量守恒：\n\\[\n\\dot x^2=\\frac gl\\left(x^2-\\frac{l^2}{4}\\right),\n\\qquad \\ddot x=\\frac glx.\n\\]\n初始条件给\n\\begin{equation}\nx(t)=\\frac l2\\cosh\\left(\\sqrt{\\frac gl}\\,t\\right),\\qquad\n\\dot x(t)=\\frac{\\sqrt{gl}}2\\sinh\\left(\\sqrt{\\frac gl}\\,t\\right).\n\\end{equation}\n离桌时 $x=l$，故\n\\begin{equation}\nv_{\\text{离}}^2=\\frac34gl,\\qquad\nt_{\\text{离}}=\\sqrt{\\frac lg}\\operatorname{arcosh}2.\n\\end{equation}\n也可分别对水平、竖直直段列切向动力学：\n\\[\n\\sigma(l-x)\\ddot x=T_e,\\qquad\n\\sigma x\\ddot x=\\sigma xg-T_e.\n\\]\n相加得到 $\\sigma l\\ddot x=\\sigma gx$。\n若改写为开放直段动量导数，必须加通量：\n\\[\n\\frac{\\dd[\\sigma x\\dot x]}{\\dd t}\n=\\sigma xg-T_e+\\sigma\\dot x^2,\n\\]\n\\[\n\\frac{\\dd[\\sigma(l-x)\\dot x]}{\\dd t}\n=T_e-\\sigma\\dot x^2.\n\\]\n这里两个动量方程分别沿各自的切向使用，并通过转向区的力联系；\n不可将不同方向的矢量直接作同向标量求和。\n一般初始悬长 $x_0$、速率 $v_0$ 时，\n$v^2=v_0^2+(g/l)(x^2-x_0^2)$。\n链条离桌以后几何和作用力改变，应另列下一阶段。\n",
+    "length": 860
+  },
+  {
+    "kind": "example",
+    "n": 60,
+    "title": "持续射弹、滑动摩擦与两种喷出速度题设",
+    "stem": "\\label{ex:c2-60}\n裸机枪质量为 $M$，初始弹药总质量为 $M'$，\n以恒质量流率 $q$ 射出，初始静止。\n取机枪回冲方向为正，地面动摩擦系数为 $\\mu_f$，\n假设已启动且全程沿正方向滑动。\n比较子弹对地恒速度 $-u$ 与相对机枪恒速度 $-u$ 两种模型的最终枪速。\n",
+    "answer": "\\solution 枪与未射弹药的主体质量\n$m(t)=M+M'-qt$，射完时 $t_f=M'/q$，\n摩擦力 $F=-\\mu_fmg$。\n\n\\textbf{模型一：子弹对地速度 $U=-u$ 恒定。}\n开放动量式为\n\\[\n\\frac{\\dd(mv)}{\\dd t}-qu=-\\mu_fmg.\n\\]\n积分得\n\\[\nmv=qu\\,t-\\mu_fg[(M+M')t-qt^2/2],\n\\]\n所以\n\\begin{equation}\nv_f=\\frac{M'}M u\n-\\frac{\\mu_fg}{2qM}\\big[(M+M')^2-M^2\\big].\n\\end{equation}\n摩擦减小回冲，括号中必须是初始质量平方减干质量平方。\n无摩擦时所有射弹对地总动量为 $-M'u$，\n枪末动量为 $M'u$，符合整体动量守恒。\n\n\\textbf{模型二：相对机枪速度 $U-v=-u$ 恒定。}\n此时 $U=v-u$，方程变为\n\\[\nm\\dot v=qu-\\mu_fmg.\n\\]\n积分到射完：\n\\begin{equation}\nv_f=u\\ln\\frac{M+M'}M-\\frac{\\mu_fgM'}q.\n\\end{equation}\n两个公式回答不同的速度题设，不可互换。\n若枪没有启动或中途停止，滑动摩擦方向不再保持上述形式，\n必须加入静摩擦阈值与分段运动条件。\n初始已滑动模型要从静止立即向正方向运动，至少需\n$qu>\\mu_f(M+M')g$；实际启动还要比较最大静摩擦。\n\n",
+    "length": 639
+  },
+  {
+    "kind": "example",
+    "n": 61,
+    "title": "自由粒子为什么不满足省略边界项的位力式",
+    "stem": "\\label{ex:c2-61}\n无力粒子以恒速度 $\\vect v$ 运动，求式 \\eqref{eq:virfinite} 两端。\n",
+    "answer": "\\solution $\\vect r=\\vect r_0+\\vect vt$、$\\vect p=m\\vect v$，\n$D(\\tau)-D(0)=mv^2\\tau$。\n右端为 $mv^2=2T$，左端 $W=0$，同样为 $2T$。\n边界项并不消失，不能据 $W=0$ 推出 $\\overline T=0$。\n孤立系统若整体匀速平移，应在不旋转质心系中讨论内部束缚和平衡，\n避免把无界平移混入内部位力关系。\n\n",
+    "length": 205
+  },
+  {
+    "kind": "example",
+    "n": 62,
+    "title": "一维谐振子的有限时间位力检验",
+    "stem": "\\label{ex:c2-62}\n质点运动 $x=A\\cos\\omega t$，势能 $kx^2/2$、$k=m\\omega^2$。计算 $D=xp$ 及 $2T+W$，直接验证边界项。\n",
+    "answer": "\\solution $p=-mA\\omega\\sin\\omega t$，所以\n\\[\nD=-\\frac12mA^2\\omega\\sin2\\omega t,\\quad\nT=\\frac12mA^2\\omega^2\\sin^2\\omega t,\\quad\nW=xF=-mA^2\\omega^2\\cos^2\\omega t.\n\\]\n故 $2T+W=-mA^2\\omega^2\\cos2\\omega t=\\dot D$。在 $[0,\\tau]$ 平均得到\n\\[\n2\\overline T_\\tau+\\overline W_\\tau\n=-\\frac{mA^2\\omega}{2\\tau}\\sin2\\omega\\tau\n=\\frac{D(\\tau)-D(0)}\\tau.\n\\]\n当 $\\tau$ 为周期整数倍时边界项精确为零；任意有限 $\\tau$ 一般非零；长时平均趋零。三种平均情形不能混用。\n\n",
+    "length": 392
+  },
+  {
+    "kind": "example",
+    "n": 63,
+    "title": "相互引力质点组的位力平衡",
+    "stem": "\\label{ex:c2-63}\n$N$ 个质点仅以万有引力相互作用，系统内部束缚。\n求平均动能、势能和总能量的关系。\n",
+    "answer": "\\solution 在不旋转质心系中，记\n\\[\nU=-\\sum_{i<j}\\frac{Gm_im_j}{r_{ij}},\\quad\n\\vect F_{ij}=-Gm_im_j\\frac{\\vect r_{ij}}{r_{ij}^3}.\n\\]\n成对求和给\n\\[\nW=\\sum_i\\vect r'_i\\cdot\\vect F_i\n=\\sum_{i<j}\\vect r_{ij}\\cdot\\vect F_{ij}\n=-\\sum_{i<j}\\frac{Gm_im_j}{r_{ij}}=U.\n\\]\n每对只计一次。于是\n\\begin{equation}\n\\overline T=-\\frac12\\overline U,\\qquad\nE=\\overline T+\\overline U\n=\\frac12\\overline U=-\\overline T.\n\\end{equation}\n若总能量守恒，$E$ 本身为常量。\n在缓慢辐射失能并近似维持位力平衡的自引力云中，\n$E$ 下降意味着 $U$ 更负、系统收缩，\n而 $T=-E$ 增大，热运动反而增强。\n这解释了准静态自引力系统收缩加热的趋势。\n快速坍缩、显著外压、逃逸或质量流失时须恢复相应边界与外力项，\n不能直接把该平衡关系当成瞬时等式。\n\n",
+    "length": 543
+  },
+  {
+    "kind": "example",
+    "n": 64,
+    "title": "一维谐振子的时间平均",
+    "stem": "\\label{ex:c2-64}\n$x=A\\cos\\omega t$、$\\omega^2=k/m$，求一周期平均动能和势能。\n",
+    "answer": "\\solution\n$T=mA^2\\omega^2\\sin^2\\omega t/2$、\n$U=kA^2\\cos^2\\omega t/2$，\n一周期正弦平方与余弦平方平均均为 $1/2$。\n\\[\n\\overline T=\\overline U=\\frac14kA^2,\\qquad\nE=\\frac12kA^2.\n\\]\n这与 $\\alpha=2$ 的位力定理相符，定理给的是平均关系而非任意瞬时\n$T=U$。\n\n",
+    "length": 204
+  },
+  {
+    "kind": "example",
+    "n": 65,
+    "title": "硬球排斥的第二位力系数",
+    "stem": "\\label{ex:c2-65}\n粒子中心间距小于 $d$ 时势能为无穷大，大于 $d$ 时为0，\n求 $B_2$。\n",
+    "answer": "\\solution 小于 $d$ 的 Boltzmann 因子为0，\n大于 $d$ 时为1，因此\n\\[\nB_2=-2\\pi\\int_0^d(-1)r^2\\dd r=\\frac{2\\pi d^3}{3}.\n\\]\n压力第一修正为正，反映粒子排斥和可用空间减少。\n这里 $d$ 是两中心允许的最小距离；若每个球半径为 $a$，\n则 $d=2a$，不能漏掉这个几何换算。\n\n",
+    "length": 183
+  },
+  {
+    "kind": "example",
+    "n": 66,
+    "title": "硬核加有限深度吸引壳的第二位力系数",
+    "stem": "\\label{ex:c2-66}\n粒子对势为：$r<d$ 时无穷大，$d<r<a$ 时 $-\\epsilon$，$r>a$ 时0，其中 $a>d>0,\\epsilon>0$。求 $B_2(\\Theta)$ 并判断压力修正符号。\n",
+    "answer": "\\solution 三段的 $f$ 分别为 $-1,\\mathrm e^{\\epsilon/(k_B\\Theta)}-1,0$，因此\n\\[\nB_2=\\frac{2\\pi}{3}\\left[d^3-(a^3-d^3)\n\\left(\\mathrm e^{\\epsilon/(k_B\\Theta)}-1\\right)\\right].\n\\]\n第一项来自排斥体积，第二项来自吸引关联。高温时指数接近1，排斥修正占优；在使 $B_2=0$ 的温度，\n\\[\n\\frac{\\epsilon}{k_B\\Theta_B}\n=\\ln\\left(1+\\frac{d^3}{a^3-d^3}\\right).\n\\]\n低于该温度时二阶压力修正为负，但低密度展开仍要求 $|nB_2|\\ll1$，不能用它直接描述强凝聚区。\n\n\n",
+    "length": 348
+  },
+  {
+    "kind": "exercise",
+    "n": 1,
+    "title": "反向力不一定抵消力矩",
+    "stem": "\n两质点位置为 $(0,0)$、$(a,0)$，它们之间的力分别为\n$(0,F)$、$(0,-F)$。求合内力及关于原点的合内力矩。\n",
+    "answer": "\\solution 分别以两点为 $1,2$，有 $\\vect F_1+\\vect F_2=(0,F)+(0,-F)=0$。关于原点，第一点力臂为零，第二点力臂为 $(a,0)$，故\n\\[\n\\vect\\tau_{\\rm int}=(0,0)\\times(0,F)+(a,0)\\times(0,-F)\n=-aF\\vect e_z.\n\\]\n两力大小相等、方向相反，但作用线不重合，构成力偶。因此反向性只保证合内力为零；中心性再要求力沿两点连线，才保证内力矩为零。这一题构造用于区分两种条件，完整物理模型还需包含承载相应角动量的其他自由度。\n\n",
+    "length": 269
+  },
+  {
+    "kind": "exercise",
+    "n": 2,
+    "title": "两质点质心的反质量比",
+    "stem": "\n$m_1,m_2$ 相距 $L$，证明质心到两球距离的比为 $m_2:m_1$；\n若 $m_2=3m_1$，质心距球1多远？\n",
+    "answer": "\\solution 沿两点连线取球1在 $0$，球2在 $L$。由定义\n$X=(m_1\\times0+m_2L)/(m_1+m_2)$，所以到两球距离分别为\n\\[\nd_1=X=\\frac{m_2L}{m_1+m_2},\\qquad\nd_2=L-X=\\frac{m_1L}{m_1+m_2}.\n\\]\n相除得 $d_1/d_2=m_2/m_1$。$m_2=3m_1$ 时，$d_1=3L/4$、$d_2=L/4$，质心更靠近较重的球2。也可由 $m_1(X-0)=m_2(L-X)$ 的一阶矩平衡复算。\n\n",
+    "length": 251
+  },
+  {
+    "kind": "exercise",
+    "n": 3,
+    "title": "均匀半圆细线的质心",
+    "stem": "\n半径为 $a$ 的均匀半圆细线位于 $y\\ge0$，求质心，\n并说明为何不等于实心半球的 $3a/8$。\n",
+    "answer": "\\solution 参数取 $(x,y)=(a\\cos\\phi,a\\sin\\phi)$，$0\\le\\phi\\le\\pi$，弧长元 $\\dd s=a\\dd\\phi$。线密度恒定，所以 $M=\\lambda a\\pi$。两个一阶矩为\n\\[\nMX=\\lambda a^2\\int_0^\\pi\\cos\\phi\\dd\\phi=0,\n\\quad MY=\\lambda a^2[-\\cos\\phi]_0^\\pi=2\\lambda a^2.\n\\]\n因此 $(X,Y)=(0,2a/\\pi)$。细线的质量集中在圆弧上，实心半球则分布在三维体积内，质量元和积分域都不同，$3a/8$ 不适用于这里。\n\n",
+    "length": 291
+  },
+  {
+    "kind": "exercise",
+    "n": 4,
+    "title": "线性密度梯度的细杆",
+    "stem": "\n细杆占据 $0\\le x\\le L$，线密度 $\\lambda(x)=\\lambda_0(1+x/L)$，\n求质量和质心。\n",
+    "answer": "\\solution 质量元为 $\\dd m=\\lambda_0(1+x/L)\\dd x$。分别计算零阶矩和一阶矩，\n\\[\nM=\\lambda_0\\int_0^L(1+x/L)\\dd x\n=\\lambda_0[L+L/2]=\\frac32\\lambda_0L,\n\\]\n\\[\nMX=\\lambda_0\\int_0^L(x+x^2/L)\\dd x\n=\\lambda_0[L^2/2+L^2/3]=\\frac56\\lambda_0L^2.\n\\]\n相除得到 $X=5L/9$。密度向右增大，质心在中点右侧；结果落在杆的区间内，两个检查都与题设一致。\n\n",
+    "length": 271
+  },
+  {
+    "kind": "exercise",
+    "n": 5,
+    "title": "单圆孔的负质量法",
+    "stem": "\n均匀半径 $R$ 的薄圆盘挖去半径 $r$ 的圆孔，\n孔中心为 $(d,0)$，$d\\ge0$、$0<r<R$ 且 $d+r\\le R$。求剩余质心。\n",
+    "answer": "\\solution 原圆盘质量 $M_0=\\sigma\\pi R^2$，被挖圆孔质量 $m_h=\\sigma\\pi r^2$。原圆盘一阶矩为零，孔的一阶矩为 $m_hd$。剩余一阶矩为 $-m_hd$，质量为 $M_0-m_h>0$，故\n\\[\nX=-\\frac{m_hd}{M_0-m_h}=-\\frac{r^2d}{R^2-r^2},\\qquad Y=0.\n\\]\n$d+r\\le R$ 保证孔完全位于原盘内。$d>0$ 时 $X<0$，剩余质心向挖孔的反方向移动；$d=0$ 或 $r\\to0$ 时回到圆心。“负质量”只记录被移除积分，并不代表物理上的负质量。\n\n",
+    "length": 283
+  },
+  {
+    "kind": "exercise",
+    "n": 6,
+    "title": "恒外力下质心的运动",
+    "stem": "\n总质量 $M$ 的质点组受恒合外力 $\\vect F$，\n初始质心位置 $\\vect R_0$、总动量 $\\vect P_0$。\n求 $\\vect P(t)$ 和 $\\vect R(t)$。\n",
+    "answer": "\\solution 固定成员系统总质量恒定，$\\dot{\\vect P}=\\vect F$。从初态积分一次，$\\vect P=\\vect P_0+\\vect Ft$。质心满足 $\\dot{\\vect R}=\\vect P/M$，再积分，\n\\[\n\\vect R=\\vect R_0+\\int_0^t\\left(\\frac{\\vect P_0}{M}+\n\\frac{\\vect F}{M}s\\right)\\dd s\n=\\vect R_0+\\frac{\\vect P_0}{M}t+\\frac{\\vect F}{2M}t^2.\n\\]\n求导两次可恢复 $M\\ddot{\\vect R}=\\vect F$。内部振动、转动和形变不改变这两个整体关系，但影响各个质点的位置。\n\n",
+    "length": 332
+  },
+  {
+    "kind": "exercise",
+    "n": 7,
+    "title": "改换匀速参考系后的动能",
+    "stem": "\n新惯性系相对旧系速度为 $\\vect U$。\n证明 $T_{\\text{新}}=T-\\vect U\\cdot\\vect P+MU^2/2$，\n并说明内部动能是否改变。\n",
+    "answer": "\\solution 新惯性系中 $\\widetilde{\\vect v}_i=\\vect v_i-\\vect U$。将平方逐项展开，\n\\begin{align*}\n\\widetilde T&=\\frac12\\sum_i m_i(v_i^2-2\\vect U\\cdot\\vect v_i+U^2)\\\\\n&=T-\\vect U\\cdot\\sum_i m_i\\vect v_i+\\frac12U^2\\sum_i m_i\n=T-\\vect U\\cdot\\vect P+\\frac12MU^2.\n\\end{align*}\n新质心速度为 $\\widetilde{\\vect V}=\\vect V-\\vect U$。代入 $\\vect P=M\\vect V$，\n\\[\n\\widetilde T-\\frac12M\\widetilde V^2\n=T-M\\vect U\\cdot\\vect V+\\frac12MU^2\n-\\frac12M(V^2-2\\vect V\\cdot\\vect U+U^2)\n=T-\\frac12MV^2=T_C.\n\\]\n所以总动能随惯性系改变，内部动能保持相同。\n\n",
+    "length": 485
+  },
+  {
+    "kind": "exercise",
+    "n": 8,
+    "title": "相对出膛速度与对地出膛速度",
+    "stem": "\n水平炮车质量为 $M$、炮弹质量为 $m$，初始静止，发射期间水平外冲量可忽略。\n分别给定炮弹相对炮车速率为 $V$、炮弹对地速率为 $V$，\n求后退速度。\n",
+    "answer": "\\solution 炮弹前进为正，炮车后退速度写为有符号量 $U<0$。水平动量守恒给 $MU+mv_b=0$。相对出膛速率题设要求 $v_b-U=V$，代入 $v_b=U+V$，得到\n\\[\n(M+m)U+mV=0,\\qquad U=-\\frac{mV}{M+m}.\n\\]\n若直接给炮弹对地速率，则 $v_b=V$，于是 $U=-mV/M$。两题在同一坐标中采用不同速度条件，分母不同。$M\\gg m$ 时两结果接近；否则不能互换。\n\n",
+    "length": 218
+  },
+  {
+    "kind": "exercise",
+    "n": 9,
+    "title": "有限滑轮惯量的数值比例",
+    "stem": "\n等质量爬绳模型中，$I_p=mr^2$，\n爬绳者相对绳速为 $v$。求两猴绝对速度。\n",
+    "answer": "\\solution 设抓绳猴 $A$ 的向上速度为 $u$，绳不伸长且不打滑，另一侧绳段向下速率为 $u$。爬绳猴相对该绳段向上速率为 $v$，故 $v_A=u,v_B=v-u$、轮角速率 $\\omega_p=u/r$。关于轮轴取 $A$ 上升对应正方向，初始总角动量为零，两猴重力矩相消，\n\\[\nmr u-mr(v-u)+I_p\\frac ur=0.\n\\]\n代入 $I_p=mr^2$ 后 $mr(3u-v)=0$，所以\n$v_A=v/3,v_B=2v/3$。相加为 $v$，满足速度合成；若漏掉轮角动量，才会误得 $v_A=v_B=v/2$。\n\n",
+    "length": 275
+  },
+  {
+    "kind": "exercise",
+    "n": 10,
+    "title": "移动点角动量的守恒条件",
+    "stem": "\n系统外力对移动点 $A$ 合力矩为零。\n用绝对速度计算的 $\\vect L_A^{\\rm abs}$ 是否一定守恒？\n",
+    "answer": "\\solution 对绝对速度定义，移动点角动量满足\n$\\dot{\\vect L}_A^{\\rm abs}=\\vect\\tau_A^{\\rm ext}-\\vect v_A\\times\\vect P$。即使第一项为零，第二项也未必为零。因此还需 $\\vect v_A\\times\\vect P=0$ 才保证这一时刻导数为零；守恒要求该条件在整个区间成立。\n\n取 $A=C$ 时 $\\vect v_A=\\vect V=\\vect P/M$，叉积自动为零。若改用相对速度定义，修正项变为 $-M(\\vect R-\\vect r_A)\\times\\vect a_A$，需要重新核查。两种定义不能混用；正文自由质点与匀速移动点的反例明确展示了区别。\n\n",
+    "length": 321
+  },
+  {
+    "kind": "exercise",
+    "n": 11,
+    "title": "柯尼希定理中的交叉项",
+    "stem": "\n任取一个移动点 $A$，把 $\\vect v_i=\\vect v_A+\\widetilde{\\vect v}_i$，\n为何一般不能直接写 $T=Mv_A^2/2+\\widetilde T$？\n",
+    "answer": "\\solution 按 $\\vect v_i=\\vect v_A+\\widetilde{\\vect v}_i$ 展开，\n\\[\nT=\\frac12Mv_A^2+\\frac12\\sum_i m_i\\widetilde v_i^2\n+\\vect v_A\\cdot\\sum_i m_i\\widetilde{\\vect v}_i.\n\\]\n相对总动量为 $\\sum_i m_i\\widetilde{\\vect v}_i=\\vect P-M\\vect v_A$，所以交叉项为 $\\vect v_A\\cdot(\\vect P-M\\vect v_A)$。只有此项为零才能分解成前两项。质心选择因 $\\vect P=M\\vect V$ 对任何内部运动都保证为零；任意移动点可能只在特殊时刻偶然为零，不能当作普遍定理。\n\n",
+    "length": 350
+  },
+  {
+    "kind": "exercise",
+    "n": 12,
+    "title": "自由管球的两种质量极限",
+    "stem": "\n在自由旋转管球题中，考察 $M_t\\gg m$ 与 $M_t\\to0$ 的出管速率。\n",
+    "answer": "\\solution 从角动量守恒和动能守恒的出管结果出发，\n\\[\n\\omega_{\\rm out}=\\frac{4M_t+3m}{4(M_t+3m)}\\omega_0,\n\\quad v_r^2=\\frac{3(4M_t+3m)}{16(M_t+3m)}l^2\\omega_0^2,\n\\quad v_{\\rm out}^2=v_r^2+l^2\\omega_{\\rm out}^2.\n\\]\n令 $\\epsilon=m/M_t\\to0$，前两式分别趋于 $\\omega_0$ 和 $3l^2\\omega_0^2/4$，所以 $v_{\\rm out}^2\\to7l^2\\omega_0^2/4$。大惯量管近似保持角速率，球取得的能量相对管总储能很小。\n\n反之令 $M_t/m\\to0$，得 $\\omega_{\\rm out}\\to\\omega_0/4$、$v_r^2\\to3l^2\\omega_0^2/16$，故 $v_{\\rm out}^2\\to l^2\\omega_0^2/4$。这等于球最初在 $r=l/2$ 的速率平方。质量和惯量可忽略的管在此极限只改变球运动方向，不提供有限动能储备。\n\n",
+    "length": 495
+  },
+  {
+    "kind": "exercise",
+    "n": 13,
+    "title": "光滑接地双球碰地前的极限",
+    "stem": "\n静止释放的光滑双球模型中，求 $\\theta\\to\\pi/2$ 时\n下球速度、上球竖直速度和支持力。\n",
+    "answer": "\\solution 由接地支能量式\n$\\dot\\theta^2=4g(\\cos\\alpha-\\cos\\theta)/[l(1+\\sin^2\\theta)]$，令 $\\theta\\to\\pi/2$ 得 $\\dot\\theta^2\\to2g\\cos\\alpha/l$，取倒下支 $\\dot\\theta>0$。下球水平速度 $-(l/2)\\cos\\theta\\dot\\theta\\to0$，上球竖直速度 $-l\\sin\\theta\\dot\\theta\\to-\\sqrt{2gl\\cos\\alpha}$。\n\n支持力公式中 $\\cos\\theta\\to0$，分子趋于4、分母趋于4，故 $N\\to mg$。这些值都是首次碰撞前的连续阶段极限；碰撞期间存在法向冲量，碰后速度需另外更新，不能用有限支持力代替冲量。\n\n",
+    "length": 352
+  },
+  {
+    "kind": "exercise",
+    "n": 14,
+    "title": "桌边链条的一般初值",
+    "stem": "\n均匀链条在理想光滑桌沿滑落，初始悬长 $x_0$、\n初始共同速率 $v_0$。求全链离桌时速率，并分析 $x_0=0,v_0=0$。\n",
+    "answer": "\\solution 这里使用保持路径的理想光滑导向模型。全链质量为 $\\sigma l$，动能为 $\\sigma lv^2/2$，悬垂段势能为 $-\\sigma gx^2/2$。初、末能量相等，\n\\[\n\\frac12\\sigma lv^2-\\frac12\\sigma gx^2\n=\\frac12\\sigma lv_0^2-\\frac12\\sigma gx_0^2,\n\\quad v^2=v_0^2+\\frac gl(x^2-x_0^2).\n\\]\n若实际到达 $x=l$，则 $v_{\\text{离}}^2=v_0^2+(g/l)(l^2-x_0^2)$。从 $\\ddot x=(g/l)x$ 的初值解\n$x=x_0\\cosh\\omega t+(v_0/\\omega)\\sinh\\omega t$、$\\omega=\\sqrt{g/l}$ 可检验可达性。精确 $x_0=v_0=0$ 时解恒为0，不能从能量差推断它会自行开始运动；$x_0>0$ 或 $v_0>0$ 则有进入悬垂阶段的驱动。若没有导槽而仅有单侧桌角，还需先检查转向区的接触条件。\n\n",
+    "length": 472
+  },
+  {
+    "kind": "exercise",
+    "n": 15,
+    "title": "自由弹簧两体的稳定圆周相对运动",
+    "stem": "\n两球折合质量为 $\\mu$，中心弹簧势能\n$U=k(r-a)^2/2$、$a>0$。给定非零相对角动量 $L$，\n求圆轨道半径条件并判断稳定性。\n",
+    "answer": "\\solution 有效势 $W=L^2/(2\\mu r^2)+k(r-a)^2/2$。圆轨道满足\n$W'=-L^2/(\\mu r^3)+k(r-a)=0$，故\n\\[\nk(r_0-a)r_0^3=L^2/\\mu,\n\\qquad r_0>a.\n\\]\n左端在 $r>a$ 从0严格增至无穷，因为导数 $k r^2(4r-3a)>0$，所以每个非零 $L$ 恰有一个圆轨道半径。$W''=3L^2/(\\mu r^4)+k>0$，因此径向稳定。频率为\n$\\omega_r^2=k[4-3a/r_0]/\\mu$，角频率为 $\\Omega_0^2=k(r_0-a)/(\\mu r_0)$。原长处弹簧力为零，不能支持非零角动量的圆周运动。\n\n",
+    "length": 314
+  },
+  {
+    "kind": "exercise",
+    "n": 16,
+    "title": "双星质量翻倍的周期变化",
+    "stem": "\n两星质量同时翻倍，间距保持 $L$，圆轨道周期如何变化？\n若总质量不变而间距变为 $2L$，周期如何变化？\n",
+    "answer": "\\solution 圆形双星以两星间距 $L$ 为相对圆轨道半径，其相对方程给\n$\\Omega^2=G(M_1+M_2)/L^3$，所以\n$\\mathcal T=2\\pi\\sqrt{L^3/[G(M_1+M_2)]}$。两质量同时翻倍，间距不变，周期比为 $1/\\sqrt2$。总质量不变而间距变为 $2L$，周期比为 $2^{3/2}=2\\sqrt2$。\n\n这是两组圆轨道参数的比较。若真实双星瞬间改变质量而速度不作相应调整，其后未必仍为圆轨道，不能把该比较公式当作质量突变过程的完整解。\n\n",
+    "length": 247
+  },
+  {
+    "kind": "exercise",
+    "n": 17,
+    "title": "各向异性线性外场的相对角动量",
+    "stem": "\n无内力的两质点处于共同外场\n$\\vect F_i=m_iA\\vect r_i$，\n$A=\\operatorname{diag}(-\\omega_x^2,-\\omega_y^2)$。\n求相对角动量变化率，何时对任意构形守恒？\n",
+    "answer": "\\solution 共同线性场使相对方程为 $\\ddot{\\vect r}=A\\vect r$。记 $\\vect r=(x,y)$，有 $\\ddot x=-\\omega_x^2x,\\ddot y=-\\omega_y^2y$。相对角动量 $L_z=\\mu(x\\dot y-y\\dot x)$，求导，两个速度乘积相消，\n\\[\n\\dot L_z=\\mu(x\\ddot y-y\\ddot x)\n=\\mu(\\omega_x^2-\\omega_y^2)xy.\n\\]\n若对任意构形都守恒，需要矩阵各向同性，即 $\\omega_x^2=\\omega_y^2$。个别运动如始终 $x=0$ 可有零变化率，但并不证明对所有初态守恒。坐标方程独立求解与角动量守恒是两种不同条件。\n\n",
+    "length": 330
+  },
+  {
+    "kind": "exercise",
+    "n": 18,
+    "title": "重入射球的最大角与能量转移",
+    "stem": "\n入射球质量为静止靶质量的3倍，弹性散射。\n求实验室入射球最大偏转角与靶最多获得的入射能量比例。\n",
+    "answer": "\\solution 令质量比 $\\lambda=3$。从 $\\dd\\theta/\\dd\\Theta=(1+\\lambda\\cos\\Theta)/D^2$，最大实验室角发生在 $\\cos\\Theta=-1/3$，代入角度关系得\n$\\sin\\theta_{\\max}=1/3$，所以 $\\theta_{\\max}\\approx19.47122^\\circ$。\n\n靶球速度满足 $v_2^2=2m_1^2u^2(1-\\cos\\Theta)/M^2$，靶动能与初始入射动能的比为\n\\[\n\\frac{T_2}{T_{1,\\text{入}}}=\\frac{2m_1m_2}{M^2}(1-\\cos\\Theta)\n=\\frac{4\\lambda}{(1+\\lambda)^2}\\sin^2(\\Theta/2).\n\\]\n在 $\\Theta=\\pi$ 最大，等于 $12/16=3/4$。最大实验室角对应另一个质心角，二者不是同一次散射事件。\n\n",
+    "length": 414
+  },
+  {
+    "kind": "exercise",
+    "n": 19,
+    "title": "等质量各向同性散射的实验室概率",
+    "stem": "\n质心系弹性散射各向同性，入射与靶等质量，\n求实验室入射球落在 $0\\le\\theta\\le\\theta_0$ 中的概率，\n$0\\le\\theta_0\\le\\pi/2$。\n",
+    "answer": "\\solution 质心系每立体角概率密度为 $1/(4\\pi)$。等质量有 $\\Theta=2\\theta$、$\\dd\\Omega_C/\\dd\\Omega_L=4\\cos\\theta$，故实验室每立体角密度为 $f_L=\\cos\\theta/\\pi$，范围 $0\\le\\theta<\\pi/2$。积分整个方位角，\n\\[\n\\Pr(\\theta\\le\\theta_0)=\\int_0^{\\theta_0}\\frac{\\cos\\theta}\\pi\n2\\pi\\sin\\theta\\dd\\theta\n=[\\sin^2\\theta]_0^{\\theta_0}=\\sin^2\\theta_0.\n\\]\n$\\theta_0=\\pi/4$ 时为 $1/2$，$\\theta_0\\to\\pi/2$ 时为1，完成归一化。端点完全停止的入射粒子没有方向角，在连续角分布中属于零测度极限。\n\n",
+    "length": 383
+  },
+  {
+    "kind": "exercise",
+    "n": 20,
+    "title": "完全粘连碰撞的最大动能损失",
+    "stem": "\n质量 $m_1$ 以速率 $u$ 撞静止质量 $m_2$ 并粘连，碰撞期间外冲量可忽略。\n求共同速度及损失占入射动能的比例。\n",
+    "answer": "\\solution 动量守恒 $(m_1+m_2)V=m_1u$，故 $V=m_1u/M$。初始动能 $T_i=m_1u^2/2$，末动能 $T_f=MV^2/2=m_1^2u^2/(2M)$。差值\n\\[\n\\Delta T_{\\rm loss}=\\frac12m_1u^2\\left(1-\\frac{m_1}{M}\\right)\n=\\frac12\\frac{m_1m_2}{M}u^2=\\frac12\\mu u^2.\n\\]\n损失比例为 $m_2/M$。完全粘连消除了初态质心系内部动能，质心平动能仍保留。等质量时损失一半，重靶极限损失比例趋近1；能量转为形变、热等，不是总能量消失。\n\n",
+    "length": 293
+  },
+  {
+    "kind": "exercise",
+    "n": 21,
+    "title": "恒流率竖直火箭的燃烧终态",
+    "stem": "\n$m_0=2m_f$，燃烧持续 $t_b$，喷气相对速率为 $c$，\n初始向上速度为0。求熄火速度，并给出初瞬自由飞行加速度为正的条件。\n",
+    "answer": "\\solution 燃烧流率 $q=(m_0-m_f)/t_b=m_f/t_b$，初始质量为 $2m_f$。自由飞行式\n$v=c\\ln[m_0/(m_0-qt)]-gt$ 在熄火时给 $v_b=c\\ln2-gt_b$。初瞬加速度\n$a_0=cq/m_0-g=c/(2t_b)-g$，故要求 $c>2gt_b$ 才从初瞬严格向上加速。\n\n仅从自由飞行终态公式要求 $v_b>0$ 得 $c>gt_b/\\ln2$，这是另一个不等式。若初始在发射台上而 $c\\le2gt_b$，不能套用完整燃烧区间自由飞行解；应先使用支持力，待满足起飞条件后重新设定初态。正文的分段火箭例题给出了该情况的完整处理。\n\n",
+    "length": 298
+  },
+  {
+    "kind": "exercise",
+    "n": 22,
+    "title": "雨滴无增长极限的正确展开",
+    "stem": "\n恒质量增长率雨滴的位移含 $1/\\lambda$、$1/\\lambda^2$ 项，\n为何 $\\lambda\\to0$ 不发散？\n",
+    "answer": "\\solution 从精确距离\n$s=gt^2/4+Mgt/(2\\lambda)-M^2g\\ln(1+\\lambda t/M)/(2\\lambda^2)$ 出发，令 $\\epsilon=\\lambda t/M$。展开\n$\\ln(1+\\epsilon)=\\epsilon-\\epsilon^2/2+\\epsilon^3/3-\\epsilon^4/4+O(\\epsilon^5)$，代入对数项，\n\\[\n-\\frac{M^2g}{2\\lambda^2}\\ln(1+\\epsilon)\n=-\\frac{Mgt}{2\\lambda}+\\frac{gt^2}{4}\n-\\frac{\\lambda gt^3}{6M}+\\frac{\\lambda^2gt^4}{8M^2}+\\cdots.\n\\]\n一次项抵消显式 $1/\\lambda$ 项，两项 $gt^2/4$ 相加，故\n$s=gt^2/2-\\lambda gt^3/(6M)+O(\\lambda^2)$。在固定有限 $t$ 下取 $\\lambda\\to0$ 恢复自由落体；若 $t$ 随 $1/\\lambda$ 增长，不能使用同一小参数展开。\n\n",
+    "length": 492
+  },
+  {
+    "kind": "exercise",
+    "n": 23,
+    "title": "有限时间位力项的量纲",
+    "stem": "\n检查 $D=\\sum\\vect r_i\\cdot\\vect p_i$、\n$[D(\\tau)-D(0)]/\\tau$、$W=\\sum\\vect r_i\\cdot\\vect F_i$ 的量纲，\n并解释为何 $W$ 不是力的合量。\n",
+    "answer": "\\solution 位置量纲为长度，动量为质量乘速度，所以\n$[D]=\\mathrm{kg\\,m^2/s}$，它与角动量具有相同量纲，但一个是内积、一个是叉积，物理含义不同。再除以时间，$[D/\\tau]=\\mathrm{kg\\,m^2/s^2}$，与动能相同。$W$ 由位置乘力组成，故也为能量量纲。\n\n以两球相互吸引为例，合内力为零，但按对计算\n$W_{\\rm int}=(\\vect r_1-\\vect r_2)\\cdot\\vect F_{12}=-Gm_1m_2/r=U<0$。所以 $W$ 是各力的位积和，并非力矢量的总和；合力为零不能推出 $W=0$。\n\n",
+    "length": 284
+  },
+  {
+    "kind": "exercise",
+    "n": 24,
+    "title": "含两种齐次势的位力关系",
+    "stem": "\n束缚系统的势能为 $U=U_{-1}+U_2+C$，\n两部分分别为 $-1$ 次与2次齐次函数。求平均动能关系。\n",
+    "answer": "\\solution 对齐次部分分别用 Euler 恒等式，\n$\\sum_i\\vect r_i\\cdot\\nabla_iU_{-1}=-U_{-1}$，\n$\\sum_i\\vect r_i\\cdot\\nabla_iU_2=2U_2$，而常数 $C$ 的梯度为零。于是 $W=U_{-1}-2U_2$。在平均边界项消失时，$2\\overline T+\\overline W=0$，即\n\\[\n2\\overline T=-\\overline U_{-1}+2\\overline U_2.\n\\]\n两种齐次势的和一般不是同一次数的齐次函数，不能用一个指数乘总势能。若只作有限时间平均，正确式还要保留\n$[D(\\tau)-D(0)]/\\tau$；改变零点 $C$ 不改变力、运动和这条位力关系。\n\n",
+    "length": 341
+  }
+]

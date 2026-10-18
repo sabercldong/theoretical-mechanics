@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=.92]
+\draw[ink](0,0)circle(2.1);\draw[guide](-2.6,0)--(2.6,0);\draw[->,thick](0,-2.5)--(0,2.8)node[above]{地轴};
+\coordinate(P)at(1.485,1.485);\draw[ink](0,0)--(P);\fill(P)circle(2pt);
+\draw[force](P)--++(.95,.95)node[right]{$\vect e_U$};\draw[force](P)--++(-.85,.85)node[above]{$\vect e_N$};
+\draw[->](.8,0)arc(0:45:.8);\node at(1.04,.42){$\lambda$};
+\begin{scope}[shift={(6.8,.4)}]
+\draw[force](0,0)--(0,2.1)node[above]{$\Om_E$};\draw[guide](0,2.1)--(1.05,1.05)--(0,0);
+\draw[force](0,0)--(-1.05,1.05)node[left]{$\Omega_E\cos\lambda\,\vect e_N$};
+\draw[force](-1.05,1.05)--(0,2.1)node[midway,left=10pt]{$\Omega_E\sin\lambda\,\vect e_U$};
+\node[align=left]at(.1,-1.0){东向垂直本图向里\\东、北、天构成右手基};
+\end{scope}
+\end{tikzpicture}

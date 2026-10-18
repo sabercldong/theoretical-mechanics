@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw(0,0)circle(1.25);\draw[thick](-1.8,-1.25)--(2.2,-1.25);\fill(0,-1.25)circle(2pt)node[below]{$P$};\fill(0,0)circle(2pt)node[below left]{$C$};\draw[->](0,.4)--(1.8,.4)node[right]{$v$};\node at(-1.2,1.75){$R$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect v_P=0$\\[6pt]$\Downarrow$\\[6pt]$\vect a_P=-\omega^2\vect r_{CP}=(v^2/R)\vect j$};
+\end{tikzpicture}

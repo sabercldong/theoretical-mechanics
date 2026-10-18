@@ -1,0 +1,315 @@
+{
+  "status": "passed_with_source_corrections_already_in_manuscript",
+  "decks": [
+    "c4-1"
+  ],
+  "source_ppt_sha256": "188d883036e58657d36cf074c79bb8a6fffc72bf2ba80545eae5e420613afcf7",
+  "source_pdf_sha256": "8f1a5cf967da3aed79922e536200f21569e46b5bb16da17705c6a864cf19c35c",
+  "manuscript_baseline_sha256": "497bcb73cf31109f0b4ce341cdc3576bb658e3f5dff63ca0eb1817f1d0cff3c5",
+  "visual_coverage": "已逐张打开30张1.5倍源页PNG及5张6页总览；未仅依赖旧审核或XML文字。关键源页18、19点号存在。",
+  "pages": [
+    {
+      "deck": "c4-1",
+      "page": 1,
+      "topic": "第四章目录与知识结构",
+      "lecture_location": "4.1",
+      "notes": "目录含变换、非惯性动力学、地球自转、傅科摆；本文件集中于运动学变换，后续主题由c4-2支持。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 2,
+      "topic": "空间轴、本体轴与任意矢量运输定理",
+      "lecture_location": "4.1.1",
+      "notes": "实际检查两处O的歧义，原图保留并在图题明确三轴交点为共同原点。正文两种导数清楚区分。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 3,
+      "topic": "任意矢量分量与基矢两类变化",
+      "lecture_location": "4.1.1",
+      "notes": "全页是图片文字，正文已按三分量展开保留两种变化；不是仅依赖文本抽取。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 4,
+      "topic": "三项乘积的六项求导",
+      "lecture_location": "4.1.1",
+      "notes": "基稿用两组求和明确保留三个分量导数项及三个基矢导数项。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 5,
+      "topic": "相对导数的定义",
+      "lecture_location": "4.1.1",
+      "notes": "基矢固定是相对求导约定，不是惯性系基矢绝对静止；基稿已有说明。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 6,
+      "topic": "单位基矢的叉乘导数",
+      "lecture_location": "4.1.2",
+      "notes": "基矢长度不变且以框架角速度转动，导数为Omega叉乘基矢；图中无额外独特图示。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 7,
+      "topic": "另两基矢导数并代回",
+      "lecture_location": "4.1.3",
+      "notes": "三条基矢导数统一由dot e_i=Omega叉e_i表达，逐项代回运输公式。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 8,
+      "topic": "叉乘分配律与运输定理合并",
+      "lecture_location": "4.1.3",
+      "notes": "分量项与基矢项合并，基稿保留两行推导及任意空间矢量适用条件。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 9,
+      "topic": "运输定理的物理解释",
+      "lecture_location": "4.1.3",
+      "notes": "绝对变化由相对变化和基底转动共同决定，基稿另有惯性空间固定矢量核验。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 10,
+      "topic": "共固定原点的速度变换",
+      "lecture_location": "4.2.1",
+      "notes": "速度变换必须保留共同固定原点条件；点号与矢量符号在图像中均存在。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 11,
+      "topic": "绝对、相对、牵连速度及固连点特例",
+      "lecture_location": "4.2.1",
+      "notes": "牵连速度依位置而变；固连点v′=0；平动原点推广另在4.2.4。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 12,
+      "topic": "匀速滑动的旋转直管",
+      "lecture_location": "4.3.1",
+      "notes": "r=R/3与r=R两指定位置均有答案；独立隔离两组图形恢复质点标签，排除邻文。源文极坐标静轴措辞在图题澄清为瞬时对齐。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 13,
+      "topic": "绝对速率恒定的旋转直线",
+      "lecture_location": "4.3.2",
+      "notes": "保留正根积分、首次向外区间、rmax、返回与有符号坐标续接条件，未误写为恒速度向量。x/y与x′/y′图保留。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 14,
+      "topic": "离心调速器的反馈与摩擦",
+      "lecture_location": "4.5.6",
+      "notes": "机械联动原图保留；原课件仅给定性反馈，基稿未虚构完整系统稳定性或频率结论。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 15,
+      "topic": "调速器小球相对与绝对速度",
+      "lecture_location": "4.3.3",
+      "notes": "源页两式误把竖直基矢k写j；基稿相对速度含e_z而牵连速度沿e_theta，速率由正交分量平方和得到。单独隔离几何组恢复被邻式遮挡的B点和杆端。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 16,
+      "topic": "相对速度的绝对导数",
+      "lecture_location": "4.2.2",
+      "notes": "第一份Omega叉v′来自相对速度基矢变化；正文明确a′是动系导数。图与第18页重复，择18页。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 17,
+      "topic": "牵连速度求导与双叉积恒等式",
+      "lecture_location": "4.2.2",
+      "notes": "乘积求导的第二份Omega叉v′与第一份相加形成系数2；三重积式保留。图择第18页。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 18,
+      "topic": "三项加速度分类与向轴分量",
+      "lecture_location": "4.2.3",
+      "notes": "实际放大确认omega上方点号存在，不是漏Euler项；原R对应正文R_perp。取本页完整图。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 19,
+      "topic": "固连点加速度与角速度参照系",
+      "lecture_location": "4.2.6",
+      "notes": "实际放大确认角速度点号存在；固连点v′=a′=0，各动系角速度必须对应所选参考框架。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 20,
+      "topic": "平面转动的简化",
+      "lecture_location": "4.2.5",
+      "notes": "位矢垂轴时R_perp=r；基稿保留非匀速平面项及复数核验。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 21,
+      "topic": "顺时针同心圆槽题干",
+      "lecture_location": "4.3.5",
+      "notes": "角速率字形缺失仅在题干，恢复为omega；相对速度同为顺时针。图择22页完整状态。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 22,
+      "topic": "圆槽速度合成及向心加速度",
+      "lecture_location": "4.3.5",
+      "notes": "中间分式平方位置误排，正文改为完整速度和的平方；图中ae/ar均向内，科氏项在正文另算。同向/反向用有符号角速率统一。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 23,
+      "topic": "恒角速度向量与地球自转",
+      "lecture_location": "4.2.3、4.7.1",
+      "notes": "恒矢量不是仅恒模；保留轴距几何和地球照片。向轴投影图R不是地球半径。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 24,
+      "topic": "汽车沿经线匀速南行的速度",
+      "lecture_location": "4.3.7",
+      "notes": "完整球面题设保留，纬度随时变化；定系采用地心原点、星向固定轴。二维子午面与三维地球原图分别隔离，所有标签完整。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 25,
+      "topic": "南行汽车三项加速度与模长",
+      "lecture_location": "4.3.7",
+      "notes": "源模长中间式平方内误用差，最终展开正确；基稿使用和且明确科氏变换项向东、科氏惯性力向西。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 26,
+      "topic": "数学框架不必固结于材料",
+      "lecture_location": "4.3.6",
+      "notes": "轮轴、倾斜盘、圆锥三幅均保留。框架角速度与材料总角速度区分，图中alpha/h只按几何说明，不虚构额外题设。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 27,
+      "topic": "平动中间系加旋转的通用变换",
+      "lecture_location": "4.2.4",
+      "notes": "源第二步a应为a双prime，末行r应为rprime；基稿中间系清楚区分，旋转项使用相对动原点位矢。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 28,
+      "topic": "速度与加速度变换小结",
+      "lecture_location": "4.11.7",
+      "notes": "全套式及平面简化已覆盖；首选双叉积式避开Omega=0时单位轴定义。重复几何图采用18页。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 29,
+      "topic": "教材作业编号4.1、4.2、4.3",
+      "lecture_location": "4.12",
+      "notes": "仅作业编号没有题干，已建议父代理于附录列出来源编号，不能伪称恢复具体原习题。",
+      "visual_status": "checked"
+    },
+    {
+      "deck": "c4-1",
+      "page": 30,
+      "topic": "认识规律与课程学习方法",
+      "lecture_location": "4.11.5",
+      "notes": "无新增物理公式；听课、复习、做题、思考总结的学习路径已建议父代理在附录保留，不无依据给未具名引语添加出处。",
+      "visual_status": "checked"
+    }
+  ],
+  "source_issues": [
+    {
+      "page": 15,
+      "type": "source_formula_error",
+      "issue": "相对速度及绝对速度的竖直分量误写sin(theta) j",
+      "correct": "sin(theta) k；正文用e_z",
+      "manuscript_status": "correct"
+    },
+    {
+      "page": 22,
+      "type": "source_formula_error",
+      "issue": "(R omega+v_r^2)/R平方范围错误",
+      "correct": "(R omega+v_r)^2/R",
+      "manuscript_status": "correct"
+    },
+    {
+      "page": 25,
+      "type": "source_formula_error",
+      "issue": "模长中间项写(-v_r^2/R+R omega^2)^2 cos^2(phi)",
+      "correct": "(v_r^2/R+R omega^2)^2 cos^2(phi)",
+      "manuscript_status": "correct"
+    },
+    {
+      "page": 27,
+      "type": "source_formula_error",
+      "issue": "S″→S′加速度式左端误写a",
+      "correct": "a″",
+      "manuscript_status": "correct"
+    },
+    {
+      "page": 27,
+      "type": "source_formula_error",
+      "issue": "末行双叉积展开r漏prime",
+      "correct": "所有旋转项使用相对动系原点的r′",
+      "manuscript_status": "correct"
+    },
+    {
+      "page": 21,
+      "type": "source_glyph_error",
+      "issue": "题干omega缺字显示方框",
+      "correct": "omega",
+      "manuscript_status": "correct"
+    }
+  ],
+  "original_figures": 14,
+  "duplicate_policy": "向轴图16/17/18/28择18；圆槽21/22择22；保留第26页全部三种框架；第24页二维和三维分别保留。",
+  "boundary_notes": [
+    "正根径向方程仅首次向外分支，后续不能强加唯一性。",
+    "恒角速度是恒矢量，非仅恒模。",
+    "地球科氏变换项与科氏惯性力符号相反。",
+    "原框架图两处O标记用图题澄清；不改原图。"
+  ],
+  "source_preparation_reports": [
+    "原图核查-a/母版背景处理核验.json",
+    "原图核查-a/图形对象隔离核验.json"
+  ],
+  "remaining_content_suggestions": [],
+  "content_completion": "父代理已把第29页作业编号与第30页学习路径加入附录。",
+  "figure_review_status": "14幅均逐张目视；修复p012质点标签、p015 B点邻式遮挡、p024两图独立隔离，复看通过。",
+  "included_preparation_reports": [
+    "资料核查/原图处理核验-a-母版背景处理核验.json",
+    "资料核查/原图处理核验-a-图形对象隔离核验.json"
+  ]
+}

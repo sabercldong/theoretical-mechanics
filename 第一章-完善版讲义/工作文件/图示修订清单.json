@@ -1,0 +1,130 @@
+[
+  {
+    "key": "c1-diagram-03",
+    "old_index": 3,
+    "caption": "球面摆在某一瞬时的约束与受力；$z$ 轴竖直向下，$\\vect e_\\varphi$ 为水平纬圈切线在纸面的投影。虚线纬圈不代表完整运动轨迹。",
+    "anchor": "即可得到本节球坐标速度、加速度。取 $r_\\perp=r\\sin\\theta$，方位分量也可写成\n\\[\na_\\varphi=\\frac1{r_\\perp}\\frac\\dd{\\dd t}(r_\\perp^2\\dot\\varphi),\n\\qquad\na_\\theta=\\frac1r\\frac\\dd{\\dd t}(r^2\\dot\\theta)-r\\dot\\varphi^2\\sin\\theta\\cos\\theta.\n\\]\n这两个形式既可用于运动学计算，也为绕轴角动量守恒的推导提供方便。\n\n\\example{球面摆：空间运动与初始条件}\\label{ex:sphericalpend}\n不可伸长轻绳长度为 $l$，小球质量为 $m$。本例把 $z$ 正向取为\\emph{竖直向下}，$\\theta$ 从该方向量起，重力为 $mg\\vect e_z$。初始 $\\theta_0=\\pi/3$，速度沿方位方向，大小为 $v_0$。\n\\solution $r=l$ 恒定，故动力学分量为\n\\begin{align*}\nmg\\cos\\theta-T&=-ml(\\dot\\theta^2+\\dot\\varphi^2\\sin^2\\theta),\\\\\n-\\frac gl\\sin\\theta&=\\ddot\\theta-\\dot\\varphi^2\\sin\\theta\\cos\\theta,\\\\\n\\frac\\dd{\\dd t}(l^2\\sin^2\\theta\\dot\\varphi)&=0.\n\\end{align*}\n记 $C=l^2\\sin^2\\theta\\dot\\varphi=l\\sin\\theta_0v_0$，则 $\\dot\\varphi=C/(l^2\\sin^2\\theta)$。机械能守恒为\n\\[\n\\frac12ml^2\\dot\\theta^2+\\frac{mC^2}{2l^2\\sin^2\\theta}-mgl\\cos\\theta\n=\\frac12mv_0^2-mgl\\cos\\theta_0.\n\\]\n消去初始能量，得到\n\\begin{equation}\\label{eq:sphericalpend}\n\\boxed{\\dot\\theta^2=\\frac{2g}{l}(\\cos\\theta-\\tfrac12)\n+\\frac{v_0^2}{l^2}\\left(1-\\frac{3}{4\\sin^2\\theta}\\right)\\equiv f(\\theta)^2.}\n\\end{equation}\n在 $\\theta(t)$ 单调的一段，选定实际运动对应的符号 $\\dot\\theta=\\pm f(\\theta)$，有\n\\[\nt-t_0=\\int_{\\theta_0}^{\\theta}\\frac{\\dd\\xi}{\\pm f(\\xi)},\\qquad\n\\varphi-\\varphi_0=\\frac C{l^2}\\int_{\\theta_0}^{\\theta}\\frac{\\dd\\xi}{\\sin^2\\xi\\,[\\pm f(\\xi)]}.\n\\]\n这两个积分分别恢复时间规律与球面上的轨迹；在转向点处应换支。张力为 $T=m[g\\cos\\theta+l\\dot\\theta^2+l\\dot\\varphi^2\\sin^2\\theta]$，必须在轻绳保持绷紧的区间使用。\n\\notice{降阶时使用 $\\ddot\\theta=\\tfrac12\\dd(\\dot\\theta^2)/\\dd\\theta$，因此应求解 $\\dot\\theta^2$。所得关系可由能量守恒和初始条件独立核验，右端各项均具有角速度平方的量纲。}",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "checks": [
+      "T 与 OP 反向平行；mg 垂直向下。",
+      "L_z=ml^2 sin^2(theta) dot(phi)=mC 与正文一致。",
+      "theta0=pi/3 代入角速度平方积分得到 dot(theta)(0)=0，张力T=m[g cos(theta)+l dot(theta)^2+l dot(phi)^2 sin(theta)^2]与受力图一致。"
+    ],
+    "revision_notes": [
+      "原图 e_phi 画成纸面竖直线，和真实竖直方向容易混淆；须在图注说明是水平圆切线的投影，且纬圈只是某一瞬时 theta 的几何圆，不是一般运动轨迹。",
+      "正文的 z 正向向下，图中应标 z 以免与前面的常规球坐标 z 向上混同。theta0=pi/3 是初态，图不是该初态的定量投影，不宜把绘图角度当作 theta0。"
+    ]
+  },
+  {
+    "key": "c1-diagram-14",
+    "old_index": 14,
+    "caption": "相同初始状态 $x(0)=x_0>0,\\dot x(0)=0$ 下的欠阻尼、临界阻尼与过阻尼响应。",
+    "anchor": "dot v=(\\dd v/\\dd x)\\dot x$ 在 $x(t)$ 单调的区间内成立。式\\eqref{eq:positionforce} 确定的是 $v^2(x)$，而不是带方向的 $v(x)$。若初始运动向右，则先选正平方根；遇到转向点后改选负平方根。\n\n定义 $Q(x)=v_0^2+(2/m)\\int_{x_0}^xF(\\xi)\\,\\dd\\xi$，则\n\\[\nt-t_0=\\int_{x_0}^{x(t)}\\frac{\\dd\\xi}{\\pm\\sqrt{Q(\\xi)}}.\n\\]\n允许区域为 $Q(x)\\geq0$。根号内出现负值并不是“虚速度”，而是当前初始条件不能到达该位置。\n\n\\example{线性恢复力：从速度关系恢复完整运动}\n质点受力 $F=-kx$，在 $x(0)=A>0$ 处静止释放。令 $\\omega_0=\\sqrt{k/m}$。\n\\solution 积分得到 $v^2=\\omega_0^2(A^2-x^2)$。初始加速度向左，因此第一次经过平衡点之前应取\n\\[\n\\dot x=-\\omega_0\\sqrt{A^2-x^2}.\n\\]\n从 $A$ 积分到 $x$，有 $\\arccos(x/A)=\\omega_0t$，所以 $x=A\\cos\\omega_0t$。当 $x=-A$ 时速度为零，此后沿正方向返回。微分方程直接给出完整周期解；分离积分法则清楚呈现允许区间和转向点，但必须处理解支。\n\n\n\\subsection{线性方程：简谐运动与阻尼运动}\\label{topic:linear}\n对于\n\\[\n\\ddot x+2\\gamma\\dot x+\\omega_0^2x=0,\n\\]\n令 $x\\propto\\mathrm e^{\\lambda t}$，得到 $\\lambda^2+2\\gamma\\lambda+\\omega_0^2=0$。当 $\\gamma\\geq0$ 时，\n\\[\nx(t)=\\begin{cases}\n\\mathrm e^{-\\gamma t}(A\\cos\\omega_dt+B\\sin\\omega_dt),&\\gamma<\\omega_0,\\\\\n(A+Bt)\\mathrm e^{-\\gamma t},&\\gamma=\\omega_0,\\\\\nA\\mathrm e^{\\lambda_+t}+B\\mathrm e^{\\lambda_-t},&\\gamma>\\omega_0,\n\\end{cases}\n\\]\n其中 $\\omega_d=\\sqrt{\\omega_0^2-\\gamma^2}$，$\\lambda_\\pm=-\\gamma\\pm\\sqrt{\\gamma^2-\\omega_0^2}$。三种情况分别对应欠阻尼、临界阻尼和过阻尼。\n\n\n\\subsubsection*{由初始状态确定阻尼解}\n对欠阻尼情形，给定 $x(0)=x_0,\\ \\dot x(0)=v_0$，有\n\\[\nA=x_0,\\qquad B=\\frac{v_0+\\gamma x_0}{\\omega_d}.\n\\]\n对临界阻尼，$A=x_0,\\ B=v_0+\\gamma x_0$。对过阻尼，两系数满足 $A+B=x_0$、$\\lambda_+A+\\lambda_-B=v_0$，故\n\\[\nA=\\frac{v_0-\\lambda_-x_0}{\\lambda_+-\\lambda_-},\\qquad\nB=\\frac{\\lambda_+x_0-v_0}{\\lambda_+-\\lambda_-}.\n\\]\n在所有情形中，系数由两项初始条件确定，不能只凭“初始位置”就把正弦项或第二个指数项删去。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "checks": [
+      "gamma/omega0=0.25: omega_d/omega0=sqrt(15)/4=0.9682458366，正弦系数1/sqrt(15)=0.2581988897。",
+      "gamma/omega0=1: (1+tau)e^-tau, tau=omega0t。",
+      "gamma/omega0=1.5: lambda_+=(-3+sqrt5)/2=-0.3819660113, lambda_-=(-3-sqrt5)/2=-2.6180339887；系数1.1708203932与-0.1708203932正确。"
+    ],
+    "revision_notes": [
+      "图中 x/x0 隐含 x0 不为0，建议图注明确 x0>0。",
+      "建议增加若干横轴刻度和 x/x0=1、0 的标记，读图更明确；无需改变数学表达式。"
+    ]
+  },
+  {
+    "key": "c1-diagram-15",
+    "old_index": 15,
+    "caption": "正交匀强电磁场中的回旋与漂移。图取 $\\omega_c=qB/m>0$、$v_d=E/B>0$、$V=2v_d$；箭头给出粒子的行进方向。",
+    "anchor": "$A$ 可对角化，不足以保证 $B$ 也被同时消去耦合。\n\n对一般 $M\\ddot{\\vect q}+C\\dot{\\vect q}+K\\vect q=0$，设 $\\vect q=\\vect u e^{\\lambda t}$，得到二次特征值问题\n\\[\n(\\lambda^2M+\\lambda C+K)\\vect u=0.\n\\]\n或者把 $\\vect z=(\\vect q,\\dot{\\vect q})$ 化为一阶系统，求其 $2n$ 阶矩阵的特征值。重根时还需检查特征向量是否齐全；若不齐全，解包含 $t e^{\\lambda t}$ 等项。\n\n\\example{两个方向的线性耦合如何化为独立模态}\\label{ex:coupledmode}\n质量 $m$ 的二维质点满足\n\\[\nm\\ddot x=-2kx+ky,\\qquad m\\ddot y=kx-2ky.\n\\]\n取 $\\eta_1=(x+y)/\\sqrt2$、$\\eta_2=(x-y)/\\sqrt2$。相加、相减后\n\\[\n\\ddot\\eta_1+\\frac km\\eta_1=0,\\qquad\n\\ddot\\eta_2+\\frac{3k}{m}\\eta_2=0.\n\\]\n分别用初始 $\\eta_i(0),\\dot\\eta_i(0)$ 写简谐解，再用 $x=(\\eta_1+\\eta_2)/\\sqrt2$、$y=(\\eta_1-\\eta_2)/\\sqrt2$ 恢复原坐标。这展示了模态分离的实际步骤。\n\n\n\\example{正交匀强电磁场中的带电粒子}\\label{ex:crossedfields}\n取 $\\vect E=E\\vect e_y$、$\\vect B=B\\vect e_z$，电荷为 $q$，质量为 $m$，初始位置为原点，初速为 $V\\vect e_x$。设 $B\\neq0$、$q\\neq0$，$q$ 为带符号的电荷，以下公式同时适用于正、负电荷。\n\\solution 洛伦兹力给出\n\\[\nm\\ddot x=qB\\dot y,\\quad m\\ddot y=qE-qB\\dot x,\\quad m\\ddot z=0.\n\\]\n令带符号的回旋频率 $\\omega_c=qB/m$。第一式定积分得 $\\dot x=V+\\omega_cy$。代入第二式，\n\\[\n\\ddot y+\\omega_c^2y=\\frac{qE}{m}-\\omega_cV\n=\\omega_c\\left(\\frac EB-V\\right).\n\\]\n初始 $y=\\dot y=0$，故\n\\begin{align*}\ny(t)&=\\frac{V-E/B}{\\omega_c}(\\cos\\omega_ct-1),\\\\\nv_x(t)&=\\frac EB+(V-E/B)\\cos\\omega_ct,\\\\\nv_y(t)&=-(V-E/B)\\sin\\omega_ct.\n\\end{align*}\n再积分 $v_x$ 并用初始位置，得到\n\\[\n\\boxed{x(t)=\\frac EB t+\\frac{V-E/B}{\\omega_c}\\sin\\omega_ct,\\qquad z(t)=0.}\n\\]\n在以速度 $\\vect v_d=\\vect E\\times\\vect B/B^2=(E/B)\\vect e_x$ 平动的参考系中，轨迹为圆；原参考系中的轨迹为圆运动与匀速漂移合成的旋轮线类曲线。$V=E/B$ 时洛伦兹力相消，质点匀速直行；$E=0$ 时恢复纯磁场圆周运动。磁场不做功，$\\dd T/\\dd t=qE\\dot y$，所以 $T-qEy$ 保持不变，可以用来核验解。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "checks": [
+      "X(tau)=tau+sin(tau),Y(tau)=cos(tau)-1，初态(0,0), dX/dtau=2,dY/dtau=0，与V=2v_d一致。",
+      "E沿+y，B沿+z；E cross B沿+x。初始Lorentz合力q(E-VB)e_y=-qE e_y，与向下弯折一致。",
+      "过tau=pi时瞬时速度为零，出现旋轮线尖点；不应改成平滑圆弧。"
+    ],
+    "revision_notes": [
+      "原代码用 x=theta+sin(theta), y=cos(theta)-1，但坐标轴仅标x,y。应写X=omega_c x/v_d、Y=omega_c y/v_d。",
+      "原E箭头与轨迹可能相交，已移到右侧；新增轨迹箭头为theta=pi/2处切向(1,-1)。"
+    ]
+  },
+  {
+    "key": "c1-diagram-21",
+    "old_index": 21,
+    "caption": "加速车厢中的受力图：三力在小车参考系内平衡。",
+    "anchor": "}\n\n\\subsection{惯性力的来源与意义}\\label{topic:inertia}\n设 $S$ 为惯性系，$S'$ 相对 $S$ 做加速平动。由 $\\vect a=\\vect a_0+\\vect a'$ 与 $m\\vect a=\\vect F$，\n\\begin{equation}\\label{eq:inertialforce}\n\\boxed{m\\vect a'=\\vect F+\\vect F_{\\mathrm{in}},\\qquad\n\\vect F_{\\mathrm{in}}=-m\\vect a_0.}\n\\end{equation}\n惯性力来自参考系的加速度，方向与动系原点的加速度相反，大小正比于研究对象自身的质量。它不是物体之间的新相互作用，也没有与之成对的“反作用力”。在动系中引入它，是为了用类似牛顿第二定律的形式写运动方程。\n\n\n\\subsubsection*{使用惯性力的三个步骤}\n首先指定一个已经确定为惯性系的 $S$；其次说明 $S'$ 只平动，写出其原点加速度 $\\vect a_0(t)$；最后在 $S'$ 中使用相对加速度 $\\vect a'$，并对每个质点分别添加 $-m\\vect a_0$。不能在右边加了惯性力以后，左边仍放地面系的绝对加速度。\n\n把式\\eqref{eq:inertialforce} 移回 $m(\\vect a'+\\vect a_0)=\\vect F$，立即恢复惯性系方程。两种写法描述同一运动，差别来自所测加速度。若研究多个物体，每个物体的惯性力都使用自己的质量；它们也不能当作物体间的内力互相抵消。\n\n\n\\subsection{有效重力与相对平衡}\n在匀加速平动系中，可以把重力与惯性力合并为有效重力：\n\\[\n\\vect g_{\\rm eff}=\\vect g-\\vect a_0.\n\\]\n但必须先明确参考系确实没有转动，否则式\\eqref{eq:inertialforce} 不完整。\n\n\\example{水平加速小车中的悬线偏角}\n小车以加速度 $a_0$ 向右平动，车内小球相对车静止，轻绳与竖直方向夹角为 $\\beta$。\n\\solution 在小车系中，小球受向下的重力、沿绳的张力和向左的惯性力。平衡条件为\n\\[\nT\\sin\\beta=ma_0,\\qquad T\\cos\\beta=mg.\n\\]\n所以 $\\tan\\beta=a_0/g$，$T=m\\sqrt{g^2+a_0^2}$，绳向左偏。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "checks": [
+      "T_x=ma0、T_y=mg，合力为零；tan(beta)=a0/g。",
+      "绳向左偏，惯性力向左，实际张力向右上。"
+    ],
+    "revision_notes": [
+      "T的向量(.6947,1.2)与绳方向(1.1,1.9)在约0.05%误差内平行；可使用精确1.1/1.9*1.2以消除不必要误差。",
+      "三条受力矢量按相同尺度严格闭合；车厢外 a0 箭头是加速度，不能误当成作用于小球的第四个力。"
+    ]
+  },
+  {
+    "key": "c1-diagram-34",
+    "old_index": 34,
+    "caption": "平方反比引力的有效势与能量分区；$r_0=L^2/(m\\kappa)$。示例束缚能量为 $E/(\\kappa/r_0)=-0.32$，其转向点为 $r_{\\rm p}/r_0=0.625$、$r_{\\rm a}/r_0=2.5$。",
+    "anchor": "。\n\n\n\\subsection{径向转向点与运动的允许区间}\\label{topic:turnpoints}\n对于平方反比引力，\n\\[\nU_{\\mathrm{eff}}=-\\frac\\kappa r+\\frac{L^2}{2mr^2}.\n\\]\n当 $L\\ne0$ 时，$r\\to0$ 的离心势项占优，有效势趋向正无穷；有效势在 $r_0=L^2/(m\\kappa)$ 处取极小值。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "checks": [
+      "W(q)=-1/q+1/(2q²)，W(1)=-.5且W二阶导(1)=1>0。",
+      "W(.625)=W(2.5)=-.32，两个转向点正确。"
+    ],
+    "revision_notes": [
+      "束缚能量线实际取E/(kappa/r0)=-0.32，图注应写出，避免把rp=.625、ra=2.5误当作任意E的常数。",
+      "横轴绘在曲线下方，代表半径刻度而非E=0线，现图已另画E=0虚线，逻辑无误。"
+    ]
+  },
+  {
+    "key": "c1-diagram-38",
+    "old_index": 38,
+    "caption": "球形势阱中的折射轨道。取 $b/a=0.6$、$n=1.5$，入口有 $i\\approx36.87^\\circ$、$j\\approx23.58^\\circ$，总偏折 $\\chi=2(i-j)\\approx26.58^\\circ$。",
+    "anchor": "n 阱内、外势能均为常数，粒子在各区域沿直线运动。只有边界附近的径向力冲量改变运动方向。速度模由能量确定：\n\\[\nv_{\\rm out}=\\sqrt{2E/m},\\quad\nv_{\\rm in}=\\sqrt{2(E+V_0)/m},\\quad\nn=\\frac{v_{\\rm in}}{v_{\\rm out}}=\\sqrt{1+V_0/E}>1.\n\\]\n在球面入口，角动量守恒等价于切向动量连续。设外部速度与向内法线夹角为 $i$，内部夹角为 $j$，则\n\\[\nmv_{\\rm out}a\\sin i=mv_{\\rm in}a\\sin j,\n\\qquad \\sin i=n\\sin j,\\qquad b=a\\sin i.\n\\]\n阱内速度较快，而方向向法线折转，故这里的 $n$ 表示两区速度比。不能直接将它解释为光学中的相速度折射率。\n\n粒子在阱内走一条弦，出口再次折转。入、出边界关于弦中点对称，每次转向为 $i-j$，偏折角的大小\n\\[\n\\chi=2(i-j)=2\\left[\\arcsin(b/a)-\\arcsin(b/(na))\\right],\\quad 0<b<a.\n\\]\n它随 $b$ 单调增加：\n\\[\n\\frac{\\dd\\chi}{\\dd b}=\\frac2{a\\sqrt{1-b^2/a^2}}\n-\\frac2{na\\sqrt{1-b^2/(n^2a^2)}}>0.\n\\]\n正中入射 $b=0$ 沿直径直进直出，净偏折为零；$b\\to a^-$ 时\n$\\chi\\to\\chi_{\\max}=\\pi-2\\arcsin(1/n)$。$b>a$ 的粒子不受力，也不计入非零角散射截面。\n\n为显式求截面，令 $s=\\chi/2$、$z=\\cos s$，由 $j=i-s$ 及折射关系得到\n\\[\n\\tan i=\\frac{n\\sin s}{n\\cos s-1},\\qquad\nb^2=\\frac{a^2n^2\\sin^2s}{n^2+1-2n\\cos s}.\n\\]\n记 $D=n^2+1-2nz$，逐项求导：\n\\[\n\\frac{\\dd b^2}{\\dd z}\n=\\frac{2a^2n^2[n(1+z^2)-(n^2+1)z]}{D^2},\n\\qquad \\frac{\\dd z}{\\dd\\chi}=-\\frac12\\sin s.\n\\]\n入射环带与出射立体角对应，故\n\\begin{equation}\n\\boxed{\\frac{\\dd\\sigma}{\\dd\\Omega}\n=\\frac1{2\\sin\\chi}\\frac{\\dd b^2}{\\dd\\chi}\n=\\frac{a^2n^2[(n^2+1)z-n(1+z^2)]}{4zD^2}.}\n\\end{equation}\n适用范围 $0<\\chi<\\chi_{\\max}$，其他非零角为零。前向极限为 $a^2n^2/[4(n-1)^2]$；最大角处截面趋于零。分子也可写作 $(nz-1)(n-z)$，在允许区间内非负。\n\n积分时用 $b$ 变量最直接：\n\\[\n\\sigma_{\\rm sc}=2\\pi\\int_0^{\\chi_{\\max}}\n\\frac{\\dd\\sigma}{\\dd\\Omega}\\sin\\chi\\,\\dd\\chi\n=\\pi[b^2]_{0}^{a}=\\pi a^2.\n\\]\n这是有限 $V_0>0$ 时发生非零偏折的入射面积。$V_0\\to0$ 时角分布收缩到前向，零势极限必须结合探测角分辨率讨论，不能把有限角处的极限和全角积分随意交换。核光学模型中若引入吸收或量子干涉，需要另建模型；上述推导只处理实势阱的经典弹性轨道。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "checks": [
+      "i=asin(.6), j=asin(.4); chi=26.5834383353度。",
+      "半径1.8时A=(-1.44,1.08),B=(1.7710690801,.3214254401)，两点均在圆上。",
+      "内部弦方向角=-(i-j)，出口速度角=-2(i-j)。"
+    ],
+    "revision_notes": [
+      "原出射方向(1.4,-.7)与给定参数相差0.018度，只是微小示意误差；改为精确方向。",
+      "要标记i与j需延长入口的入射方向，不可把弦与入射方向间角误标为i；该角是i-j。",
+      "虚线为半径法线；图中chi为偏折大小，向下偏折。"
+    ]
+  },
+  {
+    "key": "c1-diagram-39",
+    "old_index": 39,
+    "caption": "两种指数屏蔽势的有效势，$q=r/a$。左图兼有稳定势阱和很低的外侧势垒，框内放大势垒附近；右图只有不稳定势垒顶。",
+    "anchor": "二阶导数：\n\\[\nW''(r_0)=-\\frac{C\\mathrm e^{-q}}{a r_0^3}(1+q)<0.\n\\]\n它是势垒顶，所有圆轨道都不稳定，因而没有围绕它的稳定径向小振动，也无近圆周期进动公式。\n\n当 $0<A<C$，$W\\to-\\infty$ 于力心，外侧趋于 $0^+$。从无穷远入射的 $E>0$ 粒子，若 $E<W(r_0)$，在外侧转折后返回无穷远；若 $E>W(r_0)$，越过势垒后坠向奇异力心。$E=W(r_0)$ 的临界轨道渐近趋向不稳定圆轨道。负能量只允许内侧运动，不会产生两个有限转折点之间的稳定束缚轨道。到达奇异点后经典点力模型失去后续唯一延拓，不能凭空指定一次弹回。\n\n零角动量 $L=0$ 对应 $A=0$，须另作径向分析。此时\n\\[\nW(r)=-\\frac{C\\mathrm e^{-r/a}}{r^2}<0,\\qquad\nW'(r)=\\frac{C\\mathrm e^{-r/a}(2+r/a)}{r^3}>0.\n\\]\n所以 $W$ 在 $r>0$ 严格单调地从 $-\\infty$ 增至 $0^-$，没有有限半径的圆轨道，也没有正的势垒顶。由 $m\\dot r^2/2=E-W(r)$ 可见，$E\\ge0$ 的向内径向运动到达力心，向外运动则可到达无穷远；$E=0$ 时到无穷远的速率趋零。$E<0$ 时存在唯一外侧转向点，向外运动到达该点后回落，仍不能形成两个有限转向点之间的周期束缚运动。关于奇异力心处后续延拓的限制仍然适用。\n\n\\subsection{一般中心势的散射求积与数值计算}\\label{topic:scatterquadrature}\n对任意给定的中心势 $U(r)$，在 $E>0$、存在外侧径向转折点 $r_{\\min}$ 的散射支上，先解\n\\[\n1-\\frac{b^2}{r_{\\min}^2}-\\frac{U(r_{\\min})}{E}=0.\n\\]\n从最近点到无穷远的极角积累为\n\\[\n\\alpha(b)=\\int_{r_{\\min}}^\\infty\n\\frac{b\\,\\dd r}{r^2\\sqrt{1-b^2/r^2-U(r)/E}},\\qquad\n\\chi_{\\rm signed}=\\pi-2\\alpha.\n\\]\n对于单次、无绕行的轨道，实际偏折大小为 $|\\chi_{\\rm signed}|$。吸引势可使 $\\alpha>\\pi/2$，故有符号偏折为负。若绕行多圈，应由入、出速度方向把角度归约到 $[0,\\pi]$，再保留所有映到同一角度的碰撞参数支。\n\n为消除无限上限，令 $z=r_{\\min}/r$，则\n\\[\n\\alpha=\\frac b{r_{\\min}}\\int_0^1\n\\frac{\\dd z}{\\sqrt{1-(b^2/r_{\\min}^2)z^2-U(r_{\\min}/z)/E}}.\n\\]\n端点 $z=1$ 的一般平方根奇异性可再用 $z=1-s^2$ 消去。数值计算依次执行：选定外侧转折点，求角积分，连续追踪 $\\chi(b)$，按单调段求导，最后累加\n\\[\n\\frac{\\dd\\sigma}{\\dd\\Omega}\n=\\sum_j\\frac{b_j}{\\sin\\chi}\\left|\\frac{\\dd b_j}{\\dd\\chi}\\right|.\n\\]\n只有存在返回无穷远的轨道支才能这样计入弹性散射。被捕获的初态计入捕获面积，不计入出射角分布。指数屏蔽势的结果由 $E,a$ 和耦合强度共同决定，上述求积及分支规则给出其经典截面；量子 Born 近似是另一套近似，不能替代这里的轨道积分。",
+    "kind": "恢复图示",
+    "source": "根据正文物理模型与公式绘图；图形源代码可编辑",
+    "checks": [
+      "左图驻点满足q(1+q)e^-q=.4，其两正根分别在黄金比(1+sqrt5)/2两侧，符号与正文稳定性一致。",
+      "右图驻点满足(2+q)e^-q=1，有唯一正根且二阶导负。",
+      "左图q->0有效势正无穷，右图q->0负无穷；两图外侧均从正侧趋于0。"
+    ],
+    "revision_notes": [
+      "左图极小值q=.4300024170,W=-.4311460829；外侧极大值q=3.8375185906,W=.0079660876。原图该峰距横轴约0.24mm，需放大。",
+      "右图峰值q=1.1461932206,W=.1386522042，建议明确标出。",
+      "图注宜称“指数屏蔽势的有效势”，避免与没有指数的纯幂律势混同。",
+      "新增完整TikZ采用显式坐标缩放，无新增包依赖；编译后需重点检查放大框刻度标签与主轴的视觉间隔。"
+    ]
+  },
+  {
+    "key": "c1-double-well",
+    "old_index": null,
+    "caption": "对称双势阱 $U/U_0=[(x/a)^2-1]^2$。$E_1=0.36U_0$ 时，浅色标出两个互不相通的允许区间，四个转向点为 $x/a=\\pm\\sqrt{1.6},\\,\\pm\\sqrt{0.4}$；$E_2=1.30U_0$ 时可越过中间势垒。",
+    "anchor": "在顶部附近 $U\\simeq U_0-2U_0x^2/a^2$。临界能量 $E=U_0$ 时，时间积分含有 $\\int\\dd x/|x|$，出现对数发散；这解释了势垒附近停留时间特别长的现象。",
+    "kind": "完善定量势能图",
+    "source": "根据正文给出的解析势函数绘制，曲线由公式生成。"
+  }
+]

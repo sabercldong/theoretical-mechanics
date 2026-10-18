@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=.95]
+\foreach \p in {0,1}{\begin{scope}[xshift={5.4*\p cm}]
+\draw[fill=soft](-.5,-.5)rectangle(2.7,1.65);
+\coordinate(O)at(0,0);\coordinate(A)at(1.8,1);
+\fill(O)circle(2pt)node[below left]{$O$};\fill(A)circle(2pt)node[below]{$A$};
+\draw[->,muted](O)--(A)node[midway,above left]{$\vect r_{OA}$};
+\ifnum\p=0
+\draw[force](A)--(3.3,1)node[right]{$\vect F$};
+\node at(1,-1.35){原力系};
+\else
+\draw[force](O)--(1.5,0)node[below]{$\vect F$};
+\draw[->,thick](3.55,.45)arc(0:-270:.45);
+\node[right]at(3.55,.25){$\vect M_O$};
+\node at(1,-1.35){等效：移到 $O$ 的力与顺时针力偶};
+\fi\end{scope}}
+\node at(4.3,.75){$\Longleftrightarrow$};
+\node at(3.8,-2){$\vect M_O=\vect r_{OA}\times\vect F$（垂直纸面向里）};
+\end{tikzpicture}

@@ -1,0 +1,790 @@
+{
+  "reviewer": "revision_training_qa",
+  "reviewed_at": "2026-10-17T19:20:48",
+  "result": "passed",
+  "scope": {
+    "question_figures_rechecked": [
+      "ex50",
+      "ex51",
+      "ex54",
+      "ex55",
+      "ex60",
+      "ex66",
+      "tr08",
+      "tr11",
+      "tr21"
+    ],
+    "question_figures_rechecked_count": 9,
+    "solution_examples": [
+      49,
+      66
+    ],
+    "solution_exercises": [
+      1,
+      24
+    ],
+    "solution_figure_count": 42
+  },
+  "method": "重新通过view_image读取已经重渲的5张题图总览，复验分配的9图；通过view_image逐张查看11张解答图总览；对速度圆、火箭及机枪作3倍裁片复看。读取更新题图源，并核对解答图与推导对应JSON的84条关系式均与42个解答图源相符。独立检查关键公式的几何、微分/积分和符号。只写本报告，未编辑主稿或图源。",
+  "actual_question_images_viewed": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-09.png",
+      "sha256": "fe65696866d7639bea43e765d82f2eaddacfc7b739fcad613a7660273ec00584"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-10.png",
+      "sha256": "fe17682687e696f190419df9d19a76485eac50b834b8596c4124dc261df24fc1"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-11.png",
+      "sha256": "1c92b46f09661c84d26fcf7b872be08f32e24bbf2dbb46d1a7fe8bfd360a6311"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-13.png",
+      "sha256": "80c196f87f363c48e64f4272301461721b7315d05eda5e7eb72fc3f6872d88ae"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/题图总览PNG/atlas-15.png",
+      "sha256": "20457852acebf75019ef146056580392dab7832b09e54ebb3eb3e18830e71299"
+    }
+  ],
+  "actual_solution_images_viewed": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-13.png",
+      "sha256": "448fd47496e3c85f47a27e0437d94735619b21541798a45c3c10d7076b05d411"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-14.png",
+      "sha256": "55239ddf874e9fe3a40938c52030ca1330e0f78ecebc6c4cf3d496e9db9fe0d3"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-15.png",
+      "sha256": "cb26de80b629584ba1435b2199e29a9fea627dbeec0ac9cf91e92b479c8f2cd8"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-16.png",
+      "sha256": "7ff52fe4be481350577b8cdd384d92ba421cf7682d7fdb2a93b1e1190711ba04"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-17.png",
+      "sha256": "6d95238c224ff65808ceb3b6f9047bda34eab5ca368084db70273987a1494717"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-18.png",
+      "sha256": "a03be91e5740a7c2968e9da377a564c10decbc951803fa18a2c37c0bfb888c0b"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-19.png",
+      "sha256": "285ea0049bc106748c16bd795ab2897ef54e9028dcc724c2faf0296e368aa228"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-20.png",
+      "sha256": "c66f7f84b722fb2b43d34c2fb2011f7ab7443a53c9008f2250907f6f727771b6"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-21.png",
+      "sha256": "09eda882f129f536b47dcb9edc9f142e6a5fda2e5fcf371b3700fb485f3c5faf"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-22.png",
+      "sha256": "cb41db426855539b804d914f8dc89d2293ff963ed8fff4b9bdcf70e1eddb7e55"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/解答图总览PNG/atlas-23.png",
+      "sha256": "737a5f3c04efa77628a8422c64486ade3fb7e1aeb29ec1d628ddebefe6be80b7"
+    }
+  ],
+  "summary": {
+    "question_figures_rechecked": 9,
+    "question_figures_passed": 9,
+    "question_figures_only_label_fix": 0,
+    "original_physics_and_frame_issue_groups_resolved": 6,
+    "solution_figures_reviewed": 42,
+    "solution_figures_passed": 42,
+    "solution_figures_only_label_fix": 0,
+    "solution_formula_errors": 0,
+    "new_physics_direction_errors": 0,
+    "remaining_issue_groups": 0,
+    "atlas_layout_only_defects": 0,
+    "remaining_label": null,
+    "all_required_fixes_remaining": 0
+  },
+  "original_issue_recheck": [
+    {
+      "id": "C2-VELOCITY-CIRCLE-BRANCH-GEOMETRY",
+      "status": "physical_or_symbolic_issue_fixed_passed",
+      "figures": [
+        "ex50",
+        "ex51"
+      ],
+      "note": "原始几何/参考系/符号矛盾已消除；ex50/ex51的新角标签穿字另列current_issues。"
+    },
+    {
+      "id": "C2-TR08-ZERO-ANGLE",
+      "status": "physical_or_symbolic_issue_fixed_passed",
+      "figures": [
+        "tr08"
+      ],
+      "note": "实际查看更新渲染，修正通过。"
+    },
+    {
+      "id": "C2-EX60-TWO-EJECTION-FRAMES",
+      "status": "physical_or_symbolic_issue_fixed_passed",
+      "figures": [
+        "ex60"
+      ],
+      "note": "实际查看更新渲染，修正通过。"
+    },
+    {
+      "id": "C2-ROCKET-RELATIVE-VS-GROUND-EXHAUST",
+      "status": "physical_or_symbolic_issue_fixed_passed",
+      "figures": [
+        "ex54",
+        "ex55",
+        "tr21"
+      ],
+      "note": "实际查看更新渲染，修正通过。"
+    },
+    {
+      "id": "C2-EX66-D-ARROW-OVERLAP",
+      "status": "physical_or_symbolic_issue_fixed_passed",
+      "figures": [
+        "ex66"
+      ],
+      "note": "实际查看更新渲染，修正通过。"
+    },
+    {
+      "id": "C2-TR11-MOVING-POINT-NOTATION",
+      "status": "physical_or_symbolic_issue_fixed_passed",
+      "figures": [
+        "tr11"
+      ],
+      "note": "实际查看更新渲染，修正通过。"
+    }
+  ],
+  "question_figures": [
+    {
+      "key": "ex50",
+      "status": "fixed_passed",
+      "note": "最终fix-07/08实际查看通过：P±及Θ±几何正确；θ、Θ_-、Θ_+均已避开圆与角弧，未见穿字。"
+    },
+    {
+      "key": "ex51",
+      "status": "fixed_passed",
+      "note": "最终fix-07/08实际查看通过：P±及Θ±几何正确；θ、Θ_-、Θ_+均已避开圆与角弧，未见穿字。"
+    },
+    {
+      "key": "ex54",
+      "status": "passed",
+      "note": "向下箭头已标u_rel=−c，对地u=v−c另列，参考系区分正确。"
+    },
+    {
+      "key": "ex55",
+      "status": "passed",
+      "note": "已明确台上阶段v=0、N≥0，排气箭头为u_rel=−c，参考系和支持阶段均正确。"
+    },
+    {
+      "key": "ex60",
+      "status": "passed",
+      "note": "左箭头已标U_rel=−u，对地U=v−u另列，不再固定对地速度为负，正确。"
+    },
+    {
+      "key": "ex66",
+      "status": "passed",
+      "note": "d已移到横轴左下避开硬核箭杆，三段势能符号正确。"
+    },
+    {
+      "key": "tr08",
+      "status": "passed",
+      "note": "炮管、炮弹和V箭头均改为水平，后退方向正确，原α=0斜炮管矛盾消除。"
+    },
+    {
+      "key": "tr11",
+      "status": "passed",
+      "note": "原点已改A，移动速度标v_A，与任意移动基点题意一致。"
+    },
+    {
+      "key": "tr21",
+      "status": "passed",
+      "note": "相对排气与对地排气已分列，喷速参考系正确。"
+    }
+  ],
+  "current_issues": [],
+  "solution_figures": [
+    {
+      "key": "ex49",
+      "source": "解答图/ex49.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-13.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "b=K\\cot(\\Theta/2)/(2E_{\\rm rel})",
+      "second_relation": "f_C=[K/(4E_{\\rm rel})]^2\\sin^{-4}(\\Theta/2)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex50",
+      "source": "解答图/ex50.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-13.png",
+      "status": "fixed_passed",
+      "formula_status": "passed",
+      "first_relation": "\\Theta_1=\\theta+\\arcsin(2\\sin\\theta)",
+      "second_relation": "\\Theta_2=\\theta+\\pi-\\arcsin(2\\sin\\theta)",
+      "mapping_matches_source": true,
+      "visual_note": "最终fix-07/08实际查看通过；所有角标避开圆和角弧，公式完整可读。"
+    },
+    {
+      "key": "ex51",
+      "source": "解答图/ex51.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-13.png",
+      "status": "fixed_passed",
+      "formula_status": "passed",
+      "first_relation": "D_\\pm=\\lambda\\cos\\theta\\pm\\sqrt{1-\\lambda^2\\sin^2\\theta}",
+      "second_relation": "f_L=\\sum_{j\\ \\rm allowed} f_C(\\Theta_j)D_j^2/h",
+      "mapping_matches_source": true,
+      "visual_note": "最终fix-07/08实际查看通过；所有角标避开圆和角弧，公式完整可读。"
+    },
+    {
+      "key": "ex52",
+      "source": "解答图/ex52.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-13.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "mv_0L/2=I_A\\omega,\\quad I_A=9mL^2/4",
+      "second_relation": "v_{\\rm mid}=v_0/9,\\quad J_{A,x}=-2mv_0/9",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex53",
+      "source": "解答图/ex53.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-14.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "(m+\\delta m)v_+=mv",
+      "second_relation": "\\Delta T_{\\rm loss}=m\\delta m v^2/[2(m+\\delta m)]",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex54",
+      "source": "解答图/ex54.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-14.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "m\\dot v=-mg-c\\dot m",
+      "second_relation": "v=v_0+c\\ln(m_0/m)-gt",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex55",
+      "source": "解答图/ex55.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-14.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "N=mg-cq\\ge0\\quad(v=0)",
+      "second_relation": "m_L=cq/g,\\quad t_L=(m_0-m_L)/q",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex56",
+      "source": "解答图/ex56.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-14.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\dd[(M+\\lambda t)v]/\\dd t=(M+\\lambda t)g",
+      "second_relation": "v=g(Mt+\\lambda t^2/2)/(M+\\lambda t)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex57",
+      "source": "解答图/ex57.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-15.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\dot r=c_s/(4\\pi\\rho)=\\lambda",
+      "second_relation": "v=g(r^4-a^4)/(4\\lambda r^3)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex58",
+      "source": "解答图/ex58.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-15.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "R=\\sigma gh+\\sigma v^2,\\quad v^2=2gh",
+      "second_relation": "R=3\\sigma gh\\quad(0\\le h<l)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex59",
+      "source": "解答图/ex59.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-15.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\sigma l\\dot x^2/2-\\sigma gx^2/2=-\\sigma gl^2/8",
+      "second_relation": "x=(l/2)\\cosh(\\sqrt{g/l}\\,t)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex60",
+      "source": "解答图/ex60.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-15.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\dd(mv)/\\dd t+qU=-\\mu_fmg",
+      "second_relation": "U=-u\\quad\\hbox{或}\\quad U=v-u",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex61",
+      "source": "解答图/ex61.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-16.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "D(\\tau)-D(0)=mv^2\\tau",
+      "second_relation": "2\\overline T+\\overline W=mv^2\\ne0",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex62",
+      "source": "解答图/ex62.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-16.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "D=-mA^2\\omega\\sin2\\omega t/2",
+      "second_relation": "2\\overline T+\\overline W=[D(\\tau)-D(0)]/\\tau",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex63",
+      "source": "解答图/ex63.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-16.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "W=\\sum_{i<j}-Gm_im_j/r_{ij}=U",
+      "second_relation": "2\\overline T+\\overline U=0,\\quad E=-\\overline T",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex64",
+      "source": "解答图/ex64.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-16.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "W=x(-kx)=-2U",
+      "second_relation": "\\overline T=\\overline U=kA^2/4",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex65",
+      "source": "解答图/ex65.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-17.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "f(r)=-1\\ (r<d),\\quad f(r)=0\\ (r>d)",
+      "second_relation": "B_2=-2\\pi\\int f r^2\\dd r=2\\pi d^3/3",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "ex66",
+      "source": "解答图/ex66.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-17.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "f=-1,\\quad e^{\\epsilon/(k_B\\Theta)}-1,\\quad0",
+      "second_relation": "B_2=2\\pi[d^3-(a^3-d^3)(e^{\\epsilon/(k_B\\Theta)}-1)]/3",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr01",
+      "source": "解答图/tr01.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-17.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\vect F_1+\\vect F_2=0",
+      "second_relation": "\\vect\\tau_O=-aF\\vect k",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr02",
+      "source": "解答图/tr02.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-17.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "m_1d_1=m_2d_2,\\quad d_1+d_2=L",
+      "second_relation": "m_2=3m_1:\\quad d_1=3L/4",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr03",
+      "source": "解答图/tr03.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-18.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\dd m=\\lambda a\\dd\\varphi",
+      "second_relation": "Y_C=a\\int_0^\\pi\\sin\\varphi\\dd\\varphi/\\pi=2a/\\pi",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr04",
+      "source": "解答图/tr04.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-18.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "M=3\\lambda_0L/2,\\quad J=5\\lambda_0L^2/6",
+      "second_relation": "X_C=J/M=5L/9",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr05",
+      "source": "解答图/tr05.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-18.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "J_x=-\\sigma\\pi r^2d",
+      "second_relation": "X_C=-r^2d/(R^2-r^2)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr06",
+      "source": "解答图/tr06.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-18.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\vect P=\\vect P_0+\\vect Ft",
+      "second_relation": "\\vect R=\\vect R_0+\\vect P_0t/M+\\vect Ft^2/(2M)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr07",
+      "source": "解答图/tr07.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-19.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\vect v_i^{\\prime}=\\vect v_i-\\vect U",
+      "second_relation": "T^{\\prime}=T-\\vect U\\cdot\\vect P+MU^2/2",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr08",
+      "source": "解答图/tr08.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-19.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "v-U=V\\quad\\hbox{或}\\quad v=V",
+      "second_relation": "U=-mV/(M+m)\\quad\\hbox{或}\\quad U=-mV/M",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr09",
+      "source": "解答图/tr09.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-19.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "(2mr^2+I_p)u=mr^2v",
+      "second_relation": "I_p=mr^2:\\quad v_A=v/3,\\quad v_B=2v/3",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr10",
+      "source": "解答图/tr10.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-19.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\dot{\\vect L}_A=\\vect\\tau_A-\\vect v_A\\times\\vect P",
+      "second_relation": "\\vect\\tau_A=0\\ \\Rightarrow\\ \\dot{\\vect L}_A=-\\vect v_A\\times\\vect P",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr11",
+      "source": "解答图/tr11.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-20.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "T=\\tfrac12Mv_A^2+T_{\\rm rel}+\\vect v_A\\cdot(\\vect P-M\\vect v_A)",
+      "second_relation": "A=C:\\quad\\vect P-M\\vect v_A=0",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr12",
+      "source": "解答图/tr12.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-20.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\omega_{\\rm out}/\\omega_0=(4\\eta+3)/[4(\\eta+3)]",
+      "second_relation": "\\eta\\to0:\\quad\\omega_{\\rm out}\\to\\omega_0/4",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr13",
+      "source": "解答图/tr13.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-20.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "v_{1x}=-l\\dot\\theta\\cos\\theta/2",
+      "second_relation": "v_{1x}\\to0,\\quad v_{2y}\\to-\\sqrt{2gl\\cos\\alpha}",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr14",
+      "source": "解答图/tr14.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-20.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\ddot x=(g/l)x",
+      "second_relation": "v_{\\rm exit}^2=v_0^2+g(l^2-x_0^2)/l",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr15",
+      "source": "解答图/tr15.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-21.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "k(r_0-a)r_0^3=L^2/\\mu",
+      "second_relation": "W^{\\prime\\prime}(r_0)=k(4-3a/r_0)>0",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr16",
+      "source": "解答图/tr16.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-21.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "T\\propto L^{3/2}/\\sqrt{M_1+M_2}",
+      "second_relation": "M_{\\rm tot}\\mapsto2M_{\\rm tot}:\\quad T^{\\prime}=T/\\sqrt2",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr17",
+      "source": "解答图/tr17.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-21.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\ddot x=-\\omega_x^2x,\\quad\\ddot y=-\\omega_y^2y",
+      "second_relation": "\\dot L_z=\\mu(\\omega_x^2-\\omega_y^2)xy",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr18",
+      "source": "解答图/tr18.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-21.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\sin\\theta_{\\max}=1/3",
+      "second_relation": "\\max(E_2/E_{\\rm in})=3/4\\quad(\\Theta=\\pi)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr19",
+      "source": "解答图/tr19.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-22.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "\\dd\\Omega_C/\\dd\\Omega_L=4\\cos\\theta",
+      "second_relation": "f_L=\\cos\\theta/\\pi,\\quad P(\\theta\\le\\theta_0)=\\sin^2\\theta_0",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr20",
+      "source": "解答图/tr20.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-22.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "V=m_1u/(m_1+m_2)",
+      "second_relation": "\\Delta T=\\mu u^2/2",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr21",
+      "source": "解答图/tr21.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-22.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "q=m_f/t_b,\\quad m_0=2m_f",
+      "second_relation": "v_b=c\\ln2-gt_b",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr22",
+      "source": "解答图/tr22.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-22.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "z=\\lambda t/M\\ll1,\\quad\\ln(1+z)=z-z^2/2+\\cdots",
+      "second_relation": "s=gt^2/2-\\lambda gt^3/(6M)+O(\\lambda^2)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr23",
+      "source": "解答图/tr23.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-23.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "W_{12}=\\vect r_{12}\\cdot\\vect F_{12}",
+      "second_relation": "[W]=[D]/[t]=\\mathrm{kg\\,m^2\\,s^{-2}}",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    },
+    {
+      "key": "tr24",
+      "source": "解答图/tr24.tex",
+      "atlas": "工作文件/解答图总览PNG/atlas-23.png",
+      "status": "passed",
+      "formula_status": "passed",
+      "first_relation": "W=U_{-1}-2U_2",
+      "second_relation": "2\\overline T=-\\overline U_{-1}+2\\overline U_2\\quad(\\tau\\to\\infty)",
+      "mapping_matches_source": true,
+      "visual_note": "实际查看无穿字、裁切或不可辨识字形，关系式与题干和对应推导一致。"
+    }
+  ],
+  "core_formula_checks": [
+    "ex49排斥库仑b=Kcot(Θ/2)/(2E_rel)与Rutherford截面系数K²/(16E_rel²)正确。",
+    "ex50两Θ分支为θ+arcsin(2sinθ)、θ+π−arcsin(2sinθ)，与修正后的P±几何一致。",
+    "ex51立体角因子D²/h正确；h=|1+λcosΘ|/D，与D³/|1+λcosΘ|等价。",
+    "ex52碰后惯量9mL²/4、中点速度v0/9和铰点水平冲量−2mv0/9一致。",
+    "ex54 m v̇=−mg−c ṁ、速度火箭公式符号正确。ex55起飞阈值式适用于所示台上/延迟离台分支。",
+    "ex56凝结静止物质的动量导数、ex57半径线性增长及v=g(r⁴−a⁴)/(4λr³)正确。",
+    "ex58绳总反力含绳堆重量和制停通量，R=3σgh在0≤h<l适用。ex59全链能量与cosh解正确。",
+    "ex60开放枪系统d(mv)/dt+qU=−μ_fmg及U=−u/U=v−u两种代入正确。",
+    "ex61/62保留位力边界项，ex63引力W=U，ex64谐振子W=−2U，均正确。",
+    "ex65/66 Mayer函数分段及B2的正/负贡献正确。",
+    "tr08相对速率与对地速率两种U分别为−mV/(M+m)、−mV/M；tr09含滑轮惯量的v/3与2v/3正确。",
+    "tr12自由管球出管转速比、tr13杆倒平极限、tr14链条退出速率、tr15有效势二阶导数均正确。",
+    "tr17相对角动量变化率μ(ω_x²−ω_y²)xy、tr18最大能量转移3/4、tr19概率sin²θ0正确。",
+    "tr21燃尽速度c ln2−gt_b、tr22无增长极限展开、tr23量纲、tr24混合齐次势位力号数均正确。"
+  ],
+  "readability_note": "11张解答图总览没有相邻图互侵或文字裁切。火箭ex54/ex55/tr21因纵向模型较高，缩小总览里字号较小，放大后可清楚辨识；未据此认定最终讲义不可读。最终讲义插图字号/图号解析须在最终PDF层面另验。",
+  "limits": "本报告范围为例49–66和训练1–24的后半42张解答图，以及初查发现问题的9张题图复验。所有已发现问题均已实际渲染终验通过；仅更新报告，未改主稿或图源，未扩展到用户新要求删除的提示段落。",
+  "issue_history": [
+    {
+      "id": "C2-FINAL-SPEED-CIRCLE-ANGLE-LABELS",
+      "severity": "medium",
+      "category": "text_line_overlap",
+      "figures": [
+        "ex50",
+        "ex51"
+      ],
+      "affected_sources": [
+        "题图/ex50.tex",
+        "题图/ex51.tex",
+        "解答图/ex50.tex",
+        "解答图/ex51.tex"
+      ],
+      "description": "原两支速度圆几何已经修正，但θ中心(1,.16)落在速度圆左轮缘上，Θ_-中心(1.7,.83)被速度圆上部曲线穿过；在实际放大渲染中均能看到字形与曲线相交。两种图复用同一布局，因此题图与解答图均需同步避让。",
+      "recommended_fix": "θ移到靠O且避开射线的小角内，Θ_-移到圆外上方；同时检查Θ_+与角弧的间距。保持P±及Θ±的正确几何不变。",
+      "evidence": "/tmp/c2-final-speed_circle.png",
+      "status": "needs_fix",
+      "recheck_resolution": {
+        "status": "theta_and_theta_minus_fixed_theta_plus_remains",
+        "note": "fix-07/08中θ、Θ_-已避开圆弧；原建议中要求一并检查的Θ_+仍被大角弧穿过。"
+      }
+    },
+    {
+      "id": "C2-FINAL-SPEED-CIRCLE-THETA-PLUS",
+      "severity": "low",
+      "category": "text_line_overlap",
+      "figures": [
+        "ex50",
+        "ex51"
+      ],
+      "affected_sources": [
+        "题图/ex50.tex",
+        "题图/ex51.tex",
+        "解答图/ex50.tex",
+        "解答图/ex51.tex"
+      ],
+      "description": "最新fix-07/08中，θ和Θ_-移位均通过，但Θ_+左半字形仍被大角弧穿过。四图共用该角标签布局；独立放大裁片可见弧线穿过Θ的左侧笔画。",
+      "recommended_fix": "仅将Θ_+标签移到圆外右侧，例如(3.25,.45)并保持距弧线明确间距；不改P±和角弧几何及公式。",
+      "evidence": "/tmp/c2-last-angle-check.png",
+      "status": "needs_fix",
+      "resolution": {
+        "status": "fixed_passed",
+        "note": "最新fix-07/08已实际查看，Θ_+位于速度圆右侧空白，与圆和角弧完全分开；四图通过。"
+      }
+    }
+  ],
+  "follow_up_rechecks": [
+    {
+      "reviewed_at": "2026-10-17T19:28:48",
+      "scope": [
+        "ex50题图",
+        "ex50解答图",
+        "ex51题图",
+        "ex51解答图"
+      ],
+      "result": "theta_and_theta_minus_passed_theta_plus_needs_avoidance",
+      "actual_images_viewed": [
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/修复复验PNG/fix-07.png",
+          "sha256": "dc3557a8353b31d99513dd4b2f0c40ab85ca97a3987f74604256cbbd6e9eec71"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/修复复验PNG/fix-08.png",
+          "sha256": "c7f1a09ca1693b453617ee385df13a3bc9f5a5c99d6d94185fba1bab19851b92"
+        }
+      ],
+      "zoomed_evidence": "/tmp/c2-last-angle-check.png",
+      "method": "实际view_image查看fix-07与fix-08；对同图角标区域作4倍像素放大再次查看，未扩展题号范围。",
+      "conclusion": "本次移位的θ、Θ_-已通过，仍存Θ_+与角弧的单项穿字。公式、两分支几何和其余后半图结论不变。"
+    },
+    {
+      "reviewed_at": "2026-10-17T19:33:11",
+      "scope": [
+        "ex50题图",
+        "ex50解答图",
+        "ex51题图",
+        "ex51解答图"
+      ],
+      "result": "passed",
+      "actual_images_viewed": [
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/修复复验PNG/fix-07.png",
+          "sha256": "8624d385fe76bfb146ef6147f4fd9ba68a3f6a48e0a8166302bc0c6fbc451b19"
+        },
+        {
+          "path": "/Users/dongxingxi/Downloads/理论力学/第二章-完善版讲义/工作文件/修复复验PNG/fix-08.png",
+          "sha256": "9a8c5acea5d35e3f9d55ba9c7d2abab59b39a5d6e67a866bfbff2615a6d0b9ba"
+        }
+      ],
+      "method": "仅通过view_image重新读取实际刷新的fix-07、fix-08两页，未扩展新范围。",
+      "conclusion": "Θ_+已移至速度圆右侧空白，四图无穿字；之前θ与Θ_-的修正也保持正确。当前报告范围未解决问题0。"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "chapter": 1,
+  "method": "按标题精确匹配缺失图，解析核验方向/初值，数值二分核验势垒与球形势阱几何；尚未对整本讲义逐题重算。",
+  "missing_indices": [
+    3,
+    14,
+    15,
+    21,
+    34,
+    38,
+    39
+  ],
+  "items": [
+    {
+      "index": 3,
+      "match_by_caption": "球面摆的约束、张力和方位运动",
+      "restore": true,
+      "verdict": "球面摆值得恢复。张力/重力和角度几何正确，方位基矢是水平纬圈切线在纸面的投影。",
+      "issues": [
+        "原图 e_phi 画成纸面竖直线，和真实竖直方向容易混淆；须在图注说明是水平圆切线的投影，且纬圈只是某一瞬时 theta 的几何圆，不是一般运动轨迹。",
+        "正文的 z 正向向下，图中应标 z 以免与前面的常规球坐标 z 向上混同。theta0=pi/3 是初态，图不是该初态的定量投影，不宜把绘图角度当作 theta0。"
+      ],
+      "recommended_tikz": "\\begin{tikzpicture}\n\\coordinate(O)at(0,3);\\coordinate(P)at(1.5,.9);\\draw[guide,->](O)--(0,-.35)node[below]{$z$};\\draw[thick,ink](O)--(P)node[midway,above right]{$l$};\n\\draw[guide](0,.9)ellipse(1.5 and .38);\\draw[guide](P)--(0,.9);\\fill[ink](P)circle(3pt)node[right]{$m$};\n\\draw[->](0,2.3)arc(-90:-54.46:.7);\\node at(.3,2.1){$\\theta$};\n\\draw[force](P)--++(-.65,.91)node[midway,left=3pt]{$T$};\\draw[force](P)--++(0,-1)node[right]{$mg$};\n\\draw[force](P)--++(0,.8)node[above right]{$\\vect e_\\varphi$};\\node[above]at(O){$O$};\n\\node[align=left,anchor=west]at(3,2){绕竖直轴的角动量守恒\\\\$ml^2\\sin^2\\theta\\,\\dot\\varphi=mC$\\\\轨迹一般不是一个平面圆};\n\\end{tikzpicture}",
+      "recommended_caption": "球面摆在某一瞬时的约束与受力；$z$ 轴竖直向下，$\\vect e_\\varphi$ 为水平纬圈切线在纸面的投影。虚线纬圈不代表完整运动轨迹。",
+      "checks": [
+        "T 与 OP 反向平行；mg 垂直向下。",
+        "L_z=ml^2 sin^2(theta) dot(phi)=mC 与正文一致。",
+        "theta0=pi/3 代入角速度平方积分得到 dot(theta)(0)=0，张力T=m[g cos(theta)+l dot(theta)^2+l dot(phi)^2 sin(theta)^2]与受力图一致。"
+      ]
+    },
+    {
+      "index": 14,
+      "match_by_caption": "相同初始状态 $x(0)=x_0,\\dot x(0)=0$ 下的三种阻尼响应。",
+      "restore": true,
+      "verdict": "三种阻尼响应均满足相同初态，曲线值得恢复。",
+      "issues": [
+        "图中 x/x0 隐含 x0 不为0，建议图注明确 x0>0。",
+        "建议增加若干横轴刻度和 x/x0=1、0 的标记，读图更明确；无需改变数学表达式。"
+      ],
+      "recommended_tikz": "\\begin{tikzpicture}[x=1cm,y=1.5cm]\n\\draw[->](0,0)--(8.7,0)node[right]{$\\omega_0t$};\\draw[->](0,-.6)--(0,1.3)node[above]{$x/x_0$};\n\\foreach \\t in {2,4,6,8}{\\draw(\\t,0)--(\\t,-.035)node[below,font=\\small]{$\\t$};}\n\\draw(0,1)--(-.08,1)node[left,font=\\small]{$1$};\n\\draw[ink,thick,domain=0:8,samples=160]plot(\\x,{exp(-.25*\\x)*(cos(.9682458*\\x*180/pi)+.2581989*sin(.9682458*\\x*180/pi))});\n\\draw[muted,dashed,thick,domain=0:8,samples=100]plot(\\x,{(1+\\x)*exp(-\\x)});\n\\draw[ink,dotted,very thick,domain=0:8,samples=100]plot(\\x,{1.1708204*exp(-.381966*\\x)-.1708204*exp(-2.618034*\\x)});\n\\node[anchor=west]at(5.2,1.12){实线：$\\gamma/\\omega_0=0.25$};\\node[anchor=west]at(5.2,.85){虚线：$\\gamma/\\omega_0=1$};\\node[anchor=west]at(5.2,.58){点线：$\\gamma/\\omega_0=1.5$};\n\\end{tikzpicture}",
+      "recommended_caption": "相同初始状态 $x(0)=x_0>0,\\dot x(0)=0$ 下的欠阻尼、临界阻尼与过阻尼响应。",
+      "checks": [
+        "gamma/omega0=0.25: omega_d/omega0=sqrt(15)/4=0.9682458366，正弦系数1/sqrt(15)=0.2581988897。",
+        "gamma/omega0=1: (1+tau)e^-tau, tau=omega0t。",
+        "gamma/omega0=1.5: lambda_+=(-3+sqrt5)/2=-0.3819660113, lambda_-=(-3-sqrt5)/2=-2.6180339887；系数1.1708203932与-0.1708203932正确。"
+      ]
+    },
+    {
+      "index": 15,
+      "match_by_caption": "正交电磁场中的回旋运动与漂移",
+      "restore": true,
+      "verdict": "正文解和原曲线正确；建议明确无量纲尺度、方向和参数。",
+      "issues": [
+        "原代码用 x=theta+sin(theta), y=cos(theta)-1，但坐标轴仅标x,y。应写X=omega_c x/v_d、Y=omega_c y/v_d。",
+        "原E箭头与轨迹可能相交，已移到右侧；新增轨迹箭头为theta=pi/2处切向(1,-1)。"
+      ],
+      "recommended_tikz": "\\begin{tikzpicture}[scale=.72]\n\\draw[->](-.5,0)--(13.3,0)node[right]{$X$};\n\\draw[->](0,-3)--(0,1.2)node[above]{$Y$};\n\\draw[ink,thick,domain=0:720,samples=361,variable=\\t]\n plot({\\t*pi/180+sin(\\t)},{cos(\\t)-1});\n\\fill[ink](0,0)circle(2pt)node[above left]{$O$};\n\\draw[force]({pi/2+1},-1)--++(.35,-.35);\n\\foreach \\x in {1,3,5,7,9}{\\node at(\\x,-2.6){$\\odot$};}\n\\node[right]at(9.7,-2.6){$\\vect B$ 向外};\n\\draw[force](12.6,-1.9)--(12.6,-.6)node[right]{$\\vect E$};\n\\draw[force](1,.6)--(3,.6)node[above]{$\\vect v_d$};\n\\foreach \\xx/\\lab in {3.14159265/\\pi,6.28318531/2\\pi,9.42477796/3\\pi,12.56637061/4\\pi}\n {\\draw(\\xx,0)--(\\xx,.08)node[above,font=\\small]{$\\lab$};}\n\\draw(0,-2)--(-.1,-2)node[left]{$-2$};\n\\node at(6.2,-3.55){$X=\\omega_c x/v_d,\\quad Y=\\omega_c y/v_d,\\quad v_d=E/B>0$};\n\\node at(6.2,-4.15){$\\omega_c>0,\\quad V=2v_d,\\quad 0\\leq\\omega_ct\\leq4\\pi$};\n\\end{tikzpicture}",
+      "recommended_caption": "正交匀强电磁场中的回旋与漂移。图取 $\\omega_c=qB/m>0$、$v_d=E/B>0$、$V=2v_d$；箭头给出粒子的行进方向。",
+      "checks": [
+        "X(tau)=tau+sin(tau),Y(tau)=cos(tau)-1，初态(0,0), dX/dtau=2,dY/dtau=0，与V=2v_d一致。",
+        "E沿+y，B沿+z；E cross B沿+x。初始Lorentz合力q(E-VB)e_y=-qE e_y，与向下弯折一致。",
+        "过tau=pi时瞬时速度为零，出现旋轮线尖点；不应改成平滑圆弧。"
+      ]
+    },
+    {
+      "index": 21,
+      "match_by_caption": "加速车厢中的受力图：三力在小车参考系内平衡。",
+      "restore": true,
+      "verdict": "受力与有效重力完全一致，值得恢复。",
+      "issues": [
+        "T的向量(.6947,1.2)与绳方向(1.1,1.9)在约0.05%误差内平行；可使用精确1.1/1.9*1.2以消除不必要误差。",
+        "三条受力矢量按相同尺度严格闭合；车厢外 a0 箭头是加速度，不能误当成作用于小球的第四个力。"
+      ],
+      "recommended_tikz": "\\begin{tikzpicture}\n\\draw[muted,thick](-1.2,-.6)--(-1.2,3.1)--(3.2,3.1)--(3.2,-.6);\\draw[muted](-1.2,-.6)--(3.2,-.6);\n\\coordinate(O)at(1.7,2.8);\\coordinate(P)at(.6,.9);\\draw[thick](O)--(P);\\draw[guide](O)--(1.7,.3);\\fill[ink](P)circle(4pt);\\fill[ink](O)circle(2pt);\n\\draw[force](P)--++(0.6947368421,1.2)node[midway,left=3pt]{$T$};\\draw[force](P)--++(-0.6947368421,0)node[left]{$ma_0$};\\draw[force](P)--++(0,-1.2)node[right]{$mg$};\n\\draw(1.7,2.15)arc(-90:-120.07:.65);\\node at(1.42,1.97){$\\beta$};\\draw[force](3.7,2.5)--(5.2,2.5)node[right]{$a_0$};\\node[align=center]at(4.5,.5){小车参考系\\\\$\\vect g_{\\rm eff}=\\vect g-\\vect a_0$};\n\\end{tikzpicture}",
+      "recommended_caption": "加速车厢中的受力图：三力在小车参考系内平衡。",
+      "checks": [
+        "T_x=ma0、T_y=mg，合力为零；tan(beta)=a0/g。",
+        "绳向左偏，惯性力向左，实际张力向右上。"
+      ]
+    },
+    {
+      "index": 34,
+      "match_by_caption": "平方反比引力的有效势与不同能量；$r_0=L^2/(m\\kappa)$。",
+      "restore": true,
+      "verdict": "有效势曲线、极值和两个转向点均正确；应恢复。",
+      "issues": [
+        "束缚能量线实际取E/(kappa/r0)=-0.32，图注应写出，避免把rp=.625、ra=2.5误当作任意E的常数。",
+        "横轴绘在曲线下方，代表半径刻度而非E=0线，现图已另画E=0虚线，逻辑无误。"
+      ],
+      "recommended_tikz": "\\begin{tikzpicture}[x=1.6cm,y=2.5cm]\n\\draw[->](0,-.73)--(4.7,-.73)node[right]{$r/r_0$};\\draw[->](0,-.73)--(0,.9)node[above]{$U_{\\rm eff}/(\\kappa/r_0)$};\n\\fill[soft](.625,-.68)rectangle(2.5,-.59);\\draw[ink,very thick,domain=.4:4.4,samples=140]plot(\\x,{-1/\\x+.5/(\\x*\\x)});\n\\draw[guide](0,0)--(4.4,0)node[right]{$E=0$};\\draw[guide](.1,.2)--(4.4,.2)node[right,font=\\small]{$E>0$};\\draw[guide](.1,-.32)--(4.4,-.32)node[right,font=\\small]{$E<0$};\n\\draw[dotted](.625,-.73)--(.625,-.32);\\draw[dotted](2.5,-.73)--(2.5,-.32);\\node[below]at(.625,-.73){$r_{\\rm p}$};\\node[below]at(2.5,-.73){$r_{\\rm a}$};\n\\fill[ink](1,-.5)circle(1.4pt)node[above right]{$E_{\\min}$};\\draw[<->,muted](.625,-1.06)--(2.5,-1.06)node[midway,below]{束缚运动区间};\n\\end{tikzpicture}",
+      "recommended_caption": "平方反比引力的有效势与能量分区；$r_0=L^2/(m\\kappa)$。示例束缚能量为 $E/(\\kappa/r_0)=-0.32$，其转向点为 $r_{\\rm p}/r_0=0.625$、$r_{\\rm a}/r_0=2.5$。",
+      "checks": [
+        "W(q)=-1/q+1/(2q²)，W(1)=-.5且W二阶导(1)=1>0。",
+        "W(.625)=W(2.5)=-.32，两个转向点正确。"
+      ]
+    },
+    {
+      "index": 38,
+      "match_by_caption": "球形势阱中的折射轨道；示意取 $b/a=0.6,n=1.5$",
+      "restore": true,
+      "verdict": "轨迹和正文折射关系正确，值得恢复并标记i、j、chi。",
+      "issues": [
+        "原出射方向(1.4,-.7)与给定参数相差0.018度，只是微小示意误差；改为精确方向。",
+        "要标记i与j需延长入口的入射方向，不可把弦与入射方向间角误标为i；该角是i-j。",
+        "虚线为半径法线；图中chi为偏折大小，向下偏折。"
+      ],
+      "recommended_tikz": "\\begin{tikzpicture}[scale=1.1]\n\\draw[ink,thick,fill=soft](0,0)circle(1.8);\n\\coordinate(A)at(-1.44,1.08);\\coordinate(B)at(1.77106908,.32142544);\n\\draw[force](-3,1.08)--(A);\n\\draw[force](A)--(B);\n\\draw[force](B)--++(1.38613962,-.69362594);\n\\draw[guide](A)--(0,0)--(B);\n\\draw[guide](-3,0)--(3.4,0);\n\\draw[guide](A)--++(1.05,0);\n\\draw[guide](B)--++(1.35,0);\n\\draw[<->](-2.6,0)--(-2.6,1.08)node[midway,left]{$b$};\n\\draw[<->](0,0)--(0,-1.8)node[midway,right]{$a$};\n\\draw(A)++(-36.86989765:.95)arc(-36.86989765:0:.95);\n\\node at(-.32,.95){$i$};\n\\draw(A)++(-36.86989765:.55)arc(-36.86989765:-13.29171917:.55);\n\\node at(-.70,.72){$j$};\n\\draw(B)++(0:.8)arc(0:-26.58343834:.8);\n\\node at(2.79,.11){$\\chi$};\n\\node[above left]at(A){入口};\\node[above right]at(B){出口};\n\\node at(0,-2.2){阱内匀速直行，边界处折转};\n\\end{tikzpicture}",
+      "recommended_caption": "球形势阱中的折射轨道。取 $b/a=0.6$、$n=1.5$，入口有 $i\\approx36.87^\\circ$、$j\\approx23.58^\\circ$，总偏折 $\\chi=2(i-j)\\approx26.58^\\circ$。",
+      "checks": [
+        "i=asin(.6), j=asin(.4); chi=26.5834383353度。",
+        "半径1.8时A=(-1.44,1.08),B=(1.7710690801,.3214254401)，两点均在圆上。",
+        "内部弦方向角=-(i-j)，出口速度角=-2(i-j)。"
+      ]
+    },
+    {
+      "index": 39,
+      "match_by_caption": "不同径向幂次的有效势；左图 $L^2/(2mKa)=0.2$，右图 $L^2/(2mC)=0.5$",
+      "restore": true,
+      "verdict": "两种势能的极值性质正确，但原图外侧势垒几乎不可读；应恢复并增加定量局部放大。",
+      "issues": [
+        "左图极小值q=.4300024170,W=-.4311460829；外侧极大值q=3.8375185906,W=.0079660876。原图该峰距横轴约0.24mm，需放大。",
+        "右图峰值q=1.1461932206,W=.1386522042，建议明确标出。",
+        "图注宜称“指数屏蔽势的有效势”，避免与没有指数的纯幂律势混同。",
+        "新增完整TikZ采用显式坐标缩放，无新增包依赖；编译后需重点检查放大框刻度标签与主轴的视觉间隔。"
+      ],
+      "recommended_tikz": "\\begin{tikzpicture}[x=1cm,y=1cm]\n% Left panel: screened inverse-first-power potential.\n\\begin{scope}\n\\draw[->](.16,0)--(4.85,0)node[right]{$q$};\n\\draw[->](.16,-1.55)--(.16,3.15)node[above]{$W/(K/a)$};\n\\draw[ink,thick,domain=.2:5.6,samples=240,variable=\\q]\n plot({.8*\\q},{3*(.2/(\\q*\\q)-exp(-\\q)/\\q)});\n\\foreach \\q in {1,3,5}{\\draw({.8*\\q},0)--++(0,-.07)node[below,font=\\small]{$\\q$};}\n\\fill[ink](.34400193,-1.29343825)circle(1.7pt);\n\\draw[muted](.34400193,-1.29343825)--(1.15,-1.23);\n\\node[anchor=west,font=\\small]at(1.15,-1.23){稳定极小值};\n\\node[align=center]at(2.45,-2.05){$U_1=-K\\mathrm e^{-q}/r$\\\\$L^2/(2mKa)=0.2$};\n\\begin{scope}[shift={(1.45,.65)},font=\\scriptsize]\n\\filldraw[fill=white,draw=muted](-.08,-.15)rectangle(2.7,1.66);\n\\node[font=\\scriptsize] at(1.31,1.46){外侧势垒放大};\n\\draw[->](.3,.3)--(2.48,.3)node[right]{$q$};\n\\draw[->](.3,.3)--(.3,1.27);\n\\begin{scope}\n\\clip(.3,.3)rectangle(2.42,1.28);\n\\draw[ink,thick,domain=2.5:7,samples=160,variable=\\q]\n plot({.3+.46*(\\q-2.5)},{.3+100*(.2/(\\q*\\q)-exp(-\\q)/\\q)});\n\\end{scope}\n\\fill[ink](.91525855,1.09660876)circle(1.3pt);\n\\draw[dotted](.3,1.09660876)--(.91525855,1.09660876)--(.91525855,.3);\n\\node[anchor=east]at(.25,1.0966){$0.008$};\n\\node[below]at(.91525855,.3){$3.84$};\n\\node[below]at(2.37,.3){$7$};\n\\end{scope}\n\\end{scope}\n% Right panel: screened inverse-second-power potential.\n\\begin{scope}[xshift=6.55cm]\n\\draw[->](.16,0)--(4.85,0)node[right]{$q$};\n\\draw[->](.16,-1.55)--(.16,2.15)node[above]{$W/(C/a^2)$};\n\\draw[ink,thick,domain=.5:5.6,samples=240,variable=\\q]\n plot({.8*\\q},{3*(.5-exp(-\\q))/(\\q*\\q)});\n\\foreach \\q in {1,3,5}{\\draw({.8*\\q},0)--++(0,-.07)node[below,font=\\small]{$\\q$};}\n\\fill[ink](.91695458,.41595661)circle(1.7pt);\n\\draw[muted](.91695458,.41595661)--(1.6,1.05);\n\\node[align=left,anchor=west,font=\\small]at(1.6,1.1){不稳定势垒顶\\\\$q\\approx1.146$};\n\\node[align=center]at(2.45,-2.05){$U_2=-C\\mathrm e^{-q}/r^2$\\\\$L^2/(2mC)=0.5$};\n\\end{scope}\n\\end{tikzpicture}",
+      "recommended_caption": "两种指数屏蔽势的有效势，$q=r/a$。左图兼有稳定势阱和很低的外侧势垒，框内放大势垒附近；右图只有不稳定势垒顶。",
+      "checks": [
+        "左图驻点满足q(1+q)e^-q=.4，其两正根分别在黄金比(1+sqrt5)/2两侧，符号与正文稳定性一致。",
+        "右图驻点满足(2+q)e^-q=1，有唯一正根且二阶导负。",
+        "左图q->0有效势正无穷，右图q->0负无穷；两图外侧均从正侧趋于0。"
+      ]
+    }
+  ],
+  "extra_candidates": [
+    {
+      "topic": "对称双势阱定量图",
+      "priority": "high",
+      "reason": "原PPT potential_curve是单阱加势垒模型，不能展示正文四个转向点与两个分离允许区间；双势阱定量图有独立价值。",
+      "recommended_parameters": "U/U0=(q²-1)²。低能量epsilon=.36给转向点q=±sqrt1.6≈±1.2649111、±sqrt.4≈±.6324555。另画临界epsilon=1与越阱epsilon=1.44，后者转向点±sqrt2.2≈±1.4832397。",
+      "insert_near": "\\subsubsection*{补充计算：对称双势阱}",
+      "notes": "能量线配不同线型，标出x=0的势垒；低能量用两个水平阴影区间，而不能把中间禁阻区也涂成允许。标题/图注正常编号，不需标补充绘制。"
+    },
+    {
+      "topic": "弹簧摆的6秒定量轨迹和能量误差",
+      "priority": "optional",
+      "reason": "目前使用PPT原GIF代表帧不能直接对应正文dt=.001s与0..6s，若正文要声称数值验证，可追加按指定初态算出的坐标曲线及误差表。",
+      "initial_state": "m=1,k=40,l=1,g=9.8;x=-1,y=0,vx=vy=0，x向右y向上。",
+      "notes": "这不是必须增加的新知识；若时间有限可仅保留原动画并避免将帧号当物理时间。"
+    }
+  ],
+  "visual_test": {
+    "standalone_pdf": "/tmp/c1-audit-render/audit.pdf",
+    "result": "全部7幅已实际编译查看。三项视觉修订已反映在recommended_tikz：球面纬圈改虚线并删掉挤在m旁的汉字；势阱入口角弧交换半径让i/j分离；Yukawa放大框标题缩短。整体PDF尚待最终复核。"
+  }
+}

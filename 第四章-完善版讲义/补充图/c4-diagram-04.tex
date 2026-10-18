@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(H)at(0,2.3);\coordinate(P)at(3,2.3);
+\draw[->](0,-.4)--(0,3.8)node[above]{转轴 $\Om$};
+\draw[force](O)--(P)node[midway,below right]{$\vect r$};
+\draw[->,muted](H)--(P)node[pos=.38,above=6pt]{$\vect R_\perp$};
+\draw[force](P)--(1.4,2.3)node[pos=.55,below=7pt]{$-\Omega^2\vect R_\perp$};
+\fill(H)circle(2pt)node[left]{$H$};\draw(0,2.1)--(.2,2.1)--(.2,2.3);
+\draw[guide](3,0)--(P);\fill(P)circle(3pt)node[right]{$P$};
+\node[below left]at(O){$O$};\node[align=left,anchor=west]at(4,1.3){$H$ 是垂足\\向轴项指向转轴\\仅取决于 $\vect R_\perp$};
+\end{tikzpicture}

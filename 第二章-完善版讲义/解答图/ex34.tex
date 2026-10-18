@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[thick](-.5,0)--(3.5,0);\draw[very thick](0,0)--(2.7,0);\fill(0,0)circle(4pt)node[above]{$1,m$};\fill(2.7,0)circle(4pt)node[above]{$2,m$};\draw[->](3.2,1.4)--(3.2,.5)node[midway,right]{$v$};\draw[->,thick](2.7,0)--(2.7,1.2)node[left]{$K$};\node at(1.2,-.6){杆水平，球2新碰地};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$1/m_{\rm eff}=1/(2m)+(l/2)^2/I_C=1/m$\\[6pt]$\Downarrow$\\[6pt]$K=(1+e)mv,\quad v_{2y}^+=ev$};
+\end{tikzpicture}

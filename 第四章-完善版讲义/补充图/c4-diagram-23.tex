@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw[ink,thick](-2.4,2.8)--(-2.4,0)--(2.4,0)--(2.4,2.8);
+\fill[soft](-2.4,0)--(2.4,0)--plot[domain=2.4:-2.4,samples=80](\x,{.8+.25*(\x)^2})--cycle;
+\draw[ink,thick,domain=-2.4:2.4,samples=80]plot(\x,{.8+.25*(\x)^2});
+\draw[guide](0,-.2)--(0,3.2);\node[above]at(0,3.2){旋转轴};
+\draw[<->](.2,0)--(.2,.8)node[midway,right]{$z_0$};
+\node[anchor=west,align=left]at(3.0,1.8){$z-z_0=\Omega^2\rho^2/(2g)$\\等压面也是有效势等势面};
+\end{tikzpicture}

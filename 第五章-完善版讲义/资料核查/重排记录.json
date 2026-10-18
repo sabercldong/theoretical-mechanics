@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "example": 86,
+    "exercise": 20
+  },
+  "retained_body_diagrams": 62,
+  "question_drawings": 106,
+  "solution_drawings": 106,
+  "source_derivations": "old derivations retained; explicit-stem conditions restated independently",
+  "new_detail_blocks": 60
+}

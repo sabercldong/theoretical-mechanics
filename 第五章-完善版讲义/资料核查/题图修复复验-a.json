@@ -1,0 +1,259 @@
+{
+  "report": "第五章题图修复复验（前半已报项）",
+  "reviewer": "独立视觉 QA / revision_training_qa",
+  "updated_at": "2026-10-18T08:18:48.236144+08:00",
+  "scope": {
+    "questions": [
+      "ex02",
+      "ex09",
+      "ex18",
+      "ex20",
+      "ex24",
+      "ex25",
+      "ex26",
+      "ex31",
+      "ex36",
+      "ex41",
+      "ex44",
+      "ex51"
+    ],
+    "excluded": "仅回归指定的 12 个修复项；ex01 已通过不重复；不扩展审查其他题图、原图或正文。",
+    "readonly": "未修改题图、主稿或资产。仅写本报告。"
+  },
+  "method": "对更新图册逐页实际看图，针对接触点和质量/力标签放大；结合当前题图源码判定修复状态。图册布局不作为实际题图缺陷。",
+  "status": "passed",
+  "summary": {
+    "requested": 12,
+    "visually_passed": 12,
+    "awaiting_new_render": 0,
+    "remaining_visual_issues_in_latest_reviewed_images": 0,
+    "direction_or_model_errors_in_requested_fixed_items": 0
+  },
+  "viewed_images": [
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/001.png",
+      "sha256": "17463f3a32532eea312dfcaabd595213c324177b26c579f9e6508719b920e0d5",
+      "mtime": "2026-10-18T08:13:32.894371+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/003.png",
+      "sha256": "51f9c158d01fc394e998fc51c7a7fd2688f0971a203540f80a9fe1d39610b919",
+      "mtime": "2026-10-18T08:13:32.925765+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/006.png",
+      "sha256": "70e71c4a3fee447850d57de1fe28adb4ab970a5c5bfdb048a9ec24bafd722c7e",
+      "mtime": "2026-10-18T08:13:32.970060+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/007.png",
+      "sha256": "a874d02239c9f8b9324708e3224c51273cf7b489ab4b341739fe3dcf856cd2ee",
+      "mtime": "2026-10-18T08:13:32.985731+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/008.png",
+      "sha256": "6ec8e799103b1857046e61559e16c165ba6149cecdbfccebb452aab4522007bd",
+      "mtime": "2026-10-18T08:13:33.001062+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/009.png",
+      "sha256": "9a3c696ae886367230c6320f18dcab19a66fc623dce8ab13d3fb502340651670",
+      "mtime": "2026-10-18T08:13:33.014938+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/011.png",
+      "sha256": "90c74a636b3f8cc89b5e59b4a1c981b77ac5d2a662b2a627581e805b80822c16",
+      "mtime": "2026-10-18T08:13:33.047149+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/012.png",
+      "sha256": "e52db6d39ca27158785ca7abba3ef10105ad85bb582876757f32899f7c836b26",
+      "mtime": "2026-10-18T08:13:33.062056+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/014.png",
+      "sha256": "4f504973dabde059ad1efcd782b0dc34dabd160af2c6cb8a63d070203b255c1d",
+      "mtime": "2026-10-18T08:13:33.092059+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/015.png",
+      "sha256": "afda1ad1dc20829147fab70b00f688135fb7cabcf700eac4cf2bf7dce459a3c4",
+      "mtime": "2026-10-18T08:13:33.106367+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/图册/修订版/017.png",
+      "sha256": "7ac427ec87389a26b6ba75133dbafed18ba2429bd3facff4e98a45bcd00b26b6",
+      "mtime": "2026-10-18T08:13:33.134434+08:00",
+      "inspection": "实际查看整页，并对疑似标签区域放大；仅判定本次指定题目。"
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/最后五图/01.png",
+      "sha256": "f74677a70efcc9f383e6732408b48bf5811142aa54b8f2698d5262412103f8bd",
+      "mtime": "2026-10-18T08:17:15.192249+08:00",
+      "inspection": "实际查看独立最新样张，只回归 ex25/ex26；同页其他图不在本次新增范围。"
+    }
+  ],
+  "per_question": [
+    {
+      "question": "ex02",
+      "atlas": "工作文件/图册/修订版/001.png",
+      "source": "题图/ex02.tex",
+      "source_sha256_at_report": "59336a2aa65016e4da5cc77d74a5b206074f5d151e27cbd5fe335efbc883c224",
+      "status": "passed",
+      "observed": "四个自由度子模型均已补齐：单摆、球面质点、直线滚动圆盘、定点空间刚体。s=1、2、1、3 均清晰。"
+    },
+    {
+      "question": "ex09",
+      "atlas": "工作文件/图册/修订版/003.png",
+      "source": "题图/ex09.tex",
+      "source_sha256_at_report": "4136f7caafa32b0ff0c81cd2363ddc5c14e5c3e96e02d193ec8f21fae3affa9f",
+      "status": "passed",
+      "observed": "A 标签已移出接触点黑线和墙线，可辨认；接触几何及反力方向未见新增问题。"
+    },
+    {
+      "question": "ex18",
+      "atlas": "工作文件/图册/修订版/006.png",
+      "source": "题图/ex18.tex",
+      "source_sha256_at_report": "89b5fc06caad84dcc4896d95515faa6db109339fc40c8950a79d8957d5820858",
+      "status": "passed",
+      "observed": "m 已移出质点黑球，重力、极径和角度标签可读。"
+    },
+    {
+      "question": "ex20",
+      "atlas": "工作文件/图册/修订版/007.png",
+      "source": "题图/ex20.tex",
+      "source_sha256_at_report": "17c5a89a12e2b6a2e33ae8ec65508981860f35437db7874f1781ebbdd78f6772",
+      "status": "passed",
+      "observed": "m₂ 已移出黑球，与 m₁ 区分清楚。"
+    },
+    {
+      "question": "ex24",
+      "atlas": "工作文件/图册/修订版/008.png",
+      "source": "题图/ex24.tex",
+      "source_sha256_at_report": "e88fe5fc6a4e8a2802796b2022172557d990760ebcc165f2e3cb3d3d27a3dade",
+      "status": "passed",
+      "observed": "自由质点、平面中心力、球面碗三个子模型均已绘出，约束与坐标对应清晰。"
+    },
+    {
+      "question": "ex25",
+      "atlas": "工作文件/图册/修订版/009.png",
+      "source": "题图/ex25.tex",
+      "source_sha256_at_report": "a0d88a799d4d022e49f4fb8e23006a11ece07f8ab60c3e59116d60842fb8b9d0",
+      "status": "passed",
+      "observed": "m 标签已完整移出黑球，字符清晰；径向与横向速度箭头仍清楚。",
+      "initial_observation": "实际查看的修订版图册中 m 仍与黑球贴叠；当前源码已改 below right=6.0pt，等待更新渲染。",
+      "final_visual_image": "工作文件/最后五图/01.png",
+      "source_sha256_at_final_report": "a0d88a799d4d022e49f4fb8e23006a11ece07f8ab60c3e59116d60842fb8b9d0"
+    },
+    {
+      "question": "ex26",
+      "atlas": "工作文件/图册/修订版/009.png",
+      "source": "题图/ex26.tex",
+      "source_sha256_at_report": "258a77f615c64f4e76383fa51ba1dd8e6b5f642692c1541197049e37b7e304af",
+      "status": "passed",
+      "observed": "m 标签已完整移出黑球；mg 已在重力箭头右侧，与水平 x 轴有清晰间距，重力箭头仍向下。",
+      "initial_observation": "实际查看的修订版图册中 m 仍与黑球贴叠，mg 被水平 x 轴穿过；当前源码已偏移 m 并将 mg 另置 (2.25,.5)，等待更新渲染。",
+      "final_visual_image": "工作文件/最后五图/01.png",
+      "source_sha256_at_final_report": "258a77f615c64f4e76383fa51ba1dd8e6b5f642692c1541197049e37b7e304af"
+    },
+    {
+      "question": "ex31",
+      "atlas": "工作文件/图册/修订版/011.png",
+      "source": "题图/ex31.tex",
+      "source_sha256_at_report": "f817dd0372e5965ff8ee5259120c4af7d889308cd5676c92b8e6f3f6fcd44e4a",
+      "status": "passed",
+      "observed": "“初速为零”已移到 x 轴下方并有清晰间距，两质点 m 均未被黑球覆盖。"
+    },
+    {
+      "question": "ex36",
+      "atlas": "工作文件/图册/修订版/012.png",
+      "source": "题图/ex36.tex",
+      "source_sha256_at_report": "7ff8a02c8148b902942acc091bc57922703a9eb7b0272a73d2d671bb0384a38a",
+      "status": "passed",
+      "observed": "A、B 端点已标出，实线短弧与虚线长弧有对应中文标签；闭合等周线示意保留。"
+    },
+    {
+      "question": "ex41",
+      "atlas": "工作文件/图册/修订版/014.png",
+      "source": "题图/ex41.tex",
+      "source_sha256_at_report": "35689c8e94f5a6a69553fe9148b01d39ac7501d9ecb6831c97317edaec464a9f",
+      "status": "passed",
+      "observed": "球心 C 和接触点 A 均已标出且可读，标注与内滚动几何一致。"
+    },
+    {
+      "question": "ex44",
+      "atlas": "工作文件/图册/修订版/015.png",
+      "source": "题图/ex44.tex",
+      "source_sha256_at_report": "ec3da9726eaf536cfac15a63e00715f8c51730d48f2a7506a588fce3de587598",
+      "status": "passed",
+      "observed": "单弹簧和双弹簧两种模型中的滑块、摆球均统一标为 m，标签清晰。"
+    },
+    {
+      "question": "ex51",
+      "atlas": "工作文件/图册/修订版/017.png",
+      "source": "题图/ex51.tex",
+      "source_sha256_at_report": "b4386a72644f2c3f775112d881eabce189f3120d4fed3cd536ff3d2e1991f91c",
+      "status": "passed",
+      "observed": "滑块和摆球均统一为 m，标签移出黑球后可读。"
+    }
+  ],
+  "issues": [
+    {
+      "id": "ex25-m",
+      "question": "ex25",
+      "severity": "label_overlap",
+      "observed_png": "工作文件/图册/修订版/009.png",
+      "description": "m 左侧仍贴入黑球；已实际放大确认。",
+      "recommendation": "将 m 与黑球拉开距离后重渲染。",
+      "source_repair_observed": "当前源码已使用 node[below right=6.0pt]，待新版 PNG 视觉回归。",
+      "status": "fixed_and_visually_passed",
+      "final_visual_image": "工作文件/最后五图/01.png",
+      "final_conclusion": "最新独立样张中标签与黑球/横轴已分离，无残存覆盖。"
+    },
+    {
+      "id": "ex26-m",
+      "question": "ex26",
+      "severity": "label_overlap",
+      "observed_png": "工作文件/图册/修订版/009.png",
+      "description": "m 左侧仍贴入黑球；已实际放大确认。",
+      "recommendation": "将 m 与黑球拉开距离后重渲染。",
+      "source_repair_observed": "当前源码已使用 node[below right=6.0pt]，待新版 PNG 视觉回归。",
+      "status": "fixed_and_visually_passed",
+      "final_visual_image": "工作文件/最后五图/01.png",
+      "final_conclusion": "最新独立样张中标签与黑球/横轴已分离，无残存覆盖。"
+    },
+    {
+      "id": "ex26-mg",
+      "question": "ex26",
+      "severity": "label_axis_overlap",
+      "observed_png": "工作文件/图册/修订版/009.png",
+      "description": "mg 标签被水平 x 轴穿过。",
+      "recommendation": "将 mg 移到重力箭头右侧，避开 y=0 横轴。",
+      "source_repair_observed": "当前源码已将 mg 独立放在 (2.25,.5)，待新版 PNG 视觉回归。",
+      "status": "fixed_and_visually_passed",
+      "final_visual_image": "工作文件/最后五图/01.png",
+      "final_conclusion": "最新独立样张中标签与黑球/横轴已分离，无残存覆盖。"
+    }
+  ],
+  "final_regression": {
+    "time": "2026-10-18T08:18:48.236144+08:00",
+    "image": "/Users/dongxingxi/Downloads/理论力学/第五章-完善版讲义/工作文件/最后五图/01.png",
+    "sha256": "f74677a70efcc9f383e6732408b48bf5811142aa54b8f2698d5262412103f8bd",
+    "questions": [
+      "ex25",
+      "ex26"
+    ],
+    "conclusion": "两题 3 项标签问题均经实际看图复验通过。本次指定 12 项修复全部通过。",
+    "scope_limit": "仅复看最新独立样张中的 ex25/ex26，未扩展审查其他图或完整 PDF。"
+  }
+}

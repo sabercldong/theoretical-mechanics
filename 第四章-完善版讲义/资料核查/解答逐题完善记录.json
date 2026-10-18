@@ -1,0 +1,680 @@
+{
+  "status": "passed",
+  "examples": 47,
+  "training_questions": 24,
+  "all_solution_regions_updated": 71,
+  "all_material_outside_answers_preserved_exactly": true,
+  "all_equation_and_figure_labels_preserved": true,
+  "original_figures": 47,
+  "explanatory_figures": 47,
+  "question_figures": 71,
+  "steps": 226,
+  "previous_solution_source_characters": 22714,
+  "current_solution_source_characters": 49251,
+  "records": [
+    {
+      "kind": "example",
+      "number": 1,
+      "title": "动系分量恒定的矢量",
+      "previous_source_characters": 253,
+      "current_source_characters": 663,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 2,
+      "title": "惯性空间中固定的水平矢量",
+      "previous_source_characters": 232,
+      "current_source_characters": 701,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 3,
+      "title": "平面转动矩阵的直接核验",
+      "previous_source_characters": 209,
+      "current_source_characters": 778,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 4,
+      "title": "相同竖轴方向不代表相同参考系",
+      "previous_source_characters": 159,
+      "current_source_characters": 574,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 5,
+      "title": "沿旋转径向轴匀速滑动",
+      "previous_source_characters": 185,
+      "current_source_characters": 694,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 6,
+      "title": "加速小车上的转动径向管",
+      "previous_source_characters": 247,
+      "current_source_characters": 547,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 7,
+      "title": "科氏项为零的三种情形",
+      "previous_source_characters": 122,
+      "current_source_characters": 415,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 8,
+      "title": "两处半径的绝对速度与加速度",
+      "previous_source_characters": 556,
+      "current_source_characters": 839,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 9,
+      "title": "旋转射线上的恒绝对速率运动",
+      "previous_source_characters": 636,
+      "current_source_characters": 811,
+      "steps": 3,
+      "labels_preserved": [
+        "eq:constspeed"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 10,
+      "title": "给定摆角与摆角速度的调速器",
+      "previous_source_characters": 180,
+      "current_source_characters": 587,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 11,
+      "title": "同心圆槽中的绝对加速度",
+      "previous_source_characters": 402,
+      "current_source_characters": 611,
+      "steps": 3,
+      "labels_preserved": [
+        "eq:groove"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 12,
+      "title": "相对运动存在但质点绝对静止",
+      "previous_source_characters": 134,
+      "current_source_characters": 478,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 13,
+      "title": "圆槽中心不在转盘轴上",
+      "previous_source_characters": 277,
+      "current_source_characters": 617,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 14,
+      "title": "改变框架不应改变绝对速度",
+      "previous_source_characters": 173,
+      "current_source_characters": 475,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 15,
+      "title": "进动框架与完全随体框架的区别",
+      "previous_source_characters": 540,
+      "current_source_characters": 874,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 16,
+      "title": "在球面上匀速南行",
+      "previous_source_characters": 876,
+      "current_source_characters": 1304,
+      "steps": 5,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 17,
+      "title": "位于转轴上的固定点",
+      "previous_source_characters": 89,
+      "current_source_characters": 506,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 18,
+      "title": "水平转盘上的四个方向",
+      "previous_source_characters": 211,
+      "current_source_characters": 607,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 19,
+      "title": "两直跨段中点的径向比较",
+      "previous_source_characters": 349,
+      "current_source_characters": 635,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 20,
+      "title": "舱内理想液柱的压强差",
+      "previous_source_characters": 220,
+      "current_source_characters": 519,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 21,
+      "title": "轨迹弯曲时的载荷因子",
+      "previous_source_characters": 232,
+      "current_source_characters": 536,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 22,
+      "title": "固定在加速转盘上的物块所需摩擦力",
+      "previous_source_characters": 304,
+      "current_source_characters": 559,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 23,
+      "title": "相对平衡角、张力与临界转速",
+      "previous_source_characters": 620,
+      "current_source_characters": 918,
+      "steps": 4,
+      "labels_preserved": [
+        "eq:rotpend"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 24,
+      "title": "数值相对平衡与小振动",
+      "previous_source_characters": 229,
+      "current_source_characters": 914,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 25,
+      "title": "偏置悬点的平衡角与张力",
+      "previous_source_characters": 358,
+      "current_source_characters": 675,
+      "steps": 3,
+      "labels_preserved": [
+        "eq:offsetpend"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 26,
+      "title": "匀速旋转铰轴上的均匀细杆",
+      "previous_source_characters": 1680,
+      "current_source_characters": 1904,
+      "steps": 5,
+      "labels_preserved": [
+        "eq:rodpend"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 27,
+      "title": "匀速旋转液体的自由表面",
+      "previous_source_characters": 394,
+      "current_source_characters": 691,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 28,
+      "title": "相对运动、侧壁反力与竖直支持力",
+      "previous_source_characters": 700,
+      "current_source_characters": 1026,
+      "steps": 4,
+      "labels_preserved": [
+        "eq:freebead",
+        "eq:beadreaction"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 29,
+      "title": "使珠子相对管匀速向外的驱动力",
+      "previous_source_characters": 182,
+      "current_source_characters": 538,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 30,
+      "title": "两端弹簧与径向槽中的小物块",
+      "previous_source_characters": 535,
+      "current_source_characters": 948,
+      "steps": 4,
+      "labels_preserved": [
+        "eq:springs"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 31,
+      "title": "振动周期与槽壁压力",
+      "previous_source_characters": 298,
+      "current_source_characters": 667,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 32,
+      "title": "经过轴心的匀速直线运动",
+      "previous_source_characters": 243,
+      "current_source_characters": 730,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 33,
+      "title": "赤道与中纬度的离心修正",
+      "previous_source_characters": 689,
+      "current_source_characters": 1029,
+      "steps": 4,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 34,
+      "title": "能否由离心效应复现全部赤道—极点重力差",
+      "previous_source_characters": 177,
+      "current_source_characters": 493,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 35,
+      "title": "沿纬线行驶时的支持力",
+      "previous_source_characters": 641,
+      "current_source_characters": 1081,
+      "steps": 4,
+      "labels_preserved": [
+        "eq:eotvos"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 36,
+      "title": "由十四小时周期反求纬度",
+      "previous_source_characters": 318,
+      "current_source_characters": 631,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 37,
+      "title": "直线等压线对应的地转风",
+      "previous_source_characters": 149,
+      "current_source_characters": 513,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 38,
+      "title": "小容器中的旋涡是否能判别半球",
+      "previous_source_characters": 149,
+      "current_source_characters": 490,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 39,
+      "title": "落体偏移的积分推导",
+      "previous_source_characters": 386,
+      "current_source_characters": 765,
+      "steps": 4,
+      "labels_preserved": [
+        "eq:eastfall"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 40,
+      "title": "百米与五百米落体的数量级",
+      "previous_source_characters": 224,
+      "current_source_characters": 704,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 41,
+      "title": "上抛的落点为什么偏西",
+      "previous_source_characters": 366,
+      "current_source_characters": 668,
+      "steps": 3,
+      "labels_preserved": [
+        "eq:verticalthrow"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 42,
+      "title": "从百米高处向东水平抛出",
+      "previous_source_characters": 301,
+      "current_source_characters": 833,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 43,
+      "title": "由多次落体区分释放偏差与自转偏转",
+      "previous_source_characters": 275,
+      "current_source_characters": 674,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 44,
+      "title": "沿东向拉开后相对静止释放",
+      "previous_source_characters": 745,
+      "current_source_characters": 1181,
+      "steps": 4,
+      "labels_preserved": [
+        "eq:foucaultrest"
+      ]
+    },
+    {
+      "kind": "example",
+      "number": 45,
+      "title": "巴黎、北京与极点",
+      "previous_source_characters": 298,
+      "current_source_characters": 787,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 46,
+      "title": "自由径向滑珠的两种守恒检查",
+      "previous_source_characters": 221,
+      "current_source_characters": 708,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "example",
+      "number": 47,
+      "title": "固定半径物块随盘加速",
+      "previous_source_characters": 171,
+      "current_source_characters": 557,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 1,
+      "title": "固定惯性矢量的动系分量",
+      "previous_source_characters": 282,
+      "current_source_characters": 616,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 2,
+      "title": "已知相对圆周运动求绝对加速度",
+      "previous_source_characters": 249,
+      "current_source_characters": 522,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 3,
+      "title": "加速平动原点上的旋转管",
+      "previous_source_characters": 199,
+      "current_source_characters": 588,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 4,
+      "title": "恒绝对速率的径向滑珠能走多久",
+      "previous_source_characters": 263,
+      "current_source_characters": 568,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 5,
+      "title": "转盘上静止物体的最大转速",
+      "previous_source_characters": 188,
+      "current_source_characters": 467,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 6,
+      "title": "径向自由珠抵达管端的时间",
+      "previous_source_characters": 248,
+      "current_source_characters": 626,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 7,
+      "title": "双弹簧的临界转速与零初条件",
+      "previous_source_characters": 285,
+      "current_source_characters": 573,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 8,
+      "title": "侧壁反力是否做功",
+      "previous_source_characters": 168,
+      "current_source_characters": 534,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 9,
+      "title": "轴上旋转单摆的两类分支",
+      "previous_source_characters": 224,
+      "current_source_characters": 654,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 10,
+      "title": "偏置悬点摆的数值平衡",
+      "previous_source_characters": 357,
+      "current_source_characters": 940,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 11,
+      "title": "均匀旋转杆的稳定倾角",
+      "previous_source_characters": 412,
+      "current_source_characters": 755,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 12,
+      "title": "临界竖直摆是否不稳定",
+      "previous_source_characters": 212,
+      "current_source_characters": 673,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 13,
+      "title": "有效重力是否沿地心径向",
+      "previous_source_characters": 280,
+      "current_source_characters": 724,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 14,
+      "title": "东西向车辆的称重差",
+      "previous_source_characters": 223,
+      "current_source_characters": 581,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 15,
+      "title": "北半球初始向东的惯性圆",
+      "previous_source_characters": 124,
+      "current_source_characters": 514,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 16,
+      "title": "等压线与气旋方向",
+      "previous_source_characters": 171,
+      "current_source_characters": 577,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 17,
+      "title": "从五十米高处落体的偏移",
+      "previous_source_characters": 215,
+      "current_source_characters": 558,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 18,
+      "title": "上抛与落下的东西力为何不抵消位移",
+      "previous_source_characters": 145,
+      "current_source_characters": 483,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 19,
+      "title": "向北水平抛射的落点修正",
+      "previous_source_characters": 200,
+      "current_source_characters": 595,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 20,
+      "title": "东向水平抛射的时间修正是否可忽略",
+      "previous_source_characters": 203,
+      "current_source_characters": 572,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 21,
+      "title": "复解是否符合静止释放",
+      "previous_source_characters": 188,
+      "current_source_characters": 624,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 22,
+      "title": "进动周期与惯性圆周期的比较",
+      "previous_source_characters": 226,
+      "current_source_characters": 636,
+      "steps": 3,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 23,
+      "title": "旋转弹簧系统的雅可比量",
+      "previous_source_characters": 252,
+      "current_source_characters": 680,
+      "steps": 4,
+      "labels_preserved": []
+    },
+    {
+      "kind": "exercise",
+      "number": 24,
+      "title": "恒速转动系中的静态势与惯性静态势",
+      "previous_source_characters": 465,
+      "current_source_characters": 736,
+      "steps": 4,
+      "labels_preserved": []
+    }
+  ],
+  "baseline_tex_sha256": "f467a9cda3b2013f0e6094aea343bf0cd82a49e614d065feb9e16c5a4a860f27",
+  "current_tex_sha256": "8b4555e2035b8669d743220bb350f035302410da107fc033eeccd8a85c0a82c7"
+}

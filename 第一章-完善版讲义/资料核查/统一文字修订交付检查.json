@@ -1,0 +1,24 @@
+{
+  "chapter": 1,
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/PDF/第一章-质点力学讲义.pdf",
+  "official_pdf": "/Users/dongxingxi/Downloads/理论力学/第一章-完善版讲义/第一章-质点力学讲义-完善版.pdf",
+  "source_zip": "/Users/dongxingxi/Downloads/理论力学/讲义统一修订/可编辑源码/第一章-质点力学-完善版LaTeX源码及图片.zip",
+  "official_zip": "/Users/dongxingxi/Downloads/理论力学/第一章-完善版讲义/第一章-质点力学-完善版LaTeX源码及图片.zip",
+  "top_directory": "第一章-质点力学源码",
+  "main_filename": "第一章-质点力学讲义-完善版.tex",
+  "pages": 125,
+  "examples": 79,
+  "exercises": 25,
+  "original_assets": 61,
+  "diagram_files": {
+    "补充图": 8
+  },
+  "embedded_TikZ": 0,
+  "zip_entries": 71,
+  "warnings": [],
+  "pdf_sha256": "9acacda26fbd97b677a2c0c52923bbd8fdd2701ceeb8dc08085132dbaafe8cd9",
+  "tex_sha256": "9698ea30dc1a2fce713faba0e259ae2292ff3c40fc2b3186edf530ab77568a23",
+  "zip_sha256": "e9f3c485ae75dbe5f22b61e80d29e85677696f293d45956e18ef5ccb061aecc8",
+  "pdf_bytes": 18998395,
+  "zip_bytes": 28050200
+}

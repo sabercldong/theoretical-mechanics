@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.94]
+\draw[guide](0,0)circle(2.0);
+\foreach \a in {0,-15,-30,-45,-60}{\draw[ink]({-2*cos(\a)},{-2*sin(\a)})--({2*cos(\a)},{2*sin(\a)});}
+\draw[->,thick](2.3,0)arc(0:-60:2.3);\node[right]at(2.5,-.8){$-\sigma t$};
+\node[anchor=west,align=left]at(4.3,.6){各直线表示不同慢时刻的主轴\\虚线圆是振幅端点包络\\摆球仍以快周期往复};
+\end{tikzpicture}

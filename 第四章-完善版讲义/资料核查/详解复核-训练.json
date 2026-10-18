@@ -1,0 +1,491 @@
+{
+  "reviewer": "revision_training_qa",
+  "review_type": "independent_final_solution_content_and_visual_qa",
+  "reviewed_at": "2026-10-17T17:38:48",
+  "document": "第四章-完善版讲义/工作文件/详解终校.pdf",
+  "sha256_expected": "f581f977da9e77a3825d4b82c5ab0eade27a571c6e8cc1243f8c8e0fdd35c458",
+  "sha256_actual": "f581f977da9e77a3825d4b82c5ab0eade27a571c6e8cc1243f8c8e0fdd35c458",
+  "physical_pages_reviewed": [
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116
+  ],
+  "printed_pages_reviewed": [
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+  ],
+  "questions_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "method": [
+    "核对PDF为116页且SHA256与指定固定版本一致。",
+    "使用PyMuPDF把物理页99–116全部按1.5倍渲染，逐页通过view_image实际查看。",
+    "逐题将新增分步解答与同页题干比对，检查推导、符号、条件、极限及所求量覆盖。",
+    "独立数值复算题10、14、17、22；复核其他题核心公式的代数、微分、积分与量纲。",
+    "本轮未重审旧题图来源；未将可选留白美化列为缺陷；没有修改正文或图片。"
+  ],
+  "result": "passed",
+  "summary": {
+    "question_count": 24,
+    "question_passed": 24,
+    "physical_pages_viewed": 18,
+    "substantive_logic_errors": 0,
+    "calculation_errors": 0,
+    "unanswered_requested_parts": 0,
+    "missing_glyphs": 0,
+    "text_or_formula_overflow": 0,
+    "orphan_subheadings": 0,
+    "required_fixes": 0
+  },
+  "issues": [],
+  "independent_numerical_checks": [
+    {
+      "question": 10,
+      "Omega_squared_s_minus2": 12.58623586833384,
+      "Omega_s_minus1": 3.547708537680885,
+      "oscillation_omega_s_minus1": 3.635319471759055,
+      "period_s": 1.7283722533852808,
+      "status": "matches_printed_rounding"
+    },
+    {
+      "question": 14,
+      "support_force_difference_N": 6.18756475883057,
+      "status": "matches_printed_6.19_N"
+    },
+    {
+      "question": 17,
+      "fall_time_s": 3.1927542840705043,
+      "east_displacement_m": 0.006720914682307594,
+      "status": "matches_printed_3.193_s_and_6.72_mm"
+    },
+    {
+      "question": 22,
+      "Foucault_period_h": 27.6371800358382,
+      "inertial_circle_period_h": 13.8185900179191,
+      "status": "matches_printed_27.64_h_and_13.82_h"
+    }
+  ],
+  "questions": [
+    {
+      "question": 1,
+      "physical_pages": [
+        99
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "动系投影、动系矢量导数、运输项逐项写明；二者相加为零，回应全部要求。"
+    },
+    {
+      "question": 2,
+      "physical_pages": [
+        100
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "绝对速度a(Ω+ν)eθ、加速度−a(Ω+ν)²er正确；相对、牵连、科氏项与ν=0、ν=−Ω极限均已检查。"
+    },
+    {
+      "question": 3,
+      "physical_pages": [
+        100,
+        101
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "完整加速度变换包含原点平动项；a(0)=(A−Ω²a)E_X+2ΩuE_Y正确，并检查两个极限。"
+    },
+    {
+      "question": 4,
+      "physical_pages": [
+        101
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "由速度正交分解建立约束、积分、选择首个向外分支；rmax=c/Ω、t*=π/(2Ω)及端点仍有切向绝对速度的解释完整。"
+    },
+    {
+      "question": 5,
+      "physical_pages": [
+        102
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "静摩擦提供向心力；摩擦力矢量与大小、静摩擦上限和最大转速均正确，区分实际摩擦与上限。"
+    },
+    {
+      "question": 6,
+      "physical_pages": [
+        102,
+        103
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "x=a coshΩt、到端时间arcosh(L/a)/Ω、横向压力2mΩ²√(L²−a²)正确；与mg竖直支持力及合接触力的区别清楚。"
+    },
+    {
+      "question": 7,
+      "physical_pages": [
+        103
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "临界值√(2k/m)、临界漂移解、超临界双指数解正确；精确零解与对微扰不稳定明确区分。"
+    },
+    {
+      "question": 8,
+      "physical_pages": [
+        104
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "反力相对功率0、惯性功率2mΩ²xẋ及Ωτz核验正确，并讨论功率符号。"
+    },
+    {
+      "question": 9,
+      "physical_pages": [
+        104,
+        105
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "θ=0与有符号±θ0分支完整；竖直、倾斜分支的线性化符号和稳定性结论正确，说明仅限规定平面自由度。"
+    },
+    {
+      "question": 10,
+      "physical_pages": [
+        105,
+        106
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "偏置几何、两平衡投影、角度方程及线性化完整；Ω、振动角频率和周期独立复算吻合。"
+    },
+    {
+      "question": 11,
+      "physical_pages": [
+        106,
+        107
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "杆质量一阶/二阶矩积分、倾斜平衡、临界转速、小振动频率正确；与杆端模型的临界值和质量分布差别已比较。"
+    },
+    {
+      "question": 12,
+      "physical_pages": [
+        107
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "临界势首个非零项mglθ⁴/8、严格局部能量极小与稳定性解释正确；领先方程θ̈+(g/(2l))θ³=0及振幅依赖周期的说明一致。"
+    },
+    {
+      "question": 13,
+      "physical_pages": [
+        108
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "离心加速度分解、g_N/g_U符号、偏角大小与半球方向正确；说明赤道和极点水平分量为零，并给出正分母适用条件。"
+    },
+    {
+      "question": 14,
+      "physical_pages": [
+        108,
+        109
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "支持力公式保留地球自转、科氏和曲率项；相减得4mΩ_EUcosλ，数值6.19 N复算吻合。"
+    },
+    {
+      "question": 15,
+      "physical_pages": [
+        109,
+        110
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "速度、位置、圆心(0,−U/f)、顺时针旋向及最大南向位移2U/f全部回应；初值与周期一致。"
+    },
+    {
+      "question": 16,
+      "physical_pages": [
+        110
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "径向正向、压强与科氏项符号一致；地转和梯度风方程正确，通常气旋正根及弱梯度极限正确。"
+    },
+    {
+      "question": 17,
+      "physical_pages": [
+        111
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "下落时间3.193 s、东偏6.72 mm复算吻合；说明一阶南北与竖直驱动为零，没有把近似结论误写为任意阶结论。"
+    },
+    {
+      "question": 18,
+      "physical_pages": [
+        111,
+        112
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "从全飞行竖直速度积分得到返回时东西速度0和西偏−4cw0³/(3g²)；速度始终向西的符号分析充分解释位移不抵消。"
+    },
+    {
+      "question": 19,
+      "physical_pages": [
+        112
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "零阶北向速度和下落导致ẍ^(1)=2σv0+2cgt正确；时间无一阶修正、三个落点坐标及两半球方向讨论完整。"
+    },
+    {
+      "question": 20,
+      "physical_pages": [
+        113
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "竖直科氏项给δT=cu0T0/g正确；终点展开同时保留u0δT和落体东偏项，二者比值3u0²/(2gh)正确。"
+    },
+    {
+      "question": 21,
+      "physical_pages": [
+        113,
+        114
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "A=a、B=iσa/κ及复导数推导正确；实虚两初速度均核验，并明确删除正弦项会引入ẏ(0)=−σa。"
+    },
+    {
+      "question": 22,
+      "physical_pages": [
+        114
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "傅科主轴−σ、惯性圆−2σ和360°周期约定区分清楚；27.64 h/13.82 h数值与顺时针方向正确。"
+    },
+    {
+      "question": 23,
+      "physical_pages": [
+        115
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "两弹簧真实势、J表达式及守恒导数正确；E变化率2mΩ²xẋ、角动量和侧壁约束功率关系一致。"
+    },
+    {
+      "question": 24,
+      "physical_pages": [
+        115,
+        116
+      ],
+      "status": "passed",
+      "answers_prompt": true,
+      "substantive_error_found": false,
+      "visual_defect_found": false,
+      "note": "坐标变换得到显含时间的动系势、固定坐标偏导和J导数正确；用惯性能量与转矩交叉核验，完整解释力保守不足以保证J守恒。"
+    }
+  ],
+  "page_visual_checks": [
+    {
+      "physical_page": 99,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 100,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 101,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 102,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 103,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 104,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 105,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 106,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 107,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 108,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 109,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 110,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 111,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 112,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 113,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 114,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 115,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    },
+    {
+      "physical_page": 116,
+      "status": "passed",
+      "notes": "文字和公式可读，无缺字、裁切、正文溢出或孤立分步小标题。"
+    }
+  ],
+  "conclusion": "指定固定版本中，训练题1–24新增详解完整回应题干；本轮未发现需要修正的实质内容或视觉排版问题。"
+}

@@ -1,0 +1,107 @@
+{
+  "review": "第四章整册终校v3变化页独立视觉核查",
+  "reviewer": "c4_model_qa",
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/整册终校-v3.pdf",
+  "pdf_sha256": "09d64ac3bc6842daa8233e1ae36d51448dcadc29db1fc77fec650f369405ff70",
+  "pdf_total_pages": 85,
+  "actual_pages_viewed": [
+    11,
+    12,
+    14,
+    20,
+    23,
+    26,
+    27,
+    28
+  ],
+  "render_scale": 1.5,
+  "digest_method": "PyMuPDF page.get_pixmap(matrix=fitz.Matrix(0.8,0.8), alpha=False).digest.hex()",
+  "status": "passed",
+  "pages": [
+    {
+      "physical_page": 11,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p011.png",
+      "pixmap_digest_0_8": "b4686422788bceaf81be510daca2400d",
+      "checks": "图4.4、图4.5与图题、速度合成及加速度推导均完整；小节标题有足够后续正文，无截断重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 12,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p012.png",
+      "pixmap_digest_0_8": "68c5b13fd0a12f93bc2b4d41b52d4303",
+      "checks": "图4.6原图和距轴距离图题完整；例5题解及分解公式清楚，图文间距正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 14,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p014.png",
+      "pixmap_digest_0_8": "78db54443ff2c491b58d00d4c249737f",
+      "checks": "一般参考系三角示意图4.9、例6题解及后续推导完整；段落分页正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 20,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p020.png",
+      "pixmap_digest_0_8": "229f466cfa4d62310dd141e19d512b43",
+      "checks": "图4.16、图4.17及例12完整；页末留白为后续完整内容块的正常分页，无异常空页或孤立标题。",
+      "issues": []
+    },
+    {
+      "physical_page": 23,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p023.png",
+      "pixmap_digest_0_8": "188dc96e34feda305deb3f3ff110e9a0",
+      "checks": "圆锥原图4.22与图题完整；4.3.7标题紧邻例16，速度、加速度及其模的公式完整，无碰撞。",
+      "issues": []
+    },
+    {
+      "physical_page": 26,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p026.png",
+      "pixmap_digest_0_8": "bef641882aa9614d63dfd142bae0d7ba",
+      "checks": "图4.26、例17及4.4.3欧拉惯性力小节同页衔接正常；原v1大留白已消除，证明公式完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 27,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p027.png",
+      "pixmap_digest_0_8": "43bef217c1d5ed7472bef4101ba524bb",
+      "checks": "图4.27、科氏力小节、公式4.21及原图4.28和图题全部完整；原图未越界，无重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 28,
+      "status": "passed",
+      "actual_visual_check": true,
+      "viewed_render_scale": 1.5,
+      "preview": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/独立终校-v3-a/p028.png",
+      "pixmap_digest_0_8": "3ec7540ac5921d9b84db3cd0ec638b7d",
+      "checks": "图4.29、例18与4.4.5小节及原图4.30完整；标题均伴随后续正文，图题未截断，分页正常。",
+      "issues": []
+    }
+  ],
+  "issues": [],
+  "scope": "按父级提供的v2至v3变更范围，仅复看物理页11、12、14、20、23、26、27、28；本报告核查最终分页、公式和图片完整性、图题邻接、标题题解相邻及重叠截断。未重复全模型物理推导。",
+  "preceding_review": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/资料核查/终稿逐页核查-v2-a.json",
+  "preceding_review_status": "v2物理页1至29逐页1.5倍实际视觉核查passed；v3仅定向复看指定8个变化页。",
+  "limitations": "未在本次独立核查中复核其他页或验证父级页面映射；其他范围由父级及其余核查者负责。"
+}

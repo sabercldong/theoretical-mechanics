@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\draw[guide](0,0)ellipse(2.4 and .8);\fill[ink](0,0)circle(.2)node[left,xshift=-3mm]{太阳};
+\foreach \x/\y in {2.4/0,-2.4/0,0/.8,0/-.8}{
+\draw[fill=soft](\x,\y)circle(.24);
+\draw[force](\x-.14,\y-.35)--(\x+.22,\y+.55);}
+\draw[->](3.5,-.2)--(3.5,1.5)node[above]{$\zeta$};
+\draw[force](3.5,-.2)--(4.1,1.3)node[above right]{$z$};
+\draw(3.5,.6)arc(90:68.2:.8);\node at(3.73,.88){$\varepsilon$};
+\node[align=center]at(0,-1.65){轨道上的轴方向近似平行\\姿态变化与质心公转分别描述};
+\end{tikzpicture}

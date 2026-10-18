@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(A)at(3,0);\coordinate(B)at(1.5,2.598);
+\draw[thick](O)--(A)--(B)--cycle;
+\foreach \P in {O,A,B}{\fill[ink](\P)circle(4pt)node[above left]{$m$};}
+\draw[force](O)--(2.7,1.56)node[right]{$\vect n_1$};
+\node[below left]at(O){$O$};\node[below]at(1.5,0){$a$};
+\end{tikzpicture}

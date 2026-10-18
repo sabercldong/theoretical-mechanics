@@ -1,0 +1,422 @@
+[
+  {
+    "old_caption": "心形线及指定时刻的速度、加速度方向",
+    "original_keys": [
+      "cardioid_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "螺旋线的切线、主法线与变化速率",
+    "original_keys": [
+      "helix_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "球面摆的约束、张力和方位运动",
+    "original_keys": [],
+    "action": "恢复教学图示",
+    "previous_action": "text_and_equations_retained",
+    "model_figure_keys": [
+      "c1-diagram-03"
+    ]
+  },
+  {
+    "old_caption": "移动切线与固定点的垂足",
+    "original_keys": [
+      "pedal_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "固定铰点斜杆与恒速滑动交点，区分于两端滑动的规尺",
+    "original_keys": [
+      "hinged_rod_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "同一运动的极角、圆心角和自然坐标",
+    "original_keys": [
+      "rod_circle_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "反射轨道与镜像展开；两幅图分别强调折返和直线延拓",
+    "original_keys": [
+      "reflecting_ball"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "速率比为二的纯追逐轨道；猎狗速度始终指向野兔的瞬时位置",
+    "original_keys": [
+      "dog_rabbit_pursuit"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "正三角形保持相似，三个顶点沿对数螺线趋于固定中心",
+    "original_keys": [
+      "three_point_pursuit"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "轮缘点的摆线、当前轮位及速度合成；轮心动系只平动。",
+    "original_keys": [
+      "cycloid_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "日心轨道与地心视轨迹；示例 $R_P/R_E=1.7$，角速度比按开普勒关系取值",
+    "original_keys": [
+      "heliocentric_original",
+      "geocentric_mercury_original",
+      "geocentric_venus_original",
+      "geocentric_mars_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "固定岸点收绳及小船的极坐标描述；小船位于所画轨迹上，实际速度沿切线。",
+    "original_keys": [
+      "boat_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "圆凸轮的平动与顶杆的竖直约束",
+    "original_keys": [
+      "cam_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "相同初始状态 $x(0)=x_0,\\dot x(0)=0$ 下的三种阻尼响应。",
+    "original_keys": [],
+    "action": "恢复教学图示",
+    "previous_action": "text_and_equations_retained",
+    "model_figure_keys": [
+      "c1-diagram-14"
+    ]
+  },
+  {
+    "old_caption": "正交电磁场中的回旋运动与漂移",
+    "original_keys": [],
+    "action": "恢复教学图示",
+    "previous_action": "text_and_equations_retained",
+    "model_figure_keys": [
+      "c1-diagram-15"
+    ]
+  },
+  {
+    "old_caption": "欠阻尼隧道运动越过地心，但不能到达另一端表面",
+    "original_keys": [
+      "earth_tunnel"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "从水平位置静止释放的弹簧摆数值轨迹",
+    "original_keys": [
+      "spring_numeric_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "转动直管的水平面俯视图。极坐标建立在地面惯性系中。",
+    "original_keys": [
+      "rotating_tube_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "绳长缩短与小球的渐开线轨迹，图例 $s_0/R=3$",
+    "original_keys": [
+      "cylinder_wrap_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "圆环的两个法向支持分量及切向摩擦",
+    "original_keys": [
+      "friction_ring_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "加速车厢中的受力图：三力在小车参考系内平衡。",
+    "original_keys": [],
+    "action": "恢复教学图示",
+    "previous_action": "text_and_equations_retained",
+    "model_figure_keys": [
+      "c1-diagram-21"
+    ]
+  },
+  {
+    "old_caption": "弹簧滑块与移动悬点单摆",
+    "original_keys": [
+      "slider_pendulum"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "双摆的坐标和约束力；两角均从竖直向下量起",
+    "original_keys": [
+      "double_pendulum"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "穿孔绳约束与两个质量的联合建模；竖直剖面示意，桌面切向速度垂直纸面，$\\odot$ 表示出纸面",
+    "original_keys": [
+      "thread_through_hole"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "用重力矩判断高速陀螺的进动方向",
+    "original_keys": [
+      "gyroscope",
+      "gyroscope_photo"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "凸面上的支持力向外，主法向向内；脱离条件来自单侧接触。",
+    "original_keys": [
+      "fixed_hemicylinder"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "三球静力平衡与连续绳的极限示意",
+    "original_keys": [
+      "three_rods"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "经典反射与量子隧穿；禁阻区的振幅呈指数衰减，采用单独的示意尺度。",
+    "original_keys": [
+      "quantum_tunneling"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "平面法向量与垂直冲量后的轨道面（透视示意）",
+    "original_keys": [
+      "orbital_plane_impulse"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "以力心为焦点的抛物线轨道",
+    "original_keys": [
+      "kepler_parabola"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "固定初始位置、改变横向速率的引力轨道族",
+    "original_keys": [
+      "orbit_speed_family_original",
+      "orbit_angle_family_original"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "行星系中的等速偏折，经过速度平移后成为日心系中的增能",
+    "original_keys": [
+      "gravity_assist"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "平方反比引力的有效势与不同能量；$r_0=L^2/(m\\kappa)$。",
+    "original_keys": [],
+    "action": "恢复教学图示",
+    "previous_action": "text_and_equations_retained",
+    "model_figure_keys": [
+      "c1-diagram-34"
+    ]
+  },
+  {
+    "old_caption": "幂律势的不同稳定性，绘图常数各自归一化",
+    "original_keys": [
+      "powerlaw_stability_negative"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "$U=-r^{-1.1}$ 的数值轨道随描画角度增多呈现进动，轨道按给定初始条件数值计算",
+    "original_keys": [
+      "nonkepler_short",
+      "nonkepler_long"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "保留原长的中心弹簧及两种初速度方向",
+    "original_keys": [
+      "finite_rest_spring"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "球形势阱中的折射轨道；示意取 $b/a=0.6,n=1.5$",
+    "original_keys": [],
+    "action": "恢复教学图示",
+    "previous_action": "text_and_equations_retained",
+    "model_figure_keys": [
+      "c1-diagram-38"
+    ]
+  },
+  {
+    "old_caption": "不同径向幂次的有效势；左图 $L^2/(2mKa)=0.2$，右图 $L^2/(2mC)=0.5$",
+    "original_keys": [],
+    "action": "恢复教学图示",
+    "previous_action": "text_and_equations_retained",
+    "model_figure_keys": [
+      "c1-diagram-39"
+    ]
+  },
+  {
+    "old_caption": "等时摆线及两个释放位置；弧长坐标的势能为严格二次函数",
+    "original_keys": [
+      "tautochrone_force"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "允许终点以前先下降到更低处的最速降线；示意取 $q_B=4.4$",
+    "original_keys": [
+      "brachistochrone"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "黑洞成像与全球望远镜协作的概念图；非观测照片",
+    "original_keys": [
+      "blackhole_models"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "向高处传播的光在静止接收者处发生红移，波形为示意",
+    "original_keys": [
+      "gravitational_redshift"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "光线向引力源弯折，偏折在图中放大显示",
+    "original_keys": [
+      "light_deflection"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "近日点方向的进动",
+    "original_keys": [
+      "mercury_precession"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "移动半圆柱的水平反冲与脱离条件",
+    "original_keys": [
+      "moving_hemicylinder"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  },
+  {
+    "old_caption": "微观热运动与机械能的联系",
+    "original_keys": [
+      "thermal_motion"
+    ],
+    "action": "保留原图",
+    "previous_action": "source_figure",
+    "model_figure_keys": []
+  }
+]

@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,3);\coordinate(P)at(1.5,.9);\draw[guide,->](O)--(0,-.35)node[below]{$z$};\draw[thick,ink](O)--(P)node[midway,above right]{$l$};
+\draw[guide](0,.9)ellipse(1.5 and .38);\draw[guide](P)--(0,.9);\fill[ink](P)circle(3pt)node[right]{$m$};
+\draw[->](0,2.3)arc(-90:-54.46:.7);\node at(.3,2.1){$\theta$};
+\draw[force](P)--++(-.65,.91)node[midway,left=3pt]{$T$};\draw[force](P)--++(0,-1)node[right]{$mg$};
+\draw[force](P)--++(0,.8)node[above right]{$\vect e_\varphi$};\node[above]at(O){$O$};
+\node[align=left,anchor=west]at(3,2){绕竖直轴的角动量守恒\\$ml^2\sin^2\theta\,\dot\varphi=mC$\\轨迹一般不是一个平面圆};
+\end{tikzpicture}

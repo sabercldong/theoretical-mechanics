@@ -1,0 +1,616 @@
+[
+  {
+    "key": "c3-3-p005-mass-element",
+    "deck": "c3-3",
+    "page": 5,
+    "topic": "3.5.1 从质元求角动量和动能",
+    "caption": "定点转动中质元的位置矢量、动量与角速度",
+    "crop_rect_pt": [
+      4,
+      7,
+      185,
+      159
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p005-mass-element.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p005-mass-element.png",
+    "insert_after": "全部质元共享同一角速度，线速度却随位置改变。",
+    "related_model_indices": [],
+    "notes": "第3、5、6页为同一质元图，选第5页的完整图形；保留质元位置、动量与角速度全部标记。",
+    "sha256": "990067cad9e6a3008529763c6d8b4bd703a11e6b27379f8deedc430b44aa444e",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p009-cube-center",
+    "deck": "c3-3",
+    "page": 9,
+    "topic": "3.5.6 同一个正方体在两个原点下的惯量",
+    "caption": "以正方体质心为原点的本体坐标轴",
+    "crop_rect_pt": [
+      570,
+      100,
+      720,
+      266
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p009-cube-center.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p009-cube-center.png",
+    "insert_after": "\\example{同一个正方体在两个原点下的惯量}",
+    "related_model_indices": [
+      27
+    ],
+    "notes": "",
+    "sha256": "584dbbeeace73a2f7255c5b160f176ea66522c63af04d4b74b6cd02f2f074ed8",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p011-cube-vertex",
+    "deck": "c3-3",
+    "page": 11,
+    "topic": "3.5.6 同一个正方体在两个原点下的惯量",
+    "caption": "以正方体顶点为原点、沿棱建立的本体坐标轴",
+    "crop_rect_pt": [
+      570,
+      64,
+      720,
+      239
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p011-cube-vertex.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p011-cube-vertex.png",
+    "insert_after": "\\paragraph{顶点原点的直接积分。}",
+    "related_model_indices": [
+      27
+    ],
+    "notes": "",
+    "sha256": "a5d4706f7818295b3fa6562408d8fba743450fff02cbb14de269662403488984",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p013-parallel-axes",
+    "deck": "c3-3",
+    "page": 13,
+    "topic": "3.5.2 连续、离散描述与惯量的变换",
+    "caption": "两条平行转轴及其垂直间距",
+    "crop_rect_pt": [
+      565,
+      118,
+      697,
+      249
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p013-parallel-axes.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p013-parallel-axes.png",
+    "insert_after": "轴向平移不改转轴；偏离质心的平行轴惯量只增不减。",
+    "related_model_indices": [],
+    "notes": "",
+    "sha256": "8032d9c8ae2904f767b09a15ca5279e889e9da99e24bc6eab04bb043444f0837",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p013-perpendicular-axes",
+    "deck": "c3-3",
+    "page": 13,
+    "topic": "3.5.2 连续、离散描述与惯量的变换",
+    "caption": "薄片面内两轴与垂直于片面的转轴",
+    "crop_rect_pt": [
+      478,
+      307,
+      716,
+      431
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p013-perpendicular-axes.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p013-perpendicular-axes.png",
+    "insert_after": "一般体则 $I_x+I_y-I_z=2\\int z^2\\dd m\\ge0$，不能照搬薄片的等号。",
+    "related_model_indices": [],
+    "notes": "",
+    "sha256": "13679dbd787d5e8106e1ec2948eb425deccd2e6014ef79570eee782edb340a06",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p014-rod-direction",
+    "deck": "c3-3",
+    "page": 14,
+    "topic": "3.5.5 质量对称性与常见实体的积分",
+    "caption": "细杆的方向惯量：图中杆沿 $x$、夹角为 $\\theta$，对应正文杆沿 $z$、夹角为 $\\alpha$ 的同一关系",
+    "crop_rect_pt": [
+      587,
+      301,
+      720,
+      470
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-3-original-labels.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p014-rod-direction.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p014-rod-direction.png",
+    "insert_after": "忽略截面厚度使张量半正定，在求反矩阵时必须处理这个退化。",
+    "related_model_indices": [
+      25
+    ],
+    "notes": "工作副本仅保留课件原有细杆图组，解除邻接无关公式造成的裁剪冲突；无重绘。图中杆沿x、θ为夹角，正文杆沿z、α为夹角，图题已说明。",
+    "sha256": "103e5d64433525374828924eaa6d2365765f08e221521cb010e1155929a49419",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p015-body-bases",
+    "deck": "c3-3",
+    "page": 15,
+    "topic": "3.5.2 连续、离散描述与惯量的变换",
+    "caption": "同一刚体上选择两组本体坐标轴",
+    "crop_rect_pt": [
+      508,
+      0,
+      715,
+      153
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p015-body-bases.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p015-body-bases.png",
+    "insert_after": "\\paragraph{转动基底：明确映射方向。}",
+    "related_model_indices": [],
+    "notes": "",
+    "sha256": "9ab36a90421f597994677819edd5e7bc8b17e370db05da0253c25a3bc001b4f7",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p019-paired-symmetry",
+    "deck": "c3-3",
+    "page": 19,
+    "topic": "3.5.5 质量对称性与常见实体的积分",
+    "caption": "绕 $z$ 轴半周旋转对应的成对质元：$(x,y,z)$ 与 $(-x,-y,z)$",
+    "crop_rect_pt": [
+      456,
+      0,
+      718,
+      234
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p019-paired-symmetry.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p019-paired-symmetry.png",
+    "insert_after": "\\paragraph{镜面对称怎样消去积分？}",
+    "related_model_indices": [
+      24,
+      25
+    ],
+    "notes": "",
+    "sha256": "e46196ef3f5b8c8863ebfffba42e21c8e226006e1245815b4474b1746ba49e08",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p021-lamina-axes",
+    "deck": "c3-3",
+    "page": 21,
+    "topic": "3.5.5 质量对称性与常见实体的积分",
+    "caption": "矩形薄片与椭圆薄片的几何主轴",
+    "crop_rect_pt": [
+      89,
+      187,
+      577,
+      377
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p021-lamina-axes.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p021-lamina-axes.png",
+    "insert_after": "二者几何主轴方向相同，质量分布与数值惯量不同。",
+    "related_model_indices": [
+      25
+    ],
+    "notes": "",
+    "sha256": "60bf81757dd4703c3175133a106ea8d4d0679755fbe2cf738d9bc6a495584b85",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p022-symmetry-examples",
+    "deck": "c3-3",
+    "page": 22,
+    "topic": "3.5.5 质量对称性与常见实体的积分",
+    "caption": "旋转对称、镜面对称与四重旋转对称的例子；推断主轴还需相应的质量分布对称性",
+    "crop_rect_pt": [
+      0,
+      104,
+      720,
+      398
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p022-symmetry-examples.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p022-symmetry-examples.png",
+    "insert_after": "\\figend{离散旋转对称也能确定一组主轴与横向主惯量的相等性}",
+    "related_model_indices": [
+      24,
+      25
+    ],
+    "notes": "保留课件照片及水印、标记；用于说明几何对称性，惯量主轴推断还须满足正文的质量分布对称条件。",
+    "sha256": "7f48a8bc58f18167de5756ac804181eecb373b2da19dbb30d46f86577153a15b",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p024-octant-sphere",
+    "deck": "c3-3",
+    "page": 24,
+    "topic": "3.5.7 八分之一球的完整张量计算",
+    "caption": "第一卦限球体的边界与球心坐标轴",
+    "crop_rect_pt": [
+      478,
+      90,
+      675,
+      311
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p024-octant-sphere.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p024-octant-sphere.png",
+    "insert_after": "\\figend{第一卦限球体有排列对称性，却没有三个坐标镜面对称面}",
+    "related_model_indices": [
+      29
+    ],
+    "notes": "",
+    "sha256": "1d1efdac8ada447534314dee49018a5709186c8b1a57d7319233f3cd8749e70d",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p038-solid-sphere",
+    "deck": "c3-3",
+    "page": 38,
+    "topic": "3.5.5 质量对称性与常见实体的积分",
+    "caption": "均匀实心球的球心主轴",
+    "crop_rect_pt": [
+      476,
+      46,
+      697,
+      252
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p038-solid-sphere.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p038-solid-sphere.png",
+    "insert_after": "\\example{均匀实心球的惯量}",
+    "related_model_indices": [
+      25
+    ],
+    "notes": "",
+    "sha256": "05bd5bb3bc7e30925cfbf28401329ee068f340be867a7d06e5dfb6269d6b384f",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p042-hemisphere-pair",
+    "deck": "c3-3",
+    "page": 42,
+    "topic": "3.5.5 质量对称性与常见实体的积分",
+    "caption": "由两个同密度半球组成完整球：两者共用球心原点",
+    "crop_rect_pt": [
+      7,
+      79,
+      665,
+      287
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p042-hemisphere-pair.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p042-hemisphere-pair.png",
+    "insert_after": "\\figend{半球的球心不在质心处；平移只改变横向轴惯量}",
+    "related_model_indices": [
+      26
+    ],
+    "notes": "只保留第42页几何图；第43页质心惯量公式错误，未复制，讲义正确给出83/320、83/320、2/5。",
+    "sha256": "953c64a267203539f794b5b10868f2f254700ebc513ff01f6dea1a6271d6868f",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p047-triangle-masses",
+    "deck": "c3-3",
+    "page": 47,
+    "topic": "3.5.6 三个质点组成的等边三角刚体",
+    "caption": "三个等质量质点构成的等边三角刚体；原点取左下顶点",
+    "crop_rect_pt": [
+      571,
+      0,
+      720,
+      166
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p047-triangle-masses.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p047-triangle-masses.png",
+    "insert_after": "\\figend{离散惯量求和与等边三角形的顶点主轴}",
+    "related_model_indices": [
+      28
+    ],
+    "notes": "",
+    "sha256": "f0823f93104a3dedd775876ea82cbaae235bf6135be3ca3dc0d889066298ce18",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-3-p049-gyroscope-axes",
+    "deck": "c3-3",
+    "page": 49,
+    "topic": "3.5.8 复杂转动中的动能检查",
+    "caption": "圆盘姿态与空间轴 $(\\xi,\\eta,\\zeta)$、本体轴 $(x,y,z)$；图中 $O$ 为盘心，正文悬点距盘心为 $h$",
+    "crop_rect_pt": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-3.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p049-gyroscope-axes.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-3-p049-gyroscope-axes.png",
+    "insert_after": "\\example{固定点上方的圆盘陀螺动能}",
+    "related_model_indices": [],
+    "notes": "从PPT内嵌GIF提取第0帧，保留全部轴标。此图显示姿态，不把图中O直接当成正文悬点；正文圆盘质心至悬点距离为h。",
+    "source_media": [
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-3-p049-4.gif",
+        "frame_index": 0
+      }
+    ],
+    "sha256": "4f5a6da7983557075237d6e09b0920743f032ccb02dd18dfee4fba18603637cb",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p002-fixed-axis-cases",
+    "deck": "c3-4",
+    "page": 2,
+    "topic": "3.6.1 绕固定轴的动力学与能量",
+    "caption": "定轴转动中的转轴位置：穿过实体内部、边缘或实体之外",
+    "crop_rect_pt": [
+      0,
+      337,
+      680,
+      505
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p002-fixed-axis-cases.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p002-fixed-axis-cases.png",
+    "insert_after": "其中 $I_z$ 为物体关于实际转轴的惯量，恒定。",
+    "related_model_indices": [],
+    "notes": "课件底部三段动画的同一代表时刻；保留原有O与角速度标记。",
+    "sha256": "ee083a803353b1366e5661ee0a1fbe8f26eddb3c3c45c86c2d6cc1227f9ec52f",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p002-axial-translation",
+    "deck": "c3-4",
+    "page": 2,
+    "topic": "3.6.1 绕固定轴的动力学与能量",
+    "caption": "绕轴旋转并沿轴平移的两个时刻：轴向移动使它不属于定轴转动",
+    "crop_rect_pt": null,
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p002-axial-translation.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p002-axial-translation.png",
+    "insert_after": "定轴运动只要求角速度沿轴，并不要求该轴是主轴。",
+    "related_model_indices": [],
+    "notes": "原课件标叉动画提取第0、12帧，使用一致画布保留轴向位置变化；该图不表示角速度改向。",
+    "source_media": [
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-4-p002-50.gif",
+        "frame_index": 0
+      },
+      {
+        "path": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-4-p002-50.gif",
+        "frame_index": 12
+      }
+    ],
+    "sha256": "e9b43119fe57d9852f477275a0ea95f27902ba01da5b7c0e2cadccb74a7f7392",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p003-circular-path",
+    "deck": "c3-4",
+    "page": 3,
+    "topic": "3.6.1 绕固定轴的动力学与能量",
+    "caption": "定轴转动中质元的圆周轨迹；括号内为与本体轴瞬时重合的空间轴标记",
+    "crop_rect_pt": [
+      489,
+      8,
+      716,
+      278
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-4-original-labels.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p003-circular-path.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p003-circular-path.png",
+    "insert_after": "\\subsubsection*{由各点圆周运动到六条整体方程}",
+    "related_model_indices": [],
+    "notes": "为避免LibreOffice把数学标签裁成半字，在工作副本启用PPT内嵌原始PNG后备标签。原始几何、线条及标记不变；兼容记录见原始标签兼容记录.json。",
+    "sha256": "39299c26575216478d8b10e1209cb2b3ee2aba8cf5d12769fab6716c375cecec",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p008-physical-pendulum",
+    "deck": "c3-4",
+    "page": 8,
+    "topic": "3.6.2 物理摆与等效单摆长度",
+    "caption": "复摆的悬点、质心位置与重力；图中 $l,\\theta$ 分别对应正文的 $h,q$",
+    "crop_rect_pt": [
+      483,
+      87,
+      709,
+      345
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p008-physical-pendulum.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p008-physical-pendulum.png",
+    "insert_after": "\\figend{物理摆的重力矩由质心到轴的距离决定}",
+    "related_model_indices": [
+      30
+    ],
+    "notes": "",
+    "sha256": "0cea1476322b7586e577eaeda71e781cb5d38ee5e16e8b09d2c99a103311160b",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p009-tipping-cube",
+    "deck": "c3-4",
+    "page": 9,
+    "topic": "3.6.5 立方体绕地面水平棱倾倒",
+    "caption": "立方体绕地面棱转动的截面与初始角",
+    "crop_rect_pt": [
+      11,
+      139,
+      168,
+      325
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p009-tipping-cube.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p009-tipping-cube.png",
+    "insert_after": "\\figend{立方体倾倒的质心高度随姿态变化}",
+    "related_model_indices": [
+      34
+    ],
+    "notes": "",
+    "sha256": "3001aba357bd85b43c7e8063f12f66dcccb89a319e76842c298637d442de3b7f",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p011-massive-pulley",
+    "deck": "c3-4",
+    "page": 11,
+    "topic": "3.6.5 有惯量定滑轮的两重物系统",
+    "caption": "有质量滑轮两侧的张力、悬挂物与正转方向",
+    "crop_rect_pt": [
+      512,
+      118,
+      712,
+      316
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p011-massive-pulley.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p011-massive-pulley.png",
+    "insert_after": "\\figend{滑轮惯量使两侧张力产生差值}",
+    "related_model_indices": [
+      35
+    ],
+    "notes": "",
+    "sha256": "57c30273d19cc1754219be95ed2b36bf955268b3eb2f142ec80091c73899cd58",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p013-bearing-forces",
+    "deck": "c3-4",
+    "page": 13,
+    "topic": "3.6.3 轴承附加压力的两个来源",
+    "caption": "两轴承约束力与主动外力；图中 $\\vect N_A,\\vect N_B$ 对应正文的 $\\vect R_A,\\vect R_B$，正文将原点移到 $A$",
+    "crop_rect_pt": [
+      478,
+      0,
+      720,
+      272
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-4-original-labels.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p013-bearing-forces.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p013-bearing-forces.png",
+    "insert_after": "\\figend{偏心合力与惯性积力偶共同决定两个轴承的附加反力}",
+    "related_model_indices": [
+      31
+    ],
+    "notes": "采用PPT内嵌原始PNG后备标签兼容导出，避免原公式对象在LibreOffice中截断，几何及符号保持原图。",
+    "sha256": "91f9af89bb2b2dfc23eab0013aa11acbd28d51d3b76a88cc7cc46ee103c45db8",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p018-tilted-disk",
+    "deck": "c3-4",
+    "page": 18,
+    "topic": "3.6.5 倾斜薄圆盘的最大轴承压力",
+    "caption": "倾斜薄圆盘的转轴、主轴与轴承反力；图中 $\\alpha$ 对应正文 $\\beta$，$N$ 的分量对应 $R$ 的分量",
+    "crop_rect_pt": [
+      133,
+      163,
+      563,
+      377
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p018-tilted-disk.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p018-tilted-disk.png",
+    "insert_after": "\\figend{倾斜圆盘质心在轴上，但轴通常不是主轴}",
+    "related_model_indices": [
+      36
+    ],
+    "notes": "",
+    "sha256": "2f715b0c6b2134bf526b532310b47110a33afb4575308aa42c6b6acd3966d6f7",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p019-tilted-disk-3d",
+    "deck": "c3-4",
+    "page": 19,
+    "topic": "3.6.3 轴承附加压力的两个来源",
+    "caption": "倾斜圆盘及轴承反力的空间示意；$N$ 的分量对应正文 $R$ 的分量，右图为动画的一个时刻",
+    "crop_rect_pt": [
+      18,
+      73,
+      709,
+      371
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p019-tilted-disk-3d.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p019-tilted-disk-3d.png",
+    "insert_after": "\\figend{恒速附加反力的方向旋转，总压力由它与固定静态力的合成决定}",
+    "related_model_indices": [
+      32,
+      36
+    ],
+    "notes": "",
+    "sha256": "0539cd9f2e0ef374cf9a480f74bce1ea44e11518c0ff388a0522e735d4841472",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p024-centrifugal-couple",
+    "deck": "c3-4",
+    "page": 24,
+    "topic": "3.6.3 轴承附加压力的两个来源",
+    "caption": "随体旋转参考系中的离心力偶；红箭头表示 $A$ 端附加反力，$B$ 端须有等大反向反力",
+    "crop_rect_pt": [
+      316,
+      270,
+      668,
+      480
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/原图核查-b/c3-4-original-labels.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p024-centrifugal-couple.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p024-centrifugal-couple.png",
+    "insert_after": "\\subsubsection*{由质量分布直接看见合力与力偶}",
+    "related_model_indices": [
+      31
+    ],
+    "notes": "在工作副本仅保留课件原有力偶图对象后导出，避开交错的无关正文、系数式；红、蓝箭头方向及其作用点全部保留。",
+    "sha256": "711173428ead2604873e54ca2f61da2d630bba955115d2be0af1ed1d1564ea4f",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p027-t-rod-loads",
+    "deck": "c3-4",
+    "page": 27,
+    "topic": "3.6.5 T形双杆的瞬时角加速度与轴反力",
+    "caption": "T形双杆的尺寸、重力与顺时针角速度",
+    "crop_rect_pt": [
+      421,
+      120,
+      672,
+      318
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p027-t-rod-loads.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p027-t-rod-loads.png",
+    "insert_after": "\\figend{T形杆的质心偏在横杆中点之外}",
+    "related_model_indices": [
+      37
+    ],
+    "notes": "",
+    "sha256": "2c5f4cba557b954aa3ca3d626c20c0e4a95df7e22a2bfb9f0b1f52a5aa047709",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  },
+  {
+    "key": "c3-4-p028-t-rod-accelerations",
+    "deck": "c3-4",
+    "page": 28,
+    "topic": "3.6.5 T形双杆的瞬时角加速度与轴反力",
+    "caption": "T形双杆两质心的实际加速度方向；图中 $X_O,Y_O$ 对应正文的 $R_{Ox},R_{Oy}$",
+    "crop_rect_pt": [
+      440,
+      55,
+      694,
+      257
+    ],
+    "source_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/工作文件/源课件PDF/理论力学-c3-4.pdf",
+    "output_pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p028-t-rod-accelerations.pdf",
+    "output_png": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/原图/c3-4-p028-t-rod-accelerations.png",
+    "insert_after": "\\subsubsection*{T形杆：惯量、质心和有向加速度逐项求和}",
+    "related_model_indices": [
+      37
+    ],
+    "notes": "",
+    "sha256": "75a7f4839e3f6f9d139f73f83687ba389e1bc4adf84ebdcf001298bef06a8af2",
+    "visual_check": "全部原图及其符号已逐幅放大检查；裁剪不含无关正文，图形/标记完整。"
+  }
+]

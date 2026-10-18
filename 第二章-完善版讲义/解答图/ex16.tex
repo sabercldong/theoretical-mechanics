@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\fill(0,0)circle(3pt)node[below]{$A,m_A$};\fill(2.4,0)circle(3pt)node[below]{$B,m_B$};\draw[thick](0,0)--(2.4,0);\draw[->,thick](2.4,0)--(3.6,1.1)node[above]{$J$};\draw[dashed](2.4,0)--(3.9,0);\draw(3,0)arc(0:42:.6);\node at(3.25,.35){$\alpha$};\node at(1.2,-.8){绳：仅传递沿 $AB$ 的冲量};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
+\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$v_{Ar}=v_{Br}=J\cos\alpha/(m_A+m_B)$\\[6pt]$\Downarrow$\\[6pt]$K=m_AJ\cos\alpha/(m_A+m_B)$};
+\end{tikzpicture}

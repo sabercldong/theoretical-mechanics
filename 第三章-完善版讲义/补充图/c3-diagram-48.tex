@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1.03]
+\draw[fill=soft,thick](0,0)circle(.75);
+\node at(-.2,.15){$A$};
+\draw[force](0,.75)--(1.35,.75)node[right]{$T$};
+\draw[force](0,0)--(0,-1.25)node[right]{$P_1$};
+\draw[->,thick,ink]({.95*cos(-36)},{.95*sin(-36)})arc(-36:215:.95);
+\node[left]at(-.9,-.6){$M_1$};
+\draw[fill=soft,thick](4.6,0)circle(.75);
+\node at(4.4,.15){$B$};
+\draw[force](4.6,.75)--(3.25,.75)node[left]{$T$};
+\draw[force](5.35,0)--(5.35,-1.25)node[right]{$S$};
+\draw[force](4.6,0)--(4.6,-1.25)node[left]{$P_2$};
+\draw[fill=soft,thick](8.6,-.4)rectangle(9.4,.3);
+\node at(9,-.05){$C$};
+\draw[force](9,.3)--(9,1.4)node[right]{$S$};
+\draw[force](9,-.4)--(9,-1.4)node[right]{$P_3$};
+\draw[->,muted](10,-.2)--(10,1.1)node[above]{$a$};
+\node[font=\small]at(4.6,-2.05){轮心轴承反力未画出；关于轮心取矩时不贡献力矩};
+\end{tikzpicture}

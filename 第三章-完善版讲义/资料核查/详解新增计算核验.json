@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "count": 49,
+  "method": "SymPy exact identities and independent numerical substitution",
+  "checks": [
+    {
+      "name": "例3完整叉积",
+      "passed": true
+    },
+    {
+      "name": "例3速率平方",
+      "passed": true
+    },
+    {
+      "name": "例12连杆角加速度",
+      "passed": true
+    },
+    {
+      "name": "例14先y后x",
+      "passed": true
+    },
+    {
+      "name": "例14先x后y",
+      "passed": true
+    },
+    {
+      "name": "例23横向平行轴",
+      "passed": true
+    },
+    {
+      "name": "例24动能分解",
+      "passed": true
+    },
+    {
+      "name": "例39最低点能量",
+      "passed": true
+    },
+    {
+      "name": "例40最短周期驻点",
+      "passed": true
+    },
+    {
+      "name": "例41力偶还原",
+      "passed": true
+    },
+    {
+      "name": "例42静不平衡校正",
+      "passed": true
+    },
+    {
+      "name": "例42偶不平衡校正",
+      "passed": true
+    },
+    {
+      "name": "例43角加速度",
+      "passed": true
+    },
+    {
+      "name": "例44轻物动力学",
+      "passed": true
+    },
+    {
+      "name": "例44重物动力学",
+      "passed": true
+    },
+    {
+      "name": "例44滑轮动力学",
+      "passed": true
+    },
+    {
+      "name": "例45力偶",
+      "passed": true
+    },
+    {
+      "name": "例46总重力矩",
+      "passed": true
+    },
+    {
+      "name": "例46竖直反力",
+      "passed": true
+    },
+    {
+      "name": "例47本体极迹",
+      "passed": true
+    },
+    {
+      "name": "例48平动方程",
+      "passed": true
+    },
+    {
+      "name": "例48转动方程",
+      "passed": true
+    },
+    {
+      "name": "例49平动",
+      "passed": true
+    },
+    {
+      "name": "例49转动",
+      "passed": true
+    },
+    {
+      "name": "例50材料点A加速度",
+      "passed": true
+    },
+    {
+      "name": "例50材料点B加速度",
+      "passed": true
+    },
+    {
+      "name": "例50材料点C加速度",
+      "passed": true
+    },
+    {
+      "name": "例50材料点D加速度",
+      "passed": true
+    },
+    {
+      "name": "例51接触点零速度",
+      "passed": true
+    },
+    {
+      "name": "例52径向方程",
+      "passed": true
+    },
+    {
+      "name": "例52静摩擦系数端点",
+      "passed": true
+    },
+    {
+      "name": "例53轮B动力学",
+      "passed": true
+    },
+    {
+      "name": "例53被提升物体",
+      "passed": true
+    },
+    {
+      "name": "例54竖直力平衡",
+      "passed": true
+    },
+    {
+      "name": "例54水平力平衡",
+      "passed": true
+    },
+    {
+      "name": "例56连杆竖直加速度",
+      "passed": true
+    },
+    {
+      "name": "例56滑块水平加速度",
+      "passed": true
+    },
+    {
+      "name": "例57末水平动量",
+      "passed": true
+    },
+    {
+      "name": "例57接触无滑动",
+      "passed": true
+    },
+    {
+      "name": "例57完整能量损失",
+      "passed": true
+    },
+    {
+      "name": "例61定常方程根sqrt(14) + 4",
+      "passed": true
+    },
+    {
+      "name": "例61定常方程根4 - sqrt(14)",
+      "passed": true
+    },
+    {
+      "name": "例65一阶导数消去",
+      "passed": true
+    },
+    {
+      "name": "例65剩余回复系数",
+      "passed": true
+    },
+    {
+      "name": "例46角加速度",
+      "passed": true,
+      "value": 20.75294117647059
+    },
+    {
+      "name": "例46反力模",
+      "passed": true,
+      "value": 101.28252717729097
+    },
+    {
+      "name": "例66普通频率",
+      "passed": true,
+      "value": 127960574.24588385
+    },
+    {
+      "name": "例66九十度脉冲ms",
+      "passed": true,
+      "value": 0.5861180323861555
+    },
+    {
+      "name": "例66一百八十度脉冲ms",
+      "passed": true,
+      "value": 1.172236064772311
+    }
+  ]
+}

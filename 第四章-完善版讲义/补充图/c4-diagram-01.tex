@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=.95]
+\draw[->](-.3,0)--(4.3,0)node[right]{$X$};\draw[->](0,-.3)--(0,3.8)node[above]{$Y$};
+\draw[force](0,0)--({3*cos(30)},{3*sin(30)})node[right]{$\vect e_1$};\draw[force](0,0)--({-3*sin(30)},{3*cos(30)})node[above]{$\vect e_2$};
+\draw[ink,very thick](0,0)--(1.15,2.35)node[above right]{$\vect G$};
+\draw[guide](1.15,2.35)--(1.88,1.09);\draw[guide](1.15,2.35)--(-.73,1.26);
+\draw[->](.7,0)arc(0:30:.7);\node at(1.05,.26){$\theta$};
+\node[align=left,anchor=west]at(4.7,2.3){$\vect G=G_1\vect e_1+G_2\vect e_2$\\分量与基矢分别变化};
+\node[below left]at(0,0){$O$};
+\end{tikzpicture}

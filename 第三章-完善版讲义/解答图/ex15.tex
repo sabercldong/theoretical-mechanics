@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[gray](-.3,0)--(3.5,0)node[right]{$x$};\fill(.6,0)circle(2pt);\fill(2.7,0)circle(2pt);\draw[->,thick](.6,0)--(.6,1.6)node[above]{$F_1$};\draw[->,thick](2.7,0)--(2.7,1.1)node[above]{$F_2$};\node[below]at(.6,0){$x_1$};\node[below]at(2.7,0){$x_2$};\node at(1.6,-.8){力按 $+y$ 有向取值};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$F=F_1+F_2$\\[6pt]$\Downarrow$\\[6pt]$x_RF=x_1F_1+x_2F_2$};
+\end{tikzpicture}

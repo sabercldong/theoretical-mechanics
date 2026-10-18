@@ -1,0 +1,2 @@
+% 定端正弦振型的平方空间积分为 $l/2$；动能与势能的时间互补使总能量保持不变。
+\begin{tikzpicture}\draw[->](-.3,0)--(5,0)node[right]{$x$};\draw[ink,thick,domain=0:4.5,samples=80]plot(\x,{sin(80*\x)});\draw[guide,domain=0:4.5,samples=80]plot(\x,{-sin(80*\x)});\foreach\x in {0,2.25,4.5}{\fill(\x,0)circle(2pt);}\node[below]at(0,0){$0$};\node[below]at(4.5,0){$l$};\draw[<->](1.125,0)--(1.125,1)node[midway,right]{$A$};\node at(2.3,-1.6){$n=2,\quad\lambda_2=l$};\end{tikzpicture}

@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=1.15]
+\draw[->](-.2,0)--(3,0)node[right]{$X$};\draw[->](0,-.2)--(0,3.4)node[above]{$Y$};
+\draw[ink,thick](0,0)arc(-90:90:1.3);\draw[force]({1.3*cos(-40)},{1.3+1.3*sin(-40)})arc(-40:5:1.3);\draw[guide](0,1.3)circle(1.3);
+\coordinate(P)at(1.126,1.95);\draw[force](0,0)--(P)node[midway,right]{$r$};
+\fill[ink](0,1.3)circle(2pt)node[left]{圆心};\fill[ink](P)circle(3pt)node[above right]{$P$};\draw[force](P)--++(-.5,.866025)node[above right]{$\vect v$};
+\node[above left]at(0,2.6){$r_{\max}=c/\Omega$};
+\node[align=left,anchor=west]at(3.5,1.5){圆半径 $c/(2\Omega)$\\首段对应 $0\le\Omega t\le\pi/2$};
+\end{tikzpicture}

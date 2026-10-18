@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(C)at(1.2,2.2);
+\draw[->](O)--(0,3)node[above]{$\zeta$};
+\draw[line width=2pt,ink](O)--(1.6,2.93)node[above right]{$z$};
+\draw[fill=soft,thick,rotate around={-29:(1.2,2.2)}](1.2,2.2)ellipse(1 and .25);
+\fill(C)circle(3pt)node[right]{$C$};
+\fill(O)circle(3pt)node[below]{$O$};
+\draw[force](C)--(1.2,.9)node[right]{$mg$};
+\draw[guide](O)--(C)node[midway,right]{$l$};
+\draw[thin,muted](0,1.05)arc(90:61.38954:1.05);
+\node at(.28,1.18){$\theta$};
+\end{tikzpicture}

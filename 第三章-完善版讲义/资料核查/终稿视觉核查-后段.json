@@ -1,0 +1,159 @@
+{
+  "pdf": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/第三章-刚体力学讲义-完善版.pdf",
+  "pdf_sha256": "e6ef58f086c98636188419333db3753e37dc7e3ca74b725d1537c7657971b4a2",
+  "physical_page_range": [
+    145,
+    218
+  ],
+  "reviewed_page_count": 74,
+  "status": "completed_with_findings",
+  "reviewer": "c3_originals_b",
+  "review_type": "cross_visual_qa",
+  "method": {
+    "all_pages_overviewed": true,
+    "overview_sheets": [
+      "145-152",
+      "153-160",
+      "161-168",
+      "169-176",
+      "177-184",
+      "185-192",
+      "193-200",
+      "201-208",
+      "209-216",
+      "217-218"
+    ],
+    "figure_physical_pages_enlarged": [
+      145,
+      146,
+      149,
+      150,
+      151,
+      152,
+      158,
+      160,
+      162,
+      167,
+      170,
+      172,
+      183,
+      184,
+      185,
+      188,
+      189,
+      194
+    ],
+    "figure_numbers_reviewed": "3.146–3.176",
+    "figure_count": 31,
+    "appendix_and_table_pages_enlarged": [
+      213,
+      215,
+      216,
+      217,
+      218
+    ],
+    "original_assets_independently_enlarged": [
+      "c3-5-p028-two-wheel-forces",
+      "c3-6-p015-free-top-disc",
+      "c3-6-p018-heavy-top",
+      "c3-6-p025-magnetic-precession"
+    ]
+  },
+  "findings": [
+    {
+      "id": "back-01",
+      "priority": "medium",
+      "physical_page": 146,
+      "printed_page": 142,
+      "figure": "3.147",
+      "asset": "c3-5-p028-two-wheel-forces",
+      "category": "direction_convention_caption",
+      "description": "原图A在右、B在左，ε₁为A逆时针方向，ε₂为B顺时针方向；正文及前页图3.146重新布置为A左、B右，采用两轮统一逆时针为正。现图题只解释T、T′、S，未解释原图与正文转向约定差异。",
+      "requested_fix": "在图题或相邻正文说明：原图ε₁、ε₂分别取各轮提升重物时的转向为正；正文示意采用两轮统一逆时针约定。避免把原图ε₂直接视作正文α₂的有向分量。",
+      "requires_recheck": true
+    },
+    {
+      "id": "back-02",
+      "priority": "low",
+      "physical_page": 172,
+      "printed_page": 168,
+      "figure": "3.169",
+      "asset": "c3-6-p018-heavy-top",
+      "category": "crop_residue",
+      "description": "原图顶边出现两条约1像素的蓝色短横线；独立PNG放大可确认它们贴着裁剪顶边，属于相邻内容残留，不是陀螺图示。当前顶部裁剪坐标为233pt。",
+      "requested_fix": "在保留竖直轴箭头的前提下把裁剪顶部内收约1pt并重导出PDF/PNG；箭头尖端约在当前顶边下4pt。",
+      "requires_recheck": true
+    },
+    {
+      "id": "back-03",
+      "priority": "low",
+      "physical_page": 184,
+      "printed_page": 180,
+      "figure": "3.171",
+      "asset": "c3-6-p021-nutation-tracks",
+      "category": "notation_caption",
+      "description": "原图章动带上、下边界分别标θ₂、θ₁，正文3.9.3使用θ_min、θ_max。图形物理关系正确，但现图题未给这两个原标号与正文的对应。",
+      "requested_fix": "图题末尾补入原图上、下边界分别为θ₂=θ_min、θ₁=θ_max。",
+      "requires_recheck": true
+    }
+  ],
+  "passed_checks": [
+    "74页总览未发现公式越出正文版心、页脚碰撞或孤悬标题。",
+    "31幅图与图题均已逐一放大；除所列残留和符号对应之外，未见标号裁切或不可辨认文字。",
+    "图3.162自由对称陀螺的C>A与C<A方向次序和相邻正文一致。",
+    "图3.165–3.167泊松几何中的不变平面、法向角动量和接触位置对应正确。",
+    "图3.168重陀螺固定点、重力作用方向和倾角定义与正文一致。",
+    "图3.170章动曲线保持向下θ增大，三种初始条件与同页说明相符；原图3.171的上下界符号需按发现3说明。",
+    "图3.172带电圆环的γ符号说明明确；正电荷μ与L同向，负电荷相反。",
+    "图3.174采用γ<0的示例，Ω_L=-γB，沿正B轴端观察为逆时针，与正文分量解相符。",
+    "图3.175原图完整保留，原点上方竖直轴为磁场方向；正文明确γ变号时进动方向反转，图示未额外宣称未标出的电荷符号。",
+    "图3.176核磁脉冲对γ_n>0、共振横向有效场+B₁i′给出由+k翻至+j′，符合γ_n M×B方向。",
+    "物理213页模型选择表与215–218页作业/原图来源索引表完整，表头续接、换行、末行和页码均可读。"
+  ],
+  "scope_notes": "本报告仅交叉审查最终候选PDF的物理145–218页；未修改正文、图或清单。所报告问题已通过协作消息通知父代理。",
+  "final_status": "passed",
+  "latest_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+  "regression_review": {
+    "pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+    "physical_pages_reviewed": [
+      146,
+      172,
+      184
+    ],
+    "page_count": 218,
+    "method": "实际查看最终重渲染的三张整页图、各图题与版式；另独立放大c3-6-p018-heavy-top.png复核裁剪。",
+    "preserved_initial_review": true,
+    "resolutions": [
+      {
+        "finding_id": "back-01",
+        "status": "resolved",
+        "physical_page": 146,
+        "verification": "图3.147图题已清楚说明ε₁、ε₂分别以各轮提升重物时的转向为正，正文两轮统一取逆时针为正；两行图题完整可读，与下文标题保留合理间距，无越界。"
+      },
+      {
+        "finding_id": "back-02",
+        "status": "resolved",
+        "physical_page": 172,
+        "verification": "图3.169顶边两条蓝色残留已消失；竖直轴顶端箭头、倾斜自转箭头、轨迹虚线和mg标号均完整，图题及相邻内容无裁切或碰撞。"
+      },
+      {
+        "finding_id": "back-03",
+        "status": "resolved",
+        "physical_page": 184,
+        "verification": "图3.171图题已明确原图上、下边界分别为θ₂=θ_min、θ₁=θ_max；整行保持在版心内，字号可读，无其他版式异常。"
+      }
+    ],
+    "impact_report": "/Users/dongxingxi/Downloads/理论力学/第三章-完善版讲义/资料核查/终校影响页检查.json",
+    "unchanged_pages_basis": "已读取终校影响页检查.json：全册196页像素与已审版一致；后段审查范围145–218内仅146、172、184发生变化，均已实际回归。",
+    "conclusion": "初轮3项发现全部解决，实际回归的3页未发现新问题；结合初轮145–218共74页全量视觉记录及未变化页面的像素一致性，本代理负责的后段最终视觉核查通过。",
+    "new_findings": []
+  },
+  "parent_final_equivalence_check": {
+    "pdf_sha256": "c00796b3477ce4b6041a818a5ad8ac8d50dcdeded0458886e21cf001b74047ba",
+    "previous_visually_reviewed_pdf_sha256": "b7926a1665349cdaa0dadcc114cd463a12ddb8c0e34739cd35607301b065e1da",
+    "only_changed_page": 108,
+    "within_this_review_scope_all_pages_pixel_identical": true,
+    "evidence": "最终单页修订影响检查.json",
+    "note": "父代理核验：最终变更仅涉及中段108页，本报告负责范围的最终页面与实际已审版本像素完全一致。"
+  }
+}

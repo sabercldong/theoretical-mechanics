@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+\draw[thick](-2,0)arc(180:360:2);\draw[guide](-2,0)--(2,0);
+\coordinate(C)at(2,0);\coordinate(B)at(-1.53208889,-1.28557522);
+\coordinate(D)at(4.59626666,.94496378);
+\draw[line width=1.6pt,ink](B)--(D);
+\draw[guide](0,0)--(B);
+\draw[force](B)--(-.84264889,-.70706637)node[above left]{$N_B$};
+\draw[force](C)--(1.65797986,.93969262)node[above]{$N_C$};
+\draw[force](1.53208889,-.17030572)--(1.53208889,-1.4)node[right]{$mg$};
+\fill(B)circle(2pt)node[below]{$B$};\fill(C)circle(2pt)node[right]{$C$};
+\draw[<->,muted](-1.41,-1.62)--(2.12,-.34)node[midway,below]{$c=BC$};
+\fill(0,0)circle(2pt)node[above]{$O$};
+\fill(1.53208889,-.17030572)circle(2pt)node[above left]{$D$};
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
+\draw[->](0,0)--(2.4,0)node[right]{$\vect e_1,I_1$};\draw[->](0,0)--(-1,-.9)node[below left]{$\vect e_2,I_2$};\draw[->](0,0)--(0,2.4)node[above]{$\vect e_3,I_3$};\draw[->,thick](0,0)--(.4,1.9)node[right]{$\vect\omega$};\node at(.8,-1.6){$I_1<I_2<I_3$};
+
+\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
+\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$I_i\dot\omega_i=(I_j-I_k)\omega_j\omega_k$\\[6pt]$\Downarrow$\\[6pt]$\ddot u+\nu^2u=0\quad\hbox{or}\quad\ddot u-\lambda^2u=0$};
+\end{tikzpicture}

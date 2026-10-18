@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=.9]
+\coordinate(P)at(0,0);\coordinate(A)at(-2,-1);\coordinate(B)at(1,-2);
+\draw[guide](-2.4,-1.2)--(1.6,.8);
+\draw[guide](1.2,-2.4)--(-.9,1.8);
+\fill(A)circle(2pt)node[below left]{$A$};
+\fill(B)circle(2pt)node[below right]{$B$};
+\fill(P)circle(2pt)node[below left]{$P$};
+\draw[force](A)--(-.8,-.4)node[midway,below right]{$\vect F_1$};
+\draw[force](B)--(.4,-.8)node[midway,right]{$\vect F_2$};
+\draw[->,muted](P)--(1.2,.6);
+\draw[->,muted](P)--(-.6,1.2);
+\draw[guide](1.2,.6)--(.6,1.8)--(-.6,1.2);
+\draw[force](P)--(.6,1.8)node[above right]{$\vect F_1+\vect F_2$};
+\end{tikzpicture}

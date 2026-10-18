@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+\draw[guide]plot[domain=0:360,samples=81]({2*cos(\x)-1.4*sin(\x)},{.8*sin(\x)});
+\coordinate(A)at(2,0);\coordinate(B)at(3.06,1.06);
+\draw[->](0,0)--(A)node[midway,below]{$R$};
+\draw[force](A)--(3.9,0)node[right]{$\vect i$};
+\draw[force](A)--(.25,1)node[above left]{$\vect j,\ u$};
+\draw[force](A)--(2,2.1)node[above]{$\vect k$};
+\draw[line width=1.5pt,ink](.94,-1.06)--(B);
+\fill(B)circle(3pt)node[above left]{$B$};
+\draw(2,.75)arc(90:45:.75);\node at(2.39,.88){$\vartheta$};
+\path(A)--(B)node[midway,below right]{$l$};
+\fill(A)circle(2pt)node[below]{$A$};\fill(0,0)circle(2pt)node[left]{$O$};
+\node[align=center]at(1,-1.9){桨轴沿轨道切线 $\vect j$；叶片位于 $(\vect i,\vect k)$ 平面\\空间投影中的直角不一定显示为 $90^\circ$};
+\end{tikzpicture}

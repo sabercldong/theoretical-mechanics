@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=.88]
+\foreach \dx/\sgn/\txt in {0/1/同向：$\nu>0$,6/-1/反向：$\nu<0$}{
+\begin{scope}[shift={(\dx,0)}]
+\draw[ink](0,0)circle(1.6);\coordinate(P)at(1.6,0);\fill(P)circle(3pt)node[below right]{$P$};
+\draw[force](P)--++(0,1.5)node[above right]{$\vect v_t$};
+\draw[force,muted,dashed](P)--++(0,{\sgn*.9})node[pos=.65,left=4pt]{$\vect v'$};
+\draw[->](0,-2)arc(-90:-20:2);\node at(.6,-2.55){$\Omega>0$};
+\node at(.3,2.15){\txt};\node[below left]at(0,0){$O$};
+\end{scope}}
+\node at(3,-3.25){两速度均从 $P$ 出发；$\vect v=a(\Omega+\nu)\vect e_\theta$};
+\end{tikzpicture}

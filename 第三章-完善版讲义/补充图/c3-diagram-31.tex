@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\begin{scope}
+\draw[line width=1.5pt,ink](0,-.2)--(0,4);
+\foreach \z in {.2,3.4}{\draw[fill=soft](-.3,\z-.2)rectangle(.3,\z+.2);}
+\node[right]at(.3,.2){$A$};\node[right]at(.3,3.4){$B$};
+\draw[fill=soft,thick](.6,1.8)ellipse(1.1 and .4);
+\fill(.6,1.8)circle(2pt)node[right]{$C$};
+\draw[guide](0,1.8)--(.6,1.8)node[midway,above]{$e$};
+\draw[force](0,.2)--(-1.1,.2)node[left]{$\Delta R_A$};
+\draw[force](0,3.4)--(-1.1,3.4)node[left]{$\Delta R_B$};
+\node[align=center]at(0,-.8){偏心圆盘\\附加合力指向轴};
+\end{scope}
+\begin{scope}[xshift=5.8cm]
+\draw[line width=1.5pt,ink](0,-.2)--(0,4);
+\foreach \z in {.2,3.4}{\draw[fill=soft](-.3,\z-.2)rectangle(.3,\z+.2);}
+\draw[fill=soft,thick,rotate around={30:(0,1.8)}](0,1.8)ellipse(1.1 and .4);
+\fill(0,1.8)circle(2pt)node[below right]{$C$};
+\draw[force](0,.2)--(1.1,.2)node[right]{$\Delta R_A$};
+\draw[force](0,3.4)--(-1.1,3.4)node[left]{$\Delta R_B$};
+\node[align=center]at(0,-.8){质心在轴上的倾斜盘\\附加力形成力偶};
+\end{scope}
+\end{tikzpicture}

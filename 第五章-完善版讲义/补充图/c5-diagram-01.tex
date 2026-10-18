@@ -1,0 +1,5 @@
+\begin{tikzpicture}[scale=.95]
+\draw[very thick,ink](0,0)--(3,0);\fill(0,0)circle(3pt)node[below=5.0pt]{$A$};\fill(3,0)circle(3pt)node[below=5.0pt]{$B$};\node[above]at(1.5,0){刚性杆：$AB=l$};
+\draw[ink](5,0)..controls(6,-.8)and(7,-.8)..(8,0);\fill(5,0)circle(3pt);\fill(8,0)circle(3pt);\node[above]at(6.5,0){柔绳：$AB\le l$};
+\draw[force](.5,-1.2)--(-.1,-1.2);\draw[force](2.5,-1.2)--(3.1,-1.2);\node at(1.5,-1.7){可拉也可压};\node at(6.5,-1.7){只能传递拉力};
+\end{tikzpicture}

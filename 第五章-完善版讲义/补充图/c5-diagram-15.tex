@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+\coordinate(A)at(-2,0);\coordinate(B)at(0,3.46);\coordinate(C)at(2,0);\coordinate(D)at(-1,1.73);\coordinate(E)at(1,1.73);
+\draw[thick](-2.6,0)--(2.6,0);\draw[very thick,ink](A)--(B)--(C);\draw[very thick,ink](D)--(E);
+\foreach \p in {A,C,D,E}{\fill(\p)circle(3pt)node[above right]{$\p$};}\fill(B)circle(3pt)node[right=4pt]{$B$};
+\draw[force](0,4.6)--(B)node[pos=.3,left]{$P$};\draw[force](D)--++(-1,0)node[left]{$N$};\draw[force](E)--++(1,0)node[right]{$N$};
+\draw[guide](0,0)--(B);\draw(0,2.76)arc(-90:-120.03:.7);\node at(-.28,2.45){$\theta$};\node[below]at(0,1.73){$DE=l$};
+\end{tikzpicture}

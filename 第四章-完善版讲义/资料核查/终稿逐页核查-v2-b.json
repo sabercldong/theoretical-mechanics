@@ -1,0 +1,481 @@
+{
+  "status": "needs_layout_correction",
+  "fixed_pdf": "/Users/dongxingxi/Downloads/理论力学/第四章-完善版讲义/工作文件/整册终校-v2.pdf",
+  "fixed_pdf_sha256": "c57b205a4c462fb218270a3b776c1b453244fc114d0be93328af64fb9496bfa3",
+  "total_pdf_pages": 87,
+  "inspected_physical_pages": [
+    30,
+    58
+  ],
+  "inspection_count": 29,
+  "render_scale": 1.5,
+  "digest_spec": "PyMuPDF page.get_pixmap(matrix=fitz.Matrix(.8,.8),alpha=False).digest.hex()，默认 RGB 与 annots=True",
+  "pages": [
+    {
+      "physical_page": 30,
+      "printed_page": 25,
+      "pixmap_digest_0_8": "e21f5957241e9494922c88d6cb5145c3",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "2a93f03f3f96edd67eebed4e79968c628bbc20ffc273560f746555be03d323dc",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "皮带局部受力图 4.32、飞行器原图 4.33 完整；4.4.6 标题、式子和图题衔接正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 31,
+      "printed_page": 26,
+      "pixmap_digest_0_8": "78687c575b2685fb5b49b90e179fe6eb",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "70bbe0cf1cfdcfc57df31002e404c1963edca07aaba563d883da434b920d20bf",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "例 20、21 题干题解完整，液柱示意及下弯飞行器原图标签均完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 32,
+      "printed_page": 27,
+      "pixmap_digest_0_8": "497a4b9e29ea559ca1b2847ff4176af6",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "28a7d385b5311311d42322de2d1ab8145ce524e5e339410d2b8616e2831a2a07",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "载荷解释、模型 4.36、4.4.7 及例 22 完整邻接；脚注无溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 33,
+      "printed_page": 28,
+      "pixmap_digest_0_8": "59bf8f71ad0c43066fb97080812041a5",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "d809e98a8f6871a1afd164c7826d4efa3ff8eaf6082cf94d3943a7b1ebe56d37",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "4.5 与相对平衡条件、例 23 题解完整；末端张力分支没有截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 34,
+      "printed_page": 29,
+      "pixmap_digest_0_8": "66494ee1348f25af6261eb2571edc780",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "476e6c0c8dc431c5676d09a26779b21ff4e637ef615d9ea8dafb1342f99ec4ea",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.37/4.38、稳定性推导及临界展开完整，图与标题未挤压。",
+      "issues": []
+    },
+    {
+      "physical_page": 35,
+      "printed_page": 30,
+      "pixmap_digest_0_8": "bcaba2a0fd223f28ae0f6cc6bd2bcfb1",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0145fdaea46884786781a4a5355009882aa29d2326972517dce3e1c291828199",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "例 24/25 完整，偏置单摆原图几何和标签保留，图题与解答相邻。",
+      "issues": []
+    },
+    {
+      "physical_page": 36,
+      "printed_page": 31,
+      "pixmap_digest_0_8": "8c025cea058b7ed5efae7e1e7310c48d",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "6d95c085a66911379acf80ddd74b517105a6cf4cc717f8cdb2678bac381c3096",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.40 图题已明确“箭头仅示方向”；原图力箭头/符号完整，图 4.41 与唯一性和稳定性推导清晰。",
+      "issues": []
+    },
+    {
+      "physical_page": 37,
+      "printed_page": 32,
+      "pixmap_digest_0_8": "2568ae300344dbef630aa30e1ff83c86",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "2505e877c5750035fcbdc638e5531e6a81549b77b3953fb01ffbeb363ba3b5ee",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "小振动推导、自由球摆两个扰动方向及联立方程完整，页末特征式无裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 38,
+      "printed_page": 33,
+      "pixmap_digest_0_8": "22d14ffb5f2385e41d01065e6e58ee54",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "7c9f587c1b43ac2d2c5eca99f144787ff1fa9c95b1560148e199a0675da01835",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "承前特征频率正常续排；例 26 复摆原图与正文坐标映射清晰，方程与图题完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 39,
+      "printed_page": 34,
+      "pixmap_digest_0_8": "5adec8f5916c81d0c746baa10efc3024",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "58a3a0f8ef7ca577c5b971fab7b4ab46106122127793ae3649074ff13c2824be",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "复摆稳定性及力矩模型完整；调速器反馈流程框与箭头、图题无重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 40,
+      "printed_page": 35,
+      "pixmap_digest_0_8": "02f2d35e4d7674fac512419c5f2451cd",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "466b09ca39f7680341c3b4369610ea6f9e3c7839431caa496a22a256e94cd4ed",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "调速器原图 4.45 完整，阻尼说明及液面例 27 题解完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 41,
+      "printed_page": 36,
+      "pixmap_digest_0_8": "a1d55069bc8dc8283c548a6905776996",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "c0bcd9cb31b3705b411442851b47f3b0e17f03bc3b16e1b0d8980501d2880550",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "液面图 4.46 完整；4.6 标题与自由滑珠例 28 同页，运动解和侧反力齐全。",
+      "issues": []
+    },
+    {
+      "physical_page": 42,
+      "printed_page": 37,
+      "pixmap_digest_0_8": "60cbfe21ad100e965ae6549c0039c1e2",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "dd5c6e1b0a166955d42259bf8b661f77dff895b0e4c9654cc2e742c0d96a2acd",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "滑珠原图 4.47 的轴、标签与箭头完整，图题说明源轴方向；初值推导、模型 4.48 及变速式齐全。",
+      "issues": []
+    },
+    {
+      "physical_page": 43,
+      "printed_page": 38,
+      "pixmap_digest_0_8": "565bceaafcdb81c84f15fd827a78f70d",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "d7ee802bb21d110ddbde2a8472f9c3b8194fb66981781b6d209896c27a4b0c81",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "例 29/30 完整；双弹簧原图 4.49 边缘干净、无邻文残片，三分支公式无截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 44,
+      "printed_page": 39,
+      "pixmap_digest_0_8": "00ddb0fc42b927ce07058fe232fe57a6",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "078402092b95ba91378b01a1d246ff1dde4a650bab68d9aba52e374acfd62e2e",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "双弹簧侧压力分段式完整；原图 4.50 外缘干净，箭头和标注完整；模型 4.51 不重叠。",
+      "issues": []
+    },
+    {
+      "physical_page": 45,
+      "printed_page": 40,
+      "pixmap_digest_0_8": "749f0a0ee3507949bcd753ca50dc431c",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "ff16e069f40bfdf87766bc6d24534ea7a6cbbee2eeda124f985eeb70f3c332f4",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "例 31、阻尼/摩擦和自由粒子例 32 连续，题干与答案均完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 46,
+      "printed_page": 41,
+      "pixmap_digest_0_8": "e459016188926366d2dd33ba238dd719",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "8dbe30b19329332b3f74a62f871056ce77aefe3d53585569db589c436e73429f",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.52（c4-diagram-26）y 轴标签已移至左侧，与 r=ut 标题不重叠；能量推导及 4.7 标题相邻正文完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 47,
+      "printed_page": 42,
+      "pixmap_digest_0_8": "886abe370db52680f19389277033fa39",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "d0a6f79b6dbb54b8c96986a3a8c0b3bf23c0f4c891870402380d50fc3003de4f",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.53/4.54 完整；改取源第 16 页的当地地球轴图 4.55 完整保全顶端、坐标箭头和标签，映射图题清晰。",
+      "issues": []
+    },
+    {
+      "physical_page": 48,
+      "printed_page": 43,
+      "pixmap_digest_0_8": "23ab3622e4bb3de672ce6e2b2560890b",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "a45275c2e24fd3714d91c75ea80dbc7bdd6b9846ada8437c2be80c9b269869cc",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "有效重力公式、图 4.56 及量值/偏角式齐全，没有图题或标签裁切。",
+      "issues": []
+    },
+    {
+      "physical_page": 49,
+      "printed_page": 44,
+      "pixmap_digest_0_8": "5b9887b5a9d87e25ce96d039ae970eac",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "200a93b1a125d6c71c360c478c1ff2067f07e7c6e3dd12ac39eec8c3c76bda1a",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.57/4.58 原图、模型与图题均完整，例 33 及模型说明清晰；尾段续至下一页导致下一页分页异常。",
+      "issues": []
+    },
+    {
+      "physical_page": 50,
+      "printed_page": 45,
+      "pixmap_digest_0_8": "df4e11b3d0da49411346c60e7b40218b",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "2f8ffee7b615a362a8d92bfb647e834af780737f8c248ef3b173342db11955a9",
+      "status": "needs_layout_correction",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "异常：本页仅页首三行“以地面点为原点…”尾段，其余近九成留白；并非普通图块分页。已报父级，父级确认并修改分页逻辑。",
+      "issues": [
+        "isolated_tail_paragraph_page"
+      ]
+    },
+    {
+      "physical_page": 51,
+      "printed_page": 46,
+      "pixmap_digest_0_8": "d922e75f6339a0a491b16bcd24abafc0",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "b02041c1b57bd2f7c96f76ca2dc047ab3c17839dbb53121d0d89427a442c26b7",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "4.7.4、例 34、4.7.5 和例 35 各式完整，脚注清晰，无截断。",
+      "issues": []
+    },
+    {
+      "physical_page": 52,
+      "printed_page": 47,
+      "pixmap_digest_0_8": "1f050ad6953d29e03a9ebcf7b9eaffab",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "0b781ef70243a2ed42e9cbb60b69d809cef0da57f1a6cd0e4d992afa45c0a84b",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "称重模型图 4.59 与潮汐说明完整；4.8 标题和当地科氏力三分量式同页。",
+      "issues": []
+    },
+    {
+      "physical_page": 53,
+      "printed_page": 48,
+      "pixmap_digest_0_8": "72b201221da8e9a4e5e16580db040aa1",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "07e7efa81dc559b947553546bc37554bab78134a110a3b833c6dcf7d781a42b1",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.60/4.61 速度/水平科氏力箭头及图题完整；惯性圆方程和通解完整无溢出。",
+      "issues": []
+    },
+    {
+      "physical_page": 54,
+      "printed_page": 49,
+      "pixmap_digest_0_8": "ff37bb3bce9e7d8b95a886c8ea72bc93",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "7fb03b9d7394e0fe85332cc16391a446e1942d30aee865be17f6611327898242",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.62/4.63 旋向和向心惯性力说明清晰；例 36 题解、信风小节完整。",
+      "issues": []
+    },
+    {
+      "physical_page": 55,
+      "printed_page": 50,
+      "pixmap_digest_0_8": "9fb9f410676faf1309e8bf861cd03ef7",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "4fc8a99dcfb958aea4849ebdca8d9bda9d691bdcd87d1cfd8e6a2ad51161eb31",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "图 4.64/4.65 原图和模型完整，信风说明及 4.8.4 开头文字邻接正常。",
+      "issues": []
+    },
+    {
+      "physical_page": 56,
+      "printed_page": 51,
+      "pixmap_digest_0_8": "b137c329a117de86f7c1cd60db72f553",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "e2cbd11ec87ac63dec56e6e41e9eda7e676131f92c87146a6e054819a87e658c",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "原图 4.66、模型 4.67、气压风带原图 4.68 完整，无图题分离或边缘残片。",
+      "issues": []
+    },
+    {
+      "physical_page": 57,
+      "printed_page": 52,
+      "pixmap_digest_0_8": "cf5725c0bea7dc76a4d1bdf1be33a39b",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "9aa5150803e82031255aef05bcc7b3d1dba8653353e84b2d39f57e9eee519591",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "风带模型 4.69 标签/箭头完整；正文和脚注正常，图块分页留白可接受。",
+      "issues": []
+    },
+    {
+      "physical_page": 58,
+      "printed_page": 53,
+      "pixmap_digest_0_8": "719a0256a3e97cc89fc3766fab794e95",
+      "pixmap_size_0_8": [
+        477,
+        674
+      ],
+      "text_sha256": "ddceba7d1ffb0a20f4c2e1ca0fc5a12ce1eca24fb42a842f187e3be9d1899c51",
+      "status": "passed",
+      "visual_inspection": "实际打开 1.5× 单页渲染逐页审阅",
+      "notes": "海流原图 4.70、模型 4.71 和图题完整，海流连接小标题与介绍同页，脚注清晰。",
+      "issues": []
+    }
+  ],
+  "figures_reviewed": [
+    "4.32",
+    "4.33",
+    "4.34",
+    "4.35",
+    "4.36",
+    "4.37",
+    "4.38",
+    "4.39",
+    "4.40",
+    "4.41",
+    "4.42",
+    "4.43",
+    "4.44",
+    "4.45",
+    "4.46",
+    "4.47",
+    "4.48",
+    "4.49",
+    "4.50",
+    "4.51",
+    "4.52",
+    "4.53",
+    "4.54",
+    "4.55",
+    "4.56",
+    "4.57",
+    "4.58",
+    "4.59",
+    "4.60",
+    "4.61",
+    "4.62",
+    "4.63",
+    "4.64",
+    "4.65",
+    "4.66",
+    "4.67",
+    "4.68",
+    "4.69",
+    "4.70",
+    "4.71"
+  ],
+  "issues": [
+    {
+      "id": "isolated_tail_paragraph_page",
+      "physical_page": 50,
+      "severity": "layout",
+      "description": "异常：本页仅页首三行“以地面点为原点…”尾段，其余近九成留白；并非普通图块分页。已报父级，父级确认并修改分页逻辑。",
+      "resolution": "父级已确认，正在 v3 修订分页逻辑，须实际查看 v3 后关闭。"
+    }
+  ],
+  "targeted_fixes_passed": [
+    "偏置摆图题“箭头仅示方向”",
+    "双弹簧原图边缘干净",
+    "c4-diagram-26 的 y 标签移左，与 ut 不重叠",
+    "当地地球轴改取源 p16，箭头标签完整"
+  ],
+  "reuse_rule": "仅对应本固定 v2 PDF，后续版本必须按逐页像素比较或重新实际审阅；不把 v2 哈希作为最终哈希。"
+}

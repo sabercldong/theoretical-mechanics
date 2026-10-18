@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+\draw[->](0,0)--(5,0)node[right]{$t$};\draw[->](0,-.8)--(0,2.8)node[above]{$D(t)$};
+\draw[ink,thick](.3,.4)--(4.5,2.3)node[right]{自由粒子：线性增长};
+\draw[muted,thick]plot[domain=.3:4.5,samples=100](\x,{-.55*sin(180*\x)});
+\node[right]at(4.5,-.55){束缚周期示意};
+\end{tikzpicture}

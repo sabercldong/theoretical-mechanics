@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\begin{scope}
+\draw[thick](-1.1,1)--(1.1,1)node[right]{$+\hbar|\gamma_n|B_0/2$};
+\draw[thick](-1.1,-1)--(1.1,-1)node[right]{$-\hbar|\gamma_n|B_0/2$};
+\draw[<->,thick,ink](0,-.9)--(0,.9)node[midway,left]{$\Delta E=\hbar\omega_0$};
+\node at(0,-1.65){两能级与共振};
+\end{scope}
+\begin{scope}[xshift=7.5cm]
+\draw[->](0,0)--(0,2)node[above]{$\vect k$};
+\draw[->](0,0)--(2.2,0)node[right]{$\vect i'$};
+\draw[force](0,0)--(1.35,0);
+\node[above]at(.65,0){$B_1$};
+\draw[->](0,0)--(1.9,-1.2)node[right]{$\vect j'$};
+\draw[force](0,0)--(0,1.55)node[left]{$\vect M(0)$};
+\draw[force](0,0)--(1.55,-.978947);
+\draw[guide](1.55,-.978947)--(2.7,-.6);
+\node[right]at(2.7,-.6){$\vect M(\tau_{\pi/2})$};
+\draw[->,thick]plot[domain=0:90,samples=41]({1.55*sin(\x)},{1.55*cos(\x)-.978947*sin(\x)});
+\node at(1.1,-2.1){$\gamma_n>0$：共振时由 $+\vect k$ 翻至 $+\vect j\,\!{}^{\prime}$};
+\end{scope}
+\end{tikzpicture}

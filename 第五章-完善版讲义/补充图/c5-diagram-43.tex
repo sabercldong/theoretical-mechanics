@@ -1,0 +1,3 @@
+\begin{tikzpicture}[node distance=1.5cm]
+\node[draw,rounded corners,fill=soft,align=center](L){$L(q,\dot q,t)$\\$s$ 个二阶方程};\node[draw,rounded corners,fill=soft,right=3.5cm of L,align=center](H){$H(q,p,t)$\\$2s$ 个一阶方程};\draw[force](L)--(H)node[midway,above]{$p=L_{\dot q}$};\draw[force]([yshift=-.4cm]H.west)--([yshift=-.4cm]L.east)node[midway,below]{$\dot q=H_p$};\node[below=1cm of L,align=center]{速度矩阵必须可逆};
+\end{tikzpicture}
