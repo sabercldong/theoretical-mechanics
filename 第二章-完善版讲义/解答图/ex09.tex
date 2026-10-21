@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[->,gray](0,0)--(3.8,0)node[right]{$x$};\draw[->,gray](0,0)--(0,2.8)node[above]{$y$};\draw[dashed,domain=0:3.4,samples=35]plot(\x,{1.8-.35*(\x-1.2)^2});\coordinate(C)at(1.2,1.8);\fill(C)circle(3pt)node[above]{$C,t_0$};\draw[->](C)--(2.3,2.3)node[right]{$m_1$};\draw[->](C)--(2.2,1.4)node[right]{$m_2$};\draw[->](3.2,2.3)--(3.2,1.4)node[right]{$g$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect R=\vect R_0+\vect V_0t+\vect g t^2/2$\\[6pt]$\Downarrow$\\[6pt]$\sum_i m_i\vect r_i=M\vect R$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(C)at(1.8,2.1);\fill(C)circle(2pt)node[above]{$C$};\draw[force](C)--(.1,2.1)node[above]{$m_1\Delta\vect v_1$};\draw[force](C)--(3.5,2.1)node[above]{$m_2\Delta\vect v_2$};\draw[guide](1.8,2.1)--(1.8,-.2);\fill(.5,.7)circle(3pt)node[left]{$m_1$};\fill(3.1,.7)circle(3pt)node[right]{$m_2$};\draw[force](.5,.7)--(.5,-.4)node[left]{$m_1\vect g$};\draw[force](3.1,.7)--(3.1,-.4)node[right]{$m_2\vect g$};\node at(1.8,-1){爆炸增量相抵；外场仍作用于全部碎片};
 \end{tikzpicture}

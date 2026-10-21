@@ -1,2 +1,13 @@
-% 球面上的固定过心平面截出大圆；平面闭曲线的外法向变分使面积与周长的一阶变化通过曲率相联系。
-\begin{tikzpicture}\draw[ink](0,0)circle(1.5);\begin{scope}[rotate=25]\draw[muted,dashed]({1.5*cos(110)},{.55*sin(110)})arc(110:390:1.5 and .55);\draw[ink,very thick]({1.5*cos(30)},{.55*sin(30)})arc(30:110:1.5 and .55);\fill({1.5*cos(30)},{.55*sin(30)})circle(3pt)node[above right=5pt]{$A$};\fill({1.5*cos(110)},{.55*sin(110)})circle(3pt)node[above left=5pt]{$B$};\end{scope}\node at(.05,.95){短弧};\node at(0,-.85){长弧};\node at(0,-2){$S^2:\text{大圆}$};\begin{scope}[xshift=4.8cm]\draw[ink,thick](0,0)circle(1.4);\draw[force](1.4,0)--(2.1,0)node[right]{$\eta\vect n$};\node at(0,0){$A$};\node at(0,-2){$\ell=l,\quad\kappa=1/R_c$};\end{scope}\end{tikzpicture}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=3pt}]
+
+\draw(0,0)circle(1.6);\draw[guide](0,0)ellipse(1.6 and .45);
+\fill(-.85,.9)circle(2pt)node[above left]{$A$};
+\fill(1.1,-.65)circle(2pt)node[right]{$B$};
+\draw[thick](-.85,.9)..controls(-.4,-.3)and(.7,.8)..(1.1,-.65);
+\node at(0,-2.2){固定球面上的待求路径};
+\begin{scope}[xshift=5.3cm]
+\draw[thick](1.6,0)..controls(1.7,1.5)and(-1,1.7)..(-1.5,.2)
+..controls(-2,-1.2)and(1,-1.8)..(1.6,0);
+\node at(0,0){面积 $A$};\node at(0,-2.2){简单闭曲线：周长 $l$};
+\end{scope}
+\end{tikzpicture}

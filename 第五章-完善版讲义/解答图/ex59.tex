@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex59.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle Q=q-a(t),\quad P=p$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle K=H-\dot aP$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.6,0)--(4.7,0)node[right]{$q$};\coordinate(A)at(1.2,0);\coordinate(P)at(3.6,0);\fill(A)circle(2pt)node[below]{$a(t)$};\fill(P)circle(3pt)node[below]{$q$};\draw[<->](1.2,.7)--(3.6,.7)node[midway,above]{$Q=q-a(t)$};\draw[force](A)--(2.3,0)node[above]{$\dot a$};\draw[force](P)--(4.6,0)node[above]{$p/m$};\node at(2,-1.4){移动原点与粒子速度相减；动量仍为 $P=p$};
 \end{tikzpicture}

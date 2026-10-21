@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\begin{scope}[rotate=-45]\draw[->,gray](-.3,0)--(2.6,0)node[right]{$\er$};
+\draw[->,gray](0,-.3)--(0,1.8)node[above]{$\et$};
+\draw[force](0,0)--(1.8,0)node[midway,below]{$\dot r$};
+\draw[force](1.8,0)--(1.8,.53)node[right]{$r\dot\theta$};
+\draw[force](0,0)--(1.8,.53)node[midway,above]{$\vect v_M$};\end{scope}
+\begin{scope}[xshift=5.3cm,rotate=-45]
+\draw[->,gray](-.3,0)--(1.8,0)node[right]{$\er$};
+\draw[->,gray](0,-.3)--(0,2)node[above]{$\et$};
+\draw[force](0,0)--(.65,0)node[midway,below]{$a_r$};
+\draw[force](.65,0)--(.65,1.3)node[right]{$a_\theta$};
+\draw[force](0,0)--(.65,1.3)node[midway,above left]{$\vect a_M$};\end{scope}
+\node at(2.5,-2.5){图示 $\varphi=45^\circ$；各分量方向由固定极点 $B$ 的局部基矢确定};
+\end{tikzpicture}

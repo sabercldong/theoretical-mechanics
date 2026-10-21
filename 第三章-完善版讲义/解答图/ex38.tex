@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw(0,0)circle(1.3);\draw(0,0)--(1.3,0)node[midway,below]{$a$};\fill(0,0)circle(2pt)node[below left]{$O$};\draw[->,thick](1.55,0)arc(0:100:1.55);\node at(.4,1.95){$M$};\draw[->](-1.85,0)arc(180:125:1.85);\node at(-2.05,1.3){$M_f$};\node at(0,-1.8){$m,\omega(0)=0$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$I_z\alpha=M-M_f$\\[6pt]$\Downarrow$\\[6pt]$\omega=\alpha t,\quad q-q_0=\alpha t^2/2$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.2,0)--(4.3,0)node[right]{$q-q_0$};\draw[->](0,-.2)--(0,2.6)node[above]{$M_{\rm net}$};\fill[ink!12](0,0)rectangle(3.1,1.7);\draw[thick](0,1.7)--(3.5,1.7);\node[left]at(0,1.7){$M-M_f$};\node[below]at(3.1,0){$\Delta q$};\node at(1.5,.8){$\Delta T$};\node at(1.8,-1){净力矩对转角的积分给出动能增量};
 \end{tikzpicture}

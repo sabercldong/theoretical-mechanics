@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex84.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle e=\rho_lu_t^2/2+\mathcal T u_x^2/2$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \partial_te+\partial_x(-\mathcal T u_xu_t)=0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[thick](0,-.7)rectangle(4,1.5);\draw[thick,domain=0:4]plot(\x,{.5*sin(70*\x)});\draw[force](-1,.5)--(.7,.5)node[above]{$\mathcal P(x_1)$};\draw[force](3.2,.5)--(5,.5)node[above]{$\mathcal P(x_2)$};\node at(2,-.2){$E_{[x_1,x_2]}$};\node[below]at(0,-.7){$x_1$};\node[below]at(4,-.7){$x_2$};\node at(2,-1.7){左端流入减去右端流出，等于区间能量增长率};
 \end{tikzpicture}

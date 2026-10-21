@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw[ink](-.4,0)--(5.4,0);\node[below]at(4.7,0){河岸};
+\coordinate(A)at(0,0);\coordinate(M)at(.866025,1.5);
+\draw[ink,thick,domain=0:85,samples=121,variable=\t]plot({3*tan(\t/2)*cos(\t)},{3*tan(\t/2)*sin(\t)});
+\draw[thick](A)--(M)node[midway,left]{$r$};\fill[ink](M)circle(3pt)node[above right=5pt]{$M$};\node[below left]at(A){$A$};
+\draw[->](.45,0)arc(0:60:.45);\node at(.63,.27){$\theta$};
+\draw[force](M)--++(.2,-1.039230)node[right]{$\vect v$};
+\draw[->,dashed,muted](M)--++(-.4,-.692820)node[left]{$-v_2\er$};
+\draw[force](3,2.35)--(4.2,2.35)node[right]{$v_1$（水流）};
+\node[anchor=west,align=left]at(2.3,1.15){示例：$v_2=v_1$\\$\dot r=-v_2$\\$r\dot\theta=-v_1\sin\theta$};
+\end{tikzpicture}

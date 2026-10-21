@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](-.5,0)--(-.5,1.9)--(0,2.6)--(.5,1.9)--(.5,0)--cycle;\node at(0,1.1){$m(t)$};\node at(0,3.1){台上阶段 $v=0$};\draw[->](0,0)--(0,-1.2)node[right]{$u_{\rm rel}=-c$};\node at(-1.2,-.6){$q=-\dot m$};\draw[->](1.2,2.2)--(1.2,1.3)node[right]{$g$};\node at(0,-1.8){对地排气 $u=v-c$};\draw[thick](-1.1,-.1)--(1.1,-.1);\draw[->](-.9,.1)--(-.9,1)node[left]{$N\ge0$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$N=mg-cq\ge0\quad(v=0)$\\[6pt]$\Downarrow$\\[6pt]$m_L=cq/g,\quad t_L=(m_0-m_L)/q$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.15,0)--(3.7,0)node[right]{$t$};\draw[->](0,-.15)--(0,3)node[above]{$F$};\draw[thick](0,2.6)--(3,1.1)node[right]{$mg(t)$};\draw[thick](0,1.85)--(3.2,1.85)node[right]{$cq$};\draw[guide](1.5,0)--(1.5,2.6);\draw[guide](3,0)--(3,2.6);\node[below]at(1.5,0){$t_L$};\node[below]at(3,0){$t_b$};\node at(1.8,4.1){延迟起飞的代表情形};\node at(1.7,-.9){台上 $N=mg-cq$；离台后 $N=0$};
 \end{tikzpicture}

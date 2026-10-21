@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.3,0)--(3.7,0)node[right]{$x\ (\mathrm E)$};\draw[->,gray](0,-.3)--(0,3.2)node[above]{$z\ (\mathrm U)$};\fill(0,2.8)circle(2.5pt)node[above left]{$P_0$};\draw[thick,->,domain=0:1,samples=50]plot({1.4*(\x)^3},{2.8*(1-(\x)^2)});\draw[guide](0,2.8)--(0,0);\draw[force](.18,1.8)--(1.4,1.8)node[right]{$a_x=-2c\dot z>0$};\draw[force](.18,1.8)--(.18,.8)node[left]{$g$};\draw[<->](-.6,0)--(-.6,2.8)node[midway,left]{$h$};\node[below]at(1.4,0){东偏落点};\node at(1.2,-1){水平偏移放大示意，$c=\Omega_E\cos\lambda$};
+\end{tikzpicture}

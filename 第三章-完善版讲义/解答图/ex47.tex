@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](0,3)--(0,0)--(3.3,0);\draw[very thick](0,2.4)--(2.5,0)node[midway,above]{$l$};\node[left]at(0,2.4){$B$};\node[below]at(2.5,0){$A$};\draw[->](2.5,0)--(3.3,0)node[above]{$u$};\draw[dashed](0,2.4)--(2.5,2.4)--(2.5,0);\fill(2.5,2.4)circle(2pt)node[right]{$P$};\node[below left]at(0,0){$O$};\draw[->,ink](2.5,0)--(1.92,.557)node[above right]{$\vect e_1$};\draw[->,ink](2.5,0)--(1.94,-.58)node[below]{$\vect e_2$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$P=(x,y),\quad x^2+y^2=l^2$\\[6pt]$\Downarrow$\\[6pt]$q_1=y^2/l,\quad q_2=-xy/l$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\begin{scope}\draw[->](-.2,0)--(2.8,0)node[right]{$x$};\draw[->](0,-.2)--(0,2.8)node[above]{$y$};\draw[thick](2.2,0)arc(0:90:2.2);\fill(1.76,1.32)circle(2pt)node[right=1.5pt]{$P$};\draw[guide](1.76,0)--(1.76,1.32)--(0,1.32);\node at(1.1,-.8){空间极迹：第一象限圆弧};\end{scope}\begin{scope}[xshift=5.3cm]\draw[->](-.2,0)--(2.8,0)node[right]{$q_1$};\draw[->](0,-1.6)--(0,1)node[above]{$q_2$};\draw[thick](0,0)arc(180:360:1.1);\node[below right]at(2.2,0){$l$};\node at(1.1,-2){本体极迹：下半圆弧};\end{scope}
 \end{tikzpicture}

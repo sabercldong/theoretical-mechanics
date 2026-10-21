@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex40.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle p_\psi=c_3,\quad p_\phi=c_z$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \dot\phi=\frac{c_z-c_3\cos\theta}{I\sin^2\theta}$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(3.6,0)node[right]{$\theta$};\draw[->,gray](0,-.35)--(0,3.7)node[above]{$V_{\rm eff}$};\draw[thick,domain=.45:2.7,samples=100]plot(\x,{(1-.4*cos(\x*180/pi))^2/(2*(sin(\x*180/pi))^2)+.5*cos(\x*180/pi)});\draw[guide](.35,1.8)--(2.9,1.8)node[right]{$E$};\node at(1.7,-1){固定两个循环动量后的代表性有效势；允许章动区间由 $E\ge V_{\rm eff}$ 确定};
 \end{tikzpicture}

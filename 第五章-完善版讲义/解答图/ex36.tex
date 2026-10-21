@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex36.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \vect L\cdot\vect r=0$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \kappa=\text{常数},\quad A_{\max}=l^2/(4\pi)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw(0,0)circle(1.6);\draw[guide](0,0)ellipse(1.6 and .6);\draw[thick](20:1.6 and .6)arc(20:130:1.6 and .6);\fill(1.504,.205)circle(2pt)node[right]{$A$};\fill(-1.028,.46)circle(2pt)node[left]{$B$};\fill(0,0)circle(2pt)node[below]{$O$};\node at(0,-2.3){实线为较短大圆弧，虚线包含同一大圆的较长弧};\begin{scope}[xshift=6cm]\draw[thick](0,0)circle(1.6);\foreach\a in {0,60,120,180,240,300}\draw[force](\a:1.6)--(\a:2.1);\node at(0,-2.3){等周极值：曲率处处相同};\end{scope}
 \end{tikzpicture}

@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/tr12.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle G_t=-p/m,\quad\{G,H\}=p/m$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \frac{\dd G}{\dd t}=0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(4.3,0)node[right]{$t$};\draw[->,gray](0,-.35)--(0,3.6)node[above]{$q$};\draw[thick](0,.7)--(3.8,3.1);\fill(0,.7)circle(2pt)node[left]{$G$};\fill(2.8,2.47)circle(2pt)node[above]{$(t,q)$};\draw[guide](2.8,.7)--(2.8,2.47);\node[right]at(2.8,1.6){$pt/m$};\node at(1.7,-1.2){沿同一直线回推到 $t=0$，截距始终是同一个初始位置};
 \end{tikzpicture}

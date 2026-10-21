@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(B)at(0,2.2);\coordinate(A)at(3.6,0);\coordinate(M)at(1.7226,1.1473);
+\draw[->](O)--(5,0)node[right]{$x$};\draw[->](O)--(0,3)node[above]{$y$};\draw[very thick,ink](B)--(A);\fill[ink](B)circle(3pt)node[left=5pt]{$B$ 导环};\fill[ink](A)circle(3pt)node[below=5pt]{$A$};\fill[ink](M)circle(3pt)node[above=5pt]{$M$};
+\draw[<->](-.7,0)--(-.7,2.2)node[midway,left]{$d$};\node[above right]at(2.7,.55){$AM=d$};\draw[force](A)--(4.6,0)node[above]{$v$};
+\draw[->](2.85,0)arc(180:148.57:.75);\node at(2.55,.25){$\varphi$};\node[below left]at(O){$O$};
+\end{tikzpicture}

@@ -1,0 +1,42 @@
+\begin{tikzpicture}[x=1cm,y=1cm]
+% Left panel: screened inverse-first-power potential.
+\begin{scope}
+\draw[->](.16,0)--(4.85,0)node[right]{$q$};
+\draw[->](.16,-1.55)--(.16,3.15)node[above]{$W/(K/a)$};
+\draw[ink,thick,domain=.2:5.6,samples=240,variable=\q]
+ plot({.8*\q},{3*(.2/(\q*\q)-exp(-\q)/\q)});
+\foreach \q in {1,3,5}{\draw({.8*\q},0)--++(0,-.07)node[below,font=\small]{$\q$};}
+\fill[ink](.34400193,-1.29343825)circle(1.7pt);
+\draw[muted](.34400193,-1.29343825)--(1.15,-1.23);
+\node[anchor=west,font=\small]at(1.15,-1.23){稳定极小值};
+\node[align=center]at(2.45,-2.05){$U_1=-K\mathrm e^{-q}/r$\\$L^2/(2mKa)=0.2$};
+\begin{scope}[shift={(1.45,.65)},font=\scriptsize]
+\filldraw[fill=white,draw=muted](-.08,-.15)rectangle(2.7,1.66);
+\node[font=\scriptsize] at(1.31,1.46){外侧势垒放大};
+\draw[->](.3,.3)--(2.48,.3)node[right]{$q$};
+\draw[->](.3,.3)--(.3,1.27);
+\begin{scope}
+\clip(.3,.3)rectangle(2.42,1.28);
+\draw[ink,thick,domain=2.5:7,samples=160,variable=\q]
+ plot({.3+.46*(\q-2.5)},{.3+100*(.2/(\q*\q)-exp(-\q)/\q)});
+\end{scope}
+\fill[ink](.91525855,1.09660876)circle(1.3pt);
+\draw[dotted](.3,1.09660876)--(.91525855,1.09660876)--(.91525855,.3);
+\node[anchor=east]at(.25,1.0966){$0.008$};
+\node[below]at(.91525855,.3){$3.84$};
+\node[below]at(2.37,.3){$7$};
+\end{scope}
+\end{scope}
+% Right panel: screened inverse-second-power potential.
+\begin{scope}[xshift=6.55cm]
+\draw[->](.16,0)--(4.85,0)node[right]{$q$};
+\draw[->](.16,-1.55)--(.16,2.15)node[above]{$W/(C/a^2)$};
+\draw[ink,thick,domain=.5:5.6,samples=240,variable=\q]
+ plot({.8*\q},{3*(.5-exp(-\q))/(\q*\q)});
+\foreach \q in {1,3,5}{\draw({.8*\q},0)--++(0,-.07)node[below,font=\small]{$\q$};}
+\fill[ink](.91695458,.41595661)circle(1.7pt);
+\draw[muted](.91695458,.41595661)--(1.6,1.05);
+\node[align=left,anchor=west,font=\small]at(1.6,1.1){不稳定势垒顶\\$q\approx1.146$};
+\node[align=center]at(2.45,-2.05){$U_2=-C\mathrm e^{-q}/r^2$\\$L^2/(2mC)=0.5$};
+\end{scope}
+\end{tikzpicture}

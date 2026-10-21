@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex69.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle p=\pm\sqrt{2m[E-V(x)]}$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \lambda^2=-V''(x_*)/m$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(7.5,0)node[right]{$x$};\draw[->,gray](0,-.35)--(0,3.2)node[above]{$V$};\draw[thick,domain=-1.55:12,samples=240]plot({.55*\x},{.45*((\x*exp(-\x/4))^4-2*exp(-\x)*(\x)^2)});\draw[guide](-.7,0)--(7,0);\draw[->](-.85,2.1)--(-1,2.8)node[left]{$+\infty$};\node[right]at(6.6,.07){$0^+$};\node at(3,-2){横轴压缩显示远处正势垒及无穷远渐近，不能只看原点附近双阱};
 \end{tikzpicture}

@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex71.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \det A_{\rm explicit}=1+h^2\omega^2$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \det A_{\rm symplectic}=1$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\begin{scope}[xshift=0cm]\draw[->,gray](-.35,0)--(2.8,0)node[right]{$q$};\draw[->,gray](0,-.35)--(0,2)node[above]{$p/(m\omega)$};\draw[guide](0,0)rectangle(1,1);\draw[thick,fill=soft](0,0)--(1,-.7)--(1.7,.3)--(.7,1)--cycle;\node at(1,-1.6){显式欧拉：面积增大};\end{scope}\begin{scope}[xshift=5.7cm]\draw[->,gray](-.35,0)--(2.8,0)node[right]{$q$};\draw[->,gray](0,-.35)--(0,2)node[above]{$p/(m\omega)$};\draw[guide](0,0)rectangle(1,1);\draw[thick,fill=soft](0,0)--(.51,-.7)--(1.21,.3)--(.7,1)--cycle;\node at(1,-1.6){辛欧拉：面积不变};\end{scope}\node at(3,-2.8){以 $h\omega=0.7$ 的单位相区像为例，长期稳定还须检查修正二次型};
 \end{tikzpicture}

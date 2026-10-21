@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[dashed](0,2.8)--(0,-.5);\draw[very thick](0,2.8)--(1.3,0)node[pos=.77,right]{$L$};\fill(0,2.8)circle(2pt)node[above left]{$O$};\fill(.65,1.4)circle(2pt)node[right]{$C$};\draw[->](.65,1.4)--(.65,.6)node[left]{$mg$};\draw(0,2)arc(-90:-65:.8);\node at(.3,1.7){$q$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$M_O=-mg(L/2)\sin q$\\[6pt]$\Downarrow$\\[6pt]$I_O\ddot q=M_O$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-1.6,0)--(2.2,0)node[right]{$q$};\draw[->](0,-.2)--(0,3.1)node[above]{$U/(mgL/2)$};\draw[thick,domain=-75:75,samples=100]plot({\x/60},{3*(1-cos(\x))});\draw[guide](-1.3,1.5)--(1.3,1.5)node[right]{$E$};\fill(-1,1.5)circle(2pt)node[above left]{$-q_0$};\fill(1,1.5)circle(2pt)node[above right]{$q_0$};\draw[<->](0,0)--(0,1.5)node[midway,left]{$T_{\max}$};\node at(.4,-1){例示 $q_0=\pi/3$，最低点势能最小而动能最大};
 \end{tikzpicture}

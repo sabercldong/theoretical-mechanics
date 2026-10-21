@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/tr08.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle q=Q/c$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \omega^2=(k/c^2)/(a_0/c^2)=k/a_0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(6.8,0)node[right]{$t$};\draw[->,gray](0,-.35)--(0,2.9)node[above]{$q,Q$};\draw[thick,domain=0:6.28,samples=90]plot(\x,{.8*cos(\x*180/pi)});\draw[dashed,domain=0:6.28,samples=90]plot(\x,{1.6*cos(\x*180/pi)});\node at(4.5,2.2){虚线示例 $c=2$};\node at(2.8,-2.7){同一物理振动只改变幅值和坐标单位，零点时刻及周期不变};
 \end{tikzpicture}

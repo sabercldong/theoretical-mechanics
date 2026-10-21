@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\coordinate(O)at(0,0);\coordinate(X)at(2.1,0);\coordinate(Y)at(-.85,-.7);\coordinate(Z)at(0,2.1);\draw[thick](O)--(X)--(2.1,2.1)--(Z)--cycle;\draw[thick](Y)--(1.25,-.7)--(X);\draw[thick](Y)--(-.85,1.4)--(Z);\draw[thick](-.85,1.4)--(1.25,1.4)--(2.1,2.1);\draw[thick](1.25,-.7)--(1.25,1.4);\draw[dashed](O)--(1.25,1.4);\fill(.625,.7)circle(2pt)node[above left]{$C$};\node[below right]at(O){$O$};\node[right]at(X){$x$};\node[below]at(Y){$y$};\node[above]at(Z){$z$};\node at(1.1,-1.2){棱长 $a,b,c$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\mathsf I_O\vect n=\lambda\vect n$\\[6pt]$\Downarrow$\\[6pt]$\det(\mathsf I_O-\lambda\mathsf1)=0$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.2,0)--(6.1,0)node[right]{$\lambda=I/(mc^2)$};\draw[->](0,-.2)--(0,3)node[above]{$p(\lambda)$};\draw[thick]plot[smooth]coordinates{(.1,-1.7)(.6,0)(1.7,2.2)(2.8,1.6)(3.8,0)(4.4,-.35)(5,0)(5.6,1.6)};\foreach\x/\lab in {.6/\lambda_1,3.8/\lambda_2,5/\lambda_3}\fill(\x,0)circle(2pt)node[below=1.5pt]{$\lab$};\node at(2.7,-2.5){特征多项式示意；三根逐一代回矩阵并核对正交性};
 \end{tikzpicture}

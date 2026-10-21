@@ -1,4 +1,10 @@
-% 两端位移为零选择正弦振型，内部曲率通过张力给横向加速度；初形和初速度各确定一组时间系数。
-\begin{tikzpicture}[x=1cm,y=.8cm]
-\foreach \n in {1,2,3}{\pgfmathsetmacro{\dy}{-2*(\n-1)}\begin{scope}[yshift=\dy cm]\draw[guide](0,0)--(6,0);\draw[ink,thick,domain=0:6,samples=80]plot(\x,{.7*sin(\n*180*\x/6)});\fill(0,0)circle(2pt);\fill(6,0)circle(2pt);\node[right]at(6.4,0){$n=\n$};\end{scope}}
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=3pt}]
+
+\draw[->](-.3,0)--(6.6,0)node[right]{$x$};
+\draw[->](0,-1.3)--(0,1.5)node[above]{$u$};
+\draw[thick](0,0)..controls(1.2,1.5)and(3,-.7)..(4,.4)..controls(5,.9)and(5.5,-.4)..(6,0);
+\fill(0,0)circle(2pt)node[below left]{$0$};\fill(6,0)circle(2pt)node[below]{$l$};
+\draw[thick](-.1,-.25)rectangle(.1,.25);\draw[thick](5.9,-.25)rectangle(6.1,.25);
+\node at(3,1.5){初形 $u(x,0)=f(x)$，初速度 $g(x)$};
+\node at(3,-1.2){线密度 $\rho_l$，预张力 $\mathcal T$};
 \end{tikzpicture}

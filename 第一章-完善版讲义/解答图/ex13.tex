@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=.85cm,y=.8cm]
+\draw[thick,ink](0,0)rectangle(4,2.5);
+\draw[force](0,0)--(2.8,2.5);\draw[force](2.8,2.5)--(4,1.43);
+\draw[force](4,1.43)--(2.4,0);\draw[force](2.4,0)--(.8,1.43);
+\node[below]at(2,0){$a$};\node[left]at(0,1.25){$b$};
+\begin{scope}[shift={(6,0)}]
+\draw[guide](0,0)rectangle(4,2.5);\draw[guide](0,2.5)rectangle(4,5);
+\draw[guide](4,2.5)rectangle(8,5);\draw[force](0,0)--(5.2,4.64);
+\node at(4,-.6){镜像展开后的直线};
+\end{scope}
+\end{tikzpicture}

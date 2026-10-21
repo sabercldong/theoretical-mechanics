@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(C)at(0,0);\coordinate(P)at(1.286,1.532);
+\draw[thick](-2,0)arc(180:0:2);\draw[guide](C)--(P);
+\fill(P)circle(3pt)node[left]{$m$};
+\draw[force](P)--++(.64,.766)node[right]{$N$};
+\draw[force](P)--++(0,-1.1)node[right]{$mg$};
+\draw[force](-.6,-.5)--(-1.6,-.5)node[left]{$\dot X$};
+\begin{scope}[xshift=5.2cm,yshift=.8cm]
+\draw[force](0,0)--(-1,0)node[midway,above]{$\dot X\vect e_x$};
+\draw[force](-1,0)--(.8,-1.5)node[midway,below left]{$R\dot\theta\,\vect e_\theta$};
+\draw[force](0,0)--(.8,-1.5)node[right]{$\vect v_m$};
+\node at(-.1,-3.4){相对速度须与柱体反冲速度相加};\end{scope}
+\node at(0,-1.6){接触支 $N\ge0$；脱离时 $N=0$};
+\end{tikzpicture}

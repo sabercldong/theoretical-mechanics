@@ -1,3 +1,12 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](0,0)--(1.5,0)--(1.5,1.8)--(3.3,1.8);\fill(.7,.3)circle(4pt)node[above]{$100\,\mathrm{kg}$};\draw[->](1.9,.4)--(1.9,1.5)node[right]{$H$};\draw[->](2.1,2.2)--(3.2,2.2)node[above]{$V$};\node at(1.5,-.8){$E_{\rm mech}\to m_{\rm food}=E_{\rm mech}/(\eta q_{\rm food})$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[thick](0,0)--(1.2,0)--(1.2,1.5)--(3.5,1.5);
+\fill(.6,.25)circle(3pt)node[left=3pt]{$M=100\,\mathrm{kg}$};
+\draw[<->](1.6,.05)--(1.6,1.45)node[midway,right]{$H$};
+\draw[->](.2,-.4)--(1.2,-.4)node[right]{$V_i$};
+\draw[->](2.2,1.9)--(3.4,1.9)node[right]{$V_f$};
+\begin{scope}[xshift=5.8cm,yshift=.8cm]
+\draw[thick](0,0)circle(.7);\fill(0,0)circle(2pt)node[below]{$I$};
+\draw[->](.9,0)arc(0:240:.9);\node at(.1,1.5){$\omega_i\longrightarrow\omega_f$};
+\end{scope}
+\node at(3,-1.2){每组动作重复 $n$ 次，效率 $\eta$};
 \end{tikzpicture}

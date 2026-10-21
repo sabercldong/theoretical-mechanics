@@ -1,0 +1,6 @@
+\begin{tikzpicture}[x=.85cm,y=1.1cm]
+\draw[->](-3.7,0)--(3.8,0)node[right]{$x/A$};\draw[->](0,-.2)--(0,2.6);\node[right]at(.12,2.4){$y/A$};
+\draw[ink,thick]plot[domain=-180:180,samples=140]({\x*pi/180+sin(\x)},{1-cos(\x)});
+\foreach \q in {45,105}{\fill[ink]({\q*pi/180+sin(\q)},{1-cos(\q)})circle(2.3pt);}
+\node[below]at(0,0){最低点};\node[align=center]at(0,2.8){不同高度静止释放\quad 首次到达时间相同};
+\end{tikzpicture}

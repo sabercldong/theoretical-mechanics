@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex76.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \int_0^l\sin^2k_nx\dd x=\int_0^l\cos^2k_nx\dd x=l/2$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle E_n=MA^2\omega_n^2/4$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\foreach\dy/\lab in {0/{位移极值时},-3/{平衡形状时}}{\begin{scope}[yshift=\dy cm]\draw[thick](-.2,0)--(4.2,0);\draw[fill=white](0,-.15)rectangle(.12,.15);\draw[fill=white](3.88,-.15)rectangle(4,.15);\node at(2,1.4){\lab};\end{scope}}\draw[thick,domain=0:4,samples=90]plot(\x,{.8*sin(90*\x)});\draw[force](1,-3)--(1,-3.9)node[below]{$u_t<0$};\draw[force](3,-3)--(3,-2.1)node[above]{$u_t>0$};\node at(2,-4.8){图示第二模式；动能、势能交替，总能量保持不变};
 \end{tikzpicture}

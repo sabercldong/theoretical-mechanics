@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex18.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle T=\tfrac m2(\dot r^2+r^2\dot\theta^2)$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle m\ddot r-mr\dot\theta^2+k(r-a)-mg\cos\theta=0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(P)at(1.2,-2.08);\draw[thick](O)--(P);\draw[guide](O)--(0,-2.5);\draw(0,-.65)arc(-90:-60:.65);\node at(.32,-1){$\theta$};\fill(O)circle(2pt)node[above]{$O$};\fill(P)circle(3pt)node[below left]{$P$};\draw[force](P)--++(-.55,.953)node[left]{$-k(r-a)\vect e_r$};\draw[force](P)--++(0,-1.4)node[below]{$mg$};\draw[->,gray](P)--++(.9,-1.56)node[right]{$\vect e_r$};\draw[->,gray](P)--++(.95,.55)node[right]{$\vect e_\theta$};\node at(1.1,-4.6){弹簧力沿径向；重力同时具有径向和角向投影};
 \end{tikzpicture}

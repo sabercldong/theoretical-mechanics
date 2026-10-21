@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center]at(0,1.2){\adjustbox{max width=13cm,max height=4.4cm}{\input{题图/ex68.tex}}};
-\node[inner sep=0,anchor=center]at(-3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle \nabla\cdot\dot{\vect z}=-2\gamma$}};
-\draw[force](-.5,-2.2)--(.5,-2.2);
-\node[inner sep=0,anchor=center]at(3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle \mathcal A(t)=e^{-2\gamma t}\mathcal A(0)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-2,0)--(2.5,0)node[right]{$q$};\draw[->,gray](0,-1.8)--(0,2)node[above]{$p$};\draw[thick](0,0)circle(1.4);\draw[force](1.4,0)--(1.4,-.7);\begin{scope}[xshift=6cm]\draw[->,gray](-.35,0)--(2.5,0)node[right]{$q$};\draw[->,gray](0,-.35)--(0,2)node[above]{$p$};\draw[thick,->,domain=0:16,samples=180]plot({1.6*exp(-.2*\x)*cos(.979796*\x*180/pi)},{1.6*exp(-.2*\x)*(-.2*cos(.979796*\x*180/pi)-.979796*sin(.979796*\x*180/pi))});\end{scope}\node at(3,-2.8){左：无耗散闭轨；右：阻尼相流向原点收缩，物质相区面积指数衰减};
 \end{tikzpicture}

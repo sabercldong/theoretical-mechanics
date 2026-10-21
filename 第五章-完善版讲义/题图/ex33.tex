@@ -1,4 +1,4 @@
 % 沿轨道下降获得的速度取决于深度 $y$；弧长元和速度之比决定时间泛函，最低点后须连续改变斜率支。
 \begin{tikzpicture}[x=.9cm,y=-.9cm]
-\draw[->](-.2,0)--(7,0)node[right]{$x$};\draw[->](0,-.2)--(0,3)node[below]{$y$};\draw[ink,very thick,domain=0:240,samples=90]plot({.9*(\x*pi/180-sin(\x))},{.9*(1-cos(\x))});\draw[guide](0,0)--(4.55,1.35);\fill(0,0)circle(3pt)node[above left=5.0pt]{$A$};\fill(4.55,1.35)circle(3pt)node[right=5.0pt]{$B$};\node at(2.4,2.4){摆线};\node at(3,.4){直线};
+\draw[->](-.2,0)--(7,0)node[right]{$x$};\draw[->](0,-.2)--(0,3)node[below]{$y$};\draw[ink,very thick,domain=0:240,samples=90]plot({.9*(\x*pi/180-sin(\x))},{.9*(1-cos(\x))});\draw[guide](0,0)--(4.55,1.35);\fill(0,0)circle(3pt)node[above left=5.0pt]{$A$};\fill(4.55,1.35)circle(3pt)node[right=5.0pt]{$B$};\node at(2.4,2.4){待求路径};\node at(3,.4){直线};
 \end{tikzpicture}

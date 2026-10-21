@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[dashed](0,0)circle(1.15);\draw[->,gray](-1.5,0)--(2.6,0)node[right]{$x$};\draw[->,gray](0,-1.4)--(0,2.1)node[above]{$y$};\coordinate(C)at(.81,.81);\draw[thick](.06,.46)rectangle(1.56,1.16);\fill(C)circle(2pt)node[above left]{$A$};\fill(1.35,1.01)circle(2pt)node[above]{$P$};\draw(0,0)--(C)node[midway,above left]{$R$};\draw[->](1.3,-.3)arc(-15:30:1.35);\node at(1.7,-.5){$\Omega$};\node[below left]at(0,0){$O$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\dot{\vect b}_P=0\ \Rightarrow\ \vect v_P=\vect v_A$\\[6pt]$\Downarrow$\\[6pt]$\hbox{轮辐:}\quad\vect v_P=\Omega\vect k\times\vect r_{OP}$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\begin{scope}\foreach\x/\y in {0/0,2/0,1/1}\fill(\x,\y)circle(2pt);\foreach\x/\y in {0/0,2/0,1/1}\draw[force](\x,\y)--(\x+.9,\y+.7);\node at(1,-.8){固定姿态座舱：同一速度矢量};\end{scope}\begin{scope}[xshift=5cm]\draw[thick](0,0)--(2,0);\fill(0,0)circle(2pt)node[below=1.5pt]{$O$};\draw[force](1,0)--(1,.8);\draw[force](2,0)--(2,1.6);\node at(1,-.8){轮辐：速率随转轴距离增加};\end{scope}
 \end{tikzpicture}

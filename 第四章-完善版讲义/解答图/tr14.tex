@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\foreach\xx/\lab/\vel in {0/{东行}/{\Omega_ER\cos\lambda+U},5/{西行}/{\Omega_ER\cos\lambda-U}}{\begin{scope}[xshift=\xx cm]\fill(0,0)circle(3pt);\draw[force](0,0)--(0,1.4)node[above]{$N_U$};\draw[force](0,0)--(0,-1.6)node[below]{$mg_0$};\draw[force](.5,0)--(.5,-1.1)node[right]{$a_U=-v_E^2/R$};\node at(0,2.2){\lab};\node at(.5,-2.5){$v_E=\vel$};\end{scope}}\node at(2.6,-3.5){同一纬度比较；水平方向还需引导力维持纬线轨迹};
+\end{tikzpicture}

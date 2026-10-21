@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(K)at(2,0);\coordinate(C)at(3,1.732);
+\draw[->](-.5,0)--(4.8,0)node[right]{$x$};\draw[->](0,-.5)--(0,2.7)node[above]{$y$};
+\draw[thick,ink](K)circle(2);\draw[thick](O)--(4.3,2.483)node[right]{转杆};\draw[guide](K)--(C)node[midway,right]{$R$};
+\fill[ink](C)circle(3pt)node[above left=5pt]{$C$};\node[below]at(K){圆心};\node[below left]at(O){$O$};
+\draw[->](.7,0)arc(0:30:.7);\node at(.92,.23){$\theta$};\draw[->](2.65,0)arc(0:60:.65);\node at(2.9,.55){$2\theta$};
+\draw[force](C)--++(-.7,.404)node[above]{$\vect v$};\draw[force](C)--++(-.5,-.866)node[left]{$\vect a_n$};
+\end{tikzpicture}

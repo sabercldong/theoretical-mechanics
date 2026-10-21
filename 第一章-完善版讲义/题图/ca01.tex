@@ -1,0 +1,3 @@
+\begin{tikzpicture}
+\draw[->](0,0)--(3.7,0)node[right]{$x$};\draw[->](0,0)--(0,3.3)node[above]{$y$};\draw[ink,thick,domain=0:2.3,samples=90]plot(\x,{.55*(cosh(\x)-1)});\fill(0,0)circle(2.5pt)node[below]{$A$};\fill(2.3,2.22)circle(2.5pt)node[above]{$O$ 固定};\draw[force](0,0)--(-1,0)node[left]{$F$};\coordinate(P)at(1.5,.744);\fill(P)circle(2.5pt)node[left=5pt]{$P$};\node[right]at(.8,.18){$s$};
+\end{tikzpicture}

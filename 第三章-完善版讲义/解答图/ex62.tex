@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[->,gray](0,-.3)--(0,3.15)node[above]{$\zeta,\vect k$};\draw[->,thick](0,0)--(1.65,2.65)node[above right]{$\vect n$};\draw[thick,rotate around={-32:(1,1.6)}](1,1.6)ellipse(.8 and .2);\draw(0,.8)arc(90:58:.8);\node at(.4,1.02){$\theta$};\node[below left]at(0,0){$O$};\node at(2,1.5){$s$};\node[left]at(-.45,2.55){$\dot\varphi(0)=0$};\fill(.68,1.1)circle(2pt)node[right]{$C$};\draw[->](.68,1.1)--(.68,.3)node[right]{$mg$};\node[left]at(.25,.65){$l$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\dot\theta(0)=\dot\varphi(0)=0$\\[6pt]$\Downarrow$\\[6pt]$\ddot\theta(0)=mgl\sin\theta_0/A$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.2,0)--(3,0)node[right]{$\theta-\theta_0$};\draw[->](0,-2)--(0,2.4)node[above]{$\varphi-\varphi_0$};\draw[thick,domain=-1:1,samples=100]plot({2*(\x)^2},{1.7*(\x)^3});\fill(0,0)circle(2pt)node[below left]{释放点};\draw[->](.9,.51)--(1.25,.84);\node at(1.2,-2.5){局部展开：$\Delta\theta\propto t^2,\ \Delta\varphi\propto t^3$};\node at(1.2,-3.1){例示 $P>0$，图表示轴端在球面局部坐标中的尖点};
 \end{tikzpicture}

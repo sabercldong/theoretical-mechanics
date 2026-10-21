@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(A)at(2.6,0);\coordinate(B)at(2.6,1.9);\draw[force](O)--(A)node[midway,below]{$u\vect e_r$};\draw[force](A)--(B)node[midway,right]{$\Omega r\vect e_\theta$};\draw[force](O)--(B)node[midway,above left]{$\vect v$};\draw(.65,0)arc(0:36:.65);\node at(.9,.3){$\beta$};\begin{scope}[xshift=6.5cm]\draw[force](0,0)--(-1.7,0)node[below]{$-\Omega^2r\vect e_r$};\draw[force](0,0)--(0,1.9)node[above]{$2\Omega u\vect e_\theta$};\draw[force](0,0)--(-1.7,1.9)node[left]{$\vect a$};\draw[guide](-1.7,0)--(-1.7,1.9)--(0,1.9);\end{scope}\node at(3,-1.2){分别代入 $r=R/3$ 与 $r=R$，切向加速度相同};
+\end{tikzpicture}

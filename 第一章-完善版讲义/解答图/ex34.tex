@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\draw[->](-.3,0)--(4,0)node[right]{$v_x$};\draw[->](0,-1.7)--(0,1.8)node[above]{$v_y$};
+\coordinate(D)at(1.7,0);\coordinate(P)at(2.407,-.707);
+\draw[thick](D)circle(1);\fill(D)circle(2pt)node[above left]{$v_d=E/B$};
+\draw[force](0,0)--(P)node[midway,below]{$\vect v$};
+\draw[force](D)--(P)node[midway,right]{$\vect v-\vect v_d$};
+\draw[->](2.7,0)arc(0:-55:1);\fill(2.7,0)circle(2pt)node[above]{$V$};
+\node at(1.6,-2.5){速度平面；图示 $\omega_c>0,\ V>v_d>0$，回旋顺时针};
+\end{tikzpicture}

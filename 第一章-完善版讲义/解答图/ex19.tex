@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\draw[force](0,0)--(2,0)node[midway,below]{$u$};
+\draw[force](2,0)--(3,0)node[midway,above]{$w$};
+\draw[force](0,-.8)--(3,-.8)node[midway,below]{$u+w$};
+\node at(1.4,1.1){顺风：回程把 $w$ 改为 $-w$};
+\begin{scope}[xshift=5.6cm]
+\draw[force](0,0)--(2,-1)node[midway,below left]{$\vect v_{\rm air}$};
+\draw[force](2,-1)--(2,0)node[midway,right]{$\vect w$};
+\draw[force](0,0)--(2,0)node[midway,above]{$\vect v_{\rm ground}$};
+\draw[guide](0,-1)--(2,-1);\draw(.65,0)arc(0:-26.565:.65);\node at(.9,-.2){$\beta$};\node at(1,1.1){侧风：对地横向分量为零};\end{scope}
+\end{tikzpicture}

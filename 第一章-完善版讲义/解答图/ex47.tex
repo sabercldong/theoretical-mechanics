@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(O)at(0,0);\coordinate(A)at(2,0);\draw[guide](O)--(A)node[midway,below]{$r$};
+\fill(O)circle(2pt)node[left]{$O$};\fill(A)circle(3pt)node[right]{$m_A$};
+\draw[force](A)--++(-1.2,0)node[above]{$T$};
+\draw[force](A)--++(0,1.1)node[above]{$r\dot\theta\,\et$};
+\node at(.8,-1.1){桌面俯视：张力只有径向分量};
+\begin{scope}[xshift=5.8cm]\fill(0,0)circle(3pt)node[right]{$m_B$};
+\draw[force](0,0)--(0,1.3)node[above]{$T$};
+\draw[force](0,0)--(0,-1.3)node[below]{$m_Bg$};
+\draw[->,gray](1,.6)--(1,-.7)node[right]{$+z$};
+\node at(.2,-2.3){绳长联系：$\delta z=-\delta r$};\end{scope}
+\end{tikzpicture}

@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex56.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \Delta q\Delta p=E/\omega$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle A\to0:\quad\Delta q\Delta p\to0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(3.5,0)node[right]{$q$};\draw[->,gray](0,-.35)--(0,2.7)node[above]{$p$};\foreach\a in {1.7,1,.4}\draw[thick](0,0)ellipse(\a cm and \a cm);\fill(0,0)circle(2pt);\node at(1.5,2.9){不同系综或不同能量的状态};\node at(.8,-2.7){经典初态可任意集中，不能从正则括号推出普适正涨落下界};
 \end{tikzpicture}

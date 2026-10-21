@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\draw[->](-.2,0)--(4.4,0)node[right]{$x$};\draw[->](0,-.2)--(0,3.7)node[above]{$y$};
+\draw[double,thick,ink](0,0)--(3.4,2.55);\coordinate(P)at(2,1.5);\fill[ink](P)circle(3pt)node[below right=5pt]{$P$};
+\draw[force](P)--++(.96,.72)node[right]{$\dot r\er$};\draw[force](P)--++(-.72,.96)node[above]{$r\Omega\et$};
+\draw[->](.85,0)arc(0:36.8699:.85);\node[anchor=west]at(1.08,.28){$\theta=\Omega t$};
+\draw[->,muted](145:.7)arc(145:230:.7);\node[left]at(-.75,0){$\Omega$};
+\begin{scope}[shift={(6.4,1.7)}]
+\fill[ink](0,0)circle(3pt)node[below right=5pt]{$P$};
+\draw[force](0,0)--(-.72,.96)node[above]{$R_\theta$};
+\draw[guide](-.8,-.6)--(.8,.6);
+\node[align=center,text width=3cm]at(0,-1.1){水平受力\\竖直方向上\\重力与支持力相抵};
+\end{scope}
+\end{tikzpicture}

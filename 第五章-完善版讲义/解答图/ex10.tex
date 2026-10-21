@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex10.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle m_{AB}=\sigma a,\quad m_{BC}=\sigma b$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \tan\theta=b^2/(a^2+2ab)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(A)at(0,0);\coordinate(B)at(-1,-2);\coordinate(C)at(1,-3);\draw[thick](A)--(B)--(C);\foreach\p in {A,B,C}\fill(\p)circle(2pt)node[above left]{$\p$};\draw[force](-.5,-1)--(-.5,-2.1)node[left]{$\sigma ag$};\draw[force](0,-2.5)--(0,-3.7)node[right]{$\sigma bg$};\draw[guide](A)--(0,-1.7);\node at(1.1,-1){杆段质心分别取中点};\node at(0,-4.5){总势能按两段实际质量加权，稳定时总质心最低};
 \end{tikzpicture}

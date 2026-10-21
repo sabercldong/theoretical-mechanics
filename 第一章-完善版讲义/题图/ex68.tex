@@ -1,0 +1,11 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(O)at(0,0);\coordinate(P)at(2.5,0);
+\fill(O)circle(2pt)node[below]{$O$};\fill(P)circle(3pt)node[right]{$m$};
+\draw[guide](O)--(P)node[midway,below]{$r$};
+\draw[force](P)--(1.2,0)node[midway,above]{$-c\er/r^3$};
+\draw[->,gray](P)--(3.5,0)node[right]{$\er$};
+\draw[force](P)--(3.2,1)node[above]{$\vect v$};
+\node at(1.5,-1.2){给定 $L\ne0$；圆轨道与径向扰动条件待求};
+
+\end{tikzpicture}

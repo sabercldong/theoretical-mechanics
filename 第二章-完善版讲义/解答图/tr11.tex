@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[->,gray](0,0)--(3.8,0)node[right]{$x$};\draw[->,gray](0,0)--(0,2.6)node[above]{$y$};\draw[->](1,.3)--(3.8,.3)node[right]{$x^{\prime}$};\draw[->](1,.3)--(1,2.2)node[above]{$y^{\prime}$};\draw[->,thick](1,1.1)--(2.3,1.1)node[above]{$\vect v_A$};\fill(2.6,1.7)circle(3pt)node[right]{$m_i$};\node[below]at(0,0){$O$};\node[below]at(1,.3){$A$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$T=\tfrac12Mv_A^2+T_{\rm rel}+\vect v_A\cdot(\vect P-M\vect v_A)$\\[6pt]$\Downarrow$\\[6pt]$A=C:\quad\vect P-M\vect v_A=0$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(O)at(0,0);\coordinate(A)at(0,1.7);\coordinate(B)at(2.7,0);\draw[force](O)--(A)node[left]{$\vect v_A$};\draw[force](A)--(B)node[midway,above right]{$\vect v_{P/A}$};\draw[force](O)--(B)node[midway,below]{$\vect v_P$};\node at(1.6,-1){绝对速度、基点速度与相对速度的合成};
 \end{tikzpicture}

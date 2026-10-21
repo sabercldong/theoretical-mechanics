@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex06.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \delta W=F\delta x-mg\delta y$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle Q_\theta=Fl\cos\theta-mgl\sin\theta$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(P)at(1.2,-2.08);\draw[thick](O)--(P);\draw[guide](O)--(0,-2.5);\draw(0,-.65)arc(-90:-60:.65);\node at(.32,-1){$\theta$};\fill(O)circle(2pt)node[above]{$O$};\fill(P)circle(3pt)node[below left]{$P$};\draw[force](P)--++(.9,.52)node[right]{$\delta\vect r=l\vect e_\theta\delta\theta$};\draw(P)++(-.18,.31)--++(.26,.15)--++(.18,-.31);\draw[force](P)--++(1.4,0)node[right]{$F$};\draw[force](P)--++(0,-1.2)node[below]{$mg$};
 \end{tikzpicture}

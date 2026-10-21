@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\coordinate(O)at(0,0);\coordinate(A)at(1,2);\coordinate(M)at(3,1);
+\draw[->](O)--(4,0)node[right]{$x$};\draw[->](O)--(0,3)node[above]{$y$};
+\draw[ink,thick](.4,1.95)..controls(1.2,1.9)and(2.2,1.4)..(M)..controls(3.3,.85)and(3.55,.6)..(3.8,.25);
+\draw[muted](.2,2.4)--(3.8,.6);\draw[force](O)--(M)node[midway,below]{$\vect r$};\draw[force](O)--(A)node[midway,left]{$\vect q$};
+\draw[thick](A)--(M)node[midway,above]{$\lambda\vt$};\draw[force](M)--++(.8,-.4)node[right]{$\vect v$};
+\draw($(A)+(.18,-.09)$)--++(-.09,-.18)--++(-.18,.09);
+\foreach \p in {O,A,M}{\fill[ink](\p)circle(2pt)node[above left=5pt]{$\p$};}
+\end{tikzpicture}

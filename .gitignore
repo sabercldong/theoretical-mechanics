@@ -1,18 +1,24 @@
-# Track the source material and the current five chapter projects.
+# New additions are limited to the current lecture deliverables.
 /*
 !/.gitignore
+!/.gitattributes
 !/README.md
 !/AGENTS.md
-!/*.py
-!/*.pptx
-!/*.pdf
-!/*.docx
-!/课后作业答案/
+!/理论力学讲义-合并版.pdf
 !/第一章-完善版讲义/
 !/第二章-完善版讲义/
 !/第三章-完善版讲义/
 !/第四章-完善版讲义/
 !/第五章-完善版讲义/
+
+# Keep editable figures and image inputs needed by the five main TeX files.
+/*章-完善版讲义/*
+!/*章-完善版讲义/*讲义-完善版.pdf
+!/*章-完善版讲义/*讲义-完善版.tex
+!/*章-完善版讲义/原图/
+!/*章-完善版讲义/补充图/
+!/*章-完善版讲义/题图/
+!/*章-完善版讲义/解答图/
 
 # Generated archives, previews, compiler files, and caches stay local.
 *.zip
@@ -33,12 +39,7 @@ __pycache__/
 *.pem
 *.key
 
-# Retain authoring/check scripts but omit bulky working artifacts.
-**/工作文件/*
-!**/工作文件/*.py
-!**/工作文件/*.json
-!**/工作文件/*.md
+# Authoring tools and audit records remain local for future updates.
+**/工作文件/
 **/*备份*/
-**/资料核查/*
-!**/资料核查/*.json
-!**/资料核查/*.md
+**/资料核查/

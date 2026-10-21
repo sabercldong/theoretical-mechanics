@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex75.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \delta S_{\rm bulk}=\int(-\rho_lu_{tt}+\mathcal T u_{xx})\delta u$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \omega_n=n\pi\sqrt{\mathcal T/\rho_l}/l$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(4,0)node[right]{$x$};\draw[->,gray](0,-.35)--(0,2.5)node[above]{$u$};\draw[thick,domain=0:2.8]plot(\x,{.15*(\x)^2});\fill(0,0)circle(2pt);\fill(2,.6)circle(2pt);\draw[force](0,0)--(-1.3,0)node[above]{$\mathcal T$};\draw[force](2,.6)--(3.3,1.38)node[above]{$\mathcal T$};\draw[guide](2,0)--(2,.6);\draw[<->](0,-.8)--(2,-.8)node[midway,below]{$\dd x$};\node at(1.5,-1.8){张力大小近似恒定，垂向分量之差由两端斜率差决定};
 \end{tikzpicture}

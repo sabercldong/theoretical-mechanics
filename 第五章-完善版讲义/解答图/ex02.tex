@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center]at(0,1.2){\adjustbox{max width=13cm,max height=4.4cm}{\input{题图/ex02.tex}}};
-\node[inner sep=0,anchor=center]at(-3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle s=N_{\rm coord}-k$}};
-\draw[force](-.5,-2.2)--(.5,-2.2);
-\node[inner sep=0,anchor=center]at(3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle s=1,2,1,3$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(P)at(1.2,-2.08);\draw[thick](O)--(P);\draw[guide](O)--(0,-2.5);\draw(0,-.65)arc(-90:-60:.65);\node at(.32,-1){$\theta$};\fill(O)circle(2pt)node[above]{$O$};\fill(P)circle(3pt)node[below left]{$P$};\draw[force](1.2,-2.08)--++(.8,.46)node[right]{$\delta\theta$};\node at(.3,-3.3){单摆：一个切向自由方向};\begin{scope}[xshift=5.5cm,yshift=-1cm]\draw(0,0)circle(1.7);\draw[guide](0,0)ellipse(1.7 and .55);\coordinate(P)at(1.2,.7);\draw[force](0,0)--(P)node[midway,below]{$R\vect n$};\fill(P)circle(2pt)node[above left]{$P$};\draw[force](P)--++(-.45,.78)node[above]{$\vect e_\theta$};\draw[force](P)--++(.85,.45)node[right]{$\vect e_\phi$};\node at(.5,-2.5){球面：两个独立切向方向};\end{scope}\node at(3,-5){直线滚动用弧长；定点刚体还需三种独立虚转动};
 \end{tikzpicture}

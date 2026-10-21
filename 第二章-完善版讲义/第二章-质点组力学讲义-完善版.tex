@@ -4,7 +4,7 @@
 \usepackage[margin=24mm,headheight=16pt,headsep=8mm,footskip=12mm]{geometry}
 \usepackage{amsmath,amssymb,bm,mathtools}
 \usepackage{xcolor,graphicx,tikz,booktabs,array,tabularx,longtable}
-\usepackage{enumitem,fancyhdr,caption,hyperref}
+\usepackage{enumitem,fancyhdr,caption,hyperref,adjustbox}
 \definecolor{ink}{HTML}{233E50}
 \definecolor{soft}{HTML}{F0F4F6}
 \definecolor{muted}{HTML}{586774}
@@ -36,14 +36,14 @@
 \newcommand{\vn}{\vect e_n}
 \newcommand{\important}[1]{\par #1\par}
 \newcounter{example}
-\newcommand{\example}[1]{\Needspace{5\baselineskip}\refstepcounter{example}\subsubsection*{例\theexample\quad #1}}
-\newcommand{\solution}{\setcounter{solutionstep}{0}\par\nopagebreak[4]\smallskip\nopagebreak[4]\noindent\textbf{解答}\quad}
+\newcommand{\example}[1]{\Needspace{7\baselineskip}\refstepcounter{example}\subsubsection*{例\theexample\quad #1}}
+\newcommand{\solution}{\setcounter{solutionstep}{0}\Needspace{7\baselineskip}\par\noindent\textbf{解答}\quad}
 
 
 \newcommand{\Mtot}{M}
 \newcommand{\CM}{\mathrm C}
 \newcounter{exercise}
-\newcommand{\exercise}[1]{\Needspace{5\baselineskip}\refstepcounter{exercise}\subsubsection*{训练题\theexercise\quad #1}}
+\newcommand{\exercise}[1]{\Needspace{7\baselineskip}\refstepcounter{exercise}\subsubsection*{训练题\theexercise\quad #1}}
 
 \makeatletter
 \newcommand{\Needspace}[1]{\par\if@nobreak\else\penalty0\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup\fi}
@@ -71,28 +71,19 @@
 \captionsetup{hypcap=false}\captionof{figure}{#2}\label{fig:lesson-#1}
 \end{minipage}\end{center}\par}
 
-\newsavebox{\QuestionDrawing}
-\newcommand{\QuestionStatement}[3]{%
-\par\noindent\begin{minipage}{\linewidth}%
-\begin{minipage}[t]{.63\linewidth}\vspace{0pt}\raggedright\setlength{\parindent}{0pt}#1\end{minipage}\hfill%
-\begin{minipage}[t]{.34\linewidth}\vspace{2pt}\centering%
-\sbox{\QuestionDrawing}{\input{题图/#2.tex}}%
-\resizebox{.98\linewidth}{!}{\usebox{\QuestionDrawing}}\par\vspace{3pt}{\small #3}%
-\end{minipage}\end{minipage}\par\smallskip}
-\newcommand{\LongQuestionStatement}[3]{\par #1\par\smallskip\noindent\begin{minipage}{\linewidth}\centering\sbox{\QuestionDrawing}{\input{题图/#2.tex}}\resizebox{.42\linewidth}{!}{\usebox{\QuestionDrawing}}\par{\small #3}\end{minipage}\par\smallskip}
+
 \newcounter{solutionstep}
-\newcommand{\Step}[1]{\ifnum\value{solutionstep}>0\par\smallskip\noindent\fi\stepcounter{solutionstep}\textbf{（\arabic{solutionstep}）#1}\quad}
-
-
-\newsavebox{\SolutionDrawing}
-\newsavebox{\SolutionScaled}
+\newcommand{\Step}[1]{\ifnum\value{solutionstep}>0\par\smallskip\Needspace{5\baselineskip}\noindent\fi\stepcounter{solutionstep}\textbf{（\arabic{solutionstep}）#1}\quad}
+\newcommand{\QuestionStatement}[3]{%
+\par #1\par 模型与符号见图\ref{fig:question-#2}。%
+\par\begin{center}\begin{minipage}{\linewidth}\centering
+\begin{adjustbox}{max width=.96\linewidth,max totalheight=6.4cm}\input{题图/#2.tex}\end{adjustbox}
+\captionof{figure}{#3}\label{fig:question-#2}\end{minipage}\end{center}\par}
+\newcommand{\LongQuestionStatement}[3]{\QuestionStatement{#1}{#2}{#3}}
 \newcommand{\SolutionFigure}[2]{%
-\par\addvspace{6pt}\noindent\begin{minipage}{\linewidth}\centering%
-\sbox{\SolutionDrawing}{\input{解答图/#1.tex}}%
-\sbox{\SolutionScaled}{\resizebox{.88\linewidth}{!}{\usebox{\SolutionDrawing}}}%
-\ifdim\ht\SolutionScaled>5.6cm\resizebox{!}{5.6cm}{\usebox{\SolutionDrawing}}\else\usebox{\SolutionScaled}\fi%
-\captionof{figure}{#2}\label{fig:solution-#1}\end{minipage}\par\addvspace{6pt}}
-
+\par\begin{center}\begin{minipage}{\linewidth}\centering
+\begin{adjustbox}{max width=.96\linewidth,max totalheight=6.4cm}\input{解答图/#1.tex}\end{adjustbox}
+\captionof{figure}{#2}\label{fig:solution-#1}\end{minipage}\end{center}\par}
 
 \begin{document}
 
@@ -120,7 +111,7 @@
 \section*{符号与基本约定}
 本章研究由多个质点构成的系统。核心问题有两个：整个系统怎样运动，以及系统内部怎样发生相对运动。质心把这两类运动联系起来；动量、角动量和能量则分别揭示不同的动力学约束。
 
-所有坐标方向、角度起算方向和速度所对应的参考系均在题干或解答中说明。课件原图沿用原有标注；图题说明其与正文的符号对应。定量图注明所取参数和适用范围。图中曲线和物体大小用于说明几何关系；未标明数值比例时，不作为测量依据。
+所有坐标方向、角度起算方向和速度所对应的参考系均在题干或解答中说明。图中采用的不同记号在图题中说明与正文的对应关系。定量图注明所取参数和适用范围。图中曲线和物体大小用于说明几何关系；未标明数值比例时，不作为测量依据。
 
 本章默认使用经典力学。除变质量部分外，质点的质量均为常数；除另有说明外，参考系为惯性系，绳和杆为无质量理想连接件。位力定理的量子形式单独说明其平均与边界条件。
 \textbf{统一记号}\quad
@@ -191,12 +182,11 @@ $\vect R-\vect a$，而 $\vect r'_i$ 不变。因此质心的定义与原点选�
 
 \example{三角形薄片与三个顶点质点}
 \label{ex:c2-1}
-\QuestionStatement{均匀三角形薄片顶点为 $\vect a,\vect b,\vect c$，求质心，并与三个等质量顶点质点比较。
-以 $G$ 表示质心、$D$ 表示 $BC$ 中点，说明中线上的分割比；积分中须给出质量或面积权重。}{ex01}{例1题图}
+\QuestionStatement{在同一固定平面坐标系中，均匀三角形薄片的顶点为 $A,B,C$，位置矢量分别为 $\vect a,\vect b,\vect c$。薄片面密度为常数。用面积积分求质心 $G$，再与放在三个顶点上的三个等质量质点的质心比较。设 $D$ 是 $BC$ 的中点，求 $G$ 在中线 $AD$ 上的分割比，并说明均匀性在推导中的作用。}{ex01}{例1题图}
 % BEGIN DETAILED ANSWER ex01
 \solution \Step{明确系统、坐标与约束} 三角形内的面密度为常数 $\sigma$，因此质心是面积加权平均。取 $A,B,C$ 三个顶点对应位置 $\vect a,\vect b,\vect c$，用两个无量纲参数表示内部点；不能仅以图形外观把薄片当成三个质点，须先证明两种平均相同。
 
-图~\ref{fig:solution-ex01}~中顶点 $A,B,C$ 与中线交点 $G$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex01}，解答图\ref{fig:solution-ex01}展示重心坐标三角域及固定 $u$ 的积分条，明确 $0\le v\le1-u$ 的积分限。
 \SolutionFigure{ex01}{例1的分析与计算}
 
 \Step{列出方程并求解} 用重心坐标
@@ -214,7 +204,7 @@ $u\ge0,v\ge0,u+v\le1$。面积元中的常数雅可比在分子、分母中约�
 三个等质量顶点质点给出完全相同的质心。若 $D=(\vect b+\vect c)/2$，
 则 $\vect R=\vect a+\frac23(\vect D-\vect a)$，质心将每条中线按 $2:1$ 分割。
 
-\Step{补出重心坐标积分的归一化}
+\Step{推导重心坐标积分的归一化}
 设雅可比常数为 $J_0=|(\vect b-\vect a)\times(\vect c-\vect a)|$，则
 \[
 M=\sigma J_0\int_0^1\int_0^{1-u}\dd v\dd u=\sigma J_0/2,
@@ -241,7 +231,7 @@ M=\sigma J_0\int_0^1\int_0^{1-u}\dd v\dd u=\sigma J_0/2,
 % BEGIN DETAILED ANSWER ex02
 \solution \Step{明确系统、坐标与约束} 把被挖掉的两个完整圆孔视为从原圆盘的质量积分中减去两项。设剩余质量为 $M_{\rm rem}$，面密度相同，则面积比就是质量比，密度将在求质心时约去。左右对称先给出 $X=0$，只需计算竖直一阶矩。
 
-图~\ref{fig:solution-ex02}~中位于 $y=\sqrt3R/4$ 的两个负质量圆孔，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex02}，解答图\ref{fig:solution-ex02}展示被挖部分的一阶矩方向与剩余质心偏移方向，用以确定质量差及一阶矩的符号。
 \SolutionFigure{ex02}{例2的分析与计算}
 
 \Step{列出方程并求解} 以圆盘中心为原点，$y$ 向上。孔中心
@@ -274,12 +264,11 @@ $r\to0$ 时 $Y\to0$；在允许的最大 $r=R/4$ 时 $Y=-\sqrt3R/28$，仍在圆
 \subsection{连续体质心的积分实例}\label{sub:c2-1.4}
 \example{均匀实心半球与厚半球壳}
 \label{ex:c2-3}
-\QuestionStatement{求半径为 $a$ 的均匀实心半球的质心；再求内半径为 $a$、外半径为 $b$ 的均匀厚半球壳质心。
-取赤道面为 $z=0$、对称轴向上，$0\le a<b$；检验实心极限与薄壳极限。}{ex03}{例3题图}
+\QuestionStatement{以球心为原点、赤道面为 $z=0$，取 $z$ 轴向上。分别考虑半径 $a>0$ 的均匀实心上半球，以及内半径 $a$、外半径 $b>a$ 的均匀厚上半球壳；二者体密度均为常数。求各自的质量与质心坐标。对厚壳结果分别取内半径趋零和壳厚趋零的极限，并说明得到的物体模型。}{ex03}{例3题图}
 % BEGIN DETAILED ANSWER ex03
 \solution \Step{明确系统、坐标与约束} 以球心为原点，半球对 $x=0,y=0$ 两平面对称，故 $X=Y=0$。水平薄层内密度恒定，取 $\dd m=\rho A(z)\dd z$；对厚壳则把外半球和内半球的体积分分别相减，不能直接对两个半径作算术平均。
 
-图~\ref{fig:solution-ex03}~中半球的水平截面和厚壳内外半径，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex03}，解答图\ref{fig:solution-ex03}展示高度 $z$ 的水平质量薄层；截面面积与该层密度一起作为一阶矩的权重。
 \SolutionFigure{ex03}{例3的分析与计算}
 
 \Step{列出方程并求解} 以赤道平面为 $z=0$，半球位于 $z\ge0$。实心半球横截面积
@@ -320,11 +309,11 @@ $\lim Z=(3/8)(4a^3)/(3a^2)=a/2$。
 \example{圆锥及其沿轴剖开的半圆锥}
 \label{ex:c2-4}
 \QuestionStatement{均匀圆锥底面半径为 $a$，高为 $h$。求完整圆锥的质心，以及沿包含轴的平面剖开、保留 $x\ge0$ 部分后的质心。
-以底面中心为原点、轴向上为 $z$，补齐半圆截面的一阶矩积分。}{ex04}{例4题图}
+以底面中心为原点、轴向上为 $z$，写出半圆截面的一阶矩积分。}{ex04}{例4题图}
 % BEGIN DETAILED ANSWER ex04
 \solution \Step{明确系统、坐标与约束} 完整圆锥绕对称轴旋转不改变质量分布，所以质心位于该轴。半圆锥仅保留 $x\ge0$ 后，仍关于 $y=0$ 对称，$Y=0$；每个水平截面的面积恰为整圆的一半，因此轴向平均高度不变，横向坐标须另外积分。
 
-图~\ref{fig:solution-ex04}~中$x\ge0$ 半圆截面的形心及顶点高度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex04}，解答图\ref{fig:solution-ex04}展示半圆截面的一阶矩与截面半径 $R(z)$；先求层内形心，再按截面积对各层加权。
 \SolutionFigure{ex04}{例4的分析与计算}
 
 \Step{列出方程并求解} 先以顶点为原点、沿轴向下取 $s$。截面半径 $as/h$，截面积
@@ -370,7 +359,7 @@ X=\frac{\int_0^h\bar x_h(z)A_h(z)\dd z}{\int_0^h A_h(z)\dd z}
 % BEGIN DETAILED ANSWER ex05
 \solution \Step{明确系统、坐标与约束} 交点由 $kx^2=a$ 给出，故 $x\in[-b,b]$，$b=\sqrt{a/k}$；每个竖直条带从 $y=kx^2$ 延伸到 $a$。条带面积为 $(a-kx^2)\dd x$，条带的一阶矩应积分 $y\dd y\dd x$，不是只用顶边高度乘面积。
 
-图~\ref{fig:solution-ex05}~中两条竖直边界间宽为 $\dd x$ 的面积条，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex05}，解答图\ref{fig:solution-ex05}展示水平面积条与原竖直面积条的两种积分分区，说明上下限及高度权重如何进入一阶矩。
 \SolutionFigure{ex05}{例5的分析与计算}
 
 \Step{列出方程并求解} 关于 $y$ 轴对称，故 $X=0$。令 $b=\sqrt{a/k}$，
@@ -408,7 +397,7 @@ $k$ 决定横向伸缩，关于 $y$ 的归一化分布不变，因此 $Y/a$ 不�
 % BEGIN DETAILED ANSWER ex06
 \solution \Step{明确系统、坐标与约束} 第一卦限中的截平面与各坐标轴交于 $2,4,8$，因此体积分最直接的次序为先 $z$、再 $y$、最后 $x$：$0\le x\le2$，$0\le y\le4-2x$，$0\le z\le8-4x-2y$。均匀密度只作为常因子，不会改变归一化质心。
 
-图~\ref{fig:solution-ex06}~中三条截距为 $2,4,8$ 的坐标棱，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex06}，解答图\ref{fig:solution-ex06}展示固定横坐标 $x$ 后的 $yz$ 三角截面；其两条截距均随 $1-x/a$ 缩小。
 \SolutionFigure{ex06}{例6的分析与计算}
 
 \Step{列出方程并求解} 截距为 $a=2,b=4,c=8$。作变量变换
@@ -475,7 +464,7 @@ X=\frac{\int_0^h x_c(z)A(z)\dd z}{\int_0^h A(z)\dd z}
 % BEGIN DETAILED ANSWER ex07
 \solution \Step{明确系统、坐标与约束} 上方密度较大，质心应高于均匀半球，但不能据此直接给数值。利用水平截面 $A(z)=\pi(a^2-z^2)$，先求零阶质量矩 $M$，再求轴向一阶矩 $MZ$；二者使用同一密度函数和同一积分区间。
 
-图~\ref{fig:solution-ex07}~中高度 $z$ 的截面及其密度权重，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex07}，解答图\ref{fig:solution-ex07}展示高度 $z$ 的水平质量薄层；截面面积与该层密度一起作为一阶矩的权重。
 \SolutionFigure{ex07}{例7的分析与计算}
 
 \Step{列出方程并求解} 仍取水平截面，$\dd m=\rho_0(1+z/a)\pi(a^2-z^2)\dd z$。对称性给 $X=Y=0$。展开并积分：
@@ -515,7 +504,7 @@ $A=(l\cos\theta,l\sin\theta)$、$B=(2l\cos\theta,0)$。求质心轨迹、总动�
 % BEGIN DETAILED ANSWER ex08
 \solution \Step{明确系统、坐标与约束} 先按几何确定各构件质心，再对两个杆和一个滑块求质量加权平均。注意每根杆的质量均为 $m_1$，故总质量是 $2m_1+m_2$；连杆 $AB$ 的中点不在 $OA$ 的中点，也不能把滑块坐标当作连杆坐标。
 
-图~\ref{fig:solution-ex08}~中两根等长杆的中点和沿水平轴移动的滑块 $B$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex08}，解答图\ref{fig:solution-ex08}展示两杆中点与滑块的瞬时速度；分别乘各自质量后相加得到系统总动量。
 \SolutionFigure{ex08}{例8的分析与计算}
 
 \Step{列出方程并求解} 两杆质心分别为
@@ -602,7 +591,7 @@ M\ddot{\vect R}=\vect F^{\rm ext}.
 % BEGIN DETAILED ANSWER ex09
 \solution \Step{明确系统、坐标与约束} 把全部碎片作为固定成员系统。爆炸内冲量改变各碎片速度，但成对相消；在极短爆炸时段内可忽略有限重力的冲量。爆炸前后质心位置连续、总动量连续，这是延续原轨道的两个初条件。
 
-图~\ref{fig:solution-ex09}~中爆炸点 $C$ 后的质心轨迹与重力方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex09}，解答图\ref{fig:solution-ex09}展示爆炸冲量的相抵与爆炸后各碎片仍受重力的区别；前者不改质心初速度，后者决定其后质心加速度。
 \SolutionFigure{ex09}{例9的分析与计算}
 
 \Step{列出方程并求解} 爆炸期间内冲量成对抵消，故 $\sum_i m_i\vect v_i^+=M\vect V^-$。碎片从同一位置 $\vect R_0$ 出发，各自满足
@@ -631,14 +620,11 @@ M\ddot{\vect R}=M\vect g,\qquad
 \subsection{外力测量与偏心转子的支承反力}\label{sub:c2-2.3}
 \example{固定机座上的偏心电动机}
 \label{ex:c2-10}
-\QuestionStatement{定子质量为 $m_1$，质心固定在 $O$；转子质量为 $m_2$，质心到 $O$ 的偏心距为 $e$。
-按原图所示取逆时针为正，转子以恒定角速度 $\omega>0$ 转动，初始质心在 $O$ 正上方。
-求机座对整个电动机的支承合力。
-同时给出支承合力的变化范围，并说明仅用动量定理能否确定支承力偶。}{ex10}{例10题图}
+\QuestionStatement{电动机定子质量为 $m_1$、质心固定在 $O$，转子质量为 $m_2$、质心 $P$ 到 $O$ 的距离恒为 $e>0$。取地面惯性系 $x$ 向右、$y$ 向上；转子从 $O$ 正上方出发，以恒定角速度 $\omega>0$ 逆时针转动。忽略其他外力，重力加速度为 $g$。求机座对整个电动机的支承合力分量、合力大小的变化范围，并说明这些条件能否单独确定支承力偶。}{ex10}{例10题图}
 % BEGIN DETAILED ANSWER ex10
 \solution \Step{明确系统、坐标与约束} 取定子和转子合成整个电动机为系统，支承合力是外力；马达与转子之间的作用属于内部作用。固定机座并不表示总质心静止，因为偏心质量正在绕固定点运动。应先求转子质心加速度，再与整个系统的重力合成。
 
-图~\ref{fig:solution-ex10}~中偏心转子在初始上方的位置，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex10}，解答图\ref{fig:solution-ex10}展示支承合力的矢量合成：向上的静载项与指向转轴的周期惯性项分别贡献分量。
 \SolutionFigure{ex10}{例10的分析与计算}
 
 \Step{列出方程并求解} 取 $x$ 向右，$y$ 向上，转子质心位置
@@ -679,7 +665,7 @@ $e=0$ 时恢复静载，$\omega$ 加倍时动载幅值乘四。若机座只能�
 % BEGIN DETAILED ANSWER ex11
 \solution \Step{明确系统、坐标与约束} 发射后炮车质量仍为 $M$，炮弹质量为 $m$，初态总水平动量为零。轨道和地面可提供竖直冲量，故只对水平方向使用动量守恒。炮弹速度必须先从车系换到地面系，再进入该守恒式。
 
-图~\ref{fig:solution-ex11}~中倾斜炮管方向与炮身的水平反冲，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex11}，解答图\ref{fig:solution-ex11}展示炮弹相对速度与炮车速度的首尾合成，说明出膛仰角并非一般的对地速度仰角。
 \SolutionFigure{ex11}{例11的分析与计算}
 
 \Step{列出方程并求解} 以炮弹水平发射方向为正。若炮车速度为 $U$，
@@ -723,7 +709,7 @@ $\alpha=0$ 时 $U=-mV/(M+m)$、$v_x=MV/(M+m)$，两者相对速率之差确为 $
 % BEGIN DETAILED ANSWER ex12
 \solution \Step{明确系统、坐标与约束} 每一阶段都取“人加小车”为系统，水平方向无外冲量。第一次着车是带有竖直外冲量的粘连过程，第二次跳离则有肌肉做功；二者共同适用的是水平动量守恒，机械能并不跨阶段守恒。
 
-图~\ref{fig:solution-ex12}~中跳入的 $60^\circ$ 水平投影与跳出的相对速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex12}，解答图\ref{fig:solution-ex12}展示入车、共同运动、离车三个状态；两次守恒式使用不同的共同速度与相对速度。
 \SolutionFigure{ex12}{例12的分析与计算}
 
 \Step{列出方程并求解} 落车前人的水平速度为 $2\cos60^\circ=1\,\mathrm{m/s}$，
@@ -763,7 +749,7 @@ $N$ 为正整数、$M,m,v>0$。逐次跳离时，各人速度均相对于其离�
 % BEGIN DETAILED ANSWER ex13
 \solution \Step{明确系统、坐标与约束} 同时跳离是一次整体动量收支；依次跳离则必须在每一次分离瞬间重新选系统。已离车的人不再参与下一次加速，留在车上的质量随着跳离次数减少，这正是两种最终反冲不同的来源。
 
-图~\ref{fig:solution-ex13}~中同一车上各人的同时或依次离车，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex13}，解答图\ref{fig:solution-ex13}展示逐人跳离时车速的逐次累积，与同样人数同时跳离的末速比较，展示每一步变化的分母不同。
 \SolutionFigure{ex13}{例13的分析与计算}
 
 \Step{列出方程并求解} 同时离车时，若车速度为 $U$，每人的对地速度均为 $U+v$。
@@ -785,7 +771,7 @@ U_{\text{依次}}=-v\sum_{j=1}^{N}\frac{m}{M+jm}.
 $|U_{\text{依次}}|>|U_{\text{同时}}|$。
 差异来自每次跳离时车上剩余质量不同；各人的最终对地速度也不同。
 
-\Step{补出同时分离与逐次分离的比较}
+\Step{推导同时分离与逐次分离的比较}
 同时跳离满足 $0=MU+Nm(U+v)$，所以第一式分母包括全部乘客质量。
 逐次模型中，跳前主体质量为 $M+(N-k+1)m$，跳后人和车的速度差始终是 $v$。原方程整理为
 \[
@@ -809,7 +795,7 @@ $\theta=\theta_0\cos kt$，求支座速度及最大速率。
 % BEGIN DETAILED ANSWER ex14
 \solution \Step{明确系统、坐标与约束} 系统的水平外力为零，故支座和球的水平动量之和始终为初始值0。摆球相对支座的速度包含 $l\dot\theta\cos\theta$，其对地水平速度还须加 $\dot X$；漏掉后一项会导致错误的质量分母。
 
-图~\ref{fig:solution-ex14}~中摆长 $l$、角度 $\theta$ 与水平活动支点，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex14}，解答图\ref{fig:solution-ex14}展示支座与摆球的水平内力相反，用以解释两个速度怎样受到同一水平质心约束。
 \SolutionFigure{ex14}{例14的分析与计算}
 
 \Step{列出方程并求解} 支座坐标为 $X$，球坐标为
@@ -860,7 +846,7 @@ $m_A\to\infty$ 恢复固定支点 $k^2=g/l$，也验证了支座运动的影响�
 % BEGIN DETAILED ANSWER ex15
 \solution \Step{明确系统、坐标与约束} 将两人和无质量绳一起作为系统，没有外力，且总初动量为0，所以质心在地面惯性系中固定。两人怎样分配拉力会改变相遇所需时间，但无论谁主动拉绳，固定质心的位置约束都必须满足。
 
-图~\ref{fig:solution-ex15}~中两质点到相遇点的互补距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex15}，解答图\ref{fig:solution-ex15}展示质心两侧的互补距离及相向移动方向；应同时使用一阶矩平衡和距离之和。
 \SolutionFigure{ex15}{例15的分析与计算}
 
 \Step{列出方程并求解} 初始总动量为零，质心保持在初始位置。取第一人初始位置为0、
@@ -893,7 +879,7 @@ $0\le\alpha<\pi/2$。已知冲量后 $B$ 的速度大小为 $v_B$，求其方向
 % BEGIN DETAILED ANSWER ex16
 \solution \Step{明确系统、坐标与约束} 冲量发生的短时间内杆绳位置不变，但必须满足碰后绳长约束。不可伸长要求沿当前连线的两端速度相等，并不要求横向速度也相等。绳只能拉，约束冲量方向应先按维持绷紧的方向设定，再检查求得的冲量非负。
 
-图~\ref{fig:solution-ex16}~中冲量沿 $AB$ 的径向分量与垂直分量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex16}，解答图\ref{fig:solution-ex16}展示两个球分别受到的约束冲量和外冲量，以及绷紧条件要求相等的径向速度分量。
 \SolutionFigure{ex16}{例16的分析与计算}
 
 \Step{列出方程并求解} 取绳方向为 $x$，横向为 $y$。冲量的向外分量使轻绳绷紧，
@@ -911,7 +897,7 @@ J=\frac{v_B}{\sqrt{\cos^2\alpha/(m_A+m_B)^2+\sin^2\alpha/m_B^2}}.
 若冲量方向使两球趋于靠近，柔绳会松弛，这组径向约束便不适用。
 若冲量作用时间很短，外冲量中输入的功取决于施力过程；不能从总动量方程单独推断其数值。
 
-\Step{补出速度方向、速率与冲量的关系}
+\Step{推导速度方向、速率与冲量的关系}
 令 $M=m_A+m_B$，则碰后球 $B$ 的速度为
 \[
 \vect v_B=J\left(\frac{\cos\alpha}{M}\vect e_x+
@@ -936,7 +922,7 @@ J=\frac{v_B}{\sqrt{\cos^2\alpha/(m_A+m_B)^2+\sin^2\alpha/m_B^2}}.
 % BEGIN DETAILED ANSWER ex17
 \solution \Step{明确系统、坐标与约束} 全过程分为“内部抛掷—共同重力飞行—球与沟底反弹—两者弹性碰撞”四段。内部抛掷阶段使用竖直总动量守恒；碰沟底时地面冲量是外冲量，不能跨这个事件保持两者总竖直动量。碰人之前的速度应由各段运动重新计算。
 
-图~\ref{fig:solution-ex17}~中人向上、球向下与沟底高度差，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex17}，解答图\ref{fig:solution-ex17}展示一个可重复周期中人的抛物线与球的下落、反弹轨迹，明确顶点、反弹及再次碰撞是不同事件。
 \SolutionFigure{ex17}{例17的分析与计算}
 
 \Step{列出方程并求解} 设抛球前二者竖直总动量为零，内部抛掷使
@@ -1068,12 +1054,11 @@ $m_i\dot{\vect w}_i=\vect F_i-m_i\vect a_A$，于是
 
 \example{无外力矩仍不守恒的移动点角动量}
 \label{ex:c2-18}
-\QuestionStatement{自由质点质量为 $m$，在 $(vt,0)$ 运动；参考点 $A=(0,ut)$，两坐标轴不旋转。求关于 $A$ 的两种角动量。
-分别用绝对速度与相对于 $A$ 的速度定义角动量，保留两种定义的运输修正项。}{ex18}{例18题图}
+\QuestionStatement{在固定惯性系中，质量为 $m>0$ 的自由质点位置为 $P=(vt,0)$，另一个参考点为 $A=(0,ut)$，$u,v$ 为常数，$t\ge0$，各坐标轴始终平行且不转动。分别以质点的绝对速度和相对 $A$ 的速度定义关于 $A$ 的角动量，求其大小、方向和时间导数，并解释真实力矩为零时为何会得到不同的守恒结论。}{ex18}{例18题图}
 % BEGIN DETAILED ANSWER ex18
 \solution \Step{明确系统、坐标与约束} 关于移动点的角动量需要同时给出位置基点和速度定义。设 $\vect s=\vect r-\vect r_A$，绝对定义为 $\vect s\times m\vect v$，相对定义为 $\vect s\times m(\vect v-\vect v_A)$；它们相差 $\vect s\times m\vect v_A$。
 
-图~\ref{fig:solution-ex18}~中移动点 $A$ 到粒子的有向位置矢量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex18}，解答图\ref{fig:solution-ex18}展示绝对速度与相对速度的矢量三角形；改变速度定义也改变角动量或动能分解中的交叉项。
 \SolutionFigure{ex18}{例18的分析与计算}
 
 \Step{列出方程并求解} $\vect s=(vt,-ut)$、$\vect v=(v,0)$，所以
@@ -1106,7 +1091,7 @@ $v(t)$ 指 $B$ 相对于本侧绳的有向向上爬速，不是对地速率；�
 % BEGIN DETAILED ANSWER ex19
 \solution \Step{明确系统、坐标与约束} 两只猴子的上升方向都以地面竖直向上为正；但同一条不可伸长绳的两侧速度方向相反。设左侧抓绳猴速度为 $u$，右侧绳本身速度是 $-u$，因此右猴对地速度为相对爬速加绳速，即 $v-u$。
 
-图~\ref{fig:solution-ex19}~中A侧绳上升与B侧绳下降的速度约束，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex19}，解答图\ref{fig:solution-ex19}展示两只猴子各自的重力、张力受力图；轻轮与有转动惯量轮不能混用同一张力条件。
 \SolutionFigure{ex19}{例19的分析与计算}
 
 \Step{列出方程并求解} 设 $A$ 所在绳段对地向上速度为 $u$，则另一侧绳段向下速度为 $u$。
@@ -1131,7 +1116,7 @@ v_B=\frac{mr^2+I_p}{2mr^2+I_p}v.
 $I_p>0$ 时爬绳者上升更快。若绳可在滑轮上滑动，
 就不能以 $\omega_p=u/r$ 代替滑轮角速度，必须另给接触条件。
 
-\Step{把滑轮惯量和位移结果补全}
+\Step{把滑轮惯量和位移结果求出}
 以左侧上升为正转向，猴子的角动量差为 $mr(v_A-v_B)$；无滑轮滑动时轮角速度为 $u/r$，故总角动量
 \[
 L_O=mr[2u-v]+I_pu/r.
@@ -1155,7 +1140,7 @@ $I_p=0$ 时同高；$I_p>0,v>0$ 时 $B$ 更高；$I_p\to\infty$ 时绳近似不�
 % BEGIN DETAILED ANSWER ex20
 \solution \Step{明确系统、坐标与约束} 猴子可以沿绳爬动，因此两猴绝对加速度不受“大小相等、方向相反”的绳端固定约束。轻绳和轻滑轮只保证两侧张力相同。应先对两猴分别写绝对运动方程，再用同时到达的位移条件确定加速度。
 
-图~\ref{fig:solution-ex20}~中两猴到轮轴水平面的不同高度 $s,s^{\prime}$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex20}，解答图\ref{fig:solution-ex20}展示两只猴子各自的重力、张力受力图；轻轮与有转动惯量轮不能混用同一张力条件。
 \SolutionFigure{ex20}{例20的分析与计算}
 
 \Step{列出方程并求解} 分别记绝对加速度为 $a,a'$。两侧张力相同：
@@ -1214,7 +1199,7 @@ $\sum m_i\vect r'_i=\sum m_i\vect v'_i=0$，得到
 % BEGIN DETAILED ANSWER ex21
 \solution \Step{明确系统、坐标与约束} 释放后的均匀重力对双球质心不产生合力矩，因此可把运动分为质心自由抛体与相对质心的匀速转动。初始杆竖直，水平冲量与杆垂直，不引入沿杆的初瞬约束冲量；先分别确定总动量和质心角动量，再还原端点。
 
-图~\ref{fig:solution-ex21}~中下端冲量 $J$ 到质心 $C$ 的垂直力臂，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex21}，解答图\ref{fig:solution-ex21}展示两端速度的质心平移与绕质心转动分解，直接核对受冲量端和未受冲量端的初始速度。
 \SolutionFigure{ex21}{例21的分析与计算}
 
 \Step{列出方程并求解} 以初始质心为原点，$x$ 向右、$y$ 向上。
@@ -1254,7 +1239,7 @@ $t=0$ 时位置分别为 $(0,-l/2)$、$(0,l/2)$；
 \OriginalPanel{projectile_double_ball_setup}
 \hfill
 \OriginalPanel{projectile_double_ball_paths}
-\captionof{figure}{左：刚杆双球释放前的初态与质心平抛示意。下球 1 受到水平冲量，原图 $I$ 对应正文 $J$；原图 $y$ 向下，与正文的纵轴方向相反；右：双球的原课件轨迹：蓝线为下球 1、红线为上球 2，黑色虚线为质心；纵坐标向上为正。}
+\captionof{figure}{左：刚杆双球释放前的初态与质心平抛示意。下球 1 受到水平冲量，原图 $I$ 对应正文 $J$；原图 $y$ 向下，与正文的纵轴方向相反；右：双球的轨迹：蓝线为下球 1、红线为上球 2，黑色虚线为质心；纵坐标向上为正。}
 \label{fig:orig-projectile_double_ball_setup}
 \label{fig:orig-projectile_double_ball_paths}
 \end{minipage}\end{center}\par
@@ -1269,7 +1254,7 @@ $\vect F=k\vect r$ 与 $\vect F=c\vect r/r^3$，其中 $k,c>0$。
 % BEGIN DETAILED ANSWER ex22
 \solution \Step{明确系统、坐标与约束} 把两端的相对质心矢量写成 $\pm\vect s$，杆长不变，所以内部转动惯量固定。判断是否转动要计算关于质心的总外矩；判断关于力心的总角动量则应另对 $O$ 取矩，两项结论不可以互相替代。
 
-图~\ref{fig:solution-ex22}~中杆与 $OC$ 夹 $45^\circ$ 时的两个径向外力，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex22}，解答图\ref{fig:solution-ex22}展示线性斥力的差力沿杆，而反平方斥力的差力一般不沿杆；用差力相对于杆的横向分量判断力矩。
 \SolutionFigure{ex22}{例22的分析与计算}
 
 \Step{列出方程并求解} 记两球位置为 $\vect r_A=\vect R-\vect s$、
@@ -1364,14 +1349,11 @@ U=\sum_i U_i^{\rm ext}(\vect r_i)
 
 \example{秋千为何越荡越高}
 \label{ex:c2-23}
-\QuestionStatement{把人和脚踏板作为两质点系统，连接件的长度固定、悬点固定，
-但人可以主动改变人与脚踏板的相对距离 $r$。
-为什么没有外界牵引，机械能仍可增加？
-以 $f$ 表示促使 $r$ 增大的有向内力，画出一周期的 $f$--$r$ 过程并说明机械能的来源。}{ex23}{例23题图}
+\QuestionStatement{把秋千上的人和脚踏板理想化为两个质点，秋千外部悬点固定，理想连接件不耗散。人可通过肌肉主动改变自身与脚踏板之间的相对距离 $r$。取促使 $r$ 增大的相互作用力为有向内力 $f$。说明内力总功与 $f\,\dd r$ 的关系；以 $r_{\min}$、$r_{\max}$ 和 $f_{\rm low}<f_{\rm high}$ 表示一条闭合的理想调节循环，求一周期增加的机械能，并说明能量来源和外约束力是否做功。}{ex23}{例23题图}
 % BEGIN DETAILED ANSWER ex23
 \solution \Step{明确系统、坐标与约束} “内力合力为零”只约束质心动量，不能推出内力总功为零。把主动改变长度的两质点相互作用写成 $\vect f,-\vect f$，其总瞬时功率为 $\vect f\cdot(\vect v_1-\vect v_2)$，需要两点的相对速度，而不是系统质心速度。
 
-图~\ref{fig:solution-ex23}~中$f-r$ 平面上有方向的闭合路径，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex23}，解答图\ref{fig:solution-ex23}展示较大内力时伸长、较小内力时缩短的有向循环；阴影面积对应机械能增量。
 \SolutionFigure{ex23}{例23的分析与计算}
 
 \Step{列出方程并求解} 理想固定绳的张力对系统不做功，重力功已计入势能。
@@ -1418,7 +1400,7 @@ $A$ 以角速率 $\Omega$ 沿半径 $R$ 绕固定点 $O$ 逆时针运动。
 % BEGIN DETAILED ANSWER ex24
 \solution \Step{明确系统、坐标与约束} 两球的共同中点 $A$ 就是质心。先在不旋转的质心平动系中描述两球等大反向的相对速度，再叠加 $A$ 的速度；这样可直接看出柯尼希分解的混合项为何相消。以逆时针 $+z$ 为正，自转顺时针带负号。
 
-图~\ref{fig:solution-ex24}~中质心的逆时针公转与两球的顺时针自转，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex24}，解答图\ref{fig:solution-ex24}展示轨道角动量与内部角动量的矢量合成，区分共面反向相减与正交情形。
 \SolutionFigure{ex24}{例24的分析与计算}
 
 \Step{列出方程并求解} 自转角速率相对于不旋转的质心平动系定义。
@@ -1449,14 +1431,11 @@ T=\frac12m|\vect V+\vect v'|^2+\frac12m|\vect V-\vect v'|^2
 % END DETAILED ANSWER ex24
 \example{运动能量与食物热值的估算}
 \label{ex:c2-25}
-\QuestionStatement{质量为 $100\,\mathrm{kg}$ 的运动者完成上升、加速和转动动作。
-给定食物热值为每 $100\,\mathrm g$ 含 $246\,\mathrm{kcal}$，
-建立估算其最低食物消耗的方法。
-将上升高度、速度变化、重复次数和效率均作为待测参数，给出符号估算式、单位换算与理论下限；题设不要求无依据的唯一数值。}{ex25}{例25题图}
+\QuestionStatement{质量 $M=100\,\mathrm{kg}$ 的运动者完成若干组上升、平动加速和绕轴转动动作。每组中质心共升高 $H$，平动速率由 $V_i$ 变为 $V_f\ge V_i$，绕指定轴的转动惯量为 $I$，角速率由 $\omega_i$ 变为 $\omega_f\ge\omega_i$；重复次数为 $n$，从代谢能到上述正机械功的效率为 $0<\eta\le1$。食品每 $100\,\mathrm g$ 的热值为 $246\,\mathrm{kcal}$。忽略可回收的下落和制动能，建立机械功、代谢能及食品质量的估算式，给出单位换算和理论最低值，并说明实际估算还缺哪些耗能信息。}{ex25}{例25题图}
 % BEGIN DETAILED ANSWER ex25
 \solution \Step{明确系统、坐标与约束} 把估算分成机械功需求与化学能换算。上升、平移加速、体内转动加速和耗散分别记账；只比较运动起止时刻的净机械能，可能漏掉中间制动以后重复加速所需的正功。题给热值只能完成第二步，不能代替缺少的运动数据。
 
-图~\ref{fig:solution-ex25}~中单次升高 $H$ 和从静止加速到 $V$ 的示例过程，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex25}，解答图\ref{fig:solution-ex25}展示食品能、机械功与耗散的能量分流，明确效率连接的是哪两项能量。
 \SolutionFigure{ex25}{例25的分析与计算}
 
 \Step{列出方程并求解} 将运动分段，估计 $\Delta(MgH)$、
@@ -1480,6 +1459,19 @@ E_{\rm mech}=\sum_j\left[MgH_j+
 这里逐段记录实际需要供给的正功；不把没有能量回收装置的负功简单抵消下一段正功。对纯上升的最低估计，$M=100\,\mathrm{kg}$ 给出 $E\ge100g\sum_jH_j$。
 热值为 $246\times4184/0.100=10\,292\,640\,\mathrm{J/kg}$，所以机械供能为 $E$ 时食物质量估计为 $E/(\eta q_{\rm food})$。
 $\eta=1$ 仅为这个机械能预算的理想下限；真实动作效率与耗散未给定时，答案只能保持参数式，不能补造唯一的食物消耗数值。
+
+
+\Step{代入本题每组动作的参数} 图\ref{fig:solution-ex25}中“正机械功”这一路对应每组的三项增量，故
+\[
+E_{\rm mech}=n\left[MgH+\frac M2(V_f^2-V_i^2)+\frac I2(\omega_f^2-\omega_i^2)\right].
+\]
+这里 $M=100\,\mathrm{kg}$，$I$ 必须是题设指定转轴的转动惯量。图中的效率支路给出 $E_{\rm mech}=\eta E_{\rm met}$，因此
+\[
+E_{\rm met}=\frac{E_{\rm mech}}\eta,\qquad
+m_{\rm food}=\frac{E_{\rm mech}}{\eta q_{\rm food}},\quad
+q_{\rm food}=\frac{246\times4184}{0.1}=10\,292\,640\,\mathrm{J/kg}.
+\]
+在给定动作参数下，理论最低代谢能和食品质量分别为 $E_{\rm mech}$ 与 $E_{\rm mech}/q_{\rm food}$，对应 $\eta=1$；实际还需计入维持代谢、肌肉耗散及未列出的动作能耗。
 
 % END DETAILED ANSWER ex25
 \subsection{能量分解、内力功与参考系}\label{sub:c2-4.3}\label{topic:energydetail}
@@ -1514,7 +1506,7 @@ T=\frac12MV^2+\vect V\cdot\sum_i m_i\vect v'_i
 % BEGIN DETAILED ANSWER ex26
 \solution \Step{明确系统、坐标与约束} 把两球和理想弹簧一起作为系统，总动量为零，初始储能完全在弹簧中。弹簧恢复原长时势能取零，两球动量等大反向，因此可先求共同动量大小 $p$，再分配速度和动能，避免错误地把两球速度设成相等。
 
-图~\ref{fig:solution-ex26}~中弹簧经过原长时相反方向的两速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex26}，解答图\ref{fig:solution-ex26}展示所求状态中两球的相反动量；动量相等与速度相等是不同条件，能量再决定共同动量的大小。
 \SolutionFigure{ex26}{例26的分析与计算}
 
 \Step{列出方程并求解} 初态总动量为零，始终 $m_1\vect v_1=-m_2\vect v_2=\vect p$。弹簧能减少 $k\delta^2/2$，转为总动能，
@@ -1548,7 +1540,7 @@ T_2=\frac{m_1}{m_1+m_2}\frac{k\delta^2}{2}.
 % BEGIN DETAILED ANSWER ex27
 \solution \Step{明确系统、坐标与约束} 初始总动量为零，且没有外力，所以始终质心静止。两球相向运动时，速度矢量方向相反；先用正速率 $v_1,v_2$ 表示，再在最终矢量式中恢复符号。势能零点取无穷远，$U=-Gm_1m_2/r$。
 
-图~\ref{fig:solution-ex27}~中两球距离从 $a$ 缩到 $a/2$ 时的相向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex27}，解答图\ref{fig:solution-ex27}展示所求状态中两球的相反动量；动量相等与速度相等是不同条件，能量再决定共同动量的大小。
 \SolutionFigure{ex27}{例27的分析与计算}
 
 \Step{列出方程并求解} 令 $\vect e$ 从质点1指向质点2。质心静止，
@@ -1590,7 +1582,7 @@ w^2=2GM\left(\frac1r-\frac1a\right).
 % BEGIN DETAILED ANSWER ex28
 \solution \Step{明确系统、坐标与约束} 取管和球为系统。轴承虽然传外力，但对固定竖直轴的力矩为零；轴固定且无摩擦，系统在水平面内运动，所以外力不作机械功。守恒的是整体轴向角动量和整体动能，球单独的动能可以因管壁法向力作功而变化。
 
-图~\ref{fig:solution-ex28}~中固定端 $O$、可变球半径 $r$ 与切向转动，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex28}，解答图\ref{fig:solution-ex28}展示球出管速度的径向与切向正交合成；守恒律先决定两个分量，再求绝对速率。
 \SolutionFigure{ex28}{例28的分析与计算}
 
 \Step{列出方程并求解} 管的转动惯量 $I_t=M_tl^2/3$。
@@ -1643,7 +1635,7 @@ $\theta$，初始 $\theta=\alpha$，$0<\alpha<\pi/2$，从静止释放。
 % BEGIN DETAILED ANSWER ex29
 \solution \Step{明确系统、坐标与约束} 当前下球仍接触固定地面，法向速度为0；光滑条件只消除水平外力，并不消除地面支持力。用固定水平质心坐标消去两球共同的水平运动，再由刚杆长度约束以单个倾角描述几何。
 
-图~\ref{fig:solution-ex29}~中两球的水平质心约束及上球高度 $l\cos\theta$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex29}，解答图\ref{fig:solution-ex29}展示接地运动中两个实际速度的方向与水平质心约束；杆长约束还要求相对速度垂直杆。
 \SolutionFigure{ex29}{例29的分析与计算}
 
 \Step{列出方程并求解} 取 $x$ 向右、$y$ 向上，下球初始位置为0。
@@ -1687,7 +1679,7 @@ T=\frac m2\left[2\left(\frac l2\cos\theta\dot\theta\right)^2+
 (l\sin\theta\dot\theta)^2\right]
 =\frac{ml^2}{4}(1+\sin^2\theta)\dot\theta^2.
 \]
-这补出了有效惯性系数的来源。由 $T+U=mgl\cos\alpha$，取向右倒下支 $\dot\theta\ge0$，得到原解。
+这推导了有效惯性系数的来源。由 $T+U=mgl\cos\alpha$，取向右倒下支 $\dot\theta\ge0$，得到原解。
 对 $y_2=l\cos\theta$ 求两次导数，再代入 $N-2mg=m\ddot y_2$，得到支持力公式。
 其分子可写成 $2[(\cos\theta-\cos\alpha)^2+2-\cos^2\alpha]$，严格为正，故地面无需提供拉力。
 $\theta=\alpha$ 时速度为0；$\theta\to\pi/2$ 时下球水平速率趋零、上球竖直速率趋于 $\sqrt{2gl\cos\alpha}$。这些是碰撞前值，碰后须另用冲量规则。
@@ -1697,11 +1689,11 @@ $\theta=\alpha$ 时速度为0；$\theta\to\pi/2$ 时下球水平速率趋零、�
 
 \example{粗糙地面上先不滑动的双球}
 \label{ex:c2-30}
-\LongQuestionStatement{质量均为 $m$ 的两球由长 $l$ 的轻刚杆连接，下球在水平粗糙地面、上球在右上方。杆与竖直向上方向成角 $\theta$，初态 $\theta=\alpha\in(0,\pi/2)$、静止。地面最大静摩擦系数为 $\mu_s$；在下球尚未滑动的阶段，求支持力、所需摩擦力及首次起滑条件。}{ex30}{例30题图}
+\QuestionStatement{质量均为 $m$ 的两球由长 $l$ 的轻刚杆连接，下球在水平粗糙地面、上球在右上方。杆与竖直向上方向成角 $\theta$，初态 $\theta=\alpha\in(0,\pi/2)$、静止。地面最大静摩擦系数为 $\mu_s$；在下球尚未滑动的阶段，求支持力、所需摩擦力及首次起滑条件。}{ex30}{例30题图}
 % BEGIN DETAILED ANSWER ex30
 \solution \Step{明确系统、坐标与约束} 只在下球固定的阶段，上球才绕下球作圆周运动。先由重力矩求 $\ddot\theta$、由能量求 $\dot\theta^2$，然后对整个双球系统用动量定理求地面力；静摩擦的大小来自运动需求，不能预先令它始终等于 $\mu_sN$。
 
-图~\ref{fig:solution-ex30}~中下端固定时的法向 $N$ 与有符号摩擦 $f$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex30}，解答图\ref{fig:solution-ex30}展示有符号需求比 $f/N$ 与正负静摩擦边界的比较；摩擦方向变号本身不是起滑条件。
 \SolutionFigure{ex30}{例30的分析与计算}
 
 \Step{列出方程并求解} 此阶段上球绕固定下球转动。
@@ -1762,7 +1754,7 @@ $|f|/N=\sin\alpha\cos\alpha/(1+\cos^2\alpha)$，若已超过给定 $\mu_s$，根
 \OriginalPanel{static_friction_demand}
 \hfill
 \OriginalPanel{rough_floor_double_ball}
-\captionof{figure}{左：原课件的带符号需求曲线。纵轴原标 $\mu$，在本文应读作 $q=f/N$，不是非负的摩擦系数；曲线对应 $\alpha\to0^+$ 的极限；右：下球暂时静止时的双球受力与上球速度。原图 $A,B$ 对应下球 1、上球 2，$f$ 向右为正，$N$ 为地面对下球的支持力。}
+\captionof{figure}{左：的带符号需求曲线。纵轴原标 $\mu$，在本文应读作 $q=f/N$，不是非负的摩擦系数；曲线对应 $\alpha\to0^+$ 的极限；右：下球暂时静止时的双球受力与上球速度。原图 $A,B$ 对应下球 1、上球 2，$f$ 向右为正，$N$ 为地面对下球的支持力。}
 \label{fig:orig-static_friction_demand}
 \label{fig:orig-rough_floor_double_ball}
 \end{minipage}\end{center}\par
@@ -1770,14 +1762,14 @@ $|f|/N=\sin\alpha\cos\alpha/(1+\cos^2\alpha)$，若已超过给定 $\mu_s$，根
 \subsection{冲量后接触切换与碰撞规则}\label{sub:c2-4.6}
 \example{上球受水平冲量后的接地运动与离地分支}
 \label{ex:c2-31}
-\LongQuestionStatement{两等质量 $m$ 小球由长 $l$ 的轻刚杆连接，开始竖直静止，
+\QuestionStatement{两等质量 $m$ 小球由长 $l$ 的轻刚杆连接，开始竖直静止，
 下球在光滑地面，上球受到向右冲量 $J$。
 求首次再次碰地之前的运动。
 杆相对竖直的有向倒角为 $\theta$，向右倒下取正。必须检查支持力非负性，并在需要时切换到自由飞行分支。}{ex31}{例31题图}
 % BEGIN DETAILED ANSWER ex31
 \solution \Step{明确系统、坐标与约束} 短冲量首先给出确定的速度初值；其后的接触问题必须检查地面能否持续提供非负支持。先假设下球接地，求所需支持力；若该力为负，地面不能向下拉球，就必须立即解除接触，使用质心自由飞行加相对转动。
 
-图~\ref{fig:solution-ex31}~中上端冲量产生的离地参数 $\Lambda$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex31}，解答图\ref{fig:solution-ex31}展示初始支持力随无量纲冲量强度变化及 $\Lambda=2$ 的分支边界，避免把负支持力当成真实接触力。
 \SolutionFigure{ex31}{例31的分析与计算}
 
 \Step{列出方程并求解} 冲量后上球水平速度 $J/m$、下球速度0，
@@ -1850,13 +1842,11 @@ y_1=\left(\frac{l\omega^2}{4}-\frac g2\right)t^2+O(t^4)
 
 \example{连接质点组与光滑地面的弹性及非弹性碰撞}
 \label{ex:c2-32}
-\QuestionStatement{给出刚杆连接双球与地面碰撞时的正确瞬时规则，
-并解释能否把全系统竖直动量简单反向。
-模型由两个点质量和无质量刚杆组成，重力冲量在短碰撞中可忽略。允许用总质量 $M$、质心惯量 $I_C$ 和接触点力臂表示结果，给出单点接触冲量。}{ex32}{例32题图}
+\QuestionStatement{竖直平面内两个点质量由无质量刚杆连接，组成总质量 $M$、质心转动惯量 $I_C$ 的刚性系统。系统的一端 $q$ 即将碰到固定光滑水平地面，另一端在该短时碰撞中不接触地面。给定碰前质心速度 $\vect V^-$、角速度 $\omega^-$ 和接触点相对质心矢量 $\vect s_q$；地面法线向上为 $\vect n$，法向恢复系数为 $0\le e\le1$。忽略重力冲量，求法向冲量与碰后速度、角速度及动能损失，说明为何一般不能把整个系统的竖直动量简单反号。}{ex32}{例32题图}
 % BEGIN DETAILED ANSWER ex32
 \solution \Step{明确系统、坐标与约束} 碰撞规律施加在实际接触点的法向相对速度上，不是施加在质心速度或全系统竖直动量上。光滑地面只传法向冲量 $K\vect n$；刚杆把接触端冲量与整个系统的质心和转动变化联系起来。
 
-图~\ref{fig:solution-ex32}~中接触点 $q$ 的法线与质心偏置力臂，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex32}，解答图\ref{fig:solution-ex32}展示碰前、碰后接触点法向速度与向上碰撞冲量；恢复系数约束的是接触速度，不能任意反转全系统动量。
 \SolutionFigure{ex32}{例32的分析与计算}
 
 \Step{列出方程并求解} 设发生接触的端点法向速度为 $v_n$，地面静止，
@@ -1958,7 +1948,7 @@ N=mg\frac{2-(l/g)\cos\theta\dot\theta^2}{D}.
 % BEGIN DETAILED ANSWER ex33
 \solution \Step{明确系统、坐标与约束} 强冲量满足立即离地条件，因此在首个新碰撞之前，两球都只受重力，质心按自由抛体运动，杆以恒角速度转动。确定首碰事件要分别对两个端点求高度的正零点，再比较时间，不能只看初态哪个球更低。
 
-图~\ref{fig:solution-ex33}~中离地后两端旋转高度与首次接触事件，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex33}，解答图\ref{fig:solution-ex33}展示自由飞行后两端的高度随时间变化；上球先在非零时间返回地面，而下球当时仍在空中。
 \SolutionFigure{ex33}{例33的分析与计算}
 
 \Step{列出方程并求解} 令 $\tau=t\sqrt{g/l}$，自由飞行角速率满足 $\omega\sqrt{l/g}=2$，两球轨迹为
@@ -2028,7 +2018,7 @@ $e=1$ 时无动能损失，$e=0$ 时端点法向速度变零。系统竖直动�
 % BEGIN DETAILED ANSWER ex34
 \solution \Step{明确系统、坐标与约束} 两球杆水平时，刚性约束只要求两端的水平相对速度为零，并不要求竖直速度相同。因此一个端点的法向碰撞可以在这个特殊瞬间仅反转它自己的竖直分量；仍应先通过质心与转动的冲量方程验证，而非直接假定。
 
-图~\ref{fig:solution-ex34}~中水平杆右端球2承受的法向冲量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex34}，解答图\ref{fig:solution-ex34}展示碰前、碰后接触点法向速度与向上碰撞冲量；恢复系数约束的是接触速度，不能任意反转全系统动量。
 \SolutionFigure{ex34}{例34的分析与计算}
 
 \Step{列出方程并求解} 质心竖直速度 $V_y^-=-v/2$，若上球在右，角速度 $\omega^-=-v/l$。$M=2m$、$I_C=ml^2/2$、$\ell_n=l/2$，故 $m_{\rm eff}=m$。于是
@@ -2063,7 +2053,7 @@ $v_{2y}^+=V_y^++\omega^+l/2=ev$。能量损失为 $(1-e^2)mv^2/2$。该特殊姿
 % BEGIN DETAILED ANSWER ex35
 \solution \Step{明确系统、坐标与约束} 桌沿固定接触点 $O$ 到左右两球距离不同，故首先应求总质心和关于 $O$ 的惯量。支承法向与地面竖直方向不同：本题明确采用角点反力垂直于杆的接触模型，摩擦沿杆，需要把求出的总反力投影到这两个方向。规定 $f$ 沿图中的 $\vect e$ 为正，实际摩擦箭头标的是大小 $|f|$，本题运动中 $f<0$ 表示其沿 $-\vect e$。
 
-图~\ref{fig:solution-ex35}~中桌沿 $O$ 处沿杆正向 $\vect e$ 与实际摩擦 $|f|$ 的分解，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex35}，解答图\ref{fig:solution-ex35}展示质心绕桌沿转动的法向、切向加速度；它们分别进入沿杆摩擦与垂直杆支持力的投影方程。
 \SolutionFigure{ex35}{例35的分析与计算}
 
 \Step{列出方程并求解} 质心到 $O$ 距离为 $l/6$，转动惯量
@@ -2092,7 +2082,7 @@ f=\vect R_{\text{接}}\cdot\vect e=-\frac{12}{5}mg\sin\theta.
 这里确定的是静摩擦阈值。只有另设 $\mu_k=\mu_s$ 才能把它作为动摩擦系数。
 若采用不同的桌面接触几何，法向方向也会不同，不能混用本例公式。
 
-\Step{补出质心加速度和反力投影}
+\Step{推导质心加速度和反力投影}
 总质量为 $2m$，质心在 $O$ 右侧 $l/6$，因此
 \[
 \vect a_C=\frac l6[-\dot\theta^2(\cos\theta,-\sin\theta)
@@ -2231,7 +2221,7 @@ m_1\frac{m_2^2}{M^2}+m_2\frac{m_1^2}{M^2}
 % BEGIN DETAILED ANSWER ex36
 \solution \Step{明确系统、坐标与约束} 选整个自由弹簧系统，水平外力为零。图中的右球为 $m$，左球为 $2m$；相对坐标要按 $q=x_1-x_2$ 取正，因此初值是 $q(0)=a,\dot q(0)=v_0$。先解质心的匀速运动，再解相对振动，避免把某一球误当作固定端。
 
-图~\ref{fig:solution-ex36}~中右球 $m$ 与左球 $2m$ 的相对距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex36}，解答图\ref{fig:solution-ex36}展示质心两侧不相等的距离与共同平移速度，用来把相对伸缩量还原成两个真实位置。
 \SolutionFigure{ex36}{例36的分析与计算}
 
 \Step{列出方程并求解} 令 $q=x_1-x_2$，$M=3m,\mu=2m/3$。质心与相对方程为
@@ -2276,13 +2266,11 @@ $t=0$ 回代两位置和两速度均满足初值。质心动能为 $mv_0^2/6$，
 \subsection{引力轨道、圆形双星与斥力散射}\label{sub:c2-5.4}
 \example{日地两体的相对轨道与双方公转}
 \label{ex:c2-37}
-\QuestionStatement{太阳、地球质量为 $m_S,m_E$，只计两体万有引力。
-求相对运动方程、轨道参数，并说明固定太阳近似。
-相对矢量取 $\vect r=\vect r_S-\vect r_E$；用 $L,E_{\rm rel}$ 表示轨道参数，明确束缚轨道的周期与质心系中的真实位置。}{ex37}{例37题图}
+\QuestionStatement{太阳和地球质量分别为 $m_S,m_E>0$，在可忽略其他外力的惯性系中只以万有引力相互作用。定义相对矢量 $\vect r=\vect r_S-\vect r_E$、总质量 $M=m_S+m_E$、折合质量 $\mu=m_Sm_E/M$、$K=Gm_Sm_E$。给定非零相对角动量大小 $L$ 和相对机械能 $E_{\rm rel}$，求相对运动方程、半通径、偏心率及轨道类型；对束缚椭圆求半长轴和周期，并把相对轨道还原为质心系中双方的位置。说明 $m_E/m_S\to0$ 时的固定太阳近似。}{ex37}{例37题图}
 % BEGIN DETAILED ANSWER ex37
 \solution \Step{明确系统、坐标与约束} 定义相对矢量 $\vect r=\vect r_S-\vect r_E$，总质量 $M=m_S+m_E$，约化质量 $\mu=m_Sm_E/M$。两天体都受力，只有质心匀速；日心固定近似需在质量比很小时另行说明。相对方程中的势能常数为 $K=Gm_Sm_E$。
 
-图~\ref{fig:solution-ex37}~中两天体到同一个质心 $C$ 的反向位置，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex37}，解答图\ref{fig:solution-ex37}展示两天体所受的相反引力、绕质心的反向位置及速度；圆轨道时两个半径对应同一个角速度。
 \SolutionFigure{ex37}{例37的分析与计算}
 
 \Step{列出方程并求解} 令 $K=Gm_Sm_E$，则
@@ -2327,16 +2315,15 @@ E_{\rm rel}=\frac\mu2\dot r^2+\frac{L^2}{2\mu r^2}-\frac Kr,
 两天体关于质心的位置始终为相反方向、固定反质量比的缩放，所以它们的周期相同，半长轴分别是 $m_Ea_r/M,m_Sa_r/M$。$m_E\ll m_S$ 时才近似回到固定太阳的开普勒问题。
 
 % END DETAILED ANSWER ex37
-\OriginalFigure{sun_earth_orbits}{两体椭圆运动的课件动画静帧：红、蓝虚线表示两体绕共同质心的轨道，黑线表示相对轨道。质量比例与坐标采用示意值。}
+\OriginalFigure{sun_earth_orbits}{两体椭圆运动的运动轨迹示意：红、蓝虚线表示两体绕共同质心的轨道，黑线表示相对轨道。质量比例与坐标采用示意值。}
 
 \example{圆形双星的周期}
 \label{ex:c2-38}
-\QuestionStatement{两星质量为 $M_1,M_2$，距离恒为 $L$，只受相互引力，求周期。
-区分两星间距和各自绕质心的半径，分别用任一恒星和折合质点核验。}{ex38}{例38题图}
+\QuestionStatement{两个可视为质点的恒星质量为 $M_1,M_2>0$，仅以万有引力相互作用；在共同质心系中均作圆周运动，两星间距恒为 $L>0$。求各自的轨道半径、共同角速度和周期，并分别用任一恒星的受力方程与相对折合质点方程推导。}{ex38}{例38题图}
 % BEGIN DETAILED ANSWER ex38
 \solution \Step{明确系统、坐标与约束} 图中 $L$ 是两星之间的恒定距离，不能把它同时当作任意一星的轨道半径。令其绕质心的半径为 $R_1,R_2$，先用质心关系分配这两个半径，再用共同角速度写向心方程。
 
-图~\ref{fig:solution-ex38}~中两星间距 $L$ 与质心半径之和，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex38}，解答图\ref{fig:solution-ex38}展示两天体所受的相反引力、绕质心的反向位置及速度；圆轨道时两个半径对应同一个角速度。
 \SolutionFigure{ex38}{例38的分析与计算}
 
 \Step{列出方程并求解} 质心两侧半径为
@@ -2365,14 +2352,11 @@ R_2=\frac{M_1}{M_1+M_2}L.
 % END DETAILED ANSWER ex38
 \example{可反冲的反立方斥力靶的最近距离}
 \label{ex:c2-39}
-\QuestionStatement{入射质点质量 $m$，靶质量 $2m$，靶在远离入射粒子时静止。
-入射相对速度为 $v_\infty$，冲量参数为 $\rho$。
-两者只受大小 $mc/r^3$ 的中心斥力，$c>0$。求最近间距。
-$\rho\ge0$ 是相对入射轨迹的冲量参数；证明 $\rho>0$ 时径向转向点仍有角向运动，并说明 $\rho=0$ 的区别，并检查正碰及无相互作用极限。}{ex39}{例39题图}
+\QuestionStatement{质量为 $m>0$ 的粒子从远处射向最初静止的质量 $2m$ 的靶，两体不受外力。入射相对速率为 $v_\infty>0$，碰撞参数为 $\rho\ge0$，即相对入射渐近线到相对坐标原点的垂距。两体之间的中心斥力大小为 $mc/r^3$，$c>0$，$r$ 为两体间距。求最近间距，说明最近点处的径向速度与总相对速度有何区别，并讨论正碰和斥力趋零的极限。}{ex39}{例39题图}
 % BEGIN DETAILED ANSWER ex39
-\solution \Step{明确系统、坐标与约束} 靶质量 $2m$ 并非固定。用相对速度的入射值 $v_\infty$ 和相对轨道冲量参数 $\rho$ 描述最近距离；相对角动量为 $\mu\rho v_\infty$，而不是 $m\rho v_\infty$。由 $F=mc/r^3$ 向外及 $F=-\dd U/\dd r$ 可先积分确定势能。
+\solution \Step{明确系统、坐标与约束} 靶质量 $2m$ 并非固定。用相对速度的入射值 $v_\infty$ 和相对轨道碰撞参数 $\rho$ 描述最近距离；相对角动量为 $\mu\rho v_\infty$，而不是 $m\rho v_\infty$。由 $F=mc/r^3$ 向外及 $F=-\dd U/\dd r$ 可先积分确定势能。
 
-图~\ref{fig:solution-ex39}~中$\rho>0$ 时最近点 $Q$ 处垂直于径矢 $OQ$ 的切向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex39}，解答图\ref{fig:solution-ex39}展示单调有效势与能量线的唯一交点；半径较小一侧禁阻，最近点仍可能保有切向速度。
 \SolutionFigure{ex39}{例39的分析与计算}
 
 \Step{列出方程并求解} $\mu=2m/3$，相对势能 $U=mc/(2r^2)$，
@@ -2400,7 +2384,7 @@ U_{\rm eff}=\frac{\mu^2\rho^2v_\infty^2+\mu mc}{2\mu r^2},
 将等式乘 $2a^2$ 后，$\mu v_\infty^2a^2=\mu\rho^2v_\infty^2+mc$，再代 $m/\mu=3/2$ 即得答案。$c/v_\infty^2$ 具有长度平方量纲；正面入射仍在 $a=\sqrt{3c/2}/v_\infty$ 转向，体现排斥势在原点发散。
 
 % END DETAILED ANSWER ex39
-\OriginalFigure{repulsive_approach}{最近距离的课件几何示意：$\rho$ 为冲量参数，$a$ 为最近间距。本题应将图中的路径理解为相对运动，不能把靶当作在实验室中固定。}
+\OriginalFigure{repulsive_approach}{最近距离的几何示意：$\rho$ 为碰撞参数，$a$ 为最近间距。本题应将图中的路径理解为相对运动，不能把靶当作在实验室中固定。}
 
 \subsection{轻杆冲量与自由弹簧的距离极值}\label{sub:c2-5.5}
 \example{不等质量轻杆双球的一端受横向冲量}
@@ -2412,7 +2396,7 @@ $t=0$ 给球1向右冲量 $J$。以初始质心为原点，求任意时刻的位
 % BEGIN DETAILED ANSWER ex40
 \solution \Step{明确系统、坐标与约束} 冲量作用于下端 $m_1$，对全系统的线动量改变为 $J$，对质心的角冲量为 $Jd_1$。由于质量不等，图中质心不能默认取杆中点；先求 $d_1,d_2$，再建立转动。冲量结束后没有外力，质心匀速、转动角速度恒定。
 
-图~\ref{fig:solution-ex40}~中偏置质心 $C$ 与下端到质心的距离 $d_1$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex40}，解答图\ref{fig:solution-ex40}展示两端速度的质心平移与绕质心转动分解，直接核对受冲量端和未受冲量端的初始速度。
 \SolutionFigure{ex40}{例40的分析与计算}
 
 \Step{列出方程并求解} 质心速度为 $J/M$；球到质心的距离
@@ -2442,7 +2426,7 @@ $\omega=J/(m_1L)$。于是
 \OriginalPanel{rod_impulse}
 \hfill
 \OriginalPanel{rod_impulse_tracks}
-\captionof{figure}{左：轻杆双球受横向冲量后的初瞬：左为实验室系速度，右为质心系速度；带撇号的速度是质心系速度；右：课件动画中的双球轨迹静帧：质心匀速平移与两球相对转动叠加，黑线为该时刻的连杆。坐标与质量比采用课件示意值。}
+\captionof{figure}{左：轻杆双球受横向冲量后的初瞬：左为实验室系速度，右为质心系速度；带撇号的速度是质心系速度；右：双球轨迹静帧：质心匀速平移与两球相对转动叠加，黑线为该时刻的连杆。坐标与质量比采用示意值。}
 \label{fig:orig-rod_impulse}
 \label{fig:orig-rod_impulse_tracks}
 \end{minipage}\end{center}\par
@@ -2456,7 +2440,7 @@ $\omega=J/(m_1L)$。于是
 % BEGIN DETAILED ANSWER ex41
 \solution \Step{明确系统、坐标与约束} 入射速度垂直于初始弹簧，故初瞬相对径向速度为零、相对切向速度为 $v_0$。先扣除质心平移动能，余下才是有效势问题中的守恒相对能量。弹簧的原长 $a$ 同时是初始距离，并非平衡圆轨道半径。
 
-图~\ref{fig:solution-ex41}~中初始横向速度与相对角动量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex41}，解答图\ref{fig:solution-ex41}展示弹性势与离心势相加后的径向有效势，转向点由能量线确定，稳定圆轨道由势阱底确定。
 \SolutionFigure{ex41}{例41的分析与计算}
 
 \Step{列出方程并求解} $\mu=m/2$，质心速度为 $v_0/2$，
@@ -2509,7 +2493,7 @@ $v_0=0$ 时两球保持静止，间距恒为 $a$。
 % BEGIN DETAILED ANSWER ex42
 \solution \Step{明确系统、坐标与约束} 本题分两段：入射球与一端粘连的极短碰撞，随后不等质量弹簧系统的自由运动。第一段机械能不守恒；第二段才可用相对能量、角动量守恒。碰后左端总质量为 $2m$，其速度由局部粘连碰撞动量算出。
 
-图~\ref{fig:solution-ex42}~中碰后左端粘连质量 $2m$ 的横向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex42}，解答图\ref{fig:solution-ex42}展示弹性势与离心势相加后的径向有效势，转向点由能量线确定，稳定圆轨道由势阱底确定。
 \SolutionFigure{ex42}{例42的分析与计算}
 
 \Step{列出方程并求解} 短碰撞中有限弹簧力冲量可忽略，
@@ -2559,7 +2543,7 @@ $r=3a$ 为外侧转折点；最大伸长不等于两球相对速度全部为零�
 \subsection{绳系三质点与绕钉运动的完整极值}\label{sub:c2-5.6}
 \example{轻绳中点受冲击后三球的首次相碰}
 \label{ex:c2-43}
-\LongQuestionStatement{总长为 $2a$ 的轻绳两端各绑质量 $m$ 的小球，中点绑质量 $M$ 的小球。
+\QuestionStatement{总长为 $2a$ 的轻绳两端各绑质量 $m$ 的小球，中点绑质量 $M$ 的小球。
 初始绳拉直，系统在光滑水平面静止。
 给中间球垂直于绳的初速度 $v$，两半绳各长 $a$。
 设两端首次相碰时间为 $\tau$，求中间球此时前进距离与碰前绳张力，
@@ -2568,7 +2552,7 @@ $r=3a$ 为外侧转折点；最大伸长不等于两球相对速度全部为零�
 % BEGIN DETAILED ANSWER ex43
 \solution \Step{明确系统、坐标与约束} 两段绳始终等长 $a$，端球关于 $x$ 轴对称，故只需中球横坐标 $x_M$ 和转角 $\phi$ 两个变量。两端最初位于 $(0,\pm a)$；水平动量守恒先消去 $\dot x_M$，这样能量式中只剩一个形状变量。
 
-图~\ref{fig:solution-ex43}~中两端对称位置与中球之间的半绳长度 $a$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex43}，解答图\ref{fig:solution-ex43}展示三球的张力方向与中球合力，明确求张力时不能把中球视为固定的圆周运动中心。
 \SolutionFigure{ex43}{例43的分析与计算}
 
 \Step{列出方程并求解} 以中间球初始位置为原点，初始绳沿 $y$ 轴，中球向 $+x$ 运动。
@@ -2610,7 +2594,7 @@ T_{\text{碰前}}=\frac{mM^2v^2}{(M+2m)^2a}.
 不能把随中球运动的加速系当作惯性系，直接写 $mv_y^2/a=T$。
 以上守恒用于两端相碰前；碰后的状态需另给碰撞性质。
 
-\Step{补出动能消元及首次相碰的判据}
+\Step{推导动能消元及首次相碰的判据}
 由端球坐标直接微分，
 \[
 v_{\pm,x}=\dot x_M-a\cos\phi\dot\phi,\qquad
@@ -2638,7 +2622,7 @@ T=\frac{M+2m}{2}V_C^2+
 % BEGIN DETAILED ANSWER ex44
 \solution \Step{明确系统、坐标与约束} 固定钉使整个两球系统的总线动量不守恒，但每个球的张力都沿自身到钉的径向，因此各自关于钉的角动量守恒。两侧张力相等且绳可滑动，总绳长约束使两径向速度等大反号；这两点决定正确的能量消元。
 
-图~\ref{fig:solution-ex44}~中光滑钉两侧可变径向长度与各自的切向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex44}，解答图\ref{fig:solution-ex44}展示张力在能量允许的半径区间内的变化，内点极小值与区间端点都要参与极值比较。
 \SolutionFigure{ex44}{例44的分析与计算}
 
 \Step{列出方程并求解} 绳绷紧时 $r_1+r_2=4a$，
@@ -2724,7 +2708,7 @@ $\vect v_1-\vect v_2=\vect v'_1-\vect v'_2$。
 % BEGIN DETAILED ANSWER ex45
 \solution \Step{明确系统、坐标与约束} 把人和物作为系统，飞行期间只受总重。到最高点时整体竖直速度为零；水平抛出只改变水平相对速度，因此抛出后两者的落地时间相同。题给 $u$ 是人与物分离后的水平速度差，需要与质心水平速度配合使用。
 
-图~\ref{fig:solution-ex45}~中最高点处两物体相对质心的水平速度增量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex45}，解答图\ref{fig:solution-ex45}展示共同飞行时间后的两个落点与原质心落点；水平偏移由各自速度增量乘同一个时间得到。
 \SolutionFigure{ex45}{例45的分析与计算}
 
 \Step{列出方程并求解} 两质量为 $W/g,w/g$，最高点原水平速度为 $v_0\cos\alpha$。
@@ -2767,7 +2751,7 @@ Wv_{H,x}+wv_{O,x}=(W+w)v_0\cos\alpha,
 % BEGIN DETAILED ANSWER ex46
 \solution \Step{明确系统、坐标与约束} 最高点爆炸且相对速度仅水平，故两碎片初瞬竖直速度均为0。爆炸内能增加的是相对动能；质心的平动速度 $u$ 和抛体轨迹不变。先由能量求相对速率，再按反质量比分配两碎片速度。
 
-图~\ref{fig:solution-ex46}~中最高点的水平爆炸增量及相同下落时间，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex46}，解答图\ref{fig:solution-ex46}展示共同飞行时间后的两个落点与原质心落点；水平偏移由各自速度增量乘同一个时间得到。
 \SolutionFigure{ex46}{例46的分析与计算}
 
 \Step{列出方程并求解} 爆炸后共同下落时间 $t_d=v/g$。
@@ -2827,12 +2811,11 @@ $e=1$ 时弹性；$e=0$ 时法向相对速度为0。
 
 \example{静止靶的一维弹性碰撞}
 \label{ex:c2-47}
-\QuestionStatement{$m_1$ 以速率 $u$ 撞静止的 $m_2$，求碰后速度与靶获得的能量比例。
-碰撞期间水平外冲量可忽略，取入射方向为正；从动量与相对速度反向条件推导，检验等质量、重靶和轻靶三种极限。}{ex47}{例47题图}
+\QuestionStatement{质量为 $m_1>0$ 的质点以速率 $u>0$ 沿直线撞击最初静止的质点 $m_2>0$。碰撞完全弹性，且碰撞期间外冲量可忽略。以入射方向为正，求碰后两个有向速度、靶取得的动能占入射动能的比例；从动量和相对速度反向条件推导，并讨论等质量、重靶和轻靶极限。}{ex47}{例47题图}
 % BEGIN DETAILED ANSWER ex47
 \solution \Step{明确系统、坐标与约束} 沿入射方向取正，以两球为系统。短暂弹性碰撞中外冲量可忽略，故总动量守恒；恢复系数为1，使碰后分离相对速度等于碰前接近速率。这两个一次方程比直接解能量二次式更容易选中物理解。
 
-图~\ref{fig:solution-ex47}~中入射球与初始静止靶的同一直线速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex47}，解答图\ref{fig:solution-ex47}展示碰前总动量与碰后两个有向动量的首尾求和，说明动量与动能两条关系提供不同约束。
 \SolutionFigure{ex47}{例47的分析与计算}
 
 \Step{列出方程并求解} 代入 $e=1,u_2=0$：
@@ -2864,7 +2847,7 @@ T'_1=\frac{m_2}{M}T_C,\quad T'_2=\frac{m_1}{M}T_C.
 非弹性散射中出射动量仍反向，但大小一般改变；
 若有内能增量 $\Delta U_{\text{内}}$，则
 $T_{C,+}=T_{C,-}-\Delta U_{\text{内}}$。
-守恒律不能单独决定散射角；角度取决于相互作用、冲量参数及接触模型。
+守恒律不能单独决定散射角；角度取决于相互作用、碰撞参数及接触模型。
 完全粘合后 $T_{C,+}=0$，此时质心系中没有非零出射速度方向。
 \OriginalFigure{cm_scattering}{质心系中的碰撞前后速度。原图 $v_1,v_2$ 表示碰前速度，$v_1^{\prime},v_2^{\prime}$ 表示碰后速度；图中 $\theta_c$ 对应正文的散射角 $\Theta$。}
 
@@ -2912,13 +2895,11 @@ $\theta_{\max}=\arcsin(1/\lambda)$，
 
 \example{等质量散射与中子减速的运动学}
 \label{ex:c2-48}
-\QuestionStatement{将中子与质子近似为等质量、非相对论弹性碰撞，靶初始静止，
-求中子出射能量与实验室散射角的关系。
-靶质子最初静止，碰撞无外冲量；用质心角 $\Theta$ 和实验室角 $\theta$ 区分两种角度，并证明两出射速度垂直。}{ex48}{例48题图}
+\QuestionStatement{把中子与质子近似为质量均为 $m$ 的非相对论质点。中子以速率 $u>0$ 入射，靶质子在实验室系中最初静止；二者发生二维完全弹性散射，外冲量可忽略。以入射方向为极轴，分别记入射粒子的质心系散射角为 $\Theta$、实验室系散射角为 $\theta$。求两角关系、中子出射动能与 $\theta$ 的关系，并证明两出射速度在非退化情形下互相垂直，说明边界情形。}{ex48}{例48题图}
 % BEGIN DETAILED ANSWER ex48
 \solution \Step{明确系统、坐标与约束} 选实验室入射方向为 $x$ 轴。等质量时质心速度为 $u/2$，入射球在质心系中的速率也为 $u/2$。弹性碰撞只转动质心系相对速度方向，因此可用速度三角形直接联系实验室角 $\theta$ 与质心角 $\Theta$。
 
-图~\ref{fig:solution-ex48}~中两条互相垂直的等质量出射速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex48}，解答图\ref{fig:solution-ex48}展示等质量弹性碰撞的速度三角形；直角与半角关系同时给出速度大小及能量比例。
 \SolutionFigure{ex48}{例48的分析与计算}
 
 \Step{列出方程并求解} 一般质量比下
@@ -2988,11 +2969,11 @@ $2\pi\int_0^{\pi/2}4f_0\cos\theta\sin\theta\,\dd\theta=4\pi f_0$，
 \QuestionStatement{两粒子相互作用势能为 $K/r$，$K>0$。
 实验室入射速率 $u$、靶初始静止。
 给出用于角度变换的相对能量及质心系截面。
-两粒子质量分别为 $m_1,m_2$，令 $\lambda=m_1/m_2$；定义 $f_C=\dd\sigma/\dd\Omega_C$，从冲量参数与散射角关系给出推导，并说明实验室系如何逐支变换。}{ex49}{例49题图}
+两粒子质量分别为 $m_1,m_2$，令 $\lambda=m_1/m_2$；定义 $f_C=\dd\sigma/\dd\Omega_C$，从碰撞参数与散射角关系给出推导，并说明实验室系如何逐支变换。}{ex49}{例49题图}
 % BEGIN DETAILED ANSWER ex49
-\solution \Step{明确系统、坐标与约束} 区分实验室入射能量与质心相对能量。靶初始静止时相对入射速率仍为 $u$，但动能系数是 $\mu$。散射截面先在相对运动中由冲量参数求出，再按实验室角与质心角的映射逐支变换。
+\solution \Step{明确系统、坐标与约束} 区分实验室入射能量与质心相对能量。靶初始静止时相对入射速率仍为 $u$，但动能系数是 $\mu$。散射截面先在相对运动中由碰撞参数求出，再按实验室角与质心角的映射逐支变换。
 
-图~\ref{fig:solution-ex49}~中实验室入射方向及对应的相对散射偏角，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex49}，解答图\ref{fig:solution-ex49}展示相对入射渐近线的碰撞参数与实际偏折角；截面先在相对运动中求，再逐支变换到实验室角域。
 \SolutionFigure{ex49}{例49的分析与计算}
 
 \Step{列出方程并求解} 初始相对速率是 $u$，
@@ -3009,7 +2990,7 @@ K=\frac{Z_1Z_2q_{\rm e}^{\,2}}{4\pi\epsilon_0},\qquad
 \]
 无外力时质心匀速运动；相对质点满足
 $\mu\ddot{\vect r}=(K/r^2)\er$。
-设冲量参数 $b>0$，相对角动量大小 $L=\mu ub$，
+设碰撞参数 $b>0$，相对角动量大小 $L=\mu ub$，
 以最近点方向为极角 $\phi=0$，令 $w=1/r$。斥力的 Binet 方程及其解为
 \[
 w''+w=-\frac{\mu K}{L^2},\qquad
@@ -3028,7 +3009,7 @@ e_{\rm orb}^{\,2}=1+\frac{2E_{\rm rel}L^2}{\mu K^2}>1,
 \cot\frac\Theta2=\tan\phi_\infty
 =\sqrt{e_{\rm orb}^{\,2}-1}=\frac{2E_{\rm rel}b}{K}.
 \]
-因此中心斥力轨道给冲量参数
+因此中心斥力轨道给碰撞参数
 $b=K\cot(\Theta/2)/(2E_{\rm rel})$。
 正碰 $b=0$ 时不采用除以 $L^2$ 的轨道推导，而由极限得到 $\Theta=\pi$。
 轴对称入射束中环形面积 $\dd\sigma=2\pi b|\dd b|$，所以
@@ -3090,12 +3071,11 @@ f_L(\theta)=\frac{D_+^2f_C(\Theta_+)+D_-^2f_C(\Theta_-)}h.
 
 \example{质量比二的同一实验室角对应两种散射}
 \label{ex:c2-50}
-\QuestionStatement{取 $\lambda=2$、$\theta=20^\circ$，求两质心散射角及立体角变换因子。
-定义 $D=\sqrt{1+\lambda^2+2\lambda\cos\Theta}$、$h=\sqrt{1-\lambda^2\sin^2\theta}$，求每支的 $\dd\Omega_C/\dd\Omega_L$，解释为何需要求和。}{ex50}{例50题图}
+\QuestionStatement{质量 $m_1$ 的粒子以速率 $u>0$ 撞击实验室系中最初静止的靶 $m_2$，发生中心力完全弹性散射，质量比 $\lambda=m_1/m_2=2$。给定入射粒子的实验室散射角 $\theta=20^\circ$，求所有允许的质心系散射角 $\Theta$。定义 $D=\sqrt{1+\lambda^2+2\lambda\cos\Theta}$、$h=\sqrt{1-\lambda^2\sin^2\theta}$，计算每一支的立体角变换因子 $\dd\Omega_C/\dd\Omega_L$，并解释同一实验室角的截面为何必须把各支相加。}{ex50}{例50题图}
 % BEGIN DETAILED ANSWER ex50
 \solution \Step{明确系统、坐标与约束} 质量比 $\lambda=2$ 时，速度圆的圆心在原点外，实验室同一射线可能穿圆两次。最大实验室角是切线角 $\arcsin(1/2)$；题给 $20^\circ$ 位于双交点区，两交点都对应允许的弹性碰撞。
 
-图~\ref{fig:solution-ex50}~中同一射线与速度圆的两个交点 $P_+,P_-$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex50}，解答图\ref{fig:solution-ex50}展示质心角到实验室角的非单调映射；同一实验室角的两个逆像都必须计入粒子数。
 \SolutionFigure{ex50}{例50的分析与计算}
 
 \Step{列出方程并求解} $\theta_{\max}=30^\circ$，给定角度在双支区内。
@@ -3123,12 +3103,11 @@ $D_2^2/h\approx1.812838$。同一实验室探测方向的粒子数包含两种�
 % END DETAILED ANSWER ex50
 \example{库仑散射的实验室系截面显式式}
 \label{ex:c2-51}
-\LongQuestionStatement{沿用 $K/r$ 的排斥势，靶初始静止，入射粒子质量比为 $\lambda$。求实验室系的每立体角截面。
-定义 $\lambda=m_1/m_2$、$E_{\rm rel}=\mu u^2/2$、$h=\sqrt{1-\lambda^2\sin^2\theta}$，$D_\pm=\lambda\cos\theta\pm h$、$c_\pm=\cos\Theta_\pm$；分别给出 $\lambda>1,\lambda=1,\lambda<1$ 的允许角域与分支数。}{ex51}{例51题图}
+\QuestionStatement{入射粒子和靶的质量分别为 $m_1,m_2>0$，相互作用势能为 $U(r)=K/r$、$K>0$；靶在实验室系中最初静止，入射速率为 $u>0$。定义 $\lambda=m_1/m_2$、$\mu=m_1m_2/(m_1+m_2)$、$E_{\rm rel}=\mu u^2/2$。求入射粒子在实验室系中每单位立体角的散射截面。以 $\theta$、$\Theta$ 分别记实验室与质心系散射角，使用 $h=\sqrt{1-\lambda^2\sin^2\theta}$、$D_\pm=\lambda\cos\theta\pm h$、$c_\pm=\cos\Theta_\pm$ 写出逐支变换式，并分别给出 $\lambda>1$、$\lambda=1$、$\lambda<1$ 的允许角域和分支数。}{ex51}{例51题图}
 % BEGIN DETAILED ANSWER ex51
 \solution \Step{明确系统、坐标与约束} 沿用速度圆的几何，但在截面变换时保留全部允许分支。为避免反三角函数的象限问题，可直接以实验室角构造两条速度长度 $D_\pm$，再求各自的质心余弦 $c_\pm$，最后代入 $f_C$。
 
-图~\ref{fig:solution-ex51}~中两交点对应的速度长度与质心偏角，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex51}，解答图\ref{fig:solution-ex51}展示质心角到实验室角的非单调映射；同一实验室角的两个逆像都必须计入粒子数。
 \SolutionFigure{ex51}{例51的分析与计算}
 
 \Step{列出方程并求解} 设实验室入射能量为 $E_L=m_1u^2/2$，则
@@ -3180,7 +3159,7 @@ $\lambda=1$ 时 $D_+=2\cos\theta$、$h=\cos\theta$、$\Theta=2\theta$，代入�
 % BEGIN DETAILED ANSWER ex52
 \solution \Step{明确系统、坐标与约束} 固定铰点 $A$ 在碰撞中给杆外冲量，整体线动量并不守恒；但铰点冲量对 $A$ 力矩为零。刚杆使中点与端点的瞬时速率保持 $1:2$，这与柔绳只限制沿绳速度的模型不同。先确定约束类型，再选守恒量。
 
-图~\ref{fig:solution-ex52}~中中点与端点到固定铰 $A$ 的不同距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex52}，解答图\ref{fig:solution-ex52}展示固定铰反力冲量与绕铰角动量的力臂，说明关于铰点守恒并不意味着水平动量守恒。
 \SolutionFigure{ex52}{例52的分析与计算}
 
 \Step{列出方程并求解} 三种貌似合理的式子分别给出
@@ -3305,7 +3284,7 @@ $\delta m>0$，$v$ 相对于同一惯性系；明确微元损失率的正负约�
 % BEGIN DETAILED ANSWER ex53
 \solution \Step{明确系统、坐标与约束} 取一次吸收所涉及的主体和小块为封闭系统，小块在地面系中初始静止，吸收过程完全粘连。先对这一次有限质量变化精确算动量和动能，再取小质量极限，能清楚区分速度方程与耗散功率。
 
-图~\ref{fig:solution-ex53}~中对地静止的小块与运动主体的粘连，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex53}，解答图\ref{fig:solution-ex53}展示碰前、碰后动能与转为内能的部分；在总动量固定时质心平移动能不变。
 \SolutionFigure{ex53}{例53的分析与计算}
 
 \Step{列出方程并求解} 动量守恒给 $v_+=mv/(m+\delta m)$。碰后动能为
@@ -3336,7 +3315,7 @@ T_+=\frac12(m+\delta m)\frac{m^2v^2}{(m+\delta m)^2}
 % BEGIN DETAILED ANSWER ex54
 \solution \Step{明确系统、坐标与约束} 把火箭主体视为开放系统，排气的相对速度为 $-c$，其对地速度为 $u=v-c$。向后的相对喷流使火箭获正向推力；$\dot m<0$，所以方程中的 $-c\dot m$ 为正。竖直题另加重力，不能把排气绝对速度直接当作常量。
 
-图~\ref{fig:solution-ex54}~中向后的相对喷速与向上的主体速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex54}，解答图\ref{fig:solution-ex54}展示无外力火箭的速度增量与对数质量比；竖直模型还要单独计入重力随时间的累积。
 \SolutionFigure{ex54}{例54的分析与计算}
 
 \Step{列出方程并求解} 沿前进方向为正，燃气惯性速度 $u=v-c$，
@@ -3392,12 +3371,12 @@ $m v+F\dd t=(m+\dd m)(v+\dd v)+(-\dd m)(v-c)$。保留一阶项，得 $m\dd v=F\
 \subsection{燃烧、支承、起飞与熄火的分段火箭运动}\label{sub:c2-7.4}\label{topic:rocketstages}
 \example{初始推力不足的竖直火箭}
 \label{ex:c2-55}
-\LongQuestionStatement{火箭初始质量 $m_0$、干质量 $m_f$，从水平发射台静止燃烧。恒质量流率为 $q>0$，相对向后喷速为 $c$，重力恒定，无空气阻力。燃烧结束 $t_b=(m_0-m_f)/q$。求起飞条件及起飞后运动。
+\QuestionStatement{火箭初始质量 $m_0$、干质量 $m_f$，从水平发射台静止燃烧。恒质量流率为 $q>0$，相对向后喷速为 $c$，重力恒定，无空气阻力。燃烧结束 $t_b=(m_0-m_f)/q$。求起飞条件及起飞后运动。
 分清立即起飞、延迟起飞及燃尽前不能起飞三类，并给出熄火后的最高点条件。}{ex55}{例55题图}
 % BEGIN DETAILED ANSWER ex55
 \solution \Step{明确系统、坐标与约束} 起飞之前，发射台通过支持力约束 $v=0$；这时虽然火箭质量在减少，主体仍没有平移。先解单向接触的支持力，再以真正离台时刻为飞行初值，可避免把台上燃烧造成的形式速度误算成上升。
 
-图~\ref{fig:solution-ex55}~中发射台上的单向支持力及离台阈值，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex55}，解答图\ref{fig:solution-ex55}展示恒推力与随质量下降而减小的重力；交点决定延迟起飞，燃尽时刻决定下一阶段的初值。
 \SolutionFigure{ex55}{例55的分析与计算}
 
 \Step{列出方程并求解} 燃烧时 $m(t)=m_0-qt$、推力为 $cq$。仍在台上时 $v=0,z=z_0$，支持力
@@ -3450,7 +3429,7 @@ v=v_b-g(t-t_b),\quad z=z_b+v_b(t-t_b)-\frac12g(t-t_b)^2.
 % BEGIN DETAILED ANSWER ex56
 \solution \Step{明确系统、坐标与约束} 向下取正，凝结来流在地面系静止，故入流虽增加质量，却没有带入向下动量。对雨滴写 $\dd(mv)/\dd t=mg$，而不是 $m\dot v=mg$。初始质量 $M>0$，初速度为零。
 
-图~\ref{fig:solution-ex56}~中静止来流进入向下运动的雨滴，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex56}，解答图\ref{fig:solution-ex56}展示质量不断增长时的速度曲线与自由落体参照；曲线斜率的极限不等于出现有限终端速率。
 \SolutionFigure{ex56}{例56的分析与计算}
 
 \Step{列出方程并求解} 向下为正，$m=M+\lambda t$、$u=0$、$F=mg$，
@@ -3496,7 +3475,7 @@ $s=gt^2/2-\lambda gt^3/(6M)+O(t^4)$。
 % BEGIN DETAILED ANSWER ex57
 \solution \Step{明确系统、坐标与约束} 雨滴密度不变，质量增长等价于半径增长。题给增长率与表面积尺度 $r^2$ 成正比，所以先利用 $m=4\pi\rho r^3/3$ 求 $\dot r$，再将动量微分方程改用 $r$ 为自变量。
 
-图~\ref{fig:solution-ex57}~中球形雨滴的半径增长与静止来流，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex57}，解答图\ref{fig:solution-ex57}展示质量不断增长时的速度曲线与自由落体参照；曲线斜率的极限不等于出现有限终端速率。
 \SolutionFigure{ex57}{例57的分析与计算}
 
 \Step{列出方程并求解} $m=4\pi\rho r^3/3$，故
@@ -3546,7 +3525,7 @@ $m^{1/3}=m_0^{1/3}+kt/3$，
 % BEGIN DETAILED ANSWER ex58
 \solution \Step{明确系统、坐标与约束} 分清正在自由落下的直段和已经停在地面的绳堆。软绳落地被制动产生动量流，地面除了支承静止绳堆的重量，还必须不断消去入射绳段的向下动量。题设不允许底部张力反过来拉动自由段。
 
-图~\ref{fig:solution-ex58}~中自由下落直段和已静止的地面绳堆，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex58}，解答图\ref{fig:solution-ex58}展示全绳地面反力的时间过程；最后一段落地前的极限与全部静止后的重量不同。
 \SolutionFigure{ex58}{例58的分析与计算}
 
 \Step{列出方程并求解} 下落直段自由落体，
@@ -3598,7 +3577,7 @@ $h\to l^-$ 的 $3\sigma lg$ 是末段尚在落地时的左极限；全部停止�
 % BEGIN DETAILED ANSWER ex59
 \solution \Step{明确系统、坐标与约束} 链条始终不可伸长，桌面段与竖直段速率都为 $\dot x$。光滑导槽虽然改变速度方向，但不做功，所以全链动能使用总质量 $\sigma l$，势能只来自悬垂段。若分段写开放系统方程，还须保留转角处动量通量。
 
-图~\ref{fig:solution-ex59}~中同速链条的水平段与悬垂段，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex59}，解答图\ref{fig:solution-ex59}展示桌沿转向处流入和流出的不同动量方向，说明两个开放直段必须分别保留动量通量项。
 \SolutionFigure{ex59}{例59的分析与计算}
 
 \Step{列出方程并求解} 固定成员全链动能 $T=\sigma l\dot x^2/2$，
@@ -3709,7 +3688,7 @@ q_x=\frac{1+\sqrt3}{4}\approx0.683013.
 % BEGIN DETAILED ANSWER ex60
 \solution \Step{明确系统、坐标与约束} 主体为枪与尚未射出的弹药，质量随时间减少。题设的“喷出速度恒定”必须先确定参考系：对子弹的绝对速度给定，控制的是动量流；相对枪的速度给定，则得到通常的火箭推力。两者即使使用同一个数值 $u$，也给出不同的末速度。
 
-图~\ref{fig:solution-ex60}~中相对枪喷出方向与有符号对地子弹速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex60}，解答图\ref{fig:solution-ex60}展示枪速、子弹相对枪速度及子弹对地速度的有向合成，用以选择正确的动量流出项。
 \SolutionFigure{ex60}{例60的分析与计算}
 
 \Step{列出方程并求解} 枪与未射弹药的主体质量
@@ -3783,6 +3762,7 @@ D(t)=\sum_i\vect r_i\cdot\vect p_i,\quad
 T=\sum_i\frac{p_i^2}{2m_i},\quad
 W=\sum_i\vect r_i\cdot\vect F_i.
 \]
+$W$ 称为位力（virial），是每个粒子的位置与所受力点积之和，量纲为能量；它衡量力在整体伸缩方向上的作用，与合力、力矩都不同。
 利用 $\dot{\vect p}_i=\vect F_i$，
 \begin{equation}
 \dot D=\sum_i\vect v_i\cdot\vect p_i+
@@ -3814,12 +3794,11 @@ $\overline{\vect r\cdot\vect F}\ne
 
 \example{自由粒子为什么不满足省略边界项的位力式}
 \label{ex:c2-61}
-\QuestionStatement{无力粒子以恒速度 $\vect v$ 运动，求式 \eqref{eq:virfinite} 两端。
-定义 $D=\vect r\cdot m\vect v$、$W=\vect r\cdot\vect F$，在任意 $[0,\tau]$ 上验证 $2\overline T+\overline W=[D(\tau)-D(0)]/\tau$，不得只引用前面的公式编号。}{ex61}{例61题图}
+\QuestionStatement{质量为 $m>0$ 的自由质点在固定惯性系中满足 $\vect r(t)=\vect r_0+\vect v t$，$\vect v$ 为非零常矢量。定义 $T=m v^2/2$、$D=\vect r\cdot m\vect v$、$W=\vect r\cdot\vect F$，以及 $\overline A_\tau=\tau^{-1}\int_0^\tau A(t)\dd t$。对任意 $\tau>0$ 分别计算 $2\overline T_\tau+\overline W_\tau$ 和 $[D(\tau)-D(0)]/\tau$，验证两者相等，并说明长期平均时为何不能删去边界项。}{ex61}{例61题图}
 % BEGIN DETAILED ANSWER ex61
 \solution \Step{明确系统、坐标与约束} 有限时间位力恒等式的边界项来自 $D=\vect r\cdot m\vect v$。自由粒子没有力，位力为零，但位置不断增长，$D$ 并不有界；因此不能直接把有限时间边界项略去。
 
-图~\ref{fig:solution-ex61}~中自由粒子随时间伸长的位置矢量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex61}，解答图\ref{fig:solution-ex61}展示自由粒子的 $D(t)$ 随时间线性增长，直接显示不能被省略的有限时间边界项。
 \SolutionFigure{ex61}{例61的分析与计算}
 
 \Step{列出方程并求解} $\vect r=\vect r_0+\vect vt$、$\vect p=m\vect v$，
@@ -3852,7 +3831,7 @@ D(\tau)-D(0)=m\vect v\cdot[\vect r(\tau)-\vect r_0]
 % BEGIN DETAILED ANSWER ex62
 \solution \Step{明确系统、坐标与约束} 对有界谐振子，长期边界项可忽略，但任意有限时间窗通常不能忽略。将 $x=A\cos\omega t$、$\dot x=-A\omega\sin\omega t$ 直接代入 $D=mx\dot x$，再分别积分动能与位力，可逐项检查有限时间恒等式。
 
-图~\ref{fig:solution-ex62}~中有界振动位置与速度的周期相位，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex62}，解答图\ref{fig:solution-ex62}展示动能和势能随相位交替变化的曲线，用以区分有限时间、整周期及瞬时相等这三种命题。
 \SolutionFigure{ex62}{例62的分析与计算}
 
 \Step{列出方程并求解} $p=-mA\omega\sin\omega t$，所以
@@ -3921,7 +3900,7 @@ $\overline T=-\overline U/2$。
 % BEGIN DETAILED ANSWER ex63
 \solution \Step{明确系统、坐标与约束} 选择星团的质心系，只讨论束缚的内部运动。万有引力势是相对坐标的 $-1$ 次齐次函数，成对作用计算位力时每一对只计一次。平均关系还需要内部位力边界项的长期贡献趋零。
 
-图~\ref{fig:solution-ex63}~中质心系内各粒子的相对位置与成对引力，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex63}，解答图\ref{fig:solution-ex63}展示引力束缚平衡中的正动能、负势能与负总能量，解释失能后重新平衡为何可能升温。
 \SolutionFigure{ex63}{例63的分析与计算}
 
 \Step{列出方程并求解} 在不旋转质心系中，记
@@ -3957,12 +3936,11 @@ $E$ 下降意味着 $U$ 更负、系统收缩，
 % END DETAILED ANSWER ex63
 \example{一维谐振子的时间平均}
 \label{ex:c2-64}
-\QuestionStatement{$x=A\cos\omega t$、$\omega^2=k/m$，求一周期平均动能和势能。
-须写出平均积分，而非仅引用平均值；用位力关系再核验，并说明为何不是瞬时动能等于势能。}{ex64}{例64题图}
+\QuestionStatement{质量为 $m>0$ 的一维谐振子势能为 $U=kx^2/2$，$k>0$，运动为 $x=A\cos\omega t$，$A>0$、$\omega=\sqrt{k/m}$。求一个周期内的平均动能、平均势能及平均位力 $W=xF_x$；写出时间积分并用位力关系核对，说明平均动能等于平均势能为何不等价于二者瞬时相等。}{ex64}{例64题图}
 % BEGIN DETAILED ANSWER ex64
 \solution \Step{明确系统、坐标与约束} 弹簧势能以平衡点为零，$U=kx^2/2$。谐振子周期运动使 $D$ 在一周期首尾相同，故在整周期平均中位力边界项严格为零。先用齐次性求位力，再结合总能量确定各平均份额。
 
-图~\ref{fig:solution-ex64}~中平衡点两侧振动的弹簧势能，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex64}，解答图\ref{fig:solution-ex64}展示动能和势能随相位交替变化的曲线，用以区分有限时间、整周期及瞬时相等这三种命题。
 \SolutionFigure{ex64}{例64的分析与计算}
 
 \Step{列出方程并求解} $T=mA^2\omega^2\sin^2\omega t/2$、
@@ -4056,7 +4034,7 @@ $g(r)\simeq e^{-u(r)/(k_B\Theta)}$。
 B_2(\Theta)&=-2\pi\int_0^\infty
 \left[e^{-u(r)/(k_B\Theta)}-1\right]r^2\,\dd r.
 \end{align}
-$B_2$ 的量纲是体积，$B_3$ 的量纲是体积平方。
+$B_2(\Theta)$ 称为第二位力系数（也称第二维里系数），描述低密度气体状态方程中由两粒子相互作用产生的首项偏离理想气体的修正。这里用数密度 $n$ 展开，因此 $B_2$ 的量纲是体积，$B_3$ 的量纲是体积平方。
 更高系数涉及更多粒子的关联。
 长程无屏蔽库仑势等情况不能未经检查就使用这条简单收敛积分式。
 
@@ -4068,7 +4046,7 @@ $B_2$ 的量纲是体积，$B_3$ 的量纲是体积平方。
 % BEGIN DETAILED ANSWER ex65
 \solution \Step{明确系统、坐标与约束} 第二位力系数使用两粒子的中心距离 $r$；硬核距离 $d$ 是两球中心所能达到的最小值。先写 Mayer 函数，再对相对位置的三维球壳体积积分，二粒子的成对计数带来整体因子 $1/2$。
 
-图~\ref{fig:solution-ex65}~中中心距离小于硬核距离 $d$ 的禁入区，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex65}，解答图\ref{fig:solution-ex65}展示Mayer函数的分段取值与硬核、吸引壳的积分区域；每一段还须乘球对称体积权重 $r^2$。
 \SolutionFigure{ex65}{例65的分析与计算}
 
 \Step{列出方程并求解} 小于 $d$ 的 Boltzmann 因子为0，
@@ -4121,7 +4099,7 @@ $B_2=-2\pi\int_0^\infty r^2f(r)\dd r$。短程势的远处贡献通常可收敛�
 % BEGIN DETAILED ANSWER ex66
 \solution \Step{明确系统、坐标与约束} 势能由硬核、吸引壳和零势外区三段组成。吸引区的势能为负，所以 Boltzmann 因子大于1、Mayer 函数为正；乘上 $B_2$ 积分前的负号后产生负修正。先分区，再讨论温度。
 
-图~\ref{fig:solution-ex66}~中硬核和吸引壳在 $d,a$ 两处的分段边界，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-ex66}，解答图\ref{fig:solution-ex66}展示Mayer函数的分段取值与硬核、吸引壳的积分区域；每一段还须乘球对称体积权重 $r^2$。
 \SolutionFigure{ex66}{例66的分析与计算}
 
 \Step{列出方程并求解} 三段的 $f$ 分别为 $-1,\mathrm e^{\epsilon/(k_B\Theta)}-1,0$，因此
@@ -4278,17 +4256,115 @@ $2\overline T=\alpha\overline U$ &
 \end{small}
 \clearpage
 \clearpage
-\section*{练习与解答}
-\addcontentsline{toc}{section}{练习与解答}
+\section*{综合练习}\addcontentsline{toc}{section}{综合练习}
+下列题目独立给出条件；详解从第\pageref{c2:practice-solutions}页开始。
 
 \exercise{反向力不一定抵消力矩}
 \label{test:c2-1}
-\QuestionStatement{两质点位置为 $(0,0)$、$(a,0)$，它们之间的力分别为
-$(0,F)$、$(0,-F)$。求合内力及关于原点的合内力矩。}{tr01}{训练题1题图}
-% BEGIN DETAILED ANSWER tr01
+\QuestionStatement{在固定平面惯性坐标中，两质点瞬时位于 $P_1=(0,0)$、$P_2=(a,0)$，$a>0$；两者相互作用力分别为 $\vect F_1=(0,F)$、$\vect F_2=(0,-F)$，$F>0$。把它们作为一对满足等大反向、但不沿连线的理想内力，求合内力和关于原点的合内力矩。指出内力矩抵消还需要什么方向条件。}{tr01}{训练题1题图}
+
+\exercise{两质点质心的反质量比}
+\label{test:c2-2}
+\QuestionStatement{两质点质量为 $m_1,m_2>0$，在同一直线上相距 $L>0$。以球1为 $x=0$、球2为 $x=L$，求质心位置及质心到两球的距离 $d_1,d_2$，证明反质量比关系；再取 $m_2=3m_1$ 求两个距离，并说明重球所在的一侧。}{tr02}{训练题2题图}
+
+\exercise{均匀半圆细线的质心}
+\label{test:c2-3}
+\QuestionStatement{半径为 $a>0$、线密度为常数 $\lambda>0$ 的半圆细线位于 $xy$ 平面的 $y\ge0$ 半平面，圆心为原点，直径沿 $x$ 轴。用弧长质量元求总质量和质心坐标，并比较半圆细线、半圆薄片与实心上半球的质量分布为何不能使用同一个形心高度。}{tr03}{训练题3题图}
+
+\exercise{线性密度梯度的细杆}
+\label{test:c2-4}
+\QuestionStatement{一根理想细杆沿固定 $x$ 轴占据 $0\le x\le L$，$L>0$，线密度为 $\lambda(x)=\lambda_0(1+x/L)$，$\lambda_0>0$。求总质量和质心坐标，写出质量元与一阶矩积分，并说明质心相对于几何中点偏向哪侧。}{tr04}{训练题4题图}
+
+\exercise{单圆孔的负质量法}
+\label{test:c2-5}
+\QuestionStatement{均匀半径 $R$ 的薄圆盘挖去半径 $r$ 的圆孔，
+孔中心为 $(d,0)$，$d\ge0$、$0<r<R$ 且 $d+r\le R$。求剩余质心。}{tr05}{训练题5题图}
+
+\exercise{恒外力下质心的运动}
+\label{test:c2-6}
+\QuestionStatement{由固定成员组成的质点组总质量恒为 $M>0$，在固定惯性系中受到恒定合外力 $\vect F$。在 $t=0$，质心位置为 $\vect R_0$，系统总动量为 $\vect P_0$。求 $t\ge0$ 时的总动量、质心速度和质心位置，并说明内力改变内部运动时这些结果是否仍成立。}{tr06}{训练题6题图}
+
+\exercise{改换匀速参考系后的动能}
+\label{test:c2-7}
+\QuestionStatement{两个惯性系的坐标轴始终平行，新系相对旧系以恒速度 $\vect U$ 平动。质量不变的质点组在旧系中的总质量、总动量和动能分别为 $M,\vect P,T$。从每个粒子的速度变换推导新系动能 $T_{\rm new}$，证明 $T_{\rm new}=T-\vect U\cdot\vect P+MU^2/2$，并说明相对于质心的不旋转平动系中内部动能是否改变。}{tr07}{训练题7题图}
+
+\exercise{相对出膛速度与对地出膛速度}
+\label{test:c2-8}
+\QuestionStatement{水平炮车质量为 $M$、炮弹质量为 $m$，初始静止，发射期间水平外冲量可忽略。
+分别给定炮弹相对炮车速率为 $V$、炮弹对地速率为 $V$，
+求后退速度。}{tr08}{训练题8题图}
+
+\exercise{有限滑轮惯量的数值比例}
+\label{test:c2-9}
+\QuestionStatement{两只质量均为 $m$ 的猴子最初静止且同高，轻绳绕固定滑轮，半径 $r$、惯量 $I_p=mr^2$，绳不打滑。猴 $A$ 抓绳不爬，猴 $B$ 以相对本侧绳向上速率 $v$ 爬行。求两猴的对地上升速度，并核验速度合成。}{tr09}{训练题9题图}
+
+\exercise{移动点角动量的守恒条件}
+\label{test:c2-10}
+\QuestionStatement{固定成员质点组的总质量为 $M$、总动量为 $\vect P$，另有运动轨迹已知的参考点 $A(t)$，其速度为 $\vect v_A$。以绝对粒子速度定义 $\vect L_A^{\rm abs}=\sum_i(\vect r_i-\vect r_A)\times m_i\vect v_i$。若所有外力关于 $A$ 的合力矩始终为零，该角动量是否一定守恒？推导运输修正项，给出守恒条件和一个不守恒的具体例子。}{tr10}{训练题10题图}
+
+\exercise{柯尼希定理中的交叉项}
+\label{test:c2-11}
+\QuestionStatement{任取运动参考点 $A(t)$，定义粒子相对速度 $\widetilde{\vect v}_i=\vect v_i-\vect v_A$、相对动能 $\widetilde T=\sum_i m_i|\widetilde{\vect v}_i|^2/2$；系统总质量为 $M$、总动量为 $\vect P$，质量均不变。展开总动能，求完整的交叉项，说明何时可写成 $T=Mv_A^2/2+\widetilde T$，以及为何选取质心速度能使分解恒成立。}{tr11}{训练题11题图}
+
+\exercise{自由管球的两种质量极限}
+\label{test:c2-12}
+\QuestionStatement{均匀水平细管长 $l$、质量 $M_t$，绕端点竖直光滑轴自由转动；无摩擦小球质量 $m$，初在 $r=l/2$、相对管静止，总初转速为 $\omega_0\ne0$。求球出管时径向、切向及绝对速率，并分别取 $M_t/m\to\infty$ 与 $M_t/m\to0$ 的极限。}{tr12}{训练题12题图}
+
+\exercise{光滑接地双球碰地前的极限}
+\label{test:c2-13}
+\QuestionStatement{两等质量 $m$ 的球由长 $l$ 的轻刚杆连接，下球在光滑水平地面，上球右上。杆与竖直向上成 $\theta$，从 $\theta=\alpha\in(0,\pi/2)$ 静止释放。求上球首次碰地前 $\theta\to\pi/2$ 时下球速度、上球竖直速度及地面支持力，说明是否可直接作碰后值。}{tr13}{训练题13题图}
+
+\exercise{桌边链条的一般初值}
+\label{test:c2-14}
+\QuestionStatement{均匀不可伸长链条总长为 $l>0$、线密度为 $\sigma$。水平段位于光滑桌面，悬垂段长为 $x$；桌沿装有不耗散的理想光滑导槽，强制两段沿同一既定路径以共同速率 $\dot x$ 运动。初始 $x(0)=x_0$、$\dot x(0)=v_0\ge0$，$0\le x_0<l$。求全链离桌瞬间的速率，分析哪些初态能到达 $x=l$，并单独讨论精确初态 $x_0=v_0=0$。}{tr14}{训练题14题图}
+
+\exercise{自由弹簧两体的稳定圆周相对运动}
+\label{test:c2-15}
+\QuestionStatement{两个自由质点由理想中心弹簧相连，折合质量为 $\mu>0$，相对势能为 $U(r)=k(r-a)^2/2$，$k,a>0$。给定非零相对角动量大小 $L$，求保持两球间距恒定的圆周相对运动半径条件，证明正物理解的存在唯一性，并判断径向稳定性。}{tr15}{训练题15题图}
+
+\exercise{双星质量翻倍的周期变化}
+\label{test:c2-16}
+\QuestionStatement{两个仅受万有引力的质点恒星作圆形相对运动，质量为 $M_1,M_2>0$，间距为 $L$，周期为 $T$。比较另外两个均已调整为圆轨道的模型：（a）两星质量各为原来的2倍、间距仍为 $L$；（b）总质量保持不变、间距改为 $2L$。求两种周期与 $T$ 的比值，并指出周期中的距离应取哪一个几何量。}{tr16}{训练题16题图}
+
+\exercise{各向异性线性外场的相对角动量}
+\label{test:c2-17}
+\QuestionStatement{两质点质量为 $m_1,m_2>0$，彼此无内力，在同一固定惯性系中受到线性外场 $\vect F_i=m_i A\vect r_i$，$A=\operatorname{diag}(-\omega_x^2,-\omega_y^2)$，$\omega_x,\omega_y>0$。定义相对坐标 $\vect r=\vect r_1-\vect r_2=(x,y)$、折合质量 $\mu=m_1m_2/(m_1+m_2)$ 和相对角动量 $L_z=\mu(x\dot y-y\dot x)$。求 $\dot L_z$，区分特定瞬间力矩为零与任意初态下全程角动量守恒。}{tr17}{训练题17题图}
+
+\exercise{重入射球的最大角与能量转移}
+\label{test:c2-18}
+\QuestionStatement{入射质点质量 $m_1=3m_2$，以速率 $u>0$ 撞击实验室系中最初静止的靶 $m_2$，发生非相对论中心力完全弹性散射。以入射方向为极轴，求入射质点在实验室系中的最大偏转角，以及靶所能获得的最大动能占入射动能 $m_1u^2/2$ 的比例，指出最大能量转移对应的质心散射角。}{tr18}{训练题18题图}
+
+\exercise{等质量各向同性散射的实验室概率}
+\label{test:c2-19}
+\QuestionStatement{入射粒子与初始静止靶质量均为 $m$，发生完全弹性散射。以入射方向为极轴，已知在质心系每单位立体角的归一化概率密度为 $1/(4\pi)$，即散射各向同性。记入射粒子的实验室散射角为 $\theta$，求其位于 $0\le\theta\le\theta_0$ 的概率，$0\le\theta_0\le\pi/2$；给出实验室系的角密度并核对总概率为1。}{tr19}{训练题19题图}
+
+\exercise{完全粘连碰撞的最大动能损失}
+\label{test:c2-20}
+\QuestionStatement{质量 $m_1>0$ 的质点以速率 $u>0$ 沿直线撞击最初静止的质点 $m_2>0$，二者完全粘连，碰撞期间外冲量可忽略。求共同速度和动能损失占入射动能的比例，并说明为何在保持总动量、没有内能释放的碰撞中，完全粘连给出平动动能的最大损失。}{tr20}{训练题20题图}
+
+\exercise{恒流率竖直火箭的燃烧终态}
+\label{test:c2-21}
+\QuestionStatement{$m_0=2m_f$，燃烧持续 $t_b$，喷气相对速率为 $c$，
+初始向上速度为0。求熄火速度，并给出初瞬自由飞行加速度为正的条件。均匀重力为 $g$，无空气阻力，先假设从 $t=0$ 起处于自由飞行；再解释发射台存在时如何核查此假设。}{tr21}{训练题21题图}
+
+\exercise{雨滴无增长极限的正确展开}
+\label{test:c2-22}
+\QuestionStatement{雨滴从静止下落，初始质量 $M$，以恒质量率 $\lambda>0$ 凝结对地静止物质，无空气阻力。其位移为 $s=gt^2/4+Mgt/(2\lambda)-M^2g\ln(1+\lambda t/M)/(2\lambda^2)$。在固定有限 $t$ 下展开并求 $\lambda\to0$ 的极限，解释表观发散项怎样相消。}{tr22}{训练题22题图}
+
+\exercise{有限时间位力项的量纲}
+\label{test:c2-23}
+\QuestionStatement{对质量固定的质点组，在同一惯性系中定义 $D=\sum_i\vect r_i\cdot\vect p_i$、位力 $W=\sum_i\vect r_i\cdot\vect F_i$。求 $D$、$[D(\tau)-D(0)]/\tau$ 和 $W$ 的量纲，说明位力与合力、力矩的区别；用一对沿连线的等大反向引力举例，判断零合内力是否意味着零内部位力。}{tr23}{训练题23题图}
+
+\exercise{含两种齐次势的位力关系}
+\label{test:c2-24}
+\QuestionStatement{一个保守质点组的势能为 $U=U_{-1}+U_2+C$，其中 $U_q$ 在全部位置同时缩放时满足 $U_q(s\vect r_1,\ldots,s\vect r_N)=s^qU_q(\vect r_1,\ldots,\vect r_N)$，$s>0$；$C$ 为任意常数。以 $D=\sum_i\vect r_i\cdot\vect p_i$ 定义有限时间边界项，先推导任意时间区间内的平均动能关系；再在长期平均存在且边界差率趋零的条件下给出束缚系统的位力关系，说明常数 $C$ 是否进入结果。}{tr24}{训练题24题图}
+\clearpage
+\section*{综合练习详解}\label{c2:practice-solutions}\addcontentsline{toc}{section}{综合练习详解}
+
+\Needspace{7\baselineskip}\subsubsection*{第1题详解：反向力不一定抵消力矩}
 \solution \Step{明确系统、坐标与约束} 取图中左端 $O$ 为矩心，$x$ 向右、$y$ 向上。两力等大反向保证合力为零，但两作用线不重合；是否构成中心内力对，要检查力的方向与两点连线，而不能只检查牛顿第三定律的大小关系。
 
-图~\ref{fig:solution-tr01}~中相距 $a$ 的两条反向力作用线，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr01}，解答图\ref{fig:solution-tr01}展示两条不同作用线组成的力偶，合力为零但关于平面法向的力矩不为零。
 \SolutionFigure{tr01}{训练题1的分析与计算}
 
 \Step{列出方程并求解} 分别以两点为 $1,2$，有 $\vect F_1+\vect F_2=(0,F)+(0,-F)=0$。关于原点，第一点力臂为零，第二点力臂为 $(a,0)$，故
@@ -4302,15 +4378,10 @@ $(0,F)$、$(0,-F)$。求合内力及关于原点的合内力矩。}{tr01}{训练
 左点力的力臂为零，右点 $\vect r_2=(a,0,0)$、$\vect F_2=(0,-F,0)$，所以 $\vect\tau_O=-aF\vect k$。换矩心到任意 $A$，合矩变化为 $-\vect r_{OA}\times(\vect F_1+\vect F_2)=0$，残余力偶与矩心无关。
 若它们被解释成两个粒子间仅有的内力，系统线动量仍可守恒，角动量却以 $\dot L_z=-aF$ 改变。只有再满足两内力沿连线、或计入其他携带角动量的自由度时，才可消去总内力矩。
 
-% END DETAILED ANSWER tr01
-\exercise{两质点质心的反质量比}
-\label{test:c2-2}
-\QuestionStatement{$m_1,m_2$ 相距 $L$，证明质心到两球距离的比为 $m_2:m_1$；
-若 $m_2=3m_1$，质心距球1多远？}{tr02}{训练题2题图}
-% BEGIN DETAILED ANSWER tr02
+\Needspace{7\baselineskip}\subsubsection*{第2题详解：两质点质心的反质量比}
 \solution \Step{明确系统、坐标与约束} 令质心距左球 $m_1$ 为 $d_1$、距右球 $m_2$ 为 $d_2$。它们沿同一直线，且距离为正，故先写 $d_1+d_2=L$，再把质心一阶矩为零写成另一条方程。
 
-图~\ref{fig:solution-tr02}~中靠近重球的质心 $C$ 及两段距离，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr02}，解答图\ref{fig:solution-tr02}展示质心两侧的互补距离及相向移动方向；应同时使用一阶矩平衡和距离之和。
 \SolutionFigure{tr02}{训练题2的分析与计算}
 
 \Step{列出方程并求解} 沿两点连线取球1在 $0$，球2在 $L$。由定义
@@ -4328,15 +4399,10 @@ d_1=\frac{m_2L}{m_1+m_2},\quad d_2=\frac{m_1L}{m_1+m_2}.
 \]
 代 $m_2=3m_1$ 得 $d_1=3L/4,d_2=L/4$，质心靠近较重球。若两质量相等则在中点；若 $m_2/m_1\to\infty$，质心趋向右球位置。距离的比与所标同侧质量的比相反。
 
-% END DETAILED ANSWER tr02
-\exercise{均匀半圆细线的质心}
-\label{test:c2-3}
-\QuestionStatement{半径为 $a$ 的均匀半圆细线位于 $y\ge0$，求质心，
-并说明为何不等于实心半球的 $3a/8$。}{tr03}{训练题3题图}
-% BEGIN DETAILED ANSWER tr03
+\Needspace{7\baselineskip}\subsubsection*{第3题详解：均匀半圆细线的质心}
 \solution \Step{明确系统、坐标与约束} 这是均匀半圆细线，质量元与弧长成正比，不能用半圆面积元或半球体积元。对称性先给 $X_C=0$，只需算纵坐标一阶矩。
 
-图~\ref{fig:solution-tr03}~中半径 $a$ 的上半圆线元，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr03}，解答图\ref{fig:solution-tr03}展示圆弧线元及其高度投影；质心高度由线密度对圆弧积分，而不是对内部面积或体积积分。
 \SolutionFigure{tr03}{训练题3的分析与计算}
 
 \Step{列出方程并求解} 参数取 $(x,y)=(a\cos\phi,a\sin\phi)$，$0\le\phi\le\pi$，弧长元 $\dd s=a\dd\phi$。线密度恒定，所以 $M=\lambda a\pi$。两个一阶矩为
@@ -4354,15 +4420,10 @@ Y_C=\frac{\lambda a^2}{\lambda a\pi}\int_0^\pi\sin\varphi\dd\varphi
 \]
 横向积分含 $\int_0^\pi\cos\varphi\dd\varphi=0$，与对称性一致。$2a/\pi\simeq0.637a$ 在 $0<y<a$ 内，且明显高于均匀半圆面 $4a/(3\pi)$ 的质心，反映细线质量集中在外弧。
 
-% END DETAILED ANSWER tr03
-\exercise{线性密度梯度的细杆}
-\label{test:c2-4}
-\QuestionStatement{细杆占据 $0\le x\le L$，线密度 $\lambda(x)=\lambda_0(1+x/L)$，
-求质量和质心。}{tr04}{训练题4题图}
-% BEGIN DETAILED ANSWER tr04
+\Needspace{7\baselineskip}\subsubsection*{第4题详解：线性密度梯度的细杆}
 \solution \Step{明确系统、坐标与约束} 沿杆取 $x\in[0,L]$，以长度元 $\dd x$ 的质量 $\lambda(x)\dd x$ 作权重。密度向右增大，计算结果应位于几何中点右侧，这可作为符号检查。
 
-图~\ref{fig:solution-tr04}~中密度随 $x$ 增大的杆段，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr04}，解答图\ref{fig:solution-tr04}展示线密度随位置增长的图线与质量条，明确积分中不能遗漏随 $x$ 变化的密度。
 \SolutionFigure{tr04}{训练题4的分析与计算}
 
 \Step{列出方程并求解} 质量元为 $\dd m=\lambda_0(1+x/L)\dd x$。分别计算零阶矩和一阶矩，
@@ -4384,15 +4445,10 @@ M=\lambda_0\int_0^L(1+x/L)\dd x=\frac32\lambda_0L,
 因此 $X_C=J/M=5L/9$。不能把两端线密度的平均直接代入一阶矩，因为 $x$ 与密度相关。
 也可把杆分成均匀密度 $\lambda_0$ 的部分（质量 $\lambda_0L$，质心 $L/2$）与线性梯度部分（质量 $\lambda_0L/2$，质心 $2L/3$），加权后得到同一结果。
 
-% END DETAILED ANSWER tr04
-\exercise{单圆孔的负质量法}
-\label{test:c2-5}
-\QuestionStatement{均匀半径 $R$ 的薄圆盘挖去半径 $r$ 的圆孔，
-孔中心为 $(d,0)$，$d\ge0$、$0<r<R$ 且 $d+r\le R$。求剩余质心。}{tr05}{训练题5题图}
-% BEGIN DETAILED ANSWER tr05
+\Needspace{7\baselineskip}\subsubsection*{第5题详解：单圆孔的负质量法}
 \solution \Step{明确系统、坐标与约束} 完整圆盘减去偏心小圆孔。把被去掉的均匀质量当作位于孔心的负质量，保留相同面密度，整个剩余盘的质心因而向孔的反侧移动。
 
-图~\ref{fig:solution-tr05}~中偏向正 $x$ 的孔心 $H$，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr05}，解答图\ref{fig:solution-tr05}展示被挖部分的一阶矩方向与剩余质心偏移方向，用以确定质量差及一阶矩的符号。
 \SolutionFigure{tr05}{训练题5的分析与计算}
 
 \Step{列出方程并求解} 原圆盘质量 $M_0=\sigma\pi R^2$，被挖圆孔质量 $m_h=\sigma\pi r^2$。原圆盘一阶矩为零，孔的一阶矩为 $m_hd$。剩余一阶矩为 $-m_hd$，质量为 $M_0-m_h>0$，故
@@ -4408,16 +4464,10 @@ X_C=-\frac{m_hd}{M_0-m_h}=-\frac{r^2d}{R^2-r^2},\qquad Y_C=0.
 \]
 $r\to0$ 或 $d\to0$ 时偏移消失；$d>0$ 时 $X_C<0$。题设 $d+r\le R$ 保证整孔位于盘内，$r<R$ 保证剩余质量为正；若超出母盘，不能再减去完整小圆的质量。
 
-% END DETAILED ANSWER tr05
-\exercise{恒外力下质心的运动}
-\label{test:c2-6}
-\QuestionStatement{总质量 $M$ 的质点组受恒合外力 $\vect F$，
-初始质心位置 $\vect R_0$、总动量 $\vect P_0$。
-求 $\vect P(t)$ 和 $\vect R(t)$。}{tr06}{训练题6题图}
-% BEGIN DETAILED ANSWER tr06
+\Needspace{7\baselineskip}\subsubsection*{第6题详解：恒外力下质心的运动}
 \solution \Step{明确系统、坐标与约束} 固定总质量的系统在恒总外力下，先对总动量积分，再利用 $\vect P=M\dot{\vect R}$ 积分质心位置。系统内部怎样振动或碰撞，不影响这条质心方程。
 
-图~\ref{fig:solution-tr06}~中恒定外力和质心初始动量的不同方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr06}，解答图\ref{fig:solution-tr06}展示初动量与外冲量的矢量合成；质心运动的第二次积分还需保留初始位置。
 \SolutionFigure{tr06}{训练题6的分析与计算}
 
 \Step{列出方程并求解} 固定成员系统总质量恒定，$\dot{\vect P}=\vect F$。从初态积分一次，$\vect P=\vect P_0+\vect Ft$。质心满足 $\dot{\vect R}=\vect P/M$，再积分，
@@ -4437,16 +4487,10 @@ $r\to0$ 或 $d\to0$ 时偏移消失；$d>0$ 时 $X_C<0$。题设 $d+r\le R$ 保�
 $t=0$ 的位置、速度和动量都与题给初值一致，二次微分为 $\vect F/M$。$\vect F=0$ 时为匀速直线，初动量与外力不平行时为抛物线型质心轨迹。
 这里要求总质量固定；持续进出质量时 $\vect P=M\dot{\vect R}$ 与选定主体的含义需重新检查。
 
-% END DETAILED ANSWER tr06
-\exercise{改换匀速参考系后的动能}
-\label{test:c2-7}
-\QuestionStatement{新惯性系相对旧系速度为 $\vect U$。
-证明 $T_{\text{新}}=T-\vect U\cdot\vect P+MU^2/2$，
-并说明内部动能是否改变。}{tr07}{训练题7题图}
-% BEGIN DETAILED ANSWER tr07
+\Needspace{7\baselineskip}\subsubsection*{第7题详解：改换匀速参考系后的动能}
 \solution \Step{明确系统、坐标与约束} 两个坐标系只作平行匀速相对平移，每个粒子速度都减去同一个 $\vect U$。直接展开速度平方，区分总动能的参考系变化与相对质心内部动能的不变性。
 
-图~\ref{fig:solution-tr07}~中匀速平移的新参考系及各粒子速度减量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr07}，解答图\ref{fig:solution-tr07}展示绝对速度与相对速度的矢量三角形；改变速度定义也改变角动量或动能分解中的交叉项。
 \SolutionFigure{tr07}{训练题7的分析与计算}
 
 \Step{列出方程并求解} 新惯性系中 $\widetilde{\vect v}_i=\vect v_i-\vect U$。将平方逐项展开，
@@ -4473,16 +4517,10 @@ T'=\frac12\sum_i m_i(\vect v_i-\vect U)^2
 $T'-M(V_C')^2/2=T-MV_C^2/2$。
 选 $\vect U=\vect V_C$，新系的总动能是内部动能，并且是所有平移参考系中动能的最小值。
 
-% END DETAILED ANSWER tr07
-\exercise{相对出膛速度与对地出膛速度}
-\label{test:c2-8}
-\QuestionStatement{水平炮车质量为 $M$、炮弹质量为 $m$，初始静止，发射期间水平外冲量可忽略。
-分别给定炮弹相对炮车速率为 $V$、炮弹对地速率为 $V$，
-求后退速度。}{tr08}{训练题8题图}
-% BEGIN DETAILED ANSWER tr08
+\Needspace{7\baselineskip}\subsubsection*{第8题详解：相对出膛速度与对地出膛速度}
 \solution \Step{明确系统、坐标与约束} 图中炮管水平，炮弹质量 $m$，炮身剩余质量 $M$，整体初始静止。两种题设都满足 $MU+mv=0$；差别是给定的速度 $V$ 究竟是相对炮身还是对地值。
 
-图~\ref{fig:solution-tr08}~中水平炮管的出膛速度与炮身反冲，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr08}，解答图\ref{fig:solution-tr08}展示同一地面轴上的炮车、炮弹速度及两速度之差，区分给定相对速率和给定对地速率。
 \SolutionFigure{tr08}{训练题8的分析与计算}
 
 \Step{列出方程并求解} 炮弹前进为正，炮车后退速度写为有符号量 $U<0$。水平动量守恒给 $MU+mv_b=0$。相对出膛速率题设要求 $v_b-U=V$，代入 $v_b=U+V$，得到
@@ -4496,14 +4534,10 @@ $T'-M(V_C')^2/2=T-MV_C^2/2$。
 对地出膛速度为 $V$ 时，直接令 $v=V$，故 $U=-mV/M$。两式中炮弹实际动量不同，因此反冲速度不同。
 在 $m/M\ll1$ 时，两反冲结果一阶近似相同；有限质量比下不能混用。在两种情形中 $U<0$ 都表示与炮弹发射方向相反。
 
-% END DETAILED ANSWER tr08
-\exercise{有限滑轮惯量的数值比例}
-\label{test:c2-9}
-\QuestionStatement{两只质量均为 $m$ 的猴子最初静止且同高，轻绳绕固定滑轮，半径 $r$、惯量 $I_p=mr^2$，绳不打滑。猴 $A$ 抓绳不爬，猴 $B$ 以相对本侧绳向上速率 $v$ 爬行。求两猴的对地上升速度，并核验速度合成。}{tr09}{训练题9题图}
-% BEGIN DETAILED ANSWER tr09
+\Needspace{7\baselineskip}\subsubsection*{第9题详解：有限滑轮惯量的数值比例}
 \solution \Step{明确系统、坐标与约束} 设猴A抓住绳随其运动，绝对上升速率为 $u$；猴B相对本侧绳向上爬的速率为 $v$。绳不可伸长使B侧绳的绝对速度向下为 $u$，所以B绝对上升速度为 $v-u$。滑轮转动惯量为 $I_p=mr^2$。
 
-图~\ref{fig:solution-tr09}~中A、B两侧绳速度相反的约束，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr09}，解答图\ref{fig:solution-tr09}展示两只猴子各自的重力、张力受力图；轻轮与有转动惯量轮不能混用同一张力条件。
 \SolutionFigure{tr09}{训练题9的分析与计算}
 
 \Step{列出方程并求解} 设抓绳猴 $A$ 的向上速度为 $u$，绳不伸长且不打滑，另一侧绳段向下速率为 $u$。爬绳猴相对该绳段向上速率为 $v$，故 $v_A=u,v_B=v-u$、轮角速率 $\omega_p=u/r$。关于轮轴取 $A$ 上升对应正方向，初始总角动量为零，两猴重力矩相消，
@@ -4521,21 +4555,16 @@ mr\,u-mr(v-u)+I_p\frac ur=0.
 整理为 $(2mr^2+I_p)u=mr^2v$。代 $I_p=mr^2$ 得 $u=v/3$、$v_B=v-u=2v/3$。
 若 $v(t)$ 随时间变化，该瞬时关系仍成立（初始总角动量为零），两上升高度由积分得到同样的比例。有限滑轮惯量使A上升更慢；忽略它会错误得到两猴各 $v/2$。
 
-% END DETAILED ANSWER tr09
-\exercise{移动点角动量的守恒条件}
-\label{test:c2-10}
-\QuestionStatement{系统外力对移动点 $A$ 合力矩为零。
-用绝对速度计算的 $\vect L_A^{\rm abs}$ 是否一定守恒？}{tr10}{训练题10题图}
-% BEGIN DETAILED ANSWER tr10
+\Needspace{7\baselineskip}\subsubsection*{第10题详解：移动点角动量的守恒条件}
 \solution \Step{明确系统、坐标与约束} 关于任意移动点 $A$ 的角动量，需要先说明使用绝对速度还是相对速度。题干讨论的 $\vect L_A=\sum(\vect r_i-\vect r_A)\times m_i\vect v_i$ 使用绝对速度，微分时必须对移动的力臂也求导。
 
-图~\ref{fig:solution-tr10}~中移动点 $A$ 引入的力臂变化，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr10}，解答图\ref{fig:solution-tr10}展示参考点速度与总动量的叉积方向；零外力矩并不自动消去运输项。
 \SolutionFigure{tr10}{训练题10的分析与计算}
 
 \Step{列出方程并求解} 对绝对速度定义，移动点角动量满足
 $\dot{\vect L}_A^{\rm abs}=\vect\tau_A^{\rm ext}-\vect v_A\times\vect P$。即使第一项为零，第二项也未必为零。因此还需 $\vect v_A\times\vect P=0$ 才保证这一时刻导数为零；守恒要求该条件在整个区间成立。
 
-取 $A=C$ 时 $\vect v_A=\vect V=\vect P/M$，叉积自动为零。若改用相对速度定义，修正项变为 $-M(\vect R-\vect r_A)\times\vect a_A$，需要重新核查。两种定义不能混用；正文自由质点与匀速移动点的反例明确展示了区别。
+取 $A=C$ 时 $\vect v_A=\vect V=\vect P/M$，叉积自动为零。若改用相对速度定义，修正项变为 $-M(\vect R-\vect r_A)\times\vect a_A$，需要重新核查。两种定义不能混用，下面用自由质点作具体反例。
 
 \Step{保留移动基点的导数项}
 令 $\vect s_i=\vect r_i-\vect r_A$，则
@@ -4547,15 +4576,19 @@ $\dot{\vect L}_A^{\rm abs}=\vect\tau_A^{\rm ext}-\vect v_A\times\vect P$。即�
 第一项中 $\vect v_i\times m_i\vect v_i=0$，但 $-\vect v_A\times\vect P$ 一般不为零。故即使外力矩为零，也要在整个所考察时段满足该叉积为零，才能守恒。
 若改用相对速度定义，则 $\vect L_A^{\rm rel}=\vect L_A-M(\vect R-\vect r_A)\times\vect v_A$，进一步求导得 $\dot{\vect L}_A^{\rm rel}=\vect\tau_A-M(\vect R-\vect r_A)\times\vect a_A$。两式条件不同，不能省去定义。
 
-% END DETAILED ANSWER tr10
-\exercise{柯尼希定理中的交叉项}
-\label{test:c2-11}
-\QuestionStatement{任取一个移动点 $A$，把 $\vect v_i=\vect v_A+\widetilde{\vect v}_i$，
-为何一般不能直接写 $T=Mv_A^2/2+\widetilde T$？}{tr11}{训练题11题图}
-% BEGIN DETAILED ANSWER tr11
+
+\Step{用可独立计算的运动作反例} 如题图\ref{fig:question-tr10}所示取两轴不转动、$\vect v_A=u\vect e_y$、$u>0$。一个质量 $m>0$ 的自由质点以 $\vect v=v\vect e_x$ 匀速运动，$v>0$，位置分别为 $A=(0,ut)$、$P=(vt,0)$。它不受真实力，关于 $A$ 的真实力矩恒为零，但
+\[
+\vect L_A^{\rm abs}=(vt\vect e_x-ut\vect e_y)\times mv\vect e_x
+=muvt\vect e_z,\qquad
+\dot{\vect L}_A^{\rm abs}=muv\vect e_z\ne0.
+\]
+解答图\ref{fig:solution-tr10}中向上的 $\vect v_A$ 与向右的 $\vect P$ 给出 $\vect v_A\times\vect P$ 指向纸内，因此带负号的运输项指向纸外，正好与上式一致。
+
+\Needspace{7\baselineskip}\subsubsection*{第11题详解：柯尼希定理中的交叉项}
 \solution \Step{明确系统、坐标与约束} 以图中任意移动点 $A$ 的速度 $\vect v_A$ 作速度分解。只有选 $A$ 为质心或满足额外正交条件时，动能交叉项才消失；推导本身不要求 $A$ 匀速。
 
-图~\ref{fig:solution-tr11}~中任意移动基点 $A$ 及其速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr11}，解答图\ref{fig:solution-tr11}展示绝对速度与相对速度的矢量三角形；改变速度定义也改变角动量或动能分解中的交叉项。
 \SolutionFigure{tr11}{训练题11的分析与计算}
 
 \Step{列出方程并求解} 按 $\vect v_i=\vect v_A+\widetilde{\vect v}_i$ 展开，
@@ -4574,14 +4607,10 @@ T=\frac12Mv_A^2+\frac12\sum_i m_i|\vect v_i-\vect v_A|^2
 若 $A=C$，则 $M\vect v_C=\vect P$，交叉项严格为零，得到柯尼希定理。若任意选择 $A$，后一括号通常不为零。
 例如全部粒子同以 $\vect V$ 平移，取 $\vect v_A=\vect V/2$，前两项之和仅为真实动能的一半，遗漏的另一半正来自交叉项。它可以为正、负或零，不能预先当作额外正能量。
 
-% END DETAILED ANSWER tr11
-\exercise{自由管球的两种质量极限}
-\label{test:c2-12}
-\QuestionStatement{均匀水平细管长 $l$、质量 $M_t$，绕端点竖直光滑轴自由转动；无摩擦小球质量 $m$，初在 $r=l/2$、相对管静止，总初转速为 $\omega_0\ne0$。求球出管时径向、切向及绝对速率，并分别取 $M_t/m\to\infty$ 与 $M_t/m\to0$ 的极限。}{tr12}{训练题12题图}
-% BEGIN DETAILED ANSWER tr12
+\Needspace{7\baselineskip}\subsubsection*{第12题详解：自由管球的两种质量极限}
 \solution \Step{明确系统、坐标与约束} 细管在水平面内绕固定端自由转动，球从中点开始相对管无径向速度，管、球之间无摩擦。比较质量极限时，保留初始球贡献的惯量，不能直接把球当测试质点或先删掉整个角动量。
 
-图~\ref{fig:solution-tr12}~中球到固定端的半径与管的转动惯量，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr12}，解答图\ref{fig:solution-tr12}展示球出管速度的径向与切向正交合成；守恒律先决定两个分量，再求绝对速率。
 \SolutionFigure{tr12}{训练题12的分析与计算}
 
 \Step{列出方程并求解} 从角动量守恒和动能守恒的出管结果出发，
@@ -4604,14 +4633,10 @@ T=\frac12Mv_A^2+\frac12\sum_i m_i|\vect v_i-\vect v_A|^2
 $\eta\to\infty$ 时分别趋 $1,3/4,7/4$；$\eta\to0$ 时趋 $1/4,3/16,1/4$。绝对速率由互相垂直的径向 $v_r$ 与切向 $l\omega_{\rm out}$ 合成，两种极限均满足平方和。
 轻管极限仍保留固定端的理想约束，是从正管质量趋零得到的极限；不能将整个装置误改成不受支承的自由两体。
 
-% END DETAILED ANSWER tr12
-\exercise{光滑接地双球碰地前的极限}
-\label{test:c2-13}
-\QuestionStatement{两等质量 $m$ 的球由长 $l$ 的轻刚杆连接，下球在光滑水平地面，上球右上。杆与竖直向上成 $\theta$，从 $\theta=\alpha\in(0,\pi/2)$ 静止释放。求上球首次碰地前 $\theta\to\pi/2$ 时下球速度、上球竖直速度及地面支持力，说明是否可直接作碰后值。}{tr13}{训练题13题图}
-% BEGIN DETAILED ANSWER tr13
+\Needspace{7\baselineskip}\subsubsection*{第13题详解：光滑接地双球碰地前的极限}
 \solution \Step{明确系统、坐标与约束} 杆倒向地面但上球尚未碰地，仍处于下球光滑接触支。以 $\theta\to\pi/2^-$ 取碰前极限，不能把地面即将对上球产生的碰撞冲量提前写进连续运动方程。
 
-图~\ref{fig:solution-tr13}~中杆倒平前两端的水平速度和上球竖直速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr13}，解答图\ref{fig:solution-tr13}展示首次碰地前的水平杆姿态及上球的下行速度；此图不包含碰撞后的速度更新。
 \SolutionFigure{tr13}{训练题13的分析与计算}
 
 \Step{列出方程并求解} 由接地支能量式
@@ -4624,15 +4649,10 @@ $\dot\theta^2=4g(\cos\alpha-\cos\theta)/[l(1+\sin^2\theta)]$，令 $\theta\to\pi
 由能量 $\dot\theta^2\to2g\cos\alpha/l$，得 $v_{2y}\to-\sqrt{2gl\cos\alpha}$。支持力式令 $\cos\theta\to0$，得 $N\to mg>0$，下球仍接触。
 碰前总动能于是仅为上球的 $mgl\cos\alpha$，恰好等于上球下降的重力势能。到上球触地后必须另写碰撞条件，不能继续该解析支。
 
-% END DETAILED ANSWER tr13
-\exercise{桌边链条的一般初值}
-\label{test:c2-14}
-\QuestionStatement{均匀链条在理想光滑桌沿滑落，初始悬长 $x_0$、
-初始共同速率 $v_0$。求全链离桌时速率，并分析 $x_0=0,v_0=0$。}{tr14}{训练题14题图}
-% BEGIN DETAILED ANSWER tr14
+\Needspace{7\baselineskip}\subsubsection*{第14题详解：桌边链条的一般初值}
 \solution \Step{明确系统、坐标与约束} 统一用悬垂长度 $x$ 描述整条不可伸长链，初值改成一般 $x_0,v_0$。动力学方程仍是 $\ddot x=(g/l)x$，但能量常数和双曲函数的两个系数都要随初值改变。
 
-图~\ref{fig:solution-tr14}~中一般初始悬长 $x_0$ 与下滑方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr14}，解答图\ref{fig:solution-tr14}展示桌沿转向处流入和流出的不同动量方向，说明两个开放直段必须分别保留动量通量项。
 \SolutionFigure{tr14}{训练题14的分析与计算}
 
 \Step{列出方程并求解} 这里使用保持路径的理想光滑导向模型。全链质量为 $\sigma l$，动能为 $\sigma lv^2/2$，悬垂段势能为 $-\sigma gx^2/2$。初、末能量相等，
@@ -4653,16 +4673,10 @@ x(t)=x_0\cosh\omega_ct+\frac{v_0}{\omega_c}\sinh\omega_ct,
 若运动沿 $x$ 增大的方向首次达到 $l$，代入即得出口速度公式，正根对应下滑。
 $x_0>0,v_0=0$ 时初始加速度为正，会开始下滑；恰有 $x_0=v_0=0$ 时微分方程的唯一解为 $x=0$，不会自发离开理想平衡态。若给向内初速度，需先判断 $x=0$ 的边界和可能转向，不能仅凭出口能量平方为正断言必能达到出口。
 
-% END DETAILED ANSWER tr14
-\exercise{自由弹簧两体的稳定圆周相对运动}
-\label{test:c2-15}
-\QuestionStatement{两球折合质量为 $\mu$，中心弹簧势能
-$U=k(r-a)^2/2$、$a>0$。给定非零相对角动量 $L$，
-求圆轨道半径条件并判断稳定性。}{tr15}{训练题15题图}
-% BEGIN DETAILED ANSWER tr15
+\Needspace{7\baselineskip}\subsubsection*{第15题详解：自由弹簧两体的稳定圆周相对运动}
 \solution \Step{明确系统、坐标与约束} 用相对质点 $\mu$ 的有效势 $W(r)=L^2/(2\mu r^2)+k(r-a)^2/2$。圆轨道要求半径恒定，即有效势驻点；稳定性取决于该驻点的曲率，不能仅用弹簧力向内作定性判断。
 
-图~\ref{fig:solution-tr15}~中相对圆轨道的弹簧张力与切向速度，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr15}，解答图\ref{fig:solution-tr15}展示弹性势与离心势相加后的径向有效势，转向点由能量线确定，稳定圆轨道由势阱底确定。
 \SolutionFigure{tr15}{训练题15的分析与计算}
 
 \Step{列出方程并求解} 有效势 $W=L^2/(2\mu r^2)+k(r-a)^2/2$。圆轨道满足
@@ -4683,15 +4697,10 @@ W''(r_0)=\frac{3L^2}{\mu r_0^4}+k
 令 $r=r_0+\xi$ 线性化，$\mu\ddot\xi+W''(r_0)\xi=0$，得到径向小振动频率。轨道角速度由 $\Omega_0=L/(\mu r_0^2)$ 求得，其平方为 $k(r_0-a)/(\mu r_0)$。
 两频率一般不同，受小扰动的相对轨道未必闭合；$L=0$ 的静止原长态需单独处理其方位退化。
 
-% END DETAILED ANSWER tr15
-\exercise{双星质量翻倍的周期变化}
-\label{test:c2-16}
-\QuestionStatement{两星质量同时翻倍，间距保持 $L$，圆轨道周期如何变化？
-若总质量不变而间距变为 $2L$，周期如何变化？}{tr16}{训练题16题图}
-% BEGIN DETAILED ANSWER tr16
+\Needspace{7\baselineskip}\subsubsection*{第16题详解：双星质量翻倍的周期变化}
 \solution \Step{明确系统、坐标与约束} 比较的是若干已经建立好的圆轨道，轨道间距或质量按题设改变。周期尺度 $T\propto L^{3/2}M_{\rm tot}^{-1/2}$ 直接来自两体相对方程。
 
-图~\ref{fig:solution-tr16}~中两星间距 $L$ 与共同质心的轨道，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr16}，解答图\ref{fig:solution-tr16}展示固定间距下圆轨道周期随总质量的变化，区分模型之间的比较与某一次瞬时改变质量后的轨道演化。
 \SolutionFigure{tr16}{训练题16的分析与计算}
 
 \Step{列出方程并求解} 圆形双星以两星间距 $L$ 为相对圆轨道半径，其相对方程给
@@ -4705,17 +4714,10 @@ $\mathcal T=2\pi\sqrt{L^3/[G(M_1+M_2)]}$。两质量同时翻倍，间距不变�
 质量相等时每颗星的轨道半径为 $L/2$，但周期式仍用两星间距 $L$。若把 $L/2$ 错代相对半径，将产生 $2\sqrt2$ 的额外误差。
 这些比较不描述同一系统质量瞬间变化后的轨迹；真实突变会改变能量和圆轨道条件，需重新确定初值。
 
-% END DETAILED ANSWER tr16
-\exercise{各向异性线性外场的相对角动量}
-\label{test:c2-17}
-\QuestionStatement{无内力的两质点处于共同外场
-$\vect F_i=m_iA\vect r_i$，
-$A=\operatorname{diag}(-\omega_x^2,-\omega_y^2)$。
-求相对角动量变化率，何时对任意构形守恒？}{tr17}{训练题17题图}
-% BEGIN DETAILED ANSWER tr17
+\Needspace{7\baselineskip}\subsubsection*{第17题详解：各向异性线性外场的相对角动量}
 \solution \Step{明确系统、坐标与约束} 两粒子受同一个线性场 $\vect a=\mathsf A\vect r$，相减后仍得 $\ddot{\vect r}=\mathsf A\vect r$，质心项消去。相对角动量变化只需计算相对位置与该加速度的叉积。
 
-图~\ref{fig:solution-tr17}~中位置的 $x,y$ 分量及不同线性回复系数，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr17}，解答图\ref{fig:solution-tr17}展示相对坐标中的两个回复力分量及各自力臂，逐项求矩后才能判断角动量变化率。
 \SolutionFigure{tr17}{训练题17的分析与计算}
 
 \Step{列出方程并求解} 共同线性场使相对方程为 $\ddot{\vect r}=A\vect r$。记 $\vect r=(x,y)$，有 $\ddot x=-\omega_x^2x,\ddot y=-\omega_y^2y$。相对角动量 $L_z=\mu(x\dot y-y\dot x)$，求导，两个速度乘积相消，
@@ -4734,15 +4736,10 @@ $A=\operatorname{diag}(-\omega_x^2,-\omega_y^2)$。
 若要求任意初值、任意几何位置都守恒，必须 $\omega_x=\omega_y$，使场对相对原点为中心力。
 在各向异性场中，某一时刻 $x=0$ 或 $y=0$ 也会令力矩暂时为零；只有轨迹始终保持在该轴等特殊条件下才可延续，不能用单时刻零力矩证明一般守恒。
 
-% END DETAILED ANSWER tr17
-\exercise{重入射球的最大角与能量转移}
-\label{test:c2-18}
-\QuestionStatement{入射球质量为静止靶质量的3倍，弹性散射。
-求实验室入射球最大偏转角与靶最多获得的入射能量比例。}{tr18}{训练题18题图}
-% BEGIN DETAILED ANSWER tr18
+\Needspace{7\baselineskip}\subsubsection*{第18题详解：重入射球的最大角与能量转移}
 \solution \Step{明确系统、坐标与约束} 入射球较重，$\lambda=3$，速度圆原点在圆外。最大实验室偏角由从原点向圆作切线得到；最大靶能量则由相对速度反转的正面碰撞得到，二者对应不同的质心偏角。
 
-图~\ref{fig:solution-tr18}~中从原点作速度圆切线形成的直角三角形，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr18}，解答图\ref{fig:solution-tr18}展示靶能量占比随质心散射角增长的曲线；最大转移发生在相对运动反向时。
 \SolutionFigure{tr18}{训练题18的分析与计算}
 
 \Step{列出方程并求解} 令质量比 $\lambda=3$。从 $\dd\theta/\dd\Theta=(1+\lambda\cos\Theta)/D^2$，最大实验室角发生在 $\cos\Theta=-1/3$，代入角度关系得
@@ -4763,16 +4760,10 @@ $\sin\theta_{\max}=1/3$，所以 $\theta_{\max}\approx19.47122^\circ$。
 \]
 它在 $\Theta=\pi$ 最大，代 $\lambda=3$ 得 $3/4$。此时重入射球仍沿正向运动，实验室偏角为0，恰好说明“能量转移最多”与“入射球偏折最大”不能等同。
 
-% END DETAILED ANSWER tr18
-\exercise{等质量各向同性散射的实验室概率}
-\label{test:c2-19}
-\QuestionStatement{质心系弹性散射各向同性，入射与靶等质量，
-求实验室入射球落在 $0\le\theta\le\theta_0$ 中的概率，
-$0\le\theta_0\le\pi/2$。}{tr19}{训练题19题图}
-% BEGIN DETAILED ANSWER tr19
+\Needspace{7\baselineskip}\subsubsection*{第19题详解：等质量各向同性散射的实验室概率}
 \solution \Step{明确系统、坐标与约束} 质心系各向同性意味着单位立体角概率密度是 $1/(4\pi)$，并不是极角本身均匀。等质量时 $\Theta=2\theta$，实验室可见角域是 $0\le\theta\le\pi/2$，方位角不变。
 
-图~\ref{fig:solution-tr19}~中等质量的半角关系及出射角域，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr19}，解答图\ref{fig:solution-tr19}展示实验室角域的累计概率曲线；质心系各向同性并不等于实验室极角均匀。
 \SolutionFigure{tr19}{训练题19的分析与计算}
 
 \Step{列出方程并求解} 质心系每立体角概率密度为 $1/(4\pi)$。等质量有 $\Theta=2\theta$、$\dd\Omega_C/\dd\Omega_L=4\cos\theta$，故实验室每立体角密度为 $f_L=\cos\theta/\pi$，范围 $0\le\theta<\pi/2$。积分整个方位角，
@@ -4794,15 +4785,10 @@ $\theta_0=\pi/4$ 时为 $1/2$，$\theta_0\to\pi/2$ 时为1，完成归一化。�
 $P(\theta\le\theta_0)=\int_0^{\theta_0}\sin2\theta\dd\theta=\sin^2\theta_0$。
 取 $\theta_0=\pi/2$ 得1，验证归一化；取 $\theta_0=\pi/4$ 得1/2。密度 $f_L$ 的单位是每单位立体角，不能直接只对 $\dd\theta$ 积分。
 
-% END DETAILED ANSWER tr19
-\exercise{完全粘连碰撞的最大动能损失}
-\label{test:c2-20}
-\QuestionStatement{质量 $m_1$ 以速率 $u$ 撞静止质量 $m_2$ 并粘连，碰撞期间外冲量可忽略。
-求共同速度及损失占入射动能的比例。}{tr20}{训练题20题图}
-% BEGIN DETAILED ANSWER tr20
+\Needspace{7\baselineskip}\subsubsection*{第20题详解：完全粘连碰撞的最大动能损失}
 \solution \Step{明确系统、坐标与约束} 完全粘连后只有共同的质心平移，不再有两球之间的相对动能。用总动量确定共同速度，再将初动能按柯尼希定理分成保留的质心部分与被耗散的相对部分。
 
-图~\ref{fig:solution-tr20}~中碰后共同速度对应的质心平移，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr20}，解答图\ref{fig:solution-tr20}展示碰前、碰后动能与转为内能的部分；在总动量固定时质心平移动能不变。
 \SolutionFigure{tr20}{训练题20的分析与计算}
 
 \Step{列出方程并求解} 动量守恒 $(m_1+m_2)V=m_1u$，故 $V=m_1u/M$。初始动能 $T_i=m_1u^2/2$，末动能 $T_f=MV^2/2=m_1^2u^2/(2M)$。差值
@@ -4821,15 +4807,13 @@ $P(\theta\le\theta_0)=\int_0^{\theta_0}\sin2\theta\dd\theta=\sin^2\theta_0$。
 除以初动能得损失比例 $m_2/M$；对给定的两质量与初速度，粘连使可用相对动能全部损失，是允许的最大损失。若固定入射球而让靶无限重，比例趋1。
 “等质量时最大”适用于某些弹性能量转移比较，不能套到这里的粘连损失比例上。总动量在碰前后相同，但机械能并不守恒。
 
-% END DETAILED ANSWER tr20
-\exercise{恒流率竖直火箭的燃烧终态}
-\label{test:c2-21}
-\QuestionStatement{$m_0=2m_f$，燃烧持续 $t_b$，喷气相对速率为 $c$，
-初始向上速度为0。求熄火速度，并给出初瞬自由飞行加速度为正的条件。均匀重力为 $g$，无空气阻力，先假设从 $t=0$ 起处于自由飞行；再解释发射台存在时如何核查此假设。}{tr21}{训练题21题图}
-% BEGIN DETAILED ANSWER tr21
+
+\Step{证明最大损失而非仅计算粘连结果} 总动量固定时，柯尼希分解为 $T=P^2/(2M)+T_{\rm int}$，而 $T_{\rm int}\ge0$。因此最低可能平动动能是 $P^2/(2M)$，当且仅当两球碰后速度相同取得。完全粘连达到这一条件；若仍有相对速度，剩余内部平动动能为正，损失反而较小。
+
+\Needspace{7\baselineskip}\subsubsection*{第21题详解：恒流率竖直火箭的燃烧终态}
 \solution \Step{明确系统、坐标与约束} 质量从 $2m_f$ 匀速减到 $m_f$，燃烧时间 $t_b$，所以 $q=m_f/t_b$。若从 $t=0$ 已自由飞行，则初始速度为0，可用竖直火箭对数式；若存在发射台且推力不足，则先检查支承阶段。
 
-图~\ref{fig:solution-tr21}~中相对排气方向和燃烧段质量变化，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr21}，解答图\ref{fig:solution-tr21}展示正熄火速度与初瞬向上加速的两个不同阈值，防止把自由飞行公式直接当作发射台起飞条件。
 \SolutionFigure{tr21}{训练题21的分析与计算}
 
 \Step{列出方程并求解} 燃烧流率 $q=(m_0-m_f)/t_b=m_f/t_b$，初始质量为 $2m_f$。自由飞行式
@@ -4846,14 +4830,10 @@ $a_0=cq/m_0-g=c/(2t_b)-g$，故要求 $c>2gt_b$ 才从初瞬严格向上加速�
 严格为正要求 $c>2gt_b$，条件更强；等号初瞬加速度为零，质量随即减小后开始上升。
 若有发射台，当 $gt_b<c<2gt_b$ 时要用 $m_L=cm_f/(gt_b)$、$t_L=2t_b-c/g$ 作新的飞行初值；$c\le gt_b$ 则燃烧阶段不能形成有限起飞。不能把自由支的正末速度条件当成发射台起飞的充分条件。
 
-% END DETAILED ANSWER tr21
-\exercise{雨滴无增长极限的正确展开}
-\label{test:c2-22}
-\QuestionStatement{雨滴从静止下落，初始质量 $M$，以恒质量率 $\lambda>0$ 凝结对地静止物质，无空气阻力。其位移为 $s=gt^2/4+Mgt/(2\lambda)-M^2g\ln(1+\lambda t/M)/(2\lambda^2)$。在固定有限 $t$ 下展开并求 $\lambda\to0$ 的极限，解释表观发散项怎样相消。}{tr22}{训练题22题图}
-% BEGIN DETAILED ANSWER tr22
+\Needspace{7\baselineskip}\subsubsection*{第22题详解：雨滴无增长极限的正确展开}
 \solution \Step{明确系统、坐标与约束} 位移式中出现 $1/\lambda$ 和 $1/\lambda^2$，是积分表达造成的大项相消。要求的是固定有限 $t$ 的无增长极限，用无量纲变量 $z=\lambda t/M$ 展开，保留足够阶次才能消去表面的发散项。
 
-图~\ref{fig:solution-tr22}~中静止凝结物的入流与下落方向，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr22}，解答图\ref{fig:solution-tr22}展示精确下落距离与自由落体距离的比较，说明展开所需的小参数是质量增长率与观察时间的组合。
 \SolutionFigure{tr22}{训练题22的分析与计算}
 
 \Step{列出方程并求解} 从精确距离
@@ -4880,16 +4860,10 @@ s=\frac12gt^2-\frac{\lambda gt^3}{6M}
 \]
 首个修正为负，符合吸收静止质量会降低下落速率。该展开要求 $|\lambda t/M|\ll1$；若同时令 $t\sim M/\lambda$，不能用这个短增长时间展开证明一致极限。
 
-% END DETAILED ANSWER tr22
-\exercise{有限时间位力项的量纲}
-\label{test:c2-23}
-\QuestionStatement{检查 $D=\sum\vect r_i\cdot\vect p_i$、
-$[D(\tau)-D(0)]/\tau$、$W=\sum\vect r_i\cdot\vect F_i$ 的量纲，
-并解释为何 $W$ 不是力的合量。}{tr23}{训练题23题图}
-% BEGIN DETAILED ANSWER tr23
+\Needspace{7\baselineskip}\subsubsection*{第23题详解：有限时间位力项的量纲}
 \solution \Step{明确系统、坐标与约束} 位力恒等式比较的是能量量纲的量。$D=\sum\vect r_i\cdot m_i\vect v_i$ 本身并非能量，其时间导数或除以时间后的边界差才与 $2T,W$ 同量纲。
 
-图~\ref{fig:solution-tr23}~中两体相对位置与成对力的点积，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr23}，解答图\ref{fig:solution-tr23}展示力的首尾相抵与位置加权后的力位积并列比较，说明合力抵消不会自动消去内部位力。
 \SolutionFigure{tr23}{训练题23的分析与计算}
 
 \Step{列出方程并求解} 位置量纲为长度，动量为质量乘速度，所以
@@ -4909,15 +4883,10 @@ $\vect r_1\cdot\vect F_{12}+\vect r_2\cdot\vect F_{21}
 =\vect r_{12}\cdot\vect F_{12}$。
 即使两力相加为零，该内积一般不为零；例如引力对给负值 $-Gm_1m_2/r_{12}$。因此总内力抵消不能推出内部位力抵消。
 
-% END DETAILED ANSWER tr23
-\exercise{含两种齐次势的位力关系}
-\label{test:c2-24}
-\QuestionStatement{束缚系统的势能为 $U=U_{-1}+U_2+C$，
-两部分分别为 $-1$ 次与2次齐次函数。求平均动能关系。}{tr24}{训练题24题图}
-% BEGIN DETAILED ANSWER tr24
+\Needspace{7\baselineskip}\subsubsection*{第24题详解：含两种齐次势的位力关系}
 \solution \Step{明确系统、坐标与约束} 混合势能的不同齐次项要分别应用 Euler 定理。零点常数 $C$ 的梯度为零，不产生力与位力；它只改变总能量的数值基准。
 
-图~\ref{fig:solution-tr24}~中两种幂次势能的不同齐次性，给出了本题列式所用的方向、位置或分区关系；图右侧列出由这些条件得到的关键方程及下一步计算。
+结合题图\ref{fig:question-tr24}，解答图\ref{fig:solution-tr24}展示全部位置统一伸缩时各齐次项的不同缩放规律；只有对各项分别求尺度导数才得到正确位力。
 \SolutionFigure{tr24}{训练题24的分析与计算}
 
 \Step{列出方程并求解} 对齐次部分分别用 Euler 恒等式，
@@ -4937,18 +4906,4 @@ $[D(\tau)-D(0)]/\tau$；改变零点 $C$ 不改变力、运动和这条位力关
 +\frac{D(\tau)-D(0)}\tau.
 \]
 边界差率趋零后才得到长期平均关系。若仅保留引力项，回到 $2\overline T=-\overline U_{-1}$；若仅保留谐振项，回到 $\overline T=\overline U_2$。任意加常数 $C$ 都不改变这两个检验，也不应在位力式中多出 $2C$。
-
-% END DETAILED ANSWER tr24
-\clearpage
-\section*{原课件作业题号}\label{appendix:coursework}
-\addcontentsline{toc}{section}{原课件作业题号}
-以下保留课件给出的教材作业题号。仅有题号而没有题干的内容，需结合原教材使用；课件中另给的完整题目已纳入正文。讲义中的例题和训练题独立编号。
-\begin{center}\begin{tabular}{@{}lll@{}}\toprule
-课件&原页码&教材作业题号\\\midrule
-c2-1&21&2.1、2.3、2.4\\
-c2-2&23&2.5、2.6、2.10\\
-c2-3&19&2.8、2.11\\
-c2-4&17&2.13、2.15、2.17\\\bottomrule
-\end{tabular}\end{center}
-
 \end{document}

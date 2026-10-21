@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(K)at(0,0);\coordinate(O)at(-2,0);\coordinate(C)at(1,1.732);
+\draw(K)circle(2);\draw[guide](-2.5,0)--(2.7,0);
+\draw[thick](O)--(C);\draw[guide](K)--(C)node[midway,left]{$R$};
+\foreach \p/\pos in {K/below,O/below left,C/above right}\fill(\p)circle(2pt)node[\pos]{$\p$};
+\draw(.6,0)arc(0:60:.6);\node at(.7,.48){$2\theta$};
+\draw(-1.35,0)arc(0:30:.65);\node at(-1.05,.22){$\theta$};
+\draw[force](C)--++(-1.04,.6)node[left]{$2R\ddot\theta\,\vt$};
+\draw[force](C)--++(-.6,-1.039);\draw[guide](.7,1.2)--(2.2,.8);\node[right]at(2.3,.8){$4R\dot\theta^2\,\vn$};
+\node at(.1,-2.8){图示 $\dot\theta>0,\ddot\theta>0$；定向弧坐标 $s=2R\theta$};
+\end{tikzpicture}

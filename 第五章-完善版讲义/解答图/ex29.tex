@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex29.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle p_y=4m\dot y+m\dot s=0$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \ddot s+\frac{4g}{3a}(s-2a)=0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[thick](-2,0)--(2,0);\foreach\x/\lab in {-1.5/L,1.5/R}{\draw[thick](\x,0)--(\x,-1.2);\draw[fill=white](\x-.3,-1.2)rectangle(\x+.3,-1.7);\node at(\x,-1.45){$\lab$};}\draw[spring](1.5,-1.7)--(1.5,-3);\draw[fill=white](1.2,-3)rectangle(1.8,-3.5);\draw[force](-2,-1.7)--(-2,-.7)node[left]{$-\delta y$};\draw[force](2,-1.2)--(2,-2.1)node[right]{$\delta y$};\draw[force](2,-3)--(2,-4)node[right]{$\delta y+\delta s$};\node at(0,1){主绳两侧位移相反，下端另有独立伸长};\node at(.2,-4.9){下球质量也为 $m$；弹性绳仅在 $s\ge a$ 的张紧支使用};
 \end{tikzpicture}

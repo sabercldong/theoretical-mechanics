@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\draw[->](-1.8,0)--(2,0)node[right]{$z=\tan(\theta/2)$};
+\draw[->](0,-.3)--(0,3.4)node[above]{$r/r_p$};
+\draw[thick,domain=-1.5:1.5,samples=70]plot(\x,{1+\x*\x});
+\draw[guide](-1.6,2)--(1.6,2)node[right]{$n=R/r_p$};
+\foreach \x/\lab in {-1/{-z_0},1/{z_0}}{
+\fill(\x,2)circle(2pt);\draw[guide](\x,2)--(\x,0)node[below]{$\lab$};}
+\fill(0,1)circle(2pt)node[below left]{近心点};
+\draw[force](-1,-.8)--(1,-.8)node[midway,below]{入射 $\longrightarrow$ 出射};
+\node at(0,-1.9){图取 $n=2$ 示意；时间权重 $1+z^2$ 关于近心点对称};
+\end{tikzpicture}

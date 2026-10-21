@@ -1,0 +1,9 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(O)at(0,0);\coordinate(A)at(2,.6);\coordinate(B)at(3.1,1.9);
+\draw[force](O)--(A)node[midway,below]{$\vect v_1=l_1\dot\theta_1\vect e_{\theta1}$};
+\draw[force](A)--(B)node[midway,right]{$l_2\dot\theta_2\vect e_{\theta2}$};
+\draw[force](O)--(B)node[midway,above left]{$\vect v_2$};
+\draw[guide](O)--(1.1,1.3)--(B);
+\node[align=center]at(1.8,-1.3){两份速度的夹角由 $\theta_1-\theta_2$ 决定\\下球动能取合速度平方，上球动能单独相加};
+\end{tikzpicture}

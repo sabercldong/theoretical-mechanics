@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](-.4,0)--(3.5,0);\coordinate(A)at(1.2,1.2);\coordinate(B)at(2.4,0);\draw[very thick](0,0)--(A)--(B);\fill(0,0)circle(2pt)node[below]{$O$};\fill(A)circle(2pt)node[above]{$A$};\draw[fill=white](2.15,-.15)rectangle(2.65,.15);\node[below]at(B){$B$};\node at(.75,.3){$\varphi$};\node[left]at(.5,.8){$l$};\node[right]at(1.9,.8){$l$};\node at(-.2,1.3){$\Omega$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$v_{By}=0\ \Rightarrow\ \omega_{AB}=-\Omega$\\[6pt]$\Downarrow$\\[6pt]$v_{Bx}=-2l\Omega\sin\varphi$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(O)at(0,0);\coordinate(A)at(1.4,1.4);\coordinate(B)at(2.8,0);\coordinate(P)at(2.8,2.8);\draw[thick](O)--(A)--(B);\draw[guide](O)--(P)--(B);\foreach\p/\where in {A/above left,B/below,P/above}\fill(\p)circle(2pt)node[\where]{$\p$};\draw[force](A)--(.6,2.2)node[left]{$\vect v_A$};\draw[force](B)--(1.5,0)node[midway,below]{$\vect v_B$};\node at(1.7,-1){两条速度法线交于 $P$，连杆绕 $P$ 顺时针转动};
 \end{tikzpicture}

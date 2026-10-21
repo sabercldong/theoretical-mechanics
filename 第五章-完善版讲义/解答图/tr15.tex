@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/tr15.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle q-pt/m=q_0\in(0,a)$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \mathcal A(t)=ab$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(4.8,0)node[right]{$q$};\draw[->,gray](0,-.35)--(0,2.8)node[above]{$p$};\draw[guide](0,0)rectangle(2,1.5);\draw[thick,fill=soft](0,0)--(2,0)--(3.05,1.5)--(1.05,1.5)--cycle;\draw[force](.5,1.8)--(1.55,1.8)node[above]{$bt/m$};\node[below]at(2,0){$a$};\node[left]at(0,1.5){$b$};\node at(2,-1.2){上边整体右移，下边不动；平行四边形仍为底乘高 $ab$};
 \end{tikzpicture}

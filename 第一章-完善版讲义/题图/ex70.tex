@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=.9]
+\draw[->](0,0)--(4,0)node[right]{径向};\fill[ink](0,0)circle(3pt)node[below=5pt]{$O$};
+\draw[thick,ink]plot coordinates{(.2,0)(.45,.15)(.7,-.15)(.95,.15)(1.2,-.15)(1.45,.15)(1.7,-.15)(1.95,.15)(2.2,0)(2.5,0)};
+\fill[ink](2.5,0)circle(3pt)node[below=5pt]{$m$};\draw[force](2.5,0)--(2.5,1.4)node[above]{$90^\circ$};\draw[force](2.5,0)--(3.5,1)node[right]{$45^\circ$};
+\node at(1.2,.55){原长 $l_0$};\node at(2,-.8){$U=\tfrac12k(r-l_0)^2$};
+\end{tikzpicture}

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=1.5,>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(O)at(0,0);\coordinate(V)at(2,0);
+\coordinate(A)at(1.3,1.2124);\coordinate(B)at(2.7,1.2124);
+\draw[force](O)--(V)node[midway,below]{$\vect V$};
+\draw[->,gray](O)--(A)node[midway,left]{$\vect v_{\rm in}$};
+\draw[->,gray](O)--(B)node[midway,right]{$\vect v_{\rm out}$};
+\draw[force](V)--(A)node[midway,above left]{$\vect w_{\rm in}$};
+\draw[force](V)--(B)node[midway,above right]{$\vect w_{\rm out}$};
+\draw[force,very thick](A)--(B)node[midway,above]{$\Delta\vect w$};
+\node[align=center]at(1.8,-1.4){两相对速度等长；图示 $\Delta\vect w$ 沿行星速度方向\\$\Delta\varepsilon=\vect V\cdot\Delta\vect w>0$};
+\end{tikzpicture}

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(O)at(0,-1);\coordinate(A)at(0,0);\coordinate(M)at(2,0);
+\draw[guide](-1.4,0)--(3.5,0);\draw[thick,domain=.7:3.2]plot(\x,{.3*(\x-2)^2});
+\draw[force](O)--(M)node[midway,right]{$\vect r$};
+\draw[thick](O)--(A)node[midway,right]{$\vect q$};
+\foreach \p/\pos in {O/below,A/above left,M/below right}\fill(\p)circle(2pt)node[\pos]{$\p$};
+\draw[force](M)--++(1,0)node[right]{$\vt$};\draw[force](M)--++(0,1)node[above]{$\vn$};
+\draw[force](A)--(-.6,-1.2)node[left]{$\dot{\vect q}$};
+\draw(0,-.2)--(.2,-.2)--(.2,0);
+\node[align=center]at(1,-2.4){图示 $\vect r\cdot\vt>0,\ \vect r\cdot\vn>0$\\垂足速度含两个负向投影；$A$ 不随质点沿原曲线运动};
+\end{tikzpicture}

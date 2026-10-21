@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\fill(0,0)circle(3pt)node[below]{$O$};\fill(2.6,1)circle(2pt)node[below right]{$C$};\coordinate(A)at(2.255,.223);\coordinate(B)at(2.945,1.777);\draw[very thick](A)--(B);\draw[dashed](0,0)--(3.5,1.346);\fill(A)circle(3pt)node[below]{$A,m$};\fill(B)circle(3pt)node[above left=3pt]{$B,m$};\draw[->](A)--(3.2,.316)node[below]{$\vect F_A$};\draw[->](B)--(3.55,2.142)node[right]{$\vect F_B$};\node at(1.7,-.7){杆与 $OC$ 夹角 $45^\circ$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect\tau_C=\vect s\times(\vect F_B-\vect F_A)$\\[6pt]$\Downarrow$\\[6pt]$\vect F=k\vect r\ \Rightarrow\ \vect\tau_C=0$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(C)at(1.8,0);\draw[very thick](1,-1.8)--(2.6,1.8);\fill(C)circle(2pt)node[below right]{$C$};\draw[force](C)--(2.4,1.35)node[right]{$\Delta\vect F_{\rm linear}$};\draw[force](C)--(.25,.3)node[left]{$\Delta\vect F_{\rm inverse}$};\draw[->](2.8,.2)arc(10:90:1);\node at(2.2,2.35){非平行的差力产生质心力矩};
 \end{tikzpicture}

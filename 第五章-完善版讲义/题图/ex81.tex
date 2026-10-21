@@ -1,7 +1,8 @@
-% 电场和磁场先由两个势定义，另外两条无源方程成为恒等式；独立势变分给出有源方程和相应边界项。
-\begin{tikzpicture}[node distance=1cm]
-\node[draw,inner sep=6pt,align=center](pot){势 $\phi,\vect A$\\$\vect E=-\nabla\phi-\vect A_t$\\$\vect B=\nabla\times\vect A$};
-\node[draw,inner sep=6pt,right=1.5cm of pot,align=center](ids){定义恒等式\\$\nabla\cdot\vect B=0$\\$\nabla\times\vect E=-\vect B_t$};
-\node[draw,inner sep=6pt,below=1.2cm of ids,align=center](dyn){变分方程\\$\nabla\cdot\vect E=\rho_e/\varepsilon_0$\\$\nabla\times\vect B=\mu_0\vect j+\mu_0\varepsilon_0\vect E_t$};
-\draw[force](pot)--(ids);\draw[force](pot)--(dyn);
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=3pt}]
+
+\draw[thick](-1.8,-1.3)rectangle(1.8,1.3);
+\node[align=center]at(0,0){区域 $\Omega$\\源 $\rho_e,\vect j$\\势 $\phi,\vect A$};
+\draw[force](1.8,.55)--(2.8,.55)node[right]{$\vect n$};
+\node at(0,2){分别改变标势与矢势};
+\node at(0,-2.1){$\vect E=-\nabla\phi-\partial_t\vect A,\quad \vect B=\nabla\times\vect A$};
 \end{tikzpicture}

@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[dashed](0,2.7)--(0,-.3);\fill(0,2.7)circle(2pt)node[left]{$O$};\draw[very thick](0,2.7)--(0,.5)node[midway,right]{$l$};\draw(0,.5)ellipse(1.15 and .32);\fill(0,.5)circle(2pt)node[above left]{$A$};\fill(1.15,.5)circle(2pt)node[right]{$C$};\fill(0,.18)circle(2pt)node[below]{$B$};\draw[->](-1.5,2.7)--(1.6,2.7)node[right]{$\vect e_3,\omega_1$};\node[left]at(-.1,1.4){$\omega_2$};\node at(0,-.7){$t=0,\ AC\parallel\vect e_3$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect\omega=\omega_1\vect e_3+\omega_2\vect e_1$\\[6pt]$\Downarrow$\\[6pt]$\vect v_P=\vect v_A+\vect\omega\times\vect r_{AP}$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(O)at(0,0);\coordinate(A)at(0,2.2);\coordinate(B)at(3.1,1);\draw[force](O)--(A)node[left]{$\vect v_A$};\draw[force](A)--(B)node[midway,above right]{$\vect\omega\times\vect r_{AP}$};\draw[force](O)--(B)node[midway,below]{$\vect v_P$};\node at(1.5,-.9){基点速度与相对转动速度按矢量相加};\node at(1.5,-1.5){分别取 $P=B,C$，各自代入材料半径};
 \end{tikzpicture}

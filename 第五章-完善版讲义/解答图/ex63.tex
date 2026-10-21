@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex63.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle p_r^2=2m[E-V(r)]-J^2/r^2$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle S=J\phi+\int p_r\dd r-Et$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(4.5,0)node[right]{$r$};\draw[->,gray](0,-.35)--(0,3.6)node[above]{$V_{\rm eff}$};\draw[thick,domain=.65:4.1,samples=90]plot(\x,{1.1/(\x)^2+.35*(\x)^2});\draw[guide](.5,2.5)--(4,2.5)node[right]{$E$};\draw[<->](.78,.2)--(2.55,.2)node[midway,above]{允许径向区间};\node at(1.8,-1.1){代表性有界势：同一 $J$ 下先确定转折点，再按动量支求积};
 \end{tikzpicture}

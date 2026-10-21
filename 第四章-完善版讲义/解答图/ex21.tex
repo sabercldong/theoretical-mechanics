@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\foreach\xx/\lab/\sgn in {0/{最低点}/1,4.5/{最高点}/-1}{\begin{scope}[xshift=\xx cm]\fill(0,0)circle(3pt);\draw[force](0,0)--(0,-1.4)node[left]{$mg$};\draw[force](.5,0)--(.5,1.3)node[right]{$N$};\draw[->,gray](-.8,0)--(-.8,{\sgn*1.4})node[left]{$\vect a$};\node at(0,-2){\lab};\end{scope}}\node at(2,-2.9){支持力先按向上假定；最高点算出 $N<0$ 表示需要向下约束};
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}[x={(1cm,0cm)},y={(.38cm,.2cm)},z={(0cm,1cm)}]
+\draw[->](0,0,0)--(2.2,0,0)node[right]{$x$};\draw[->](0,0,0)--(0,2.5,0)node[right]{$y$};\draw[->](0,0,-.2)--(0,0,4.7)node[above]{$z$};
+\draw[thick,ink,domain=0:720,samples=181,variable=\t]plot({cos(\t)},{sin(\t)},{.35*\t*pi/180});
+\coordinate(P)at(0,1,2.748894);\fill[ink](P)circle(2pt)node[above right=5pt]{$P$};\draw[force](P)--++(-1,0,.35)node[above left=3pt]{$\vt$};\draw[force](P)--++(0,-1,0)node[below right]{$\vn$};\node[anchor=west]at(3,0,3){$v=at$，$a_t=a$};
+\end{tikzpicture}

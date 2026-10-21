@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.3,0)--(3,0)node[right]{$\theta$};\draw[->,gray](0,-.3)--(0,3)node[above]{$U_{\rm eff}-U_{\rm eff}(0)$};\draw[thick,domain=-1.3:1.3]plot(\x,{.65*(\x)^4});\fill(0,0)circle(2pt);\draw[force](1,.65)--(.35,.65)node[above]{$-\theta^3$};\node at(.5,-1){二次项消失，首个非零四次项为正，仍为稳定平衡};
+\end{tikzpicture}

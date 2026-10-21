@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\coordinate(A)at(0,0);\coordinate(P)at(1.2,-2.1);
+\draw[fill=white](-.4,-.15)rectangle(.4,.25);\node[above]at(A){$M$};
+\draw[thick](A)--(P);\fill(P)circle(3pt)node[right]{$m$};
+\draw[force](P)--++(-.38,.665)node[left]{$T$};\draw[force](P)--++(0,-1)node[below]{$mg$};
+\draw[force](A)--++(.32,-.56)node[right]{$T$};
+\draw[force](-.4,.05)--(-1.5,.05)node[left]{$-k(X-X_0)$};
+\begin{scope}[xshift=5cm,yshift=-1cm]
+\draw[force](0,0)--(1.5,0)node[midway,below]{$\dot X\vect e_x$};
+\draw[force](1.5,0)--(2.54,.6)node[midway,right]{$l\dot\theta\et$};
+\draw[force](0,0)--(2.54,.6)node[midway,above]{$\vect v_m$};
+\node at(1.3,-1.4){速度相加后平方，保留内积项};\end{scope}
+\end{tikzpicture}

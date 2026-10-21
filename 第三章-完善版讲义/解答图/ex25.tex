@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw(-1.5,-.7)rectangle(1.5,.7);\draw[->,gray](-1.8,0)--(2,0)node[right]{$x$};\draw[->,gray](0,-1)--(0,1.3)node[above]{$y$};\node[below left]at(0,0){$C$};\node at(0,-1.3){矩形 $a\times b$};\begin{scope}[yshift=-3.1cm]\draw(0,0)ellipse(1.5 and .7);\draw[->](0,0)--(1.5,0)node[midway,below]{$a$};\draw[->](0,0)--(0,.7)node[midway,left]{$b$};\node at(0,-1.2){椭圆半轴 $a,b$};\end{scope}
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$I_z=I_x+I_y$\\[6pt]$\Downarrow$\\[6pt]$I_x^{\rm rect}=mb^2/12,\quad I_x^{\rm ell}=mb^2/4$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[thick](-1.4,-.9)rectangle(1.4,.9);\fill[ink!16](-1.4,.25)rectangle(1.4,.38);\draw[guide](-1.4,0)--(1.4,0);\draw[<->](1.8,0)--(1.8,.3)node[right]{$y$};\node at(0,1.5){矩形：$|y|\le b/2$};\node at(0,-1.5){$\dd A=a\,\dd y$};\begin{scope}[xshift=5cm]\draw[thick](0,0)ellipse(1.8 and 1.1);\begin{scope}\clip(0,0)ellipse(1.8 and 1.1);\fill[ink!16](-1.8,.3)rectangle(1.8,.43);\end{scope}\draw[guide](-1.8,0)--(1.8,0);\node at(0,1.5){椭圆：$|y|\le b$};\node at(0,-1.5){$\dd A=2a\sqrt{1-y^2/b^2}\,\dd y$};\end{scope}
 \end{tikzpicture}

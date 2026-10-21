@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex80.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \phi\propto\cosh k(z+h)e^{i(kx-\omega t)}$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \omega^2=gk\tanh(kh)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[thick](-.4,-2)--(4.6,-2);\draw[thick,domain=0:4.3]plot(\x,{.25*cos(150*\x)});\draw[guide](-.4,0)--(4.6,0);\node[right]at(4.6,0){$z=0$};\node[right]at(4.6,-2){$z=-h$};\draw[force](2,-2)--(3.2,-2)node[below]{$\phi_z=0$};\node[align=center]at(2,1.1){自由面：$\eta_t=\phi_z$\\$\phi_t+g\eta=0$};\draw[<->](-.7,-2)--(-.7,0)node[midway,left]{$h$};\node at(2,-3){底面条件选择深度分布，两自由面条件共同选择色散关系};
 \end{tikzpicture}

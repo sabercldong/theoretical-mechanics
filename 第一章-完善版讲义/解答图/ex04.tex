@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\foreach \x/\name in {0/速度,5.2/加速度}{
+\begin{scope}[xshift=\x cm]\draw[->,gray](-2.7,0)--(1,0)node[right]{$x$};
+\draw[->,gray](0,-1.7)--(0,2)node[above]{$y$};
+\fill(0,0)circle(2pt)node[below right]{$P$};\node at(-.7,2.7){\name 分解};\end{scope}}
+\draw[force](0,0)--(-1.2,0)node[midway,below]{$a\omega\et$};
+\draw[force](-1.2,0)--(-1.2,1.2)node[left]{$a\omega\er$};
+\draw[force](0,0)--(-1.2,1.2)node[midway,above right]{$\vect v$};
+\draw[force](5.2,0)--(2.8,0)node[midway,above]{$2a\omega^2\et$};
+\draw[force](2.8,0)--(2.8,-1.2)node[left]{$-a\omega^2\er$};
+\draw[force](5.2,0)--(2.8,-1.2)node[midway,below right]{$\vect a$};
+\node at(2.1,-2.3){$\theta=\pi/2$：$\er=\vect e_y,\quad\et=-\vect e_x$};
+\end{tikzpicture}

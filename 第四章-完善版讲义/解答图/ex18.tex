@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\foreach\xx/\yy/\vx/\vy/\fx/\fy/\txt in {0/0/1/0/0/-1/{向外},4/0/-1/0/0/1/{向内},0/-4/0/1/1/0/{正切向},4/-4/0/-1/-1/0/{负切向}}{\begin{scope}[shift={(\xx,\yy)}]\fill(0,0)circle(2pt);\draw[->,gray](-1.3,0)--(1.5,0)node[right]{$\er$};\draw[->,gray](0,-1.2)--(0,1.4)node[above]{$\et$};\draw[force](0,0)--(\vx,\vy)node[above right]{$\vect v\,^{\prime}$};\draw[->,thick](0,0)--(\fx,\fy)node[below left]{$\vect F_C$};\node at(0,-1.8){\txt};\end{scope}}
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\draw[->,gray](-.3,0)--(3,0)node[right]{$\er$};
+\draw[->,gray](0,-.3)--(0,2)node[above]{$\et$};
+\draw[force](0,0)--(.8,1.3)node[left]{$\vect v^-$};
+\draw[force](0,0)--(2.1,1.3)node[right]{$\vect v^+$};
+\draw[force](.8,1.3)--(2.1,1.3)node[midway,above=7pt]{$(J_r/m)\er$};
+\draw[guide](0,1.3)--(2.1,1.3);\draw[guide](.8,0)--(.8,1.3);
+\node at(1.3,-1.1){图示 $J_r>0$：只改变径向分量，切向分量与力臂均不变};
+\end{tikzpicture}

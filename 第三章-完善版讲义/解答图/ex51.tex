@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw(0,0)circle(1.05);\draw(1.75,0)circle(.7);\fill(0,0)circle(2pt)node[left]{$O$};\fill(1.75,0)circle(2pt)node[right]{$A$};\draw[dashed](0,0)--(1.75,0);\fill(1.75,.7)circle(2pt)node[above]{$M$};\draw(1.75,0)--(1.75,.7);\node at(-.5,.4){$R$};\node at(2.25,-.5){$r$};\draw[->](.2,1.35)arc(82:145:1.365);\node at(-.8,1.65){$\Omega\vect k$};\node at(.5,-1.6){固定轮};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$0=(R+r)\Omega-r\omega$\\[6pt]$\Downarrow$\\[6pt]$\omega=(1+R/r)\Omega$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[force](0,0)--(0,2.2)node[midway,right]{$\vect v_A$};\draw[force](0,2.2)--(-2.2,2.2)node[midway,above]{$-r\omega\vect e_r$};\draw[force](0,0)--(-2.2,2.2)node[midway,left]{$\vect v_M$};\draw[guide](0,2)--(-.2,2)--(-.2,2.2);\node at(-.8,-.9){接触零速先求绝对自转，轮缘速度再作正交合成};\node at(-.8,-1.5){$\vect v_A=(R+r)\Omega\vect e_t$};
 \end{tikzpicture}

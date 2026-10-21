@@ -4,7 +4,7 @@
 \usepackage[margin=24mm,headheight=16pt,headsep=8mm,footskip=12mm]{geometry}
 \usepackage{amsmath,amssymb,bm,mathtools}
 \usepackage{xcolor,graphicx,tikz,booktabs,array,tabularx,longtable}
-\usepackage{enumitem,fancyhdr,caption,hyperref}
+\usepackage{enumitem,fancyhdr,caption,hyperref,adjustbox}
 \definecolor{ink}{HTML}{233E50}
 \definecolor{soft}{HTML}{F0F4F6}
 \definecolor{muted}{HTML}{586774}
@@ -35,8 +35,8 @@
 \newcommand{\vn}{\vect e_n}
 \newcommand{\important}[1]{\par #1\par}
 \newcounter{example}
-\newcommand{\example}[1]{\Needspace{5\baselineskip}\refstepcounter{example}\subsubsection*{例\theexample\quad #1}}
-\newcommand{\solution}{\par\noindent\textbf{解}\quad}
+\newcommand{\example}[1]{\setcounter{step}{0}\Needspace{7\baselineskip}\refstepcounter{example}\label{ex:c1-\theexample}\subsubsection*{例\theexample\quad #1}}
+\newcommand{\solution}{\Needspace{7\baselineskip}\setcounter{step}{0}\par}
 
 
 \makeatletter
@@ -54,8 +54,8 @@
 \newcommand{\OriginalPanel}[1]{\includegraphics[width=.46\linewidth,height=4.6cm,keepaspectratio]{原图/#1}}
 
 
-\usetikzlibrary{arrows.meta,calc,positioning,angles,quotes,patterns,decorations.pathmorphing}
-\tikzset{every picture/.style={>=Stealth},every node/.style={font=\small},force/.style={->,thick,ink},guide/.style={dashed,muted}}
+\usetikzlibrary{arrows.meta,calc,positioning,angles,quotes,patterns,decorations.pathmorphing,decorations.markings,decorations.pathreplacing,3d}
+\tikzset{every picture/.style={>=Stealth},every node/.style={font=\small},force/.style={->,thick,ink},guide/.style={dashed,muted},spring/.style={thick,decorate,decoration={coil,aspect=.35,segment length=4pt,amplitude=3pt}}}
 \newsavebox{\LessonFigureBox}
 \newcommand{\TeachingFigure}[2]{%
 \par\begin{center}\begin{minipage}{\linewidth}\centering
@@ -65,6 +65,18 @@
 \else\usebox{\LessonFigureBox}\fi
 \captionsetup{hypcap=false}\captionof{figure}{#2}\label{fig:lesson-#1}
 \end{minipage}\end{center}\par}
+
+
+\newcounter{step}
+\newcommand{\Step}[1]{\par\Needspace{5\baselineskip}\stepcounter{step}\noindent\ifnum\value{step}=1\textbf{解答}\enspace\fi\textbf{\arabic{step}. #1}\quad}
+\newcommand{\Case}[1]{\setcounter{step}{0}\Needspace{7\baselineskip}\subsubsection*{#1}}
+\newcommand{\ProblemFigure}[4]{%
+\par\begin{center}\begin{minipage}{\linewidth}\centering
+\begin{adjustbox}{max width=.96\linewidth,max totalheight=6cm}\input{#1/#2.tex}\end{adjustbox}%
+\captionsetup{hypcap=false}\captionof{figure}{#3}\label{fig:#4-#2}
+\end{minipage}\end{center}\par}
+\newcommand{\QuestionFigure}[2]{\ProblemFigure{题图}{#1}{#2}{question}}
+\newcommand{\SolutionFigure}[2]{\ProblemFigure{解答图}{#1}{#2}{solution}}
 
 \begin{document}
 \begin{titlepage}
@@ -122,7 +134,7 @@ $\kappa>0$&平方反比力的强度&$\mu=GM$&引力参数\\
 \end{center}
 角动量记为 $L$，势能记为 $U$，有效势记为 $U_{\mathrm{eff}}$，速率记为 $v$。
 
-正文中的 $U$、$L$、$b$ 分别表示势能、角动量和碰撞参数。课件原图保留原有标注；当图中文字采用 $V$、$J$、$p$ 等其他记号时，图题给出对应关系。正文先说明题设和坐标，再建立方程，图中的箭头和正方向应结合这些约定阅读。
+正文中的 $U$、$L$、$b$ 分别表示势能、角动量和碰撞参数。图中若采用 $V$、$J$、$p$ 等其他记号，图题给出与正文的对应关系。正文先说明题设和坐标，再建立方程，图中的箭头和正方向应结合这些约定阅读。
 
 
 
@@ -176,8 +188,8 @@ $\kappa>0$&平方反比力的强度&$\mu=GM$&引力参数\\
 
 速度和加速度的定义分别为
 \begin{equation}
-\boxed{\vect v=\frac{\dd\vect r}{\dd t},\qquad
-\vect a=\frac{\dd\vect v}{\dd t}=\frac{\dd^2\vect r}{\dd t^2}.}
+\vect v=\frac{\dd\vect r}{\dd t},\qquad
+\vect a=\frac{\dd\vect v}{\dd t}=\frac{\dd^2\vect r}{\dd t^2}.
 \end{equation}
 速度沿轨迹切线、指向运动的一方。速率 $v=|\vect v|=\dd S/\dd t$ 描述运动快慢。加速度描述速度矢量的变化，既可以来自速率变化，也可以来自方向变化。
 匀速圆周运动的速率不变，但速度方向一直变化，所以加速度不为零；在轨道上某一点速度为零，也不能据此认定该点加速度为零。
@@ -208,9 +220,14 @@ $\kappa>0$&平方反比力的强度&$\mu=GM$&引力参数\\
 这里的点号始终表示对时间求导。直角坐标系的优点是基矢固定，求导直接；缺点是轨迹的几何特点有时不容易体现在方程中。
 
 \example{椭圆规尺上某点的运动}\label{ex:ruler}
-直尺两端 $A,B$ 分别沿水平、竖直导轨滑动，$AM=a,\ BM=b$，故 $AB=a+b$。$B$ 端以速率 $c>0$ 向下运动。令杆与竖直方向的夹角为 $\theta$。
+刚性直尺的两端 $A,B$ 分别被限制在水平、竖直光滑导轨上，导轨交点为 $O$。尺上固定点 $M$ 满足 $AM=a>0$、$BM=b>0$。取 $x$ 向右、$y$ 向上，考察 $A$ 在正半轴、$B$ 在正半轴的构形，杆与竖直方向夹角为 $0<\theta<\pi/2$。$B$ 端以恒定速率 $c>0$ 下降。求 $M$ 的轨道、速度和加速度，并说明端点构形处公式的适用性。
+几何与变量约定见图\ref{fig:question-ex01}。
+
+\QuestionFigure{ex01}{例1的研究对象、条件与变量}
 \OriginalFigure{ellipse_rule}{椭圆规尺：两端分别沿坐标轴滑动，$AM=a$，$BM=b$。}
-\solution 由几何关系，
+\solution \Step{模型与方向} 图\ref{fig:solution-ex01}给出解答所用的几何、方向或分解关系。图中的 $OA,OB$ 分别沿固定坐标轴；$M$ 是尺上的材料点，不能把它的速度直接等同于任一端点的速度。
+\SolutionFigure{ex01}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 由几何关系，
 \[
 x=b\sin\theta,\quad y=a\cos\theta,\quad y_B=(a+b)\cos\theta.
 \]
@@ -228,6 +245,9 @@ x=b\sin\theta,\quad y=a\cos\theta,\quad y_B=(a+b)\cos\theta.
 速率为 $v=\sqrt{\dot x^2+\dot y^2}$。$M$ 的加速度只有水平分量，尽管其轨道是曲线。公式适用于图示的这一段运动；$\sin\theta=0$ 附近不能维持有限杆端运动速度的同时保持上述理想匀速条件。
 
 
+
+\Step{初始条件、结论与适用范围} 由图中 $y_B=L\cos\theta$，若初态为 $\theta_0$，则 $\cos\theta=\cos\theta_0-ct/L$，这补足了参数对时间的依赖。所写的分量式仅在同一几何分支、两导轨约束仍可维持的区间内使用。
+
 \subsubsection*{椭圆规尺例题的中间计算}
 令 $L=a+b$。由 $-L\sin\theta\,\dot\theta=-c$，先得到角速度；再对它求导：
 \[
@@ -242,7 +262,6 @@ x=b\sin\theta,\quad y=a\cos\theta,\quad y_B=(a+b)\cos\theta.
 竖直分量则由 $y=(a/L)y_B$ 立即给出 $\ddot y=0$。这说明加速度的方向不能仅凭轨迹的凹向来猜测：曲线运动的总加速度包含切向与法向两部分。
 
 也可不用角度直接写 $x=b\sqrt{1-(y_B/L)^2}$，再代入 $y_B(t)=y_{B0}-ct$ 求导。两种解法分别突出几何参数和输入运动规律。初始杆近于竖直时，给 $B$ 端强行规定有限下降速率，会要求 $A$ 端有很大的水平速率；公式的发散反映这个理想运动条件的局限。
-
 
 \section{曲线运动的坐标方法}\label{sec:curvilinear}
 
@@ -294,8 +313,14 @@ $\dot r$ 只测量远离或接近极点的快慢。绕极点转动时即使 $\do
 
 
 \example{指数展开的螺旋轨道}
-设 $r=r_0\mathrm e^{ct}$，$\theta=bt$，其中 $r_0>0$，$b,c$ 为常数。
-\solution 有 $\dot r=cr,\ \ddot r=c^2r,\ \dot\theta=b,\ \ddot\theta=0$。代入极坐标公式得
+质点在固定平面内运动，以固定点 $O$ 为极点，极角从 $+x$ 轴逆时针量起。已知 $r(t)=r_0e^{ct}$、$\theta(t)=bt$，$r_0>0$，$b,c$ 为常数。求矢量速度、矢量加速度、两者的大小及轨道方程；再求切向、法向加速度和曲率半径，分别讨论 $b=0$ 与 $c=0$ 的情形。
+几何与变量约定见图\ref{fig:question-ex02}。
+
+\QuestionFigure{ex02}{例2的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex02}给出解答所用的几何、方向或分解关系。图中的径向 $\er$ 和横向 $\et$ 随 $P$ 转动，合速度沿螺旋线切线。因而对位矢求导时必须同时求基矢的导数。
+\SolutionFigure{ex02}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 有 $\dot r=cr,\ \ddot r=c^2r,\ \dot\theta=b,\ \ddot\theta=0$。代入极坐标公式得
 \[
 \vect v=r(c\er+b\et),\qquad
 \vect a=r[(c^2-b^2)\er+2bc\et].
@@ -320,11 +345,15 @@ a_n=r|b|\sqrt{b^2+c^2},\qquad
 \]
 速度与径向之间的夹角不随时间变化，因为 $v_\theta/v_r=b/c$ 为常数。$b=0$ 时是沿射线的运动，曲率为零，需要单独取直线极限。
 
-
 \example{小车匀速，绳上的点是否匀速？}\label{ex:rope}
-绳的一端系在小车 $A$ 上，经过固定滑轮 $B$ 后绕在鼓轮 $C$ 上。滑轮高为 $h$，小车以速率 $v$ 向右远离滑轮正下方运动。求直线段 $BC$ 上绳点 $P$ 的速度与加速度。
+一根轻且不可伸长的绳，一端系在水平轨道上的小车 $A$，经过离轨道高度为 $h>0$ 的固定理想滑轮 $B$，另一部分绕在鼓轮 $C$ 上。绳在直线段 $BC$ 上始终绷紧、沿固定方向运动。小车以恒定速率 $v>0$ 远离 $B$ 的正下方 $O$。忽略滑轮尺寸，令 $OA=x$。求直绳段上材料点 $P$ 的速度和加速度，并求斜绳与竖直方向成 $45^\circ$ 时的结果。
+几何与变量约定见图\ref{fig:question-ex03}。
+
+\QuestionFigure{ex03}{例3的研究对象、条件与变量}
 \OriginalFigure{pulley_cart}{小车与不可伸长绳。$\theta$ 从竖直方向量起，绳上点 $P$ 朝滑轮 $B$ 运动。}
-\solution 设车到滑轮正下方的水平距离为 $x$，则 $\dot x=v$，斜绳长 $l=\sqrt{x^2+h^2}$。鼓轮向绳段 $AB$ 放绳，$P$ 沿 $BC$ 朝滑轮 $B$ 运动，其速率为
+\solution \Step{模型与方向} 图\ref{fig:solution-ex03}给出解答所用的几何、方向或分解关系。图中的 $AB$ 长度随 $x$ 改变；绳不可伸长使这段的长度变化由 $BC$ 上绳点的移动补偿。$P$ 所在绳段是直线，其加速度沿该绳段。
+\SolutionFigure{ex03}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 设车到滑轮正下方的水平距离为 $x$，则 $\dot x=v$，斜绳长 $l=\sqrt{x^2+h^2}$。鼓轮向绳段 $AB$ 放绳，$P$ 沿 $BC$ 朝滑轮 $B$ 运动，其速率为
 \[
 w=\dot l=\frac{vx}{\sqrt{x^2+h^2}}.
 \]
@@ -370,11 +399,15 @@ a_P=\ddot l=\frac{v^2\cos^2\theta}{l}=\frac{v^2\cos^3\theta}{h}.
 \]
 当 $x=0$ 时，$w=0$ 但 $\dot w=v^2/h$；当 $x\gg h$ 时，$w\to v$ 而 $\dot w\to0$。这两个极限同时核验了速度和加速度的几何意义。
 
-
-
 \example{心形线运动的速度与加速度}\label{ex:cardioid}
-质点的运动方程为 $r=a(1-\cos\omega t)$、$\theta=\omega t$，其中 $a>0,\omega>0$。求 $t=\pi/(2\omega)$ 时的速度和加速度。
-\solution 先求坐标导数，再代入极坐标公式：
+在固定平面极坐标中，质点满足 $r=a(1-\cos\omega t)$、$\theta=\omega t$，$a,\omega>0$，极角从 $+x$ 轴逆时针量起。求一般时刻的速度与加速度；在 $t=\pi/(2\omega)$ 时，把结果同时写成极坐标分量和固定直角坐标分量，并求速率与加速度大小。
+几何与变量约定见图\ref{fig:question-ex04}。
+
+\QuestionFigure{ex04}{例4的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex04}，解答图\ref{fig:solution-ex04}展示指定位置 $P$ 处的速度与加速度首尾分解；$\er$ 向上、$\et$ 向左，因此径向负分量在固定坐标中向下，两幅矢量图分别对应下面的速度式与加速度式。
+\SolutionFigure{ex04}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 先求坐标导数，再代入极坐标公式：
 \[
 \dot r=a\omega\sin\theta,\quad\ddot r=a\omega^2\cos\theta,
 \qquad\dot\theta=\omega,\quad\ddot\theta=0.
@@ -386,40 +419,62 @@ a_P=\ddot l=\frac{v^2\cos^2\theta}{l}=\frac{v^2\cos^3\theta}{h}.
 \end{align*}
 在指定时刻 $\theta=\pi/2$，所以
 \[
-\boxed{\vect v=a\omega(\er+\et),\quad
-\vect a=a\omega^2(-\er+2\et),\quad v=\sqrt2a\omega,\quad |\vect a|=\sqrt5a\omega^2.}
+\vect v=a\omega(\er+\et),\quad
+\vect a=a\omega^2(-\er+2\et),\quad v=\sqrt2a\omega,\quad |\vect a|=\sqrt5a\omega^2.
 \]
 这里的 $\er,\et$ 是该时刻的局部基矢，不能当作固定的 $x,y$ 基矢：此时 $\er=\vect e_y$、$\et=-\vect e_x$，故 $\vect v=a\omega(-\vect e_x+\vect e_y)$、$\vect a=a\omega^2(-2\vect e_x-\vect e_y)$。
-\OriginalFigure{cardioid_original}{极坐标运动 $r=e(1-\cos\omega t)$、$\varphi=\omega t$ 的心形线轨迹。}
+\OriginalFigure{cardioid_original}{极坐标运动 $r=e(1-\cos\omega t)$、$\varphi=\omega t$ 的心形线轨迹；其中 $e=a$、$\varphi=\theta$。}
 
-\subsubsection*{三道极坐标练习}
-\label{ex:polarpractice}
 
-\textbf{（1）$r=at,\theta=bt$。} 取 $t\geq0$、$a>0$，由 $\dot r=a,\ddot r=0,\dot\theta=b$ 得
+\subsubsection*{极坐标运动的三个应用}\label{ex:polarpractice}
+
+\Case{应用一：径向匀速且极角匀速增加}
+\textbf{题目。} 质点在固定平面内满足 $r=at,\theta=bt$，$a>0$，$b$ 为常数，$t\ge0$。极角从 $+x$ 轴逆时针量起。求速度、加速度及其大小，消去时间写出轨道；说明 $b=0$ 与初始极点处的含义。
+模型与变量见图\ref{fig:question-pl01}。
+\QuestionFigure{pl01}{径向与横向基矢及轨道分支示意；图取 $b>0$}
+\solution \Step{先确定随动基矢} 图\ref{fig:solution-pl01}中 $\er$ 沿 $OP$ 向外，$\et$ 沿极角增加方向。即使 $\dot r$ 恒定，这两个方向仍随时间变化。
+\SolutionFigure{pl01}{极坐标基矢的转动与速度合成}
+\Step{逐次求导} 由 $\dot r=a,\ddot r=0,\dot\theta=b,\ddot\theta=0$，代入完整极坐标式得
 \[
-\vect v=a\er+abt\et,\qquad\vect a=-ab^2t\er+2ab\et.
+\vect v=a\er+abt\et,\qquad
+\vect a=-ab^2t\er+2ab\et.
 \]
-速率为 $a\sqrt{1+b^2t^2}$，加速度大小为 $|ab|\sqrt{4+b^2t^2}$。当 $b=0$ 时退化为匀速径向直线运动；$t=0$ 的极点需用所给初始极角规定基矢极限。
-
-\textbf{（2）半径 $R$ 的圆环上，速率 $v=at$。} 选运动方向为弧长正向，则 $a_t=\dot v=a$、$a_n=v^2/R=a^2t^2/R$，故
+其中径向加速度来自横向速度方向的改变，横向项的两份 $ab$ 分别来自 $\dot r\er$ 的方向转动和 $r\dot\theta\et$ 的系数改变。两基矢正交，故
 \[
-\vect a=a\vt+\frac{a^2t^2}{R}\vn,\qquad
-|\vect a|=\sqrt{a^2+\frac{a^4t^4}{R^2}}.
+v=a\sqrt{1+b^2t^2},\qquad |\vect a|=|ab|\sqrt{4+b^2t^2}.
 \]
-不能因轨道为圆就遗漏切向加速度；只有匀速圆周运动才有 $a_t=0$。
+\Step{轨道与初始极限} 若 $b\ne0$，有 $r=(a/b)\theta$，取与 $t\ge0$ 相容的连续角度分支；若 $b=0$，为沿 $+x$ 的匀速直线运动。极点处由 $x=at\cos bt,y=at\sin bt$ 求固定坐标极限，得到 $\vect v(0)=a\vect e_x$、$\vect a(0)=2ab\vect e_y$，物理量没有发散。
 
-\textbf{（3）沿 $r=f(\theta)$ 运动。} 轨道形状给定后，运动快慢仍由 $\theta(t)$ 决定。链式法则给出
+\Case{应用二：圆环上的均匀增速运动}
+\textbf{题目。} 小环沿半径 $R>0$ 的固定圆环运动，初始位于角度零点，随后沿逆时针运动，速率为 $v=at$，$a>0$、$t\ge0$。求弧长与转角、速度和加速度，给出总加速度相对切线的方向及初态极限。
+模型与变量见图\ref{fig:question-pl02}。
+\QuestionFigure{pl02}{圆周运动的局部切向与主法向}
+\solution \Step{位置规律与局部方向} 图\ref{fig:solution-pl02}以 $\vt$ 表示前进方向，$\vn=-\er$ 指向圆心；图上局部方向可随圆周位置整体转动。
+\SolutionFigure{pl02}{切向增速与法向转弯两种加速度}
+从 $s(0)=0$ 积分得 $s=at^2/2$，所以 $\theta=at^2/(2R)$。速度为 $\vect v=at\vt$。
+\Step{分别计算两分量} 因曲率半径为 $R$，
 \[
-\dot r=f'\dot\theta,\qquad
-\ddot r=f''\dot\theta^2+f'\ddot\theta.
+a_t=\dot v=a,\qquad a_n=\frac{v^2}{R}=\frac{a^2t^2}{R},\qquad
+\vect a=a\vt+\frac{a^2t^2}{R}\vn.
 \]
-因此
+于是 $|\vect a|=a\sqrt{1+a^2t^4/R^2}$，相对前进切线的内偏角满足 $\tan\beta=at^2/R$。初态虽 $v=0$，仍有切向加速度 $a$，只是法向分量为零。轨道为圆并不意味着匀速，不能遗漏切向项。
+
+\Case{应用三：由一般极坐标轨道恢复运动分量}
+\textbf{题目。} 质点沿给定光滑曲线 $r=f(\theta)>0$ 运动，$f$ 二次可微；其时间规律为给定的 $\theta=\theta(t)$。求速度与加速度的普遍分量式，指出式中各导数的自变量，并说明仅给轨道能否确定运动。
+模型与变量见图\ref{fig:question-pl03}。
+\QuestionFigure{pl03}{一般极坐标曲线的径向与横向；曲线形状为示意}
+\solution \Step{先把几何函数转换为时间导数} 在图\ref{fig:solution-pl03}中，$OP=f(\theta)$，而基矢随 $\theta(t)$ 转动。记 $f'=\dd f/\dd\theta$、$f''=\dd^2 f/\dd\theta^2$，链式法则给出
+\[
+\dot r=f'\dot\theta,\qquad \ddot r=f''\dot\theta^2+f'\ddot\theta.
+\]
+\SolutionFigure{pl03}{沿给定曲线的基矢转动与局部分解}
+\Step{代入完整运动学公式} 分别整理径向与横向系数，得到
 \begin{align*}
 \vect v&=\dot\theta(f'\er+f\et),\\
 \vect a&=[(f''-f)\dot\theta^2+f'\ddot\theta]\er
-+[2f'\dot\theta^2+f\ddot\theta]\et.
+       +[2f'\dot\theta^2+f\ddot\theta]\et.
 \end{align*}
-式中的 $f'$ 是对极角的导数。只有轨道方程而没有时间规律，无法唯一确定速度和加速度。
+因而 $v=|\dot\theta|\sqrt{f'^2+f^2}$。同一曲线可用不同的 $\theta(t)$ 通过，因此轨道几何不能单独确定速度和加速度；还须给时间规律或能确定它的动力学初值问题。
 
 \subsection{自然坐标系：把速率变化与转弯分开}\label{topic:natural}
 在给定轨迹上选择起点和正方向，用有向弧坐标 $s$ 表示位置。定义切向单位矢量 $\vt=\dd\vect r/\dd s$，主法向单位矢量 $\vn$ 指向曲率中心。对于光滑曲线，
@@ -428,8 +483,8 @@ a_P=\ddot l=\frac{v^2\cos^2\theta}{l}=\frac{v^2\cos^3\theta}{h}.
 \]
 因此
 \begin{equation}\label{eq:natural}
-\boxed{\vect v=\dot s\vt,\qquad
-\vect a=\ddot s\vt+\frac{\dot s^{\,2}}{\rho}\vn.}
+\vect v=\dot s\vt,\qquad
+\vect a=\ddot s\vt+\frac{\dot s^{\,2}}{\rho}\vn.
 \end{equation}
 若把切向正方向取为当前运动方向，可写 $\vect a=\dot v\vt+(v^2/\rho)\vn$。这一写法在质点掉头时须重新处理方向；采用有向弧坐标的式\eqref{eq:natural} 更统一。
 \OriginalFigure{natural_frame}{相邻位置的切线与切向基矢之差。图中的 $\bm i$ 对应正文的 $\vt$，下部展示基矢相减。}
@@ -468,26 +523,40 @@ a_P=\ddot l=\frac{v^2\cos^2\theta}{l}=\frac{v^2\cos^3\theta}{h}.
 
 
 \example{已知单摆的角度变化，求速度和加速度}\label{ex:pendkin}
-摆长为 $l$，运动规律给定为 $\varphi=\varphi_0\sin\omega t$。这里把它当作已知运动学规律，不另行假定它在任意振幅下都是实际单摆的精确动力学解。
+长为 $l>0$ 的不可伸长轻杆绕固定点 $O$ 在竖直平面内运动，端点为 $P$。摆角 $\varphi$ 从竖直向下逆时针量起，给定运动规律 $\varphi(t)=\varphi_0\sin\omega t$，$\omega>0$。把它作为已知运动学规律，不预设它是大振幅单摆的动力学精确解。求 $P$ 的速度、切向和法向加速度，说明转向时速度为零是否意味着加速度为零。
+几何与变量约定见图\ref{fig:question-ex05}。
+
+\QuestionFigure{ex05}{例5的研究对象、条件与变量}
 \OriginalFigure{pendulum}{单摆的摆角 $\varphi$ 和有向弧坐标 $s=l\varphi$。}
-\solution 取 $s=l\varphi$，曲率半径为 $l$。于是
+\solution \Step{模型与方向} 图\ref{fig:solution-ex05}给出解答所用的几何、方向或分解关系。图中的 $OP=l$ 保持不变，$\vect e_\varphi$ 指向摆角增加方向，主法向指向悬点。速度随 $\dot\varphi$ 取正负，法向加速度则始终向内。
+\SolutionFigure{ex05}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取 $s=l\varphi$，曲率半径为 $l$。于是
 \begin{align*}
 \vect v&=l\varphi_0\omega\cos\omega t\,\vt,\\
 \vect a&=-l\varphi_0\omega^2\sin\omega t\,\vt
  +l\varphi_0^2\omega^2\cos^2\omega t\,\vn.
 \end{align*}
 在最低点，切向加速度为零、法向加速度不为零；在摆动端点，速度为零、切向加速度一般不为零。
+\Step{初始条件、结论与适用范围} 把给定摆角求导得 $\dot\varphi=\varphi_0\omega\cos\omega t$、$\ddot\varphi=-\varphi_0\omega^2\sin\omega t$。于是 $\vect v=l\dot\varphi\vect e_\varphi$、$\vect a=l\ddot\varphi\vect e_\varphi-l\dot\varphi^2\vect e_r$。在摆角极值处 $\dot\varphi=0$，但一般 $\ddot\varphi\ne0$，因此只有法向分量消失。
+
+
 
 \example{沿抛物线匀速运动的最低点加速度}\label{ex:parabolak}
-轨道为 $y=kx^2$，$k>0$，弧坐标满足 $s=ct$，$c>0$，$s=0$ 对应顶点。
-\solution 速率为常数 $c$，故切向加速度为零。顶点处 $y'=0,\ y''=2k$，所以 $\rho=1/(2k)$。主法线向上，得到
+质点在固定竖直平面内沿抛物线 $y=kx^2$ 运动，$k>0$，$x$ 水平向右、$y$ 竖直向上。自顶点起向右取弧长正向，给定 $s=ct$，$c>0$。求质点通过顶点时的加速度大小和方向；进一步求一般横坐标 $x$ 处的曲率半径与加速度。
+几何与变量约定见图\ref{fig:question-ex06}。
+
+\QuestionFigure{ex06}{例6的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex06}给出解答所用的几何、方向或分解关系。图中的切线沿轨道前进方向，主法线指向抛物线凹侧。恒速消去切向分量，剩余加速度由图示曲率半径决定。
+\SolutionFigure{ex06}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 速率为常数 $c$，故切向加速度为零。顶点处 $y'=0,\ y''=2k$，所以 $\rho=1/(2k)$。主法线向上，得到
 \[
 \vect a=2kc^2\vect e_y.
 \]
 
 
 
-\subsubsection*{抛物线例题推广到任意点}
+\Step{推广到一般位置}
 对 $y=kx^2$，曲率半径为 $\rho=(1+4k^2x^2)^{3/2}/(2k)$，主法向单位矢量为
 \[
 \vn=\frac{-2kx\vect e_x+\vect e_y}{\sqrt{1+4k^2x^2}}.
@@ -499,24 +568,32 @@ a_P=\ddot l=\frac{v^2\cos^2\theta}{l}=\frac{v^2\cos^3\theta}{h}.
 \]
 虽然速率不变，加速度的大小却随位置变化；顶点的弯曲最强，所以加速度最大。轨道的几何形状决定法向方向与曲率，运动的时间规律决定切向加速度和速率。
 
-
 \example{速率线性增加的空间螺旋线运动}\label{ex:helixkin}
-轨道为 $\vect r(u)=(R\cos u,R\sin u,bu)$，速率为 $v=at$，其中 $R>0,a>0,t\geq0$，求自然坐标加速度。
-\solution $|\vect r_u|=\sqrt{R^2+b^2}$，$\vect r_{uu}=(-R\cos u,-R\sin u,0)$，且 $\vect r_u\cdot\vect r_{uu}=0$，因此
+空间曲线用参数 $u$ 表示为 $\vect r(u)=(R\cos u,R\sin u,bu)$，其中 $R>0$，$b$ 为常数。质点从 $u=0$ 出发，沿 $u$ 增大方向运动，速率给定为 $v=at$，$a>0,t\ge0$。求 $u(t)$、曲率半径以及切向、法向和总加速度，说明两个分量分别对应怎样的运动变化。
+几何与变量约定见图\ref{fig:question-ex07}。
+
+\QuestionFigure{ex07}{例7的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex07}给出解答所用的几何、方向或分解关系。螺旋线的主法线水平指向圆柱轴线，切线还含轴向分量。图中的 $\vt,\vn$ 应先用轨道几何确定，再分别乘速率变化率和 $v^2/\rho$。
+\SolutionFigure{ex07}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} $|\vect r_u|=\sqrt{R^2+b^2}$，$\vect r_{uu}=(-R\cos u,-R\sin u,0)$，且 $\vect r_u\cdot\vect r_{uu}=0$，因此
 \[
 \rho=\frac{R^2+b^2}{R},\qquad
-\boxed{\vect a=a\vt+\frac{a^2t^2R}{R^2+b^2}\vn.}
+\vect a=a\vt+\frac{a^2t^2R}{R^2+b^2}\vn.
 \]
 其中 $\vt=(-R\sin u,R\cos u,b)/\sqrt{R^2+b^2}$、$\vn=(-\cos u,-\sin u,0)$。若取 $u$ 增大为运动方向，则 $\dot u=at/\sqrt{R^2+b^2}$，积分得 $u=u_0+at^2/[2\sqrt{R^2+b^2}]$，代回基矢即可把加速度完整写成时间函数。此题指定运动学速率，不能用仅有重力的螺旋线动力学方程代替。
 \OriginalFigure{helix_original}{圆柱螺旋线的空间形状。图中的半径 $a$ 对应正文的 $R$。}
+
+
+\Step{初始条件、结论与适用范围} 弧长元为 $\dd s=\sqrt{R^2+b^2}\,\dd u$，故 $\dot u=at/\sqrt{R^2+b^2}$。由 $u(0)=0$ 得 $u=at^2/(2\sqrt{R^2+b^2})$。这一参数关系才把空间曲线变成确定的时间运动。
 
 \subsubsection*{空间曲线的完整 Frenet--Serret 关系}\label{topic:frenet}
 
 对光滑正则曲线，在曲率 $\kappa=1/\rho>0$ 的点定义 $\vect e_b=\vt\times\vn$。三条基矢均随弧长变化：
 \begin{equation}\label{eq:frenet}
-\boxed{\frac{\dd\vt}{\dd s}=\kappa\vn,\qquad
+\frac{\dd\vt}{\dd s}=\kappa\vn,\qquad
 \frac{\dd\vn}{\dd s}=-\kappa\vt+\tau\vect e_b,\qquad
-\frac{\dd\vect e_b}{\dd s}=-\tau\vn.}
+\frac{\dd\vect e_b}{\dd s}=-\tau\vn.
 \end{equation}
 第一式描述切线转弯，第三式描述密切平面转动；$\tau$ 称为挠率，其符号取决于空间曲线的定向约定。第二式中的切向系数来自 $\dd(\vt\cdot\vn)/\dd s=0$；副法向系数由第三式和正交性确定。对一般参数 $u$，
 \[
@@ -527,21 +604,56 @@ a_P=\ddot l=\frac{v^2\cos^2\theta}{l}=\frac{v^2\cos^3\theta}{h}.
 
 虽然三条基矢都在变化，质点加速度仍为 $\dot v\vt+v^2\kappa\vn$，没有副法向分量，因为速度只含 $v\vt$；挠率首先出现在加速度的时间导数中。这解释了三维轨迹的自然坐标动力学为什么仍有 $a_b=0$。
 
-\subsubsection*{自然坐标中的三道思考题}\label{ex:naturalthinking}
 
-\begin{enumerate}
-\item \textbf{只有切向加速度：} 在 $v>0$ 的区间，$a_n=v^2\kappa=0$ 意味着 $\kappa=0$，轨道是直线；速率可以变化。质点静止的单个瞬间不能用此式判定整条轨道。
-\item \textbf{只有法向加速度：} $\dot v=0$，速率保持不变，轨道可以是任意光滑曲线，不一定是圆。
-\item \textbf{同时有两种分量：} 速率变化且轨道弯曲。变速圆周运动、一般抛射运动均属此类；某个时刻某个分量为零，不等于整个运动属于前两类。
-\end{enumerate}
+\subsubsection*{自然坐标中的运动分类}\label{ex:naturalthinking}
+\Case{应用一：法向加速度为零}
+\textbf{题目。} 一段光滑平面运动在整个区间内满足 $v(t)>0$、$a_n(t)=0$。判断轨道形状，说明切向加速度能否非零，并给出一个具体运动作为例子。
+模型与变量见图\ref{fig:question-na01}。
+\QuestionFigure{na01}{直线变速运动与恒速圆周运动的区别}
+\solution \Step{用非静止条件确定曲率} 结合题图\ref{fig:question-na01}，解答图\ref{fig:solution-na01}展示直线上的不等长速度矢量与圆周上的切向速度、向心加速度；左侧只改变速度大小，右侧只改变速度方向，所以分别对应切向项与法向项，不能由一个分量为零推出整个加速度为零。
+\SolutionFigure{na01}{直线上的切向加速与圆周上的法向加速}
+\Step{构造满足条件的运动} 取 $x=v_0t+a_0t^2/2$，$v_0,a_0>0,t\ge0$，则 $v_x=v_0+a_0t>0$，$a_t=a_0$，$a_n=0$。因此直线轨道并不限制速率恒定。若只知一个静止瞬间 $v=0$，不能由此判定邻近轨道的曲率。
+
+\Case{应用二：切向加速度为零}
+\textbf{题目。} 一段运动始终有 $v>0$、$a_t=0$。能否断定轨道为圆？请用固定抛物线 $y=kx^2$、$k>0$ 上的恒速运动给出完整反例，并求其法向加速度。
+模型与变量见图\ref{fig:question-na03}。
+\QuestionFigure{na03}{恒速通过抛物线；主法线随位置改变}
+\solution \Step{速率条件不决定几何曲率} 图\ref{fig:solution-na03}中 $\vt$ 沿抛物线前进方向。$a_t=\dot v=0$ 只给出 $v=v_0$；对给定抛物线，曲率为
+\[
+\kappa=\frac{2k}{(1+4k^2x^2)^{3/2}},\qquad
+a_n=\frac{2kv_0^2}{(1+4k^2x^2)^{3/2}}.
+\]
+\SolutionFigure{na03}{恒速运动仍有沿凹侧的法向加速度}
+\Step{判断结论} 该曲率随 $x$ 改变，所以轨道并非圆，但始终满足 $a_t=0$。图中的加速度沿主法线；“只有法向分量”可以出现在任意光滑曲线的恒速运动中。
+
+\Case{应用三：同时具有切向与法向分量}
+\textbf{题目。} 小环在半径 $R>0$ 的固定圆环上以速率 $v=v_0+ct$ 运动，$v_0,c>0,t\ge0$。求两个加速度分量及合加速度方向，说明与恒速圆周运动有何区别。
+模型与变量见图\ref{fig:question-na02}。
+\QuestionFigure{na02}{圆环上的局部切向与主法向}
+\solution \Step{分别处理增速与转弯} 图\ref{fig:solution-na02}中内法线始终指向圆心，故
+\[
+a_t=c,\qquad a_n=\frac{(v_0+ct)^2}{R},\qquad
+\vect a=c\vt+\frac{(v_0+ct)^2}{R}\vn.
+\]
+\SolutionFigure{na02}{变速圆周运动中的两个正交分量}
+\Step{合成方向} 两分量都非零，$|\vect a|=\sqrt{c^2+(v_0+ct)^4/R^2}$，相对前进切线向内偏角满足 $\tan\beta=(v_0+ct)^2/(Rc)$。令 $c\to0$，才恢复纯法向的恒速圆周运动。
 
 \example{竖直速度分量恒定时的加速度}\label{ex:constantvy}
-平面运动中 $v_y=c\neq0$ 恒定，证明加速度大小 $a=v^3/(|c|\rho)$。
-\solution 由 $a_y=0$，加速度沿 $x$ 轴。利用平面曲率的矢量表达式，
+质点在固定 $xy$ 平面内作光滑曲线运动，竖直速度分量恒为 $v_y=c\ne0$。在某个速率 $v>0$、曲率半径为 $\rho$ 的位置，求总加速度大小与 $v,c,\rho$ 的关系。证明结论，并讨论直线段和 $c=0$ 时为什么需要另行处理。
+几何与变量约定见图\ref{fig:question-ex08}。
+
+\QuestionFigure{ex08}{例8的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex08}给出解答所用的几何、方向或分解关系。图中的等时位移具有相同竖直分量，因此 $a_y=0$。加速度箭头水平，但并不一般沿轨道主法线，须用速度与加速度的叉积求曲率。
+\SolutionFigure{ex08}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 由 $a_y=0$，加速度沿 $x$ 轴。利用平面曲率的矢量表达式，
 \[
 \frac1\rho=\frac{|v_xa_y-v_ya_x|}{v^3}=\frac{|c|\,|a_x|}{v^3}.
 \]
 所以 $a=|a_x|=v^3/(|c|\rho)$。若 $c>0$，可写成 $v^3/(c\rho)$；一般情形需取绝对值。若 $c=0$，运动沿水平直线，曲率为零，不能使用这个商式。
+\Step{初始条件、结论与适用范围} 若轨道在某区间为直线且 $c\ne0$，则直线斜率固定；由竖直速度固定可推出总速度固定，所以该区间 $a=0$，与 $\rho\to\infty$ 的极限相容。对于曲率非零的点，先由叉积确定加速度大小，再由给定轨道的弯曲方向确定 $a_x$ 的符号；仅有 $v,c,\rho$ 不能区分向左弯和向右弯。
+
+
 
 \subsection{空间运动：柱坐标与球坐标}\label{topic:column}
 
@@ -618,8 +730,14 @@ a_\theta=\frac1r\frac\dd{\dd t}(r^2\dot\theta)-r\dot\varphi^2\sin\theta\cos\thet
 这两个形式既可用于运动学计算，也为绕轴角动量守恒的推导提供方便。
 
 \example{球面摆：空间运动与初始条件}\label{ex:sphericalpend}
-不可伸长轻绳长度为 $l$，小球质量为 $m$。本例把 $z$ 正向取为\emph{竖直向下}，$\theta$ 从该方向量起，重力为 $mg\vect e_z$。初始 $\theta_0=\pi/3$，速度沿方位方向，大小为 $v_0$。
-\solution $r=l$ 恒定，故动力学分量为
+小球质量为 $m$，以长度 $l$ 的不可伸长轻绳连接固定点 $O$，在重力下作球面运动。取 $z$ 轴竖直向下，极角 $\theta$ 从 $+z$ 轴量起，方位角为 $\phi$。初始 $\theta_0=\pi/3$、$\dot\theta_0=0$，初速度沿方位方向，大小为 $v_0$。忽略空气阻力，绳始终绷紧。建立 $\theta,\phi$ 的运动方程，写出初始角速度，并用能量与竖直角动量给出积分关系。
+几何与变量约定见图\ref{fig:question-ex09}。
+
+\QuestionFigure{ex09}{例9的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex09}给出解答所用的几何、方向或分解关系。图中的张力沿 $P\to O$，与球面上的两个切向基矢都垂直。方位速度是 $l\sin\theta\,\dot\phi$，不是 $l\dot\phi$。
+\SolutionFigure{ex09}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} $r=l$ 恒定，故动力学分量为
 \begin{align*}
 mg\cos\theta-T&=-ml(\dot\theta^2+\dot\varphi^2\sin^2\theta),\\
 -\frac gl\sin\theta&=\ddot\theta-\dot\varphi^2\sin\theta\cos\theta,\\
@@ -632,8 +750,8 @@ mg\cos\theta-T&=-ml(\dot\theta^2+\dot\varphi^2\sin^2\theta),\\
 \]
 消去初始能量，得到
 \begin{equation}\label{eq:sphericalpend}
-\boxed{\dot\theta^2=\frac{2g}{l}(\cos\theta-\tfrac12)
-+\frac{v_0^2}{l^2}\left(1-\frac{3}{4\sin^2\theta}\right)\equiv f(\theta)^2.}
+\dot\theta^2=\frac{2g}{l}(\cos\theta-\tfrac12)
++\frac{v_0^2}{l^2}\left(1-\frac{3}{4\sin^2\theta}\right)\equiv f(\theta)^2.
 \end{equation}
 在 $\theta(t)$ 单调的一段，选定实际运动对应的符号 $\dot\theta=\pm f(\theta)$，有
 \[
@@ -644,7 +762,6 @@ t-t_0=\int_{\theta_0}^{\theta}\frac{\dd\xi}{\pm f(\xi)},\qquad
 降阶时使用 $\ddot\theta=\tfrac12\dd(\dot\theta^2)/\dd\theta$，因此应求解 $\dot\theta^2$。所得关系可由能量守恒和初始条件独立核验，右端各项均具有角速度平方的量纲。
 
 \TeachingFigure{c1-diagram-03}{球面摆在某一瞬时的约束与受力；$z$ 轴竖直向下，$\vect e_\varphi$ 为水平纬圈切线在纸面的投影。虚线纬圈不代表完整运动轨迹。}
-
 
 \subsection{运动学中的坐标选择}
 已知运动方程时求导，已知轨道时另需时间规律。坐标选择的目标，是让几何约束或力的方向尽量成为一个坐标方向。
@@ -683,8 +800,14 @@ t-t_0=\int_{\theta_0}^{\theta}\frac{\dd\xi}{\pm f(\xi)},\qquad
 
 \subsection{运动学综合例题：辅助点与多种坐标解法}\label{topic:kinexamples}
 \example{曲线切线的垂足怎样运动}\label{ex:pedal}
-质点 $M$ 沿平面曲线运动，速率为 $v$，相对固定点 $O$ 的位矢为 $\vect r$。从 $O$ 向 $M$ 处切线作垂线，垂足为 $A$。求 $A$ 的速率。
-\solution 以曲线定向切线为 $\vt$，写 $\vect r=\vect q+\lambda\vt$，其中 $\vect q=\overrightarrow{OA}$、$\lambda=\vect r\cdot\vt$，且 $\vect q\cdot\vt=0$。由 $\dot\vt=(v/\rho)\vn$，
+质点 $M$ 沿固定平面光滑曲线运动，瞬时速率为 $v$、曲率半径为 $\rho$。固定点为 $O$，位矢为 $\vect r=\overrightarrow{OM}$。从 $O$ 向 $M$ 处切线作垂线，垂足为 $A$。在曲率非零的区间求 $A$ 的速度及速率，并说明直线轨道的极限。
+几何与变量约定见图\ref{fig:question-ex10}。
+
+\QuestionFigure{ex10}{例10的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex10}，解答图\ref{fig:solution-ex10}展示移动切线的垂足 $A$ 与其速度方向；图示两个位矢投影均为正，故 $\dot{\vect q}$ 同时含负切向和负法向分量。分解 $\vect r=\vect q+\lambda\vt$ 后求导，必须计入切线基矢的转动。
+\SolutionFigure{ex10}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 以曲线定向切线为 $\vt$，写 $\vect r=\vect q+\lambda\vt$，其中 $\vect q=\overrightarrow{OA}$、$\lambda=\vect r\cdot\vt$，且 $\vect q\cdot\vt=0$。由 $\dot\vt=(v/\rho)\vn$，
 \[
 \dot\lambda=\dot{\vect r}\cdot\vt+\vect r\cdot\dot\vt
 =v+\frac v\rho(\vect r\cdot\vn).
@@ -696,14 +819,20 @@ t-t_0=\int_{\theta_0}^{\theta}\frac{\dd\xi}{\pm f(\xi)},\qquad
 \]
 平面内 $\vt,\vn$ 构成正交基，因而
 \[
-\boxed{v_A=\frac{v}{\rho}\sqrt{(\vect r\cdot\vn)^2+(\vect r\cdot\vt)^2}=\frac{vr}{\rho}.}
+v_A=\frac{v}{\rho}\sqrt{(\vect r\cdot\vn)^2+(\vect r\cdot\vt)^2}=\frac{vr}{\rho}.
 \]
 这里的 $A$ 是随切线改变而运动的几何点，其速度通常既不等于 $M$ 的速度，也不沿曲线切线。直线轨道的切线固定，$\rho\to\infty$，垂足静止，结果相符。
 \OriginalFigure{pedal_original}{曲线切线上的垂足 $A$、运动点 $M$ 和位矢 $\vect r,\vect q$。}
 
-\example{固定铰点斜杆的极坐标解法}\label{ex:rulerpolar}
-这一构造中， $B$ 是固定铰点，$OB=d$；斜杆与水平轨道的交点 $A$ 以恒速 $v>0$ 向右运动。杆上标点 $M$ 满足 $AM=d$。令杆与水平线的锐角为 $\varphi$，$0<\varphi<\pi/2$，取 $O=(0,0)$、$B=(0,d)$。
-\solution 几何关系给出 $x_A=d\cot\varphi$，所以
+\example{固定导环中滑动斜杆的极坐标解法}\label{ex:rulerpolar}
+固定点 $O=(0,0)$，固定光滑导环中心为 $B=(0,d)$，$d>0$。刚性直杆穿过导环并可相对导环滑动，其下端 $A$ 在水平导轨上以恒速 $v>0$ 向右运动。杆上材料点 $M$ 满足 $AM=d$。杆与水平线的锐角为 $0<\varphi<\pi/2$，取 $M$ 位于 $A$ 与 $B$ 之间的构形。求 $M$ 的位置、速度和加速度及其大小，并说明为何固定空间点 $B$ 到材料点 $M$ 的距离会改变。
+几何与变量约定见图\ref{fig:question-ex11}。
+
+\QuestionFigure{ex11}{例11的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex11}，解答图\ref{fig:solution-ex11}展示以固定导环 $B$ 为极点的速度、加速度合成；图取 $\varphi=45^\circ$ 展示方向，径向沿 $BM$ 向下右，横向向上右。题图中的 $AM=d$ 固定而 $BM$ 可变，故不能漏掉 $\dot r,\ddot r$。
+\SolutionFigure{ex11}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 几何关系给出 $x_A=d\cot\varphi$，所以
 \[
 v=-d\csc^2\varphi\,\dot\varphi,\qquad
 \dot\varphi=-\frac vd\sin^2\varphi.
@@ -726,8 +855,8 @@ a_\theta&=\frac{2v^2}{d}\sin^3\varphi\cos\varphi.
 \end{align*}
 由此得到
 \[
-\boxed{v_M=v\sqrt{1-2\sin^3\varphi+\sin^4\varphi},\quad
- a_M=\frac{v^2}{d}\sin^3\varphi\sqrt{1+3\cos^2\varphi}.}
+v_M=v\sqrt{1-2\sin^3\varphi+\sin^4\varphi},\quad
+ a_M=\frac{v^2}{d}\sin^3\varphi\sqrt{1+3\cos^2\varphi}.
 \]
 \textbf{直角坐标分量。} $M=A-d(\cos\varphi,-\sin\varphi)$，所以 $x_M=d\cot\varphi-d\cos\varphi$、$y_M=d\sin\varphi$。第一次求导得 $v_x=v(1-\sin^3\varphi)$、$v_y=-v\sin^2\varphi\cos\varphi$；再求导得
 \[
@@ -739,8 +868,14 @@ $A$ 向右移动使 $BA$ 增大，所以 $\dot r=v\cos\varphi>0$。若把极点�
 \OriginalFigure{hinged_rod_original}{斜杆、水平运动点 $A$ 及几何角。$\varphi$ 从水平线量起，$\theta=\pi/2-\varphi$ 从竖直向下方向量起。}
 
 \example{转杆与固定圆环的交点：三种坐标逐一计算}\label{ex:rodcircle}
-固定圆环半径为 $R$，圆心为 $(R,0)$，圆环经过原点 $O$。杆绕 $O$ 转动，极角为给定函数 $\theta(t)$，套在杆与圆环上的小环为 $C$。求 $C$ 的速度、加速度大小。
-\solution \textbf{直角坐标法。} 圆方程 $x^2+y^2=2Rx$，结合 $y=x\tan\theta$ 得
+固定圆环的圆心为 $K=(R,0)$、半径为 $R>0$，圆环经过原点 $O$。一根直杆绕 $O$ 在平面内转动，其方向角 $\theta(t)$ 为二次可微的给定函数。小环 $C$ 同时套在杆与圆环上，取远离 $O$ 的交点分支，$|\theta|<\pi/2$。分别用直角坐标、以 $O$ 为极点的极坐标和圆环自然坐标，求 $C$ 的速度、加速度及其大小，核对三种结果。
+几何与变量约定见图\ref{fig:question-ex12}。
+
+\QuestionFigure{ex12}{例12的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex12}，解答图\ref{fig:solution-ex12}展示圆心 $K$ 处的两倍转角及 $C$ 点的切、法向加速度；$\theta$ 在 $O$ 处量取，而圆周弧长由圆心角 $2\theta$ 决定。图示正向运动且角加速为正，负切向加速度须反转切向箭头。
+\SolutionFigure{ex12}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} \textbf{直角坐标法。} 圆方程 $x^2+y^2=2Rx$，结合 $y=x\tan\theta$ 得
 \[
 x=R(1+\cos2\theta),\qquad y=R\sin2\theta.
 \]
@@ -771,8 +906,14 @@ a_\theta&=2R\ddot\theta\cos\theta-4R\dot\theta^2\sin\theta.
 分段运动中，位置一般连续，速度却可能在碰撞或转向时改变。先确定每一段的规律，再用事件条件连接各段，比逐次列出所有时刻更方便。下面的四个模型分别说明反射、无限次转向、连续追逐和对称追逐。
 
 \example{长方形盒中不断碰壁的小球}\label{ex:boxbounce}
-光滑水平面上的长方形盒长、宽分别为 $a,b$。质点从左下角出发，初速为 $v_0$，方向与长边夹角为 $\theta$（$0<\theta<\pi/2$）。质点与四壁作理想弹性碰撞。求任意时刻位置，并判断轨道何时周期性重复。
-\solution 竖直壁的冲量只反转 $v_x$，水平壁的冲量只反转 $v_y$。两分量的绝对值分别保持为 $u=v_0\cos\theta$、$w=v_0\sin\theta$。设
+固定长方形盒内边长为 $a,b>0$，以左下角为原点，长边为 $x$ 轴。质点从该角出发，初速大小 $v_0>0$，与长边夹角 $0<\theta<\pi/2$。盒内无其他水平力，与各壁作理想镜面弹性反射。求任意时刻的位置表达式，给出重复回到初始位置和速度方向的条件，并说明恰好击中角点的理想化处理。
+几何与变量约定见图\ref{fig:question-ex13}。
+
+\QuestionFigure{ex13}{例13的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex13}给出解答所用的几何、方向或分解关系。解答图把相邻盒子作镜像展开；每次反射由跨过镜像边界代替。展开图上的直线斜率决定周期性，折回原盒后才得到实际位置。
+\SolutionFigure{ex13}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 竖直壁的冲量只反转 $v_x$，水平壁的冲量只反转 $v_y$。两分量的绝对值分别保持为 $u=v_0\cos\theta$、$w=v_0\sin\theta$。设
 \[
 T_x=\frac{2a}{u},\quad T_y=\frac{2b}{w},\qquad
 \tau_x=t-T_x\lfloor t/T_x\rfloor,\quad
@@ -791,10 +932,19 @@ w(T_y-\tau_y),&T_y/2<\tau_y<T_y.\end{cases}
 两分量同时重复要求 $n_xT_x=n_yT_y$。因此 $T_x/T_y$ 为有理数时存在共同周期；若 $T_x/T_y=p/q$ 为既约分数，最小共同周期为 $qT_x=pT_y$。一般无理比没有有限共同周期。理想模型中同时撞角点可定义为两个速度分量同时反转；实际有圆角的盒子需另给局部边界形状。
 \OriginalFigure{reflecting_ball}{长方形盒内弹性碰撞问题的初始位置、初速度和几何尺寸。}
 速度的模保持不变，不意味着加速度处处为零。理想刚壁碰撞的速度跳变由冲量描述，不能用有限的常加速度替代。
+\Step{初始条件、结论与适用范围} 若 $a\sin\theta/(b\cos\theta)$ 为有理数，可取正整数 $p,q$ 使 $v_0\cos\theta\,T=2pa$、$v_0\sin\theta\,T=2qb$；此时位置和两个速度分量都恢复。若撞击角点，两个法向分量在理想矩形模型中同时反号；真实角点碰撞还依赖局部形状。
+
+
 
 \example{两车间反复飞行的信鸽}\label{ex:pigeon}
-两车初距 $2a$，各以速率 $v_0$ 相向匀速行驶。信鸽从左车出发，以对地速率 $2v_0$ 飞向右车，接触后立即反向，直到两车相遇。求飞行时间、总路程和飞行段数。
-\solution 两车接近速率为 $2v_0$，相遇时间 $t_*=a/v_0$。信鸽在整个时间内飞行，故总路程为 $2v_0t_*=2a$。为核对无限次转向，令第 $n$ 段开始时车距为 $d_n$，则
+两辆小车在同一直线上相向匀速行驶，初距为 $2a$，各车对地速率为 $v_0>0$。信鸽从左车出发，以恒定对地速率 $2v_0$ 飞向右车；每次到达小车便立即无耗时反向，直到两车相遇。求相遇时间、信鸽总路程，并求各飞行段的长度和时长规律，说明无限次折返是否需要无限时间。
+几何与变量约定见图\ref{fig:question-ex14}。
+
+\QuestionFigure{ex14}{例14的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex14}给出解答所用的几何、方向或分解关系。图中的两条车轨迹在时空图中相交，折线为信鸽的运动。每段长度缩短来自两车间距缩小，而总飞行时间由两车相遇时刻确定。
+\SolutionFigure{ex14}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 两车接近速率为 $2v_0$，相遇时间 $t_*=a/v_0$。信鸽在整个时间内飞行，故总路程为 $2v_0t_*=2a$。为核对无限次转向，令第 $n$ 段开始时车距为 $d_n$，则
 \[
 \Delta t_n=\frac{d_n}{3v_0},\quad
 d_{n+1}=d_n-2v_0\Delta t_n=\frac{d_n}{3},\quad d_1=2a.
@@ -808,8 +958,14 @@ d_{n+1}=d_n-2v_0\Delta t_n=\frac{d_n}{3},\quad d_1=2a.
 
 \subsection{连续追逐的相对坐标方法}\label{topic:pursuit}
 \example{猎狗追逐直线奔跑的野兔}\label{ex:dograbbit}
-野兔初在 $(0,d)$，以速率 $u$ 沿 $+x$ 匀速运动；猎狗初在原点，以恒速 $v=\lambda u$、$\lambda>1$ 始终朝野兔当前位置奔跑。求捕获时间、相对轨道及猎狗的地面轨迹。
-\solution 定义从狗指向兔的矢量 $\vect r=r\er$，其与 $+x$ 轴夹角为 $\phi$。初态 $r=d,\phi=\pi/2$。兔速度为 $u\vect e_x$，狗速度为 $v\er$，故
+野兔初始位于 $(0,d)$，$d>0$，以恒速 $u>0$ 沿 $+x$ 方向奔跑；猎狗初始位于原点，以恒速 $v=\lambda u$、$\lambda>1$ 奔跑，速度方向始终指向野兔的瞬时位置。忽略反应时间。建立以狗为原点的相对极坐标方程，求捕获时间、相对轨道及狗的地面轨迹，并说明两种轨迹的区别。
+几何与变量约定见图\ref{fig:question-ex15}。
+
+\QuestionFigure{ex15}{例15的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex15}给出解答所用的几何、方向或分解关系。图中连线方向是狗的速度方向，而兔的速度始终水平。相对速度要先作矢量相减，再向连线和垂直连线两个方向投影。
+\SolutionFigure{ex15}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 定义从狗指向兔的矢量 $\vect r=r\er$，其与 $+x$ 轴夹角为 $\phi$。初态 $r=d,\phi=\pi/2$。兔速度为 $u\vect e_x$，狗速度为 $v\er$，故
 \[
 \dot{\vect r}=u\vect e_x-v\er,
 \quad \dot r=u\cos\phi-v,
@@ -849,8 +1005,14 @@ x_D=ut-r\cos\phi,\qquad y_D=d-r\sin\phi.
 $\lambda\to1^+$ 时捕获时间发散；$\lambda\gg1$ 时 $t_*\sim d/v$。狗的加速度大小为 $v|\dot\phi|=vu\sin\phi/r$，由方向变化产生。取 $v=2u$ 时，用 $z=\tan(\phi/2)$ 还能写成 $|\vect a_D|=8u^2/[d(1+z^2)^2]$，由初始 $2u^2/d$ 增至捕获前 $8u^2/d$，保持有限。恒速模型中 $\vect v\cdot\vect a=0$，转弯本身不改变动能；真实动物的能量消耗还涉及肌肉运动和阻力，不能由此几何模型直接推出。
 
 \example{野兔始终垂直于追逐连线逃跑}
-保留上例初距 $d$ 和速率 $u,v$，但兔每时刻选取 $u\et$，始终垂直于从狗指向兔的连线。取使极角增大的逃跑方向，求捕获时间和连线转角。
-\solution 相对速度变为 $\dot{\vect r}=u\et-v\er$。分解得到
+兔与狗初距为 $d>0$，对地速率分别为 $u>0$、$v>0$。狗始终沿两者连线追兔；兔每时刻选择垂直于从狗指向兔的连线、并使连线极角增大的方向奔跑。以两者连线长度为 $r$、方向角为 $\theta$，求捕获时间、连线转角和相对轨道，并讨论到达捕获极限时角度的变化。
+几何与变量约定见图\ref{fig:question-ex16}。
+
+\QuestionFigure{ex16}{例16的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex16}给出解答所用的几何、方向或分解关系。解答图中兔的速度完全沿 $\et$，狗的速度沿 $\er$。因此径向闭合速度由狗提供，兔的速度只使连线旋转。
+\SolutionFigure{ex16}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 相对速度变为 $\dot{\vect r}=u\et-v\er$。分解得到
 \[
 \dot r=-v,\qquad r\dot\phi=u.
 \]
@@ -869,8 +1031,14 @@ r=d-(v-u)t,\qquad t_*^{\rm collinear}=\frac{d}{v-u}.
 
 \subsection{对称循环追逐与对数螺线}\label{topic:cyclic}
 \example{三质点的循环追逐与对数螺线}\label{ex:cyclicpursuit}
-三质点初处边长 $a$ 的正三角形顶点，各以恒速 $v_0$ 追逐下一顶点，顺序为 $1\to2\to3\to1$。求相遇时间及各点轨道。
-\solution 运动方程在绕初始中心旋转 $120^\circ$ 并循环交换质点编号后不变。在三点相遇前解唯一，因此三点始终构成同一中心的正三角形。初始外接圆半径 $r_0=a/\sqrt3$。每条追逐方向相对于向内径向成 $30^\circ$，因而
+三个质点初始位于边长为 $a>0$ 的正三角形顶点，各自以恒定速率 $v_0>0$ 追逐下一个质点，次序为 $1\to2\to3\to1$。利用对称性证明运动中的三角形保持相似，求边长随时间的变化、共同相遇时刻，以及每个质点相对于固定形心的轨道方程。
+几何与变量约定见图\ref{fig:question-ex17}。
+
+\QuestionFigure{ex17}{例17的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex17}给出解答所用的几何、方向或分解关系。图中速度沿相邻顶点连线；在正三角形中，它对指向形心方向的投影为 $\sqrt3v_0/2$。这个径向投影决定形心距离缩短，切向投影决定螺旋转角。
+\SolutionFigure{ex17}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 运动方程在绕初始中心旋转 $120^\circ$ 并循环交换质点编号后不变。在三点相遇前解唯一，因此三点始终构成同一中心的正三角形。初始外接圆半径 $r_0=a/\sqrt3$。每条追逐方向相对于向内径向成 $30^\circ$，因而
 \[
 \dot r=-v_0\cos30^\circ=-\frac{\sqrt3}2v_0,
 \qquad r\dot\phi=\frac12v_0.
@@ -886,7 +1054,6 @@ r=r_0\exp[-\sqrt3(\phi-\phi_0)],\quad
 \]
 三个轨道只相差 $120^\circ$ 的初始角。每个质点的路程为 $v_0t_*=2a/3$，尽管绕中心的转角发散，路程仍有限。
 \OriginalFigure{three_point_pursuit}{三个质点依次追逐，正三角形在转动中相似收缩。原图比较不同瞬间的三角形。}
-
 
 \section{平动参考系与运动合成}\label{sec:relative}
 
@@ -904,8 +1071,8 @@ $\vect r_0$ 连接两系原点，$\vect r'$ 从动系原点指向同一质点。
 \subsection{速度合成与相对速度}
 对位置关系求导，并再次求导，可得
 \begin{equation}\label{eq:translation}
-\boxed{\vect v=\vect v_0+\vect v',\qquad
-\vect a=\vect a_0+\vect a'.}
+\vect v=\vect v_0+\vect v',\qquad
+\vect a=\vect a_0+\vect a'.
 \end{equation}
 其中 $\vect v$ 为绝对速度、$\vect v'$ 为相对速度、$\vect v_0$ 为牵连速度，即动系原点的速度。三个量都必须是对同一时刻、同一研究对象定义的矢量。
 \OriginalFigure{translation}{平动参考系中的位置关系：$\vect r=\vect r_0+\vect r^{\,\prime}$。}
@@ -925,17 +1092,31 @@ $\vect r_0$ 连接两系原点，$\vect r'$ 从动系原点指向同一质点。
 
 
 \example{行走的人如何判断风速}
-某人以 $4\,\mathrm{km/h}$ 向东行走，感觉风从正北吹来；速率增为 $8\,\mathrm{km/h}$ 后，感觉风从东北吹来。求地面系中的风速。
-\solution 取东为 $x$ 正方向、北为 $y$ 正方向。设风的绝对速度为 $(u_x,u_y)$。“从北吹来”表示相对速度向南，故第一种情况给出 $u_x-4=0$。第二种情况相对风速指向西南，且两个分量大小相等：
+取东为 $+x$、北为 $+y$。地面风速在观测期间为恒定矢量。某人向东以 $4\,\mathrm{km/h}$ 行走，感觉风从正北吹来；改以 $8\,\mathrm{km/h}$ 向东行走后，感觉风从东北吹来。忽略测量误差，求风相对地面的速度分量、大小和来向，说明“风从某方向来”与风速矢量方向的关系。
+几何与变量约定见图\ref{fig:question-ex18}。
+
+\QuestionFigure{ex18}{例18的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex18}给出解答所用的几何、方向或分解关系。图中的相对风速等于地面风速减去人的速度。“从北来”的相对风速实际向南；第二次观测提供两个相对分量大小相等的条件。
+\SolutionFigure{ex18}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取东为 $x$ 正方向、北为 $y$ 正方向。设风的绝对速度为 $(u_x,u_y)$。“从北吹来”表示相对速度向南，故第一种情况给出 $u_x-4=0$。第二种情况相对风速指向西南，且两个分量大小相等：
 \[
 u_x-8=u_y.
 \]
 于是 $\vect u=(4,-4)\,\mathrm{km/h}$，速率为 $4\sqrt2\,\mathrm{km/h}$。风的运动方向是东南，若按风的\emph{来向}命名，则是西北风。
+\Step{初始条件、结论与适用范围} 第一次观测的相对风速只有南向分量，所以地面风速的东向分量为 $4\,\mathrm{km/h}$。第二次人的东向速度为 $8$，相对东向分量为 $-4$；东北来风表示相对矢量同时向西、向南且两分量等大，因此地面北向分量为 $-4$。风速大小为 $4\sqrt2\,\mathrm{km/h}$，实际流向东南，来向为西北。
+
 
 
 \example{飞机往返：顺逆风与侧风}
-飞机相对空气的速率恒为 $u$，$A,B$ 两地相距 $d$，连线沿东西方向。均匀风速为 $w<u$，飞机必须沿地面上的 $AB$ 直线飞行。
-\solution 若风沿 $AB$ 吹，去程和回程的地速为 $u+w,u-w$，总时间
+$A,B$ 两地位于同一东西向直线上，相距 $d>0$。飞机相对空气的速率恒为 $u>0$，均匀风速大小为 $0\le w<u$。飞机必须沿地面直线 $AB$ 往返。分别求风沿 $AB$ 与垂直于 $AB$ 时的往返时间及机头偏角，并与无风时间比较。
+几何与变量约定见图\ref{fig:question-ex19}。
+
+\QuestionFigure{ex19}{例19的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex19}，解答图\ref{fig:solution-ex19}展示顺风的代数速度相加和侧风的速度三角形；侧风图中空气速度的向下分量恰被向上的风速抵消，对地速度沿水平航线，故沿程速率须由直角三角形求出。
+\SolutionFigure{ex19}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 若风沿 $AB$ 吹，去程和回程的地速为 $u+w,u-w$，总时间
 \[
 t_{\parallel}=\frac d{u+w}+\frac d{u-w}=\frac{2du}{u^2-w^2}.
 \]
@@ -943,7 +1124,7 @@ t_{\parallel}=\frac d{u+w}+\frac d{u-w}=\frac{2du}{u^2-w^2}.
 \[
 t_{\perp}=\frac{2d}{\sqrt{u^2-w^2}}.
 \]
-两者均大于无风时的 $2d/u$；往返的顺风收益不能完全抵消逆风损失。
+当 $0<w<u$ 时，两者均大于无风时的 $2d/u$；$w=0$ 时三者相等。往返的顺风收益不能完全抵消逆风损失。
 
 
 \subsubsection*{侧风问题的速度三角形}
@@ -966,15 +1147,29 @@ t_{\perp}\simeq t_0[1+\tfrac12(w/u)^2].
 一阶风速效应在往返中抵消，二阶延时仍然存在；这说明不能只用“平均地速仍等于 $u$”估计往返时间。
 
 
+\Step{机头偏角} 在图\ref{fig:solution-ex19}的侧风三角形中，机头相对地面航线朝来风侧偏转 $\beta$，使横向空气速度恰好抵消风速。因此
+\[
+u\sin\beta=w,\qquad \beta=\arcsin(w/u),\qquad u\cos\beta=\sqrt{u^2-w^2}.
+\]
+去程与回程的偏角大小相同，机头均朝来风一侧偏转；用固定东、北轴写方位角时，两航段的转向符号须分别处理。纯顺风或逆风没有侧向风，故机头偏角为零。条件 $w<u$ 保证两种往返模型都能完成；当侧风 $w\to u^-$ 时，沿航线的地速趋零，旅行时间发散。
 
 \example{飞机绕正方形航线的飞行时间}\label{ex:squareplane}
-飞机相对空气速率 $u=100\,\mathrm{km/h}$，沿地面边长 $d=6\,\mathrm{km}$ 的正方形航线飞行，均匀风速为 $w=28\,\mathrm{km/h}$，风与两条边平行。
-\solution 顺风、逆风的地速分别为 $u+w=128$ 和 $u-w=72\,\mathrm{km/h}$。另外两条边要抵消横风分量，因此沿航线地速为 $\sqrt{u^2-w^2}=96\,\mathrm{km/h}$。四边总时间为
+飞机相对空气速率恒为 $u=100\,\mathrm{km/h}$，须沿地面边长 $d=6\,\mathrm{km}$ 的正方形航线飞行一周。风为恒定水平风，大小 $w=28\,\mathrm{km/h}$，与其中两条边平行。忽略转弯时间，求各边的对地速率、总飞行时间和侧风边的机头偏角。
+几何与变量约定见图\ref{fig:question-ex20}。
+
+\QuestionFigure{ex20}{例20的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex20}给出解答所用的几何、方向或分解关系。图中顺、逆风两边沿航线直接叠加速度；另两边需采用相反的迎风偏航方向。四边都必须按对地速度计算时间。
+\SolutionFigure{ex20}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 顺风、逆风的地速分别为 $u+w=128$ 和 $u-w=72\,\mathrm{km/h}$。另外两条边要抵消横风分量，因此沿航线地速为 $\sqrt{u^2-w^2}=96\,\mathrm{km/h}$。四边总时间为
 \[
-\boxed{t=\frac6{128}+\frac6{72}+\frac{12}{96}
-=\frac{49}{192}\,\mathrm h=15.3125\,\mathrm{min}.}
+t=\frac6{128}+\frac6{72}+\frac{12}{96}
+=\frac{49}{192}\,\mathrm h=15.3125\,\mathrm{min}.
 \]
 一般公式为 $t=2du/(u^2-w^2)+2d/\sqrt{u^2-w^2}$，需 $w<u$ 才能完成逆风边和保持横风边航迹。当风速趋零时恢复 $4d/u$。飞机的机头方向在横风边偏向迎风侧，地面轨迹仍沿正方形边，不能把机头航向与地面航迹混淆。
+\Step{初始条件、结论与适用范围} 侧风航段的迎风偏航角满足 $\sin\beta=w/u=0.28$，所以 $\beta\simeq16.26^\circ$。相反的两条侧风边具有相反的航线方向，但都必须把机头偏向迎风侧；四边的时间单位统一后才能相加。
+
+
 
 \subsection{加速度变换与摆线运动}
 
@@ -984,9 +1179,14 @@ t_{\perp}\simeq t_0[1+\tfrac12(w/u)^2].
 
 
 \example{纯滚动轮缘点的摆线运动}
-半径为 $R$ 的轮子沿水平地面向右纯滚动。令转角 $\phi$ 从轮缘点最初与地面接触时起算。纯滚动意味着轮心水平位移为 $R\phi$。
+半径为 $R>0$ 的圆轮在固定水平地面上向右纯滚动。轮缘材料点 $P$ 在初始时刻与地面接触，以该接触点为原点，$x$ 向右、$y$ 向上。令轮的顺时针转角为给定函数 $\phi(t)$，$\phi(0)=0$。求 $P$ 的摆线轨迹、速度与加速度；在匀角速率情形讨论轮顶和接地点的速度。
+几何与变量约定见图\ref{fig:question-ex21}。
+
+\QuestionFigure{ex21}{例21的研究对象、条件与变量}
 \OriginalFigure{cycloid_original}{纯滚动轮缘点 $M$、轮心 $O$ 和接触点 $C$，以及摆线的局部轮廓。}
-\solution 轮心平动与轮缘点相对轮心的圆周运动叠加，给出
+\solution \Step{模型与方向} 图\ref{fig:solution-ex21}给出解答所用的几何、方向或分解关系。图中的轮心平动位移为 $R\phi$，$P$ 相对轮心另作转动。分解图先把两个速度矢量相加，随后再对总位置求导。
+\SolutionFigure{ex21}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 轮心平动与轮缘点相对轮心的圆周运动叠加，给出
 \begin{equation}\label{eq:cycloid}
 x=R(\phi-\sin\phi),\qquad y=R(1-\cos\phi).
 \end{equation}
@@ -1039,23 +1239,35 @@ v=\sqrt{u^2(1-\cos\phi)^2+u^2\sin^2\phi}
 加速度有相同形式。下标表示“前者相对后者”，能够检查每个中间对象是否在相邻两项中抵消。
 
 \example{五位同学的相对速度链}\label{ex:velocitychain}
-$A$ 看 $B$ 以 $v_1$ 向东，$B$ 看 $C$ 以 $v_2$ 向南，$C$ 看 $D$ 以 $v_3$ 向西，$D$ 看 $E$ 以 $v_4$ 向北。取东为 $x$ 正向、北为 $y$ 正向，
+五位观察者的坐标轴始终平行，观测均在同一时刻进行。$A$ 看 $B$ 以 $v_1$ 向东，$B$ 看 $C$ 以 $v_2$ 向南，$C$ 看 $D$ 以 $v_3$ 向西，$D$ 看 $E$ 以 $v_4$ 向北，各 $v_i\ge0$。取东为 $+x$、北为 $+y$，求 $E$ 相对 $A$ 的速度、速率和方向，并给出相对静止的条件。
+几何与变量约定见图\ref{fig:question-ex22}。
+
+\QuestionFigure{ex22}{例22的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex22}给出解答所用的几何、方向或分解关系。图中的箭头按观察关系首尾相接，相对速度链可直接相加。东西、南北分量分别代数合成，箭头方向决定每项的符号。
+\SolutionFigure{ex22}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取东为 $x$ 正向、北为 $y$ 正向，
 \[
-\boxed{\vect v_{E/A}=(v_1-v_3)\vect e_x+(v_4-v_2)\vect e_y.}
+\vect v_{E/A}=(v_1-v_3)\vect e_x+(v_4-v_2)\vect e_y.
 \]
 若两分量都为零，$A$ 看到 $E$ 相对静止；否则根据分量的符号判断方向。相对速率为
 \[
 v_{E/A}=\sqrt{(v_1-v_3)^2+(v_4-v_2)^2}.
 \]
 若以南为 $y$ 正向，第二分量应写成 $v_2-v_4$。坐标分量随正方向的选择改变，物理矢量保持相同。
+\Step{初始条件、结论与适用范围} 四段相对速度的求和次序只改变绘图顺序，不改变合矢量。若 $v_1=v_3$ 且 $v_2=v_4$，合矢量闭合；若只有其中一对相等，合速度沿另一坐标轴。
+
+
 
 \example{太阳系圆轨道模型中的地心视轨迹}\label{ex:geocentric}
-将太阳近似固定，某行星和地球绕太阳的位矢分别为
-\[
-\vect r_P=R_P(\cos(n_Pt+\delta_P),\sin(n_Pt+\delta_P)),
-\quad \vect r_E=R_E(\cos(n_Et+\delta_E),\sin(n_Et+\delta_E)).
-\]
-地心系原点随地球运动、坐标轴始终与日心系平行，则
+将太阳近似固定，地球与某行星在同一平面内作匀速圆周运动，日心位矢为 $\vect r_E=R_E(\cos(n_Et+\delta_E),\sin(n_Et+\delta_E))$、$\vect r_P=R_P(\cos(n_Pt+\delta_P),\sin(n_Pt+\delta_P))$，各参数已知。地心系仅平动，其轴始终与日心轴平行。求地心位矢、速度和加速度，写出视方向角速度，讨论外行星同侧共线附近的逆行及会合周期。
+几何与变量约定见图\ref{fig:question-ex23}。
+
+\QuestionFigure{ex23}{例23的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex23}给出解答所用的几何、方向或分解关系。图中由地球 $E$ 指向行星 $P$ 的差矢量就是地心位矢。地心视轨迹与两条日心圆轨道不同，视方向变化由差矢量与相对速度共同决定。
+\SolutionFigure{ex23}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 地心系原点随地球运动、坐标轴始终与日心系平行，则
 \[
 \vect r'_P=\vect r_P-\vect r_E,\quad
 \vect v'_P=\vect v_P-\vect v_E,\quad
@@ -1074,23 +1286,26 @@ v_{E/A}=\sqrt{(v_1-v_3)^2+(v_4-v_2)^2}.
 \OriginalPanel{geocentric_venus_original}
 \hfill
 \OriginalPanel{geocentric_mars_original}
-\captionsetup{hypcap=false}\captionof{figure}{左上：太阳静止系中的水星、金星、地球和火星圆轨道模型；右上：地心系中的水星轨迹，取原动画代表帧；左下：地心系中的金星轨迹，取原动画代表帧；右下：地心系中的火星轨迹，取原动画代表帧。}\label{fig:orig-heliocentric_original}\label{fig:orig-geocentric_mercury_original}\label{fig:orig-geocentric_venus_original}\label{fig:orig-geocentric_mars_original}\end{minipage}\end{center}\par
+\captionsetup{hypcap=false}\captionof{figure}{左上：太阳静止系中的水星、金星、地球和火星圆轨道模型；右上：地心系中的水星轨迹，为一段运动轨迹示意；左下：地心系中的金星轨迹，为一段运动轨迹示意；右下：地心系中的火星轨迹，为一段运动轨迹示意。}\label{fig:orig-heliocentric_original}\label{fig:orig-geocentric_mercury_original}\label{fig:orig-geocentric_venus_original}\label{fig:orig-geocentric_mars_original}\end{minipage}\end{center}\par
 
 \subsection{拉船轨迹与平动凸轮的建模}\label{topic:boatcam}
 \example{匀速收绳的小船轨迹}\label{ex:boat}
-河水沿岸方向匀速流动，速度为 $v_1$；岸上固定点 $A$ 收绳，收绳速度为 $v_2>0$。以 $A$ 为极点、下游方向为极轴。若采用小船随水流运动的运动学模型，其条件为
-\[
-\dot r=-v_2,\qquad r\dot\theta=-v_1\sin\theta.
-\]
-第二式意味着船的\emph{横向速度持续等于水流的横向投影}；这是相应水动力随流近似，而不只是初始条件。由两式相除，记 $k=v_2/v_1$，
+岸上固定点 $A$ 以恒定收绳速率 $v_2>0$ 拉动河面小船，河水沿下游以恒速 $v_1>0$ 流动。以 $A$ 为极点、下游为极轴，采用小船持续随流的运动学近似：$\dot r=-v_2$、$r\dot\theta=-v_1\sin\theta$。初始 $r=r_0>0,\theta=\theta_0\in(0,\pi)$。求轨道 $r(\theta)$、$r(t)$、$\theta(t)$ 和到达岸点的时间，并说明模型假设与速度合成的含义。
+几何与变量约定见图\ref{fig:question-ex24}。
+
+\QuestionFigure{ex24}{例24的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex24}给出解答所用的几何、方向或分解关系。图中的收绳速度沿 $-\er$；随流近似规定横向速度等于水流在 $\et$ 上的投影。它是持续成立的模型条件，不能只在初始时刻使用。
+\SolutionFigure{ex24}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 第二式意味着船的\emph{横向速度持续等于水流的横向投影}；这是相应水动力随流近似，而不只是初始条件。由两式相除，记 $k=v_2/v_1$，
 \[
 \frac{\dd r}{r}=k\frac{\dd\theta}{\sin\theta}
 =k\,\dd\ln\tan\frac\theta2.
 \]
 给定初始 $(r_0,\theta_0)$，积分得
 \[
-\boxed{r=r_0\left(\frac{\tan(\theta/2)}{\tan(\theta_0/2)}\right)^k,\quad
-r(t)=r_0-v_2t,\quad0\leq t<r_0/v_2.}
+r=r_0\left(\frac{\tan(\theta/2)}{\tan(\theta_0/2)}\right)^k,\quad
+r(t)=r_0-v_2t,\quad0\leq t<r_0/v_2.
 \]
 将 $r(t)$ 代回轨道，得 $\theta(t)=2\arctan[\tan(\theta_0/2)(1-v_2t/r_0)^{1/k}]$。角度下降，船向固定点靠近。
 
@@ -1103,15 +1318,21 @@ r(t)=r_0-v_2t,\quad0\leq t<r_0/v_2.}
 \OriginalFigure{boat_original}{岸点 $A$、小船 $M$、绳长 $r$ 与水流速度；$\theta$ 按图中方向量取。}
 
 \example{平动圆凸轮推动竖直顶杆}\label{ex:cam}
-半径 $R$ 的圆凸轮中心 $C$ 向右运动，瞬时速度为 $u$、加速度为 $a_0$。顶杆只能竖直运动，其接触点 $A$ 的横坐标为常数 $x_A$。取 $q=x_A-x_C$，接触点相对圆心的高度为 $y>0$。
-\solution \textbf{约束求导法。} 接触条件为 $q^2+y^2=R^2$，且 $\dot q=-u$、$\ddot q=-a_0$，所以
+一个半径为 $R>0$ 的圆凸轮在固定平面内水平平动，圆心为 $C$，瞬时速度 $\dot x_C=u$、加速度 $\ddot x_C=a_0$。顶杆只能沿固定直线 $x=x_A$ 竖直运动，接触点 $A$ 始终位于圆心上方的圆周。令 $q=x_A-x_C$、$y=y_A-y_C>0$，且 $|q|<R$。求顶杆的瞬时速度与加速度，并说明接近侧端时的几何局限。
+几何与变量约定见图\ref{fig:question-ex25}。
+
+\QuestionFigure{ex25}{例25的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex25}，解答图\ref{fig:solution-ex25}展示接触点 $A$ 的绝对速度由圆心平动与圆周相对切向速度合成，水平分量必须为零。图取 $q>0,u>0$，所以顶杆向上；对题图中的 $q^2+y^2=R^2$ 求导可把这一几何抵消写为代数关系。
+\SolutionFigure{ex25}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} \textbf{约束求导法。} 接触条件为 $q^2+y^2=R^2$，且 $\dot q=-u$、$\ddot q=-a_0$，所以
 \[
 2q(-u)+2y\dot y=0\quad\Longrightarrow\quad\dot y=\frac{qu}{y}.
 \]
 再求导，$\dot q^2+q\ddot q+\dot y^2+y\ddot y=0$，故
 \[
-\boxed{v_{AB}=\frac{qu}{y},\qquad
- a_{AB}=\frac{qa_0}{y}-\frac{R^2u^2}{y^3}.}
+v_{AB}=\frac{qu}{y},\qquad
+ a_{AB}=\frac{qa_0}{y}-\frac{R^2u^2}{y^3}.
 \]
 \textbf{平动变换与自然坐标法。} 在以 $C$ 为原点、轴向保持平行的动系中，$A$ 沿圆周运动，且 $v'_x=-u$、$a'_x=-a_0$。令半径 $CA$ 与水平线夹角为 $\varphi$，$q=R\cos\varphi$、$y=R\sin\varphi$，则圆周切线的横向分量给出 $v'\sin\varphi=u$，法向加速度为 $v'^2/R$。因此
 \[
@@ -1120,6 +1341,9 @@ v_y=v'\cos\varphi=u\cot\varphi,\qquad
 \]
 与约束求导法相同。在 $\sin\varphi\to0$ 且 $u\neq0$ 时出现几何奇异，理想刚性持续接触条件不能据此推出有限的实际顶杆加速度。
 \OriginalFigure{cam_original}{平动圆凸轮推动竖直顶杆 $AB$。图中 $v_0$ 对应正文的水平速度 $u$。}
+\Step{初始条件、结论与适用范围} 先由 $q^2+y^2=R^2$ 及 $\dot q=-u$ 得 $\dot y=qu/y$。再次求导得到 $\ddot y=(-u^2+qa_0)/y-q^2u^2/y^3=qa_0/y-R^2u^2/y^3$。后一等式使用了 $q^2+y^2=R^2$，量纲均为长度除时间平方。接近 $|q|=R$ 时 $y\to0$，理想几何要求的速度或加速度可能发散，不能据此断言真实顶杆能保持接触。
+
+
 
 \section{牛顿定律与动力学建模}\label{sec:newton}
 
@@ -1152,18 +1376,43 @@ v_y=v'\cos\varphi=u\cot\varphi,\qquad
 
 
 
-\subsubsection*{力律、约束关系与受力图}
-常用力律包括 $m\vect g$、$-kx\vect e_x$、$-b\vect v$、$-k|\vect v|\vect v$ 和径向平方反比力。支持力、绳张力则经常不是题面直接给出的函数，它们要与运动方程和几何约束联立确定。
+
+\subsubsection*{力的具体表达式、约束关系与受力图}
+\textbf{力的作用规律}（也称“力律”）是说明力怎样依赖位置、速度或时间的物理关系，通常写作 $\vect F=\vect F(\vect r,\vect v,t)$。例如“线性阻力”就指定阻力与物体相对介质的速度成正比且方向相反。牛顿第二定律 $m\vect a=\sum\vect F$ 说明合力产生怎样的加速度；只有再给各实际力的具体表达式，才能形成可求解的运动方程。
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l l X@{}}\toprule
+物理作用&表达式&含义与使用条件\\\midrule
+近地面重力&$m\vect g$&在尺度不大时将 $\vect g$ 近似为常矢量。\\
+一维理想弹簧&$-k(x-x_{\rm eq})\vect e_x$&$k>0$；$x_{\rm eq}$ 是弹簧力为零的位置。\\
+线性介质阻力&$-b(\vect v-\vect v_a)$&$b>0$；$\vect v_a$ 为介质对地速度，适用范围由阻力模型决定。\\
+平方介质阻力&$-k|\vect v-\vect v_a|(\vect v-\vect v_a)$&$k>0$；大小正比相对速率平方。\\
+球对称天体外引力&$-GMm\vect r/r^3$&$\vect r$ 从天体中心指向质点，$r$ 在球体外。\\\bottomrule
+\end{tabularx}\end{center}
+支持力与绳张力通常是尚未知的约束力：须将牛顿方程与接触、绳长等几何条件联立求出，并核对支持力、张力允许的方向。不能把“下滑力”“向心力”另当成额外实际力重复加入受力图。
+
 
 光滑接触面只能沿法线施力；理想轻绳只能沿绳方向拉物体。双侧约束（如套在钢丝上的小环）可以在几何法线的两侧传递作用；单侧接触面通常只能推不能拉。写一个未知法向分量时，应先声明正方向，求解后再检查其符号和约束能否维持。
 
 \example{固定斜面上的受力与加速度}
-质量为 $m$ 的滑块位于倾角 $\alpha$ 的固定光滑斜面上，斜面不动。求下滑加速度与支持力。
-\solution 取切向沿斜面向下、法向离开斜面。重力分量为 $mg\sin\alpha$ 和 $-mg\cos\alpha$。轨道是直线，所以法向加速度为零，
+质量为 $m>0$ 的小滑块置于固定光滑直斜面上，斜面与水平夹角为 $0<\alpha<\pi/2$。地面系视为惯性系，重力加速度为 $g$，忽略空气阻力，滑块只受重力和斜面支持力。以释放点为 $s=0$，沿斜面向下为正，给定 $s(0)=0,\dot s(0)=v_0\ge0$。画出受力及分解关系，求加速度、支持力、位移和速度随时间的变化；再用功和动能关系求下滑距离 $d>0$ 后的速率。
+几何与变量约定见图\ref{fig:question-ex26}。
+
+\QuestionFigure{ex26}{例26的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex26}给出解答所用的几何、方向或分解关系。图中支持力 $N$ 沿离开斜面的法线，重力沿竖直向下。解答图使用沿斜面的 $\vect e_s$ 和外法线 $\vect e_n$，只有实际力的投影进入两条牛顿方程。
+\SolutionFigure{ex26}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取切向沿斜面向下、法向离开斜面。重力分量为 $mg\sin\alpha$ 和 $-mg\cos\alpha$。轨道是直线，所以法向加速度为零，
 \[
 m\ddot s=mg\sin\alpha,\qquad N-mg\cos\alpha=0.
 \]
 得到 $\ddot s=g\sin\alpha$、$N=mg\cos\alpha$。若再把“下滑力”或“向心力”另加到图中，就会把已有重力分量重复计算。自由楔块的斜面会移动，后面将看到它不能直接沿用这一固定斜面答案。
+\Step{初始条件、结论与适用范围} \[\dot s(t)=v_0+g\sin\alpha\,t,\qquad s(t)=v_0t+\frac12g\sin\alpha\,t^2.\]
+下滑距离 $d$ 时，支持力垂直位移，其功为零；重力功为 $mgd\sin\alpha$。因而
+\[\frac12mv_d^2-\frac12mv_0^2=mgd\sin\alpha,\qquad v_d=\sqrt{v_0^2+2gd\sin\alpha}.\]
+若需要到达时间，取二次方程的非负根
+\[t_d=\frac{\sqrt{v_0^2+2gd\sin\alpha}-v_0}{g\sin\alpha}.\]
+这里 $N>0$ 保证接触可以维持；$\alpha\to0$ 时加速度趋零、支持力趋于 $mg$。固定直斜面的法向加速度为零，来自几何约束，不是因为“没有法向力”。
+
 
 
 \subsection{三种坐标系中的动力学方程}\label{topic:newtoncomponents}
@@ -1247,29 +1496,45 @@ x(t)=x_0+v_0(t-t_0)+\frac1m\int_{t_0}^{t}(t-\tau)F(\tau)\,\dd\tau.
 交换积分次序，每个时刻 $q$ 的力对从 $q$ 到 $t$ 的位置都有贡献，其持续时间为 $t-q$，所以得到核函数 $(t-q)$。对位置公式求一次导数，上限项因 $t-q=0$ 消失；求第二次导数恰好恢复 $F(t)/m$。这种核验同时检查了积分常数和初始条件。
 
 \example{周期变化的外力与初始条件}
-质量 $m$ 的质点在直线上受力 $F(t)=F_0\cos\omega t$，$\omega>0$，且 $x(0)=0,\ v(0)=v_0$。
-\solution 依次积分而不遗漏初始速度：
+质量为 $m>0$ 的质点被限制在固定直线上，沿 $+x$ 方向的合外力为 $F(t)=F_0\cos\omega t$，$F_0>0,\omega>0$。初始 $x(0)=0,\dot x(0)=v_0$。求速度和位置随时间的变化，区分周期振荡部分与匀速漂移部分，并求一个力周期后的速度与位移。
+几何与变量约定见图\ref{fig:question-ex27}。
+
+\QuestionFigure{ex27}{例27的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex27}给出解答所用的几何、方向或分解关系。图中外力的正负交替只说明加速度交替。速度曲线的常数项由 $v_0$ 决定，因此零平均力并不自动使一个周期内的位移为零。
+\SolutionFigure{ex27}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 依次积分而不遗漏初始速度：
 \[
 v(t)=v_0+\frac{F_0}{m\omega}\sin\omega t,
 \qquad
 x(t)=v_0t+\frac{F_0}{m\omega^2}(1-\cos\omega t).
 \]
 加速度是周期函数，却不保证位置也是周期函数；$v_0\ne0$ 时含有匀速漂移。一个周期内净冲量为零，因而速度回到原值，但位移为 $2\pi v_0/\omega$。$\omega\to0$ 时，用 $1-\cos\omega t\simeq\omega^2t^2/2$，恢复恒力运动。
+\Step{初始条件、结论与适用范围} 记 $T=2\pi/\omega$，积分后有 $v(T)=v_0$、$x(T)=v_0T$。这表明周期力的零平均值约束速度增量为零，但初始漂移仍累计位移；仅在 $v_0=0$ 时本题运动在一个力周期后回到原点。
 
 
 
 \example{自由电子在振荡电场中的运动}\label{ex:electron}
-电场沿 $x$ 方向，$E_x=E_0\cos(\omega t+\delta)$；电子电荷为 $-e$，其中 $e>0$，质量为 $m$。已知 $x(0)=x_0$、$\dot x(0)=v_0$。
-\solution 牛顿方程为 $m\ddot x=-eE_0\cos(\omega t+\delta)$。第一次定积分给出
+电子质量为 $m$、电荷为 $-e$，$e>0$，在空间均匀、沿 $x$ 方向的振荡电场 $E_x=E_0\cos(\omega t+\delta)$ 中运动，$\omega>0$。忽略其他力和辐射损耗，采用非相对论近似；初始位置、速度分别为 $x_0,v_0$。求电子的速度与位置，分离漂移与振荡项，并讨论相位 $\delta$ 和初速对运动的影响。
+几何与变量约定见图\ref{fig:question-ex28}。
+
+\QuestionFigure{ex28}{例28的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex28}给出解答所用的几何、方向或分解关系。图中的电场方向与电子所受电力方向相反。沿选定 $x$ 轴写 $F_x=-eE_x$，再逐次积分并使用两个初始条件。
+\SolutionFigure{ex28}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 牛顿方程为 $m\ddot x=-eE_0\cos(\omega t+\delta)$。第一次定积分给出
 \[
 v(t)=v_0-\frac{eE_0}{m\omega}[\sin(\omega t+\delta)-\sin\delta].
 \]
 第二次积分，
 \begin{equation}\label{eq:electron}
-\boxed{x(t)=x_0+\left(v_0+\frac{eE_0\sin\delta}{m\omega}\right)t
-+\frac{eE_0}{m\omega^2}[\cos(\omega t+\delta)-\cos\delta].}
+x(t)=x_0+\left(v_0+\frac{eE_0\sin\delta}{m\omega}\right)t
++\frac{eE_0}{m\omega^2}[\cos(\omega t+\delta)-\cos\delta].
 \end{equation}
 式中有初始位置项、匀速漂移项以及与电场同频的受迫振荡项。对本模型而言振荡项的振幅是 $eE_0/(m\omega^2)$，初始状态决定额外的漂移。代入 $t=0$ 可逐一核对两个初始条件；再求二阶导数可核对电荷的负号。振荡响应与波传播存在联系，但介质极化和电磁波传播规律还需要麦克斯韦方程，不能仅凭单电子运动方程得出。
+\Step{初始条件、结论与适用范围} 将积分结果写为 $v(t)=v_d-eE_0\sin(\omega t+\delta)/(m\omega)$，其中 $v_d=v_0+eE_0\sin\delta/(m\omega)$。再次积分为 $x(t)=x_0+v_dt+eE_0[\cos(\omega t+\delta)-\cos\delta]/(m\omega^2)$。求导回代 $m\ddot x=-eE_x$ 并代入 $t=0$，分别核对力的符号与两个初始条件。
+
+
 
 \subsection{速度相关力：分离变量与终端速度}\label{topic:drag}
 一维方程 $m\dot v=F(v)$ 可以分离变量：
@@ -1292,8 +1557,14 @@ $\tau_d$ 是速度偏离终端值衰减到原来的 $\mathrm e^{-1}$ 倍所需�
 
 
 \example{线性阻力中的抛射体}
-设阻力为 $\vect F_{\rm d}=-b\vect v$，$b>0$；取竖直向上为 $y$ 正方向。初始位置为原点，初速度分量为 $v_{x0},v_{y0}$。令 $\lambda=b/m$。
-\solution 两个分量满足
+质量为 $m>0$ 的抛射体受到重力和线性空气阻力 $\vect F_d=-b\vect v$，$b>0$，空气相对地面静止。取 $x$ 水平向右、$y$ 竖直向上，初始位置为原点、速度分量为 $v_{x0},v_{y0}>0$。求两个速度分量和位置随时间的变化，给出最高点时刻及高度，并说明无阻力极限。
+几何与变量约定见图\ref{fig:question-ex29}。
+
+\QuestionFigure{ex29}{例29的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex29}给出解答所用的几何、方向或分解关系。图中阻力始终与瞬时速度反向，两个固定轴方向的方程可分开求解；上升和下降过程中重力始终向下。
+\SolutionFigure{ex29}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 两个分量满足
 \[
 \dot v_x=-\lambda v_x,\qquad
 \dot v_y=-\lambda v_y-g.
@@ -1318,6 +1589,9 @@ y=\frac{v_{y0}+g/\lambda}{v_{x0}}x
 在无限延伸的理想介质中，$v_x\to0$，$v_y\to-g/\lambda$，水平位移趋近 $v_{x0}/\lambda$。有地面时运动应在落地时终止，不能把这一极限当作实际射程。令 $\lambda\to0$ 并展开指数或对数，应恢复无阻力抛体公式。
 
 
+
+\Step{初始条件、结论与适用范围} 最高点由 $v_y(t_h)=0$ 得 $t_h=\lambda^{-1}\ln(1+\lambda v_{y0}/g)$。代入高度表达式后可化为 $y_h=v_{y0}/\lambda-(g/\lambda^2)\ln(1+\lambda v_{y0}/g)$。用 $\ln(1+z)=z-z^2/2+\cdots$ 得 $y_h\to v_{y0}^2/(2g)$；这一步也核对了含 $1/\lambda$ 的两项相消。
+
 \subsubsection*{抛射最高点与无阻力极限}
 若 $v_{y0}>0$，最高点满足 $v_y(t_h)=0$，所以
 \[
@@ -1335,10 +1609,15 @@ y=v_{y0}t-\tfrac12gt^2+O(\lambda).
 \]
 轨道式中的对数要求 $1-\lambda x/v_{x0}>0$；这既是实数函数的定义域，也是水平位移有渐近上限的物理信息。
 
-
 \example{平方阻力下的无初速下落}
-取竖直向下为正，初始 $v(0)=0$；下落时阻力为 $-kv^2$，$k>0$。
-\solution 方程为 $m\dot v=mg-kv^2$。定义极限速度 $v_\infty=\sqrt{mg/k}$，则
+质量为 $m>0$ 的质点在静止介质中由静止竖直下落。取释放点为原点、向下为正，重力为 $mg$，下落时阻力大小为 $kv^2$，$k>0$，方向向上。求速度和下落距离随时间的变化、终端速率及其建立时间尺度，并考察短时间和长时间极限。
+几何与变量约定见图\ref{fig:question-ex30}。
+
+\QuestionFigure{ex30}{例30的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex30}给出解答所用的几何、方向或分解关系。图中重力与阻力相反，且阻力随速率增大。终端速率由两力平衡确定，实际释放过程则要解初值问题。
+\SolutionFigure{ex30}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 方程为 $m\dot v=mg-kv^2$。定义极限速度 $v_\infty=\sqrt{mg/k}$，则
 \[
 \frac{\dd v}{1-v^2/v_\infty^2}=g\,\dd t.
 \]
@@ -1350,6 +1629,9 @@ x(t)=\frac{v_\infty^2}{g}\ln\cosh\frac{gt}{v_\infty}.
 在短时间极限，$v\simeq gt,\ x\simeq gt^2/2$；在长时间极限，速率趋向 $v_\infty$。若还讨论上升阶段，阻力应写为 $-kv|v|$，不能始终用 $-kv^2$。
 
 
+
+
+\Step{初始条件、结论与适用范围} 令 $v_T=\sqrt{mg/k}$、$\tau=v_T/g$。分离变量 $\int_0^{v/v_T}\dd u/(1-u^2)=t/\tau$，得 $v=v_T\tanh(t/\tau)$；再积分得 $s=(v_T^2/g)\ln\cosh(t/\tau)$。短时 $v=gt+O(t^3)$、$s=gt^2/2+O(t^4)$；长时 $v\to v_T$，且 $s-v_Tt\to-(v_T^2/g)\ln2$。
 
 \subsubsection*{平方阻力积分的细节}
 令 $q=v/v_\infty$，分离变量后有
@@ -1389,9 +1671,9 @@ z=\frac{v_\infty^2}{g}\ln\cosh(gt/v_\infty).
 \]
 令 $z=h$ 后可以显式求出
 \[
-\boxed{t_h=\frac{v_\infty}{g}\operatorname{arcosh}
+t_h=\frac{v_\infty}{g}\operatorname{arcosh}
 (e^{gh/v_\infty^2}),\qquad
-v_h=v_\infty\sqrt{1-e^{-2gh/v_\infty^2}}.}
+v_h=v_\infty\sqrt{1-e^{-2gh/v_\infty^2}}.
 \]
 第二式也可由 $mv\,\dd v/\dd z=mg-kv^2$ 直接积分得到。弱阻力极限中，$e^{-2gh/v_\infty^2}\approx1-2gh/v_\infty^2$，所以 $v_h\to\sqrt{2gh}$、$t_h\to\sqrt{2h/g}$。两种模型在有限落地前都只\emph{趋近}终端速度，不会在有限时刻精确达到它。
 
@@ -1427,12 +1709,20 @@ t-t_0=\int_{x_0}^{x(t)}\frac{\dd\xi}{\pm\sqrt{Q(\xi)}}.
 允许区域为 $Q(x)\geq0$。根号内出现负值并不是“虚速度”，而是当前初始条件不能到达该位置。
 
 \example{线性恢复力：从速度关系恢复完整运动}
-质点受力 $F=-kx$，在 $x(0)=A>0$ 处静止释放。令 $\omega_0=\sqrt{k/m}$。
-\solution 积分得到 $v^2=\omega_0^2(A^2-x^2)$。初始加速度向左，因此第一次经过平衡点之前应取
+质量为 $m>0$ 的质点在固定直线上只受恢复力 $F_x=-kx$，$k>0$，从 $x(0)=A>0$ 处静止释放。先由 $v\,\dd v/\dd x$ 求速度与位置的关系，再恢复带初始相位的完整运动，求周期和最大速率，说明通过转向点时速度符号的处理。
+几何与变量约定见图\ref{fig:question-ex31}。
+
+\QuestionFigure{ex31}{例31的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex31}给出解答所用的几何、方向或分解关系。图中 $x=0$ 是平衡位置，恢复力与位移反向。相图有两个速度分支，不能把由能量得到的 $v^2$ 关系直接当作全程带符号速度。
+\SolutionFigure{ex31}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 积分得到 $v^2=\omega_0^2(A^2-x^2)$。初始加速度向左，因此第一次经过平衡点之前应取
 \[
 \dot x=-\omega_0\sqrt{A^2-x^2}.
 \]
 从 $A$ 积分到 $x$，有 $\arccos(x/A)=\omega_0t$，所以 $x=A\cos\omega_0t$。当 $x=-A$ 时速度为零，此后沿正方向返回。微分方程直接给出完整周期解；分离积分法则清楚呈现允许区间和转向点，但必须处理解支。
+\Step{初始条件、结论与适用范围} 从牛顿方程 $m\ddot x=-kx$ 开始，记 $\omega_0=\sqrt{k/m}$，利用 $\ddot x=v\,\dd v/\dd x$，积分 $\int_0^v v\,\dd v=-\omega_0^2\int_A^x x\,\dd x$ 就得到前述速度平方关系。完整运动的速度为 $-A\omega_0\sin\omega_0t$，最大速率 $A\omega_0$，周期 $2\pi/\omega_0$。
+
 
 
 \subsection{线性方程：简谐运动与阻尼运动}\label{topic:linear}
@@ -1478,8 +1768,14 @@ B=\frac{\lambda_+x_0-v_0}{\lambda_+-\lambda_-}.
 
 
 \example{晶体点阵附近的三维各向异性振动}\label{ex:crystal}
-在平衡点附近，三个方向的力分别为 $F_x=-k_xx$、$F_y=-k_yy$、$F_z=-k_zz$，$k_i>0$。已知三个初始位置和速度。
-\solution 方程 $\ddot x+\omega_x^2x=0$ 中 $\omega_x=\sqrt{k_x/m}$，其余类似。直接用初始条件写为
+质量为 $m>0$ 的粒子在某平衡位置附近受到线性恢复力 $F_x=-k_xx,F_y=-k_yy,F_z=-k_zz$，各 $k_i>0$。忽略更高阶位移项，给定三个初始位置 $x_{i0}$ 和初始速度 $v_{i0}$。求三维运动、三个本征频率和总机械能，并说明频率比对轨道是否闭合的影响。
+几何与变量约定见图\ref{fig:question-ex32}。
+
+\QuestionFigure{ex32}{例32的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex32}给出解答所用的几何、方向或分解关系。图中的三个坐标轴通过平衡点，各方向恢复力只依赖同一方向位移。因此先分别求三个一维初值解，再组合为空间轨迹。
+\SolutionFigure{ex32}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 方程 $\ddot x+\omega_x^2x=0$ 中 $\omega_x=\sqrt{k_x/m}$，其余类似。直接用初始条件写为
 \[
 x=x_0\cos\omega_xt+\frac{v_{x0}}{\omega_x}\sin\omega_xt,
 \quad y=y_0\cos\omega_yt+\frac{v_{y0}}{\omega_y}\sin\omega_yt,
@@ -1500,21 +1796,32 @@ z=z_0\cos\omega_zt+\frac{v_{z0}}{\omega_z}\sin\omega_zt.
 或者把 $\vect z=(\vect q,\dot{\vect q})$ 化为一阶系统，求其 $2n$ 阶矩阵的特征值。重根时还需检查特征向量是否齐全；若不齐全，解包含 $t e^{\lambda t}$ 等项。
 
 \example{两个方向的线性耦合如何化为独立模态}\label{ex:coupledmode}
-质量 $m$ 的二维质点满足
-\[
-m\ddot x=-2kx+ky,\qquad m\ddot y=kx-2ky.
-\]
-取 $\eta_1=(x+y)/\sqrt2$、$\eta_2=(x-y)/\sqrt2$。相加、相减后
+质量为 $m>0$ 的二维质点在固定惯性坐标系中满足 $m\ddot x=-2kx+ky$、$m\ddot y=kx-2ky$，$k>0$。初始位置为 $(x_0,y_0)$、初始速度为 $(u_0,w_0)$。引入 $\eta_1=(x+y)/\sqrt2$、$\eta_2=(x-y)/\sqrt2$，求两个独立模态的频率和完整运动，再恢复 $x(t),y(t)$。
+几何与变量约定见图\ref{fig:question-ex33}。
+
+\QuestionFigure{ex33}{例33的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex33}给出解答所用的几何、方向或分解关系。解答图中的两条对角方向分别对应同向、反向位移。沿这两个方向投影后，原来耦合的两个方程才变为独立的一维振动。
+\SolutionFigure{ex33}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取 $\eta_1=(x+y)/\sqrt2$、$\eta_2=(x-y)/\sqrt2$。相加、相减后
 \[
 \ddot\eta_1+\frac km\eta_1=0,\qquad
 \ddot\eta_2+\frac{3k}{m}\eta_2=0.
 \]
 分别用初始 $\eta_i(0),\dot\eta_i(0)$ 写简谐解，再用 $x=(\eta_1+\eta_2)/\sqrt2$、$y=(\eta_1-\eta_2)/\sqrt2$ 恢复原坐标。这展示了模态分离的实际步骤。
+\Step{初始条件、结论与适用范围} 初值投影为 $\eta_{10}=(x_0+y_0)/\sqrt2$、$\dot\eta_{10}=(u_0+w_0)/\sqrt2$、$\eta_{20}=(x_0-y_0)/\sqrt2$、$\dot\eta_{20}=(u_0-w_0)/\sqrt2$。分别取 $\omega_1=\sqrt{k/m}$、$\omega_2=\sqrt{3k/m}$，写出 $\eta_i=\eta_{i0}\cos\omega_it+(\dot\eta_{i0}/\omega_i)\sin\omega_it$，再作逆变换。只写频率而不投影初值，不能确定给定初态的实际运动。
+
 
 
 \example{正交匀强电磁场中的带电粒子}\label{ex:crossedfields}
-取 $\vect E=E\vect e_y$、$\vect B=B\vect e_z$，电荷为 $q$，质量为 $m$，初始位置为原点，初速为 $V\vect e_x$。设 $B\neq0$、$q\neq0$，$q$ 为带符号的电荷，以下公式同时适用于正、负电荷。
-\solution 洛伦兹力给出
+在固定惯性坐标中取均匀电场 $\vect E=E\vect e_y$、均匀磁场 $\vect B=B\vect e_z$，$B\ne0$。粒子质量为 $m>0$、带符号电荷为 $q\ne0$，初始位于原点，初速为 $V\vect e_x$。忽略其他作用，采用非相对论洛伦兹力。求平面速度、轨道和电磁漂移速度，说明电荷符号与初速怎样影响回旋方向和轨迹。
+几何与变量约定见图\ref{fig:question-ex34}。
+
+\QuestionFigure{ex34}{例34的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex34}，解答图\ref{fig:solution-ex34}展示速度平面中以漂移速度 $v_d=E/B$ 为圆心的回旋；图示 $\omega_c>0,V>v_d>0$，剩余速度顺时针转动。平移速度原点消去恒定电驱动后，再积分速度才能恢复位置轨迹。
+\SolutionFigure{ex34}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 洛伦兹力给出
 \[
 m\ddot x=qB\dot y,\quad m\ddot y=qE-qB\dot x,\quad m\ddot z=0.
 \]
@@ -1531,17 +1838,22 @@ v_y(t)&=-(V-E/B)\sin\omega_ct.
 \end{align*}
 再积分 $v_x$ 并用初始位置，得到
 \[
-\boxed{x(t)=\frac EB t+\frac{V-E/B}{\omega_c}\sin\omega_ct,\qquad z(t)=0.}
+x(t)=\frac EB t+\frac{V-E/B}{\omega_c}\sin\omega_ct,\qquad z(t)=0.
 \]
 在以速度 $\vect v_d=\vect E\times\vect B/B^2=(E/B)\vect e_x$ 平动的参考系中，轨迹为圆；原参考系中的轨迹为圆运动与匀速漂移合成的旋轮线类曲线。$V=E/B$ 时洛伦兹力相消，质点匀速直行；$E=0$ 时恢复纯磁场圆周运动。磁场不做功，$\dd T/\dd t=qE\dot y$，所以 $T-qEy$ 保持不变，可以用来核验解。
 
 \TeachingFigure{c1-diagram-15}{正交匀强电磁场中的回旋与漂移。图取 $\omega_c=qB/m>0$、$v_d=E/B>0$、$V=2v_d$；箭头给出粒子的行进方向。}
 
-
 \subsection{均匀球体内部的引力与地心隧道}\label{topic:gravitytunnel}
 \example{穿过地心的理想隧道及线性阻力}
-将球形天体视为半径 $R$、密度恒定的球体，表面重力加速度为 $g$。一条直隧道沿直径贯穿球体，忽略自转、隧道挖掘造成的引力改变和空气阻力。质点从一端静止释放，求到另一端的时间；再讨论阻力为 $-b\dot x$ 的情况。
-\solution 取地心为原点，沿隧道的有符号坐标为 $x$，初态 $x(0)=R,\dot x(0)=0$。球对称性及球壳定理给出半径 $r$ 内质量
+把球形天体近似为半径 $R$、密度均匀的球体，表面重力加速度为 $g$。沿直径开理想直隧道，忽略天体自转、挖掘对引力分布的影响及隧道壁作用。质点从一端由静止释放。求球内引力、运动规律和首次到另一端的时间；再加入沿隧道的线性阻力 $-b\dot x$，讨论是否仍能到达另一端表面。
+几何与变量约定见图\ref{fig:question-ex35}。
+
+\QuestionFigure{ex35}{例35的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex35}给出解答所用的几何、方向或分解关系。图中的 $x=0$ 位于球心，两端为 $x=\pm R$。球内引力与 $x$ 成正比且指向球心；阻尼图还标出与无阻尼不同的振幅衰减。
+\SolutionFigure{ex35}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取地心为原点，沿隧道的有符号坐标为 $x$，初态 $x(0)=R,\dot x(0)=0$。球对称性及球壳定理给出半径 $r$ 内质量
 \[
 M(r)=\frac{4\pi}3\rho r^3=M\frac{r^3}{R^3}.
 \]
@@ -1586,7 +1898,6 @@ x=R\mathrm e^{-\gamma t}\left(\cosh\alpha t+
 $\ddot x=-GM(|x|)x/|x|^3$，再由实际质量分布求解。
 \OriginalFigure{earth_tunnel}{理想地心隧道模型：质点由地表沿穿过地心的直线轨道释放。}
 
-
 \subsection{运动方程的数值求解}\label{topic:numerical}
 一般非线性方程没有方便的初等解析解，可把二阶方程改写为一阶方程组：
 \[
@@ -1618,8 +1929,14 @@ E_{n+1}=(1+\omega_0^2h^2)E_n.
 对于光滑、时间无关的位置力，该方法具有二阶精度，并适合长时间保守运动；速度相关力不能直接照搬这一递推。
 
 \example{弹簧摆的数值求解}\label{ex:springnumeric}
-取 $x$ 向右、$y$ 向上，原长 $l=1.0\,\mathrm m$、质量 $m=1.0\,\mathrm{kg}$、劲度 $k=40\,\mathrm{N/m}$、$g=9.8\,\mathrm{m/s^2}$。小球初始位于 $(-l,0)$，初速度为零。弹簧理想化为可伸可压的无质量弹簧。
-\solution $r=\sqrt{x^2+y^2}$，直角坐标方程为
+固定点 $O$ 连接一根无质量、可伸可压的理想弹簧，原长 $l=1.0\,\mathrm m$、劲度 $k=40\,\mathrm{N/m}$，端点小球质量 $m=1.0\,\mathrm{kg}$。取 $x$ 向右、$y$ 向上，$g=9.8\,\mathrm{m/s^2}$，小球初始位于 $(-l,0)$、初速为零。建立笛卡尔分量方程和能量表达式，给出可复现的数值积分步骤，并用能量误差判断数值结果的可靠程度。
+几何与变量约定见图\ref{fig:question-ex36}。
+
+\QuestionFigure{ex36}{例36的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex36}给出解答所用的几何、方向或分解关系。图中的弹簧力沿小球与固定点的连线，其系数含实际长度 $r=\sqrt{x^2+y^2}$。数值积分应同时推进两个位置和两个速度，不能分别套用两个不相关的一维弹簧模型。
+\SolutionFigure{ex36}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} $r=\sqrt{x^2+y^2}$，直角坐标方程为
 \[
 \ddot x=-\frac{k}{m}(r-l)\frac xr,\qquad
 \ddot y=-g-\frac{k}{m}(r-l)\frac yr.
@@ -1637,16 +1954,21 @@ E=\frac12m(v_x^2+v_y^2)+\frac12k(r-l)^2+mgy
 \section{约束运动与加速平动参考系}\label{sec:constraints}
 \subsection{光滑约束：切向运动与法向反力}\label{topic:constraint}
 \example{小环沿抛物线钢索下滑}
-质量为 $m$ 的小环套在固定光滑钢索 $x^2=4ay$ 上，$a>0$，从横坐标 $x=2a$、即高度 $y=a$ 处静止释放。求到达最低点时的速率和支持力。
+质量为 $m>0$ 的小环套在固定竖直平面内的光滑钢索 $x^2=4ay$ 上，$a>0$。取 $y$ 竖直向上，小环从 $(2a,a)$ 静止释放，只受重力与钢索约束力。求到达最低点 $O$ 时的速率、曲率半径和约束力，说明约束力为何不等于重力。
+几何与变量约定见图\ref{fig:question-ex37}。
+
+\QuestionFigure{ex37}{例37的研究对象、条件与变量}
 \OriginalFigure{parabolic_wire}{抛物线钢索上的小环。图中支持力 $R$ 对应正文的 $N$，沿主法线方向。}
-\solution 沿切向的运动方程可以写成 $mv\,\dd v=-mg\,\dd y$。积分并代入释放条件，得
+\solution \Step{模型与方向} 图\ref{fig:solution-ex37}给出解答所用的几何、方向或分解关系。最低点处切线水平、主法线向上。解答图把能量所确定的速率与法向牛顿方程相接，所需向心加速度使支持力大于 $mg$。
+\SolutionFigure{ex37}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 沿切向的运动方程可以写成 $mv\,\dd v=-mg\,\dd y$。积分并代入释放条件，得
 \[
 \frac12mv^2=mg(a-y).
 \]
 最低点 $y=0$，所以 $v^2=2ag$。又有 $y=x^2/(4a)$，最低点曲率半径为 $\rho=2a$。法向竖直向上，
 \[
 N-mg=m\frac{v^2}{\rho}=mg,
-\qquad \boxed{v=\sqrt{2ag},\quad N=2mg.}
+\qquad v=\sqrt{2ag},\quad N=2mg.
 \]
 支持力不仅平衡重力，还提供改变速度方向所需的法向加速度。
 
@@ -1667,10 +1989,15 @@ N_{\rm bottom}=mg\left(1+\frac{h_0}{a}\right).
 \]
 本题 $x=2a$ 对应 $h_0=a$，法向方程两项分别为 $mg$ 和 $mg$。若把释放条件改为高度 $y=2a$，则 $h_0=2a$，最低点速率变为 $\sqrt{4ag}$，支持力变为 $3mg$；这是另一组初始条件。只写 $N=mg$ 会漏掉曲线运动的法向加速度；只写 $N=mv^2/\rho$ 则会漏掉重力的法向分量。
 
-
 \example{匀速转动的光滑直管中的小球}
-直管在光滑水平面内绕固定轴以恒定角速度 $\Omega$ 转动，小球可沿管自由滑动。取转轴为极点，令管的方向为 $\theta=\Omega t$。
-\solution 管对小球的水平作用力只有横向分量。径向方程为
+一根光滑直管在水平面内绕固定端 $O$ 以恒角速度 $\Omega>0$ 转动，小球质量为 $m$，可沿管自由滑动。取地面惯性极坐标，管方向为 $\theta=\Omega t$，给定 $r(0)=r_i>0,\dot r(0)=u_i$。在小球仍位于管内且 $r>0$ 的时间区间，求径向运动与管对小球的横向约束力，说明光滑约束在地面系中能否做功。
+几何与变量约定见图\ref{fig:question-ex38}。
+
+\QuestionFigure{ex38}{例38的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex38}给出解答所用的几何、方向或分解关系。图中的地面极坐标基矢随管转动。管光滑使沿管实际合力为零，但径向加速度仍含 $-r\Omega^2$；横向约束力由另一分量方程确定。
+\SolutionFigure{ex38}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 管对小球的水平作用力只有横向分量。径向方程为
 \[
 \ddot r-\Omega^2r=0,
 \]
@@ -1681,6 +2008,9 @@ R_\theta=2m\Omega\dot r.
 在地面系中，这是用极坐标写出的惯性系方程。不能把该方程中的 $-r\Omega^2$ 误说成额外施加在小球上的实际力。
 
 
+
+
+\Step{初始条件、结论与适用范围} 一般初值解为 $r=r_i\cosh\Omega t+(u_i/\Omega)\sinh\Omega t$，$\dot r=\Omega r_i\sinh\Omega t+u_i\cosh\Omega t$。管力为 $R_\theta=2m\Omega\dot r$，功率为 $R_\theta r\Omega$，故 $W=m\Omega^2[r^2(t)-r_i^2]$。它来自维持管匀速转动的外部驱动。
 
 \subsubsection*{转动直管：初始条件与约束力做功}
 给定 $r(0)=r_i,\ \dot r(0)=u_i$，指数解可写成
@@ -1707,23 +2037,28 @@ m(r\ddot\theta+2\dot r\dot\theta)=-mg\sin\theta.
 \]
 这组方程一般非线性，适合数值求解。
 
-
 \example{光滑螺旋线上的小环：运动和全部约束力}\label{ex:helixbead}
-螺旋线固定在惯性系中，$\vect r(u)=(R\cos u,R\sin u,bu)$，$z$ 轴向上。小环受重力，初始参数 $u_0$、定向初速度 $\dot u_0$ 已知。
-\solution 令 $D=\sqrt{R^2+b^2}$，定向弧坐标为 $s=D(u-u_0)$。切向单位矢量为 $\vt=(-R\sin u,R\cos u,b)/D$，重力投影为 $-mgb/D$，所以
+固定光滑螺旋线为 $\vect r(u)=(R\cos u,R\sin u,bu)$，$R>0$，$z$ 轴向上。质量为 $m>0$ 的小环套在钢丝上，只受重力和垂直于钢丝切线的约束力。已知 $u(0)=u_0,\dot u(0)=\dot u_0$。求参数运动、速度、加速度及约束力的三个圆柱坐标分量，检查约束力与速度是否正交。
+几何与变量约定见图\ref{fig:question-ex39}。
+
+\QuestionFigure{ex39}{例39的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex39}给出解答所用的几何、方向或分解关系。图中切线同时具有周向、竖直分量。重力沿切线的投影改变速率，而约束力还需保证向圆柱轴线的曲率加速度。
+\SolutionFigure{ex39}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 令 $D=\sqrt{R^2+b^2}$，定向弧坐标为 $s=D(u-u_0)$。切向单位矢量为 $\vt=(-R\sin u,R\cos u,b)/D$，重力投影为 $-mgb/D$，所以
 \[
 \ddot s=-\frac{gb}{D},\qquad
 \ddot u=-\frac{gb}{R^2+b^2}.
 \]
 逐次积分得
 \[
-\boxed{u(t)=u_0+\dot u_0t-\frac{gb}{2(R^2+b^2)}t^2.}
+u(t)=u_0+\dot u_0t-\frac{gb}{2(R^2+b^2)}t^2.
 \]
 把 $u(t)$ 代回三个坐标即得到完整运动方程。若给的是初始\emph{速率} $v_0$，还需指定沿螺旋线上升或下降，分别取 $\dot u_0=\pm v_0/D$。
 
 主法线 $\vn=(-\cos u,-\sin u,0)$，副法线 $\vect e_b=(b\sin u,-b\cos u,R)/D$。重力在法线方向投影为零、副法线方向为 $-mgR/D$，而 $a_n=R\dot u^2$、$a_b=0$，因此钢丝的反力为
 \[
-\boxed{\vect N=mR\dot u^2\vn+\frac{mgR}{D}\vect e_b.}
+\vect N=mR\dot u^2\vn+\frac{mgR}{D}\vect e_b.
 \]
 三维曲线约束力可以有两个独立分量，不能把副法向支持力遗漏。总反力大小为
 \[
@@ -1732,8 +2067,14 @@ N=mR\sqrt{\dot u^4+g^2/D^2}.
 取 $b=0$，轨道变成水平圆环，运动为匀速，同时需要径向反力和竖直支持力。
 
 \example{绳缠绕固定圆柱的小球：何时碰到圆柱}\label{ex:involute}
-水平面光滑，圆柱半径为 $R$。无质量不可伸长轻绳一端固定于柱面，另一端系质量 $m$ 的小球。初始自由直绳长度为 $s_0$，初速度 $v_0$ 垂直绳且指向缠紧方向。
-\solution 张力沿自由直绳，而轨迹的切线与自由直绳垂直，张力不做功，速率恒为 $v_0$。以缠绕增加的角度 $\psi$ 为参数，$s=s_0-R\psi$。记 $\er=(\cos\psi,\sin\psi)$、$\et=(-\sin\psi,\cos\psi)$，取小球位置
+在固定光滑水平面上有半径为 $R>0$ 的固定圆柱。轻且不可伸长的绳一端固定于柱面，另一端系质量 $m$ 的小球；绳保持绷紧并沿柱面逐渐缠绕。初始自由直绳长为 $s_0>0$，小球初速 $v_0>0$ 垂直于直绳并指向缠紧方向。求缠绕角与剩余绳长、速率、张力和运动时间的关系，判断碰到圆柱的时刻及理想模型的局限。
+几何与变量约定见图\ref{fig:question-ex40}。
+
+\QuestionFigure{ex40}{例40的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex40}，解答图\ref{fig:solution-ex40}展示球 $P$ 的速度与绳张力正交，$Q$ 为当时的切点及曲率中心，因而瞬时曲率半径等于自由绳长 $s$。图示一段接近圆柱的轨迹，$Q$ 随缠绕移动，不能把它当成空间固定转心。
+\SolutionFigure{ex40}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 张力沿自由直绳，而轨迹的切线与自由直绳垂直，张力不做功，速率恒为 $v_0$。以缠绕增加的角度 $\psi$ 为参数，$s=s_0-R\psi$。记 $\er=(\cos\psi,\sin\psi)$、$\et=(-\sin\psi,\cos\psi)$，取小球位置
 \[
 \vect r=R\er+s\et.
 \]
@@ -1744,29 +2085,35 @@ N=mR\sqrt{\dot u^4+g^2/D^2}.
 \]
 积分得
 \[
-\boxed{s(t)=\sqrt{s_0^2-2Rv_0t},\qquad
- t_{\rm hit}=\frac{s_0^2}{2Rv_0}.}
+s(t)=\sqrt{s_0^2-2Rv_0t},\qquad
+ t_{\rm hit}=\frac{s_0^2}{2Rv_0}.
 \]
 小球沿圆的渐开线接近柱面；$\psi(t)=(s_0-s(t))/R$，再代回位矢即得运动方程。速度方向为 $-\er$，其转角变化率为 $\dot\psi$，所以曲率半径为 $\rho=v_0/\dot\psi=s$，张力为 $T=mv_0^2/s$。碰撞前张力发散，说明有限时间命中是理想绳模型的极限结论，实际绳的弹性及强度将影响末段运动。
 \OriginalFigure{cylinder_wrap_original}{圆柱、切线绳段与渐开线轨迹，取原动画末帧。缩绳运动可沿同一几何轨迹反向理解。}
 
 \example{水平圆环上的摩擦制动：有限时间能否停止}\label{ex:ringfriction}
-固定圆环半径为 $R$，套环质量为 $m$，初速 $v_0$，动摩擦系数为 $\mu_f$。圆环在水平面内；套环本身由圆环支持，故法向接触力既提供向心力，也支持重力。
-\solution 竖直加速度为零、径向加速度为 $v^2/R$，所以法向反力大小为
+质量为 $m>0$ 的小套环沿半径为 $R>0$ 的固定水平圆环运动，初速为 $v_0>0$。圆环对套环的法向作用同时提供竖直支持与水平向心力，动摩擦力大小为法向合力大小的 $\mu_f$ 倍，$\mu_f>0$，方向与速度相反。建立速率方程，求停止时间的积分表达式，并判断是否能在有限时间停止。
+几何与变量约定见图\ref{fig:question-ex41}。
+
+\QuestionFigure{ex41}{例41的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex41}给出解答所用的几何、方向或分解关系。图中的竖直支持分量平衡重力，水平法向分量提供向心力。摩擦定律中的法向力是这两个分量的合力，不能仅取水平向心分量。
+\SolutionFigure{ex41}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 竖直加速度为零、径向加速度为 $v^2/R$，所以法向反力大小为
 \[
 N=m\sqrt{g^2+v^4/R^2}.
 \]
 摩擦沿切线反向，$m\dot v=-\mu_fN$。分离变量后，停止时间为
 \[
-\boxed{t_{\rm stop}=\frac1{\mu_f}\int_0^{v_0}
-\frac{\dd v}{\sqrt{g^2+v^4/R^2}}.}
+t_{\rm stop}=\frac1{\mu_f}\int_0^{v_0}
+\frac{\dd v}{\sqrt{g^2+v^4/R^2}}.
 \]
 积分有限。由分母 $\geq g$，得 $t_{\rm stop}\leq v_0/(\mu_fg)$；又因分母在区间内不超过其初值，得 $t_{\rm stop}\geq v_0/[\mu_f\sqrt{g^2+v_0^4/R^2}]$。
 
 停止前的路程可以求成初等式。用 $\dd s=v\dd t$，令 $w=v^2$，
 \begin{align*}
 s_{\rm stop}&=\frac1{\mu_f}\int_0^{v_0}\frac{v\dd v}{\sqrt{g^2+v^4/R^2}}\\
-&=\boxed{\frac{R}{2\mu_f}\operatorname{arsinh}\frac{v_0^2}{gR}}.
+&=\frac{R}{2\mu_f}\operatorname{arsinh}\frac{v_0^2}{gR}.
 \end{align*}
 小速度极限为 $v_0^2/(2\mu_fg)$，与平面库仑摩擦一致。
 
@@ -1776,8 +2123,8 @@ s_{\rm stop}&=\frac1{\mu_f}\int_0^{v_0}\frac{v\dd v}{\sqrt{g^2+v^4/R^2}}\\
 \subsection{惯性力的来源与意义}\label{topic:inertia}
 设 $S$ 为惯性系，$S'$ 相对 $S$ 做加速平动。由 $\vect a=\vect a_0+\vect a'$ 与 $m\vect a=\vect F$，
 \begin{equation}\label{eq:inertialforce}
-\boxed{m\vect a'=\vect F+\vect F_{\mathrm{in}},\qquad
-\vect F_{\mathrm{in}}=-m\vect a_0.}
+m\vect a'=\vect F+\vect F_{\mathrm{in}},\qquad
+\vect F_{\mathrm{in}}=-m\vect a_0.
 \end{equation}
 惯性力来自参考系的加速度，方向与动系原点的加速度相反，大小正比于研究对象自身的质量。它不是物体之间的新相互作用，也没有与之成对的“反作用力”。在动系中引入它，是为了用类似牛顿第二定律的形式写运动方程。
 
@@ -1796,8 +2143,14 @@ s_{\rm stop}&=\frac1{\mu_f}\int_0^{v_0}\frac{v\dd v}{\sqrt{g^2+v^4/R^2}}\\
 但必须先明确参考系确实没有转动，否则式\eqref{eq:inertialforce} 不完整。
 
 \example{水平加速小车中的悬线偏角}
-小车以加速度 $a_0$ 向右平动，车内小球相对车静止，轻绳与竖直方向夹角为 $\beta$。
-\solution 在小车系中，小球受向下的重力、沿绳的张力和向左的惯性力。平衡条件为
+小车在水平地面上以恒加速度 $a_0>0$ 向右平动。车内固定点悬挂长为 $l$ 的轻绳和质量为 $m$ 的小球，最终小球相对车保持静止。以绳偏离竖直向下方向的角为 $\beta$。求偏向、偏角及张力，分别用地面惯性系和小车平动参考系建立方程并核对。
+几何与变量约定见图\ref{fig:question-ex42}。
+
+\QuestionFigure{ex42}{例42的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex42}给出解答所用的几何、方向或分解关系。图中的小车系惯性力指向左方，小球偏向加速度的反方向。地面系只画重力和张力；两套图的未知张力和偏角必须相同。
+\SolutionFigure{ex42}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 在小车系中，小球受向下的重力、沿绳的张力和向左的惯性力。平衡条件为
 \[
 T\sin\beta=ma_0,\qquad T\cos\beta=mg.
 \]
@@ -1806,6 +2159,9 @@ T\sin\beta=ma_0,\qquad T\cos\beta=mg.
 \TeachingFigure{c1-diagram-21}{加速车厢中的受力图：三力在小车参考系内平衡。}
 
 
+
+
+\Step{初始条件、结论与适用范围} 在地面惯性系中没有额外惯性力，绳张力的水平分量使小球随车加速：$T\sin\beta=ma_0$；竖直加速度为零，故 $T\cos\beta=mg$。小车系则在同一实际受力基础上加入向左的平动惯性力。两种方法使用不同加速度，却求得相同的张力和偏角。
 
 \subsubsection*{竖直加速与失重}
 若车厢竖直向上加速 $a_0$，有效重力向下，大小 $g+a_0$，相对静止悬球的张力为 $m(g+a_0)$。若竖直向下加速 $a_0<g$，张力为 $m(g-a_0)$。当 $a_0=g$ 时，车厢与小球都做自由落体，有效重力为零，绳的重力张紧作用消失。
@@ -1816,12 +2172,16 @@ U_{\rm eff}^{\rm trans}=-m(\vect g-\vect a_0)\cdot\vect r'.
 \]
 球的相对平衡方向由有效重力确定；这与后面有心力问题中的“有效势”来源不同，此处记号加上上标以免混淆。如果 $\vect a_0$ 随时间变化，该势显含时间，不能据此直接宣称相对机械能守恒。
 
-
 \subsection{相互耦合的运动：自由楔块与滑块}\label{topic:wedge}
 \example{自由滑动楔块上的滑块}
-质量为 $M$ 的楔块置于光滑水平面上，质量为 $m$ 的滑块沿倾角为 $\alpha$ 的光滑斜面下滑。求楔块的水平加速度及滑块相对斜面的加速度。
+质量为 $M>0$ 的楔块可在固定光滑水平面上自由平动，其直斜面倾角为 $0<\alpha<\pi/2$，质量为 $m>0$ 的小滑块可沿斜面无摩擦下滑。忽略其他阻力，系统初始静止。取楔块水平坐标为 $X$，沿斜面向下的相对位移为 $s$。求楔块水平加速度、滑块相对加速度与支持力，并说明 $M\to\infty$ 时如何恢复固定斜面结果。
+几何与变量约定见图\ref{fig:question-ex43}。
+
+\QuestionFigure{ex43}{例43的研究对象、条件与变量}
 \OriginalFigure{wedge}{楔块参考系中滑块的受力。图中 $m_1=m$，$\ddot x_2=\ddot X$；惯性力水平向左。}
-\solution 沿用图中的斜面方向，取水平向右为正，楔块位置为 $X$，滑块沿斜面向左下滑的位移为 $s$。滑块的水平位置可写为 $x=X-s\cos\alpha$。楔块系中的惯性力向左，其沿斜面向下的分量为 $m\ddot X\cos\alpha$，故
+\solution \Step{模型与方向} 图\ref{fig:solution-ex43}给出解答所用的几何、方向或分解关系。图中滑块的地面加速度由楔块平动和沿斜面的相对加速度相加。支持力对两物体作用相反；水平动量关系把两者的加速度联系起来。
+\SolutionFigure{ex43}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 沿用图中的斜面方向，取水平向右为正，楔块位置为 $X$，滑块沿斜面向左下滑的位移为 $s$。滑块的水平位置可写为 $x=X-s\cos\alpha$。楔块系中的惯性力向左，其沿斜面向下的分量为 $m\ddot X\cos\alpha$，故
 \[
 m\ddot s=mg\sin\alpha+m\ddot X\cos\alpha.
 \]
@@ -1831,8 +2191,8 @@ m\ddot s=mg\sin\alpha+m\ddot X\cos\alpha.
 \]
 联立得到
 \begin{equation}
-\boxed{\ddot s=\frac{(M+m)g\sin\alpha}{M+m\sin^2\alpha},\qquad
-\ddot X=\frac{mg\sin\alpha\cos\alpha}{M+m\sin^2\alpha}.}
+\ddot s=\frac{(M+m)g\sin\alpha}{M+m\sin^2\alpha},\qquad
+\ddot X=\frac{mg\sin\alpha\cos\alpha}{M+m\sin^2\alpha}.
 \end{equation}
 支持力为
 \[
@@ -1864,22 +2224,26 @@ a_y=-\ddot s\sin\alpha
 \]
 相对加速度沿斜面，而绝对加速度一般不沿瞬时斜面方向；斜面本身也在移动。取 $\alpha\to0$ 得无下滑驱动，取 $M\to\infty$ 恢复固定斜面。
 
-
-
 \subsection{弹簧滑块与单摆的耦合运动}\label{topic:sliderpend}
 \example{移动悬点的单摆：牛顿法与能量建模}\label{ex:sliderpend}
-质量 $M$ 的滑块在光滑水平面上运动，受劲度 $k$ 的水平弹簧作用，弹簧平衡位置为 $X_0$。滑块悬挂长 $l$、质量 $m$ 的单摆，摆角 $\theta$ 从竖直向下量起。
-\solution 在滑块的加速平动系中，小球的惯性力为 $-m\ddot X\vect e_x$。沿径向和横向分别有
+质量为 $M>0$ 的小车在光滑水平轨道上运动，经劲度为 $k>0$ 的弹簧连接固定墙，弹簧平衡时小车坐标为 $X_0$。车上悬挂长 $l$ 的轻杆和质量为 $m>0$ 的小球，摆角 $\theta$ 从竖直向下量起。忽略阻力，给定 $X,\theta$ 及其一阶导数的初值。用牛顿法和动能、势能建模分别建立耦合方程，说明两种方法的对应关系。
+几何与变量约定见图\ref{fig:question-ex44}。
+
+\QuestionFigure{ex44}{例44的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex44}，解答图\ref{fig:solution-ex44}展示小车与摆球的成对杆力，以及摆球速度的首尾合成；杆力可由两物体方程消去，速度两分量通常不正交，内积产生动能中的 $\dot X\dot\theta\cos\theta$ 项。
+\SolutionFigure{ex44}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 在滑块的加速平动系中，小球的惯性力为 $-m\ddot X\vect e_x$。沿径向和横向分别有
 \[
 -ml\dot\theta^2=mg\cos\theta-T-m\ddot X\sin\theta,
 \quad ml\ddot\theta=-mg\sin\theta-m\ddot X\cos\theta.
 \]
 滑块的水平牛顿方程为 $M\ddot X=T\sin\theta-k(X-X_0)$。消去张力后，得到完整耦合方程
 \begin{equation}\label{eq:sliderpend}
-\boxed{\begin{aligned}
+\begin{aligned}
 (M+m)\ddot X+ml(\ddot\theta\cos\theta-\dot\theta^2\sin\theta)+k(X-X_0)&=0,\\
 l\ddot\theta+\ddot X\cos\theta+g\sin\theta&=0.
-\end{aligned}}
+\end{aligned}
 \end{equation}
 张力仍可由 $T=m[l\dot\theta^2+g\cos\theta-\ddot X\sin\theta]$ 恢复。若用轻绳而非刚杆，这个张力应保持非负。
 
@@ -1892,15 +2256,21 @@ U&=\tfrac12k(X-X_0)^2-mgl\cos\theta.
 
 小振动时令 $x=X-X_0$，略去二阶小量，试解 $(x,\theta)=(A,B)e^{i\omega t}$。非零解要求
 \[
-\boxed{M\omega^4-\left[k+(M+m)\frac gl\right]\omega^2+\frac{kg}{l}=0.}
+M\omega^4-\left[k+(M+m)\frac gl\right]\omega^2+\frac{kg}{l}=0.
 \]
 两根对应两个耦合频率。固定悬点极限 $M\to\infty$ 且保持滑块不动时恢复 $\omega=\sqrt{g/l}$；若 $k=0$，还出现整体水平平移的零频率模式。
 \OriginalFigure{slider_pendulum}{弹簧滑块与悬挂小球的耦合运动。原图的 $x$ 对应正文的滑块位移 $X$；红色箭头表示随滑块参考系中的惯性力 $-m\ddot X\vect e_x$。}
 
 \subsection{双摆与穿孔绳：两种完整建模方法}\label{topic:doublepend}
 \example{双摆的牛顿方程：使用平动非惯性系}\label{ex:double-newton}
-杆长 $l_1,l_2$，球质量 $m_1,m_2$；两角从竖直向下方向量起。记 $\delta=\theta_1-\theta_2$，各径向基矢指向杆的外端，横向基矢为增加摆角的方向。
-\solution 球 1 的加速度为 $\vect a_1=-l_1\dot\theta_1^2\vect e_{r1}+l_1\ddot\theta_1\vect e_{\theta1}$。对球 1 写
+两根无质量刚杆依次连接固定点 $O$、球 $P_1$、球 $P_2$，长度分别为 $l_1,l_2>0$，球质量为 $m_1,m_2>0$，系统在竖直平面内无阻力运动。两角 $\theta_1,\theta_2$ 都从竖直向下量起，令 $\delta=\theta_1-\theta_2$。利用地面系及随 $P_1$ 平动的参考系，建立两个摆角的牛顿方程，并说明杆力的消去过程。
+几何与变量约定见图\ref{fig:question-ex45}。
+
+\QuestionFigure{ex45}{例45的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex45}，解答图\ref{fig:solution-ex45}展示随 $P_1$ 平动但坐标轴不转的参考系，以及下球的杆力、重力、平动惯性力。图中 $\vect a_1$ 方向仅作瞬时示意，惯性力必须与它相反，投影后才产生含 $\delta$ 的耦合项。
+\SolutionFigure{ex45}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 球 1 的加速度为 $\vect a_1=-l_1\dot\theta_1^2\vect e_{r1}+l_1\ddot\theta_1\vect e_{\theta1}$。对球 1 写
 \begin{align*}
 -m_1l_1\dot\theta_1^2&=m_1g\cos\theta_1+T_2\cos\delta-T_1,\\
 m_1l_1\ddot\theta_1&=-m_1g\sin\theta_1-T_2\sin\delta.
@@ -1915,7 +2285,14 @@ m_2l_2\ddot\theta_2&=-m_2g\sin\theta_2
 后两式中的附加项完全来自球 1 的平动加速度；本例的动系没有随杆转动，所以不用加入科里奥利力。由球 2 径向式求 $T_2$，代入球 1 横向式，再联立球 2 横向式，即可消去约束力。
 
 \example{双摆的拉格朗日推导、显式方程和小振动}\label{ex:double-lagrange}
-沿用上一例定义。两个球的位置分别为
+竖直平面内的双摆由两根轻刚杆和两个质点组成，固定悬点为 $O$，杆长 $l_1,l_2$，球质量 $m_1,m_2$；两摆角 $\theta_1,\theta_2$ 均从竖直向下量起。只受重力与理想铰接约束。独立写出两个球的位置、系统动能与势能，用拉格朗日方程推导摆角方程，化为显式角加速度形式，并在线性小振动近似下求正常模态。
+几何与变量约定见图\ref{fig:question-ex46}。
+
+\QuestionFigure{ex46}{例46的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex46}，解答图\ref{fig:solution-ex46}展示下球绝对速度由上球速度与相对上球的摆动速度合成。两份速度方向的内积给出 $\cos(\theta_1-\theta_2)$，从而确定混合动能项；各质量、杆长均沿用题图中的定义。
+\SolutionFigure{ex46}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 两个球的位置分别为
 \[
 (x_1,y_1)=(l_1\sin\theta_1,-l_1\cos\theta_1),
 \quad (x_2,y_2)=(x_1+l_2\sin\theta_2,y_1-l_2\cos\theta_2).
@@ -1935,12 +2312,12 @@ U&=-(m_1+m_2)gl_1\cos\theta_1-m_2gl_2\cos\theta_2.
 \]
 对前式求时间导数时，$\dd\cos\delta/\dd t=-\sin\delta(\dot\theta_1-\dot\theta_2)$。代入后交叉速度项相消。对第二角作同样计算，得到
 \begin{equation}\label{eq:doublepend}
-\boxed{\begin{aligned}
+\begin{aligned}
 (m_1+m_2)l_1^2\ddot\theta_1+m_2l_1l_2\cos\delta\,\ddot\theta_2
 +m_2l_1l_2\sin\delta\,\dot\theta_2^2+(m_1+m_2)gl_1\sin\theta_1&=0,\\
 m_2l_2^2\ddot\theta_2+m_2l_1l_2\cos\delta\,\ddot\theta_1
 -m_2l_1l_2\sin\delta\,\dot\theta_1^2+m_2gl_2\sin\theta_2&=0.
-\end{aligned}}
+\end{aligned}
 \end{equation}
 质量矩阵行列式为 $m_2l_1^2l_2^2(m_1+m_2\sin^2\delta)>0$，因此在正质量、正杆长下可唯一解出两个角加速度。给定四个相容的初始量 $\theta_i(0),\dot\theta_i(0)$ 后，可用本章数值方法求一般大角度运动，并用 $T+U$ 检查误差。
 
@@ -1957,17 +2334,23 @@ m_1l_1l_2\omega^4-(m_1+m_2)g(l_1+l_2)\omega^2+(m_1+m_2)g^2=0.
 \]
 当两质点质量相同、两杆长度相等时，
 \[
-\boxed{\omega_-^2=(2-\sqrt2)g/l,\quad \omega_+^2=(2+\sqrt2)g/l,}
+\omega_-^2=(2-\sqrt2)g/l,\quad \omega_+^2=(2+\sqrt2)g/l,
 \]
 角振幅比分别为 $\theta_2/\theta_1=\sqrt2$ 和 $-\sqrt2$：低频模态同向摆动，高频模态反向摆动。两种建模方法应给出相同方程，拉格朗日法减少了约束力未知量。
 \OriginalFigure{double_pendulum}{等长、等质量双摆在下端球随上端球平动的参考系中的受力图。正文进一步使用 $l_1,l_2,m_1,m_2$ 表示一般情形。}
 
 \example{桌面小球、穿孔轻绳与悬挂小球}\label{ex:hole}
-桌面光滑，质量 $m_A$ 的小球通过桌面圆孔与悬挂质量 $m_B$ 的小球用不可伸长轻绳相连。孔到桌面球的距离为 $r$，向下悬垂绳长为 $z$，$r+z=l$。桌面球极角为 $\theta$。
-\solution 对桌面球写 $m_A(\ddot r-r\dot\theta^2)=-T$、$\dd(r^2\dot\theta)/\dd t=0$。对悬挂球写 $m_B\ddot z=m_Bg-T$，又 $\ddot z=-\ddot r$，消去张力得
+质量 $m_A>0$ 的小球在光滑水平桌面上运动，用轻且不可伸长的绳穿过固定小孔 $O$，连接桌下悬球 $m_B>0$。绳总长为 $l$，桌上径向长度 $r$、竖直悬垂长度 $z$ 满足 $r+z=l$；桌上球极角为 $\theta$。建立系统方程，消去张力并找出守恒量，讨论何时可以保持定半径圆周运动。
+几何与变量约定见图\ref{fig:question-ex47}。
+
+\QuestionFigure{ex47}{例47的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex47}，解答图\ref{fig:solution-ex47}展示桌上球的径向张力与桌下球的竖直受力。固定孔两侧的张力大小相同，绳长给出 $\delta z=-\delta r$；消去张力时两个质量都进入径向惯性，而切向运动保留角动量。
+\SolutionFigure{ex47}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 对桌面球写 $m_A(\ddot r-r\dot\theta^2)=-T$、$\dd(r^2\dot\theta)/\dd t=0$。对悬挂球写 $m_B\ddot z=m_Bg-T$，又 $\ddot z=-\ddot r$，消去张力得
 \[
-\boxed{(m_A+m_B)\ddot r=m_Ar\dot\theta^2-m_Bg,\qquad
- L=m_Ar^2\dot\theta=\text{常量}.}
+(m_A+m_B)\ddot r=m_Ar\dot\theta^2-m_Bg,\qquad
+ L=m_Ar^2\dot\theta=\text{常量}.
 \]
 张力为 $T=m_B(g+\ddot r)$。两球的动能和势能为
 \[
@@ -2059,12 +2442,14 @@ U(P)-U(O)=-\int_O^P\vect F\cdot\dd\vect r.
 
 
 \example{两组力场的保守性判断}\label{ex:fieldjudge}
-在整个 $\mathbb R^3$ 内，判断
-\[
-\vect F_1=(yz,xz,xy),\qquad
-\vect F_2=(y^2z^2,x^2z^2,x^2y^2).
-\]
-\solution 对第一组，三对混合偏导分别相等，旋度为零；实际上 $\vect F_1=\nabla(xyz)$，所以 $U_1=-xyz+C$。
+两个光滑力场分别为 $\vect F_1=(yz,xz,xy)$、$\vect F_2=(y^2z^2,x^2z^2,x^2y^2)$，都定义在整个 $\mathbb R^3$。分别判断是否为保守力；可保守者求以原点为零点的势能，不可保守者给出旋度非零的具体点，并说明定义域条件的作用。
+几何与变量约定见图\ref{fig:question-ex48}。
+
+\QuestionFigure{ex48}{例48的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex48}给出解答所用的几何、方向或分解关系。解答图中的两条路径连接相同端点，保守场中两条路径的功相同；非保守场可用局部闭合回路的环流揭示差别。
+\SolutionFigure{ex48}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 对第一组，三对混合偏导分别相等，旋度为零；实际上 $\vect F_1=\nabla(xyz)$，所以 $U_1=-xyz+C$。
 
 第二组的旋度为
 \[
@@ -2073,14 +2458,23 @@ U(P)-U(O)=-\int_O^P\vect F\cdot\dd\vect r.
 \]
 在一般点不为零，因此不是保守力。例如在 $(x,y,z)=(1,1,0)$ 的第一分量为 $2$，已足以否定它在整个空间保守。旋度在部分点恰好为零，不代表力场全局保守。
 
+
+\Step{初始条件、结论与适用范围} 例如第二场在 $(1,2,1)$ 处，旋度的 $z$ 分量为 $\partial_xF_y-\partial_yF_x=2xz^2-2yz^2=-2\ne0$。因此无需尝试定义全空间势能；非零旋度已提供局部反例。
+
 \subsubsection*{静电场与感应电场的对比}\label{topic:inducedelectric}
 
 固定电荷产生的静电场可以写成 $\vect E=-\nabla\phi$，静电力 $q\vect E$ 对应势能 $q\phi$；匀强静电场是其中的简单例子。感应电场满足闭路电动势 $\oint\vect E\cdot\dd\vect l=-\dd\Phi_B/\dd t$，当所围磁通量变化时，闭路功一般不为零，不能用一个单值的静电势把它完全表示。这里“保守”的判断需针对给定的场和区域，而不能只看力是否叫电场力。
 
 \subsection{由力场构造势能：全微分与分段积分}\label{topic:potential}
 \example{从给定力场求势能}
-给定 $\vect F=xz\vect e_x+yz\vect e_y+\frac12(x^2+y^2)\vect e_z$，求势能，取 $U(0,0,0)=0$。
-\solution 核验交叉偏导：
+在整个 $\mathbb R^3$ 中给定力场 $\vect F=xz\vect e_x+yz\vect e_y+\tfrac12(x^2+y^2)\vect e_z$。先判断其保守性，再求满足 $U(0,0,0)=0$ 的势能，并通过逐分量求梯度核对结果。
+几何与变量约定见图\ref{fig:question-ex49}。
+
+\QuestionFigure{ex49}{例49的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex49}给出解答所用的几何、方向或分解关系。图中沿坐标折线积分时，每一段只有相应坐标改变。逐分量积分势能后仍需保留其他变量构成的待定函数，最后用其余分量确定。
+\SolutionFigure{ex49}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 核验交叉偏导：
 \[
 \partial_yF_x=\partial_xF_y=0,\quad
 \partial_zF_x=\partial_xF_z=x,\quad
@@ -2130,17 +2524,17 @@ U=-\int_0^1\lambda^2\left[x^2z+y^2z+\tfrac12z(x^2+y^2)\right]\dd\lambda
 
 也可以选折线路径：先从原点沿 $x$ 轴到 $(x,0,0)$，再沿 $y$ 方向到 $(x,y,0)$，最后沿 $z$ 方向到 $(x,y,z)$。前两段因 $z=0$ 而功为零，最后一段的功为 $z(x^2+y^2)/2$。同样得到所求势能；路径选择只是简化积分，不改变结果。
 
-
-
 \example{多项式力场的势能}\label{ex:polynomialpotential}
-给定
+力场定义在整个三维空间，其分量为 $F_x=6yz^3-20x^3y^2$、$F_y=6xz^3-10x^4y$、$F_z=18xyz^2$。证明它可由势能产生，求满足 $U(0,0,0)=0$ 的势能，并逐项核对三个偏导关系。
+几何与变量约定见图\ref{fig:question-ex50}。
+
+\QuestionFigure{ex50}{例50的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex50}给出解答所用的几何、方向或分解关系。图中的不同坐标段提示逐变量积分。每一步都以未积分的坐标为参数，并用下一分量确定积分函数，不能把它提前当作常数。
+\SolutionFigure{ex50}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} \textbf{逐分量积分。} $\partial_xU=-F_x$ 给出 $U=-6xyz^3+5x^4y^2+f(y,z)$。再由 $\partial_yU=-F_y$ 得 $f_y=0$，由 $\partial_zU=-F_z$ 得 $f_z=0$。零点条件使常数为零，所以
 \[
-F_x=6yz^3-20x^3y^2,\qquad F_y=6xz^3-10x^4y,\qquad F_z=18xyz^2,
-\]
-且 $U(0,0,0)=0$，求势能。
-\solution \textbf{逐分量积分。} $\partial_xU=-F_x$ 给出 $U=-6xyz^3+5x^4y^2+f(y,z)$。再由 $\partial_yU=-F_y$ 得 $f_y=0$，由 $\partial_zU=-F_z$ 得 $f_z=0$。零点条件使常数为零，所以
-\[
-\boxed{U=-6xyz^3+5x^4y^2.}
+U=-6xyz^3+5x^4y^2.
 \]
 \textbf{沿直线路径积分。} 取 $\vect r(\lambda)=\lambda(x,y,z)$，$0\leq\lambda\leq1$。力的前一组项为四次齐次项，后一组为五次齐次项，因此
 \begin{align*}
@@ -2151,14 +2545,20 @@ U&=-\int_0^1\vect F(\lambda\vect r)\cdot\vect r\,\dd\lambda\\
 \textbf{凑全微分。} $\vect F\cdot\dd\vect r=\dd(6xyz^3-5x^4y^2)$，立即得到同一势能。最后分别求三个偏导核验全部分量。
 
 \example{沿螺旋线做功：端点法与路径积分法}\label{ex:helixwork}
-力场为 $\vect F=(x+2y+z+5,\,2x+y+z,\,x+y+z-6)$；路径 $x=\cos\theta,y=\sin\theta,z=7\theta$，$0\leq\theta\leq2\pi$。
-\solution 三对混合偏导均相等，力场在整个空间保守。其势能可取
+三维力场为 $\vect F=(x+2y+z+5,\,2x+y+z,\,x+y+z-6)$。质点沿螺旋线 $x=\cos\theta,y=\sin\theta,z=7\theta$，由 $\theta=0$ 运动到 $2\pi$，各坐标使用一致单位。判断保守性，分别用端点势能差及参数路径积分求功，并核对两种结果。
+几何与变量约定见图\ref{fig:question-ex51}。
+
+\QuestionFigure{ex51}{例51的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex51}给出解答所用的几何、方向或分解关系。图中的螺旋线连接高度不同的两个端点；虽然平面投影闭合，空间路径并未闭合。因此端点势能差一般不为零。
+\SolutionFigure{ex51}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 三对混合偏导均相等，力场在整个空间保守。其势能可取
 \[
 U=-\left[\tfrac12(x^2+y^2+z^2)+2xy+xz+yz+5x-6z\right].
 \]
 起终点分别是 $(1,0,0)$ 和 $(1,0,14\pi)$。改走 $x=1,y=0$ 的竖直直线路径，
 \[
-W=\int_0^{14\pi}(z-5)\dd z=\boxed{98\pi^2-70\pi}.
+W=\int_0^{14\pi}(z-5)\dd z=98\pi^2-70\pi.
 \]
 若按原螺旋线直接积分，则被积函数为
 \[
@@ -2228,8 +2628,14 @@ $\vect I$ 称为冲量。若合外力恒为零，则动量守恒；若只有某�
 冲量是矢量，必须对各分量分别积分。短时碰撞中，若接触力很大而重力等平常力有限，可以在极短作用时间内忽略后者的冲量；这不意味着这些力在物理上消失。若作用时间不够短，仍应纳入全部外力。
 
 \example{三角形力脉冲的冲量与动能变化}
-一维质点初速度为 $v_0$。在时间 $\Delta t$ 内，外力从零线性增至 $F_0$，再线性减至零，两阶段各占一半时间，力始终向正方向。
-\solution 力--时间图下的面积为 $I=F_0\Delta t/2$，故
+质量为 $m>0$ 的质点在直线上运动，初速为 $v_0$。在时长 $\Delta t>0$ 内，合外力从零线性增至 $F_0>0$，再线性减为零，升降阶段各占 $\Delta t/2$，力方向始终为 $+x$。求冲量、末速度和动能变化，并解释力—时间图面积与力—位移图面积的不同。
+几何与变量约定见图\ref{fig:question-ex52}。
+
+\QuestionFigure{ex52}{例52的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex52}给出解答所用的几何、方向或分解关系。图中三角形下的面积是冲量而非功。先由冲量求带符号末速度，再由两个速度平方之差求动能变化。
+\SolutionFigure{ex52}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 力--时间图下的面积为 $I=F_0\Delta t/2$，故
 \[
 v_1=v_0+\frac{F_0\Delta t}{2m}.
 \]
@@ -2238,6 +2644,8 @@ v_1=v_0+\frac{F_0\Delta t}{2m}.
 \Delta T=\frac12m(v_1^2-v_0^2)=v_0I+\frac{I^2}{2m}.
 \]
 它一般不等于 $I$，也不只由力峰值确定。若 $v_0<0$ 而脉冲较小，力虽向正方向做冲量，质点仍向负方向移动，动能反而先减少。冲量反映速度矢量变化，功反映动能变化。
+\Step{初始条件、结论与适用范围} 冲量为 $J=F_0\Delta t/2$，所以 $v_f=v_0+J/m$。动能变化为 $\Delta T=Jv_0+J^2/(2m)$，其正负还与初速度方向有关。力始终向右，并不保证整个脉冲期间都对左行质点做正功。
+
 
 
 \subsection{角动量定理与角动量守恒}\label{topic:angular}
@@ -2279,10 +2687,20 @@ L_z=mr^2\dot\theta.
 
 
 \example{有心力为什么导致平面运动}
-\solution 力的作用线通过固定力心，故关于力心的力矩为零，$\vect L$ 为常矢量。若 $\vect L\ne0$，由 $\vect L\cdot\vect r=0$ 知，所有位矢均位于垂直 $\vect L$ 的固定平面中。
+质量为 $m>0$ 的质点只受相对于固定点 $O$ 的有心力 $\vect F=F_r(r)\er$，初始位置、速度为 $\vect r_0,\vect v_0$，且 $\vect r_0\times\vect v_0\ne0$。证明轨道始终位于固定平面内，写出该平面的方程；再讨论初始角动量为零时的运动及证明中的例外。
+几何与变量约定见图\ref{fig:question-ex53}。
+
+\QuestionFigure{ex53}{例53的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex53}给出解答所用的几何、方向或分解关系。图中的固定法向量是初始角动量方向。由于任一时刻 $\vect r$ 都垂直于守恒的 $\vect L$，轨道平面由初始位置、速度确定。
+\SolutionFigure{ex53}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 力的作用线通过固定力心，故关于力心的力矩为零，$\vect L$ 为常矢量。若 $\vect L\ne0$，由 $\vect L\cdot\vect r=0$ 知，所有位矢均位于垂直 $\vect L$ 的固定平面中。
 
 若 $\vect L=0$，上述等式无法选出唯一平面。此时速度与位矢共线，运动退化为径向直线运动；在力场非奇异且解唯一的区间内，这条直线由初始位置确定。非零角动量的平面论证与零角动量的径向情形应分开。
 
+
+
+\Step{初始条件、结论与适用范围} 若 $\vect L_0=m\vect r_0\times\vect v_0\ne0$，固定平面方程为 $\vect L_0\cdot\vect r=0$，其法向及经过力心的性质均已确定。若 $\vect L_0=0$，在力场与解保持正则的区间内，速度与位矢平行，运动退化为沿固定径向直线；此时不能用零向量唯一指定轨道平面。
 
 \subsubsection*{陀螺进动方向：角动量矢量怎样改变}\label{topic:gyroscope}
 
@@ -2292,7 +2710,7 @@ L_z=mr^2\dot\theta.
 \]
 高速自转时 $\vect L\approx L_s\vect n$，若轴以角速度 $\Omega$ 绕竖直方向稳定进动，$\dot{\vect L}=\Omega L_s\vect e_z\times\vect n$。于是
 \[
-\boxed{\Omega=\frac{mgl}{L_s}.}
+\Omega=\frac{mgl}{L_s}.
 \]
 反转自转方向，带符号的 $L_s$ 反号，进动方向也反转。这个近似要求自转角动量占主导且稳定进动，不能把它扩展为所有刚体运动中“自转与进动总同向”的无条件规律。力矩改变的是角动量方向，瞬时改变量满足 $\dd\vect L=\vect M\dd t$。
 \par\begin{center}\begin{minipage}{\linewidth}\centering
@@ -2305,8 +2723,8 @@ L_z=mr^2\dot\theta.
 
 令 $\vect r=\vect r_0+\vect r'$、$\vect p=m\vect v=m\vect v_0+m\vect v'=\vect p_0+\vect p'$。展开叉积得到
 \[
-\boxed{\vect L=\vect r_0\times\vect p_0+\vect r'\times\vect p'
-+\vect r_0\times\vect p'+\vect r'\times\vect p_0.}
+\vect L=\vect r_0\times\vect p_0+\vect r'\times\vect p'
++\vect r_0\times\vect p'+\vect r'\times\vect p_0.
 \]
 与速度变换相比，角动量多了两项交叉项，不能只写成两个角动量之和。在轴向平行的加速动系中，相对角动量 $\vect L'=\vect r'\times m\vect v'$ 满足
 \[
@@ -2356,18 +2774,27 @@ T=\tfrac12(M+m)\dot X^2-m\dot X\dot s\cos\alpha+\tfrac12m\dot s^2.
 
 
 \example{大振幅单摆通过最低点的速度}\label{ex:pendenergy}
-轻杆长 $l$，末端小球质量为 $m$。从与竖直向下方向夹角 $\theta_0$ 处静止释放，忽略阻力。
-\solution 以最低点为势能零点，$U=mgl(1-\cos\theta)$。杆力不做功，故
+小球质量为 $m>0$，固定轻刚杆长度为 $l>0$，在竖直平面内摆动。由摆角 $0<\theta_0<\pi$ 处静止释放，摆角从竖直向下量起，忽略阻力。求第一次通过最低点时的速率及杆的轴向作用力，并说明为何不能用小角近似代替大振幅能量关系。
+几何与变量约定见图\ref{fig:question-ex54}。
+
+\QuestionFigure{ex54}{例54的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex54}给出解答所用的几何、方向或分解关系。图中势能高度取 $l(1-\cos\theta)$，约束力沿杆且不做功。最低点的杆力既要平衡重力的法向分量，也要提供向心加速度。
+\SolutionFigure{ex54}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 以最低点为势能零点，$U=mgl(1-\cos\theta)$。杆力不做功，故
 \[
 \frac12mv^2+mgl(1-\cos\theta)
 =mgl(1-\cos\theta_0).
 \]
 最低点速率为
 \[
-\boxed{v_{\rm bottom}=\sqrt{2gl(1-\cos\theta_0)}.}
+v_{\rm bottom}=\sqrt{2gl(1-\cos\theta_0)}.
 \]
 若改用切向方程 $ml\ddot\theta=-mg\sin\theta$，乘以 $\dot\theta$ 再积分，也会得到相同的能量关系。速度结果并不要求小角度近似；只有把运动进一步近似成简谐振动时，才需要 $|\theta|\ll1$。
 
+
+
+\Step{初始条件、结论与适用范围} 最低点取内法线向上，杆的拉力方向分量满足 $N-mg=mv^2/l$，所以 $N=mg[1+2(1-\cos\theta_0)]$。它是最低点的杆力；杆在别处若给出有符号轴力，应另按实际方向判断拉、压。
 
 \subsubsection*{单摆：从能量求张力与周期}
 摆球的速率满足 $v^2=2gl(\cos\theta-\cos\theta_0)$。若摆长由轻绳维持，指向悬点的法向方程为
@@ -2385,18 +2812,22 @@ T=mg(3\cos\theta-2\cos\theta_0).
 \]
 小振幅下，$\cos\theta-\cos\theta_0\simeq(\theta_0^2-\theta^2)/2$，积分化为 $\int_0^{\theta_0}\dd\theta/\sqrt{\theta_0^2-\theta^2}=\pi/2$，所以 $\tau\simeq2\pi\sqrt{l/g}$。能量法因此既适用于有限振幅，也清楚显示小角近似在哪里进入。
 
-
-
 \example{带恒定切向外力的单摆到达最低点的时间}\label{ex:forcedpend}
-单摆长 $l$，初始 $\theta(0)=\theta_0>0$、$\dot\theta(0)=0$。除重力外，还有大小 $mg$、沿\emph{减小摆角}方向的恒定切向力。求第一次到达 $\theta=0$ 的时间，$\theta_0\ll1$。
-\solution 绕悬点的力矩为 $-mgl(\sin\theta+1)$，故
+固定单摆长为 $l$、球质量为 $m$，摆角从竖直向下量起。初始 $\theta(0)=\theta_0>0,\dot\theta(0)=0$。除重力外，另有大小恒为 $mg$、始终沿减小摆角方向的切向力。求速度与摆角的关系，并在 $\theta_0\ll1$ 条件下求第一次到达 $\theta=0$ 的时间，交代近似在哪一步使用。
+几何与变量约定见图\ref{fig:question-ex55}。
+
+\QuestionFigure{ex55}{例55的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex55}给出解答所用的几何、方向或分解关系。图中的附加外力沿切线，与重力的切向投影共同使摆角减小。其功等于力乘沿切线走过的弧长，而不是乘竖直下降高度。
+\SolutionFigure{ex55}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 绕悬点的力矩为 $-mgl(\sin\theta+1)$，故
 \[
 ml^2\ddot\theta=-mgl(\sin\theta+1).
 \]
 小角度近似令 $\omega_0=\sqrt{g/l}$，有 $\ddot\theta+\omega_0^2\theta=-\omega_0^2$。通解为 $\theta=A\cos\omega_0t+B\sin\omega_0t-1$；初始条件给出 $A=1+\theta_0,B=0$，所以
 \[
-\boxed{\theta(t)=(1+\theta_0)\cos\omega_0t-1,\quad
- t_*=\frac1{\omega_0}\arccos\frac1{1+\theta_0}.}
+\theta(t)=(1+\theta_0)\cos\omega_0t-1,\quad
+ t_*=\frac1{\omega_0}\arccos\frac1{1+\theta_0}.
 \]
 虽然平衡位置的线性方程形式含常量 $-1$，本题只使用 $0\leq\theta\leq\theta_0$ 的首次下落段，小角度近似在此区间一致有效。不能把所得解任意延续到 $\theta\approx-1$ 后仍称为小角度解。$\theta_0\to0$ 时 $t_*\sim\sqrt{2l\theta_0/g}$，符合初始角加速度约为 $-g/l$ 的估算。
 
@@ -2459,15 +2890,21 @@ x=\pm a\sqrt{1-\sqrt{E/U_0}}.
 
 
 \example{小球何时脱离固定半圆柱凸面}
-小球从半径为 $R$ 的光滑固定半圆柱顶端由静止开始向下滑，$\theta$ 为从顶端起算的圆心角。
-\solution 能量守恒给出 $v^2=2gR(1-\cos\theta)$。沿指向圆心的方向列方程，
+半径为 $R>0$ 的固定光滑半圆柱凸面位于竖直平面内，小球质量为 $m$。小球从最高点静止释放并受到使其向一侧离开的无穷小扰动；忽略扰动能量及空气阻力。以从顶端量起的圆心角为 $\theta$，求接触阶段的速率和支持力，确定首次脱离的位置和速度，并说明脱离条件。
+几何与变量约定见图\ref{fig:question-ex56}。
+
+\QuestionFigure{ex56}{例56的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex56}给出解答所用的几何、方向或分解关系。图中主法线向圆心，支持力却由柱面推向外方。沿内法线列方程时支持力带负号；求得的接触解只有在 $N\ge0$ 时才有效。
+\SolutionFigure{ex56}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 能量守恒给出 $v^2=2gR(1-\cos\theta)$。沿指向圆心的方向列方程，
 \[
 mg\cos\theta-N=m\frac{v^2}{R}.
 \]
 凸面只能推小球，不能拉小球。脱离时 $N=0$，故
 \[
 g\cos\theta=2g(1-\cos\theta),\qquad
-\boxed{\cos\theta=\frac23.}
+\cos\theta=\frac23.
 \]
 严格地说，小球恰在顶端、初速度为零时是一个不稳定平衡；“开始滑下”意味着存在任意小的初始偏离。能量方程求速度，法向方程判断接触，两者缺一不可。
 
@@ -2476,10 +2913,15 @@ g\cos\theta=2g(1-\cos\theta),\qquad
 
 脱离后圆弧约束不再成立，小球转入只受重力的抛体运动。若继续沿圆弧列法向方程，$N$ 将变成负值，这不是实际表面向内拉球，而是原接触模型已失效。处理分段运动时，脱离点的位置和切向速度应作为下一阶段的初始条件。
 
-
 \example{弹簧上端突然停止后的最大伸长}\label{ex:springstop}
-质量为 $m$ 的物体连接竖直弹簧，劲度系数为 $k$。上端停止瞬间，弹簧伸长为静态伸长 $x_0=mg/k$，物体仍以速率 $v_0$ 向下运动。求此后的最大伸长。
-\solution 以向下的伸长 $x$ 为坐标，总势能为
+质量为 $m>0$ 的物体悬挂于竖直轻弹簧下端，劲度为 $k>0$。上端突然停止并此后固定；停止瞬间弹簧伸长为静态值 $x_0=mg/k$，物体仍以速率 $v_0>0$ 向下运动。取伸长向下为正，求以此瞬间为起点的运动、最大伸长及达到该值的时间。
+几何与变量约定见图\ref{fig:question-ex57}。
+
+\QuestionFigure{ex57}{例57的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex57}给出解答所用的几何、方向或分解关系。图中 $x$ 从弹簧原长位置量起，而简谐位移应从静态伸长 $x_0$ 量起。停止上端并不使下端速度同时归零。
+\SolutionFigure{ex57}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 以向下的伸长 $x$ 为坐标，总势能为
 \[
 U(x)=\frac12kx^2-mgx
 =\frac12k(x-x_0)^2-\frac12kx_0^2.
@@ -2495,6 +2937,9 @@ T_{\max}=kx_{\max}.
 \]
 上端制动过程可能对弹簧系统交换能量，故能量守恒只从“上端已经停止”的瞬间开始使用。
 
+
+
+\Step{初始条件、结论与适用范围} 令 $\xi=x-x_0$，则 $\ddot\xi+\omega_0^2\xi=0$，$\xi(0)=0,\dot\xi(0)=v_0$，所以 $x=x_0+(v_0/\omega_0)\sin\omega_0t$。第一次最大伸长在 $t=\pi/(2\omega_0)$，为 $x_{\max}=mg/k+v_0\sqrt{m/k}$。
 
 \subsubsection*{弹簧例题的位移中心}
 令 $\xi=x-x_0$，则停止后的方程为 $\ddot\xi+\omega_0^2\xi=0$，$\omega_0=\sqrt{k/m}$。初始条件是 $\xi(0)=0$、$\dot\xi(0)=v_0$，因此
@@ -2512,45 +2957,64 @@ G(x)=\sqrt{\frac m2}\int_{x_-}^{x}\frac{\dd\xi}{\sqrt{E-U(\xi)}}.
 \]
 在这一允许区间内 $G$ 严格递增，故可反解 $x=g(t)=G^{-1}(t)$。半周期为 $\tau/2=G(x_+)$，一个周期内完整的运动方程为
 \[
-\boxed{x(t)=\begin{cases}g(t),&0\leq t\leq\tau/2,\\
+x(t)=\begin{cases}g(t),&0\leq t\leq\tau/2,\\
 g(\tau-t),&\tau/2\leq t\leq\tau.
-\end{cases}}
+\end{cases}
 \]
 再以周期 $\tau$ 延拓。若初始位置在阱内，则先由 $G(x_0)$ 确定时间平移，再根据初始速度正负选择分支。未指定势函数的解析式时，运动应保留为积分及其反函数的形式，不能仅凭示意曲线确定一个初等 $x(t)$。当转向点是势垒顶部的重根时，积分可能发散，此时不能作有限周期延拓。
 
 \subsection{势能求静力平衡与离开移动柱面的条件}\label{topic:energyapplications}
 \example{三根轻杆悬挂三球：各杆偏角}\label{ex:threeballs}
-三根无质量杆均长 $l$，顺次悬挂三个质量均为 $m$ 的小球。在最下方小球施加水平向右恒力 $F$。本例从\emph{上到下}依次定义与竖直向下的夹角 $\theta_3,\theta_2,\theta_1$。
-\solution 三球位置的和使重力势能为 $-mgl(3\cos\theta_3+2\cos\theta_2+\cos\theta_1)$。水平恒力势能为最下端位置的 $-Fx_{\rm end}$，故
+三根无质量刚杆均长为 $l$，依次从固定点悬挂三个质量均为 $m>0$ 的小球。在最下球施加水平向右恒力 $F>0$，系统达到静力平衡。按从上到下的次序，三杆与竖直向下夹角分别记为 $\theta_3,\theta_2,\theta_1$。求各偏角及各杆轴力，并用整体或势能方法核对方向。
+几何与变量约定见图\ref{fig:question-ex58}。
+
+\QuestionFigure{ex58}{例58的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex58}给出解答所用的几何、方向或分解关系。图中的上、中、下杆分别承受其下方三个、两个、一个小球的重力，但水平分量都为同一个 $F$。因此编号越靠上，偏离竖直方向越小。
+\SolutionFigure{ex58}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 三球位置的和使重力势能为 $-mgl(3\cos\theta_3+2\cos\theta_2+\cos\theta_1)$。水平恒力势能为最下端位置的 $-Fx_{\rm end}$，故
 \[
 U=-mgl(3\cos\theta_3+2\cos\theta_2+\cos\theta_1)
 -Fl(\sin\theta_3+\sin\theta_2+\sin\theta_1).
 \]
 静力平衡要求三个偏导分别为零，得到
 \[
-\boxed{\tan\theta_3=\frac{F}{3mg},\quad
+\tan\theta_3=\frac{F}{3mg},\quad
 \tan\theta_2=\frac{F}{2mg},\quad
-\tan\theta_1=\frac{F}{mg}.}
+\tan\theta_1=\frac{F}{mg}.
 \]
 在 $0\leq\theta_i<\pi/2$ 内，每个二阶偏导为 $l[n_i mg\cos\theta_i+F\sin\theta_i]>0$，混合偏导为零，所以这是势能极小值和稳定平衡。上段承担三个球的重量，偏角最小，下段偏角最大。
 角度从铅垂线量起时，水平与竖直分力之比为 $\tan\theta_i$。当 $F\to0$，各杆应回到铅垂方向。静力平衡只要求势能驻点；势能局部最低点对应稳定平衡，其稳定性由允许扰动下的势能二阶变化决定。
 \OriginalFigure{three_rods}{等长轻杆悬挂三个等质量小球，末端受水平力；角标从下向上依次为 $\theta_1,\theta_2,\theta_3$。}
 
-\subsubsection*{拓展题：均质软绳的悬链线}
-软绳线密度为 $\lambda$，下端受水平力 $F>0$，忽略绳的弯曲刚度。以最低端为原点，弧长 $s$ 从下端向上量，取 $x$ 正方向指向悬点所在的一侧。下端外力方向为 $-x$。截取从下端到弧长 $s$ 的绳段，张力的水平分量为 $F$，竖直分量为 $\lambda gs$。因此
-\[
+
+\Step{初始条件、结论与适用范围} 截取每根杆以下的整体，其水平拉力分量均为 $F$，竖直分量分别为 $3mg,2mg,mg$。于是按上、中、下次序，杆轴力大小依次为 $T_3=\sqrt{F^2+9m^2g^2}$、$T_2=\sqrt{F^2+4m^2g^2}$、$T_1=\sqrt{F^2+m^2g^2}$。对球逐个受力时，下杆的作用须与上杆方向分别处理，不能把所有张力都当作相同。
+
+\Case{均质软绳的悬链线}
+\textbf{题目。} 均质软绳线密度为 $\lambda>0$，上端悬于固定点，下端受到水平恒力 $F>0$，系统静止。忽略绳的弯曲刚度，绳始终绷紧。以最低端 $A$ 为原点，弧长 $s$ 从下端向上量，取 $x$ 正方向指向悬点所在的一侧，$y$ 竖直向上；下端外力为 $-F\vect e_x$。求绳张力随 $s$ 的变化及绳形方程，并与三个离散杆的静力平衡比较。
+模型与变量见图\ref{fig:question-ca01}。
+\QuestionFigure{ca01}{软绳的下端水平外力、悬点与弧长坐标}
+\solution \Step{截取绳段并画受力图} 见图\ref{fig:solution-ca01}，取 $A$ 到 $P$ 的绳段，所受重力为 $\lambda gs$、方向竖直向下，下端外力为 $-F\vect e_x$。上端张力沿 $P$ 处切线，必须平衡这两个作用；因此 $T_x=F$、$T_y=\lambda gs$，$T=\sqrt{F^2+(\lambda gs)^2}$。
+\SolutionFigure{ca01}{所截绳段的张力、水平外力与总重力}
+\Step{把张力方向转换为绳形的斜率} \[
 \frac{\dd x}{\dd s}=\frac F{\sqrt{F^2+(\lambda gs)^2}},
 \qquad\frac{\dd y}{\dd s}=\frac{\lambda gs}{\sqrt{F^2+(\lambda gs)^2}}.
 \]
 记 $a=F/(\lambda g)$，定积分得 $x=a\operatorname{arsinh}(s/a)$、$y=a[\sqrt{1+(s/a)^2}-1]$。消去 $s$，
 \[
-\boxed{y=a[\cosh(x/a)-1].}
+y=a[\cosh(x/a)-1].
 \]
 这是最低点为原点的悬链线。三个离散杆的重量累积对应连续绳的 $\lambda gs$，提供了从离散静力平衡到连续模型的联系。
 
 \example{可水平移动的半圆柱：脱离角随质量怎样变化}\label{ex:movingcylinder}
-半圆柱质量为 $M$、半径为 $R$，在光滑水平面上只能平动。质量 $m$ 的小球自凸面顶部由静止开始下滑。取柱心横坐标为 $X$，小球相对柱心的位置为 $(R\sin\theta,R\cos\theta)$，$\theta$ 从顶部竖直方向量起。
-\solution 严格停在顶部的理想静止状态可以永远保持；“开始下滑”取微小扰动后释放的极限。没有水平外力，初始总水平动量为零，故
+质量为 $M>0$、半径为 $R$ 的半圆柱在固定光滑水平面上仅能水平平动。质量为 $m>0$ 的小球从凸面最高点静止释放，并以无穷小扰动向右侧下滑，忽略扰动能量。取柱心水平坐标为 $X$，球相对柱心坐标为 $(R\sin\theta,R\cos\theta)$。求柱体反冲、球的角速度与接触力关系，确定脱离角并讨论 $M\to\infty$ 的极限。
+几何与变量约定见图\ref{fig:question-ex59}。
+
+\QuestionFigure{ex59}{例59的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex59}，解答图\ref{fig:solution-ex59}展示接触力、重力和球的绝对速度合成；图取右侧下滑支，柱体反冲向左。先以水平动量消去 $\dot X$，再代入动能，而脱离条件须由单侧法向力 $N=0$ 单独确定。
+\SolutionFigure{ex59}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 严格停在顶部的理想静止状态可以永远保持；“开始下滑”取微小扰动后释放的极限。没有水平外力，初始总水平动量为零，故
 \[
 (M+m)\dot X+mR\cos\theta\dot\theta=0.
 \]
@@ -2572,7 +3036,7 @@ N\left(1+\frac mM\sin^2\theta\right)=mg\cos\theta-mR\dot\theta^2.
 \]
 刚脱离时 $N=0$，此刻柱体加速度也为零，得到 $R\dot\theta^2=g\cos\theta$。记 $c=\cos\theta_*$、$\alpha=m/(M+m)$，与能量式联立化为
 \[
-\boxed{\alpha c^3-3c+2=0,\qquad 0<c<1.}
+\alpha c^3-3c+2=0,\qquad 0<c<1.
 \]
 在 $0<\alpha<1$ 时左边对 $c\in(0,1)$ 严格递减，端点异号，故有唯一物理解。$M\to\infty$ 时 $c\to2/3$，恢复固定柱；$M=m$ 时 $c\approx0.73205$、$\theta_*\approx42.94^\circ$；$M\to0^+$ 时 $c\to1$，脱离越来越靠近顶部。
 
@@ -2646,19 +3110,28 @@ U(r)=-\int F(r)\,\dd r+C.
 
 
 \example{垂直轨道面的冲量：轨道面转过多少角}\label{ex:planeimpulse}
-质点在有心力下以速率 $v_0$ 作半径 $r_0$ 的圆周运动。在某一瞬间施加垂直原轨道面的冲量，使法向速度增加 $\Delta v_z$。求新旧轨道面的夹角。
-\solution 取冲量时的位置为 $r_0\vect e_x$、原速度为 $v_0\vect e_y$。冲量前后角动量分别为
+质点在相对于固定力心 $O$ 的有心力作用下，以速率 $v_0>0$ 作半径 $r_0>0$ 的圆周运动。在某瞬间施加垂直原轨道面的短暂冲量，使该方向的速度增量为 $\Delta v_z$；冲量期间位置不变。求新旧轨道面的夹角、新角动量的大小与方向，说明为何本题并不保证冲量后的轨道仍为圆。
+几何与变量约定见图\ref{fig:question-ex60}。
+
+\QuestionFigure{ex60}{例60的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex60}，解答图\ref{fig:solution-ex60}展示冲量前后的速度三角形和角动量三角形；位矢沿 $\vect e_x$ 不变，所以正 $\Delta v_z$ 产生负 $\vect e_y$ 的角动量增量。比较两法向的夹角得到轨道面倾角，不需要假定新轨道仍为圆。
+\SolutionFigure{ex60}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取冲量时的位置为 $r_0\vect e_x$、原速度为 $v_0\vect e_y$。冲量前后角动量分别为
 \[
 \vect L=mr_0v_0\vect e_z,\qquad
 \vect L'=mr_0(v_0\vect e_z-\Delta v_z\vect e_y).
 \]
 冲量后仍只受有心力，新角动量守恒，新轨道平面垂直于 $\vect L'$，故
 \[
-\boxed{\tan i=\frac{|\Delta v_z|}{v_0},\quad
-\cos i=\frac{v_0}{\sqrt{v_0^2+\Delta v_z^2}}.}
+\tan i=\frac{|\Delta v_z|}{v_0},\quad
+\cos i=\frac{v_0}{\sqrt{v_0^2+\Delta v_z^2}}.
 \]
 当 $\Delta v_z=v_0$ 时，轨道面转角为 $i=\pi/4$。两平面的交线就是当时的位置矢量所在直线 $Ox$，所以轨道面绕这条线倾转。该冲量同时使能量增加 $m(\Delta v_z)^2/2$、角动量大小增大；“转变轨道面”不表示轨道形状仍为原圆。若特指平方反比引力且初始为圆轨道，增速后的冲量点是新轨道的近心点；总速率达到逃逸速度后，新轨道不再束缚。
 \OriginalFigure{orbital_plane_impulse}{垂直冲量 $I$ 使轨道面绕冲击位置的矢径转动；原图 $I$ 对应正文的冲量 $J$。}
+\Step{初始条件、结论与适用范围} 新的角动量大小为 $L'=mr_0\sqrt{v_0^2+(\Delta v_z)^2}$。两平面较小夹角满足 $\tan i=|\Delta v_z|/v_0$；法向方向的正负决定倾转朝向。冲量没有保持机械能，故新的圆轨道条件通常不再成立。
+
+
 
 \subsection{比耐公式：把时间换成极角}\label{topic:binet}
 非零角动量时，令 $u(\theta)=1/r$，撇号表示对 $\theta$ 求导。由式\eqref{eq:ell}，
@@ -2669,7 +3142,7 @@ U(r)=-\int F(r)\,\dd r+C.
 \]
 代入径向运动方程 $m(\ddot r-r\dot\theta^2)=F(r)$，得到
 \begin{equation}\label{eq:binet}
-\boxed{u''+u=-\frac{F(1/u)}{m\ell^2u^2}.}
+u''+u=-\frac{F(1/u)}{m\ell^2u^2}.
 \end{equation}
 这是比耐公式。它求的是轨道 $r(\theta)$；如需 $r(t)$，还必须用 $\dd t=r^2\dd\theta/\ell$ 恢复时间信息。对于 $L=0$ 的径向运动，不能除以 $\ell$ 使用此式。
 
@@ -2718,8 +3191,8 @@ u''+u=\frac{\kappa}{m\ell^2}.
 \]
 转动极轴，使 $\theta=0$ 对应近心点，可以把解写成
 \begin{equation}\label{eq:conic}
-\boxed{r=\frac p{1+e\cos\theta},\qquad
-p=\frac{m\ell^2}{\kappa}=\frac{L^2}{m\kappa}.}
+r=\frac p{1+e\cos\theta},\qquad
+p=\frac{m\ell^2}{\kappa}=\frac{L^2}{m\kappa}.
 \end{equation}
 这里 $p$ 为半正焦弦，$e\geq0$ 为偏心率。为求 $e$ 与能量的关系，代入
 \[
@@ -2782,7 +3255,7 @@ E=-\frac\kappa{2a}.
 临界能量 $E=0$ 时 $e=1$，轨道 $r=p/(1+\cos\theta)$ 意味着 $r+x=p$。因此
 \[
 \sqrt{x^2+y^2}=p-x\quad\Longrightarrow\quad
-\boxed{y^2=2p\left(\frac p2-x\right).}
+y^2=2p\left(\frac p2-x\right).
 \]
 力心 $O$ 为焦点，顶点为 $(p/2,0)$，准线为 $x=p$，开口向负 $x$；近心距离为 $p/2$。当 $\theta\to\pm\pi$ 时距离发散。抛物线没有有限远心点，也没有椭圆那样的周期。
 \OriginalFigure{kepler_parabola}{以力心为焦点的抛物线轨道，最近点位于极轴正方向。}
@@ -2792,7 +3265,7 @@ E=-\frac\kappa{2a}.
 
 椭圆面积为 $\pi ab$，面积速度为 $\ell/2$，故周期 $\tau=2\pi ab/\ell$。又有 $\ell^2=\mu p=\mu a(1-e^2)$，因此
 \begin{equation}
-\boxed{\tau^2=\frac{4\pi^2}{\mu}a^3.}
+\tau^2=\frac{4\pi^2}{\mu}a^3.
 \end{equation}
 这就是第三定律。若两个天体的质量都不可忽略，约化到相对运动后，$\mu$ 应改为 $G(M+m)$。
 
@@ -2843,7 +3316,7 @@ x=a(\cos\eta-e),\qquad y=b\sin\eta,
 \]
 再用面积速度 $\dot A=\ell/2$，以及 $ab/\ell=\sqrt{a^3/\mu}=1/n$，得到
 \begin{equation}
-\boxed{n(t-t_{\rm p})=\eta-e\sin\eta,\qquad n=\sqrt{\frac\mu{a^3}}.}
+n(t-t_{\rm p})=\eta-e\sin\eta,\qquad n=\sqrt{\frac\mu{a^3}}.
 \end{equation}
 $t_{\rm p}$ 是一次经过近心点的时刻。给定时间，先求解这一标量方程，再代入 $x,y$，即可获得位置。圆轨道 $e=0$ 时参数匀速变化；椭圆中 $\eta$ 与实际极角 $\theta$ 一般不同，不能混用。
 
@@ -2852,8 +3325,14 @@ $t_{\rm p}$ 是一次经过近心点的时刻。给定时间，先求解这一�
 
 \subsection{由初始状态判断轨道与轨道变化}
 \example{判断小行星轨道是否与地球相交}\label{ex:asteroid}
-给定小行星在地心系中的距离 $r_0$、速率 $v_0$，速度与径向方向夹角为 $\alpha$。地球半径为 $R$，忽略其他天体与阻力。
-\solution 计算单位质量的能量和角动量：
+把地球视为半径 $R$、引力参数为 $\mu=GM$ 的固定球体，忽略大气和其他天体。小行星在 $r_0>R$ 处的速率为 $v_0$，速度与向外径向夹角为 $\alpha\in[0,\pi]$。求轨道的单位质量能量、比角动量及近心距离，给出是否与地表相交的判据，并区分几何相交与未来是否实际撞击。
+几何与变量约定见图\ref{fig:question-ex61}。
+
+\QuestionFigure{ex61}{例61的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex61}给出解答所用的几何、方向或分解关系。图中用近心距离与地球半径比较，不能只比较初速度与逃逸速度。若当前正在向外远离，还须判断轨道是束缚轨道还是已经逃逸。
+\SolutionFigure{ex61}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 计算单位质量的能量和角动量：
 \[
 \varepsilon=\frac12v_0^2-\frac\mu{r_0},\qquad
 \ell=r_0v_0|\sin\alpha|.
@@ -2865,11 +3344,19 @@ e=\sqrt{1+\frac{2\varepsilon\ell^2}{\mu^2}},\quad
 r_{\rm p}=\frac p{1+e}.
 \]
 $r_{\rm p}\leq R$ 表示理想轨道与地球表面相交。要判断\emph{今后}是否碰撞，还要确认质点处于入射段，或是会再次返回近心点的束缚轨道；已经远离地球的非束缚出射轨道不一定将来碰撞。$\ell=0$ 时直接分析径向运动。
+\Step{初始条件、结论与适用范围} 更具体地，对 $\ell>0$ 且 $r_p\le R$，若初始径向速度 $v_0\cos\alpha<0$，未来必先穿过 $r=R$；若初态向外而 $\varepsilon<0$，会在远心点转回后穿过；若初态向外且 $\varepsilon\ge0$，则向无穷远离开，不发生未来撞击。若初态恰为径向转向点，应由 $\ddot r=\ell^2/r_0^3-\mu/r_0^2$ 判断随后方向。$\ell=0$ 时为径向运动：向内者会碰撞，向外且能量负者返回后碰撞，向外且能量非负者逃逸。
+
 
 
 \example{把初始位置和速度转换成轨道参数}
-在距力心 $r_0=4R$ 处，质点的速率为 $v_0=\sqrt{\mu/(4R)}$，其径向速度为 $-\sqrt3v_0/2$，横向速度为 $v_0/2$。中心天体半径为 $R$。判断今后是否撞击表面。
-\solution 单位质量能量和比角动量为
+球形中心天体半径为 $R$、引力参数为 $\mu$。质点当前距力心 $r_0=4R$，速率 $v_0=\sqrt{\mu/(4R)}$，径向速度为 $-\sqrt3v_0/2$，横向速度为 $v_0/2$。忽略其他作用。求轨道的半长轴、偏心率、近远心距离，并判断质点今后是否撞击表面及作出判断的时间方向依据。
+几何与变量约定见图\ref{fig:question-ex62}。
+
+\QuestionFigure{ex62}{例62的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex62}给出解答所用的几何、方向或分解关系。图中 $P$ 的速度指向右方，投影到 $OP$ 径向为负；这说明质点当前处于入射段。求出理想近心距离后，应先与实体表面半径比较。
+\SolutionFigure{ex62}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 单位质量能量和比角动量为
 \[
 \varepsilon=-\frac\mu{8R},\qquad
 \ell=(4R)\frac{v_0}{2}=\sqrt{\mu R}.
@@ -2879,11 +3366,19 @@ $r_{\rm p}\leq R$ 表示理想轨道与地球表面相交。要判断\emph{今�
 r_{\rm p}=\frac{R}{1+\sqrt3/2}<R.
 \]
 该轨道束缚且当前径向速度向内，所以将先到达表面。几何参数说明轨道与天体相交，径向速度的符号说明质点正朝交点前进。数学椭圆在表面以内的延长部分不属于实际自由飞行阶段。
+\Step{初始条件、结论与适用范围} 由初始速率得到 $\varepsilon=\mu/(8R)-\mu/(4R)=-\mu/(8R)$；横向初速则独立给出 $\ell=r_0v_{\theta0}=\sqrt{\mu R}$。代入 $a=-\mu/(2\varepsilon)$ 和 $e^2=1+2\varepsilon\ell^2/\mu^2$，可逐步得到上述结果。远心距离为 $r_a=a(1+e)=(4+2\sqrt3)R$，近心距离同样可写为 $r_p=(4-2\sqrt3)R\simeq0.536R$；实际运动在到达表面 $r=R$ 时即结束自由轨道阶段。
+
 
 
 \example{抛物线轨道进入给定半径以内的时间}\label{ex:parabolictransit}
-质点在引力参数 $\mu$ 的固定力心周围沿抛物线运动，近心距离为 $r_p=R/n$，$n>1$。求从入射穿过 $r=R$ 到出射再次穿过 $r=R$ 的时间。这里 $R$ 是观察半径，内部没有阻挡轨道的实体表面。
-\solution 抛物线 $e=1,E=0$，轨道方程为 $r=p/(1+\cos\theta)$，$p=2r_p=2R/n$，比角动量 $\ell=\sqrt{\mu p}$。两个交点位于 $\theta=\pm\theta_0$，
+质点在固定力心的平方反比引力场中沿抛物线轨道运动，引力参数为 $\mu>0$，近心距离为 $r_p=R/n$，$n>1$。$R$ 只是观察球面的半径，内部不存在阻挡轨道的实体表面。求质点从入射穿过 $r=R$ 到出射再次穿过该球面的时间，并说明近心距离对计时区间的作用。
+几何与变量约定见图\ref{fig:question-ex63}。
+
+\QuestionFigure{ex63}{例63的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex63}，解答图\ref{fig:solution-ex63}展示半角变量 $z$ 下的径向距离及两计时边界；图取 $n=2$ 展示对称结构，实际边界为 $z=\pm\sqrt{n-1}$。由 $r/r_p=1+z^2$ 把面积定律化为同一正偶函数的定积分。
+\SolutionFigure{ex63}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 抛物线 $e=1,E=0$，轨道方程为 $r=p/(1+\cos\theta)$，$p=2r_p=2R/n$，比角动量 $\ell=\sqrt{\mu p}$。两个交点位于 $\theta=\pm\theta_0$，
 \[
 \cos\theta_0=\frac pR-1=\frac2n-1,
 \qquad z_0=\tan(\theta_0/2)=\sqrt{n-1}.
@@ -2903,10 +3398,15 @@ r_{\rm p}=\frac{R}{1+\sqrt3/2}<R.
 \]
 $n\to1^+$ 时两个交点合并，时间趋零；$n\to\infty$ 时进入径向抛物线极限，时间趋于 $2\sqrt2\sqrt{R^3/\mu}/3$。若 $R$ 是实体天体表面，实际运动在入射撞击时就终止，上述时间只属于无阻挡的数学轨道。
 
-
 \example{近心点的冲量怎样改变轨道}
-在原椭圆近心点 $r_{\rm p}$，速率为 $v_{\rm p}$，速度纯横向。施加短暂冲量，位置在冲量期间可视为不变。
-\solution 若增加径向速度 $\Delta v_r$，比角动量不变，而比能量变为
+质点在引力参数为 $\mu$ 的固定力心周围沿椭圆运动，当前位于近心点 $r_p$，速度为纯横向 $v_p$。施加短暂平面内冲量，径向、横向速度增量分别为 $\Delta v_r,\Delta v_\theta$，位置在冲量期间不变。求新的单位质量能量、比角动量、轨道类型和轨道参数，并判断原近心点是否仍为新轨道的近心点。
+几何与变量约定见图\ref{fig:question-ex64}。
+
+\QuestionFigure{ex64}{例64的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex64}给出解答所用的几何、方向或分解关系。图中的径向与横向冲量改变不同的速度分量。只有横向分量进入关于力心的角动量，而两分量都进入新机械能。
+\SolutionFigure{ex64}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 若增加径向速度 $\Delta v_r$，比角动量不变，而比能量变为
 \[
 \varepsilon'=\varepsilon+\frac12(\Delta v_r)^2.
 \]
@@ -2920,6 +3420,9 @@ $n\to1^+$ 时两个交点合并，时间趋零；$n\to\infty$ 时进入径向抛
 该点仍是近心点。只有在 $\varepsilon'<0$ 时新轨道仍为椭圆，可用 $a'=-\mu/(2\varepsilon')$；冲量足够大时会变成抛物线或双曲线，不能继续称为“另一椭圆”。
 
 
+
+\Step{初始条件、结论与适用范围} 冲量后的比角动量为 $\ell'=r_p(v_p+\Delta v_\theta)$，单位质量能量为 $\varepsilon'=\tfrac12[(\Delta v_r)^2+(v_p+\Delta v_\theta)^2]-\mu/r_p$。以 $e'^2=1+2\varepsilon'\ell'^2/\mu^2$ 判定圆锥曲线，并在 $\varepsilon'\ne0$ 时取 $a'=-\mu/(2\varepsilon')$。若 $\Delta v_r\ne0$，原位置不再是径向转向点；若径向增量为零，还要比较新横向速率与当地圆速率。
+
 \subsubsection*{冲量后的参数与阈值}
 径向冲量不改变 $\ell$，所以 $p$ 不变；增加径向动能使 $e$ 增大，新的近心距离 $p/(1+e)$ 反而减小。由束缚轨道逃逸的径向增速阈值为 $(\Delta v_r)^2=-2\varepsilon$。它与“冲量点是否仍是近心点”是两个不同判断。
 
@@ -2931,8 +3434,14 @@ $n\to1^+$ 时两个交点合并，时间趋零；$n\to\infty$ 时进入径向抛
 若 $v_t>\sqrt{\mu/r}$，该点为径向极小值，即近心点；若较小，为远心点；相等时是圆轨道。在原椭圆近心点沿原方向增速，会继续满足近心条件。
 
 \example{圆轨道上的切向增速}
-半径为 $r_0$ 的圆轨道质点被瞬时增速为 $qv_c$，其中 $v_c=\sqrt{\mu/r_0}$、$1<q<\sqrt2$。
-\solution 冲量后
+质点在引力参数为 $\mu$ 的固定力心周围作半径为 $r_0$ 的圆周运动，初速为 $v_c=\sqrt{\mu/r_0}$。瞬时施加同向切向冲量，使速率变为 $qv_c$，$1<q<\sqrt2$。求冲量大小、新能量和比角动量、新轨道的半长轴、偏心率及近远心距离，判断增速点在新轨道上的位置。
+几何与变量约定见图\ref{fig:question-ex65}。
+
+\QuestionFigure{ex65}{例65的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex65}给出解答所用的几何、方向或分解关系。图中增速点的径向速度仍为零，但速率已高于当地圆轨道速率。新的近心、远心位置必须由新能量与新角动量共同确定。
+\SolutionFigure{ex65}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 冲量后
 \[
 \varepsilon'=\frac\mu{2r_0}(q^2-2),\qquad
 \ell'=q\sqrt{\mu r_0}.
@@ -2951,7 +3460,7 @@ r_{\rm a}'=\frac{q^2r_0}{2-q^2}.
 
 在引力参数 $\mu$ 的平方反比引力下，定义比角动量 $\vect h=\vect r\times\vect v$，偏心率矢量为
 \[
-\boxed{\vect e=\frac{\vect v\times\vect h}{\mu}-\frac{\vect r}{r}.}
+\vect e=\frac{\vect v\times\vect h}{\mu}-\frac{\vect r}{r}.
 \]
 它指向近日点，大小等于偏心率。由牛顿方程可直接验证 $\dot{\vect e}=0$；也可点乘位矢得到 $\vect e\cdot\er=h^2/(\mu r)-1$，从而恢复 $r=p/[1+e\cos(\theta-\omega)]$。
 
@@ -2969,8 +3478,8 @@ e_x=\frac{r_0v_t^2}{\mu}-1,\qquad
  e'=\sqrt{e^2+\left(\frac{\ell\Delta v_r}{\mu}\right)^2},
 \]
 \[
-\boxed{\omega'=\operatorname{atan2}\left(-\frac{\ell\Delta v_r}{\mu},e\right),\quad
- a'=-\frac\mu{2\varepsilon'},\quad 2a'\text{ 为新长轴长度}.}
+\omega'=\operatorname{atan2}\left(-\frac{\ell\Delta v_r}{\mu},e\right),\quad
+ a'=-\frac\mu{2\varepsilon'},\quad 2a'\text{ 为新长轴长度}.
 \]
 其中 $\varepsilon'=\varepsilon+(\Delta v_r)^2/2$，最后的长轴公式仅在 $\varepsilon'<0$ 时成立。关系 $\cos\omega'=e/e'$ 只能确定偏角大小，不能区分冲量向内或向外；$\operatorname{atan2}$ 可以保留旋转方向。
 
@@ -2995,8 +3504,14 @@ e_x=\frac{r_0v_t^2}{\mu}-1,\qquad
 
 \subsection{引力弹弓：参考系变换与能量交换}\label{topic:slingshot}
 \example{运动行星对飞行器的引力助推}
-行星质量远大于飞行器，在遭遇持续时间内可近似以恒速度 $\vect V$ 运动。飞行器只受行星球对称引力，轨道不进入行星表面。在日心惯性系中，入射速度为 $\vect v_{\rm in}$。说明出射速率为什么可能改变，并求能量变化。
-\solution 在随行星平动的惯性系中，入射、出射渐近速度为
+行星质量远大于飞行器，在遭遇期间近似以恒定日心速度 $\vect V$ 运动。飞行器只受该行星的球对称引力，轨道不进入行星表面；已知日心入射速度 $\vect v_{\rm in}$ 及行星系偏折角。利用两个参考系中的速度合成，求日心系单位质量动能的变化，并说明何种相对偏折能够增能，以及能量的来源。
+几何与变量约定见图\ref{fig:question-ex66}。
+
+\QuestionFigure{ex66}{例66的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex66}，解答图\ref{fig:solution-ex66}展示等长相对速度之差 $\Delta\vect w$ 及其在行星速度方向上的投影；图示差矢量与 $\vect V$ 同向，故日心动能增加。一般偏折的增能或减能均由这一投影的带符号内积决定。
+\SolutionFigure{ex66}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 在随行星平动的惯性系中，入射、出射渐近速度为
 \[
 \vect w_{\rm in}=\vect v_{\rm in}-\vect V,\qquad
 \vect w_{\rm out}=\vect v_{\rm out}-\vect V.
@@ -3030,13 +3545,14 @@ $e\ge1+R_Pw^2/\mu_P$，从而限制最大偏折角；不能不顾表面碰撞而
 恒速度行星是大质量近似。若把行星和飞行器同时纳入封闭系统，总动量和总能量守恒，飞行器增加的能量来自行星轨道能量的减少。行星反冲虽小，仍承担相应收支。
 
 \addtocontents{toc}{\protect\newpage}
+
 \section{有效势与轨道稳定性}\label{sec:effective}
 
 \subsection{径向方程与有效势的建立}\label{topic:effective}
 角动量守恒给出 $\dot\theta=L/(mr^2)$。机械能可写为
 \begin{equation}\label{eq:effective}
 E=\frac12m\dot r^2+U_{\mathrm{eff}}(r),\qquad
-\boxed{U_{\mathrm{eff}}(r)=U(r)+\frac{L^2}{2mr^2}.}
+U_{\mathrm{eff}}(r)=U(r)+\frac{L^2}{2mr^2}.
 \end{equation}
 径向方程等价于
 \begin{equation}
@@ -3093,8 +3609,14 @@ m\delta\ddot r=-U_{\mathrm{eff}}''(r_0)\delta r.
 若 $U_{\mathrm{eff}}''(r_0)>0$，小的径向扰动作振动，圆轨道稳定；若小于零，扰动指数增长，圆轨道不稳定。等于零时，线性分析不能给出充分结论。
 
 \example{幂律势能下稳定圆轨道的条件}
-设 $U(r)=cr^\alpha$，$r>0$，讨论 $L\ne0$ 的圆轨道。
-\solution 圆轨道条件为
+质量为 $m>0$ 的质点在中心势 $U(r)=cr^\alpha$ 中运动，$r>0$、$L\ne0$，$c,\alpha$ 为常数。求圆轨道的存在条件、半径关系和稳定条件，再求稳定圆轨道附近的径向频率与角频率之比，说明 $\alpha=-2$ 为何需要单独讨论。
+几何与变量约定见图\ref{fig:question-ex67}。
+
+\QuestionFigure{ex67}{例67的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex67}给出解答所用的几何、方向或分解关系。图中的离心势与给定势能相加形成有效势；极值条件只保证圆轨道存在，极值处曲率的正负才决定径向稳定性。
+\SolutionFigure{ex67}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 圆轨道条件为
 \[
 c\alpha r_0^{\alpha-1}-\frac{L^2}{mr_0^3}=0,
 \qquad L^2=mc\alpha r_0^{\alpha+2}.
@@ -3106,7 +3628,7 @@ U_{\mathrm{eff}}''(r_0)
 \]
 稳定圆轨道的条件为
 \[
-\boxed{c\alpha>0,\qquad \alpha>-2.}
+c\alpha>0,\qquad \alpha>-2.
 \]
 对 $\alpha=-2$，即立方反比引力，若角动量恰满足圆轨道条件，有效势成为常数；径向冲量会使 $r$ 在到达奇点之前匀速改变，没有恢复作用。$r=0$ 是力场奇点，不能未经说明把解延伸成“穿过力心”。
 
@@ -3138,13 +3660,22 @@ U_{\mathrm{eff}}''(r_0)
 \OriginalFigure{powerlaw_stability_negative}{负系数幂律中心势的有效势比较。原图的 $V(r)$ 表示有效势，对应正文的 $U_{\rm eff}(r)$。}
 
 \example{立方反比引力下的中性圆轨道}\label{ex:inversecube}
-$F=-c/r^3$，$c>0$。势能 $U=-c/(2r^2)$，有效势为 $(L^2/m-c)/(2r^2)$。圆周运动要求 $L^2=mc$，此时 $U_{\rm eff}$ 恒为零。
-\solution 若圆轨道受到径向冲量，使 $\dot r(0)=w$ 而不改变 $L$，则 $m\ddot r=-U_{\rm eff}'=0$，故
+质量为 $m>0$ 的质点只受立方反比有心引力 $\vect F=-c\er/r^3$，$c>0$，角动量 $L\ne0$。取无穷远势能为零，求势能与有效势、圆轨道存在条件，并讨论在保持 $L$ 不变的微小径向位移和微小径向速度扰动下，是否具有回复作用和径向稳定性。
+几何与变量约定见图\ref{fig:question-ex68}。
+
+\QuestionFigure{ex68}{例68的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex68}给出解答所用的几何、方向或分解关系。解答图中的临界有效势是一条水平线。径向位移不会产生恢复力，而径向速度扰动会使半径持续漂移，这两种扰动必须分开讨论。
+\SolutionFigure{ex68}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 若圆轨道受到径向冲量，使 $\dot r(0)=w$ 而不改变 $L$，则 $m\ddot r=-U_{\rm eff}'=0$，故
 \[
-\boxed{r=r_0+wt,\quad
-\theta-\theta_0=\frac\ell w\left(\frac1{r_0}-\frac1{r_0+wt}\right)\quad(w\neq0).}
+r=r_0+wt,\quad
+\theta-\theta_0=\frac\ell w\left(\frac1{r_0}-\frac1{r_0+wt}\right)\quad(w\neq0).
 \]
 $w>0$ 时半径无限增大，$w<0$ 时在 $t=r_0/|w|$ 逼近中心奇点，极角发散。圆轨道不是具有恢复力的稳定轨道。在奇异的 $r^{-3}$ 力模型下，若要把轨迹延拓到中心之后，必须指定额外的碰撞或正则化规则；原方程不能唯一确定这种延拓。
+\Step{初始条件、结论与适用范围} 由 $-\dd U/\dd r=-c/r^3$ 得 $U=-c/(2r^2)$，故 $U_{\rm eff}=(L^2/m-c)/(2r^2)$。只有 $L^2=mc$ 时才可能在任意半径保持 $\dot r=0$ 的圆周运动。在临界条件下，微扰方程是 $\ddot\xi=0$，解为 $\xi=\xi_0+\dot\xi_0t$。纯位移扰动给另一个圆轨道，而任意小的非零径向速度造成长期漂移；因此没有回复振动，不能称为严格的渐近稳定。
+
+
 
 \subsection{轨道积分、径向周期与进动}\label{topic:orbitintegral}
 在每个径向单调的区间内，
@@ -3196,7 +3727,7 @@ w=\frac{mE}{L^2}+A\cos2(\theta-\theta_0),
 \]
 所以完整的极坐标轨道为
 \[
-\boxed{r^2=\frac{L^2}{mE+\sqrt{m^2E^2-mkL^2}\cos2(\theta-\theta_0)}.}
+r^2=\frac{L^2}{mE+\sqrt{m^2E^2-mkL^2}\cos2(\theta-\theta_0)}.
 \]
 它是以原点为中心的椭圆，$\theta_0$ 指向一个短半轴端点。也可以取固定角动量的倍数作为新变量，例如 $L/r^2=Lw$，所得方程与此式等价。$E=L\sqrt{k/m}$ 时振幅 $A=0$，轨道为圆；$L=0$ 时运动退化为经过中心的直线，应直接使用一维谐振子解。
 
@@ -3225,16 +3756,22 @@ w=\frac{mE}{L^2}+A\cos2(\theta-\theta_0),
 \]
 由 $\int\dd z/\sqrt{1-z^2}=\arcsin z$，积分并选近日点角为 $\omega$，得到 $u=u_c+A\cos(\theta-\omega)$，即
 \[
-\boxed{r=\frac{p}{1+e\cos(\theta-\omega)},\quad
+r=\frac{p}{1+e\cos(\theta-\omega)},\quad
  p=\frac{L^2}{m\kappa},\quad
- e=\frac A{u_c}=\sqrt{1+\frac{2EL^2}{m\kappa^2}}.}
+ e=\frac A{u_c}=\sqrt{1+\frac{2EL^2}{m\kappa^2}}.
 \]
 这与比耐法一致。$A^2<0$ 表示给定能量低于有效势最低值，没有实际运动；$A=0$ 是圆轨道；$L=0$ 时本次变量积分所除的量为零，应另用径向能量方程。两个径向转向点之间应改变积分支的符号，不能跨转向点一直使用同一 $\dot r$ 符号。
 
 \subsection{非开普勒轨道与中心弹簧}\label{topic:nonkepler}
-\example{势能 $U\propto-r^{-1.1}$：数值轨道和近心点进动}\label{ex:nonkeplernumeric}
-势能 $U\propto-r^{-1.1}$ 一般产生不能化为圆锥曲线的轨道。取无量纲参数 $m=1$、$U=-r^{-1.1}$，初始 $r_0=1,\dot r_0=0,v_{\theta0}=0.9$，故 $L=0.9$、$E=-0.595$。
-\solution 力为 $F=-1.1r^{-2.1}$，比耐方程为
+\example{非开普勒引力轨道的数值计算与进动}\label{ex:nonkeplernumeric}
+质量 $m=1$ 的质点在无量纲中心势 $U(r)=-r^{-1.1}$ 中运动。初态为 $r_0=1,\dot r_0=0,v_{\theta0}=0.9$，取初始极角为零。求初始能量和角动量，建立数值轨道方程；计算转向点和相邻近心方向的夹角，并说明为何轨迹一般不是闭合圆锥曲线。
+几何与变量约定见图\ref{fig:question-ex69}。
+
+\QuestionFigure{ex69}{例69的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex69}给出解答所用的几何、方向或分解关系。图中的多个近心方向由同一初值轨道连续积分得到。先用能量确定允许半径区间，再以角度为自变量推进轨道，可避免把不同轨道拼接成进动图。
+\SolutionFigure{ex69}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 力为 $F=-1.1r^{-2.1}$，比耐方程为
 \[
 u''+u=\frac{1.1}{0.9^2}u^{0.1},\qquad u(0)=1,\quad u'(0)=0.
 \]
@@ -3243,7 +3780,7 @@ u''+u=\frac{1.1}{0.9^2}u^{0.1},\qquad u(0)=1,\quad u'(0)=0.
 \OriginalPanel{nonkepler_short}
 \hfill
 \OriginalPanel{nonkepler_long}
-\captionsetup{hypcap=false}\captionof{figure}{左：$U\propto-r^{-1.1}$ 的一段数值轨道；右：较长描画区间内的轨迹。两图来自原课件的同类势场，未用于表示本例给定初值的计算结果；有限时长的图像本身不构成轨道稠密性的证明。}\label{fig:orig-nonkepler_short}\label{fig:orig-nonkepler_long}\end{minipage}\end{center}\par
+\captionsetup{hypcap=false}\captionof{figure}{左：$U\propto-r^{-1.1}$ 的一段数值轨道；右：较长描画区间内的轨迹。两图来自同类势场的示意计算，未用于表示本例给定初值的计算结果；有限时长的图像本身不构成轨道稠密性的证明。}\label{fig:orig-nonkepler_short}\label{fig:orig-nonkepler_long}\end{minipage}\end{center}\par
 临近圆轨道时，本章频率比为 $\omega_r/\omega_\theta=\sqrt{\alpha+2}=\sqrt{0.9}$，所以近心点间极角约为 $2\pi/\sqrt{0.9}>2\pi$，有正向进动。当前轨道有有限的偏心程度，应由数值转向点和角积分求实际进动，不把小扰动公式当作精确数值。
 
 \subsubsection*{Bertrand 定理与非闭合轨道的准确范围}\label{topic:bertrand}
@@ -3253,15 +3790,21 @@ u''+u=\frac{1.1}{0.9^2}u^{0.1},\qquad u(0)=1,\quad u'(0)=0.
 在两个简单径向转向点之间的规则束缚运动中，径向周期的角增量若与 $2\pi$ 之比为有理数，轨道闭合；若为无理数，反复的近心点方向遍历角度，轨迹在允许环域内稠密。稠密是无限时间的性质，有限次数描画仍只是一条曲线。圆轨道、分离轨迹、落向奇点或散射轨道不满足上述两转向点周期运动条件，不能都套用“填满环域”的描述。
 
 \example{原长非零的中心弹簧：两种发射方向的最小、最大距离}\label{ex:finite-spring}
-光滑桌面上，质量 $m$ 的小球由劲度 $k$、原长 $l_0>0$ 的弹簧连接固定点。初始弹簧保持原长；给小球初速度 $v_0$，分别垂直于弹簧，或与指向固定点的方向成 $45^\circ$，即与向外径向成 $135^\circ$。求 $r_p,r_a$。
-\solution 本题 $F=-k(r-l_0)$，不是前一道补充题的 $F=-kr$。令 $\omega_0=\sqrt{k/m}$、$q=r/l_0$、$s=v_0/(\omega_0l_0)$，发射角为 $\alpha$，则
+质量为 $m>0$ 的小球在固定光滑水平面内运动，通过劲度 $k>0$、原长 $l_0>0$ 的理想轻弹簧连接固定点 $O$。初始弹簧恰为原长，小球速率为 $v_0>0$。分别考虑初速垂直弹簧，以及初速与指向 $O$ 的方向成 $45^\circ$ 两种发射。求各自能量与角动量，建立最小、最大距离的求根方程并选出物理根。
+几何与变量约定见图\ref{fig:question-ex70}。
+
+\QuestionFigure{ex70}{例70的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex70}，解答图\ref{fig:solution-ex70}展示两个发射条件的有效势与同一总能量的交点；图取无量纲初速 $s=0.5$，左图的初始位置就是内转向点，右图的两个正转向根分居初始位置两侧。极值距离仍有非零切向速度。
+\SolutionFigure{ex70}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 本题 $F=-k(r-l_0)$，不是前一道补充题的 $F=-kr$。令 $\omega_0=\sqrt{k/m}$、$q=r/l_0$、$s=v_0/(\omega_0l_0)$，发射角为 $\alpha$，则
 \[
 E=\tfrac12mv_0^2,\qquad L=ml_0v_0\sin\alpha,
 \qquad U_{\rm eff}=\tfrac12k(r-l_0)^2+\frac{L^2}{2mr^2}.
 \]
 转向点满足
 \begin{equation}\label{eq:finitespring}
-\boxed{q^2(q-1)^2-s^2q^2+s^2\sin^2\alpha=0.}
+q^2(q-1)^2-s^2q^2+s^2\sin^2\alpha=0.
 \end{equation}
 当 $L\neq0$ 时，$U_{\rm eff}''=k+3L^2/(mr^4)>0$，有效势严格凸，且两端均趋于正无穷，故高于最小值的能量恰有两个正转向根。
 
@@ -3321,8 +3864,8 @@ p=\frac{L^2}{m\kappa},\qquad
 
 比耐公式仍可求解双曲线轨道，利用渐近线几何关系可得
 \begin{equation}\label{eq:impact}
-\boxed{b=\frac\kappa{mv_\infty^2}\cot\frac\chi2
-=\frac\kappa{2E}\cot\frac\chi2.}
+b=\frac\kappa{mv_\infty^2}\cot\frac\chi2
+=\frac\kappa{2E}\cot\frac\chi2.
 \end{equation}
 瞄准距离越小，偏折角越大；$b\to0$ 的正碰极限对应 $\chi\to\pi$。
 \OriginalFigure{rutherford_orbit}{斥力散射的双曲线轨道与渐近线。原图碰撞参数记为 $p$，正文记为 $b$。}
@@ -3334,8 +3877,8 @@ p=\frac{L^2}{m\kappa},\qquad
 \end{equation}
 将式\eqref{eq:impact} 代入，
 \begin{equation}\label{eq:rutherford}
-\boxed{\frac{\dd\sigma}{\dd\Omega}
-=\left(\frac\kappa{4E}\right)^2\frac1{\sin^4(\chi/2)}.}
+\frac{\dd\sigma}{\dd\Omega}
+=\left(\frac\kappa{4E}\right)^2\frac1{\sin^4(\chi/2)}.
 \end{equation}
 \OriginalFigure{scattering_cone}{入射面积元与出射立体角的几何对应。原图的散射角 $\varphi$ 对应正文的 $\chi$。}
 式\eqref{eq:rutherford} 是\emph{每单位立体角}的微分截面，不应与只对散射角求导的 $\dd\sigma/\dd\chi$ 混淆。
@@ -3380,8 +3923,14 @@ $\chi\geq\chi_0$ 对应 $b\leq b_0=A\cot(\chi_0/2)$。所有满足阈值的入�
 若改求对角度的分布，必须乘上轴对称角带因子：$\dd\sigma/\dd\chi=2\pi\sin\chi\,\dd\sigma/\dd\Omega$。省去这个因子会把探测环带计数与单位立体角计数混淆。
 
 \example{散射角、最近距离与能量缩放}
-入射能量为 $E$，斥力强度为 $\kappa$。求偏折 $90^\circ$ 的碰撞参数和最近距离，并比较 $60^\circ$ 与 $120^\circ$ 处的微分截面。
-\solution 当 $\chi=90^\circ$ 时，$b=\kappa/(2E)$，所以 $e=\sqrt2$，
+粒子在固定力心的平方反比斥力势 $U=\kappa/r$ 中散射，$\kappa>0$，无穷远入射动能为 $E>0$。求散射角为 $90^\circ$ 时的碰撞参数及最近距离，求 $60^\circ$ 与 $120^\circ$ 处微分截面的比值，并讨论能量变化对角度和截面的影响。
+几何与变量约定见图\ref{fig:question-ex71}。
+
+\QuestionFigure{ex71}{例71的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex71}给出解答所用的几何、方向或分解关系。图中碰撞参数是力心到入射渐近线的距离，最近距离则沿实际弯曲轨道取到；两者不可混同。
+\SolutionFigure{ex71}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 当 $\chi=90^\circ$ 时，$b=\kappa/(2E)$，所以 $e=\sqrt2$，
 \[
 r_{\min}=\frac\kappa{2E}(1+\sqrt2).
 \]
@@ -3392,16 +3941,20 @@ r_{\min}=\frac\kappa{2E}(1+\sqrt2).
 =\left(\frac{\sin60^\circ}{\sin30^\circ}\right)^4=9.
 \]
 当能量翻倍，固定角度的碰撞参数减半，微分截面及任意固定角区间的积分截面都变为原来的四分之一。若固定的是碰撞参数，则应重新由 $\cot(\chi/2)=2Eb/\kappa$ 求角度，不能同时把角度也视为固定。
+\Step{初始条件、结论与适用范围} 由散射关系 $\cot(\chi/2)=2Eb/\kappa$，在 $90^\circ$ 时先求得 $b=\kappa/(2E)$。再用 $L=\sqrt{2mE}\,b$ 代入最近点能量式 $Er_{\min}^2-\kappa r_{\min}-L^2/(2m)=0$，取正根，得 $r_{\min}=\kappa(1+\sqrt2)/(2E)$。它大于碰撞参数，符合斥力将轨道推离力心的几何。
+
 
 
 \subsection{球形势阱的折射与经典散射}\label{topic:squarewell}
 \example{有限深度球形势阱的微分截面}
-质量 $m$ 的粒子从无穷远入射，能量 $E>0$，碰撞参数为 $b$。固定球形势阱半径为 $a$，深度为 $V_0>0$，
-\[
-U(r)=\begin{cases}-V_0,&r<a,\\0,&r>a.\end{cases}
-\]
-忽略吸收，按经典轨道研究穿过势阱的粒子，求边界折射规律、散射角和截面。
-\solution 阱内、外势能均为常数，粒子在各区域沿直线运动。只有边界附近的径向力冲量改变运动方向。速度模由能量确定：
+质量为 $m$ 的粒子从无穷远入射，能量为 $E>0$、碰撞参数为 $b$。固定球形势阱半径为 $a>0$、深度为 $V_0>0$，势能在 $r<a$ 时为 $-V_0$，在 $r>a$ 时为零。忽略吸收及量子效应。对穿过势阱的经典轨道，求边界处速率与折射关系、散射角、角度允许范围和微分散射截面，并交代 $b\ge a$ 的情况。
+几何与变量约定见图\ref{fig:question-ex72}。
+
+\QuestionFigure{ex72}{例72的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex72}，解答图\ref{fig:solution-ex72}展示势阱入口的局部折转和动量分解；切向动量不变而法向动量随势能降低而增加，因而向内法线折转。图中 $i,j$ 均从法线量起，出口还有一次折转，净散射角须把两次贡献相加。
+\SolutionFigure{ex72}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 阱内、外势能均为常数，粒子在各区域沿直线运动。只有边界附近的径向力冲量改变运动方向。速度模由能量确定：
 \[
 v_{\rm out}=\sqrt{2E/m},\quad
 v_{\rm in}=\sqrt{2(E+V_0)/m},\quad
@@ -3424,7 +3977,7 @@ mv_{\rm out}a\sin i=mv_{\rm in}a\sin j,
 -\frac2{na\sqrt{1-b^2/(n^2a^2)}}>0.
 \]
 正中入射 $b=0$ 沿直径直进直出，净偏折为零；$b\to a^-$ 时
-$\chi\to\chi_{\max}=\pi-2\arcsin(1/n)$。$b>a$ 的粒子不受力，也不计入非零角散射截面。
+$\chi\to\chi_{\max}=\pi-2\arcsin(1/n)$。$b>a$ 的粒子不受力，也不计入非零角散射截面。$b=a$ 是理想尖锐边界上的掠射临界情形，向内侧或外侧取极限的结果不同，应注明所取分支。单一临界碰撞参数的环带面积为零，不影响下面的微分截面及总截面。
 
 为显式求截面，令 $s=\chi/2$、$z=\cos s$，由 $j=i-s$ 及折射关系得到
 \[
@@ -3439,9 +3992,9 @@ b^2=\frac{a^2n^2\sin^2s}{n^2+1-2n\cos s}.
 \]
 入射环带与出射立体角对应，故
 \begin{equation}
-\boxed{\frac{\dd\sigma}{\dd\Omega}
+\frac{\dd\sigma}{\dd\Omega}
 =\frac1{2\sin\chi}\frac{\dd b^2}{\dd\chi}
-=\frac{a^2n^2[(n^2+1)z-n(1+z^2)]}{4zD^2}.}
+=\frac{a^2n^2[(n^2+1)z-n(1+z^2)]}{4zD^2}.
 \end{equation}
 适用范围 $0<\chi<\chi_{\max}$，其他非零角为零。前向极限为 $a^2n^2/[4(n-1)^2]$；最大角处截面趋于零。分子也可写作 $(nz-1)(n-z)$，在允许区间内非负。
 
@@ -3455,11 +4008,16 @@ b^2=\frac{a^2n^2\sin^2s}{n^2+1-2n\cos s}.
 
 \TeachingFigure{c1-diagram-38}{球形势阱中的折射轨道。取 $b/a=0.6$、$n=1.5$，入口有 $i\approx36.87^\circ$、$j\approx23.58^\circ$，总偏折 $\chi=2(i-j)\approx26.58^\circ$。}
 
-
 \subsection{立方反比斥力的轨道与截面}\label{topic:inversecubescatter}
 \example{势能为 $c/r^2$ 的完整散射解}
-质量 $m$ 的粒子在 $U=c/r^2$、$c>0$ 中运动，入射速率 $v_\infty$、碰撞参数 $b$。求最近距离、散射角、每单位立体角截面及给定角阈值的积分截面。
-\solution 该势产生 $F_r=2c/r^3$，方向向外。无穷远能量和角动量为 $E=mv_\infty^2/2$、$L=mv_\infty b$，有效势
+质量为 $m>0$ 的粒子在斥力势 $U=c/r^2$、$c>0$ 中作经典散射，无穷远速率为 $v_\infty>0$、碰撞参数为 $b>0$。求轨道的最近距离、散射角、每单位立体角截面以及大于给定角阈值的积分截面，并分别讨论小角极限和正碰极限。
+几何与变量约定见图\ref{fig:question-ex73}。
+
+\QuestionFigure{ex73}{例73的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex73}给出解答所用的几何、方向或分解关系。图中以入射、出射渐近线确定偏折角；$1/r^2$ 势能对应 $1/r^3$ 斥力，不能套用平方反比力的卢瑟福公式。
+\SolutionFigure{ex73}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 该势产生 $F_r=2c/r^3$，方向向外。无穷远能量和角动量为 $E=mv_\infty^2/2$、$L=mv_\infty b$，有效势
 \[
 U_{\rm eff}=\frac{L^2+2mc}{2mr^2}.
 \]
@@ -3486,9 +4044,9 @@ b^2=\frac cE\frac{(\pi-\chi)^2}{\chi(2\pi-\chi)}.
 \frac{\dd\sigma}{\dd\chi}
 &=\pi\left|\frac{\dd b^2}{\dd\chi}\right|
 =\frac{2\pi^3c}{E}\frac{\pi-\chi}{\chi^2(2\pi-\chi)^2},\\
-\boxed{\frac{\dd\sigma}{\dd\Omega}}
-&\boxed{=\frac{c\pi^2}{E}\frac{\pi-\chi}
-{\sin\chi\,\chi^2(2\pi-\chi)^2}.}
+\frac{\dd\sigma}{\dd\Omega}
+&=\frac{c\pi^2}{E}\frac{\pi-\chi}
+{\sin\chi\,\chi^2(2\pi-\chi)^2}.
 \end{align}
 两者相差 $2\pi\sin\chi$，不能把对极角的结果直接当作对立体角的结果。第二式量纲为面积；能量依赖为 $E^{-1}$，与平方反比斥力的 $E^{-2}$ 不同。
 
@@ -3508,8 +4066,14 @@ U_2(r)=-\frac C{r^2}\mathrm e^{-r/a},\qquad K,C,a>0.
 第一种是吸引型 Yukawa 势\footnote{标准径向形式可参见 \href{https://academic.oup.com/ptep/article/2017/8/083A01/4092946}{Yukawa potential: ground state energy and critical screening}。这里讨论经典轨道，未使用其量子能谱结果。}；第二种是指数屏蔽的反平方势能。$K$ 的量纲为能量乘长度，$C$ 为能量乘长度平方。改变幂次会改变圆轨道稳定性，不能仅按指数外观套用结论。
 
 \example{Yukawa 势中的圆轨道与近圆进动}
-质量 $m$ 的粒子在 $U_1$ 中运动，角动量 $L\ne0$。求圆轨道条件、稳定区间和相邻近心点的转角。
-\solution 先求径向力：
+质量为 $m>0$ 的质点在 Yukawa 中心势 $U(r)=-K e^{-r/a}/r$ 中运动，$K,a>0$，角动量为 $L\ne0$。求圆轨道的存在条件和径向稳定区间，求稳定圆轨道附近径向、角向频率的关系及相邻近心点的转角，说明屏蔽长度 $a$ 的作用。
+几何与变量约定见图\ref{fig:question-ex74}。
+
+\QuestionFigure{ex74}{例74的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex74}给出解答所用的几何、方向或分解关系。图中左侧有效势用于 Yukawa 势。圆轨道处的一阶导数为零，而二阶导数中还保留指数屏蔽对恢复作用的影响。
+\SolutionFigure{ex74}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 先求径向力：
 \[
 U_1'=K\mathrm e^{-r/a}\left(\frac1{r^2}+\frac1{ar}\right),\qquad
 F_r=-U_1'.
@@ -3536,11 +4100,20 @@ F_r=-U_1'.
 \Delta\varpi=\pi q^2+O(q^3).
 \]
 因此领先项是二次小量。接近稳定边界时径向频率趋于零，近圆近似只适用于足够小的扰动；不能把小振幅结果用于任意偏心率轨道。
+\Step{初始条件、结论与适用范围} 这里 $U_1$ 明确指 $-K e^{-r/a}/r$。设 $x=r_0/a$，圆轨道条件为 $L^2/m=K r_0e^{-x}(1+x)$。有效势曲率化为 $U_{\rm eff}^{\prime\prime}(r_0)=K e^{-x}(1+x-x^2)/r_0^3$，所以稳定区间为 $0<x<(1+\sqrt5)/2$，而 $\omega_r^2/\Omega_0^2=(1+x-x^2)/(1+x)$。相邻近心点转角约为 $2\pi\sqrt{(1+x)/(1+x-x^2)}$。
+
+
 
 \subsection{屏蔽反平方势的势垒与坠落}\label{topic:screenedr2}
 \example{指数屏蔽反平方势能中的不稳定圆轨道}
-研究 $U_2$ 的有效势，说明哪些初态会散射、哪些会向力心坠落。
-\solution 记 $A=L^2/(2m)$，则
+质量为 $m>0$ 的质点在中心势 $U(r)=-C e^{-r/a}/r^2$ 中运动，$C,a>0$，角动量为 $L\ne0$。分析有效势的圆轨道条件及稳定性，给出有效势垒存在的参数范围，并按能量和当前运动方向判断初态是散射、临界趋近还是向力心坠落。
+几何与变量约定见图\ref{fig:question-ex75}。
+
+\QuestionFigure{ex75}{例75的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex75}给出解答所用的几何、方向或分解关系。图中右侧对应带屏蔽的反平方势能，中心小半径区的离心项与吸引项同阶竞争。势垒顶是非稳定圆轨道，不能将其当作势阱底。
+\SolutionFigure{ex75}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 记 $A=L^2/(2m)$，则
 \[
 W(r)=\frac{A-C\mathrm e^{-r/a}}{r^2},\qquad
 W'(r)=\frac{-2A+C\mathrm e^{-r/a}(2+r/a)}{r^3}.
@@ -3564,6 +4137,9 @@ W(r)=-\frac{C\mathrm e^{-r/a}}{r^2}<0,\qquad
 W'(r)=\frac{C\mathrm e^{-r/a}(2+r/a)}{r^3}>0.
 \]
 所以 $W$ 在 $r>0$ 严格单调地从 $-\infty$ 增至 $0^-$，没有有限半径的圆轨道，也没有正的势垒顶。由 $m\dot r^2/2=E-W(r)$ 可见，$E\ge0$ 的向内径向运动到达力心，向外运动则可到达无穷远；$E=0$ 时到无穷远的速率趋零。$E<0$ 时存在唯一外侧转向点，向外运动到达该点后回落，仍不能形成两个有限转向点之间的周期束缚运动。关于奇异力心处后续延拓的限制仍然适用。
+\Step{初始条件、结论与适用范围} 这里 $U_2$ 明确指 $-C e^{-r/a}/r^2$。设 $A=L^2/(2m)$、$x=r/a$，则 $U_{\rm eff}=(A-Ce^{-x})/r^2$。圆轨道条件为 $2A=C e^{-x}(x+2)$；右端随 $x>0$ 单调减小，故只有 $0<A<C$ 时存在正半径临界点。此处 $U_{\rm eff}^{\prime\prime}=-C e^{-x}x(x+1)/r^4<0$，为势垒顶。初态分类还要结合其所处势垒哪一侧以及径向速度符号。
+
+
 
 \subsection{一般中心势的散射求积与数值计算}\label{topic:scatterquadrature}
 对任意给定的中心势 $U(r)$，在 $E>0$、存在外侧径向转折点 $r_{\min}$ 的散射支上，先解
@@ -3595,8 +4171,14 @@ W'(r)=\frac{C\mathrm e^{-r/a}(2+r/a)}{r^3}>0.
 
 
 \example{Yukawa 势散射的无量纲数值求积}\label{ex:yukawanumeric}
-取吸引型势 $U=-K\mathrm e^{-r/a}/r$，入射能量 $E=K/a$。以长度 $a$ 为单位，求碰撞参数 $b/a=0.5,1,2$ 的最近距离、偏折角和微分截面，展示没有初等轨道公式时如何完成计算。
-\solution 记 $q=r/a$、$\beta=b/a$。转折点的无量纲方程为
+考虑吸引型 Yukawa 势 $U=-K e^{-r/a}/r$ 的经典散射，入射能量为 $E=K/a$。以 $a$ 为长度单位，分别取 $b/a=0.5,1,2$。建立最近距离、偏折角和微分截面的无量纲求积公式，给出数值计算步骤及结果，说明如何处理转向点处的可积奇性和多分支散射。
+几何与变量约定见图\ref{fig:question-ex76}。
+
+\QuestionFigure{ex76}{例76的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex76}给出解答所用的几何、方向或分解关系。图中的积分从外侧最近点延伸到无穷远，转向点使分母为零但积分可积。应先选取物理外根，再作变量代换与数值求积。
+\SolutionFigure{ex76}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 记 $q=r/a$、$\beta=b/a$。转折点的无量纲方程为
 \[
 F(q)=1-\frac{\beta^2}{q^2}+\frac{\mathrm e^{-q}}q=0.
 \]
@@ -3634,8 +4216,14 @@ $\beta$ & $q_0$ & $\chi$（弧度） & $\chi$（度） & $f/a^2$\\\midrule
 
 \subsection{从弧长方程反求等时曲线}\label{topic:tautochrone}
 \example{大振幅仍严格简谐的光滑轨道}
-质点在竖直平面内的一条光滑轨道上受重力运动。最低点为原点，以 $s$ 表示从最低点量起的有符号弧长，$y$ 为高于最低点的高度。求使 $s$ 满足严格简谐运动的轨道。
-\solution 沿轨道的重力分量为 $-mg\,\dd y/\dd s$。若要求
+质点在固定竖直平面内的一条光滑轨道上，仅在重力与理想约束力作用下运动。最低点为原点，$s$ 为从最低点起量的有符号弧长，$y$ 为高于最低点的高度。要求任意允许振幅下都满足 $\ddot s+\omega_0^2s=0$，$\omega_0>0$。求轨道方程、与频率相应的几何尺度及振动周期，并说明弧长坐标的取值范围。
+几何与变量约定见图\ref{fig:question-ex77}。
+
+\QuestionFigure{ex77}{例77的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex77}给出解答所用的几何、方向或分解关系。图中势能高度由弧长平方确定。先从切向牛顿方程得到 $y(s)$，再利用弧长的几何恒等式恢复平面曲线。
+\SolutionFigure{ex77}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 沿轨道的重力分量为 $-mg\,\dd y/\dd s$。若要求
 \[
 \ddot s+\omega^2s=0,
 \]
@@ -3653,7 +4241,7 @@ y=\frac{\omega^2s^2}{2g}.
 \]
 从最低点积分得到
 \begin{equation}
-\boxed{x=A(q+\sin q),\qquad y=A(1-\cos q).}
+x=A(q+\sin q),\qquad y=A(1-\cos q).
 \end{equation}
 这是一段最低点居中的倒置摆线。它满足 $\dd s/\dd q=2A\cos(q/2)$，代回即可核对所需的 $y(s)$。
 
@@ -3676,8 +4264,14 @@ N=mg\cos(q/2)+\frac{mv^2}{\rho_c}>0.
 
 \subsection{旅行时间泛函与欧拉方程}\label{topic:brachistochrone}
 \example{给定两端点的最速降线}
-质点从 $A=(0,0)$ 静止出发，在重力下沿竖直平面光滑曲线到 $B=(d,h)$，其中 $d,h>0$，$y$ 轴向下。轨道可先降到终点下方再上升。求最短旅行时间的曲线。
-\solution 能量守恒给 $v=\sqrt{2gy}$，弧长元为
+竖直平面中取 $x$ 水平向右、$y$ 竖直向下。质点从 $A=(0,0)$ 静止出发，在均匀重力下沿固定光滑轨道运动到 $B=(d,h)$，$d,h>0$，忽略阻力。轨道允许在到达 $B$ 前先下降到终点下方。建立旅行时间泛函，求最速降线的参数方程、端点参数条件与最短时间，并解释起点竖直切线的含义。
+几何与变量约定见图\ref{fig:question-ex78}。
+
+\QuestionFigure{ex78}{例78的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 结合题图\ref{fig:question-ex78}，解答图\ref{fig:solution-ex78}展示轨道局部弧长元与下降高度；图中的纵坐标向下为正，$y$ 决定当前速率，而 $\dd s$ 决定通过微元的路程，所以旅行时间元为 $\dd t=\dd s/\sqrt{2gy}$，优化时两者必须同时变化。
+\SolutionFigure{ex78}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 能量守恒给 $v=\sqrt{2gy}$，弧长元为
 $\dd s=\sqrt{1+y'^2}\,\dd x$。因而时间取决于整条曲线：
 \[
 \mathcal T[y]=\int_0^dF(y,y')\,\dd x,
@@ -3739,7 +4333,7 @@ y'=\cot(q/2),\qquad
 \]
 积分并施加 $x(0)=0$，得
 \begin{equation}
-\boxed{x=A(q-\sin q),\qquad y=A(1-\cos q),\qquad 0\le q\le q_B<2\pi.}
+x=A(q-\sin q),\qquad y=A(1-\cos q),\qquad 0\le q\le q_B<2\pi.
 \end{equation}
 参数 $A,q_B$ 由两个端点条件共同确定：
 \[
@@ -3783,14 +4377,23 @@ S_y=\frac{\cot(q/2)}{2\sqrt{gA}},\qquad
 \OriginalFigure{brachistochrone}{最速降线问题的端点与候选路径。图中 $y$ 轴向下为正。}
 
 \example{水平距离与下降高度相等的数值比较}
-取 $d=h$，求无量纲最短时间，并与直线比较。
-\solution 解 $q_B-\sin q_B=1-\cos q_B$，得到
+沿用竖直向下为 $y$ 正向的坐标，质点从 $(0,0)$ 静止滑到 $(h,h)$，$h>0$，轨道光滑且仅受重力。分别考虑两点间的直线斜轨和最速降线。数值求解摆线端点方程，求两条轨道以 $\sqrt{h/g}$ 为时间单位的到达时间，比较相对节省的时间并核对计算精度。
+几何与变量约定见图\ref{fig:question-ex79}。
+
+\QuestionFigure{ex79}{例79的研究对象、条件与变量}
+
+\solution \Step{模型与方向} 图\ref{fig:solution-ex79}给出解答所用的几何、方向或分解关系。图中两条轨道有相同端点，摆线起始下降更陡。数值比较必须使用同一时间单位，并由端点条件确定摆线尺度后再计算时间。
+\SolutionFigure{ex79}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 解 $q_B-\sin q_B=1-\cos q_B$，得到
 $q_B\approx2.412011$、$A/h\approx0.572917$。因此
 \[
 \mathcal T_{\min}\sqrt{g/h}\approx1.825682,
 \qquad \mathcal T_{\rm line}\sqrt{g/h}=2.
 \]
 摆线时间约为直线的 $91.3\%$。这里先求端点参数，再用时间公式，不能任意取一段摆线就宣称满足题设。
+\Step{初始条件、结论与适用范围} 直线轨道长为 $\sqrt2h$，沿轨道加速度为 $g/\sqrt2$，由静止运动得 $\mathcal T_{\rm line}=2\sqrt{h/g}$。摆线端点满足 $h=A(q_B-\sin q_B)=A(1-\cos q_B)$，取非零根 $0<q_B<2\pi$；求出尺度后，$\mathcal T_{\min}=q_B\sqrt{A/g}$。两时间相减再除以直线时间，得到相对节省约 $8.716\%$。端点方程在 $q=0$ 也形式为零，但退化根不能连接两个不同的端点。
+
+
 
 \subsection{变分方法与力学、光学的联系}
 固定端点泛函 $J[y]=\int F(x,y,y')\dd x$ 的共同结构是：建立被积量，列端点条件，作任意内部扰动，分部积分，再检查驻值类型与约束。下面几个应用说明为何同一数学工具能处理不同物理问题。
@@ -3840,7 +4443,7 @@ $y=a\cosh[(x-x_*)/a]$。旋转后的曲面称悬链面。它满足面积驻值�
 
 在静态弱引力场中，令牛顿引力势每单位质量为 $\Phi$。一个与场源相对静止的观察者在 $A$ 处发出频率 $\nu_A$ 的光，另一个静止观察者在 $B$ 处接收。两处 $|\Phi|/c^2\ll1$，频率比为
 \[
-\boxed{\frac{\nu_B-\nu_A}{\nu_A}\approx-\frac{\Phi_B-\Phi_A}{c^2}.}
+\frac{\nu_B-\nu_A}{\nu_A}\approx-\frac{\Phi_B-\Phi_A}{c^2}.
 \]
 当光从较低引力势到较高引力势，$\Phi_B>\Phi_A$，接收频率变小，是引力红移；反向为蓝移。球形质量 $M$ 的外部 $\Phi=-GM/r$，所以
 \[
@@ -3875,7 +4478,7 @@ a_y=-\frac{GMb}{(b^2+v_\infty^2t^2)^{3/2}}.
 
 广义相对论在弱场给出的光线总偏折为
 \[
-\boxed{\chi_{\rm GR}\approx\frac{4GM}{bc^2}=2\chi_N(v_\infty=c).}
+\chi_{\rm GR}\approx\frac{4GM}{bc^2}=2\chi_N(v_\infty=c).
 \]
 对掠过太阳边缘的光，取 $GM_\odot\approx1.327\times10^{20}\,\mathrm{m^3/s^2}$、$R_\odot\approx6.96\times10^8\,\mathrm m$、$c\approx3.00\times10^8\,\mathrm{m/s}$，得到 $\chi_{\rm GR}\approx8.47\times10^{-6}\,\mathrm{rad}\approx1.75''$，牛顿类比为约 $0.87''$。
 
@@ -3904,7 +4507,7 @@ u\approx\frac1p\{1+e\cos[(1-\delta)\theta]\},\qquad\delta\ll1.
 \]
 左边同频项为 $2\delta e\cos\theta/p$，与右边 $6\mu e\cos\theta/(p^2c^2)$ 比较，得到 $\delta=3\mu/(pc^2)$。两次近日点之间的角变化为 $2\pi/(1-\delta)$，因此每公转的额外进动为
 \[
-\boxed{\Delta\varpi=\frac{6\pi GM}{a(1-e^2)c^2}.}
+\Delta\varpi=\frac{6\pi GM}{a(1-e^2)c^2}.
 \]
 将水星参数代入，并按一个世纪的公转次数累积，就得到约 $43''$。这里采用摄动近似；实际每次公转的进动很小。
 
@@ -3990,48 +4593,146 @@ E_{\mathcal L}=\sum_i\dot q_i\frac{\partial\mathcal L}{\partial\dot q_i}-\mathca
 \end{longtable}
 \normalsize
 
-\section*{练习与解答}
-\addcontentsline{toc}{section}{练习与解答}
+\section*{综合练习}\addcontentsline{toc}{section}{综合练习}
+题目先集中列出，详解从第\pageref{appendix:solutions}页开始。每幅图的方向、变量与相应题设共同使用。
+\Case{第1题}
+在固定惯性系中分别研究两种运动：（a）质点沿 $x$ 轴，位置为 $x(t)=a_0t^2/2$，$a_0\ne0$；（b）质点沿半径 $R>0$ 的圆周以恒定速率 $v_0>0$ 运动。求两者的速度与加速度，分别说明“直线轨道”“恒定速率”对加速度的哪一部分施加限制，并给出加速度全程为零需要满足的条件。
 
-\begin{enumerate}[label=\textbf{\arabic*.},itemsep=9pt]
-\item 为什么“轨道是直线”不意味着加速度为零？为什么“速率是常数”也不意味着加速度为零？
-\item 质点满足 $r=at,\ \theta=bt$，$a>0$。求速度、加速度和速率。
-\item 半径为 $R$ 的固定圆环上，小环的速率为 $v=ct$，$c>0$。求切向与法向加速度及总加速度大小。
-\item 轨道为 $y=kx^2$，质点速率为常数 $v$。求任意点的加速度大小，并说明方向。
-\item 飞机相对空气速率为 $u$，按边长为 $d$ 的地面正方形飞行一周。均匀风速 $w<u$ 与其中两边平行，求总时间。
-\item 质量为 $m$ 的质点竖直向下释放，阻力为 $-bv$。写出速度与下落距离，并用短时展开检查自由落体极限。
-\item 一维质点满足 $m\ddot x=-kx$，且 $x(0)=A,\ \dot x(0)=0$。分别用微分方程和机械能关系求最大速率。
-\item 光滑小车向上竖直加速，加速度为 $a_0$。车内悬球相对车静止，求绳张力。若车向下加速为 $g$，结果有什么含义？
-\item 力场 $\vect F=(2xy,x^2,0)$ 是否为保守力？若是，求取原点为零点的势能。
-\item 非零角动量的质点受到径向冲量，角动量和机械能是否一定守恒？说明冲量前后与冲量过程的区别。
-\item 卫星在半径 $r_0$ 的圆轨道上运动，速率为 $v_c=\sqrt{\mu/r_0}$。在一点增加同向横向速度，变为 $qv_c$，$1<q<\sqrt2$。求新轨道的 $a,e$，并判断该点为近心点还是远心点。
-\item 质点在 $U=-\kappa/r$ 中运动，角动量为 $L\ne0$。求圆轨道半径、机械能，以及有效势极小值附近的径向振动频率。
-\item 对 $U=\frac12kr^2$、$L\ne0$，求圆轨道半径，并验证稳定性。
-\item 平方反比斥力的散射实验中，入射能量增大为原来的两倍。固定散射角时，微分截面怎样变化？固定碰撞参数时，偏折角如何变化？
-\item 斥力势 $U=\kappa/r$ 中，已知入射能量 $E$ 与角动量 $L$，求最近接近距离。
+模型与变量见图\ref{fig:question-tr01}。
+\QuestionFigure{tr01}{综合练习第1题的模型与条件}
+\Case{第2题}
+质点在固定平面极坐标中满足 $r=at,\theta=bt$，$a>0$，$b$ 为常数，$t\ge0$，极角从 $+x$ 轴逆时针量起。求速度、加速度、速率和加速度大小，写出 $b\ne0$ 时的轨道方程，并说明 $b=0$ 和 $t=0$ 时应怎样理解结果。
 
-\item 固定圆环上的质点初始位置为 $\vect r_0=(R,0)$。若给定速度 $(u,w)$，哪一个分量必须满足约束？若瞬时速率为 $|w|$，径向加速度应是多少？
-\item 对受力 $F_0\cos\omega t$ 的一维质点，$x(0)=0,v(0)=0$。求一个周期后的位移、速度，以及半个周期内的最大位移。
-\item 欠阻尼振子满足 $\ddot x+2\gamma\dot x+\omega_0^2x=0$，$x(0)=x_0,v(0)=0$。确定正弦和余弦项的系数，并解释为什么不能删去正弦项。
-\item 光滑直管在水平面内绕一端以恒定角速度 $\Omega>0$ 转动，质量为 $m$ 的小球可沿管自由滑动。以转轴为极点，初态为 $r(0)=r_i>0,\dot r(0)=0$。在小球仍位于管内的时间范围，求 $r(t)$ 与 $R_\theta(t)$，并求从零时刻到 $t$ 的约束力功。
-\item 势能 $U=U_0[(x/a)^2-1]^2$。求所有平衡点的性质，以及 $E=U_0/4$ 时的四个转向点。
-\item 在惯性系中把参考原点从 $O$ 移到另一个固定点 $A$。若 $\vect F$ 通过 $O$，角动量关于 $A$ 是否一定守恒？用力矩关系说明。
-\item \parbox[t]{\linewidth}{引力椭圆的 $a,e$ 已知。求近远心距离与速率比，并求从近心点开始到偏近点角 \mbox{$\eta=\pi/2$} 的时间。}
-\item 有心势 $U=cr^\alpha$ 存在稳定圆轨道。求圆轨道附近径向频率与角频率之比；说明这一比值如何影响近心方向。
-\item 平方反比斥力散射中，求 $60^\circ\leq\chi\leq120^\circ$ 的积分截面，并与 $\chi\geq60^\circ$ 的截面比较。
-\item 已知散射角分布 $\dd\sigma/\dd\Omega$。为什么计算整个轴对称探测环带时需要乘 $2\pi\sin\chi\,\dd\chi$？若两个探测器的立体角不同，能否只比较原始计数率来判断微分截面大小？
-\end{enumerate}
+模型与变量见图\ref{fig:question-tr02}。
+\QuestionFigure{tr02}{综合练习第2题的模型与条件}
+\Case{第3题}
+小环沿半径为 $R>0$ 的固定圆环运动，圆心为 $O$。自 $t=0$ 起沿逆时针方向运动，速率给定为 $v=ct$，$c>0$。以起点为角度零点，求弧长、圆心角、切向和法向加速度及总加速度大小，说明速度为零的初始时刻是否有加速度。
+
+模型与变量见图\ref{fig:question-tr03}。
+\QuestionFigure{tr03}{综合练习第3题的模型与条件}
+\Case{第4题}
+质点在固定平面内沿抛物线 $y=kx^2$ 以恒定速率 $v>0$ 运动，$k>0$，取横坐标增加的方向为前进方向。求任意点的单位切向、单位主法向、曲率半径及加速度矢量和大小，确定加速度大小的最大值及其位置。
+
+模型与变量见图\ref{fig:question-tr04}。
+\QuestionFigure{tr04}{综合练习第4题的模型与条件}
+\Case{第5题}
+飞机相对静止空气团的速率恒为 $u>0$，须沿地面边长为 $d>0$ 的正方形航线飞行一周。地面系中均匀风速为 $w\vect e_x$，$0\le w<u$，正方形两边平行 $x$ 轴。忽略转弯时间。画出各边的速度合成，求四边飞行时间、侧风航段的迎风偏角及总时间，并与无风情况比较。
+
+模型与变量见图\ref{fig:question-tr05}。
+\QuestionFigure{tr05}{综合练习第5题的模型与条件}
+\Case{第6题}
+质量为 $m>0$ 的质点在静止介质中从原点由静止竖直下落，阻力为 $-bv$，$b>0$。取竖直向下为正，重力加速度为 $g$。求速度和下落距离随时间的变化、终端速率、响应时间尺度；展开短时结果，并说明 $b\to0$ 与 $t\to\infty$ 的意义。
+
+模型与变量见图\ref{fig:question-tr06}。
+\QuestionFigure{tr06}{综合练习第6题的模型与条件}
+\Case{第7题}
+质量为 $m>0$ 的质点在固定直线上只受 $F_x=-kx$，$k>0$，从 $x(0)=A>0$ 处静止释放。分别用微分方程和机械能关系求最大速率，给出其发生位置、第一次达到的时刻及运动周期，并说明能量方法能确定和不能单独确定的内容。
+
+模型与变量见图\ref{fig:question-tr07}。
+\QuestionFigure{tr07}{综合练习第7题的模型与条件}
+\Case{第8题}
+一个竖直升降舱的加速度恒为 $a_0$，约定向上为正。舱顶用长为 $l$ 的轻绳悬挂质量为 $m>0$ 的小球，小球相对舱静止，绳竖直。求绳张力，并分别讨论 $a_0>0$、$-g<a_0<0$、$a_0=-g$ 和 $a_0<-g$ 时该状态能否维持。
+
+模型与变量见图\ref{fig:question-tr08}。
+\QuestionFigure{tr08}{综合练习第8题的模型与条件}
+\Case{第9题}
+在整个三维空间内给定力场 $\vect F=(2xy,x^2,0)$，各分量采用一致单位。判断其是否为保守力；若是，求 $U(0,0,0)=0$ 的势能，并分别计算从 $O=(0,0,0)$ 到 $P=(a,b,0)$ 沿两条坐标折线路径的功，以核对路径无关性。
+
+模型与变量见图\ref{fig:question-tr09}。
+\QuestionFigure{tr09}{综合练习第9题的模型与条件}
+\Case{第10题}
+质量为 $m>0$ 的质点在中心保守势中运动，关于固定力心 $O$ 的角动量非零。在位置 $\vect r=r\er$ 施加短暂径向冲量 $\vect J=J_r\er$，冲量期间位置变化可忽略。已知冲量前径向、横向速度为 $v_r^-,v_\theta^-$。求两速度分量、角动量和机械能的前后关系；给出机械能恰好不变的条件，并区分冲量过程与其后的无冲量运动。
+
+模型与变量见图\ref{fig:question-tr10}。
+\QuestionFigure{tr10}{综合练习第10题的模型与条件}
+\Case{第11题}
+卫星在固定球形天体外作半径 $r_0$ 的圆轨道运动，引力参数为 $\mu$，速率为 $v_c=\sqrt{\mu/r_0}$。在某点受到沿原速度方向的短暂冲量，速率变为 $qv_c$，$1<q<\sqrt2$，径向速度仍为零。求新轨道的能量、比角动量、半长轴、偏心率和远心距离，判断增速点是近心点还是远心点。
+
+模型与变量见图\ref{fig:question-tr11}。
+\QuestionFigure{tr11}{综合练习第11题的模型与条件}
+\Case{第12题}
+质量为 $m>0$ 的质点在中心势 $U=-\kappa/r$、$\kappa>0$ 中运动，给定角动量大小 $L>0$。建立有效势，求圆轨道半径、机械能，以及保持同一角动量时圆轨道附近小径向振动的频率；与圆轨道角频率比较并解释。
+
+模型与变量见图\ref{fig:question-tr12}。
+\QuestionFigure{tr12}{综合练习第12题的模型与条件}
+\Case{第13题}
+质量为 $m>0$ 的质点在各向同性中心势 $U=kr^2/2$、$k>0$ 中运动，角动量大小为 $L>0$。求圆轨道半径及能量，验证径向稳定性，计算小径向振动频率、圆轨道角频率和一次径向周期内的转角，并结合中心椭圆解释这个转角。
+
+模型与变量见图\ref{fig:question-tr13}。
+\QuestionFigure{tr13}{综合练习第13题的模型与条件}
+\Case{第14题}
+粒子在平方反比斥力势 $U=\kappa/r$ 中作经典散射，$\kappa>0$，入射动能为 $E>0$。入射能量增为 $2E$ 时，（a）保持散射角 $\chi$ 不变，求微分截面的变化比例；（b）保持碰撞参数 $b>0$ 不变，求新旧散射角之间的准确关系，并给出小角近似。
+
+模型与变量见图\ref{fig:question-tr14}。
+\QuestionFigure{tr14}{综合练习第14题的模型与条件}
+\Case{第15题}
+粒子质量为 $m>0$，在斥力势 $U=\kappa/r$ 中从无穷远入射，给定入射能量 $E>0$ 与角动量大小 $L\ge0$。求最近接近距离，指出此时哪一个速度分量为零、哪一个可以不为零，并检验正碰 $L=0$ 的极限。
+
+模型与变量见图\ref{fig:question-tr15}。
+\QuestionFigure{tr15}{综合练习第15题的模型与条件}
+\Case{第16题}
+质点被限制在半径为 $R>0$ 的固定圆环上，初始位置为 $(R,0)$，拟给定初速度 $(u,w)$。求初速度能够满足约束的条件；对允许初态求径向初加速度，并解释为什么仅凭几何约束不能确定切向加速度。
+
+模型与变量见图\ref{fig:question-tr16}。
+\QuestionFigure{tr16}{综合练习第16题的模型与条件}
+\Case{第17题}
+质量为 $m>0$ 的一维质点只受合外力 $F_x=F_0\cos\omega t$，$F_0,\omega>0$，初始 $x(0)=0,v(0)=0$。求完整运动，求一个力周期后的位移和速度，求闭区间 $0\le t\le\pi/\omega$ 内的最大位移及其时刻，并解释零平均力不能一般推出零位移。
+
+模型与变量见图\ref{fig:question-tr17}。
+\QuestionFigure{tr17}{综合练习第17题的模型与条件}
+\Case{第18题}
+一维欠阻尼振子满足 $\ddot x+2\gamma\dot x+\omega_0^2x=0$，$0<\gamma<\omega_0$，初始 $x(0)=x_0>0,\dot x(0)=0$。求完整初值解及速度，说明正弦项为何不能删除，检验无阻尼极限，并求第一次通过平衡点的时刻。
+
+模型与变量见图\ref{fig:question-tr18}。
+\QuestionFigure{tr18}{综合练习第18题的模型与条件}
+\Case{第19题}
+光滑直管在水平面内绕固定端 $O$ 以恒角速度 $\Omega>0$ 转动，质量为 $m>0$ 的小球可沿管滑动。地面惯性极坐标中 $\theta=\Omega t$，初态 $r(0)=r_i>0,\dot r(0)=0$。在球仍处于管内的时间范围，求 $r(t)$、管的横向约束力和从零时刻到 $t$ 所做的功，并用动能变化核对。
+
+模型与变量见图\ref{fig:question-tr19}。
+\QuestionFigure{tr19}{综合练习第19题的模型与条件}
+\Case{第20题}
+质量为 $m>0$ 的一维质点处于双势阱 $U(x)=U_0[(x/a)^2-1]^2$，$U_0,a>0$。求所有平衡点及其稳定性，求两个稳定点附近的小振动频率；当总能量为 $E=U_0/4$ 时，求四个转向点和各允许区间，说明质点能否在两势阱之间往返。
+
+模型与变量见图\ref{fig:question-tr20}。
+\QuestionFigure{tr20}{综合练习第20题的模型与条件}
+\Case{第21题}
+固定惯性系中，质点的合力始终通过固定点 $O$。另取固定点 $A$，记 $\vect a=\overrightarrow{OA}$、$\vect r=\overrightarrow{OP}$、$\vect p=m\vect v$。推导关于 $A$ 与关于 $O$ 的角动量及力矩关系，判断关于 $A$ 的角动量是否一定守恒，并给出一个具体反例和守恒的充分条件。
+
+模型与变量见图\ref{fig:question-tr21}。
+\QuestionFigure{tr21}{综合练习第21题的模型与条件}
+\Case{第22题}
+质点在引力参数为 $\mu>0$ 的固定力心周围沿椭圆运动，半长轴为 $a$、偏心率为 $0<e<1$。求近远心距离、两处速率及速率比；用偏近点角 $\eta$ 从近心点开始计时，求到 $\eta=\pi/2$ 的时间，并说明偏近点角与真实极角的区别。
+
+模型与变量见图\ref{fig:question-tr22}。
+\QuestionFigure{tr22}{综合练习第22题的模型与条件}
+\Case{第23题}
+质量为 $m>0$ 的粒子在幂律中心势 $U=cr^\alpha$ 中运动，给定非零角动量，且存在稳定圆轨道 $r=r_0$。求圆轨道存在、稳定所需的参数条件，以及小径向振动频率与圆轨道角频率的比值；求相邻近心点转角，并说明这一局部结论的适用范围。
+
+模型与变量见图\ref{fig:question-tr23}。
+\QuestionFigure{tr23}{综合练习第23题的模型与条件}
+\Case{第24题}
+粒子在平方反比斥力势 $U=\kappa/r$ 中作经典散射，入射能量为 $E>0$。求散射角带 $60^\circ\le\chi\le120^\circ$ 的积分截面，并与 $\chi\ge60^\circ$ 的积分截面比较。分别用入射碰撞参数环带面积与微分截面积分核对，说明积分上下限的对应关系。
+
+模型与变量见图\ref{fig:question-tr24}。
+\QuestionFigure{tr24}{综合练习第24题的模型与条件}
+\Case{第25题}
+轴对称散射的微分截面为 $f(\chi)=\dd\sigma/\dd\Omega$。探测器位于以散射中心为球心的球面上。推导完整方位角环带的立体角元；设入射通量 $\Phi$、有效靶粒子数 $N_t$ 已知，两个小探测器的效率分别为 $\epsilon_i$、立体角为 $\Delta\Omega_i$，求计数率与微分截面的关系，说明如何比较测量值，并写出有限角域的准确积分式。
+
+模型与变量见图\ref{fig:question-tr25}。
+\QuestionFigure{tr25}{综合练习第25题的模型与条件}
 
 \clearpage
-\section*{练习完整解答}\label{appendix:solutions}
-\addcontentsline{toc}{section}{练习完整解答}
-解答按题目次序排列。概念题说明判断依据，计算题写出坐标、方程、初值与结果检查。
+\section*{综合练习详解}\label{appendix:solutions}\addcontentsline{toc}{section}{综合练习详解}
+\Case{第1题详解}
+\solution \Step{模型与方向} 结合题图\ref{fig:question-tr01}，解答图\ref{fig:solution-tr01}展示两种运动的速度变化方式；直线图取 $a_0>0$ 作方向示意，圆周图中 $\vn$ 指向圆心，分别用位置求导与 $a_n=v_0^2/R$ 计算。
+\SolutionFigure{tr01}{解答中的几何、方向与计算关系}
 
-\subsubsection*{第1题：直线、匀速与加速度}
-直线只限制速度方向沿同一固定直线，并不限制速率变化。例如 $x=at^2/2$ 的轨道是直线，而 $\ddot x=a$。另一方面，恒速圆周运动的速度方向持续改变，$\vect a=-(v^2/R)\er$。自然坐标公式 $\vect a=\dot v\vt+(v^2/\rho)\vn$ 把两种原因分开：直线使曲率项为零，恒速使切向项为零，各自都不足以保证总加速度为零。
+\Step{逐次求导与向量大小} 对第一种运动，$\vect v=a_0t\vect e_x$，$\vect a=a_0\vect e_x$，因此即使轨道曲率为零也可以有非零加速度。对第二种运动，令 $\omega=v_0/R$，则 $\vect r=R(\cos\omega t,\sin\omega t)$，两次求导得 $\vect a=-\omega^2\vect r$。\Step{区分三个命题} 一般自然坐标式 $\vect a=\dot v\vt+(v^2/\rho)\vn$ 中两方向正交。非静止区间内，加速度为零要求速率不变且曲率为零。单个瞬间 $v=0$ 不能据此判定前后轨道或加速度。
 
-\subsubsection*{第2题：极坐标基矢也随时间改变}
-给定 $r=at,\theta=bt$，有 $\dot r=a,\ddot r=0,\dot\theta=b,\ddot\theta=0$。代入速度和加速度公式，
+\Case{第2题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr02}给出解答所用的几何、方向或分解关系。图中的径向与横向基矢随质点转动；轨道为 $r$ 对 $\theta$ 的线性关系，但沿轨道的运动并不匀速。
+\SolutionFigure{tr02}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 给定 $r=at,\theta=bt$，有 $\dot r=a,\ddot r=0,\dot\theta=b,\ddot\theta=0$。代入速度和加速度公式，
 \[
 \vect v=\dot r\er+r\dot\theta\et=a\er+abt\et,
 \]
@@ -4041,33 +4742,45 @@ E_{\mathcal L}=\sum_i\dot q_i\frac{\partial\mathcal L}{\partial\dot q_i}-\mathca
 =-ab^2t\er+2ab\et.
 \]
 因为两基矢正交，速率为 $a\sqrt{1+b^2t^2}$。若 $b=0$，退化为径向匀速直线运动，加速度为零；若只对两个速度分量求普通导数而忽略基矢导数，会漏掉径向项和一半横向项。
+\Step{补全大小与轨道} 加速度两分量正交，故 $|\vect a|=\sqrt{a^2b^4t^2+4a^2b^2}=|ab|\sqrt{b^2t^2+4}$。$b\ne0$ 时，消去时间得 $r=(a/b)\theta$，应取与 $t\ge0$ 相符的角度分支。\Step{极点的固定坐标极限} 由 $x=at\cos bt,y=at\sin bt$，可直接求得 $\vect v(0)=a\vect e_x$、$\vect a(0)=2ab\vect e_y$。所以极点处的坐标表示奇异并不意味着实际速度或加速度发散。
 
-\subsubsection*{第3题：固定圆环上的切向和法向分量}
-以运动方向为切向，$a_t=\dd v/\dd t=c$。圆环曲率半径为 $R$，法向指向圆心，$a_n=v^2/R=c^2t^2/R$。两分量垂直，故
+\Case{第3题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr03}给出解答所用的几何、方向或分解关系。图中 $\vt$ 沿前进方向，$\vn$ 指向圆心，二者互相垂直。切向箭头描述速率增长，法向箭头描述转弯。
+\SolutionFigure{tr03}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 以运动方向为切向，$a_t=\dd v/\dd t=c$。圆环曲率半径为 $R$，法向指向圆心，$a_n=v^2/R=c^2t^2/R$。两分量垂直，故
 \[
 |\vect a|=\sqrt{c^2+c^4t^4/R^2}.
 \]
 初态 $t=0$ 虽然速度为零，仍有切向加速度 $c$，此时法向分量为零。
+\Step{把速率与位置联系} 从 $s(0)=0$ 积分得 $s=ct^2/2$，故 $\theta=ct^2/(2R)$、$\dot\theta=ct/R$。代入极坐标式得 $\vect a=-R\dot\theta^2\er+R\ddot\theta\et=-(c^2t^2/R)\er+c\et$，与自然坐标结果一致。\Step{方向与极限} 总加速度相对切线的内偏角满足 $\tan\beta=a_n/a_t=ct^2/R$。初态 $a_n=0$，总加速度纯切向且大小为 $c$；之后内偏角逐渐增大。
 
-\subsubsection*{第4题：恒速抛物线运动}
-对 $y=kx^2$，$y'=2kx,y''=2k$，平面曲线曲率为
+\Case{第4题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr04}给出解答所用的几何、方向或分解关系。图中主法线指向曲线凹侧，且一般并不竖直；顶点处才恰为竖直向上。
+\SolutionFigure{tr04}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 对 $y=kx^2$，$y'=2kx,y''=2k$，平面曲线曲率为
 \[
 \frac1\rho=\frac{|y''|}{(1+y'^2)^{3/2}}
 =\frac{2|k|}{(1+4k^2x^2)^{3/2}}.
 \]
 恒速意味着 $a_t=0$，故 $|\vect a|=v^2/\rho=2|k|v^2/(1+4k^2x^2)^{3/2}$。方向沿主法线，指向曲线凹侧。顶点曲率最大，故加速度大小最大；$k=0$ 的直线极限给零。
+\Step{写出矢量方向} 令 $D=1+4k^2x^2$，则 $\vt=(1,2kx)/\sqrt D$、$\vn=(-2kx,1)/\sqrt D$。所以 $\vect a=2kv^2(-2kx,1)/D^2$，两个分量可直接与图中的主法线方向核对。\Step{求极值} 因 $D\ge1$，加速度大小 $2kv^2/D^{3/2}$ 在 $x=0$ 最大，为 $2kv^2$，此处曲率半径为 $1/(2k)$。恒速只是切向分量为零，不能删除法向分量。
 
-\subsubsection*{第5题：有风时沿地面正方形飞行}
-以风向为 $x$ 轴。顺风、逆风边的对地速率分别为 $u+w,u-w$，时间为 $d/(u+w),d/(u-w)$。另两边要求对地 $x$ 分量为零，飞机必须提供对空气速度分量 $-w$；由于其对空气速率固定为 $u$，沿目标边的分量为 $\sqrt{u^2-w^2}$。所以
+\Case{第5题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr05}给出解答所用的几何、方向或分解关系。图中的两条侧风边要求对地横向漂移为零；机头方向与对地航线方向不同。
+\SolutionFigure{tr05}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 以风向为 $x$ 轴。顺风、逆风边的对地速率分别为 $u+w,u-w$，时间为 $d/(u+w),d/(u-w)$。另两边要求对地 $x$ 分量为零，飞机必须提供对空气速度分量 $-w$；由于其对空气速率固定为 $u$，沿目标边的分量为 $\sqrt{u^2-w^2}$。所以
 \[
 t_{\rm total}=\frac d{u+w}+\frac d{u-w}
 +\frac{2d}{\sqrt{u^2-w^2}}
 =\frac{2du}{u^2-w^2}+\frac{2d}{\sqrt{u^2-w^2}}.
 \]
 $w=0$ 时回到 $4d/u$；$w\to u^-$ 时逆风和横风边都越来越慢，时间发散。
+\Step{建立速度三角形} 对地速度为 $\vect v_g=\vect v_a+w\vect e_x$。沿 $+y$ 飞行时要取 $v_{a,x}=-w$，由 $|\vect v_a|=u$ 得 $v_{a,y}=\sqrt{u^2-w^2}$，偏航角满足 $\sin\beta=w/u$。沿 $-y$ 飞行时仅纵向分量反号。\Step{时间比较} 两条平行风向的边合计时间为 $2du/(u^2-w^2)>2d/u$；侧风两边时间为 $2d/\sqrt{u^2-w^2}>2d/u$。因此任何非零风速都使本题总时间大于无风值 $4d/u$。
 
-\subsubsection*{第6题：线性阻力下落及短时展开}
-取向下为正，$m\dot v=mg-bv$，$v(0)=0$。令 $\lambda=b/m$，积分因子为 $\mathrm e^{\lambda t}$，于是
+\Case{第6题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr06}给出解答所用的几何、方向或分解关系。图中向下的重力恒定，阻力向上且随速度增大；速度曲线渐近终端值，而不在有限时刻突然达到该值。
+\SolutionFigure{tr06}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取向下为正，$m\dot v=mg-bv$，$v(0)=0$。令 $\lambda=b/m$，积分因子为 $\mathrm e^{\lambda t}$，于是
 \[
 \frac\dd{\dd t}(v\mathrm e^{\lambda t})=g\mathrm e^{\lambda t},
 \quad v=\frac g\lambda(1-\mathrm e^{-\lambda t}).
@@ -4078,9 +4791,12 @@ x=\frac g\lambda t-\frac g{\lambda^2}(1-\mathrm e^{-\lambda t}).
 \]
 将指数展开到三次项，得到
 $v=gt-g\lambda t^2/2+O(t^3)$、$x=gt^2/2-g\lambda t^3/6+O(t^4)$。领先项与自由落体一致；长时速度趋于 $g/\lambda$，与力平衡 $mg=bv$ 一致。
+\Step{积分常数与时间尺度} 定义 $\tau=m/b$、$v_T=mg/b$，方程为 $\dot v+(1/\tau)v=g$，通解 $v=v_T+C e^{-t/\tau}$。静止初态使 $C=-v_T$；再用距离初值为零确定第二次积分常数。\Step{展开并核对量纲} 由 $e^{-t/\tau}=1-t/\tau+t^2/(2\tau^2)-\cdots$ 得 $v=gt-gt^2/(2\tau)+\cdots$、$s=gt^2/2-gt^3/(6\tau)+\cdots$。当 $t\ll\tau$ 时重力项领先；$t\gg\tau$ 时重力与阻力近于平衡，位移仍持续增加。
 
-\subsubsection*{第7题：简谐振子的两种解法}
-微分方程写成 $\ddot x+\omega^2x=0$，$\omega=\sqrt{k/m}$。通解 $x=C\cos\omega t+D\sin\omega t$，初态给 $C=A,D=0$。因此 $v=-A\omega\sin\omega t$，最大速率为 $|A|\omega$。
+\Case{第7题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr07}给出解答所用的几何、方向或分解关系。图中从 $A$ 到平衡点的势能下降转化为动能增长；相图上下两支表示通过同一位置时可能有相反方向的速度。
+\SolutionFigure{tr07}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 微分方程写成 $\ddot x+\omega^2x=0$，$\omega=\sqrt{k/m}$。通解 $x=C\cos\omega t+D\sin\omega t$，初态给 $C=A,D=0$。因此 $v=-A\omega\sin\omega t$，最大速率为 $|A|\omega$。
 
 能量法从 $m\ddot x\dot x=-kx\dot x$ 积分，得
 \[
@@ -4088,22 +4804,34 @@ $v=gt-g\lambda t^2/2+O(t^3)$、$x=gt^2/2-g\lambda t^3/6+O(t^4)$。领先项与�
 \quad v^2=\frac km(A^2-x^2).
 \]
 右端在 $x=0$ 最大，得到同一结果。能量法直接给速率极值，微分方程法还给出时间相位。
+\Step{确定第一次极值时刻} $v=-A\omega\sin\omega t$，$\omega=\sqrt{k/m}$。第一次通过平衡点为 $t=\pi/(2\omega)$，此时速度为 $-A\omega$，速率最大为 $A\omega$；周期 $T=2\pi/\omega$。\Step{能量支的选择} 能量给 $v=\pm\omega\sqrt{A^2-x^2}$。由初始从右侧向左运动，第一段选负号；在左转向点之后需改选正号。只有完整初值解才能同时给出时间、方向与往复次数。
 
-\subsubsection*{第8题：竖直加速车内的张力}
-取地面惯性系向上为正，悬球与车同加速度 $a_0$，$T-mg=ma_0$，故 $T=m(g+a_0)$。若车以 $g$ 向下加速，即 $a_0=-g$，则 $T=0$。在车系中重力和向上的惯性力相消，表现为失重。若要求向下加速度超过 $g$，公式给负张力，柔绳不能维持这一相对静止状态，必须重新判断是否松弛。
+\Case{第8题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr08}给出解答所用的几何、方向或分解关系。图中的小球在地面系与舱具有相同加速度；解答图的地面受力图只有张力和重力。
+\SolutionFigure{tr08}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取地面惯性系向上为正，悬球与车同加速度 $a_0$，$T-mg=ma_0$，故 $T=m(g+a_0)$。若车以 $g$ 向下加速，即 $a_0=-g$，则 $T=0$。在车系中重力和向上的惯性力相消，表现为失重。若要求向下加速度超过 $g$，公式给负张力，柔绳不能维持这一相对静止状态，必须重新判断是否松弛。
+\Step{在两参考系中核对} 地面惯性系给 $T-mg=ma_0$。在舱系加入 $-ma_0\vect e_y$ 的平动惯性力，相对静止条件为 $T-mg-ma_0=0$，得到同一张力。\Step{检查单侧约束} 轻绳只能拉不能推，故必须 $T=m(g+a_0)\ge0$。当 $a_0=-g$ 时可有零张力自由落体；若 $a_0<-g$，负张力没有物理意义，题设中的绷紧相对静止状态失效，应改作松绳运动分析。
 
-\subsubsection*{第9题：判定保守力并积分势能}
-力场 $\vect F=(2xy,x^2,0)$ 定义于整个 $\mathbb R^3$。其旋度的 $z$ 分量为 $\partial_xF_y-\partial_yF_x=2x-2x=0$，其余也为零；区域单连通，故可构造势能。由 $U_x=-2xy$ 得 $U=-x^2y+f(y,z)$，再用 $U_y=-x^2$ 得 $f_y=0$，$U_z=0$ 得 $f_z=0$。原点为零点，故 $U=-x^2y$。反求 $-\nabla U$ 即回到给定力场。
+\Case{第9题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr09}给出解答所用的几何、方向或分解关系。图中两条折线分别先沿 $x$ 后沿 $y$、先沿 $y$ 后沿 $x$，两者端点相同。
+\SolutionFigure{tr09}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 力场 $\vect F=(2xy,x^2,0)$ 定义于整个 $\mathbb R^3$。其旋度的 $z$ 分量为 $\partial_xF_y-\partial_yF_x=2x-2x=0$，其余也为零；区域单连通，故可构造势能。由 $U_x=-2xy$ 得 $U=-x^2y+f(y,z)$，再用 $U_y=-x^2$ 得 $f_y=0$，$U_z=0$ 得 $f_z=0$。原点为零点，故 $U=-x^2y$。反求 $-\nabla U$ 即回到给定力场。
+\Step{沿两条路径实际积分} 路径一先在 $y=0$ 上沿 $x$ 走到 $(a,0)$，这段 $F_x=0$，再在 $x=a$ 上沿 $y$ 走到 $(a,b)$，功为 $\int_0^b a^2\dd y=a^2b$。路径二先沿 $x=0$ 上行，功为零，再在 $y=b$ 上沿 $x$ 走，功为 $\int_0^a2xb\dd x=a^2b$。\Step{与势能核对} 两条路径的结果都等于 $U(O)-U(P)=a^2b$。路径核对展示此例的结果，而全空间的保守性由光滑性、旋度及单连通定义域共同保证。
 
-\subsubsection*{第10题：径向冲量改变什么}
-冲量作用位置为 $\vect r=r\er$，$\vect J=J_r\er$。冲量矩为 $\vect r\times\vect J=0$，因此 $\vect L^+=\vect L^-$。径向速度变化为 $v_r^+=v_r^-+J_r/m$，位置和横向速度不变，所以
+\Case{第10题详解}
+\solution \Step{模型与方向} 结合题图\ref{fig:question-tr10}，解答图\ref{fig:solution-tr10}展示冲量前后的速度端点及径向增量；两端点在同一切向高度，说明 $v_\theta$ 不变，未改变的位矢使角动量也不变。机械能是否增加须另算径向速度平方之差。
+\SolutionFigure{tr10}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 冲量作用位置为 $\vect r=r\er$，$\vect J=J_r\er$。冲量矩为 $\vect r\times\vect J=0$，因此 $\vect L^+=\vect L^-$。径向速度变化为 $v_r^+=v_r^-+J_r/m$，位置和横向速度不变，所以
 \[
 \Delta E=\Delta T=J_rv_r^-+\frac{J_r^2}{2m}.
 \]
 该值一般不为零。冲量结束后，若只剩原来的中心保守力，各段运动分别守恒各自的机械能。冲量前后两常数无需相同，角动量则相同。
+\Step{按分量计算动量增量} $m(v_r^+-v_r^-)=J_r$，$v_\theta^+=v_\theta^-$。故 $L^+=mrv_\theta^+=L^-$；保持的是角动量，不是径向动量。\Step{能量不变的例外} 由 $\Delta E=J_rv_r^-+J_r^2/(2m)$，得 $\Delta E=0$ 当且仅当 $J_r=0$ 或 $J_r=-2mv_r^-$。后一情形使径向速度反号而大小不变。冲量结束后，各段轨道分别守恒其新的能量常数。
 
-\subsubsection*{第11题：圆轨道切向增速后的椭圆}
-在半径 $r_0$ 处，初速改为 $q\sqrt{\mu/r_0}$，径向速度仍为零。单位质量能量和比角动量
+\Case{第11题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr11}给出解答所用的几何、方向或分解关系。图中冲量前后位置相同，新轨道与旧圆轨道在增速点相切；增速改变了能量和角动量。
+\SolutionFigure{tr11}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 在半径 $r_0$ 处，初速改为 $q\sqrt{\mu/r_0}$，径向速度仍为零。单位质量能量和比角动量
 \[
 \varepsilon'=\frac{\mu}{2r_0}(q^2-2),\qquad
 \ell'=q\sqrt{\mu r_0}.
@@ -4114,45 +4842,72 @@ a=\frac{r_0}{2-q^2},\qquad
 e=\sqrt{1+q^2(q^2-2)}=q^2-1.
 \]
 于是 $a(1-e)=r_0$，增速点是近心点。$q\to1$ 时回到圆轨道，$q\to\sqrt2$ 时能量趋零、半长轴发散，达到抛物线阈值。
+\Step{把偏心率化简} $e^2=1+q^2(q^2-2)=(q^2-1)^2$。由于 $q>1$，取 $e=q^2-1$，不能忽略开平方时的绝对值及参数范围。\Step{求两个转向距离} $r_p=a(1-e)=r_0$，$r_a=a(1+e)=r_0q^2/(2-q^2)$。增速点是近心点；其处径向加速度 $\ddot r=(q^2-1)\mu/r_0^2>0$，也表明半径随后先增大。
 
-\subsubsection*{第12题：引力有效势及径向频率}
-有效势为 $W=L^2/(2mr^2)-\kappa/r$。圆轨道满足
+\Case{第12题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr12}给出解答所用的几何、方向或分解关系。图中圆轨道位于有效势最低点，附近的径向运动等价于势阱底的小振动。
+\SolutionFigure{tr12}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 有效势为 $W=L^2/(2mr^2)-\kappa/r$。圆轨道满足
 $W'=-L^2/(mr^3)+\kappa/r^2=0$，故 $r_0=L^2/(m\kappa)$。代回得 $E_0=-\kappa/(2r_0)=-m\kappa^2/(2L^2)$。二阶导数
 \[
 W''(r_0)=\frac{3L^2}{mr_0^4}-\frac{2\kappa}{r_0^3}
 =\frac\kappa{r_0^3}.
 \]
 令 $r=r_0+\xi$，则 $m\ddot\xi=-W''(r_0)\xi$，$\omega_r=\sqrt{\kappa/(mr_0^3)}$。圆轨道角频率为 $\Omega=L/(mr_0^2)$，平方也等于 $\kappa/(mr_0^3)$，两者相同。
+\Step{线性化的具体步骤} 写 $r=r_0+\xi$，从 $m\ddot r=-W^\prime(r)$ 展开：$W^\prime(r_0+\xi)=W^\prime(r_0)+W^{\prime\prime}(r_0)\xi+O(\xi^2)$。圆轨道条件消去常数项，于是 $\ddot\xi+[W^{\prime\prime}(r_0)/m]\xi=0$。\Step{频率与闭合} 由圆轨道平衡 $L^2/m=\kappa r_0$，可把 $\Omega=L/(mr_0^2)$ 化成 $\sqrt{\kappa/(mr_0^3)}=\omega_r$。这里的线性分析解释近圆轨道的频率关系，完整开普勒椭圆的闭合还可由轨道方程直接证明。
 
-\subsubsection*{第13题：中心谐振子的稳定圆轨道}
-$W=L^2/(2mr^2)+kr^2/2$，$W'=-L^2/(mr^3)+kr$。令其为零，$r_0^4=L^2/(mk)$，故 $r_0=(L^2/(mk))^{1/4}$。再算
+\Case{第13题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr13}给出解答所用的几何、方向或分解关系。图中离心势阻止质点在非零角动量下到达原点，弹性势则在大半径处升高，二者形成稳定势阱。
+\SolutionFigure{tr13}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} $W=L^2/(2mr^2)+kr^2/2$，$W'=-L^2/(mr^3)+kr$。令其为零，$r_0^4=L^2/(mk)$，故 $r_0=(L^2/(mk))^{1/4}$。再算
 $W''=3L^2/(mr^4)+k$，在圆轨道上为 $4k>0$，所以稳定。径向频率为 $\omega_r=2\sqrt{k/m}$，而角频率 $\Omega=\sqrt{k/m}$，一次径向振动期间转角为 $\pi$，对应中心椭圆的两个等价径向极小点。
+\Step{圆轨道能量} 由 $L^2/(mr_0^2)=kr_0^2$，有 $E_0=W(r_0)=kr_0^2=L\sqrt{k/m}$。二阶导数 $W^{\prime\prime}(r_0)=4k$ 使径向频率为 $2\sqrt{k/m}$。\Step{转角的几何解释} $T_r=2\pi/\omega_r$，故 $\Delta\theta=\Omega T_r=\pi$。中心椭圆在两条相反方向都有半径极小点，转过 $\pi$ 就回到等价的径向状态；这不表示空间轨道只是一条半椭圆。
 
-\subsubsection*{第14题：散射能量加倍}
-平方反比斥力的截面为 $f(\chi)=(\kappa/(4E))^2\sin^{-4}(\chi/2)$。固定角度，只改变能量，$f(2E)/f(E)=1/4$。若固定碰撞参数，则 $\cot(\chi/2)=2Eb/\kappa$，故
+\Case{第14题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr14}给出解答所用的几何、方向或分解关系。图中固定角度与固定碰撞参数是两种不同的比较方式；改变能量时不能同时把它们当作不变。
+\SolutionFigure{tr14}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 平方反比斥力的截面为 $f(\chi)=(\kappa/(4E))^2\sin^{-4}(\chi/2)$。固定角度，只改变能量，$f(2E)/f(E)=1/4$。若固定碰撞参数，则 $\cot(\chi/2)=2Eb/\kappa$，故
 $\chi(E)=2\arctan[\kappa/(2Eb)]$。能量加倍使正切值减半，角度减小，但角度本身一般不简单减半；只有小角近似时 $\chi\approx\kappa/(Eb)$ 才有这一比例。
+\Step{固定角度时的幂次} 卢瑟福式为 $f_E(\chi)=\kappa^2\sin^{-4}(\chi/2)/(16E^2)$，因此能量加倍使分母乘四。\Step{固定入射位置时的角度关系} 由 $\tan(\chi/2)=\kappa/(2Eb)$，得到 $\tan(\chi_{2E}/2)=\tfrac12\tan(\chi_E/2)$，所以 $\chi_{2E}=2\arctan[\tfrac12\tan(\chi_E/2)]$。仅在 $\chi_E\ll1$ 时才近似为原角度的一半。
 
-\subsubsection*{第15题：最近接近距离的正根}
-最近点 $\dot r=0$，由 $E=\kappa/r+L^2/(2mr^2)$ 得
+\Case{第15题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr15}给出解答所用的几何、方向或分解关系。图中的最近点只使径向速度为零。只要角动量非零，质点仍沿轨道切线运动，并未在空间中停止。
+\SolutionFigure{tr15}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 最近点 $\dot r=0$，由 $E=\kappa/r+L^2/(2mr^2)$ 得
 $Er^2-\kappa r-L^2/(2m)=0$。正根为
 \[
 r_{\min}=\frac{\kappa+\sqrt{\kappa^2+2EL^2/m}}{2E}.
 \]
 另一根非正，不属于物理距离。$L=0$ 时 $r_{\min}=\kappa/E$；$L\ne0$ 时最近点的横向速度仍为 $L/(mr_{\min})$，并未完全停止。
+\Step{乘去分母并选根} 在最近点令 $\dot r=0$，将 $E=L^2/(2mr^2)+\kappa/r$ 乘以 $r^2$，得到 $Er^2-\kappa r-L^2/(2m)=0$。判别式为 $\kappa^2+2EL^2/m>0$；因 $E>0$，只取带正号的根。\Step{速度和量纲核对} 此处 $v_r=0$，但 $v_\theta=L/(mr_{\min})$。$\kappa/E$ 具有长度量纲；当 $L=0$ 时根化为 $r_{\min}=\kappa/E$，此时总速度才为零。
 
-\subsubsection*{第16题：圆环约束对初速度与加速度的限制}
-约束为 $\vect r\cdot\vect r=R^2$，一次求导给 $\vect r\cdot\vect v=0$。在 $\vect r_0=(R,0)$ 代入 $(u,w)$，得 $Ru=0$，所以 $u=0$。再次求导，$\vect v\cdot\vect v+\vect r\cdot\vect a=0$，故 $w^2+Ra_x=0$，$a_x=-w^2/R$。切向初速度 $w$ 的正负均允许，切向加速度则由实际受力决定。
+\Case{第16题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr16}给出解答所用的几何、方向或分解关系。图中初始点位于圆的最右端，允许速度必须沿竖直切线；径向加速度指向左方圆心。
+\SolutionFigure{tr16}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 约束为 $\vect r\cdot\vect r=R^2$，一次求导给 $\vect r\cdot\vect v=0$。在 $\vect r_0=(R,0)$ 代入 $(u,w)$，得 $Ru=0$，所以 $u=0$。再次求导，$\vect v\cdot\vect v+\vect r\cdot\vect a=0$，故 $w^2+Ra_x=0$，$a_x=-w^2/R$。切向初速度 $w$ 的正负均允许，切向加速度则由实际受力决定。
+\Step{连续两次对约束求导} 从 $x^2+y^2=R^2$ 得 $x\dot x+y\dot y=0$，再求导得 $\dot x^2+\dot y^2+x\ddot x+y\ddot y=0$。代入初值先得 $u=0$，再得 $a_x=-w^2/R$。\Step{尚未确定的分量} 第二个等式在初态不含 $a_y$，因此它不约束切向加速度。只有补充切向实际受力，才能用 $ma_y=F_t$ 确定该分量。几何约束与动力学规律各提供不同的信息。
 
-\subsubsection*{第17题：周期驱动力的积分与极值}
-由 $m\dot v=F_0\cos\omega t$、$v(0)=0$，积分得
-$v=F_0\sin\omega t/(m\omega)$。再用 $x(0)=0$，得到
-$x=F_0(1-\cos\omega t)/(m\omega^2)$。取 $F_0>0$，半周期 $0<t<\pi/\omega$ 内速度为正，位移单调增至 $2F_0/(m\omega^2)$；后一半周期速度为负，返回起点。周期 $2\pi/\omega$ 后速度、位移均为零。力的积分为零保证速度回归，位移回归还利用了本题的具体相位与初态。
+\Case{第17题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr17}给出解答所用的几何、方向或分解关系。图中力先正后负，而速度需对力积分；位移极值出现在速度为零处，不是力为零处。
+\SolutionFigure{tr17}{解答中的几何、方向与计算关系}
 
-\subsubsection*{第18题：欠阻尼初始条件}
-通解 $x=\mathrm e^{-\gamma t}(A\cos\omega_dt+B\sin\omega_dt)$，$\omega_d=\sqrt{\omega_0^2-\gamma^2}$。$x(0)=x_0$ 给 $A=x_0$。求导并取 $t=0$，$v(0)=-\gamma A+\omega_dB=0$，因此 $B=\gamma x_0/\omega_d$。若删去正弦项，初速度会变成 $-\gamma x_0$，与静止释放不符。$\gamma\to0$ 时正弦系数消失，恢复无阻尼振动。
+\Step{两次定积分} $v(t)=m^{-1}\int_0^tF_0\cos\omega\tau\,\dd\tau=F_0\sin\omega t/(m\omega)$；再积分为 $x(t)=F_0(1-\cos\omega t)/(m\omega^2)$。\Step{求极值而非只代数取幅值} 在 $0<t<\pi/\omega$，$v(t)>0$，因此位移单调增加；到 $t=\pi/\omega$ 达最大值 $2F_0/(m\omega^2)$。若另给非零初速，将多出 $v_0t$ 项，虽每周期速度增量仍为零，位移却不再必为零。
 
-\subsubsection*{第19题：转动直管中的约束力功}
-管以恒角速率 $\Omega$ 转动，光滑小球的径向方程为 $\ddot r-\Omega^2r=0$。初态给 $r=r_i\cosh\Omega t$、$\dot r=\Omega r_i\sinh\Omega t$。横向牛顿方程给
+\Case{第18题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr18}给出解答所用的几何、方向或分解关系。图中衰减包络不是实际运动曲线。即使静止释放，包络自身也在变化，因此括号内必须有适当相位，才能抵消初始导数。图中的弹簧—阻尼模型满足 $b=2m\gamma$、$k=m\omega_0^2$。
+\SolutionFigure{tr18}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 通解 $x=\mathrm e^{-\gamma t}(A\cos\omega_dt+B\sin\omega_dt)$，$\omega_d=\sqrt{\omega_0^2-\gamma^2}$。$x(0)=x_0$ 给 $A=x_0$。求导并取 $t=0$，$v(0)=-\gamma A+\omega_dB=0$，因此 $B=\gamma x_0/\omega_d$。若删去正弦项，初速度会变成 $-\gamma x_0$，与静止释放不符。$\gamma\to0$ 时正弦系数消失，恢复无阻尼振动。
+\Step{写出完整初值解}
+\[
+x(t)=x_0e^{-\gamma t}\left(\cos\omega_dt+\frac{\gamma}{\omega_d}\sin\omega_dt\right),\qquad
+\omega_d=\sqrt{\omega_0^2-\gamma^2}.
+\]
+\Step{显式速度与首次过零} 令 $\omega_d=\sqrt{\omega_0^2-\gamma^2}$，求导可化为 $v=-x_0(\omega_0^2/\omega_d)e^{-\gamma t}\sin\omega_dt$。位置首次过零满足 $\cos\omega_dt+(\gamma/\omega_d)\sin\omega_dt=0$，位于 $\pi/2<\omega_dt<\pi$，所以 $t_*=\bigl[\pi-\arctan(\omega_d/\gamma)\bigr]/\omega_d$。\Step{初态与极限} 代入 $t=0$，位置为 $x_0$、速度为零；$\gamma\to0$ 时，$t_*\to\pi/(2\omega_0)$。
+
+\Case{第19题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr19}给出解答所用的几何、方向或分解关系。图中的管力与管方向垂直，却不与小球的地面速度垂直；地面速度还包含横向分量 $r\Omega$。
+\SolutionFigure{tr19}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 管以恒角速率 $\Omega$ 转动，光滑小球的径向方程为 $\ddot r-\Omega^2r=0$。初态给 $r=r_i\cosh\Omega t$、$\dot r=\Omega r_i\sinh\Omega t$。横向牛顿方程给
 $R_\theta=2m\Omega\dot r=2m\Omega^2r_i\sinh\Omega t$。地面系横向速度为 $r\Omega$，因此约束力功率
 $P_R=R_\theta r\Omega=2m\Omega^2r\dot r$，积分得
 \[
@@ -4160,18 +4915,27 @@ W=m\Omega^2[r^2(t)-r_i^2].
 \]
 又有 $\dot r^2=\Omega^2(r^2-r_i^2)$，所以动能增量
 $\Delta T=m[\dot r^2+\Omega^2(r^2-r_i^2)]/2=W$。光滑仅表示沿管无摩擦，并不保证运动约束的支持力在地面系不做功。
+\Step{从分量方程确定力} 沿管无摩擦使 $F_r=0$，故 $m(\ddot r-r\Omega^2)=0$；横向方程为 $R_\theta=m(2\Omega\dot r)$。\Step{积分功率并逐项核对动能} 由 $\vect v=\dot r\er+r\Omega\et$ 得 $P=2m\Omega^2r\dot r$，故 $W=m\Omega^2(r^2-r_i^2)$。再由解得 $\dot r^2=\Omega^2(r^2-r_i^2)$，因此 $T-T_0=\tfrac12m[\dot r^2+\Omega^2(r^2-r_i^2)]=W$。能量由维持匀转的外界驱动提供。
 
-\subsubsection*{第20题：双势阱的平衡与转向点}
-令 $q=x/a$，势能 $U=U_0(q^2-1)^2$，假定 $U_0>0$。$U'=4U_0q(q^2-1)/a$，平衡点为 $q=0,\pm1$。二阶导数 $U''=4U_0(3q^2-1)/a^2$，因此 $x=0$ 不稳定，$x=\pm a$ 稳定。
+\Case{第20题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr20}给出解答所用的几何、方向或分解关系。图中能量水平线与势能曲线的交点是转向点；中央高于能量线的区域不属于经典允许区。
+\SolutionFigure{tr20}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 令 $q=x/a$，势能 $U=U_0(q^2-1)^2$，假定 $U_0>0$。$U'=4U_0q(q^2-1)/a$，平衡点为 $q=0,\pm1$。二阶导数 $U''=4U_0(3q^2-1)/a^2$，因此 $x=0$ 不稳定，$x=\pm a$ 稳定。
 
 能量 $E=U_0/4$ 下，转向点满足 $(q^2-1)^2=1/4$，所以 $q^2=1\pm1/2$，四个位置为 $\pm a\sqrt{3/2}$、$\pm a/\sqrt2$。实际可达区间分别为 $[-a\sqrt{3/2},-a/\sqrt2]$ 与 $[a/\sqrt2,a\sqrt{3/2}]$。两区之间 $U>E$，质点留在所处势阱内。
+\Step{稳定点的小振动} $U^{\prime\prime}(\pm a)=8U_0/a^2$，故 $\omega_{\rm small}=\sqrt{8U_0/(ma^2)}$；原点处曲率为负，微扰会离开平衡位置。\Step{逐个选取允许区间} 转向点按从左到右排列为 $-a\sqrt{3/2},-a/\sqrt2,a/\sqrt2,a\sqrt{3/2}$。要求动能 $E-U\ge0$，得到两个互不相连的区间。由于能量低于中央势垒 $U_0$，经典轨道不能穿过中间禁阻区。
 
-\subsubsection*{第21题：固定参考点改变后的力矩}
-设 $\vect a$ 从 $O$ 指向另一个固定点 $A$。对单个质点，$\vect L_A=(\vect r-\vect a)\times\vect p=\vect L_O-\vect a\times\vect p$。求导得
+\Case{第21题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr21}给出解答所用的几何、方向或分解关系。图中两参考点都固定，但同一条力作用线未必经过 $A$。对 $A$ 的力臂是 $\vect r-\vect a$。
+\SolutionFigure{tr21}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 设 $\vect a$ 从 $O$ 指向另一个固定点 $A$。对单个质点，$\vect L_A=(\vect r-\vect a)\times\vect p=\vect L_O-\vect a\times\vect p$。求导得
 $\dot{\vect L}_A=\vect M_O-\vect a\times\vect F$。若力始终通过 $O$，$\vect M_O=0$，但一般 $\vect a\times\vect F\ne0$，所以关于 $A$ 的角动量不一定守恒。若 $A$ 也始终在力作用线上，才保证对应力矩全过程为零。
+\Step{具体反例} 取 $\vect a=a\vect e_x$，质点某时刻位于 $\vect r=y\vect e_y$，受指向 $O$ 的力 $\vect F=-F\vect e_y$，$a,y,F>0$。关于 $O$ 的力矩为零，而关于 $A$ 的力矩为 $(-a\vect e_x+y\vect e_y)\times(-F\vect e_y)=aF\vect e_z\ne0$。\Step{充分条件} 若 $A$ 也始终位于力的作用线上，则 $\vect a\times\vect F=0$，关于 $A$ 的力矩才全程为零。仅在某一个时刻力矩为零，不能推出整个运动中守恒。
 
-\subsubsection*{第22题：近远心参数与偏近点角时间}
-引力椭圆有 $r_p=a(1-e)$、$r_a=a(1+e)$。两处径向速度均为零，角动量守恒给 $r_pv_p=r_av_a$，所以 $v_p/v_a=(1+e)/(1-e)$。
+\Case{第22题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr22}给出解答所用的几何、方向或分解关系。图中偏近点角在辅助圆圆心处量取，真实极角在力心焦点处量取，两者顶点不同。
+\SolutionFigure{tr22}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 引力椭圆有 $r_p=a(1-e)$、$r_a=a(1+e)$。两处径向速度均为零，角动量守恒给 $r_pv_p=r_av_a$，所以 $v_p/v_a=(1+e)/(1-e)$。
 
 用参数 $x=a(\cos\eta-e),y=a\sqrt{1-e^2}\sin\eta$，面积元为 $ab(1-e\cos\eta)\dd\eta/2$。面积速度为 $\ell/2$，故
 $\dd t=(ab/\ell)(1-e\cos\eta)\dd\eta$。利用 $ab/\ell=\sqrt{a^3/\mu}$，从近心点积分到 $\eta=\pi/2$，
@@ -4180,44 +4944,41 @@ t=\sqrt{\frac{a^3}\mu}\left[\eta-e\sin\eta\right]_0^{\pi/2}
 =\sqrt{\frac{a^3}\mu}(\pi/2-e).
 \]
 偏近点角并非真实极角，不能把 $\eta=\pi/2$ 解释为轨道在力心处转过四分之一周。
+\Step{把速率写成已知参数} 比角动量为 $\ell=\sqrt{\mu a(1-e^2)}$，所以 $v_p=\ell/[a(1-e)]$、$v_a=\ell/[a(1+e)]$。两处径向速度均为零，才可直接用 $\ell=rv$。\Step{时间元的来源} 将椭圆参数代入 $x\dd y-y\dd x$，得 $ab(1-e\cos\eta)\dd\eta$，其中 $b=a\sqrt{1-e^2}$。面积速度 $\ell/2$ 给 $\dd t=(ab/\ell)(1-e\cos\eta)\dd\eta$，积分后得到开普勒时间关系。$e\to0$ 时所求时间回到圆轨道周期的四分之一。
 
-\subsubsection*{第23题：幂律中心势的近圆频率}
-取 $U=cr^\alpha$，圆轨道存在时 $\Omega_0^2=U'(r_0)/(mr_0)=c\alpha r_0^{\alpha-2}/m>0$。有效势二阶导数给
+\Case{第23题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr23}给出解答所用的几何、方向或分解关系。图中圆轨道对应有效势极小值；把径向位移限制在极小值附近，才能用二阶展开求频率。
+\SolutionFigure{tr23}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 取 $U=cr^\alpha$，圆轨道存在时 $\Omega_0^2=U'(r_0)/(mr_0)=c\alpha r_0^{\alpha-2}/m>0$。有效势二阶导数给
 \[
 \omega_r^2=\frac1m\left[U''(r_0)+\frac{3U'(r_0)}{r_0}\right]
 =(\alpha+2)\Omega_0^2.
 \]
 稳定圆轨道要求 $\alpha+2>0$，故 $\omega_r/\Omega_0=\sqrt{\alpha+2}$。一次小径向周期中转角约为 $2\pi/\sqrt{\alpha+2}$。将该角减去整周角可描述近心方向的变化；谐振子有两个等价近心方向，需结合轨道对称性理解。这个频率比只控制近圆运动，不能独自证明任意振幅轨道闭合。
+\Step{先消去角动量} 圆轨道条件给 $L^2/m=c\alpha r_0^{\alpha+2}$，因此首先要求 $c\alpha>0$。有效势曲率为 $c\alpha(\alpha+2)r_0^{\alpha-2}$，所以稳定还要求 $\alpha+2>0$。\Step{两个周期的比值} $\omega_r/\Omega_0=\sqrt{\alpha+2}$，小径向周期内转角约为 $\Delta\theta=2\pi/\sqrt{\alpha+2}$。若该角与 $2\pi$ 的比为有理数，线性近似轨道可在若干次径向振动后重复；不能只凭此近似断定任意偏心率的精确轨道都闭合。
 
-\subsubsection*{第24题：有限散射角带的积分截面}
-令 $A=\kappa/(2E)$，$b=A\cot(\chi/2)$。散射角越大，碰撞参数越小，因此角带对应入射环带面积
+\Case{第24题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr24}给出解答所用的几何、方向或分解关系。解答图将出射角带与入射面上的圆环对应起来；大散射角对应小碰撞参数，两个端点的次序相反。
+\SolutionFigure{tr24}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 令 $A=\kappa/(2E)$，$b=A\cot(\chi/2)$。散射角越大，碰撞参数越小，因此角带对应入射环带面积
 $\sigma(\chi_1\le\chi\le\chi_2)=\pi[b^2(\chi_1)-b^2(\chi_2)]$。$\cot30^\circ=\sqrt3$、$\cot60^\circ=1/\sqrt3$，故
 \[
 \sigma(60^\circ\le\chi\le120^\circ)
 =\pi A^2(3-1/3)=\frac83\pi A^2.
 \]
 而 $\sigma(\chi\ge60^\circ)=\pi b^2(60^\circ)=3\pi A^2$，两者比为 $8/9$。其余 $1/9$ 来自 $120^\circ<\chi\le180^\circ$。
+\Step{用立体角积分核对} 写 $A=\kappa/(2E)$，有 $f(\chi)=A^2\sin^{-4}(\chi/2)/4$。于是 $\sigma=2\pi\int_{\chi_1}^{\chi_2}f(\chi)\sin\chi\,\dd\chi=\pi A^2[\cot^2(\chi_1/2)-\cot^2(\chi_2/2)]$。这里利用 $\dd[\cot^2(\chi/2)]/\dd\chi=-\cot(\chi/2)\csc^2(\chi/2)$。\Step{比较两种探测范围} 角带结果为 $8\pi A^2/3$，阈值以上结果为 $3\pi A^2$，故前者占后者的 $8/9$；面积法与角积分法一致。
 
-\subsubsection*{第25题：立体角元与探测计数}
-在单位球面上，极角方向长度元为 $\dd\chi$，方位角方向长度元为 $\sin\chi\,\dd\varphi$，故 $\dd\Omega=\sin\chi\,\dd\chi\dd\varphi$。完整轴对称环带对 $0\le\varphi<2\pi$ 积分，得到 $2\pi\sin\chi\,\dd\chi$。
+\Case{第25题详解}
+\solution \Step{模型与方向} 图\ref{fig:solution-tr25}给出解答所用的几何、方向或分解关系。图中的球面环带沿整个方位角展开，而一个小探测器只覆盖其中一部分。探测面积相同也不必对应相同的立体角。
+\SolutionFigure{tr25}{解答中的几何、方向与计算关系}
+\Step{建立方程与求解} 在单位球面上，极角方向长度元为 $\dd\chi$，方位角方向长度元为 $\sin\chi\,\dd\varphi$，故 $\dd\Omega=\sin\chi\,\dd\chi\dd\varphi$。完整轴对称环带对 $0\le\varphi<2\pi$ 积分，得到 $2\pi\sin\chi\,\dd\chi$。
 
 窄探测角域内，计数率可写为 $\dot N\approx\Phi N_t\epsilon f(\chi)\Delta\Omega$，其中 $\Phi$ 为入射通量、$N_t$ 为受照有效靶粒子数、$\epsilon$ 为探测效率。不同探测器的 $\Delta\Omega$ 不同，即使同一截面也会得到不同原始计数。只有统一或校正这些因素后，才能比较每单位立体角的微分截面。对于有限角域应积分 $\Phi N_t\epsilon\int f\dd\Omega$，不能总以中心角值代替。
 
 
-\clearpage
-\section*{原课件作业题号}\label{appendix:coursework}
-\addcontentsline{toc}{section}{原课件作业题号}
-原课件有六页仅列教材作业题号，没有题干。下表保留这些题号，供结合原教材使用；讲义中的例题及训练题另行编号。
-\begin{center}
-\begin{tabular}{@{}lll@{}}\toprule
-课件&原页码&教材作业题号\\\midrule
-c1-1&27&1.2、1.4、1.6\\
-c1-2&24&1.10、1.11、1.15\\
-c1-3&26&1.19、1.24、1.31\\
-c1-4&24&1.32、1.37、1.38\\
-c1-5&22&1.34、1.39、1.40\\
-c1-6&23&1.44、1.45、1.48\\\bottomrule
-\end{tabular}
-\end{center}
+
+\Step{由球面几何得到角元} 半径为 $R_d$ 的探测球面上，窄环带面积为 $(R_d\dd\chi)(2\pi R_d\sin\chi)$；除以 $R_d^2$ 得 $\dd\Omega=2\pi\sin\chi\,\dd\chi$。小面元若倾斜还应使用其朝向力心的投影面积。\Step{先归一化再比较} 对足够小的角域，$f(\chi_i)\simeq\dot N_i/(\Phi N_t\epsilon_i\Delta\Omega_i)$，两探测器应比较归一化后的量。有限角域则用 $\dot N=\Phi N_t\int_{\Delta\Omega}\epsilon(\Omega)f(\chi)\dd\Omega$，若效率恒定才可提出积分号外。
+
 
 \end{document}

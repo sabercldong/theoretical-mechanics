@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex42.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle AC^2=r^2+d^2-2rd\cos\theta$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \omega_0^2=\frac{gd}{3r^2/2-2rd}$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(P)at(0,-1.8);\coordinate(C)at(.45,-.65);\draw[thick](-1.8,0)arc(180:360:1.8);\draw[guide](O)--(P);\draw[thick](O)--(C)node[midway,right]{$d$};\draw[thick](P)--(C)node[midway,left]{$PC$};\foreach\p in {O,P,C}\fill(\p)circle(2pt)node[above left]{$\p$};\draw[force](C)--++(0,-1)node[right]{$mg$};\draw[force](P)--++(0,1)node[left]{$N$};\draw[thick](-2.4,-1.8)--(2.4,-1.8);\node at(.6,-3){接触点为瞬时零速度点，质心偏置使瞬时惯量随角度改变};
 \end{tikzpicture}

@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.3,0)--(4,0)node[right]{$\lambda$};\draw[->,gray](0,-.3)--(0,4)node[above]{$T/D$};\draw[thick,domain=.55:3.2,samples=80]plot(\x,{1/sin(28.125*\x)});\node[right]at(3.2,1){傅科 $1/|\sin\lambda|$};\draw[guide](0,1)--(3.2,1);\node[below]at(3.2,0){$90^\circ$};\draw[thick,dashed,domain=.55:3.2,samples=80]plot(\x,{.5/sin(28.125*\x)});\node[right]at(3.2,.5){惯性圆 $1/(2|\sin\lambda|)$};\node at(2,-1){北半球两者俯视均顺时针；赤道周期趋于无穷};
+\end{tikzpicture}

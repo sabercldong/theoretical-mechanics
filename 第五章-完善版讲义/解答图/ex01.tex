@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex01.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \dot x=R\dot\varphi\cos\theta$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \dot y=R\dot\varphi\sin\theta$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(4,0)node[right]{$x$};\draw[->,gray](0,-.35)--(0,3)node[above]{$y$};\draw[force](0,0)--(1.4,0)--(1.4,1.4)node[above]{$A$};\draw[thick,dashed,->](0,-.2)--(2.8,-.2)node[below]{$B$};\draw[->](2.8,-.2)--(2.8,.7);\node at(2.7,2.7){终态航向同为向上};\node at(1.6,-1.2){两条路径滚过总弧长相同，终点仍可不同};
 \end{tikzpicture}

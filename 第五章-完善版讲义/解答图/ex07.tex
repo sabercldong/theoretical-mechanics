@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex07.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \delta W=Q_1\delta\theta_1+Q_2\delta\theta_2$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle Q_1=Q_2=0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(A)at(.9,-2);\coordinate(B)at(2.3,-3.4);\draw[thick](O)--(A)--(B);\foreach\p in {O,A,B}\fill(\p)circle(2pt)node[left]{$\p$};\draw[force](.45,-1)--(.45,-2)node[left]{$P_1$};\draw[force](1.6,-2.7)--(1.6,-3.7)node[left]{$P_2$};\draw[force](B)--++(1.4,0)node[right]{$F$};\draw[guide](O)--(0,-1.5);\draw[guide](A)--++(0,-1.3);\node at(1.5,-4.5){两质心与端点位置共同随各自摆角改变};
 \end{tikzpicture}

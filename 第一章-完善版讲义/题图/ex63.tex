@@ -1,0 +1,5 @@
+\begin{tikzpicture}[scale=.9]
+\draw[->](-3.2,0)--(2.2,0)node[right]{$x/p$};\draw[->](0,-2.9)--(0,3)node[above]{$y/p$};
+\draw[ink,thick,domain=-2.6:2.6,samples=101,variable=\t]plot({.5-.5*\t*\t},\t);\draw[guide](1,-2.7)--(1,2.7)node[above right=4pt]{准线 $x=p$};
+\fill[ink](0,0)circle(3pt)node[below right=5pt]{焦点 $O$};\fill[ink](.5,0)circle(2pt)node[above right=5pt]{$r_{\rm p}=p/2$};\node at(-1.6,2.7){$E=0,\ e=1$};
+\end{tikzpicture}

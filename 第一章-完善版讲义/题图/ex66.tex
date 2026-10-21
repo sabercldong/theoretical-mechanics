@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=1.2]
+\coordinate(O)at(0,0);\coordinate(V)at(3,0);\coordinate(A)at(2,1.732);\coordinate(B)at(4,1.732);
+\draw[force](O)--(V)node[midway,below]{$\vect V$};
+\draw[force](V)--(A)node[midway,above left=3pt]{$\vect w_{\rm in}$};
+\draw[force](V)--(B)node[midway,right=3pt]{$\vect w_{\rm out}$};
+\draw[force](O)--(A)node[midway,left]{$\vect v_{\rm in}$};
+\draw[force](O)--(B)node[pos=.72,below right]{$\vect v_{\rm out}$};
+\draw[guide](A)--(B)node[midway,above]{速度改变量沿 $+\vect V$};
+\node[below left]at(O){速度原点};
+\end{tikzpicture}

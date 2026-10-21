@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[->,gray](0,0)--(3.7,0)node[right]{$r$};\draw[->,gray](0,-.4)--(0,2.7)node[above]{$U$};\draw[thick](1,0)--(3.3,0);\draw[thick,->](1,.1)--(1,2.4);\node[below]at(1,0){$d$};\node at(.5,1.3){$\infty$};\node at(2.1,1.4){中心距 $r\ge d$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$f(r)=-1\ (r<d),\quad f(r)=0\ (r>d)$\\[6pt]$\Downarrow$\\[6pt]$B_2=-2\pi\int f r^2\dd r=2\pi d^3/3$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.15,0)--(3.8,0)node[right]{$r$};\draw[->](0,-.15)--(0,2.6)node[above]{$f_{\rm M}(r)$};\fill[ink!12](0,-1)rectangle(1.2,0);\draw[thick](0,-1)--(1.2,-1)--(1.2,0)--(3.4,0);\node[below]at(1.2,0){$d$};\node at(1.7,1.4){硬核内 $f_{\rm M}=-1$};\node at(1.8,-1.8){积分权重还包含 $r^2$，不是只算平面面积};
 \end{tikzpicture}

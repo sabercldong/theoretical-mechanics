@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center]at(0,1.2){\adjustbox{max width=13cm,max height=4.4cm}{\input{题图/ex03.tex}}};
-\node[inner sep=0,anchor=center]at(-3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle \dd s^2=(a^2+b^2)\dd u^2$}};
-\draw[force](-.5,-2.2)--(.5,-2.2);
-\node[inner sep=0,anchor=center]at(3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle T=\tfrac12m(a^2+b^2)\dot u^2$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(3.5,0)node[right]{$a\,\delta u$};\draw[->,gray](0,-.35)--(0,2.7)node[above]{$b\,\delta u$};\draw[force](0,0)--(2.6,0);\draw[force](2.6,0)--(2.6,1.8);\draw[force](0,0)--(2.6,1.8)node[midway,above left]{$\delta s$};\draw(2.35,0)--(2.35,.25)--(2.6,.25);\node at(1.5,-1){将螺旋线所在圆柱展开：水平、竖直增量正交};
 \end{tikzpicture}

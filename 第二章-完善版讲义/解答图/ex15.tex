@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\fill(0,0)circle(4pt)node[above]{$m_1$};\fill(3,0)circle(4pt)node[above]{$m_2$};\draw[thick](0,0)--(3,0);\draw[->](.2,.5)--(1,.5)node[above]{$T$};\draw[->](2.8,.5)--(2,.5)node[above]{$T$};\draw[<->](0,-.6)--(3,-.6)node[midway,below]{$L$};\node[below]at(0,0){$x=0$};\node[below]at(3,0){$x=L$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$m_1x_1+m_2x_2=m_2L$\\[6pt]$\Downarrow$\\[6pt]$x_{\rm meet}=m_2L/(m_1+m_2)$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[thick](0,0)--(4,0);\fill(0,0)circle(3pt)node[above]{$1$};\fill(4,0)circle(4pt)node[above]{$2$};\coordinate(C)at(3,0);\fill(C)circle(2pt)node[above]{$C$};\draw[<->](0,-.5)--(3,-.5)node[midway,below]{$d_1$};\draw[<->](3,-.5)--(4,-.5)node[midway,below]{$d_2$};\draw[force](0,.6)--(1.3,.6);\draw[force](4,.6)--(3.3,.6);\node at(2,-1.4){示意重球在右；相遇或质心位置由质量比确定};
 \end{tikzpicture}

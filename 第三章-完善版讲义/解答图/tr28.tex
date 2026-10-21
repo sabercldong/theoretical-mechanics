@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[->](0,0)--(0,2.8)node[above]{$B$};\draw(0,1.4)ellipse(1.1 and .35);\draw[->](1.1,1.4)arc(0:150:1.1 and .35);\node at(0,-.5){$\omega_0=|\gamma|B$};\node at(0,-1.1){$f_0=\omega_0/(2\pi)$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\omega_0=|\gamma|B$\\[6pt]$\Downarrow$\\[6pt]$f_0=\omega_0/(2\pi)$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.2,0)--(4.3,0)node[right]{$t$};\draw[->](0,-.2)--(0,3)node[above]{$\chi$};\draw[thick](0,0)--(3,2.4);\draw[guide](3,0)--(3,2.4)--(0,2.4);\node[left]at(0,2.4){$2\pi$};\node[below]at(3,0){$T_0$};\node at(1.9,-1){一周相位 $2\pi$ 对应一次周期，斜率是角频率};
 \end{tikzpicture}

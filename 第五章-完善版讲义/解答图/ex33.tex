@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex33.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \dd t=\frac{\sqrt{1+y'^2}}{\sqrt{2gy}}\dd x$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle x=a(u-\sin u),\ y=a(1-\cos u)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(5.6,0)node[right]{$x$};\draw[->,gray](0,-.35)--(0,1)node[above]{$-y$};\draw[thick,->,domain=0:240,samples=110]plot({.9*(\x*pi/180-sin(\x))},{-.9*(1-cos(\x))});\fill(0,0)circle(2pt)node[above]{$A$};\fill(4.549,-1.35)circle(2pt)node[right]{$B$};\draw[guide](4.549,0)--(4.549,-1.35)--(0,-1.35);\node at(2,-2.7){图中向下为题设 $+y$；末点可位于摆线最低点之后};
 \end{tikzpicture}

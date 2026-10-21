@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\begin{scope}\draw[->,gray](-.2,0)--(2.8,0)node[right]{$v_y$};
+\draw[->,gray](0,-.2)--(0,2.4)node[above]{$v_z$};
+\draw[force](0,0)--(1.7,0)node[midway,below]{$v_0$};
+\draw[force](1.7,0)--(1.7,1.3)node[right]{$\Delta v_z$};
+\draw[force](0,0)--(1.7,1.3)node[midway,above left]{$\vect v^+$};
+\node at(1,-1.1){位置仍为 $r_0\vect e_x$};\end{scope}
+\begin{scope}[xshift=6cm]\draw[->,gray](-2.4,0)--(1,0)node[right]{$L_y$};
+\draw[->,gray](0,-.2)--(0,2.4)node[above]{$L_z$};
+\draw[force](0,0)--(0,1.7)node[right]{$\vect L^-$};
+\draw[force](0,1.7)--(-1.3,1.7)node[above]{$\Delta\vect L$};
+\draw[force](0,0)--(-1.3,1.7)node[left]{$\vect L^+$};
+\draw(0,.6)arc(90:127.4:.6);\node at(-.3,.8){$i$};\end{scope}
+\node at(2.7,-2){图取 $\Delta v_z>0$；$\Delta\vect L=-mr_0\Delta v_z\,\vect e_y$};
+\end{tikzpicture}

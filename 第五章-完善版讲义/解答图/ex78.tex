@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center]at(0,1.2){\adjustbox{max width=13cm,max height=4.4cm}{\input{题图/ex78.tex}}};
-\node[inner sep=0,anchor=center]at(-3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle \rho_m\vect u_{tt}=(\lambda+\mu)\nabla\nabla\cdot\vect u+\mu\nabla^2\vect u$}};
-\draw[force](-.5,-2.2)--(.5,-2.2);
-\node[inner sep=0,anchor=center]at(3.7,-2.2){\adjustbox{max width=5.8cm}{$\displaystyle c_L^2=(\lambda+2\mu)/\rho_m,\quad c_T^2=\mu/\rho_m$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\foreach\dy/\lab in {0/{纵波：位移平行传播},-3/{横波：位移垂直传播}}{\begin{scope}[yshift=\dy cm]\draw[->,gray](-.3,0)--(4.3,0)node[right]{$\vect k$};\foreach\x in {0,.6,1.2,1.8,2.4,3,3.6}\fill(\x,0)circle(2pt);\node at(2,1.4){\lab};\end{scope}}\draw[force](1.2,0)--(2,0)node[above]{$\vect u_L$};\draw[force](1.2,-3)--(1.2,-2.2)node[above]{$\vect u_T$};\node at(2,-4.3){同一平面波按传播方向投影为纵、横两类本征模式};
 \end{tikzpicture}

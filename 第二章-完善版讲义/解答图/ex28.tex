@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](-.15,-.12)--(3.2,-.12);\draw[thick](-.15,.12)--(3.2,.12);\fill(0,0)circle(2pt)node[below left]{$O$};\fill(1.6,0)circle(3pt)node[above=7pt]{$m$};\draw[<->](0,-.55)--(3.2,-.55)node[midway,below]{$l,M_t$};\draw[->](.1,.7)arc(0:130:.4);\node at(-.4,1.3){$\omega_0$};\node at(1.8,1.4){$r(0)=l/2$};\draw[->,gray](0,0)--(3.8,0)node[right]{$\vect e_r$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$(I_t+mr^2)\omega=(I_t+ml^2/4)\omega_0$\\[6pt]$\Downarrow$\\[6pt]$v_{\rm out}^2=\dot r_{\rm out}^2+l^2\omega_{\rm out}^2$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(O)at(0,0);\coordinate(A)at(1.9,1.1);\coordinate(B)at(1.05,2.57);\draw[force](O)--(A)node[midway,below right]{$\dot r\er$};\draw[force](A)--(B)node[midway,right]{$r\omega\et$};\draw[force](O)--(B)node[left]{$\vect v$};\draw[guide](O)--(3.1,1.79);\node at(1.3,-1){两分量正交，径向速率并非绝对速率};
 \end{tikzpicture}

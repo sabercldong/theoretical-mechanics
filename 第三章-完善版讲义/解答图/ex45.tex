@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](-1.6,0)--(1.6,0);\draw[rotate=25](0,0)ellipse(.3 and 1.1);\draw[->,thick](0,0)--(1.5,.7)node[right]{$\vect n$};\node[below left]at(0,0){$O$};\node[below]at(-1.5,0){$A$};\node[below]at(1.5,0){$B$};\node at(-.8,-.6){$a$};\node at(.8,-.6){$b$};\draw[->](0,0)--(0,1.8)node[above]{$\vect e_X$};\node at(1,.2){$\beta$};\node at(0,-1.6){$z:A\to B$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$I_{xz}=mr^2\sin2\beta/8$\\[6pt]$\Downarrow$\\[6pt]$(a+b)D=I_{xz}\omega^2$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[thick,->](-.5,0)--(5.5,0)node[right]{$z$};\foreach\x/\p in {0/A,2/O,5/B}\fill(\x,0)circle(2pt)node[below=1.5pt]{$\p$};\draw[force](0,0)--(0,1.6)node[left]{$R_A^{(g)}$};\draw[force](5,0)--(5,1.2)node[right]{$R_B^{(g)}$};\draw[force](.35,0)--(.35,-1.1)node[right]{$-D\vect e_x$};\draw[force](4.65,0)--(4.65,1.1)node[left]{$D\vect e_x$};\draw[force](2,0)--(2,-1.6)node[right]{$mg$};\node at(2.5,2.4){图示 $t=0$：旋转附加反力在两轴承处反向};\node at(2.5,-2.4){最大模需将静载反力与旋转附加反力作矢量合成};
 \end{tikzpicture}

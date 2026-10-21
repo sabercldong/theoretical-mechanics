@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](0,-.5)--(0,3);\draw[very thick](0,0)--(3.4,2.55);\fill(0,0)circle(2pt)node[left]{$O$};\fill(1.65,1.24)circle(2pt)node[right]{$B$};\draw[->](0,0)--(1,0)node[below]{$N_O$};\draw[->](1.65,1.24)--(1.05,2.04)node[left]{$N_B$};\draw[->](1.7,1.275)--(1.7,.4)node[right]{$P$};\draw[<->](0,-.5)--(1.65,-.5)node[midway,below]{$d$};\node at(.7,.25){$\theta$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$OB=d/\cos\theta$\\[6pt]$\Downarrow$\\[6pt]$N_B\,OB=Pl\cos\theta$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(O)at(0,0);\coordinate(B)at(1.5,.866);\coordinate(C)at(2,1.1547);\draw[very thick](O)--(4,2.3094);\fill(O)circle(2pt)node[below=1.5pt]{$O$};\fill(B)circle(2pt)node[below right]{$B$};\fill(C)circle(2pt)node[above=1.5pt]{$C$};\draw[force](O)--(1,0)node[midway,below]{$N_O$};\draw[force](B)--(.9,1.905)node[above]{$N_B$};\draw[force](C)--(2,-.1)node[right]{$P$};\draw[<->](0,-.6)--(1.5,-.6)node[midway,below]{$d$};\node at(1.7,-1.7){接触反力只能取受压方向；几何方程还需筛选};
 \end{tikzpicture}

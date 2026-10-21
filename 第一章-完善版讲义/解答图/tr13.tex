@@ -1,0 +1,3 @@
+\begin{tikzpicture}
+\draw[->](-.3,0)--(4.3,0)node[right]{$r$};\draw[->](0,-.3)--(0,3.1)node[above]{$U_{m eff}$};\draw[ink,thick,domain=.5:3.2,samples=110]plot(\x,{.65/(\x*\x)+.24*\x*\x-.9});\draw[guide](.4,.2)--(3.8,.2)node[right]{$E$};\fill(0.8347824462594713,.2)circle(2pt)node[below left=5pt]{$r_{\rm p}$};\fill(1.9714136046883683,.2)circle(2pt)node[below right=5pt]{$r_{\rm a}$};\node at(2,-1){$E-U_{\rm eff}\ge0$ 为允许区};
+\end{tikzpicture}

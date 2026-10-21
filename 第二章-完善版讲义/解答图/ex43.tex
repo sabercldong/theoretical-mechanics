@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\fill(1.6,0)circle(4pt)node[below right=3pt]{$M$};\fill(.3,1.5)circle(4pt)node[above]{$m$};\fill(.3,-1.5)circle(4pt)node[below]{$m$};\draw[thick](.3,1.5)--(1.6,0)--(.3,-1.5);\draw[dashed](1.6,0)--(1.6,1.9);\node at(1.2,.7){$\phi$};\node at(.5,.55){$a$};\draw[->](1.6,0)--(3,0)node[right]{$\dot x_M$};\node at(1,-2.2){两端关于 $x$ 轴对称};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect r_\pm=(x_M-a\sin\phi,\pm a\cos\phi)$\\[6pt]$\Downarrow$\\[6pt]$\dot\phi^2=Mv^2/[a^2(M+2m\sin^2\phi)]$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(A)at(-1.5,1.5);\coordinate(B)at(-1.5,-1.5);\coordinate(M)at(0,0);\draw[thick](A)--(M)--(B);\foreach\p/\lab in {A/P_+,B/P_-,M/M}\fill(\p)circle(3pt)node[left]{$\lab$};\draw[force](A)--(-.7,.7)node[above]{$T$};\draw[force](B)--(-.7,-.7)node[below]{$T$};\draw[force](M)--(-.8,.8);\draw[force](M)--(-.8,-.8);\draw[force](M)--(-1.5,0)node[above]{$2T\sin\phi$};\node at(-.5,-2.3){中球横向受力相加，竖向分量抵消};
 \end{tikzpicture}

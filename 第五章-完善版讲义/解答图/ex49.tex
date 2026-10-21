@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex49.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle p_\theta=ma^2\dot\theta$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \dot p_\theta=\frac{p_\phi^2\cos\theta}{ma^2\sin^3\theta}-mga\sin\theta$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw(-2,0)arc(180:360:2);\draw[guide](-2,0)--(2,0);\coordinate(P)at(1.2,-1.6);\draw[guide](0,0)--(P);\draw[guide](0,0)--(0,-2.3);\node at(3,-1){$\otimes\ a\sin\theta\,\delta\phi$};\draw[force](P)--++(0,-1.1)node[below]{$mg$};\draw[->](0,0)--(0,1.5)node[above]{$z$};\node at(.35,-.7){$\theta$};\node at(.3,-3.2){方位虚位移不改变高度，重力对竖轴的力矩为零};\node at(.3,-4){子午面中，正方位位移指向纸面内；图示半径在右半平面};
 \end{tikzpicture}

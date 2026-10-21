@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex16.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \dot y=2\dot x,\quad \omega_s=\dot x/R$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle a_y=\frac{8mg}{3M+8m}$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[thick](-2,-1)--(3,-1);\draw(0,0)circle(1);\fill(0,0)circle(2pt)node[left]{$C$};\draw[force](0,1)--(1.8,1)node[right]{$T$};\draw[force](0,-1)--(1.2,-1)node[below]{$f$};\draw[force](-.3,0)--(-.3,-1.3)node[left]{$Mg$};\draw[force](.3,-1)--(.3,.2)node[right]{$N$};\draw[->](.7,.7)arc(45:-45:1);\begin{scope}[xshift=5cm]\fill(0,0)circle(4pt);\draw[force](0,0)--(0,1.3)node[above]{$T$};\draw[force](0,0)--(0,-1.3)node[below]{$mg$};\node[right]at(0,0){$m$};\end{scope}\node at(2,-2.3){顶点速度为柱心速度的两倍；图中摩擦正向先取向右};
 \end{tikzpicture}

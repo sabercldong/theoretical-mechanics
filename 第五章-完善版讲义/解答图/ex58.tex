@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex58.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle Q=\tfrac12(\kappa q^2+p^2/\kappa)$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \{Q,P\}=1$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-2.5,0)--(2.7,0)node[right]{$\sqrt\kappa q$};\draw[->,gray](0,-1)--(0,2.6)node[above]{$p/\sqrt\kappa$};\draw[thick,fill=soft](25:1.2)--(25:2)arc(25:75:2)--(75:1.2)arc(75:25:1.2)--cycle;\node at(.7,-1.7){旧变量：相空间环扇区};\begin{scope}[xshift=6.5cm]\draw[->,gray](-.35,0)--(3,0)node[right]{$Q$};\draw[->,gray](0,-.35)--(0,2.6)node[above]{$P$};\draw[thick,fill=soft](.7,.5)rectangle(2,1.9);\node at(1.4,-1.7){新变量：面积相同的矩形};\end{scope}
 \end{tikzpicture}

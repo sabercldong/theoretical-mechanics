@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[->](0,0)--(2.4,0)node[right]{$\vect e_1,I_1$};\draw[->](0,0)--(-1,-.9)node[below left]{$\vect e_2,I_2$};\draw[->](0,0)--(0,2.4)node[above]{$\vect e_3,I_3$};\draw[->,thick](0,0)--(-.75,-.6)node[above left]{$\Omega\vect e_2$};\node at(.8,-1.6){$I_1<I_2<I_3$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\dot x=-az,\quad\dot z=-bx$\\[6pt]$\Downarrow$\\[6pt]$\ddot x=abx,\quad ab>0$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\begin{scope}[xshift=0.0cm]\draw[->](-1.2,0)--(1.3,0);\draw[->](0,-1.2)--(0,1.3);\node at(0,1.8){最小惯量轴};\draw[thick](0,0)ellipse(1 and .7);\draw[->](1,0)arc(0:90:1 and .7);\node at(0,-1.7){有界横向扰动};\end{scope}\begin{scope}[xshift=3.4cm]\draw[->](-1.2,0)--(1.3,0);\draw[->](0,-1.2)--(0,1.3);\node at(0,1.8){中间惯量轴};\draw[thick](-1,-1)--(1,1);\draw[thick](1,-1)--(-1,1);\draw[->](.25,.25)--(.9,.9);\draw[->](-.25,-.25)--(-.9,-.9);\draw[->](-1,1)--(-.25,.25);\draw[->](1,-1)--(.25,-.25);\node at(0,-1.7){含指数增长方向};\end{scope}\begin{scope}[xshift=6.8cm]\draw[->](-1.2,0)--(1.3,0);\draw[->](0,-1.2)--(0,1.3);\node at(0,1.8){最大惯量轴};\draw[thick](0,0)ellipse(1 and .7);\draw[->](1,0)arc(0:90:1 and .7);\node at(0,-1.7){有界横向扰动};\end{scope}
 \end{tikzpicture}

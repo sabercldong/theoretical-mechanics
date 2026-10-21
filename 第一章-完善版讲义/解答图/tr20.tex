@@ -1,0 +1,3 @@
+\begin{tikzpicture}
+\draw[->](-2.2,0)--(2.3,0)node[right]{$x/a$};\draw[->](0,-.2)--(0,2.6)node[above]{$U/U_0$};\draw[thick,ink,domain=-1.5:1.5,samples=130]plot(\x,{(\x*\x-1)^2});\node[below]at(-1,0){$-1$};\node[below]at(1,0){$1$};\draw[guide](-1.55,.25)--(1.55,.25)node[right]{$E/U_0=1/4$};\foreach\x in {-1.224745,-.707107,.707107,1.224745}\fill(\x,.25)circle(2pt);
+\end{tikzpicture}

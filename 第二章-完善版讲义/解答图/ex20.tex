@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw(0,2.6)circle(.6);\draw(-.6,2.6)--(-.6,.2);\draw(.6,2.6)--(.6,-.7);\fill(-.6,.2)circle(4pt)node[below left]{$m$};\fill(.6,-.7)circle(4pt)node[below right]{$m^{\prime}$};\draw[dashed](-1.8,2.6)--(1.8,2.6);\node at(0,2.6){$O$};\node at(0,3.55){$I_p=0$};\draw[<->](-1.7,.2)--(-1.7,2.6)node[midway,left]{$s$};\draw[<->](1.7,-.7)--(1.7,2.6)node[midway,right]{$s^{\prime}$};\draw[->](-.95,.3)--(-.95,1.2)node[midway,left]{$a$};\draw[->](.95,-.6)--(.95,.3)node[midway,right]{$a^{\prime}$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$ma-m^{\prime}a^{\prime}=(m^{\prime}-m)g$\\[6pt]$\Downarrow$\\[6pt]$t^2=2(ms-m^{\prime}s^{\prime})/[(m^{\prime}-m)g]$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\fill(0,0)circle(3pt)node[right]{$A$};\fill(3,0)circle(3pt)node[right]{$B$};\draw[force](0,0)--(0,1.5)node[left]{$T_A$};\draw[force](0,0)--(0,-1.2)node[left]{$mg$};\draw[force](3,0)--(3,1.5)node[left]{$T_B$};\draw[force](3,0)--(3,-1.2)node[left]{$m^{\prime}g$};\node[align=center]at(1.5,-2){轻轮：$T_A=T_B$\\有惯量轮：张力差产生轮的角加速度};
 \end{tikzpicture}

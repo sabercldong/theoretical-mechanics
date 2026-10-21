@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex39.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle A=\dot\theta+\omega(1+\cos\theta)$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \delta S=-ma^2\int(\ddot\theta+\omega^2\sin\theta)\delta\theta\dd t$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(4.6,0)node[right]{$t$};\draw[->,gray](0,-.35)--(0,2.8)node[above]{$\theta$};\draw[thick](.3,.7)..controls(1.8,2.6)and(3,0)..(4,1.2);\draw[dashed](.3,.7)..controls(1.7,3)and(3,.4)..(4,1.2);\fill(.3,.7)circle(2pt);\fill(4,1.2)circle(2pt);\draw[force](2,1.4)--(2,2)node[above]{$\delta\theta(t)$};\node at(2,-1){两条路径端点相同，分部积分后边界变分为零};
 \end{tikzpicture}

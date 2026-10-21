@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(C)at(2.1,0);\coordinate(P)at(3.2,1.1);\draw[force](O)--(C)node[midway,below]{$d\vect e_1$};\draw[force](C)--(P)node[midway,right]{$\vect\rho$};\draw[guide](C)circle(1.56);\foreach\p in {O,C,P}\fill(\p)circle(2pt)node[above left]{$\p$};\begin{scope}[xshift=7cm,yshift=1cm]\fill(0,0)circle(2pt);\draw[force](0,0)--(-1.7,0)node[above]{$-\Omega^2d\vect e_1$};\draw[force](0,0)--(-1.3,-1.3)node[below]{$-(\Omega+\nu)^2\vect\rho$};\node at(-.6,1.6){两项绝对加速度};\end{scope}\node at(2.8,-2.6){左图拆分位置，右图将两项加速度平移到同一起点};
+\end{tikzpicture}

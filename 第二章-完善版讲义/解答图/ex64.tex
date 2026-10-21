@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](0,-.5)--(0,.7);\draw[decorate,decoration={zigzag,segment length=5pt,amplitude=2pt}](0,.1)--(2.1,.1);\draw[thick](2.1,-.2)rectangle(2.7,.4);\node at(2.4,.1){$m$};\node at(1,.6){$k$};\draw[->,gray](-.2,-.8)--(3.5,-.8)node[right]{$x$};\draw[dashed](1.4,-.9)--(1.4,.6);\node at(1.4,-1.2){$0$};\node at(2.4,1.2){$x=A\cos\omega t$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$W=x(-kx)=-2U$\\[6pt]$\Downarrow$\\[6pt]$\overline T=\overline U=kA^2/4$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.15,0)--(5.1,0)node[right]{$\omega t$};\draw[->](0,-.15)--(0,1.7)node[above]{};\draw[thick,domain=0:360,samples=120]plot({\x/90},{sin(\x)^2});\draw[dashed,domain=0:360,samples=120]plot({\x/90},{cos(\x)^2});\draw[guide](0,.5)--(4,.5)node[right]{$1/2$};\node at(2,2.5){实线 $T/E$，虚线 $U/E$};\node[below]at(4,0){$2\pi$};\node at(1.8,-.8){整周期平均相等，瞬时一般不同};\node at(1.8,-1.4){$E=kA^2/2$};
 \end{tikzpicture}

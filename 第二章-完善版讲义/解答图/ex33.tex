@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[thick](-1,0)--(3.6,0);\draw[very thick](0,0)--(0,2.5);\fill(0,0)circle(4pt)node[below]{$1,m$};\fill(0,2.5)circle(4pt)node[above]{$2,m$};\draw[<->](.6,0)--(.6,2.5)node[midway,right]{$l$};\draw[->,thick](0,2.5)--(1.8,2.5)node[right]{$J$};\draw[->](-.4,0)--(-.4,1)node[left]{$N$};\draw[->](2.2,1.8)--(2.2,.8)node[right]{$g$};\node at(1,-.7){$\theta(0)=0$};\node at(1.4,3.3){$\Lambda=4$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$y_2/l=(1-\tau^2+\cos2\tau)/2$\\[6pt]$\Downarrow$\\[6pt]$\tau_*=0.8900586\ldots,\quad y_1>0$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.15,0)--(3.8,0)node[right]{$\tau$};\draw[->](0,-.15)--(0,4.4)node[above]{$y/l$};\draw[thick,domain=0:0.8900586117066736,samples=90]plot({3*\x},{2*(1-\x*\x-cos(2*\x*180/pi))});\draw[dashed,thick,domain=0:0.8900586117066736,samples=90]plot({3*\x},{2*(1-\x*\x+cos(2*\x*180/pi))});\draw[guide](2.6701758351200207,-.1)--(2.6701758351200207,0.8311826709071557);\fill(2.6701758351200207,0)circle(2pt);\fill(2.6701758351200207,0.8311826709071557)circle(2pt);\node[below]at(2.67,0){$\tau_*$};\node[left]at(0,4){$1$};\node[anchor=west]at(3.7,3.4){虚线：$y_2$};\node[anchor=west]at(3.7,2.6){实线：$y_1$};\node at(2.2,-1){$\tau=t\sqrt{g/l}$，图止于首次碰撞};
 \end{tikzpicture}

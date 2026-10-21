@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\draw[->](-.4,0)--(3.4,0)node[right]{$x$};
+\fill(.4,0)circle(2pt);\fill(2.2,0)circle(2pt);
+\draw[force](.4,.35)--(1.1,.35)node[above]{$\vect v(t_1)$};
+\draw[force](2.2,.35)--(3.3,.35)node[above]{$\vect v(t_2)$};
+\draw[force](1.4,-.5)--(2.3,-.5)node[below]{$a_t\vect e_x$};
+\node at(1.5,-1.5){左：速度同向，长度可以改变};
+\begin{scope}[xshift=6cm]\draw(0,0)circle(1.2);
+\coordinate(P)at(1.2,0);\fill(P)circle(2pt)node[right]{$P$};
+\draw[force](P)--(1.2,1)node[right]{$\vect v$};
+\draw[force](P)--(.2,0)node[above]{$(v^2/R)\vn$};
+\node at(0,-1.9){右：速率不变，方向仍改变};\end{scope}
+\node at(2.9,2.1){左图取 $a_0>0$；$a_0<0$ 时加速度反向};
+\end{tikzpicture}

@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw[->,gray](-.4,0)--(3.4,0)node[right]{$x$};\fill(0,0)circle(3pt)node[below]{$1,O$};\fill(2.4,0)circle(3pt)node[above]{$2$};\draw[->,thick](0,0)--(0,1.6)node[above]{$F$};\draw[->,thick](2.4,0)--(2.4,-1.6)node[below]{$F$};\draw[<->](0,-.6)--(2.4,-.6)node[midway,below]{$a$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect F_1+\vect F_2=0$\\[6pt]$\Downarrow$\\[6pt]$\vect\tau_O=-aF\vect k$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\fill(0,0)circle(2pt)node[below]{$P_1=O$};\fill(3,0)circle(2pt)node[above]{$P_2$};\draw[force](0,0)--(0,1.4)node[left]{$F$};\draw[force](3,0)--(3,-1.4)node[right]{$F$};\draw[<->](0,-1.8)--(3,-1.8)node[midway,below]{$a$};\draw[->](1.1,.9)arc(150:-100:.7);\node at(1.5,1.7){顺时针力偶};
 \end{tikzpicture}

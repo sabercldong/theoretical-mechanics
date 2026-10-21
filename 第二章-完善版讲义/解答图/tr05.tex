@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw(0,0)circle(1.5);\draw(.65,0)circle(.55);\fill(0,0)circle(2pt)node[above left]{$O$};\fill(.65,0)circle(2pt)node[above]{$H$};\draw[->,gray](-1.8,0)--(2,0)node[right]{$x$};\draw[<->](0,-.65)--(.65,-.65)node[midway,below]{$d$};\node at(.9,.85){$r$};\node at(-1,1.1){$R$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$J_x=-\sigma\pi r^2d$\\[6pt]$\Downarrow$\\[6pt]$X_C=-r^2d/(R^2-r^2)$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[->](-.15,0)--(2.8,0)node[right]{$x$};\draw[->](0,-.15)--(0,2.5)node[above]{$y$};\fill(0,0)circle(2pt)node[below right]{$O$};\fill(1.7,0)circle(2pt)node[above]{$H(d,0)$};\draw[->](0,-.5)--(-1.2,-.5)node[below]{剩余质心偏向 $-x$};\node[align=center]at(.5,-1.5){完整圆盘的一阶矩为零\\挖去部分以负质量计入};
 \end{tikzpicture}

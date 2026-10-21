@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=1.1]
+\draw[->](-2.9,0)--(1,0)node[right]{$x/a$};\draw[->](0,-1.6)--(0,2.2)node[above]{$y/a$};
+\draw[thick,ink,domain=0:360,samples=181,variable=\t]plot({(1-cos(\t))*cos(\t)},{(1-cos(\t))*sin(\t)});
+\fill[ink](0,1)circle(2pt)node[right=5pt]{$P,\ \theta=\pi/2$};
+\draw[force](0,1)--(-.65,1.65)node[above]{$\vect v$};\draw[force](0,1)--(-1,.5)node[left]{$\vect a$};
+\node[below right]at(0,0){$O$};\node[anchor=east] at(-.9,2.05){$r=a(1-\cos\theta)$};
+\end{tikzpicture}

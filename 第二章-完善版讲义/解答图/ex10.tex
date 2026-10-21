@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\draw(0,0)circle(1.25);\draw[->,gray](-1.6,0)--(1.8,0)node[right]{$x$};\draw[->,gray](0,-1.5)--(0,1.85)node[above]{$y$};\fill(0,0)circle(2pt)node[below right]{$O,m_1$};\fill(0,.8)circle(3pt)node[right]{$m_2$};\draw[<->](-.4,0)--(-.4,.8)node[midway,left]{$e$};\draw[->](-.9,.9)arc(135:195:1.27);\node at(-1.35,1.4){$\omega>0$};\node at(.4,-2){$t=0$};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.8,0)$);
-\node[anchor=north west,align=left,font=\small]at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect a_C=-m_2e\omega^2\vect e_r/(m_1+m_2)$\\[6pt]$\Downarrow$\\[6pt]$\vect N=(D\sin\omega t,G-D\cos\omega t)$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\coordinate(O)at(0,0);\draw[force](O)--(0,2.8)node[midway,left]{$G\vect e_y$};\draw[force](0,2.8)--(1.06,1.74)node[right]{$-D\vect e_r$};\draw[force](O)--(1.06,1.74)node[midway,right]{$\vect N$};\draw[guide](1.06,0)--(1.06,1.74);\node at(1,-.8){$G=(m_1+m_2)g,\ D=m_2e\omega^2$};
 \end{tikzpicture}

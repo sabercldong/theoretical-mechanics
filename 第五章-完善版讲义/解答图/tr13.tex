@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/tr13.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle p^2=2m(E-Fq)$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle q=q_0+p_0t/m-Ft^2/(2m)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(3.8,0)node[right]{$q$};\draw[->,gray](0,-.35)--(0,3)node[above]{$p$};\draw[thick,domain=-1.8:1.8,samples=80]plot({2.3-.6*(\x)^2},\x);\draw[force](2.084,.6)--(2.3,0);\draw[force](2.3,0)--(2.084,-.6);\fill(2.3,0)circle(2pt)node[right]{转折点};\node at(1.5,-2.8){图示 $F>0$：到顶点前后切换动量正、负支};
 \end{tikzpicture}

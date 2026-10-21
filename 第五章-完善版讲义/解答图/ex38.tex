@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex38.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle x=x_*+\eta,\quad\eta(t_1)=\eta(t_2)=0$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle S[x]-S[x_*]=\tfrac m2\int\dot\eta^2\dd t$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(3.6,0)node[right]{$t$};\draw[->,gray](0,-.35)--(0,2.6)node[above]{$x$};\draw[thick](.2,.5)--(3,2);\draw[dashed](.2,.5)..controls(1.1,2.8)and(2.1,2.7)..(3,2);\fill(.2,.5)circle(2pt);\fill(3,2)circle(2pt);\begin{scope}[xshift=6cm]\draw[->,gray](-.35,0)--(3,0)node[right]{$\omega\Delta t/\pi$};\draw[->,gray](0,-.35)--(0,2.6)node[above]{$\delta^2S$};\draw[thick,domain=.4:2.1,samples=60]plot(\x,{.7*(1/\x-\x)});\fill(1,0)circle(2pt)node[below left]{$1$};\end{scope}\node at(3,-2){自由粒子二次变分为正；振子超过共轭时间后可出现负方向};
 \end{tikzpicture}

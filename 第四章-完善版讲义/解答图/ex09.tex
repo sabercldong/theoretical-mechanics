@@ -1,0 +1,3 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.3,0)--(2.8,0)node[right]{$X$};\draw[->,gray](0,-.3)--(0,3)node[above]{$Y$};\draw[guide](0,1)circle(1);\draw[thick,->](0,0)arc(-90:90:1);\coordinate(P)at(.866,1.5);\draw[force](0,0)--(P)node[midway,left]{$r$};\draw[force](P)--++(-.8,.46)node[left]{$\vect v$};\fill(0,2)circle(2pt)node[above left]{$r_{\max}=c/\Omega$};\fill(0,1)circle(2pt)node[left]{$C$};\node[below left]at(0,0){$O$};\node at(1.1,-1){首个向外阶段为圆轨迹的右半圆，图中 $OC=c/(2\Omega)$};
+\end{tikzpicture}

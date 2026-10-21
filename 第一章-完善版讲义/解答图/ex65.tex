@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=.9]
+\draw[->](-3.9,0)--(2.4,0)node[right]{$x/r_0$};\draw[->](0,-2.8)--(0,2.8)node[above]{$y/r_0$};
+\foreach \q/\col in {.75/muted,1/ink,1.15/blue!60!black,1.25/red!60!black}{
+\draw[\col,thick,domain=0:360,samples=181,variable=\t]plot({\q*\q*cos(\t)/(1+(\q*\q-1)*cos(\t))},{\q*\q*sin(\t)/(1+(\q*\q-1)*cos(\t))});}
+\fill[ink](0,0)circle(3pt)node[below left=5pt]{力心};\fill[ink](1,0)circle(3pt)node[above right=5pt]{共同起点};
+\draw[force](1,0)--(1,1)node[right]{$v_0$};\node[anchor=west,align=left]at(3,1){$q=0.75$：起点为远心点\\$q=1$：圆轨道\\$q=1.15,1.25$：起点为近心点};
+\end{tikzpicture}

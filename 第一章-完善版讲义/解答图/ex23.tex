@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=.9]
+\begin{scope}[xshift=-3cm]
+\draw[->](-2.4,0)--(2.5,0);\draw[->](0,-2.4)--(0,2.5);\draw[ink](0,0)circle(1);\draw[ink](0,0)circle(1.7);
+\fill[ink](0,0)circle(3pt)node[below left=5pt]{太阳};\fill[ink](1,0)circle(2pt)node[below right=4pt]{地球};\fill[ink](1.7,0)circle(2pt)node[above right=4pt]{行星};\node at(0,-2.9){日心圆轨道};
+\end{scope}
+\begin{scope}[xshift=3cm,scale=.7]
+\draw[->](-3.7,0)--(3.7,0);\draw[->](0,-3.7)--(0,3.7);
+\draw[thick,ink,domain=0:720,samples=361,variable=\t]plot({1.7*cos(\t)-cos(2.217*\t)},{1.7*sin(\t)-sin(2.217*\t)});
+\fill[ink](0,0)circle(3pt)node[above right=5pt]{地球};\node at(0,-4.1){地心相对轨迹的一段};
+\end{scope}
+\end{tikzpicture}

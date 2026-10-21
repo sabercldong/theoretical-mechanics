@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex35.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \dd A=2\pi y\sqrt{1+y'^2}\dd x$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle y=a\cosh\frac{x-x_0}{a}$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(2.6,0)node[right]{$x$};\draw[->,gray](0,-.35)--(0,3.2)node[above]{$r$};\draw[guide](-1,0)--(-1,2.3);\draw[guide](1,0)--(1,2.3);\draw[thick,dashed,domain=-1:1,samples=60]plot(\x,{0.52588889580099*cosh(\x/0.52588889580099)});\draw[thick,domain=-1:1,samples=60]plot(\x,{1.4380750203133617*cosh(\x/1.4380750203133617)});\fill(-1,1.8)circle(2pt)node[left]{$R$};\fill(1,1.8)circle(2pt)node[right]{$R$};\node at(.3,-1){同一边界可有两支驻值母线；驻值不自动保证最小面积};
 \end{tikzpicture}

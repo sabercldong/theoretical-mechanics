@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex13.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle y_B=\sqrt{4l^2-x^2},\quad x=DE$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle N=-P/\sqrt3$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(A)at(-1,0);\coordinate(C)at(1,0);\coordinate(B)at(0,1.732);\coordinate(D)at(-.5,.866);\coordinate(E)at(.5,.866);\draw[thick](A)--(B)--(C);\draw[thick](D)--(E);\foreach\p/\pos in {A/below left,C/below right,B/above,D/left,E/right}\fill(\p)circle(2pt)node[\pos]{$\p$};\draw[force](B)--(0,.8)node[right]{$P$};\draw[force](D)--++(.35,0)node[below]{$T$};\draw[force](E)--++(-.35,0);\draw[force](A)--++(0,.7);\draw[force](C)--++(0,.7);\node at(0,-1.1){横杆对两侧杆的拉力指向中间；对横杆自身则方向相反};
 \end{tikzpicture}

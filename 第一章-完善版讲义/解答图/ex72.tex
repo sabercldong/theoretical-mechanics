@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=3pt}]
+
+\begin{scope}\draw[thick](0,-1.8)--(0,1.8);\draw[guide](-2.1,0)--(3.2,0);
+\draw[force](-1.732,1)--(0,0)node[midway,above]{$v_{\rm out}$};
+\draw[force](0,0)--(2.828,-1)node[midway,below]{$v_{\rm in}$};
+\draw(-.7,0)arc(180:150:.7);\node at(-.95,.22){$i$};
+\draw(.8,0)arc(0:-19.471:.8);\node at(1.1,-.17){$j$};
+\node at(-1.1,1.8){阱外};\node at(1.5,1.8){阱内};\end{scope}
+\begin{scope}[xshift=6.4cm]\draw[->,gray](-.2,0)--(2.2,0)node[right]{$p_n/m$};
+\draw[->,gray](0,-1.2)--(0,.6)node[above]{$p_t/m$};
+\draw[force](0,0)--(.866,-.5)node[below left]{$\vect p_{\rm out}/m$};
+\draw[force](0,0)--(1.414,-.5)node[below right]{$\vect p_{\rm in}/m$};
+\draw[guide](0,-.5)--(1.65,-.5);\draw[force](.866,-.5)--(1.414,-.5);
+\node at(.8,-1.9){切向动量相同，法向动量改变};\end{scope}
+\node at(3,-3){入口局部放大，图取 $n=1.5,i=30^\circ$；出口按同样法则折转};
+\end{tikzpicture}

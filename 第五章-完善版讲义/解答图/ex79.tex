@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex79.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \delta\rho_t+\rho_0\nabla\cdot\vect v=0$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \delta\rho_{tt}-c_s^2\nabla^2\delta\rho=0$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[thick](0,0)rectangle(3.2,1.8);\draw[force](-1,.9)--(.4,.9)node[above]{$\delta P(x)$};\draw[force](4.2,.9)--(2.8,.9)node[above]{$\delta P(x+\dd x)$};\draw[force](1,2.4)--(2.4,2.4)node[above]{$\vect k,\ \vect v$};\node at(1.6,-.8){压力差驱动流体元，速度散度又改变其密度};\node at(1.6,-1.6){状态关系把压力扰动与密度扰动闭合};
 \end{tikzpicture}

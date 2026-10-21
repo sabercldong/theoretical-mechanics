@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex08.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle x_B=2a\cos\phi$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \delta x_B=-2a\sin\phi\,\delta\phi$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\coordinate(O)at(0,0);\coordinate(A)at(2.598,1.5);\coordinate(C)at(1.386,.8);\coordinate(B)at(2.771,0);\draw[thick](O)--(A);\draw[thick](C)--(B);\draw[guide](-.3,0)--(3.5,0);\foreach\p/\pos in {O/below left,A/above,C/above left,B/below right}\fill(\p)circle(2pt)node[\pos]{$\p$};\draw[force](A)--++(-.65,1.126)node[above left]{$\delta\vect r_A$};\draw[force](C)--++(-.35,.606)node[above left]{$\delta\vect r_C$};\draw[force](B)--++(-1.2,0)node[below]{$\delta\vect r_B$};\node at(1.7,-1.2){$\delta\phi>0$：两转动点沿切线移动，滑块只沿水平线移动};
 \end{tikzpicture}

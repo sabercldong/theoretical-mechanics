@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex46.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle u=f'(x)=ax$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle g(u)=ux-f(x)=u^2/(2a)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[->,gray](-.35,0)--(3.6,0)node[right]{$x$};\draw[->,gray](0,-.35)--(0,3.5)node[above]{$f$};\draw[thick,domain=-1.2:2.4]plot(\x,{.5*(\x)^2});\draw[gray,domain=-.2:3]plot(\x,{1.5*\x-1.125});\fill(1.5,1.125)circle(2pt)node[above left]{$x(u)$};\draw[<->](-.45,0)--(-.45,-1.125)node[midway,left]{$g(u)$};\node at(1.7,-2){图示 $a>0$：斜率固定时由切线纵截距读取变换值};
 \end{tikzpicture}

@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/tr18.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle Q=\int_\Omega j^0\dd V$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle \dot Q=-\oint_{\partial\Omega}\vect j\cdot\vect n\dd S$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[thick,fill=soft](0,0)ellipse(2.5 and 1.5);\node at(0,0){$Q(t)=\int_\Omega j^0\,\dd V$};\foreach\a in {0,45,135,180,225,315}{\draw[force]({2.5*cos(\a)},{1.5*sin(\a)})--({3.4*cos(\a)},{2.1*sin(\a)});}\node[right]at(3.4,0){$\vect j\cdot\vect n$};\node at(0,-2.9){所有外法向通量的积分取负号，给出区域总荷的变化率};
 \end{tikzpicture}

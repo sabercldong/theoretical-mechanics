@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x={(1cm,0cm)},y={(.45cm,.35cm)},z={(0cm,1cm)}]
+\draw[draw=ink,fill=soft](-2,-1.2,0)--(2,-1.2,0)--(2,1.2,0)--(-2,1.2,0)--cycle;
+\draw[draw=ink,fill=soft,fill opacity=.3](-2,-1.2,-.84)--(2,-1.2,-.84)--(2,1.2,.84)--(-2,1.2,.84)--cycle;
+\draw[->](0,0,0)--(2.9,0,0)node[right]{$x$};
+\draw[force](0,0,0)--(0,0,2.9)node[above right]{$\vect L$};
+\draw[force](0,0,0)--(0,-1.68,2.4)node[above left]{$\vect L'$};
+\fill[ink](1.3,0,0)circle(2.5pt)node[below right=5pt]{$P$};
+\draw[force](1.3,0,0)--(1.3,1.2,0)node[right]{$\vect v_0$};
+\draw[force](1.3,0,0)--(1.3,0,.84)node[above right]{$\Delta\vect v_z$};
+\node[below]at(-1,-1.2,0){原轨道面};\node[above left]at(-1.8,1.2,.84){新轨道面};
+\node at(-.33,0,1.75){$i$};
+\node[anchor=west,align=left]at(3.5,0,1.4){新平面包含 $\vect r$ 与 $\vect v_0+\Delta\vect v_z$\\$\vect L'$ 垂直于新平面\\透视投影，角度不按比例};
+\end{tikzpicture}

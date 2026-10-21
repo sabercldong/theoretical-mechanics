@@ -31,10 +31,16 @@
 \newcommand{\TeachingFigure}[2]{\par\addvspace{6pt}\noindent\begin{minipage}{\linewidth}\centering\sbox{\LessonDrawing}{\input{补充图/#1.tex}}\adjustbox{max width=.97\linewidth,max height=7cm}{\usebox{\LessonDrawing}}\captionof{figure}{#2}\end{minipage}\par\addvspace{6pt}}
 \newcommand{\OriginalFigure}[2]{\par\addvspace{5pt}\noindent\begin{minipage}{\linewidth}\centering\includegraphics[width=.77\linewidth,height=5.5cm,keepaspectratio]{原图/#1.pdf}\captionof{figure}{#2}\label{fig:original-#1}\end{minipage}\par\addvspace{5pt}}
 \newsavebox{\QuestionDrawing}
-\newcommand{\QuestionStatement}[3]{\par\noindent\begin{minipage}{\linewidth}\begin{minipage}[t]{.60\linewidth}\vspace{0pt}\raggedright\setlength{\parindent}{0pt}#1\end{minipage}\hfill\begin{minipage}[t]{.37\linewidth}\vspace{2pt}\centering\sbox{\QuestionDrawing}{\input{题图/#2.tex}}\adjustbox{max width=.99\linewidth,max height=5.5cm}{\usebox{\QuestionDrawing}}\captionof{figure}{#3}\label{fig:question-#2}\end{minipage}\end{minipage}\par\smallskip}
-\newcommand{\LongQuestionStatement}[3]{\par #1\par\smallskip\noindent\begin{minipage}{\linewidth}\centering\sbox{\QuestionDrawing}{\input{题图/#2.tex}}\adjustbox{max width=.82\linewidth,max height=4.5cm}{\usebox{\QuestionDrawing}}\captionof{figure}{#3}\label{fig:question-#2}\end{minipage}\par\smallskip}
-\newsavebox{\SolutionDrawing}
-\newcommand{\SolutionFigure}[2]{\par\addvspace{5pt}\noindent\begin{minipage}{\linewidth}\centering\sbox{\SolutionDrawing}{\input{解答图/#1.tex}}\adjustbox{max width=.98\linewidth,max height=6cm}{\usebox{\SolutionDrawing}}\captionof{figure}{#2}\label{fig:solution-#1}\end{minipage}\par\addvspace{5pt}}
+\newcommand{\ProblemDrawing}[4]{%
+\par\addvspace{6pt}\noindent\begin{minipage}{\linewidth}\centering
+\sbox{\QuestionDrawing}{\input{#1/#2.tex}}%
+\adjustbox{max width=.96\linewidth,max height=6.6cm}{\usebox{\QuestionDrawing}}%
+\captionof{figure}{#3}#4\end{minipage}\par\addvspace{6pt}}
+\newcommand{\QuestionStatement}[3]{\par #1\par 模型与符号见图\ref{fig:question-#2}。%
+\ProblemDrawing{题图}{#2}{#3}{\label{fig:question-#2}}}
+\newcommand{\LongQuestionStatement}[3]{\QuestionStatement{#1}{#2}{#3}}
+\newcommand{\SolutionFigure}[2]{\ProblemDrawing{解答图}{#1}{#2}{\label{fig:solution-#1}}}
+
 \begin{document}
 \begin{titlepage}\centering\vspace*{18mm}
 {\small\color{muted}理论力学讲义\par}\vspace{12mm}
@@ -102,11 +108,15 @@ $\rho,\mathcal L$&相空间概率密度、拉格朗日密度（具体章节另�
 
 \example{沿曲线滚动的竖直圆盘}
 \label{ex:c5-1}
-\QuestionStatement{半径 $R$ 的竖直圆盘在水平面上纯滚动，可自由改变航向。盘心投影为 $(x,y)$，航向角为 $\theta$，自转角为 $\varphi$。写出无侧滑与无纵滑约束，证明它们不是与运动历史无关的位置约束；再讨论沿预定导轨滚动的情形。}{ex01}{例1的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex01}~中，盘面切向由航向角 $\theta$ 决定；沿路径累积的两分量会随航向变化，不能只按终态自转角计算位移。
-\SolutionFigure{ex01}{例1的分析与计算过程}
+\QuestionStatement{半径 $R$ 的竖直圆盘在水平面上纯滚动，可自由改变航向。盘心投影为 $(x,y)$，航向角为 $\theta$，自转角为 $\varphi$。写出无侧滑与无纵滑约束，证明它们不是与运动历史无关的位置约束；再讨论沿预定导轨滚动的情形。航向角从固定 $+x$ 方向逆时针计，$\varphi$ 的正向规定为沿航向向前滚动；只讨论盘保持竖直且接触未滑动的阶段。}{ex01}{例1的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex01}，解答图\ref{fig:solution-ex01}展示同一总滚动弧长、同一末航向对应的不同终点；位置必须沿航向变化的全过程积分。
+ 在本题模型中，盘面切向由航向角 $\theta$ 决定；沿路径累积的两分量会随航向变化，不能只按终态自转角计算位移。
+
 \Step{方程与推导}
 \[\dd x=R\cos\theta\,\dd\varphi,\qquad\dd y=R\sin\theta\,\dd\varphi.\]
+\SolutionFigure{ex01}{例1的分析与计算过程}
+
 若位置可仅由 $(\theta,\varphi)$ 决定，第一式要求 $x_\varphi=R\cos\theta$ 且 $x_\theta=0$。于是 $x_{\varphi\theta}=-R\sin\theta$，而 $x_{\theta\varphi}=0$，一般不相等。第二式同样矛盾。滚动后的位移依赖于方向改变的历史，不能把两式积分成与路径无关的两个位置约束。这是非完整约束的典型实例。
 更一般地，只看无侧滑的一形式 $\alpha=\sin\theta\dd x-\cos\theta\dd y$。若存在非零积分因子 $g(x,y,\theta)$ 使 $g\alpha=\dd F$，则 $F_\theta=0$，混合偏导要求
 \[
@@ -133,8 +143,12 @@ $N$ 个自由质点的位置需要 $3N$ 个笛卡儿坐标。若有 $k$ 个独�
 
 \example{单摆、球面质点、滚动圆盘与定点刚体}
 \label{ex:c5-2}
-\LongQuestionStatement{分别确定下列系统的局部自由度并选取广义坐标：竖直平面内长 $l$ 的刚杆单摆；半径 $R$ 的球面质点；沿固定直线纯滚动的圆盘；固定一点、可在三维空间转动的刚体。说明约束独立性和姿态坐标奇点的含义。}{ex02}{例2的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex02}~中，摆长、球半径与直线滚动约束各消去一个独立位置变量；定点刚体还保留三个姿态参数。
+\LongQuestionStatement{分别确定下列系统的局部自由度并选取广义坐标：竖直平面内长 $l$ 的刚杆单摆；半径 $R$ 的球面质点；沿固定直线纯滚动的圆盘；固定一点、可在三维空间转动的刚体。说明约束独立性和姿态坐标奇点的含义。各长度、半径均为正；直线滚动时自转角的正向与向前位移相容。这里的姿态参数描述材料刚体，不能把轴对称外形当作材料点不可区分。}{ex02}{例2的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex02}，解答图\ref{fig:solution-ex02}展示杆长约束消去的径向位移与球面上的两个切向位移；直线滚动约束连接平移和自转，定点刚体仍保留三个姿态自由度。
+ 在本题模型中，摆长、球半径与直线滚动约束各消去一个独立位置变量；定点刚体还保留三个姿态参数。
+
+
 \SolutionFigure{ex02}{例2的分析与计算过程}
 \Step{方程与推导}
 单摆在竖直平面内运动，两个位置变量加一个杆长约束，$s=1$，可取 $\theta$。球面质点三个位置变量加一个半径约束，$s=2$，可取 $(\theta,\phi)$。沿直线滚动圆盘用 $(x,\varphi)$ 描述，滚动约束后 $s=1$，可取其中任一个。定点刚体的位置由姿态决定，$s=3$，可取欧拉角；其坐标表示在特殊姿态会出现奇点，奇点不意味着物理自由度减少。
@@ -146,8 +160,12 @@ $N$ 个自由质点的位置需要 $3N$ 个笛卡儿坐标。若有 $k$ 个独�
 \OriginalFigure{c5-1-p007-euler-angles}{定点刚体的三个欧拉角；角弧表示夹角，正方向按正文约定}
 \example{螺旋线、平面定点运动与三维定点运动}
 \label{ex:c5-3}
-\LongQuestionStatement{质量 $m$ 的质点被限制在螺旋线 $x=a\cos u,y=a\sin u,z=bu$ 上，$a>0$，求自由度、弧长元及动能。另比较平面内定点刚体和三维定点刚体的自由度，说明轴对称外形是否可以省去材料自转角。}{ex03}{例3的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex03}~中，螺旋线的轴向升高和水平绕转都由同一参数 $u$ 决定，弧长中两部分的平方相加。
+\LongQuestionStatement{质量 $m$ 的质点被限制在螺旋线 $x=a\cos u,y=a\sin u,z=bu$ 上，$a>0$，求自由度、弧长元及动能。另比较平面内定点刚体和三维定点刚体的自由度，说明轴对称外形是否可以省去材料自转角。螺旋参数 $u$ 为无量纲角，$b$ 为给定常量，量纲为长度；平面定点刚体仅允许在该固定平面内转动。}{ex03}{例3的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex03}，解答图\ref{fig:solution-ex03}展示螺旋线展开后的弧长三角形；同一参数增量同时产生水平圆周增量和竖直增量，二者平方相加得到动能系数。
+ 在本题模型中，螺旋线的轴向升高和水平绕转都由同一参数 $u$ 决定，弧长中两部分的平方相加。
+
+
 \SolutionFigure{ex03}{例3的分析与计算过程}
 \Step{方程与推导}
 螺旋线由 $x=a\cos u,y=a\sin u,z=bu$ 给定，$a>0$。质点只能沿这条曲线运动，所以只有一个自由度。弧长微分是 $\dd s=\sqrt{a^2+b^2}\dd u$，既可取无量纲参数 $u$，也可取有长度量纲的 $s$。沿线动能分别为 $m(a^2+b^2)\dot u^2/2$ 与 $m\dot s^2/2$，两种坐标给同一运动。
@@ -162,8 +180,12 @@ $N$ 个自由质点的位置需要 $3N$ 个笛卡儿坐标。若有 $k$ 个独�
 \OriginalFigure{c5-1-p007-planar-fixed-body}{刚体在竖直平面内绕固定点O摆动；图中$\theta$对应正文$\gamma$}
 \example{弹性阿特伍德系统与受驱动圆环}
 \label{ex:c5-4}
-\LongQuestionStatement{理想定滑轮两侧以不可伸长主绳连接重物，一侧重物下方再用可伸缩轻弹簧悬挂另一重物。选取主绳一侧向下位移 $y$ 和弹簧长度 $s$，判断自由度。另有圆环绕环上一点的固定竖直轴在水平面内按已知角度 $\alpha(t)$ 转动，滑珠可沿环移动：判断规定转动和自由转动时各有几个自由度。}{ex04}{例4的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex04}~中，主绳把两侧位移联系起来，却不固定下面弹簧的长度 $s$；驱动环的整体角 $\alpha(t)$ 已由外界规定。
+\LongQuestionStatement{理想定滑轮两侧以不可伸长主绳连接重物，一侧重物下方再用可伸缩轻弹簧悬挂另一重物。选取主绳一侧向下位移 $y$ 和弹簧长度 $s$，判断自由度。另有圆环绕环上一点的固定竖直轴在水平面内按已知角度 $\alpha(t)$ 转动，滑珠可沿环移动：判断规定转动和自由转动时各有几个自由度。具体规定 $y$ 为连接弹簧一侧的上重物向下坐标，$s>0$；三个重物的位置均沿各自竖直运动线计量。圆环的“自由转动”仍绕同一固定轴，而非解除全部支承。}{ex04}{例4的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex04}，解答图\ref{fig:solution-ex04}展示主绳两侧互相制约的虚位移与弹簧下端的附加虚位移；弹簧长度并未被主绳固定，因此需要两个坐标。
+ 在本题模型中，主绳把两侧位移联系起来，却不固定下面弹簧的长度 $s$；驱动环的整体角 $\alpha(t)$ 已由外界规定。
+
+
 \SolutionFigure{ex04}{例4的分析与计算过程}
 \Step{方程与推导}
 弹性阿特伍德系统中，主绳不可伸长，只消去两侧滑轮下端之间的一个长度变量；一侧弹簧可以伸缩，下端质点的位置仍独立。故可取一个主绳位移和一个弹簧长度，共两个自由度。圆环按规定角速度绕其圆周上的固定轴转动时，转角是已知的时间函数，不能再算作独立坐标；环上滑珠只需一个沿圆周角。若圆环的转速也由动力学决定而未规定，则还需加入它自己的转角。自由度判断依赖于装置的具体限制。
@@ -196,14 +218,18 @@ $N$ 个自由质点的位置需要 $3N$ 个笛卡儿坐标。若有 $k$ 个独�
 \example{单摆与球面上的虚位移}
 \label{ex:c5-5}
 \LongQuestionStatement{分别求允许虚位移：（1）长 $l$ 的平面单摆，摆角 $\theta$ 从竖直向下量起；（2）半径 $R$ 的球面质点，采用极角 $\theta$ 和方位角 $\phi$。用图中的切向基矢表示结果，并说明与径向反力的关系。}{ex05}{例5的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex05}~中，圆周切向对应单摆唯一变分方向；球面的两个切向箭头分别对应独立的极角、方位角变分。
-\SolutionFigure{ex05}{例5的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex05}，解答图\ref{fig:solution-ex05}展示允许虚位移与约束径向正交；只有主动力沿切向的投影进入虚功和广义力，径向反力不能重复加入。
+ 在本题模型中，圆周切向对应单摆唯一变分方向；球面的两个切向箭头分别对应独立的极角、方位角变分。
+
 \Step{方程与推导}
 单摆以竖直向下为 $\theta=0$，$x=l\sin\theta,y=-l\cos\theta$，故
 \[
 \delta x=l\cos\theta\,\delta\theta,\quad\delta y=l\sin\theta\,\delta\theta,
 \quad\delta\vect r=l\vect e_\theta\delta\theta.
 \]
+\SolutionFigure{ex05}{例5的分析与计算过程}
+
 球面质点用通常球坐标，$\vect r=R\vect e_r$，则
 \[
 \delta\vect r=R\vect e_\theta\delta\theta+R\sin\theta\vect e_\phi\delta\phi.
@@ -227,14 +253,18 @@ $Q_i\delta q_i$ 的量纲总是能量。若 $q_i$ 是长度，$Q_i$ 量纲为力
 \example{水平力对单摆的广义力}
 \label{ex:c5-6}
 \QuestionStatement{长 $l$、球质量 $m$ 的单摆受向右恒力 $F$ 和重力。摆角 $\theta$ 从竖直向下向右量起，求广义力与势能。令 $F=0$，比较轻绳和可推可拉刚杆在正立、倒立位置的平衡与稳定性。}{ex06}{例6的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex06}~中，水平力沿 $+x$、重力沿 $-y$；两力分别与摆球切向位移投影相乘，产生正负不同的广义力。
-\SolutionFigure{ex06}{例6的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex06}，解答图\ref{fig:solution-ex06}展示允许虚位移与约束径向正交；只有主动力沿切向的投影进入虚功和广义力，径向反力不能重复加入。
+ 在本题模型中，水平力沿 $+x$、重力沿 $-y$；两力分别与摆球切向位移投影相乘，产生正负不同的广义力。
+
 \Step{方程与推导}
 摆球受水平向右的力 $F$ 和重力 $mg$。直接用位移分量求得
 \[
 \delta W=(Fl\cos\theta-mgl\sin\theta)\delta\theta,
 \qquad Q_\theta=Fl\cos\theta-mgl\sin\theta.
 \]
+\SolutionFigure{ex06}{例6的分析与计算过程}
+
 等价地取 $V=-Fl\sin\theta-mgl\cos\theta$。这里 $Q_\theta$ 是相对悬点、沿正转角方向的合力矩。特别令 $F=0$，则 $\delta W=-mgl\sin\theta\,\delta\theta$，静力条件是 $\sin\theta=0$。轻绳的有效张紧平衡为 $\theta=0$；可推可拉的刚杆还允许 $\theta=\pi$，但倒立支不稳定。轻绳在倒立位置需要负张力，因而该形式驻值不能作为其真实平衡。
 
 \Step{平衡与稳定分支} 对于 $F\ne0$，写 $V=-ml\sqrt{g^2+(F/m)^2}\cos(\theta-\theta_e)$，其中 $\tan\theta_e=F/(mg)$、$\cos\theta_e>0$。下垂分支 $V''(\theta_e)=l\sqrt{F^2+m^2g^2}>0$，稳定。$F=0$ 时 $V''(0)=mgl>0$、$V''(\pi)=-mgl<0$；静止径向平衡要求 $T=mg\cos\theta$，故倒立绳支的 $T=-mg$ 不可实现。
@@ -266,8 +296,10 @@ $Q_i\delta q_i$ 的量纲总是能量。若 $q_i$ 是长度，$Q_i$ 量纲为力
 \example{端点水平力作用下的两杆}
 \label{ex:c5-7}
 \QuestionStatement{均匀杆 $OA,AB$ 长 $l_1,l_2$，重 $P_1,P_2$，在竖直平面内光滑铰接；$O$ 固定，$B$ 受向右恒力 $F$。两杆角 $\theta_1,\theta_2$ 均从竖直向下量起。用虚功法求稳定下垂平衡构形，并写出势能验证。}{ex07}{例7的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex07}~中，两杆角互相独立；第二杆重心随铰点 $A$ 移动，因此第一角的重力系数还包含整根第二杆的重量。
-\SolutionFigure{ex07}{例7的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex07}，解答图\ref{fig:solution-ex07}展示两杆质心重力和端点外力；上杆转动会同时移动下杆及其质心，虚功系数必须包括这一部分。
+ 在本题模型中，两杆角互相独立；第二杆重心随铰点 $A$ 移动，因此第一角的重力系数还包含整根第二杆的重量。
+
 \Step{方程与推导}
 两个角独立。取 $X$ 向右、$Y$ 向上，先写出两个质心和受力端点的坐标：
 \begin{align*}
@@ -276,6 +308,8 @@ X_{C_2}&=l_1\sin\theta_1+\frac{l_2}{2}\sin\theta_2,
 &Y_{C_2}&=-l_1\cos\theta_1-\frac{l_2}{2}\cos\theta_2,\\
 X_B&=l_1\sin\theta_1+l_2\sin\theta_2.
 \end{align*}
+\SolutionFigure{ex07}{例7的分析与计算过程}
+
 第二杆的质心随第一杆的铰点移动，故第一角对应的重力项包含 $P_2$。铰链光滑，反力的总虚功抵消，主动力虚功为
 \begin{align*}
 \delta W&=-P_1\delta Y_{C_1}-P_2\delta Y_{C_2}+F\delta X_B\\
@@ -300,14 +334,18 @@ V=-\left(\frac{P_1}{2}+P_2\right)l_1\cos\theta_1
 
 \example{等长连杆机构的三个位置映射}
 \label{ex:c5-8}
-\QuestionStatement{固定点 $O$ 与杆 $OA$ 长 $l$，点 $C$ 在杆上，$OC=CB=a$；$B$ 沿过 $O$ 的水平直线滑动。取 $OA$ 与水平线夹角 $\phi$，采用 $B$ 位于右侧的构形。写 $A,C,B$ 的位置和虚位移，并解释 $\phi=0$ 时用 $x_B$ 作坐标的局限。}{ex08}{例8的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex08}~中，点 $A,C$ 的切向虚位移共用 $\delta\phi$；滑块 $B$ 只作水平位移，不能再赋予独立竖向变分。
-\SolutionFigure{ex08}{例8的分析与计算过程}
+\QuestionStatement{固定点 $O$ 与杆 $OA$ 长 $l$，点 $C$ 在杆上，$OC=CB=a$；$B$ 沿过 $O$ 的水平直线滑动。取 $OA$ 与水平线夹角 $\phi$，采用 $B$ 位于右侧的构形。写 $A,C,B$ 的位置和虚位移，并解释 $\phi=0$ 时用 $x_B$ 作坐标的局限。设 $0<a<l$，$|\phi|<\pi/2$；选择非重合的右侧滑块支，$x_B>0$，而非退化的 $B=O$ 支。}{ex08}{例8的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex08}，解答图\ref{fig:solution-ex08}展示同一角变分引起的三个点位移方向；$A,C$ 的虚位移分别垂直各自转臂，$B$ 不能再有独立竖向位移。
+ 在本题模型中，点 $A,C$ 的切向虚位移共用 $\delta\phi$；滑块 $B$ 只作水平位移，不能再赋予独立竖向变分。
+
 \Step{方程与推导}
 $O$ 固定，$OA=l$，$C$ 在 $OA$ 上，$OC=CB=a$，$B$ 沿过 $O$ 的水平线滑动；取 $OA$ 与水平夹角 $\phi$，采用右侧构形。位置为
 \[
 \vect r_A=l(\cos\phi,\sin\phi),\quad\vect r_C=a(\cos\phi,\sin\phi),\quad\vect r_B=(2a\cos\phi,0).
 \]
+\SolutionFigure{ex08}{例8的分析与计算过程}
+
 因此 $\delta\vect r_A=l(-\sin\phi,\cos\phi)\delta\phi$，$\delta\vect r_C=a(-\sin\phi,\cos\phi)\delta\phi$，$\delta\vect r_B=(-2a\sin\phi,0)\delta\phi$。$B$ 只有水平虚位移，$A,C$ 的位移与各自转臂垂直。$\phi=0$ 时 $\delta x_B=0$，用 $x_B$ 替代 $\phi$ 的坐标映射此处失去局部可逆性。
 
 \Step{约束微分与奇异位置} 连杆约束为 $(x_B-a\cos\phi)^2+a^2\sin^2\phi=a^2$。右支取 $x_B=2a\cos\phi$，与图中机构一致。局部反解需要 $\dd x_B/\dd\phi=-2a\sin\phi\ne0$；在 $\phi=0$，小角度改变只产生二阶滑块位移 $x_B=2a-a\phi^2+O(\phi^4)$，因此一阶速度不能唯一反推出角速度。
@@ -319,14 +357,18 @@ $O$ 固定，$OA=l$，$C$ 在 $OA$ 上，$OC=CB=a$，$B$ 沿过 $O$ 的水平线
 \example{均匀杆跨过固定光滑棱边}
 \label{ex:c5-9}
 \QuestionStatement{长 $2l$、质量 $m$ 的均匀杆，下端 $A$ 靠在固定光滑竖直墙上，杆身跨过距墙水平距离 $d$ 的固定光滑棱边 $O$，$0<d<l$。杆向右上方伸出，与水平夹角 $\theta$。求平衡角、稳定性及两处反力，并说明接触点确在杆上。}{ex09}{例9的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex09}~中，固定棱边 $O$ 限制杆与墙的交点高度；杆重心 $C$ 的高度随两种几何效应同时变化。
-\SolutionFigure{ex09}{例9的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex09}，解答图\ref{fig:solution-ex09}展示光滑墙面、光滑棱边的两种不同法向及质心重力；取矩和虚功时应使用实际支承几何，不能把两反力都画成竖直。
+ 在本题模型中，固定棱边 $O$ 限制杆与墙的交点高度；杆重心 $C$ 的高度随两种几何效应同时变化。
+
 \Step{方程与推导}
 固定 $O$ 高度为零，有 $AO=d/\cos\theta$，$y_A=-d\tan\theta$，$y_C=l\sin\theta-d\tan\theta$。重力虚功给出
 \[
 \delta W=-mg(l\cos\theta-d\sec^2\theta)\delta\theta=0,
 \quad\cos^3\theta=\frac dl.
 \]
+\SolutionFigure{ex09}{例9的分析与计算过程}
+
 但 $V''=-3mgl\sin\theta<0$，所以这是真实可行的不稳定静平衡，不能把静力条件一律称为势能极小。棱边法向力为 $N_O=mg/\cos\theta$，墙反力 $N_A=N_O\sin\theta$，均为正；这检验了两处单面接触的可实现性。$AO=l\cos^2\theta<l$，接触点位于杆中点之前，与构形一致。
 
 \OriginalFigure{c5-1-p016-wall-edge-rod}{均匀杆AB跨过光滑棱边O，C为中点，杆长2l}
@@ -335,15 +377,19 @@ $O$ 固定，$OA=l$，$C$ 在 $OA$ 上，$OC=CB=a$，$B$ 沿过 $O$ 的水平线
 
 \example{两段同线密度杆构成的刚性折杆}
 \label{ex:c5-10}
-\QuestionStatement{两根同线密度 $\sigma$ 的均匀细杆 $AB=a,BC=b$ 刚接成直角折杆，以 $A$ 光滑悬挂。取 $AB$ 向左偏离竖直向下角为 $\theta$，$BC$ 向右下方。求稳定平衡角，写出两段质心高度和总势能。}{ex10}{例10的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex10}~中，两段质心位置分别按各自杆长和质量加权；铰点 $A$ 的反力不作虚功。
-\SolutionFigure{ex10}{例10的分析与计算过程}
+\QuestionStatement{两根同线密度 $\sigma$ 的均匀细杆 $AB=a,BC=b$ 刚接成直角折杆，以 $A$ 光滑悬挂。取 $AB$ 向左偏离竖直向下角为 $\theta$，$BC$ 向右下方。求稳定平衡角，写出两段质心高度和总势能。给定 $a,b,\sigma>0$，忽略铰轴摩擦，重力加速度记为 $g$；两段杆的质量必须分别按实际杆长计算。}{ex10}{例10的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex10}，解答图\ref{fig:solution-ex10}展示直角折杆两段的质心和重力；两段质量分别为线密度乘杆长，不能对两个质心高度作简单平均。
+ 在本题模型中，两段质心位置分别按各自杆长和质量加权；铰点 $A$ 的反力不作虚功。
+
 \Step{方程与推导}
 两杆质心向下高度为 $y_D=(a/2)\cos\theta$，$y_E=a\cos\theta+(b/2)\sin\theta$。虚功为 $\sigma g[a\delta y_D+b\delta y_E]=0$，所以
 \[
 -\left(\frac{a^2}2+ab\right)\sin\theta+\frac{b^2}2\cos\theta=0,
 \quad\tan\theta=\frac{b^2}{a^2+2ab}.
 \]
+\SolutionFigure{ex10}{例10的分析与计算过程}
+
 重心法给出同式：整个重心的横坐标为上述左边除以 $a+b$，平衡时重心位于 $A$ 的正下方。在下垂分支势能取极小，因而稳定。
 
 \Step{质心高度与总势能} 两段质心高度分别为 $y_{C_1}=-a\cos\theta/2$、$y_{C_2}=-a\cos\theta-b\sin\theta/2$，所以 $V=-\sigma g[(a^2/2+ab)\cos\theta+(b^2/2)\sin\theta]$。令 $V_\theta=0$ 得 $(a^2+2ab)\sin\theta=b^2\cos\theta$。在下垂分支 $V_{\theta\theta}=\sigma g\sqrt{(a^2/2+ab)^2+b^4/4}>0$，因此该支稳定。
@@ -354,15 +400,19 @@ $O$ 固定，$OA=l$，$C$ 在 $OA$ 上，$OC=CB=a$，$B$ 沿过 $O$ 的水平线
 
 \example{一个自由度的曲柄连杆机构}
 \label{ex:c5-11}
-\QuestionStatement{水平曲柄连杆机构中 $OA=r,AB=l$，$B$ 沿过 $O$ 的水平线滑动。曲柄向右上方与水平成 $\phi$，连杆向右下方成 $\psi$，满足 $r\sin\phi=l\sin\psi$。在 $A$ 处施沿 $\phi$ 增大方向的切向力 $F_A$，$B$ 处施向右力 $F_B$。忽略各杆重量，求静力平衡的力关系。}{ex11}{例11的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex11}~中，曲柄的切向力与弧向虚位移同向；滑块位移受连杆长度约束，符号由右正方向确定。
-\SolutionFigure{ex11}{例11的分析与计算过程}
+\QuestionStatement{水平曲柄连杆机构中 $OA=r,AB=l$，$B$ 沿过 $O$ 的水平线滑动。曲柄向右上方与水平成 $\phi$，连杆向右下方成 $\psi$，满足 $r\sin\phi=l\sin\psi$。在 $A$ 处施沿 $\phi$ 增大方向的切向力 $F_A$，$B$ 处施向右力 $F_B$。忽略各杆重量，求静力平衡的力关系。设 $r,l>0$，在满足几何约束且 $\cos\psi\ne0$ 的同一连续装配支上计算。力的代数符号按上述箭头方向规定，不预先限定两外力必须同号。}{ex11}{例11的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex11}，解答图\ref{fig:solution-ex11}展示曲柄切向外力、滑块外力及相容虚位移；建立力关系时，应将滑块位移对曲柄角的导数完整代入。
+ 在本题模型中，曲柄的切向力与弧向虚位移同向；滑块位移受连杆长度约束，符号由右正方向确定。
+
 \Step{方程与推导}
 几何关系是 $r\sin\varphi=l\sin\psi$ 和 $x_B=r\cos\varphi+l\cos\psi$。等时变分给出
 \[
 l\cos\psi\,\delta\psi=r\cos\varphi\,\delta\varphi,
 \quad \delta x_B=-r(\sin\varphi+\cos\varphi\tan\psi)\delta\varphi.
 \]
+\SolutionFigure{ex11}{例11的分析与计算过程}
+
 $A$ 的切向位移为 $r\delta\varphi$，故
 \[
 \delta W=F_A r\delta\varphi+F_B\delta x_B=0,
@@ -386,7 +436,11 @@ $A$ 的切向位移为 $r\delta\varphi$，故
 \example{抛物面上与平面、圆柱相交的极值}
 \label{ex:c5-12}
 \LongQuestionStatement{曲面为 $z=x^2+y^2$。分别在（1）平面 $x+y=1$；（2）圆柱 $(x-2)^2+y^2=1$ 的约束下，求高度 $z$ 的极值、位置和是否存在最大值。用拉格朗日乘数法并说明约束交线的几何含义。}{ex12}{例12的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex12}~中，投影图中的直线和偏心圆是允许位置；沿约束交线改变位置时，驻值点的高度一阶变化为零。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex12}，解答图\ref{fig:solution-ex12}展示抛物面等高线与两类约束的平面投影；梯度平行对应等高线相切，直线约束无界而圆柱交线有界。
+ 在本题模型中，投影图中的直线和偏心圆是允许位置；沿约束交线改变位置时，驻值点的高度一阶变化为零。
+
+
 \SolutionFigure{ex12}{例12的分析与计算过程}
 \Step{方程与推导}
 求 $z=x^2+y^2$ 在 $x+y=1$ 上的极值。取 $\Phi=x^2+y^2-\lambda(x+y-1)$，两偏导为零得 $2x=2y=\lambda$，所以 $x=y=1/2,z_{\min}=1/2$。也可消去 $y$，得 \mbox{$z=x^2+(1-x)^2=2(x-1/2)^2+1/2$}，直接确认它是全局最小；沿无限交线 $|x|\to\infty$ 时 $z\to\infty$，不存在全局最大值。
@@ -417,14 +471,18 @@ Q_j+\sum_\alpha\lambda_\alpha\partial_j f_\alpha=0,
 
 \example{顶角为六十度的对称轻杆结构}
 \label{ex:c5-13}
-\QuestionStatement{轻杆 $AB,BC$ 各长 $2l$，构成顶角 $60^\circ$ 的对称结构；底端 $A,C$ 在同一光滑水平面上，顶点 $B$ 受竖直向下力 $P$。两杆中点 $D,E$ 由长 $l$ 的轻横杆连接。求横杆内力，规定拆去横杆后向外为正，分别用虚功、乘数和整体与单杆平衡说明其拉压性质。}{ex13}{例13的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex13}~中，中点横杆长度是所选位移 $x$；将横杆拆去，向外的正试探力与顶点下降的虚功相联系。
-\SolutionFigure{ex13}{例13的分析与计算过程}
+\QuestionStatement{轻杆 $AB,BC$ 各长 $2l$，构成顶角 $60^\circ$ 的对称结构；底端 $A,C$ 在同一光滑水平面上，顶点 $B$ 受竖直向下力 $P$。两杆中点 $D,E$ 由长 $l$ 的轻横杆连接。求横杆内力，规定拆去横杆后向外为正，分别用虚功、乘数和整体与单杆平衡说明其拉压性质。所有节点均为理想光滑铰接，三杆均可受拉或受压；内力的正负号与真实拉压性质须在解答中对应说明。}{ex13}{例13的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex13}，解答图\ref{fig:solution-ex13}展示拆开后的横杆拉力与整体外力；必须区分横杆对斜杆的力和斜杆对横杆的反作用力，才能判断乘数的拉压符号。
+ 在本题模型中，中点横杆长度是所选位移 $x$；将横杆拆去，向外的正试探力与顶点下降的虚功相联系。
+
 \Step{方程与推导}
 取 $x=DE$，则顶点高度 $y_B=\sqrt{4l^2-x^2}$，约束 $f=x-l=0$。主动力广义力为
 \[
 Q_x=-P\frac{\dd y_B}{\dd x}=P\frac{x}{y_B}.
 \]
+\SolutionFigure{ex13}{例13的分析与计算过程}
+
 平衡方程 $Q_x+\lambda=0$ 给出 $x=l,y_B=\sqrt3l,\lambda=-P/\sqrt3$。以向外推两端为正，横杆轴力 $N=\lambda$，所以它实际承受大小 $P/\sqrt3$ 的拉力。
 
 第二种方式取 $\theta=\tfrac12\angle ABC$。$y_B=2l\cos\theta$，$DE=2l\sin\theta$。约束 $f=2l\sin\theta-l=0$，平衡给出
@@ -450,13 +508,17 @@ Q_x=-P\frac{\dd y_B}{\dd x}=P\frac{x}{y_B}.
 \example{串接两球，各受水平力}
 \label{ex:c5-14}
 \QuestionStatement{两个质量均为 $m$ 的小球用两条长 $l$ 的轻绳串接悬于固定点 $O$。上球受向左恒力 $F_1$，下球受向右恒力 $F_2$。两绳角 $\theta_1,\theta_2$ 均从竖直向下向右计正。求平衡角及两绳张力，并建立笛卡儿乘数方程。}{ex14}{例14的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex14}~中，下绳的拉力对两球方向相反；上绳承受两球总重，水平分量对应两外力的代数和。
-\SolutionFigure{ex14}{例14的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex14}，解答图\ref{fig:solution-ex14}展示两球各自的受力；同一条下绳对两球作用相反，不能将上球所受下绳拉力漏去。
+ 在本题模型中，下绳的拉力对两球方向相反；上绳承受两球总重，水平分量对应两外力的代数和。
+
 \Step{方程与推导}
 下球的平衡是 $T_2\sin\theta_2=F_2,T_2\cos\theta_2=mg$，故
 \[
 \tan\theta_2=\frac{F_2}{mg},\qquad T_2=\sqrt{F_2^2+m^2g^2}.
 \]
+\SolutionFigure{ex14}{例14的分析与计算过程}
+
 上绳平衡两球合受力，所以 $T_1\sin\theta_1=F_2-F_1,T_1\cos\theta_1=2mg$，得到
 \[
 \tan\theta_1=\frac{F_2-F_1}{2mg},\qquad T_1=\sqrt{(F_2-F_1)^2+4m^2g^2}.
@@ -567,14 +629,18 @@ Q_i-\sum_a m_a\vect a_a\cdot\vect r_{a,q_i}=0.
 \example{有心力场中的平面质点}
 \label{ex:c5-15}
 \QuestionStatement{质量 $m$ 的质点在平面中心势 $V(r)$ 中运动，以 $(r,\phi)$ 为广义坐标。由位置和速度分解建立拉格朗日函数、径向与角向运动方程，并说明角动量积分与笛卡儿方程的等价关系。}{ex15}{例15的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex15}~中，径向和横向速度互相垂直，横向分量中的半径因子是离心项和角动量积分的共同来源。
-\SolutionFigure{ex15}{例15的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex15}，解答图\ref{fig:solution-ex15}展示极坐标速度三角形；动能度量中的 $r^2$ 来自切向速度 $r\dot\phi$，其坐标导数产生径向方程中的向心项。
+ 在本题模型中，径向和横向速度互相垂直，横向分量中的半径因子是离心项和角动量积分的共同来源。
+
 \Step{方程与推导}
 取 $(r,\phi)$，$T=\tfrac m2(\dot r^2+r^2\dot\phi^2)$，$V=V(r)$。逐项求导得到
 \[
 m\ddot r-mr\dot\phi^2+V'(r)=0,
 \qquad\frac\dd{\dd t}(mr^2\dot\phi)=0.
 \]
+\SolutionFigure{ex15}{例15的分析与计算过程}
+
 第一式的 $-mr\dot\phi^2$ 来自动能对 $r$ 的导数，第二式给出角动量守恒。它们与牛顿方程的径向、横向分量完全一致。换成笛卡儿坐标则为 $m\ddot x=-V_x,m\ddot y=-V_y$。
 \section{拉格朗日方程的完整应用}\label{sec:applications}
 \subsection{滚动圆柱与悬挂物}
@@ -582,15 +648,19 @@ m\ddot r-mr\dot\phi^2+V'(r)=0,
 
 \example{圆柱顶端绕绳牵引}
 \label{ex:c5-16}
-\QuestionStatement{质量 $M$、半径 $R$ 的均匀圆柱在粗糙水平面纯滚动。轻绳从圆柱最高点沿水平方向引出，经理想定滑轮悬挂质量 $m$ 的重物，绳与圆柱不滑动。求重物和柱心加速度、绳张力、地面摩擦力及纯滚动所需条件。}{ex16}{例16的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex16}~中，最高点的绳速由柱心平动与圆柱自转同向叠加；地面接触点瞬时静止，静摩擦仍提供转动力矩。
-\SolutionFigure{ex16}{例16的分析与计算过程}
+\QuestionStatement{质量 $M$、半径 $R$ 的均匀圆柱在粗糙水平面纯滚动。轻绳从圆柱最高点沿水平方向引出，经理想定滑轮悬挂质量 $m$ 的重物，绳与圆柱不滑动。求重物和柱心加速度、绳张力、地面摩擦力及纯滚动所需条件。地面静摩擦系数记为 $\mu_s$，重力加速度为 $g$；定滑轮无转动惯量、轴承无摩擦，轻绳不可伸长，接触法向反力非负。}{ex16}{例16的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex16}，解答图\ref{fig:solution-ex16}展示圆柱及悬挂物的真实受力、圆柱转向与绳速关系；张力的作用点在柱顶，地面静摩擦可向右，不能凭运动方向预判它必向左。
+ 在本题模型中，最高点的绳速由柱心平动与圆柱自转同向叠加；地面接触点瞬时静止，静摩擦仍提供转动力矩。
+
 \Step{方程与推导}
 取吊物向下的位移 $y$。柱心向右位移 $x$，无滑动与顶点速度关系给出 $y=2x$，$\dot\varphi=\dot x/R$。圆柱动能是 $\tfrac12M\dot x^2+\tfrac12(\tfrac12MR^2)(\dot x/R)^2=\tfrac34M\dot x^2$，故
 \[
 L=\frac12\left(m+\frac{3M}{8}\right)\dot y^2+mgy,
 \quad\left(m+\frac{3M}{8}\right)\ddot y=mg.
 \]
+\SolutionFigure{ex16}{例16的分析与计算过程}
+
 于是
 \[
 a_y=\frac{8mg}{3M+8m},\quad a_C=\frac{4mg}{3M+8m},\quad
@@ -609,15 +679,19 @@ T_{\text{柱}}=\frac12I_A\left(\frac{\dot y}{2R}\right)^2=\frac{3M}{16}\dot y^2.
 
 \example{轻绳带动大小圆盘}
 \label{ex:c5-17}
-\QuestionStatement{定轴均匀大圆盘质量 $4m$、半径 $2r$，定轴小圆盘质量 $m$、半径 $r$。轻绳一端绕于大盘，经小盘悬挂质量 $m$ 的物体；绳均不滑动。物体由静止下降高度 $h$，求加速度、所需时间、两盘角速度及绳两段张力。}{ex17}{例17的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex17}~中，两盘的接触绳速相同，角速度由各自半径决定；两转动惯量都须折算到同一重物速度。
-\SolutionFigure{ex17}{例17的分析与计算过程}
+\QuestionStatement{定轴均匀大圆盘质量 $4m$、半径 $2r$，定轴小圆盘质量 $m$、半径 $r$。轻绳一端绕于大盘，经小盘悬挂质量 $m$ 的物体；绳均不滑动。物体由静止下降高度 $h$，求加速度、所需时间、两盘角速度及绳两段张力。两转轴固定且无摩擦，轻绳不可伸长；释放前重物和两盘均静止，忽略滑轮轴的能量损耗。}{ex17}{例17的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex17}，解答图\ref{fig:solution-ex17}展示同一绳速与两滑轮角速度的无滑动联系；轮轴固定并不意味着转动动能或两侧张力差为零。
+ 在本题模型中，两盘的接触绳速相同，角速度由各自半径决定；两转动惯量都须折算到同一重物速度。
+
 \Step{方程与推导}
 以向下位移 $y$ 为坐标，$\omega_1=\dot y/(2r),\omega_2=\dot y/r$。惯量 $I_1=8mr^2,I_2=mr^2/2$，故
 \[
 T=\frac12m\dot y^2+\frac12I_1\frac{\dot y^2}{4r^2}+\frac12I_2\frac{\dot y^2}{r^2}
 =\frac{7m}{4}\dot y^2.
 \]
+\SolutionFigure{ex17}{例17的分析与计算过程}
+
 $L=T+mgy$ 给出 $\ddot y=2g/7$。从静止出发 $h=gt^2/7$，因此
 \[
 t=\sqrt{\frac{7h}g},\qquad
@@ -632,14 +706,18 @@ t=\sqrt{\frac{7h}g},\qquad
 \example{自然长不为零的二维弹簧摆}
 \label{ex:c5-18}
 \QuestionStatement{质量 $m$ 的球以自然长 $a$、劲度 $k$ 的轻弹簧悬挂，在竖直平面运动。以弹簧实际长度 $r>0$ 和从竖直向下量起的摆角 $\theta$ 为坐标。建立精确拉格朗日方程，说明弹簧伸长、径向惯性项与重力角向项。}{ex18}{例18的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex18}~中，弹簧实际长度 $r$ 和偏角 $\theta$ 均可独立变化；沿径向与切向投影时，重力分别带余弦和正弦因子。
-\SolutionFigure{ex18}{例18的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex18}，解答图\ref{fig:solution-ex18}展示弹簧力、重力及随摆角变化的极坐标基矢；实际弹簧长度 $r$ 与伸长 $r-a$ 必须区分，径向方程还含角运动产生的惯性项。
+ 在本题模型中，弹簧实际长度 $r$ 和偏角 $\theta$ 均可独立变化；沿径向与切向投影时，重力分别带余弦和正弦因子。
+
 \Step{方程与推导}
 $L=m(\dot r^2+r^2\dot\theta^2)/2-k(r-a)^2/2+mgr\cos\theta$。逐个求偏导：
 \begin{align*}
 L_{\dot r}&=m\dot r,&L_r&=mr\dot\theta^2-k(r-a)+mg\cos\theta,\\
 L_{\dot\theta}&=mr^2\dot\theta,&L_\theta&=-mgr\sin\theta.
 \end{align*}
+\SolutionFigure{ex18}{例18的分析与计算过程}
+
 径向时间导数为 $m\ddot r$，角向时间导数为
 \[
 \frac{\dd}{\dd t}(mr^2\dot\theta)=mr^2\ddot\theta+2mr\dot r\dot\theta.
@@ -658,13 +736,17 @@ m\ddot r-mr\dot\theta^2+k(r-a)-mg\cos\theta=0,
 \example{接触反力与静摩擦失效角}
 \label{ex:c5-19}
 \QuestionStatement{均匀实心小球质量 $m$、半径 $r$，在固定半径 $R$ 的大球外侧从顶部静止极限经无穷小扰动开始向下纯滚动；接触静摩擦系数 $\mu_s$。令 $\rho=R+r$，球心偏离顶点的角为 $\theta$。求速度、法向反力、摩擦力和首次滑动角，并比较形式上的脱离角。精确顶点无扰动静止的情况另行说明。}{ex19}{例19的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex19}~中，法向反力作用在接触处并沿两球心连线；上坡静摩擦提供自转，必须先与摩擦上限比较。
-\SolutionFigure{ex19}{例19的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex19}，解答图\ref{fig:solution-ex19}展示法向反力、重力与沿接触切线的静摩擦；先求所需摩擦，再与摩擦上限比较，不能直接把形式上的零反力角当作纯滚动可达到的状态。
+ 在本题模型中，法向反力作用在接触处并沿两球心连线；上坡静摩擦提供自转，必须先与摩擦上限比较。
+
 \Step{方程与推导}
 令 $d=R+r$，无滑动时 $r\omega_s=d\dot\theta$。实心球质心惯量是 $I_C=2mr^2/5$；接触瞬心的惯量为 $I_A=I_C+mr^2=7mr^2/5$。因此
 \[
 T=\frac12I_A\omega_s^2=\frac7{10}md^2\dot\theta^2.
 \]
+\SolutionFigure{ex19}{例19的分析与计算过程}
+
 独立用质心法也有 $T=md^2\dot\theta^2/2+(I_C/2)(d\dot\theta/r)^2$，结果相同。势能 $V=mgd\cos\theta$，所以
 \[
 \ddot\theta=\frac{5g}{7d}\sin\theta,
@@ -691,14 +773,18 @@ $\mu_s\to0$ 时 $\theta_s\to0$，$\mu_s\to\infty$ 时趋近离面角。首次滑
 \example{水平弹簧滑块悬挂单摆}
 \label{ex:c5-20}
 \QuestionStatement{质量 $m_1$ 的滑块在光滑水平轨道上，以劲度 $k$ 的弹簧连接固定端；滑块上悬挂长 $l$、球质量 $m_2$ 的轻杆单摆。滑块位移 $x$ 从弹簧自然长位置量起，摆角 $\phi$ 从竖直向下量起。求精确运动方程及平衡附近的二次拉格朗日函数和线性方程。}{ex20}{例20的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex20}~中，摆球绝对速度是悬点平移与绕悬点运动的矢量和；两箭头的投影产生不能丢掉的动能交叉项。
-\SolutionFigure{ex20}{例20的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex20}，解答图\ref{fig:solution-ex20}展示摆球速度的两份来源及其非正交合成；对动能求导时必须保留随摆角变化的速度耦合，之后再检查交叉项的抵消。
+ 在本题模型中，摆球绝对速度是悬点平移与绕悬点运动的矢量和；两箭头的投影产生不能丢掉的动能交叉项。
+
 \Step{方程与推导}
 摆球的位置为 $(x+l\sin\phi,-l\cos\phi)$，所以
 \[
 v_2^2=(\dot x+l\dot\phi\cos\phi)^2+(l\dot\phi\sin\phi)^2
 =\dot x^2+2l\dot x\dot\phi\cos\phi+l^2\dot\phi^2.
 \]
+\SolutionFigure{ex20}{例20的分析与计算过程}
+
 从而
 \[
 L=\frac12(m_1+m_2)\dot x^2+m_2l\dot x\dot\phi\cos\phi
@@ -740,13 +826,17 @@ L_2=\frac12(m_1+m_2)\dot x^2+m_2l\dot x\dot\phi
 \example{斜面与弹簧的二自由度运动}
 \label{ex:c5-21}
 \QuestionStatement{质量 $M$ 的斜面可在光滑水平地面平动，倾角 $\alpha$；质量 $m$ 的滑块在光滑斜面上，以劲度 $k$ 的弹簧连接坡顶。取斜面右移 $x$、滑块从相对平衡位置向坡上位移 $s$。求静伸长、速度合成、两条运动方程与相对振动频率。}{ex21}{例21的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex21}~中，沿坡向上的 $\dot s$ 与斜面向右的 $\dot x$ 夹角为 $\alpha$，因此速度平方产生正的余弦交叉项。
-\SolutionFigure{ex21}{例21的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex21}，解答图\ref{fig:solution-ex21}展示斜面平动速度与滑块沿坡上相对速度的合成；水平动量积分消去斜面位移后，会改变相对振动的有效惯性。
+ 在本题模型中，沿坡向上的 $\dot s$ 与斜面向右的 $\dot x$ 夹角为 $\alpha$，因此速度平方产生正的余弦交叉项。
+
 \Step{方程与推导}
 物块绝对速度为 $\dot x\vect e_x+\dot s(\cos\alpha\vect e_x+\sin\alpha\vect e_y)$，所以
 \[
 T=\tfrac12(M+m)\dot x^2+m\dot x\dot s\cos\alpha+\tfrac12m\dot s^2.
 \]
+\SolutionFigure{ex21}{例21的分析与计算过程}
+
 平衡位置对应弹簧伸长 $\delta_s=mg\sin\alpha/k$。始终使用上坡坐标 $s$，物块上移 $s$ 时，弹簧伸长变为 $\delta_s-s$，重力势能增加 $mg\,s\sin\alpha$，所以
 \[
 V=\frac{k}{2}(\delta_s-s)^2+mg\,s\sin\alpha
@@ -776,14 +866,18 @@ $M\to\infty$ 时恢复固定斜面频率 $\sqrt{k/m}$。此题水平外力为零
 \example{固定轮外侧纯滚动的行星轮}
 \label{ex:c5-22}
 \QuestionStatement{半径 $R$ 的固定轮与半径 $r$ 的行星轮外切纯滚动，在水平面内运动。连接两轮中心的均匀曲柄长 $R+r$、质量 $m_1$，行星轮质量 $m_2$、质心惯量 $I_2$；曲柄受恒力矩 $\mathcal M$。以曲柄转角 $\phi$ 求行星轮的绝对、相对自转角速度和角加速度。}{ex22}{例22的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex22}~中，接触点固定不动，把行星轮的公转速度与绝对自转联系；相对曲柄自转须再减去曲柄转速。
-\SolutionFigure{ex22}{例22的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex22}，解答图\ref{fig:solution-ex22}展示行星轮接触点的速度相消；绝对自转与相对曲柄的自转不同，必须先减去曲柄角速度再谈相对转数。
+ 在本题模型中，接触点固定不动，把行星轮的公转速度与绝对自转联系；相对曲柄自转须再减去曲柄转速。
+
 \Step{方程与推导}
 取曲柄角 $\phi$，令正转向沿图示力偶方向。轮心速度 $v_A=(R+r)\dot\phi$；接触点相对轮心的转动速度沿相反切向，所以不滑动条件为
 \[
 0=v_{\text{接触}}=(R+r)\dot\phi-r\omega_2,
 \qquad \omega_2=\frac{R+r}{r}\dot\phi.
 \]
+\SolutionFigure{ex22}{例22的分析与计算过程}
+
 这是绝对自转；相对曲柄的自转为 $\omega_{2,\rm rel}=\omega_2-\dot\phi=R\dot\phi/r$。惯性系动能必须使用绝对量。曲柄与行星轮的动能逐项为
 \begin{align*}
 T_{\text{柄}}&=\frac12\frac{m_1(R+r)^2}{3}\dot\phi^2,\\
@@ -805,8 +899,10 @@ T=\frac12\left[\frac{m_1}3+m_2+\frac{I_2}{r^2}\right](R+r)^2\dot\phi^2,
 \example{把铰接双杆的静力问题推广到动力学}
 \label{ex:c5-23}
 \QuestionStatement{均匀杆 $OA,AB$ 长 $l_1,l_2$、质量 $m_1,m_2$，在竖直平面光滑铰接，$O$ 固定，$B$ 受向右恒力 $F$。两杆角 $\theta_1,\theta_2$ 从竖直向下量起。建立精确的两条动力学方程，并在零速度、零加速度下恢复静力平衡式。}{ex23}{例23的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex23}~中，两杆重心和铰点 $A$ 的速度共同进入动能；两角的差决定交叉项，端点水平力仍按其虚位移求广义力。
-\SolutionFigure{ex23}{例23的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex23}，解答图\ref{fig:solution-ex23}展示第二杆质心速度的首尾合成；动能中的耦合项来自两份速度的内积，并携带两杆夹角的余弦。
+ 在本题模型中，两杆重心和铰点 $A$ 的速度共同进入动能；两角的差决定交叉项，端点水平力仍按其虚位移求广义力。
+
 \Step{方程与推导}
 记两杆重量 $P_1=m_1g,P_2=m_2g$。两个杆的质心惯量均为 $I_{C_i}=m_il_i^2/12$。第一杆质心的平动与转动相加给
 \[
@@ -814,6 +910,8 @@ T_1=\frac12m_1\frac{l_1^2}{4}\dot\theta_1^2
 +\frac12\frac{m_1l_1^2}{12}\dot\theta_1^2
 =\frac{m_1l_1^2}{6}\dot\theta_1^2.
 \]
+\SolutionFigure{ex23}{例23的分析与计算过程}
+
 第二杆质心速度的分量为
 \begin{align*}
 \dot X_{C_2}&=l_1\dot\theta_1\cos\theta_1+\frac{l_2}{2}\dot\theta_2\cos\theta_2,\\
@@ -856,15 +954,19 @@ B\ddot\theta_2+C\ddot\theta_1\cos\Delta-C\dot\theta_1^2\sin\Delta
 
 \example{自由粒子、有心力场与球形碗}
 \label{ex:c5-24}
-\LongQuestionStatement{分别找出循环坐标及守恒动量：（1）质量 $m$ 的三维自由质点；（2）平面中心势 $V(r)$ 中的质点；（3）光滑球形碗内的质点，碗半径 $a$，极角 $\theta$ 从最低点径向量起，方位角为 $\phi$。为第三个模型写出拉格朗日函数和方位角积分。}{ex24}{例24的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex24}~中，碗面上纬向速度为 $a\sin\theta\dot\phi$；绕竖直轴的对称性使方位角不显含于拉格朗日函数。
-\SolutionFigure{ex24}{例24的分析与计算过程}
+\LongQuestionStatement{分别找出循环坐标及守恒动量：（1）质量 $m$ 的三维自由质点；（2）平面中心势 $V(r)$ 中的质点；（3）光滑球形碗内的质点，碗半径 $a$，极角 $\theta$ 从最低点径向量起，方位角为 $\phi$。为第三个模型写出拉格朗日函数和方位角积分。三个模型中的质点质量均取 $m$，碗内重力加速度为均匀常量 $g$；球面坐标只在所用局部坐标图内讨论。}{ex24}{例24的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex24}，解答图\ref{fig:solution-ex24}展示球形碗中的方位虚位移与重力；方位角变化不改动势能，因而对应动量守恒，极角变化则同时改变高度和动能度量。
+ 在本题模型中，碗面上纬向速度为 $a\sin\theta\dot\phi$；绕竖直轴的对称性使方位角不显含于拉格朗日函数。
+
 \Step{方程与推导}
 自由粒子 $L=m(\dot x^2+\dot y^2+\dot z^2)/2$，三个坐标都是循环坐标。中心力的极角 $\phi$ 为循环坐标，$p_\phi=mr^2\dot\phi$ 守恒。球形碗半径 $a$，以碗底为 $\theta=0$，则
 \[
 L=\frac12ma^2(\dot\theta^2+\sin^2\theta\dot\phi^2)-mga(1-\cos\theta),
 \quad p_\phi=ma^2\sin^2\theta\dot\phi=C.
 \]
+\SolutionFigure{ex24}{例24的分析与计算过程}
+
 最后一个守恒量是竖直轴角动量；$p_\theta$ 不守恒。旋转对称性与循环坐标是同一物理结构在所选坐标中的表现。
 \TeachingFigure{c5-diagram-25}{球形碗中的轴对称运动与循环积分}
 
@@ -898,14 +1000,18 @@ L=\frac12ma^2(\dot\theta^2+\sin^2\theta\dot\phi^2)-mga(1-\cos\theta),
 \example{水平直管的离管速度与时间}
 \label{ex:c5-25}
 \QuestionStatement{长 $l$ 的光滑水平直管以一端为固定轴，按常角速率 $\omega>0$ 转动。质量 $m$ 的小球初始距轴 $a$，$0<a<l$，相对管初速为零。求离管时间、离管相对和绝对速度；给出 $l=2a$ 的结果，并求管对球的横向反力及驱动功率。}{ex25}{例25的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex25}~中，管的方向随规定角速率转动，径向相对速度与横向牵连速度互相垂直；离管条件是 $r=l$。
-\SolutionFigure{ex25}{例25的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex25}，解答图\ref{fig:solution-ex25}展示横向反力与相对、牵连速度的几何关系；管内自由滑动时反力的相对功率为零，但维持转速的装置仍向珠子传递能量。
+ 在本题模型中，管的方向随规定角速率转动，径向相对速度与横向牵连速度互相垂直；离管条件是 $r=l$。
+
 \Step{方程与推导}
 在惯性系中极角满足 $\phi=\omega t$，径向坐标 $r$ 唯一。$L=m(\dot r^2+\omega^2r^2)/2$，故 $\ddot r=\omega^2r$。应用初值
 \[
 r=a\cosh\omega t,\quad\dot r=a\omega\sinh\omega t,
 \quad \mathcal E=\frac m2(\dot r^2-\omega^2r^2)=-\frac m2\omega^2a^2.
 \]
+\SolutionFigure{ex25}{例25的分析与计算过程}
+
 离管时
 \[
 t_*=\frac1\omega\operatorname{arcosh}\frac la,
@@ -920,15 +1026,19 @@ t_*=\frac1\omega\operatorname{arcosh}\frac la,
 
 \example{竖直平面内的匀速转管}
 \label{ex:c5-26}
-\QuestionStatement{光滑直管在竖直平面绕固定端按常角速率 $\omega>0$ 转动，初始水平，管的有向径向与向右水平线夹角为 $\omega t$。质量 $m$ 的球沿管坐标为 $r$，初值 $r(0)=a,\dot r(0)=v_0$。求径向运动及广义能量变化率，说明解适用的管长和运动支条件。}{ex26}{例26的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex26}~中，径向正方向沿管，重力在该方向的投影随时间变为 $-mg\sin\omega t$，势能显含时间。
-\SolutionFigure{ex26}{例26的分析与计算过程}
+\QuestionStatement{光滑直管在竖直平面绕固定端按常角速率 $\omega>0$ 转动，初始水平，管的有向径向与向右水平线夹角为 $\omega t$。质量 $m$ 的球沿管坐标为 $r$，初值 $r(0)=a,\dot r(0)=v_0$。求径向运动及广义能量变化率，说明解适用的管长和运动支条件。管从轴端伸出的一侧长度记为 $l$，初值满足 $0<a<l$；在本题物理管段内只有 $0<r(t)<l$ 的解支可继续沿用。}{ex26}{例26的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex26}，解答图\ref{fig:solution-ex26}展示竖直转管内重力沿管的时变投影；不能将水平转管的无重力径向方程直接用于这一模型。
+ 在本题模型中，径向正方向沿管，重力在该方向的投影随时间变为 $-mg\sin\omega t$，势能显含时间。
+
 \Step{方程与推导}
 管绕固定点在竖直平面匀速转动，初始管水平，角 $\phi=\omega t$ 从水平向上量。$r(0)=a,\dot r(0)=v_0$，高度 $y=r\sin\omega t$，故
 \[
 L=\frac m2(\dot r^2+\omega^2r^2)-mgr\sin\omega t,
 \quad\ddot r-\omega^2r=-g\sin\omega t.
 \]
+\SolutionFigure{ex26}{例26的分析与计算过程}
+
 特解为 $g\sin\omega t/(2\omega^2)$。通解 $c_1e^{\omega t}+c_2e^{-\omega t}+c_3\sin\omega t$，$c_3=g/(2\omega^2)$；初值给 $c_1+c_2=a,\omega(c_1-c_2+c_3)=v_0$，因此
 \[
 r=a\cosh\omega t+\left(\frac{v_0}\omega-\frac g{2\omega^2}\right)\sinh\omega t+\frac g{2\omega^2}\sin\omega t.
@@ -937,14 +1047,18 @@ r=a\cosh\omega t+\left(\frac{v_0}\omega-\frac g{2\omega^2}\right)\sinh\omega t+\
 
 \example{旋转水平管中的弹性绳双球}
 \label{ex:c5-27}
-\QuestionStatement{水平光滑直管绕固定点以角速率 $\omega$ 转动，管内两球质量 $m_1,m_2$，以自然长 $a$、劲度 $k$ 的弹性绳连接。两球沿管有向坐标 $x_1<x_2$。用质心坐标 $X$ 和长度 $s=x_2-x_1$ 分离方程，求相对伸缩模式的稳定条件；重点解 $k=2\mu\omega^2$，$\mu=m_1m_2/(m_1+m_2)$，包括 $s(0)=a,\dot s(0)=0$ 的情况。}{ex27}{例27的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex27}~中，质心坐标描述整体离轴运动，弹性绳长描述两球相对运动；固定转速产生的二次项分别进入两者。
-\SolutionFigure{ex27}{例27的分析与计算过程}
+\QuestionStatement{水平光滑直管绕固定点以角速率 $\omega$ 转动，管内两球质量 $m_1,m_2$，以自然长 $a$、劲度 $k$ 的弹性绳连接。两球沿管有向坐标 $x_1<x_2$。用质心坐标 $X$ 和长度 $s=x_2-x_1$ 分离方程，求相对伸缩模式的稳定条件；重点解 $k=2\mu\omega^2$，$\mu=m_1m_2/(m_1+m_2)$，包括 $s(0)=a,\dot s(0)=0$ 的情况。弹性绳无质量且只能受拉：$s>a$ 时张力为 $k(s-a)$，$s\le a$ 时张力为零。所得张紧支解须与这一分段力律核对。}{ex27}{例27的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex27}，解答图\ref{fig:solution-ex27}展示两球的成对内力、质心位置和相对长度；弹性绳仅在张紧支上服从伸长力律，松弛后须改用零拉力。
+ 在本题模型中，质心坐标描述整体离轴运动，弹性绳长描述两球相对运动；固定转速产生的二次项分别进入两者。
+
 \Step{方程与推导}
 两球质量 $m_1,m_2$，在水平光滑直管中，由自然长 $a$、劲度 $k$ 的弹性连接相连。管绕固定点 $O$ 的竖直轴以规定的匀角速率 $\omega$ 转动。沿管取有符号坐标 $x_1,x_2$，并取球的顺序为 $x_2>x_1$。记 $M=m_1+m_2,\mu=m_1m_2/M$，轴向质心坐标 $X$，间距 $s>0$。两球绝对速度各有沿管与垂直管的两个分量，所以
 \[
 T=\frac12m_1(\dot x_1^2+\omega^2x_1^2)+\frac12m_2(\dot x_2^2+\omega^2x_2^2).
 \]
+\SolutionFigure{ex27}{例27的分析与计算过程}
+
 由 $MX=m_1x_1+m_2x_2$、$s=x_2-x_1$ 解出
 \[
 x_1=X-\frac{m_2}{M}s,\qquad x_2=X+\frac{m_1}{M}s.
@@ -967,14 +1081,18 @@ L=\frac M2(\dot X^2+\omega^2X^2)+\frac\mu2(\dot s^2+\omega^2s^2)-\frac k2(s-a)^2
 \example{水平圆环绕环上一点旋转}
 \label{ex:c5-28}
 \QuestionStatement{半径 $a$ 的光滑水平圆环绕环上一点 $O$ 的固定竖直轴以角速率 $\omega$ 转动。质量 $m$ 的滑珠以相对环心角 $\theta$ 定位，$\theta=0$ 为距 $O$ 最远处。建立位置、绝对速度和拉格朗日方程，求平衡附近频率及广义能量积分。}{ex28}{例28的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex28}~中，转轴在环上一点 $O$，不能把它当成环心；环心的牵连速度与珠的相对速度在绝对动能中耦合。
-\SolutionFigure{ex28}{例28的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex28}，解答图\ref{fig:solution-ex28}展示固定轴点到珠子、环心到珠子的两种半径及对应速度；牵连转动和相对圆周运动的转心不同。
+ 在本题模型中，转轴在环上一点 $O$，不能把它当成环心；环心的牵连速度与珠的相对速度在绝对动能中耦合。
+
 \Step{方程与推导}
 以随环转动的基矢 $\vect e_1,\vect e_2$，珠的位置为 $a(1+\cos\theta)\vect e_1+a\sin\theta\vect e_2$。利用 $\dot{\vect e}_1=\omega\vect e_2$、$\dot{\vect e}_2=-\omega\vect e_1$，有
 \[
 \vect v=a[-(\dot\theta+\omega)\sin\theta\,\vect e_1
 +((\dot\theta+\omega)\cos\theta+\omega)\vect e_2].
 \]
+\SolutionFigure{ex28}{例28的分析与计算过程}
+
 平方展开：
 \begin{align*}
 v^2/a^2&=(\dot\theta+\omega)^2+2\omega(\dot\theta+\omega)\cos\theta+\omega^2\\
@@ -1008,14 +1126,18 @@ L_\theta&=-ma^2(\omega\dot\theta+\omega^2)\sin\theta.
 \example{绳轮系统的简谐运动和两段张力}
 \label{ex:c5-29}
 \QuestionStatement{不可伸长主绳跨过理想定滑轮，两侧上端质量分别为 $m,2m$；质量 $m$ 的上球下方以弹性绳连接另一质量 $m$ 的球。弹性绳自然长 $a$、劲度 $k=mg/a$，初始自然长且全系统静止。设上球向下坐标 $y$、弹性绳长 $s$。求各球运动、周期及主绳、弹性绳张力。}{ex29}{例29的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex29}~中，主绳让质量 $2m$ 与上球反向运动，下球还增加相对长度 $s$；消去循环速度后有效质量为 $3m/4$。
-\SolutionFigure{ex29}{例29的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex29}，解答图\ref{fig:solution-ex29}展示三个重物的联动位移和弹性绳的独立长度；先用主绳约束消去一坐标，再检查弹性绳拉力及主绳张力的可实现性。
+ 在本题模型中，主绳让质量 $2m$ 与上球反向运动，下球还增加相对长度 $s$；消去循环速度后有效质量为 $3m/4$。
+
 \Step{方程与推导}
 设上方质量 $m$ 的球向下坐标为 $y$，弹性绳长为 $s$；另一球向上移动 $y$，下球向下坐标为 $y+s$。总动能
 \[
 T=\tfrac12m\dot y^2+\tfrac12(2m)\dot y^2+\tfrac12m(\dot y+\dot s)^2
 =2m\dot y^2+m\dot y\dot s+\tfrac12m\dot s^2.
 \]
+\SolutionFigure{ex29}{例29的分析与计算过程}
+
 重力势能中的 $y$ 项抵消，$V=\tfrac12k(s-a)^2-mgs$。因此 $y$ 为循环坐标，$p_y=4m\dot y+m\dot s=0$，即 $\dot y=-\dot s/4$。对 $s$ 的方程为 $m(\ddot y+\ddot s)+k(s-a)-mg=0$，所以
 \[
 \frac34m\ddot s+k(s-a)-mg=0,
@@ -1032,13 +1154,17 @@ $2m$ 球向下加速度为 $-\ddot y=\ddot s/4$，故不伸长绳张力 $T=2mg-\
 \example{轻绳穿过桌面光滑小孔}
 \label{ex:c5-30}
 \QuestionStatement{两质量均为 $m$ 的小球以长 $l$ 的轻绳连接，一球在光滑水平桌面运动，绳穿桌面光滑小孔，另一球悬于孔下。桌面球初始离孔 $a$、径向速度零、切向速度 $\sqrt{9ga/2}$。求径向运动积分和转折半径，说明绳长须满足的条件。}{ex30}{例30的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex30}~中，孔下球的位移为 $l-r$，两球都贡献径向动能；桌面球的切向运动由绕孔角动量守恒决定。
-\SolutionFigure{ex30}{例30的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex30}，解答图\ref{fig:solution-ex30}展示角动量固定后的径向有效势及两个转折点；圆周动能不能在转折点处一起设为零，悬球高度还要求 $r<l$。
+ 在本题模型中，孔下球的位移为 $l-r$，两球都贡献径向动能；桌面球的切向运动由绕孔角动量守恒决定。
+
 \Step{方程与推导}
 $T=m\dot r^2+mr^2\dot\theta^2/2$，$V=-mg(l-r)$。循环积分 $r^2\dot\theta=h$，其中 $h^2=9ga^3/2$。除去常数势能，能量给出
 \[
 \dot r^2+\frac{h^2}{2r^2}+gr=\frac{13}{4}ga.
 \]
+\SolutionFigure{ex30}{例30的分析与计算过程}
+
 转折点 $\dot r=0$，置 $u=r/a$ 得 $4u^3-13u^2+9=0=(u-1)(4u^2-9u-9)$。两个正根是
 \[
 r_{\min}=a,\qquad r_{\max}=3a.
@@ -1050,14 +1176,18 @@ r_{\min}=a,\qquad r_{\max}=3a.
 
 \example{自由平面双球的最大伸长}
 \label{ex:c5-31}
-\QuestionStatement{水平光滑平面上两球质量均为 $m$，以自然长 $a$、劲度 $k$ 的轻弹簧连接。初始弹簧沿 $+y$，自然长；下球静止，上球沿向右上方 $45^\circ$、速率 $v$ 运动。若弹簧最大长度为 $4a$，求 $v$，分开处理质心、径向和绕质心转动的能量。}{ex31}{例31的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex31}~中，初态相对速度有径向和横向两分量；在最大伸长处仅径向速度为零，绕质心转动动能仍须保留。
-\SolutionFigure{ex31}{例31的分析与计算过程}
+\QuestionStatement{水平光滑平面上两球质量均为 $m$，以自然长 $a$、劲度 $k$ 的轻弹簧连接。初始弹簧沿 $+y$，自然长；下球静止，上球沿向右上方 $45^\circ$、速率 $v$ 运动。若弹簧最大长度为 $4a$，求 $v$，分开处理质心、径向和绕质心转动的能量。弹簧可拉伸也可压缩，始终保持连接，忽略碰撞与耗散；最大长度处只已知相对径向速度为零，不能预设各球完全静止。}{ex31}{例31的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex31}，解答图\ref{fig:solution-ex31}展示质心两侧的相对运动及最大伸长时仍存在的切向速度；质心平动能与相对转动能均须从总能量中分开。
+ 在本题模型中，初态相对速度有径向和横向两分量；在最大伸长处仅径向速度为零，绕质心转动动能仍须保留。
+
 \Step{方程与推导}
 取质心坐标 $(x_C,y_C)$ 和从下球指向上球的相对位矢 $(r\sin\theta,r\cos\theta)$，$\theta$ 从 $+y$ 朝 $+x$ 量起，共四个自由度。总质量为 $2m$、约化质量 $\mu=m/2$，拉格朗日函数为
 \[
 L=m(\dot x_C^2+\dot y_C^2)+\frac m4(\dot r^2+r^2\dot\theta^2)-\frac k2(r-a)^2.
 \]
+\SolutionFigure{ex31}{例31的分析与计算过程}
+
 $x_C,y_C,\theta$ 都是循环坐标，所以
 \[
 2m\dot x_C=c_x,\qquad 2m\dot y_C=c_y,\qquad
@@ -1074,14 +1204,18 @@ $x_C,y_C,\theta$ 都是循环坐标，所以
 \OriginalFigure{c5-2-p029-free-two-balls}{自由双球的初态：上球速度与水平成45$^\circ$}
 \example{滚轮小车上弹簧物块的第一积分}
 \label{ex:c5-32}
-\QuestionStatement{忽略车架质量，两车轮各质量 $m_1$、半径 $r$、质心惯量 $I$，在地面纯滚动。车上质量 $m_2$ 的物块沿水平光滑导轨运动，以劲度 $k$ 的轻弹簧连接车架。取车架位移 $x$、物块相对自然长位移 $u$，求循环积分、能量及相对频率，并比较循环动量与真实水平动量。}{ex32}{例32的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex32}~中，两轮转动由无滑动条件与车架速度联系；循环积分含转动折算项，地面摩擦可改变真实水平动量。
-\SolutionFigure{ex32}{例32的分析与计算过程}
+\QuestionStatement{忽略车架质量，两车轮各质量 $m_1$、半径 $r$、质心惯量 $I$，在地面纯滚动。车上质量 $m_2$ 的物块沿水平光滑导轨运动，以劲度 $k$ 的轻弹簧连接车架。取车架位移 $x$、物块相对自然长位移 $u$，求循环积分、能量及相对频率，并比较循环动量与真实水平动量。轮轴理想，轮地静摩擦足以维持无滑动，忽略滚动阻力；物块的绝对速度由车架平动和相对运动合成。}{ex32}{例32的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex32}，解答图\ref{fig:solution-ex32}展示车轮转动、车架平动与车上物块的速度关系；滚动约束产生的有效惯性会进入循环动量，不能将该动量直接等同于真实水平动量。
+ 在本题模型中，两轮转动由无滑动条件与车架速度联系；循环积分含转动折算项，地面摩擦可改变真实水平动量。
+
 \Step{方程与推导}
 车架质量忽略，两轮各质量 $m_1$、半径 $r$、惯量 $I$，在地面纯滚动，轮轴摩擦忽略。车上质量 $m_2$ 的物块沿水平光滑导轨运动，以劲度 $k$ 的轻弹簧连接车架。相对位移 $u$ 从弹簧处于自然长的构形量起，因此 $u$ 就是弹簧的有向伸长。取车架位移 $x$。定义 $A=2m_1+2I/r^2$，则
 \[
 L=\frac12A\dot x^2+\frac12m_2(\dot x+\dot u)^2-\frac12ku^2.
 \]
+\SolutionFigure{ex32}{例32的分析与计算过程}
+
 $x$ 循环，$p_x=(A+m_2)\dot x+m_2\dot u=C$；广义能量等于 $T+V$ 且守恒。真实水平动量是 $P=(2m_1+m_2)\dot x+m_2\dot u$，少了轮转动项，所以一般不守恒。地面静摩擦对系统施加水平冲量，同时不作功；这两个事实并不矛盾。均匀圆盘轮有 $A=3m_1$。消去 $\ddot x$ 得 $\ddot u+k(A+m_2)u/(Am_2)=0$。
 
 \Step{消去循环速度} 由 $\dot x=(C-m_2\dot u)/(A+m_2)$ 得 $\ddot x=-m_2\ddot u/(A+m_2)$。物块方程为 $m_2(\ddot x+\ddot u)+ku=0$，故相对有效质量 $\mu_*=Am_2/(A+m_2)$。于是 $u=u_0\cos\Omega t+\dot u_0\sin\Omega t/\Omega$，$\Omega^2=k/\mu_*$；车架由 $x=x_0+Ct/(A+m_2)-m_2[u(t)-u_0]/(A+m_2)$ 恢复。该线性漂移常数来自循环积分，不能直接用真实水平动量替代。
@@ -1120,13 +1254,17 @@ $x$ 循环，$p_x=(A+m_2)\dot x+m_2\dot u=C$；广义能量等于 $T+V$ 且守�
 \example{从静止出发的重力下降轨道}
 \label{ex:c5-33}
 \QuestionStatement{取 $y$ 竖直向下，固定两点 $A=(0,0),B=(b,h)$，$b,h>0$。质点由 $A$ 静止沿无摩擦曲线滑到 $B$。求最短时间曲线的泛函、欧拉方程、摆线参数式及时间，说明起点零速度和经过最低点后的分支。}{ex33}{例33的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex33}~中，沿轨道下降获得的速度取决于深度 $y$；弧长元和速度之比决定时间泛函，最低点后须连续改变斜率支。
-\SolutionFigure{ex33}{例33的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex33}，解答图\ref{fig:solution-ex33}展示摆线从尖点下滑并经过最低点后的允许分支；起点竖直切线与零初速相容，不能无条件只取最低点以前的一段。
+ 在本题模型中，沿轨道下降获得的速度取决于深度 $y$；弧长元和速度之比决定时间泛函，最低点后须连续改变斜率支。
+
 \Step{方程与推导}
 能量给出 $v=\sqrt{2gy}$，弧长为 $\dd s=\sqrt{1+y'^2}\dd x$，所以
 \[
 t[y]=\frac1{\sqrt{2g}}\int_0^b\sqrt{\frac{1+y'^2}{y}}\dd x.
 \]
+\SolutionFigure{ex33}{例33的分析与计算过程}
+
 取 $F=\sqrt{(1+y'^2)/y}$，在 $y>0$ 的内部区间直接代入欧拉方程，起点 $y=0$ 按参数极限处理。两个偏导为
 \[
 F_y=-\frac{\sqrt{1+y'^2}}{2y^{3/2}},\qquad
@@ -1158,13 +1296,17 @@ F_{y'}=\frac{y'}{\sqrt y\sqrt{1+y'^2}}.
 \example{均匀柔链的静力形状}
 \label{ex:c5-34}
 \QuestionStatement{均匀不可伸长柔链线密度 $\sigma$，两端位置固定，总长 $l$，重力加速度 $g$，取 $y$ 向上。以势能变分求链形及张力。另在两支点等高、水平距离 $d$ 时，写出决定链形参数的长度方程和存在条件。}{ex34}{例34的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex34}~中，链元两端张力的水平分量相同，长度乘数决定高度平移；最低点两侧以双曲余弦统一表示。
-\SolutionFigure{ex34}{例34的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex34}，解答图\ref{fig:solution-ex34}展示一段悬链的水平张力、端点切向张力和链段重量；长度约束的乘数决定链形参数，不能只变分重力势能而漏去总长条件。
+ 在本题模型中，链元两端张力的水平分量相同，长度乘数决定高度平移；最低点两侧以双曲余弦统一表示。
+
 \Step{方程与推导}
 势能 $V=\sigma g\int y\sqrt{1+y'^2}\dd x$；长度约束 $\int\sqrt{1+y'^2}\dd x=l$。因此变分对象是
 \[
 \int(\sigma gy+\lambda)\sqrt{1+y'^2}\dd x.
 \]
+\SolutionFigure{ex34}{例34的分析与计算过程}
+
 在有效链支上取 $Y>0$。先以 $Y=y+\lambda/(\sigma g)$ 吸收固定长度乘数；去掉整体常因子后，被积函数为 $Y\sqrt{1+Y'^2}$。直接代欧拉方程可得
 \[
 \sqrt{1+Y'^2}-\frac{\dd}{\dd x}\left(\frac{YY'}{\sqrt{1+Y'^2}}\right)=0,
@@ -1197,13 +1339,17 @@ l=\int_{-d/2}^{d/2}\cosh\frac xa\,\dd x=2a\sinh\frac d{2a}.
 \example{两圆环之间的最小旋转曲面}
 \label{ex:c5-35}
 \QuestionStatement{两个同轴固定圆环位于 $x=0,d$，半径分别为 $R_A,R_B$。正母线 $r=y(x)>0$ 绕 $x$ 轴形成连接曲面。求面积泛函、驻值母线和参数边界方程；在 $R_A=R_B=R$ 时，求驻值连接面存在的间距条件，并区分驻值和稳定最小面积。}{ex35}{例35的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex35}~中，母线高度 $y$ 是旋转半径，直接乘入窄环带面积；两端圆环给两个参数边界条件，半径不能任意平移。
-\SolutionFigure{ex35}{例35的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex35}，解答图\ref{fig:solution-ex35}展示相同圆环边界对应的两支悬链母线；边界方程的根数与曲面存在性有关，而稳定性还需要二阶变分。
+ 在本题模型中，母线高度 $y$ 是旋转半径，直接乘入窄环带面积；两端圆环给两个参数边界条件，半径不能任意平移。
+
 \Step{方程与推导}
 母线 $r=y(x)>0$ 绕 $x$ 轴旋转。两固定端环位于 $x=0,d$，半径分别为 $R_A,R_B$，即 $y(0)=R_A,y(d)=R_B$，不要求两环等半径。一个窄环带的面积为 $\dd A=2\pi y\,\dd s=2\pi y\sqrt{1+y'^2}\dd x$，故
 \[
 A=2\pi\int_0^d y\sqrt{1+y'^2}\dd x.
 \]
+\SolutionFigure{ex35}{例35的分析与计算过程}
+
 贝尔特拉米恒等式给出 $y/\sqrt{1+y'^2}=a$，与前题移过高度原点后的微分方程相同。因此 $y=a\cosh[(x-x_0)/a]$，旋转后为悬链面；在这道题里 $y$ 是实际半径，不能另加任意竖直平移常数。两个参数由
 \[
 R_A=a\cosh\frac{x_0}{a},\qquad
@@ -1222,7 +1368,11 @@ R_B=a\cosh\frac{d-x_0}{a}
 \example{球面测地线与等周曲线}
 \label{ex:c5-36}
 \LongQuestionStatement{完成两个变分问题：（1）球面半径 $R$，连接两个不同且非对径的固定点，求最短曲线并区分较短、较长大圆弧；（2）平面简单闭曲线周长为 $l$，用法向变分求最大围面积的形状和面积。}{ex36}{例36的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex36}~中，球面上的固定过心平面截出大圆；平面闭曲线的外法向变分使面积与周长的一阶变化通过曲率相联系。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex36}，解答图\ref{fig:solution-ex36}展示球面曲线与等周曲线的两种几何变分；前者得到通过球心的平面，后者由独立法向变分要求曲率恒定。
+ 在本题模型中，球面上的固定过心平面截出大圆；平面闭曲线的外法向变分使面积与周长的一阶变化通过曲率相联系。
+
+
 \SolutionFigure{ex36}{例36的分析与计算过程}
 \Step{方程与推导}
 球面弧长泛函为 $\ell=R\int\sqrt{\dot\theta^2+\sin^2\theta\dot\phi^2}\dd u$；以弧长作参数后，欧拉方程给出大圆。两点不对径且不重合时，较短大圆弧给局部和全局最短连接；较长大圆弧也是驻值路径却非最短。
@@ -1234,14 +1384,18 @@ R_B=a\cosh\frac{d-x_0}{a}
 
 \example{平面界面上的折射定律}
 \label{ex:c5-37}
-\QuestionStatement{两均匀介质折射率 $n_1,n_2$，平直界面两侧固定点的横坐标 $x_A,x_B$、法向距离 $h_1,h_2$。以界面交点横坐标 $x$ 为变量，从驻传播时间求折射定律；再用受几何约束的折射角变分与界面波相位匹配分别推导。}{ex37}{例37的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex37}~中，两条光路在界面交点连接，两个角都从法线量起；改变交点会同时改变两段长度，不能各自独立取极值。
-\SolutionFigure{ex37}{例37的分析与计算过程}
+\QuestionStatement{两均匀介质折射率 $n_1,n_2$，平直界面两侧固定点的横坐标 $x_A,x_B$、法向距离 $h_1,h_2$。以界面交点横坐标 $x$ 为变量，从驻传播时间求折射定律；再用受几何约束的折射角变分与界面波相位匹配分别推导。取界面为 $y=0$，$A=(x_A,h_1)$、$B=(x_B,-h_2)$，$h_1,h_2,n_1,n_2>0$。两介质静止，几何光学适用，折射角和入射角均从界面法线量起。}{ex37}{例37的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex37}，解答图\ref{fig:solution-ex37}展示界面交点的切向变分和分段光路；两段路程对同一交点位移的导数符号相反，驻传播时间给出切向相位匹配。
+ 在本题模型中，两条光路在界面交点连接，两个角都从法线量起；改变交点会同时改变两段长度，不能各自独立取极值。
+
 \Step{方程与推导}
 光在折射率分别为 $n_1,n_2$ 的均匀介质中连接两个固定点。光速 $v_i=c/n_i$，界面上的交点横坐标为 $x$，两端到界面的距离为 $h_1,h_2$，横坐标为 $x_A,x_B$。传播时间
 \[
 t(x)=\frac{n_1}c\sqrt{(x-x_A)^2+h_1^2}+\frac{n_2}c\sqrt{(x_B-x)^2+h_2^2}.
 \]
+\SolutionFigure{ex37}{例37的分析与计算过程}
+
 直接对交点坐标求导，有
 \[
 ct'(x)=n_1\frac{x-x_A}{\sqrt{(x-x_A)^2+h_1^2}}
@@ -1306,14 +1460,18 @@ k_1\sin\theta_1=k_2\sin\theta_2
 
 \example{自由粒子的驻作用量}
 \label{ex:c5-38}
-\QuestionStatement{一维自由粒子 $L=m\dot x^2/2$，固定时间端点 $(t_1,x_1),(t_2,x_2)$，$t_2>t_1$。求真实轨道并证明它使作用量最小。另对角频率 $\omega$ 的谐振子，取端点为零的正弦扰动，讨论作用量二阶变化随时间间隔的符号。}{ex38}{例38的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex38}~中，扰动曲线与直线轨道具有相同两端点，分部积分的端点差因此为零；剩余平方积分判定本例最小性。
-\SolutionFigure{ex38}{例38的分析与计算过程}
+\QuestionStatement{一维自由粒子 $L=m\dot x^2/2$，固定时间端点 $(t_1,x_1),(t_2,x_2)$，$t_2>t_1$。求真实轨道并证明它使作用量最小。另对角频率 $\omega$ 的谐振子，取端点为零的正弦扰动，讨论作用量二阶变化随时间间隔的符号。谐振子也取质量 $m>0$，势能为 $m\omega^2x^2/2$，$\omega>0$；二阶分析使用同样固定的时间端点及满足两端为零的允许扰动。}{ex38}{例38的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex38}，解答图\ref{fig:solution-ex38}展示固定端点的路径扰动与振子二次变分的符号变化；一阶驻值并不能替代对时间间隔及二阶形式的判断。
+ 在本题模型中，扰动曲线与直线轨道具有相同两端点，分部积分的端点差因此为零；剩余平方积分判定本例最小性。
+
 \Step{方程与推导}
 固定 $x(t_1)=x_1,x(t_2)=x_2$，$L=m\dot x^2/2$。真实解是直线 $x_*(t)=x_1+(x_2-x_1)(t-t_1)/(t_2-t_1)$。令 $x=x_*+\eta$，端点 $\eta=0$，则交叉项积分为 $m\dot x_*[\eta]_{t_1}^{t_2}=0$，所以
 \[
 S[x]-S[x_*]=\frac m2\int\dot\eta^2\dd t\ge0.
 \]
+\SolutionFigure{ex38}{例38的分析与计算过程}
+
 此例确为最小。谐振子的二阶变化则为 $\tfrac m2\int(\dot\eta^2-\omega^2\eta^2)\dd t$，取 $\eta=A\sin[\pi(t-t_1)/\tau]$ 后符号取决于 $\pi^2/\tau^2-\omega^2$。当时间间隔 $\tau>\pi/\omega$ 时可以为负，因此一般应称驻作用量原理。
 \subsection{非保守力与拉格朗日--达朗贝尔形式}
 对于给定的非保守广义力，正确的变分陈述是
@@ -1326,14 +1484,18 @@ S[x]-S[x_*]=\frac m2\int\dot\eta^2\dd t\ge0.
 \example{不先写拉格朗日方程而求圆环滑珠运动}
 \label{ex:c5-39}
 \QuestionStatement{半径 $a$ 的光滑水平圆环绕环上一固定点以角速率 $\omega$ 转动，滑珠质量 $m$，相对角 $\theta=0$ 在距轴最远点。已知 $L=\frac{ma^2}{2}[\dot\theta^2+2\omega\dot\theta(1+\cos\theta)+2\omega^2(1+\cos\theta)]$。不先套用欧拉方程，直接展开固定端点的作用量变分，求运动方程并保留分部积分边界项。}{ex39}{例39的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex39}~中，滑珠的相对角沿环心定义；固定两时刻的位置使角变分端点为零，速度变分须先分部积分再消项。
-\SolutionFigure{ex39}{例39的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex39}，解答图\ref{fig:solution-ex39}展示固定时间端点的真实路径与允许变分路径；变分作用在整条函数曲线上，端点角变分为零，而路径内部可以独立改变。
+ 在本题模型中，滑珠的相对角沿环心定义；固定两时刻的位置使角变分端点为零，速度变分须先分部积分再消项。
+
 \Step{方程与推导}
 取前述圆环的 $L$，这一次直接计算作用量变分，不先套运动方程。令 $A=\dot\theta+\omega(1+\cos\theta)$，则
 \[
 \frac{\delta L}{ma^2}=A\delta\dot\theta-\omega(\omega+\dot\theta)\sin\theta\,\delta\theta,
 \qquad \dot A=\ddot\theta-\omega\dot\theta\sin\theta.
 \]
+\SolutionFigure{ex39}{例39的分析与计算过程}
+
 等时变分有 $\delta\dot\theta=\dd(\delta\theta)/\dd t$。含 $\delta\dot\theta$ 的项按分部积分写全为
 \[
 A\delta\dot\theta=\frac{\dd}{\dd t}(A\delta\theta)-\dot A\delta\theta.
@@ -1358,15 +1520,19 @@ A\delta\dot\theta=\frac{\dd}{\dd t}(A\delta\theta)-\dot A\delta\theta.
 
 \example{轴对称重陀螺的三个积分}
 \label{ex:c5-40}
-\QuestionStatement{轴对称重刚体质量 $m$，固定支点 $O$，质心在本体对称轴上距 $O$ 为 $l$。关于 $O$ 的主惯量为 $I_1=I_2=I,I_3$。采用欧拉角 $(\phi,\theta,\psi)$，$\theta$ 从竖直向上量起。求两个循环动量、能量和章动有效势，并由虚转动说明一般定点刚体的欧拉方程。}{ex40}{例40的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex40}~中，竖直轴进动与本体轴自转是两个不同的对称方向；本体轴角速度为 $\dot\psi+\dot\phi\cos\theta$。
-\SolutionFigure{ex40}{例40的分析与计算过程}
+\QuestionStatement{轴对称重刚体质量 $m$，固定支点 $O$，质心在本体对称轴上距 $O$ 为 $l$。关于 $O$ 的主惯量为 $I_1=I_2=I,I_3$。采用欧拉角 $(\phi,\theta,\psi)$，$\theta$ 从竖直向上量起。求两个循环动量、能量和章动有效势，并由虚转动说明一般定点刚体的欧拉方程。$\phi$ 为绕空间竖直轴的进动角，$\psi$ 为绕本体对称轴的自转角；使用 $0<\theta<\pi$ 的局部欧拉角坐标，$g$ 为均匀重力加速度。}{ex40}{例40的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex40}，解答图\ref{fig:solution-ex40}展示固定循环动量后的一维章动有效势；能量线与势的交点确定转折角，临界切触对应特殊定态或分离运动。
+ 在本题模型中，竖直轴进动与本体轴自转是两个不同的对称方向；本体轴角速度为 $\dot\psi+\dot\phi\cos\theta$。
+
 \Step{方程与推导}
 质量为 $m$ 的轴对称重刚体绕固定支点 $O$ 运动；质心在本体对称轴正方向上，距 $O$ 为 $l$。主惯量 $I_1=I_2=I,I_3$ 均关于支点 $O$。欧拉角为 $\phi,\theta,\psi$，$\theta$ 从向上竖直量起。其拉格朗日函数为
 \[
 L=\frac I2(\dot\theta^2+\dot\phi^2\sin^2\theta)
 +\frac{I_3}2(\dot\psi+\dot\phi\cos\theta)^2-mgl\cos\theta.
 \]
+\SolutionFigure{ex40}{例40的分析与计算过程}
+
 $\psi,\phi$ 均为循环坐标，得到
 \[
 p_\psi=I_3(\dot\psi+\dot\phi\cos\theta)=c_3,
@@ -1433,14 +1599,18 @@ $k<0$ 对应指数偏离，$k=0$ 时二次势能失效，必须保留更高阶�
 \example{均匀实心球的微振动}
 \label{ex:c5-41}
 \QuestionStatement{质量 $m$、半径 $r$ 的均匀实心球，在水平轴固定、内半径 $R>r$ 的圆柱内表面无滑动滚动，球心限制在垂直截面。球心偏离最低点的角为 $\theta$。分别用质心分解和接触点瞬心法建立动能，求精确方程、小振动周期及接触和静摩擦条件。}{ex41}{例41的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex41}~中，圆柱内滚动的球心轨道半径是 $R-r$，接触点 $A$ 瞬时静止，球心平动与球自转可合为绕 $A$ 的动能。
-\SolutionFigure{ex41}{例41的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex41}，解答图\ref{fig:solution-ex41}展示法向反力、重力与沿接触切线的静摩擦；先求所需摩擦，再与摩擦上限比较，不能直接把形式上的零反力角当作纯滚动可达到的状态。
+ 在本题模型中，圆柱内滚动的球心轨道半径是 $R-r$，接触点 $A$ 瞬时静止，球心平动与球自转可合为绕 $A$ 的动能。
+
 \Step{方程与推导}
 球心轨道半径 $d=R-r$，速度 $v=d\dot\theta$，球的绝对自转速率 $\omega_s=v/r$。质心惯量 $I_C=2mr^2/5$，所以
 \[
 T=\frac12mv^2+\frac12I_C\omega_s^2=\frac7{10}md^2\dot\theta^2,
 \quad V=mgd(1-\cos\theta).
 \]
+\SolutionFigure{ex41}{例41的分析与计算过程}
+
 精确方程 $(7/5)d\ddot\theta+g\sin\theta=0$。小振幅下
 \[
 \omega_0^2=\frac{5g}{7(R-r)},\qquad\tau=2\pi\sqrt{\frac{7(R-r)}{5g}}.
@@ -1456,14 +1626,18 @@ T=\frac12mv^2+\frac12I_C\omega_s^2=\frac7{10}md^2\dot\theta^2,
 \example{均匀半圆柱在水平面纯滚动}
 \label{ex:c5-42}
 \QuestionStatement{半径 $r$、质量 $m$ 的均匀半圆柱以弧面在水平面纯滚动，圆心 $O$ 到质心 $C$ 的距离为 $d=4r/(3\pi)$。取 $OC$ 偏离竖直向下角为 $\theta$。求质心惯量、接触点瞬时惯量、精确方程及小振动频率和周期。}{ex42}{例42的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex42}~中，圆心保持离地高度 $r$，偏心质心随 $\theta$ 升降；接触点到质心的距离决定瞬时惯量。
-\SolutionFigure{ex42}{例42的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex42}，解答图\ref{fig:solution-ex42}展示圆心、偏置质心和接触点构成的三角形；接触点到质心距离随摆角改变，因此精确动力学不能直接套用固定惯量单摆。
+ 在本题模型中，圆心保持离地高度 $r$，偏心质心随 $\theta$ 升降；接触点到质心的距离决定瞬时惯量。
+
 \Step{方程与推导}
 对半圆面积积分可得 $I_O=mr^2/2$，所以 $I_C=mr^2/2-md^2$。瞬时接触点 $A$ 到质心距离满足
 \[
 AC^2=r^2+d^2-2rd\cos\theta,
 \quad I_A=I_C+mAC^2=\frac32mr^2-2mrd\cos\theta.
 \]
+\SolutionFigure{ex42}{例42的分析与计算过程}
+
 因刚体角速度为 $\dot\theta$，$T=I_A\dot\theta^2/2$，$V=mg(r-d\cos\theta)$。二次近似
 \[
 L_2=\frac12m\left(\frac32r^2-2rd\right)\dot\theta^2-\frac12mgd\theta^2,
@@ -1542,15 +1716,19 @@ b_2c_3-c_2b_3\\c_2a_3-a_2c_3\\a_2b_3-b_2a_3
 
 \example{对称与反对称振动、拍频}
 \label{ex:c5-43}
-\LongQuestionStatement{光滑水平轨道上两滑块质量均为 $m$，两外侧弹簧劲度 $k$，中间弹簧劲度 $k'$。位移 $x_1,x_2$ 从平衡位置量起。求两简正频率、振幅比及归一化坐标；对 $x_1(0)=A,x_2(0)=0$、初速均零，求完整运动并解释弱耦合拍频。}{ex43}{例43的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex43}~中，同相位移不改变中间弹簧长度，反相位移加倍改变它的长度；和差方向正好将两种能量同时对角化。
-\SolutionFigure{ex43}{例43的分析与计算过程}
+\LongQuestionStatement{光滑水平轨道上两滑块质量均为 $m$，两外侧弹簧劲度 $k$，中间弹簧劲度 $k'$。位移 $x_1,x_2$ 从平衡位置量起。求两简正频率、振幅比及归一化坐标；对 $x_1(0)=A,x_2(0)=0$、初速均零，求完整运动并解释弱耦合拍频。设 $m,k>0$、$k^{\prime}\ge0$；“弱耦合”专指 $0<k^{\prime}\ll k$。振幅比按同一向右正坐标计算，不预先把两块位移设成同号。}{ex43}{例43的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex43}，解答图\ref{fig:solution-ex43}展示两种独立振型的位移方向；同相时中间弹簧不发生一阶形变，反相时该弹簧对回复力的贡献加倍。
+ 在本题模型中，同相位移不改变中间弹簧长度，反相位移加倍改变它的长度；和差方向正好将两种能量同时对角化。
+
 \Step{方程与推导}
 两质量均为 $m$ 的滑块，外侧弹簧劲度均 $k$，中间弹簧劲度 $k'$，平衡偏移为 $x_1,x_2$。$V=k(x_1^2+x_2^2)/2+k'(x_2-x_1)^2/2$，方程为
 \[
 m\ddot x_1+(k+k')x_1-k'x_2=0,
 \quad m\ddot x_2+(k+k')x_2-k'x_1=0.
 \]
+\SolutionFigure{ex43}{例43的分析与计算过程}
+
 定义 $Q_+=(x_1+x_2)/\sqrt2,Q_-=(x_1-x_2)/\sqrt2$，得到 $\omega_+^2=k/m$、$\omega_-^2=(k+2k')/m$。同相模式不拉伸中间弹簧；反相模式拉伸它。 三根弹簧劲度相同，即 $k'=k$ 时，两个频率分别为 $\sqrt{k/m}$ 与 $\sqrt{3k/m}$。
 
 和差坐标的解耦可以直接逐项验证。两式相加与相减，分别得到
@@ -1601,14 +1779,18 @@ $x_1=A\cos[(\omega_-+\omega_+)t/2]\cos[(\omega_--\omega_+)t/2]$，$x_2=A\sin[(\o
 \example{等质量滑块单摆的两个简正频率}
 \label{ex:c5-44}
 \LongQuestionStatement{质量均为 $m$ 的滑块和摆球构成水平弹簧滑块摆：弹簧劲度 $k$，摆长 $l$，摆角 $\theta$ 从竖直向下量起。求小振动的矩阵、两频率、振幅比及初速均零、$x(0)=x_0,\theta(0)=\theta_0$ 的解。再求滑块左右各有一根劲度 $k$ 的弹簧时的结果。}{ex44}{例44的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex44}~中，滑块位移与摆球转角的混合惯性来自悬点移动；两侧弹簧的变式只把刚度 $k$ 替换为 $2k$。
-\SolutionFigure{ex44}{例44的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex44}，解答图\ref{fig:solution-ex44}展示两条简正方向在原坐标平面内的位置；不能先假定滑块和摆球等幅，模式幅度比需由质量矩阵与刚度矩阵共同确定。
+ 在本题模型中，滑块位移与摆球转角的混合惯性来自悬点移动；两侧弹簧的变式只把刚度 $k$ 替换为 $2k$。
+
 \Step{方程与推导}
 前述滑块单摆令 $m_1=m_2=m$。用 $(x,\theta)$，质量矩阵和刚度矩阵为
 \[
 M=m\begin{pmatrix}2&l\\l&l^2\end{pmatrix},\quad
 K=\begin{pmatrix}k&0\\0&mgl\end{pmatrix}.
 \]
+\SolutionFigure{ex44}{例44的分析与计算过程}
+
 令 $\omega_s^2=k/m,\omega_p^2=g/l$，记 $\lambda=\omega^2$。从 $K-\lambda M$ 的各元素开始计算，先写
 \[
 \det\begin{pmatrix}
@@ -1679,14 +1861,18 @@ $t=0$ 时两余弦相等，滑块位移恰为零；求导后两初速亦为零�
 \example{两个相同单摆串接的平面小振动}
 \label{ex:c5-45}
 \LongQuestionStatement{固定支点下串接两根长 $l$ 的轻杆，两个端球质量均为 $m$，在竖直平面内小振动。两杆绝对角 $\theta_1,\theta_2$ 从竖直向下量起。求二次动能和势能、频率、振幅比、解耦坐标，并按任意四个小振动初值写出通解。}{ex45}{例45的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex45}~中，两杆角均是相对竖直的绝对角；慢模式同相、快模式反相，下球振幅由耦合矩阵给出而非任意指定。
-\SolutionFigure{ex45}{例45的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex45}，解答图\ref{fig:solution-ex45}展示双摆两种简正模式的角位移方向；原角坐标不按欧氏内积正交，必须用动能所给质量内积作解耦。
+ 在本题模型中，两杆角均是相对竖直的绝对角；慢模式同相、快模式反相，下球振幅由耦合矩阵给出而非任意指定。
+
 \Step{方程与推导}
 两质量均为 $m$、两长度均为 $l$ 的轻杆双摆，从竖直向下量角 $\theta_1,\theta_2$。二次形式为
 \[
 T_2=\frac{ml^2}2(2\dot\theta_1^2+\dot\theta_2^2+2\dot\theta_1\dot\theta_2),
 \quad V_2=\frac{mgl}2(2\theta_1^2+\theta_2^2).
 \]
+\SolutionFigure{ex45}{例45的分析与计算过程}
+
 方程是 $2\ddot\theta_1+\ddot\theta_2+2(g/l)\theta_1=0$，$\ddot\theta_1+\ddot\theta_2+(g/l)\theta_2=0$。记 $\gamma=g/l$，令 $\theta_j=\Theta_j\cos(\omega t+\delta)$、$\lambda=\omega^2$，则振幅满足
 \[
 \begin{pmatrix}2\gamma-2\lambda&-\lambda\\-\lambda&\gamma-\lambda\end{pmatrix}
@@ -1731,7 +1917,11 @@ u_-(t)&=\left(a_1+\frac{a_2}{\sqrt2}\right)\cos\omega_-t+
 \example{二次函数的勒让德变换}
 \label{ex:c5-46}
 \QuestionStatement{函数 $f(x)=ax^2/2$，$a\ne0$。以 $u=f'(x)$ 定义勒让德变换 $g(u)=ux-f(x)$。完成反解、变换和逆导数验证，比较 $a>0$ 与 $a<0$ 的凸性及局部变换与凸共轭的区别。}{ex46}{例46的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex46}~中，抛物线切线的斜率是新变量 $u$，纵截距为 $-g(u)$；变换先解斜率关系，再计算截距。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex46}，解答图\ref{fig:solution-ex46}展示原函数的切线与纵截距；勒让德变换改用切线斜率标记同一信息，凹函数仍可局部反解，但不能因此当作凸共轭。
+ 在本题模型中，抛物线切线的斜率是新变量 $u$，纵截距为 $-g(u)$；变换先解斜率关系，再计算截距。
+
+
 \SolutionFigure{ex46}{例46的分析与计算过程}
 \Step{方程与推导}
 $f(x)=ax^2/2$，$a\ne0$，$u=ax$。反解 $x=u/a$，故 $g=u^2/(2a)$，$g_u=u/a=x$。$a>0$ 时函数凸，对应变换可全局实现；一般非凸函数可能出现多支；本题 $a<0$ 的特殊二次函数仍可唯一反解，凸共轭另见下文。
@@ -1762,7 +1952,11 @@ $f(x)=ax^2/2$，$a\ne0$，$u=ax$。反解 $x=u/a$，故 $g=u^2/(2a)$，$g_u=u/a=
 \example{一维自由粒子与势场质点}
 \label{ex:c5-47}
 \QuestionStatement{质量 $m$ 的一维质点有 $L=m\dot x^2/2-V(x)$。求共轭动量、哈密顿函数和正则方程，消去动量恢复牛顿方程；在 $V=0$、初值 $(x_0,p_0)$ 下写出完整轨道。}{ex47}{例47的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex47}~中，位置 $x$ 与动量 $p$ 共同指定初态，势能曲线的局部斜率决定力的负方向。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex47}，解答图\ref{fig:solution-ex47}展示相点处哈密顿向量场的水平、竖直分量；消去动量就是沿同一相流恢复位置的二阶运动方程。
+ 在本题模型中，位置 $x$ 与动量 $p$ 共同指定初态，势能曲线的局部斜率决定力的负方向。
+
+
 \SolutionFigure{ex47}{例47的分析与计算过程}
 \Step{方程与推导}
 $L=m\dot x^2/2-V(x)$，$p=m\dot x$，所以 $H=p^2/(2m)+V(x)$。正则方程 $\dot x=p/m,\dot p=-V'(x)$ 消去 $p$ 得 $m\ddot x=-V'(x)$。自由粒子 $V=0$ 时 $p=p_0,x=x_0+p_0t/m$。
@@ -1772,14 +1966,18 @@ $L=m\dot x^2/2-V(x)$，$p=m\dot x$，所以 $H=p^2/(2m)+V(x)$。正则方程 $\d
 \example{中心力的哈密顿函数}
 \label{ex:c5-48}
 \QuestionStatement{质量 $m$ 的平面质点处于中心势 $V(r)$。以 $(r,\phi)$ 及其共轭动量建立哈密顿函数和四条正则方程，说明径向动量与角动量的量纲，并消元恢复极坐标二阶方程。}{ex48}{例48的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex48}~中，径向动量对应径向速度，方位角动量对应横向转动；对哈密顿函数按固定动量求径向偏导才能得到离心项。
-\SolutionFigure{ex48}{例48的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex48}，解答图\ref{fig:solution-ex48}展示极坐标速度三角形；动能度量中的 $r^2$ 来自切向速度 $r\dot\phi$，其坐标导数产生径向方程中的向心项。
+ 在本题模型中，径向动量对应径向速度，方位角动量对应横向转动；对哈密顿函数按固定动量求径向偏导才能得到离心项。
+
 \Step{方程与推导}
 平面极坐标动量为 $p_r=m\dot r,p_\phi=mr^2\dot\phi$。反解后
 \[
 H=\frac{p_r^2}{2m}+\frac{p_\phi^2}{2mr^2}+V(r),
 \quad\dot r=\frac{p_r}m,\quad\dot\phi=\frac{p_\phi}{mr^2},
 \]
+\SolutionFigure{ex48}{例48的分析与计算过程}
+
 \[
 \dot p_r=\frac{p_\phi^2}{mr^3}-V'(r),\qquad\dot p_\phi=0.
 \]
@@ -1790,13 +1988,17 @@ $p_r$ 为径向机械动量，$p_\phi$ 为角动量，量纲不同。消去 $p_r
 \example{球形碗的四个正则方程}
 \label{ex:c5-49}
 \QuestionStatement{质量 $m$ 的质点在半径 $a$ 的固定光滑球形碗内运动，受重力。极角 $\theta$ 从最低点径向量起，方位角为 $\phi$。求共轭动量、哈密顿函数及四条正则方程，说明坐标极点的处理。}{ex49}{例49的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex49}~中，纬圈半径 $a\sin\theta$ 使方位角动量系数随极角变化；正则偏导须保留此几何因子。
-\SolutionFigure{ex49}{例49的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex49}，解答图\ref{fig:solution-ex49}展示球形碗中的方位虚位移与重力；方位角变化不改动势能，因而对应动量守恒，极角变化则同时改变高度和动能度量。
+ 在本题模型中，纬圈半径 $a\sin\theta$ 使方位角动量系数随极角变化；正则偏导须保留此几何因子。
+
 \Step{方程与推导}
 $p_\theta=ma^2\dot\theta,p_\phi=ma^2\sin^2\theta\dot\phi$，
 \[
 H=\frac{p_\theta^2}{2ma^2}+\frac{p_\phi^2}{2ma^2\sin^2\theta}+mga(1-\cos\theta).
 \]
+\SolutionFigure{ex49}{例49的分析与计算过程}
+
 因此 $\dot\theta=p_\theta/(ma^2)$，$\dot\phi=p_\phi/(ma^2\sin^2\theta)$，$\dot p_\phi=0$，以及
 \[
 \dot p_\theta=\frac{p_\phi^2\cos\theta}{ma^2\sin^3\theta}-mga\sin\theta.
@@ -1821,14 +2023,18 @@ p=A\dot q+b,
 \example{滑块单摆的精确反解}
 \label{ex:c5-50}
 \QuestionStatement{质量 $m_1$ 的水平滑块以劲度 $k$ 的弹簧接固定端，并悬挂长 $l$、质量 $m_2$ 的单摆。位移为 $x$，摆角 $\phi$ 从竖直向下量起。求精确速度矩阵、动量反解、哈密顿函数和正则方程，并联系小振动近似。}{ex50}{例50的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex50}~中，悬点的平移与摆的转动形成对称速度矩阵；正行列式允许在任意角度唯一反解两个速度。
-\SolutionFigure{ex50}{例50的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex50}，解答图\ref{fig:solution-ex50}展示摆球速度的两份来源及其非正交合成；对动能求导时必须保留随摆角变化的速度耦合，之后再检查交叉项的抵消。
+ 在本题模型中，悬点的平移与摆的转动形成对称速度矩阵；正行列式允许在任意角度唯一反解两个速度。
+
 \Step{方程与推导}
 前述系统的速度矩阵为
 \[
 A=\begin{pmatrix}m_1+m_2&m_2l\cos\phi\\m_2l\cos\phi&m_2l^2\end{pmatrix},
 \quad D=m_1+m_2\sin^2\phi>0.
 \]
+\SolutionFigure{ex50}{例50的分析与计算过程}
+
 动量 $p_x=(m_1+m_2)\dot x+m_2l\dot\phi\cos\phi$、$p_\phi=m_2l\dot x\cos\phi+m_2l^2\dot\phi$，反解
 \[
 \dot x=\frac{p_x-(\cos\phi/l)p_\phi}{D},\quad
@@ -1846,14 +2052,18 @@ $\dot x=H_{p_x},\dot\phi=H_{p_\phi},\dot p_x=-kx$，$\dot p_\phi=-H_\phi$。求�
 \example{等质量模型的四个精确正则方程}
 \label{ex:c5-51}
 \QuestionStatement{水平弹簧滑块摆中滑块、摆球质量均为 $m$，弹簧劲度 $k$，摆长 $l$，坐标 $(x,\phi)$。不作小角近似，完成速度的勒让德反解和四条精确正则方程；再给出二次哈密顿函数并消元恢复线性方程。}{ex51}{例51的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex51}~中，等质量并不消除交叉惯性；动能二次齐次性提供勒让德变换的半系数，但角度依赖仍留在分母中。
-\SolutionFigure{ex51}{例51的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex51}，解答图\ref{fig:solution-ex51}展示摆球速度的两份来源及其非正交合成；对动能求导时必须保留随摆角变化的速度耦合，之后再检查交叉项的抵消。
+ 在本题模型中，等质量并不消除交叉惯性；动能二次齐次性提供勒让德变换的半系数，但角度依赖仍留在分母中。
+
 \Step{方程与推导}
 令 $m_1=m_2=m$，重新记 $D_0=1+\sin^2\phi$。动量和速度的关系为
 \[
 p_x=m(2\dot x+l\dot\phi\cos\phi),\qquad
 p_\phi=ml(l\dot\phi+\dot x\cos\phi).
 \]
+\SolutionFigure{ex51}{例51的分析与计算过程}
+
 
 
 这里约束定常，且 $T$ 是两个广义速度的二次齐次函数。Euler齐次定理给
@@ -1895,14 +2105,18 @@ H_2=\frac{l^2p_x^2-2lp_xp_\phi+2p_\phi^2}{2ml^2}
 \example{单自由度线性振子的正则解}
 \label{ex:c5-52}
 \QuestionStatement{一维谐振子 $H=p^2/(2m)+m\omega^2q^2/2$，$m,\omega>0$，初值 $q(0)=q_0,p(0)=p_0$。从正则方程求 $q(t),p(t)$ 和相轨迹，证明解中能量等于初始能量。}{ex52}{例52的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex52}~中，相椭圆右端的力沿负动量方向，因而轨道顺时针；初始位置和动量分别决定余弦、正弦系数。
-\SolutionFigure{ex52}{例52的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex52}，解答图\ref{fig:solution-ex52}展示通过初始相点的能量椭圆及其流向；初始位置、动量共同确定椭圆大小和相位，不能只用初始位移确定振幅。
+ 在本题模型中，相椭圆右端的力沿负动量方向，因而轨道顺时针；初始位置和动量分别决定余弦、正弦系数。
+
 \Step{方程与推导}
 $H=p^2/(2m)+m\omega^2q^2/2$，正则方程给出
 \[
 q=q_0\cos\omega t+\frac{p_0}{m\omega}\sin\omega t,
 \quad p=p_0\cos\omega t-m\omega q_0\sin\omega t.
 \]
+\SolutionFigure{ex52}{例52的分析与计算过程}
+
 代回 $H$，正弦余弦交叉项抵消，能量保持 $p_0^2/(2m)+m\omega^2q_0^2/2$。
 
 \Step{以初值确定积分常数} 第一条正则式求导后代第二条得 $\ddot q=-\omega^2q$。写 $q=C\cos\omega t+D\sin\omega t$，初始位置给 $C=q_0$，初始速度 $p_0/m$ 给 $D=p_0/(m\omega)$。再按 $p=m\dot q$ 求动量。代入能量，两平方中的交叉项分别为 $\pm q_0p_0\omega\sin\omega t\cos\omega t$，相消；$\sin^2+\cos^2=1$ 留下初始能量。
@@ -1910,13 +2124,17 @@ q=q_0\cos\omega t+\frac{p_0}{m\omega}\sin\omega t,
 \example{固定核库仑场中电子的经典运动}
 \label{ex:c5-53}
 \QuestionStatement{电子质量 $m$，固定核电荷 $Ze$，经典库仑势 $V=-\kappa/r$，$\kappa=Ze^2/(4\pi\varepsilon_0)$。以球坐标建立哈密顿函数和六条正则方程，逐一消去动量恢复三个二阶方程；求角动量积分并说明经典轨道的适用范围。}{ex53}{例53的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex53}~中，径向吸引力沿核与电子连线，绕核力矩为零；球坐标的速度尺度产生两个角动量项。
-\SolutionFigure{ex53}{例53的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex53}，解答图\ref{fig:solution-ex53}展示中心吸引力、位置矢量与轨道角动量的几何关系；三维球坐标正则方程描述的是同一固定平面轨道，不能把坐标极点误认为物理奇点。
+ 在本题模型中，径向吸引力沿核与电子连线，绕核力矩为零；球坐标的速度尺度产生两个角动量项。
+
 \Step{方程与推导}
 电子质量 $m$，核电荷 $Ze$ 固定，$\kappa=Ze^2/(4\pi\varepsilon_0)$。取球坐标
 \[
 H=\frac1{2m}\left(p_r^2+\frac{p_\theta^2}{r^2}+\frac{p_\phi^2}{r^2\sin^2\theta}\right)-\frac\kappa r.
 \]
+\SolutionFigure{ex53}{例53的分析与计算过程}
+
 六个正则方程为
 \begin{align*}
 \dot r&=p_r/m,&\dot p_r&=\frac{p_\theta^2+p_\phi^2/\sin^2\theta}{mr^3}-\frac\kappa{r^2},\\
@@ -2005,14 +2223,18 @@ J^{ab}J^{cd}f_ag_c h_{db}
 \example{计算简单括号与角动量括号}
 \label{ex:c5-54}
 \QuestionStatement{按约定 $\{q,p\}=1$，计算 $\{q^2,p^2\}$ 和 $\{qp,H\}$，其中 $H=p^2/(2m)+m\omega^2q^2/2$。再由 $L_x=yp_z-zp_y,L_y=zp_x-xp_z$ 逐项求 $\{L_x,L_y\}$，推广到三维分量及多质点总角动量。}{ex54}{例54的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex54}~中，角动量三个分量依次绕三条坐标轴定义；泊松括号逐坐标相乘相减，交换两项会改变结果符号。
-\SolutionFigure{ex54}{例54的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex54}，解答图\ref{fig:solution-ex54}展示泊松括号生成的坐标伸长、动量压缩；它们是相点的两个相容变化分量，而不是可以分别随意改变的两种独立动力学。
+ 在本题模型中，角动量三个分量依次绕三条坐标轴定义；泊松括号逐坐标相乘相减，交换两项会改变结果符号。
+
 \Step{方程与推导}
 单自由度 $\PB{q^2}{p^2}=4qp$，$\PB{qp}{H}=p^2/m-m\omega^2q^2$。三维角动量 $L_x=yp_z-zp_y,L_y=zp_x-xp_z$，展开得
 \[
 \PB{L_x}{L_y}=xp_y-yp_x=L_z,
 \quad\PB{L_i}{L_j}=\epsilon_{ijk}L_k.
 \]
+\SolutionFigure{ex54}{例54的分析与计算过程}
+
 多质点系统各质点括号相加，交叉质点括号为零，因此总角动量满足同一代数。
 
 把角动量计算的每个坐标贡献写出，可以检查符号。按 $(x,y,z)$ 排列，两角动量的偏导分别为
@@ -2067,7 +2289,11 @@ D\PB fg=\PB{Df}{g}+\PB f{Dg}.
 \example{两个角动量分量守恒推出第三个}
 \label{ex:c5-55}
 \QuestionStatement{自治系统中角动量分量 $L_x,L_y$ 无显含时间且守恒。由泊松括号和 Jacobi 恒等式证明 $L_z$ 守恒。另说明当 $q_j$ 循环时，计算 $\{p_j,H\}$ 是否必然产生新的独立运动积分。}{ex55}{例55的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex55}~中，两项已知守恒量通过括号生成第三方向的旋转量，Jacobi 恒等式把该括号的时间导数拆成两个零项。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex55}，解答图\ref{fig:solution-ex55}展示三个转动生成元的闭合关系；若前两个与哈密顿函数的括号为零，Jacobi 恒等式把这一性质传递到第三个生成元。
+ 在本题模型中，两项已知守恒量通过括号生成第三方向的旋转量，Jacobi 恒等式把该括号的时间导数拆成两个零项。
+
+
 \SolutionFigure{ex55}{例55的分析与计算过程}
 \Step{方程与推导}
 若隔离质点组的 $L_x,L_y$ 守恒，则由 $\PB{L_x}{L_y}=L_z$ 与泊松定理知 $L_z$ 守恒。与之相反，若已知 $H,p_j$ 守恒且 $q_j$ 循环，$\PB{p_j}{H}=0$，并不能靠这次运算再得到新的运动积分。
@@ -2090,8 +2316,10 @@ H=h(f,q_{m+1},\ldots,q_s,p_{m+1},\ldots,p_s,t),
 \example{泊松括号不产生普适的经典不确定下限}
 \label{ex:c5-56}
 \QuestionStatement{判断命题：只要经典正则变量满足 $\{q,p\}=1$，其标准差乘积就有一个与状态、能量及平均区间无关的严格正下限。分别用单相点系综、谐振子整周期平均和自由粒子有限时间平均构造反例，明确每种平均的定义。}{ex56}{例56的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex56}~中，经典相点和任意小椭圆都可作为状态；相椭圆面积随振幅缩小，而基本泊松括号不随轨道大小改变。
-\SolutionFigure{ex56}{例56的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex56}，解答图\ref{fig:solution-ex56}展示越来越集中的经典相空间初态；这些圆分别代表不同统计状态，并非把同一个哈密顿相区压缩，故与刘维尔定理不矛盾。
+ 在本题模型中，经典相点和任意小椭圆都可作为状态；相椭圆面积随振幅缩小，而基本泊松括号不随轨道大小改变。
+
 \Step{方程与推导}
 经典相点允许同时给定任意精确的 $q,p$。取分布 $\rho=\delta(q-q_0)\delta(p-p_0)$，则 $\Delta q=\Delta p=0$，但 $\PB qp=1$。所以仅凭泊松括号非零，不能推出普适正下限。
 
@@ -2102,6 +2330,8 @@ H=h(f,q_{m+1},\ldots,q_s,p_{m+1},\ldots,p_s,t),
 (\Delta q)^2=\frac1\tau\int_0^\tau\left[\frac{p_0}{m}\left(t-\frac\tau2\right)\right]^2\dd t
 =\frac{p_0^2\tau^2}{12m^2}.
 \]
+\SolutionFigure{ex56}{例56的分析与计算过程}
+
 仍有 $\{q,p\}=1$，而 $\Delta q\Delta p=0$。任何只用经典泊松括号作右端的普适正下限都被这个反例直接否定。
 
 \Step{被检验命题及平均的定义} 这里待证伪的命题，是存在与所选经典状态无关的 $c_*>0$，使所有正则状态都满足 $\Delta q\Delta p\ge c_*$。系综平均定义为 $\langle f\rangle=\int f\rho\dd q\dd p$，方差为 $\langle f^2\rangle-\langle f\rangle^2$；时间平均另定义为 $\overline f=\tau^{-1}\int_0^\tau f(t)\dd t$，不可混用。谐振子整周期内 $\overline q=\overline p=0$、$\overline{q^2}=A^2/2$、$\overline{p^2}=m^2\omega^2A^2/2$，故乘积为 $m\omega A^2/2$。基本括号等于无量纲的1，标准差乘积有作用量量纲；没有额外作用量尺度时，二者也不能直接组成一个普适有量纲正下界。
@@ -2202,7 +2432,11 @@ $F_4$&$p,P,t$&$q=-F_{4,p}$&$Q=F_{4,P}$\\\bottomrule
 \example{缩放、位置动量交换与对数坐标}
 \label{ex:c5-57}
 \QuestionStatement{分别判断并求适用母函数：（1）$Q=aq,P=p/a$，$a\ne0$；（2）$Q=p,P=-q$；（3）$Q=p,P=q$；（4）$q>0$ 时 $Q=\ln q,P=qp$。对第四种变换，将 $H=p^2/(2m)+V(q)$ 写为新变量函数，并说明其定义域。}{ex57}{例57的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex57}~中，正则缩放一方向伸长、另一方向压缩，保存有向相面积；对数坐标仅覆盖 $q>0$ 的半平面。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex57}，解答图\ref{fig:solution-ex57}展示四种变量映射对相区边界及定向的作用；正则性不仅要比较面积大小，还要保持辛形式的定向，并检查对数坐标定义域。
+ 在本题模型中，正则缩放一方向伸长、另一方向压缩，保存有向相面积；对数坐标仅覆盖 $q>0$ 的半平面。
+
+
 \SolutionFigure{ex57}{例57的分析与计算过程}
 \Step{方程与推导}
 $Q=aq,P=p/a$，$a\ne0$，括号为1；母函数 $F_2=aqP$。交换 $Q=p,P=-q$ 同样正则，可用 $F_1=qQ$。若只换 $Q=p,P=q$，括号为 $-1$，不是此约定下的正则变换。
@@ -2214,14 +2448,18 @@ $Q=aq,P=p/a$，$a\ne0$，括号为1；母函数 $F_2=aqP$。交换 $Q=p,P=-q$ �
 \example{新坐标是作用量的新变量次序}
 \label{ex:c5-58}
 \QuestionStatement{给定尺度常数 $\kappa>0$，局部变量关系为 $q=\sqrt{2Q/\kappa}\cos P,p=\sqrt{2\kappa Q}\sin P$，$Q>0$。将 $Q$ 作为新坐标、$P$ 作为新动量，分别用全微分和泊松括号证明正则性，交代量纲、角度分支及原点。}{ex58}{例58的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex58}~中，椭圆半径平方标记新坐标 $Q$，其绕行角为新动量 $P$；原点没有唯一角度，必须在局部角支工作。
-\SolutionFigure{ex58}{例58的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex58}，解答图\ref{fig:solution-ex58}展示旧变量环扇区与新坐标--动量矩形；径向平方变量和方位变量共同保持辛面积，原点及跨越角度支切线处须另选坐标。
+ 在本题模型中，椭圆半径平方标记新坐标 $Q$，其绕行角为新动量 $P$；原点没有唯一角度，必须在局部角支工作。
+
 \Step{方程与推导}
 给定量纲为动量除以长度的尺度常数 $\kappa>0$，在 $Q>0$ 的局部区域定义
 \[
 q=\sqrt{\frac{2Q}{\kappa}}\cos P,\qquad
 p=\sqrt{2\kappa Q}\sin P.
 \]
+\SolutionFigure{ex58}{例58的分析与计算过程}
+
 这里 $Q$ 是新坐标、$P$ 是新动量；不要把它们与后文“角为坐标、作用量为动量”的命名互换。对 $q$ 求微分后，有
 \[
 p\dd q=\sin P\cos P\dd Q-2Q\sin^2P\dd P.
@@ -2242,7 +2480,11 @@ P=\operatorname{atan2}(p/\kappa,q).
 \example{以指定速度平移的坐标}
 \label{ex:c5-59}
 \QuestionStatement{由第二类母函数 $F_2(q,P,t)=(q-a(t))P$，建立沿指定轨迹平移的正则坐标。求 $Q,P,K$；对自由粒子求新正则方程并恢复相对速度，说明 $\partial F_2/\partial t$ 的作用。}{ex59}{例59的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex59}~中，移动原点的速度必须从绝对速度扣除；母函数的显含时间项正是这项相对运动修正。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex59}，解答图\ref{fig:solution-ex59}展示移动坐标原点、相对位置和两种速度；时间相关母函数的偏导项正是恢复相对速度所需的附加哈密顿项。
+ 在本题模型中，移动原点的速度必须从绝对速度扣除；母函数的显含时间项正是这项相对运动修正。
+
+
 \SolutionFigure{ex59}{例59的分析与计算过程}
 \Step{方程与推导}
 取 $F_2=(q-a(t))P$，则 $p=P,Q=q-a(t)$，$K=H(Q+a,P,t)-\dot a P$。对自由粒子，$K=P^2/(2m)-\dot aP$，故 $\dot Q=P/m-\dot a,\dot P=0$，正确包含坐标轴的运动。漏掉 $F_t$ 会把相对速度误写成绝对速度。
@@ -2253,13 +2495,17 @@ P=\operatorname{atan2}(p/\kappa,q).
 \example{用正则变换解二维谐振子}
 \label{ex:c5-60}
 \QuestionStatement{二维非耦合谐振子 $H=\sum_{i=1}^2[p_i^2/(2m)+m\omega_i^2q_i^2/2]$，$\omega_i>0$。用母函数 $F_1=\frac12\sum_i m\omega_iq_i^2\cot Q_i$ 构造作用量和角变量，求新哈密顿函数、运动和任意初值解，并以相轨道面积说明作用量归一化。}{ex60}{例60的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex60}~中，每条相椭圆由作用量 $P_i$ 标记，角变量沿轨道匀速增长；面积积分的归一化给出 $P_i=E_i/\omega_i$。
-\SolutionFigure{ex60}{例60的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex60}，解答图\ref{fig:solution-ex60}展示振子相椭圆与作用量--角变量中的匀速直线；闭合相区面积除以 $2\pi$ 给出作用量，两独立方向分别演化。
+ 在本题模型中，每条相椭圆由作用量 $P_i$ 标记，角变量沿轨道匀速增长；面积积分的归一化给出 $P_i=E_i/\omega_i$。
+
 \Step{方程与推导}
 $H=\sum_{i=1}^2[p_i^2/(2m)+m\omega_i^2q_i^2/2]$。每个方向取第一类母函数
 \[
 F_1(q,Q)=\frac12\sum_i m\omega_iq_i^2\cot Q_i.
 \]
+\SolutionFigure{ex60}{例60的分析与计算过程}
+
 因此 $p_i=m\omega_iq_i\cot Q_i$，$P_i=\tfrac12m\omega_iq_i^2\csc^2Q_i$，即
 \[
 q_i=\sqrt{\frac{2P_i}{m\omega_i}}\sin Q_i,
@@ -2322,14 +2568,18 @@ p_i=S_{q_i},\qquad\beta_i=S_{\alpha_i}.
 \example{\texorpdfstring{$H=p+aq^2$}{H=p+aq²}}
 \label{ex:c5-61}
 \QuestionStatement{抽象正则模型 $H(q,p)=p+aq^2$，常数 $a$ 给定，单位约定使两项相容。用哈密顿--雅可比方程求完全积分及轨道；再用正则方程验证，并用初值 $(q_0,p_0)$ 表示常数。}{ex61}{例61的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex61}~中，能量水平线在相平面中是抛物线，$\dot q=1$ 规定沿横轴向右；参数导数给时间原点常数。
-\SolutionFigure{ex61}{例61的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex61}，解答图\ref{fig:solution-ex61}展示能量面投影为抛物线，且横向速度恒定；主函数中的能量参数和时间平移参数共同定位这条轨道上的初始相点。
+ 在本题模型中，能量水平线在相平面中是抛物线，$\dot q=1$ 规定沿横轴向右；参数导数给时间原点常数。
+
 \Step{方程与推导}
 常数 $a$ 给定，$H$ 不显含时间。令 $S=-Et+W(q,E)$，则 $W_q+aq^2=E$，积分得
 \[
 W=Eq-\frac a3q^3,
 \quad S=E(q-t)-\frac a3q^3.
 \]
+\SolutionFigure{ex61}{例61的分析与计算过程}
+
 $\beta=S_E=q-t$，所以 $q=t+\beta$，$p=S_q=E-a(t+\beta)^2$。直接验证 $\dot q=1$、$\dot p=-2aq$。$a$ 的量纲须使 $aq^2$ 与 $p$、$H$ 在所给模型的单位约定下相容；该抽象例不必解释为普通质量质点的机械能。
 
 \Step{由初值识别完全积分参数} 在 $t=0$，$\beta=q_0$，$E=p_0+aq_0^2$，所以 $q=q_0+t$、$p=p_0+aq_0^2-a(q_0+t)^2$。对 $S$ 的混合导数 $S_{qE}=1$，能量参数独立，完全积分在该抽象模型内不退化。
@@ -2365,14 +2615,18 @@ p_i=\sqrt{2mE_i}\cos[\omega(t+\beta_i)].
 \example{分别积分两个振动方向}
 \label{ex:c5-62}
 \LongQuestionStatement{二维谐振子 $H=p_x^2/(2m)+m\omega_x^2x^2/2+p_y^2/(2m)+m\omega_y^2y^2/2$。用哈密顿--雅可比方程分离两个方向，求特性函数的积分与显式形式、参数导数和轨道，说明转折点处的动量及反三角函数分支。}{ex62}{例62的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex62}~中，两个振动方向各有独立能量和相位；坐标的转折点对应动量为零，根式积分须按运动方向换支。
-\SolutionFigure{ex62}{例62的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex62}，解答图\ref{fig:solution-ex62}展示分离后各坐标的动量支及转折点；图中闭合支仅示意有界情形，实际允许区间由各平方根非负条件和初值决定。
+ 在本题模型中，两个振动方向各有独立能量和相位；坐标的转折点对应动量为零，根式积分须按运动方向换支。
+
 \Step{方程与推导}
 $H=[p_x^2/(2m)+m\omega_x^2x^2/2]+[p_y^2/(2m)+m\omega_y^2y^2/2]$。设 $W=W_x(x,E_x)+W_y(y,E_y)$、$E=E_x+E_y$，则
 \[
 W_x=\int^x\sqrt{2mE_x-m^2\omega_x^2u^2}\dd u,
 \quad W_y=\int^y\sqrt{2mE_y-m^2\omega_y^2v^2}\dd v.
 \]
+\SolutionFigure{ex62}{例62的分析与计算过程}
+
 各积分在所选动量符号支上使用。令 $A_x=\sqrt{2E_x/(m\omega_x^2)}$，有
 \[
 W_x=\frac{m\omega_x}2\left[x\sqrt{A_x^2-x^2}+A_x^2\arcsin\frac{x}{A_x}\right].
@@ -2387,13 +2641,17 @@ x=A_x\sin[\omega_x(t+\beta_x)],\quad y=A_y\sin[\omega_y(t+\beta_y)].
 \example{平面中心力的一般积分表达}
 \label{ex:c5-63}
 \QuestionStatement{平面中心势的哈密顿函数为 $H=p_r^2/(2m)+p_\phi^2/(2mr^2)+V(r)$。取能量 $E$、角动量 $J$ 为分离参数，求主函数、径向时间及轨道的求积表达式，并说明径向转折点与初值常数的选取。}{ex63}{例63的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex63}~中，径向运动由有效势限制，方位角由同一常量 $J$ 控制；主函数对两个参数求导分别恢复时间和轨道。
-\SolutionFigure{ex63}{例63的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex63}，解答图\ref{fig:solution-ex63}展示角动量固定后的径向允许区间；径向时间和方位变化沿同一动量支积分，在转折处换支后才能拼接完整轨道。
+ 在本题模型中，径向运动由有效势限制，方位角由同一常量 $J$ 控制；主函数对两个参数求导分别恢复时间和轨道。
+
 \Step{方程与推导}
 $H=p_r^2/(2m)+p_\phi^2/(2mr^2)+V(r)$，设 $W=J\phi+W_r(r;E,J)$，得到
 \[
 W_r=\int^r\sqrt{2m[E-V(u)]-\frac{J^2}{u^2}}\dd u.
 \]
+\SolutionFigure{ex63}{例63的分析与计算过程}
+
 $S=J\phi+W_r-Et$。两个参数导数给出
 \[
 t+\beta_E=\int^r\frac{m\dd u}{\sqrt{2m[E-V(u)]-J^2/u^2}},
@@ -2419,14 +2677,18 @@ H=\frac1{2m}\left(p_r^2+\frac{p_\theta^2}{r^2}+\frac{p_\phi^2}{r^2\sin^2\theta}\
 \example{径向势与极角势的叠加}
 \label{ex:c5-64}
 \QuestionStatement{质量 $m$ 的质点处于球坐标势 $V=a(r)+b(\theta)/r^2$，不依赖方位角 $\phi$。用 $E,J=p_\phi,\alpha$ 分离哈密顿--雅可比方程，求各动量、主函数及三个参数导数。说明 $b\ne0$ 时分离常数与总角动量的关系。}{ex64}{例64的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex64}~中，方位角仍是循环方向，但极角势使完整旋转对称性失去；角向分离常数作为径向有效势的系数。
-\SolutionFigure{ex64}{例64的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex64}，解答图\ref{fig:solution-ex64}展示分离后各坐标的动量支及转折点；图中闭合支仅示意有界情形，实际允许区间由各平方根非负条件和初值决定。
+ 在本题模型中，方位角仍是循环方向，但极角势使完整旋转对称性失去；角向分离常数作为径向有效势的系数。
+
 \Step{方程与推导}
 质量 $m$ 的质点在势 $V=a(r)+b(\theta)/r^2$ 中运动。$a$ 有能量量纲，$b$ 有能量乘长度平方量纲；势不依赖方位角 $\phi$，所以 $J=p_\phi$ 为有向常数。设 $S=-Et+J\phi+W_r(r)+W_\theta(\theta)$，方程为
 \[
 \frac{(W_r')^2}{2m}+a(r)+\frac1{r^2}\left[
 \frac{(W_\theta')^2}{2m}+\frac{J^2}{2m\sin^2\theta}+b(\theta)\right]=E.
 \]
+\SolutionFigure{ex64}{例64的分析与计算过程}
+
 方括号只依赖 $\theta$，其余只依赖 $r$，故置方括号等于 $\alpha$。分离成
 \[
 p_\theta^2=2m[\alpha-b(\theta)]-\frac{J^2}{\sin^2\theta},\qquad
@@ -2450,8 +2712,10 @@ t+\beta_E&=\int^r\frac{m}{p_r}\dd r,\\
 \example{旋转抛物面坐标与轴对称势}
 \label{ex:c5-65}
 \QuestionStatement{定义旋转抛物面坐标 $z=(\xi-\eta)/2,\rho=\sqrt{\xi\eta},x=\rho\cos\vartheta,y=\rho\sin\vartheta$，$\xi,\eta>0$。质量 $m$ 的质点处于 $V=[a(\xi)+b(\eta)]/(\xi+\eta)$。求线元、动量、哈密顿函数、分离方程和恢复轨道的三个求积关系。}{ex65}{例65的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex65}~中，两族子午抛物线正交，旋转得到轴对称坐标面；先由线元得到尺度，再把能量方程乘以 $\xi+\eta$ 分离。
-\SolutionFigure{ex65}{例65的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex65}，解答图\ref{fig:solution-ex65}展示抛物坐标在子午面中的正交网格；线元的尺度因子分别来自两族曲线切线长度，不能把坐标增量直接当作欧氏位移。
+ 在本题模型中，两族子午抛物线正交，旋转得到轴对称坐标面；先由线元得到尺度，再把能量方程乘以 $\xi+\eta$ 分离。
+
 \Step{方程与推导}
 用柱坐标 $(\rho,\vartheta,z)$，定义
 \[
@@ -2459,6 +2723,8 @@ z=\frac{\xi-\eta}{2},\quad \rho=\sqrt{\xi\eta},\quad
 x=\rho\cos\vartheta,\quad y=\rho\sin\vartheta,
 \qquad \xi,\eta>0.
 \]
+\SolutionFigure{ex65}{例65的分析与计算过程}
+
 $\xi,\eta$ 均有长度量纲。固定一个变量的曲面是绕 $z$ 轴旋转的抛物面；$\vartheta$ 是方位角。计算 $\dd z$ 与 $\dd\rho$ 后交叉项抵消，得到
 \[
 \dd s^2=\frac{\xi+\eta}{4\xi}\dd\xi^2+
@@ -2498,8 +2764,10 @@ t+\beta_E&=\int^\xi\frac{m}{4p_\xi}\dd\xi+
 \example{共焦椭球面与双曲面组成的坐标}
 \label{ex:c5-66}
 \LongQuestionStatement{长旋转椭球坐标为 $z=\sigma\xi\eta,\rho=\sigma\sqrt{(\xi^2-1)(1-\eta^2)}$，$\sigma>0,\xi>1,-1<\eta<1$，方位角 $\vartheta$。质量 $m$ 的质点处于 $V=[a(\xi)+b(\eta)]/(\xi^2-\eta^2)$。求尺度因子、哈密顿函数、分离动量、主函数及参数求积关系。}{ex66}{例66的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex66}~中，椭圆与双曲线共用焦点 $z=\pm\sigma$；焦距决定所有尺度因子的长度量纲，能量项在两分离式中符号不同。
-\SolutionFigure{ex66}{例66的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex66}，解答图\ref{fig:solution-ex66}展示长旋转椭球坐标的共焦子午网格；曲面正交性决定各动量平方项的尺度因子，焦点及轴上须检查坐标退化。
+ 在本题模型中，椭圆与双曲线共用焦点 $z=\pm\sigma$；焦距决定所有尺度因子的长度量纲，能量项在两分离式中符号不同。
+
 \Step{方程与推导}
 取焦距参数 $\sigma>0$，定义
 \[
@@ -2507,6 +2775,8 @@ z=\sigma\xi\eta,\qquad
 \rho=\sigma\sqrt{(\xi^2-1)(1-\eta^2)},\qquad
 \xi>1,\quad -1<\eta<1.
 \]
+\SolutionFigure{ex66}{例66的分析与计算过程}
+
 仍以 $\vartheta$ 为方位角。两焦点在 $z=\pm\sigma$；$\xi=\text{常数}$ 是长旋转椭球面，$\eta=\text{常数}$ 是双曲面。直接微分得到
 \[
 h_\xi^2=\frac{\sigma^2(\xi^2-\eta^2)}{\xi^2-1},\qquad
@@ -2556,8 +2826,10 @@ $\xi,\eta$ 无量纲，$a,b,\alpha$ 是能量，$J$ 是角动量。因此角动�
 \example{分母也可依赖共轭动量的分离问题}
 \label{ex:c5-67}
 \QuestionStatement{自治系统 $H=F/G$，$F=\sum_i f_i(q_i,p_i),G=\sum_i g_i(q_i,p_i)\ne0$，每项只涉及一对变量，$g_i$ 可含动量。分离哈密顿--雅可比方程，求完整参数和时间求积式；用混合导数行列式给出局部完全积分的非退化条件。}{ex67}{例67的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex67}~中，每条分离曲线只涉及一对变量，分离常数之和受约束；能量与其余独立常数共同构成完全积分参数。
-\SolutionFigure{ex67}{例67的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex67}，解答图\ref{fig:solution-ex67}展示分离后各坐标的动量支及转折点；图中闭合支仅示意有界情形，实际允许区间由各平方根非负条件和初值决定。
+ 在本题模型中，每条分离曲线只涉及一对变量，分离常数之和受约束；能量与其余独立常数共同构成完全积分参数。
+
 \Step{方程与推导}
 考虑自治系统
 \[
@@ -2565,6 +2837,8 @@ H(q,p)=\frac{F}{G},\qquad
 F=\sum_{i=1}^s f_i(q_i,p_i),\qquad
 G=\sum_{i=1}^s g_i(q_i,p_i)\ne0.
 \]
+\SolutionFigure{ex67}{例67的分析与计算过程}
+
 每一项只涉及一对正则变量，但 $g_i$ 可以依赖动量。设 $S=-Et+\sum_iW_i(q_i)$。$H=E$ 等价于
 \[
 \sum_i[f_i(q_i,W_i')-Eg_i(q_i,W_i')]=0.
@@ -2637,8 +2911,10 @@ $s$ 个自由度的系统以 $(q,p)$ 的 $2s$ 个数决定状态，构成相空�
 \example{谐振子与阻尼振子的相轨迹}
 \label{ex:c5-68}
 \LongQuestionStatement{比较两系统在 $(q,p)$ 平面的运动：（1）$H=p^2/(2m)+m\omega^2q^2/2$；（2）$\dot q=p/m,\dot p=-m\omega_0^2q-2\gamma p$，$0<\gamma<\omega_0$。求轨迹方向、欠阻尼位置与动量，计算相流散度及物质相区面积随时间的变化。}{ex68}{例68的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex68}~中，无阻尼相椭圆闭合，欠阻尼轨道向内螺旋；相区缩小由流场散度决定，不能将其归入保守哈密顿流。
-\SolutionFigure{ex68}{例68的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex68}，解答图\ref{fig:solution-ex68}展示保守闭轨和欠阻尼螺旋的不同相流；刘维尔面积守恒适用于哈密顿流，耗散系统的负散度会使随流相区收缩。
+ 在本题模型中，无阻尼相椭圆闭合，欠阻尼轨道向内螺旋；相区缩小由流场散度决定，不能将其归入保守哈密顿流。
+
 \Step{方程与推导}
 无阻尼振子 $H=p^2/(2m)+m\omega^2q^2/2=E$，轨道为椭圆，按 $\dot q=p/m$ 判断方向。在 $(q,p)$ 平面右端 $p=0$，$\dot p<0$，因此相点顺时针绕行。
 
@@ -2649,6 +2925,8 @@ $s$ 个自由度的系统以 $(q,p)$ 的 $2s$ 个数决定状态，构成相空�
 p=-mAe^{-\gamma t}
 [\gamma\cos(\omega_dt+\delta)+\omega_d\sin(\omega_dt+\delta)].
 \]
+\SolutionFigure{ex68}{例68的分析与计算过程}
+
 它包含包络变化项，不能只把无阻尼动量乘一个指数。流映射的行列式满足 $\dot J=-2\gamma J$、$J(0)=1$，故任意初始物质相区的面积为
 \[
 \mathcal A(t)=e^{-2\gamma t}\mathcal A(0).
@@ -2660,9 +2938,11 @@ p=-mAe^{-\gamma t}
 
 \example{指数乘四次多项式的势能}
 \label{ex:c5-69}
-\QuestionStatement{量纲吸收后的势为 $V(x)=e^{-x}(x^4-2x^2)$，$H=p^2/(2m)+V(x)$。求所有平衡位置与类型，按能量划分周期、分离和散射轨道；给出全势相图的方向、周期求积式及鞍点附近时间的发散性质。不能将 $x\le3$ 的局部图当作全局图。}{ex69}{例69的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex69}~中，势能曲线与能量线的交点给径向转折位置；图中远处正势垒必须保留，才能区分跨阱闭轨和向右逃逸。
-\SolutionFigure{ex69}{例69的分析与计算过程}
+\QuestionStatement{量纲吸收后的势为 $V(x)=e^{-x}(x^4-2x^2)$，$H=p^2/(2m)+V(x)$。求所有平衡位置与类型，按能量划分周期、分离和散射轨道；给出全势相图的方向、周期求积式及鞍点附近时间的发散性质。不能将 $x\le3$ 的局部图当作全局图。定义域为整个实轴 $x\in\mathbb R$，$m>0$；量纲已通过固定尺度吸收，仍须讨论右侧远处势垒及 $x\to+\infty$ 的行为。}{ex69}{例69的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex69}，解答图\ref{fig:solution-ex69}展示包含远处势垒和无穷远渐近的全局势曲线；局部双阱图会漏掉右侧鞍点及其分离、散射轨道。
+ 在本题模型中，势能曲线与能量线的交点给径向转折位置；图中远处正势垒必须保留，才能区分跨阱闭轨和向右逃逸。
+
 \Step{方程与推导}
 采用量纲已吸收的变量，势 $V(x)=e^{-x}(x^4-2x^2)$，$H=p^2/(2m)+V(x)$。给定能量的相轨迹满足 $p=\pm\sqrt{2m[E-V(x)]}$，只能画在 $E\ge V(x)$ 的区域。
 
@@ -2689,6 +2969,8 @@ $E>V_{\rm B}$&越过外势垒的无界散射，只有左侧转折\\\bottomrule
 \begin{pmatrix}\delta x\\\delta p\end{pmatrix},\qquad
 \lambda^2=-\frac{V''(x_*)}{m}.
 \]
+\SolutionFigure{ex69}{例69的分析与计算过程}
+
 极小点产生频率 $\sqrt{V''(x_*)/m}$ 的中心，极大点产生指数率 $\sqrt{-V''(x_*)/m}$ 的鞍点。在一个有两个简单转向点 $x_a<x_b$ 的束缚分支上，$\dot x=p/m$ 给出完整周期
 \[
 T(E)=\sqrt{2m}\int_{x_a}^{x_b}\frac{\dd x}{\sqrt{E-V(x)}}.
@@ -2778,14 +3060,18 @@ $\rho(\Phi_t(z_0),t)\det A=\rho(z_0,0)$，故 $\det A=1$ 时恢复第一种证�
 \example{谐振子扇形区域面积}
 \label{ex:c5-70}
 \QuestionStatement{谐振子 $H=p^2/(2m)+m\omega^2q^2/2$。求由 $0\le A\le A_0,\theta_1\le\theta\le\theta_2$，$q=A\cos\theta,p=-m\omega A\sin\theta$ 定义的相区面积及演化，规定 $0\le\theta_2-\theta_1\le2\pi$，按不重复覆盖的扇区计算。另完整积分第一象限椭圆区 $q^2/a^2+p^2/b^2\le1$，$b=m\omega a$，证明流映射保面积。}{ex70}{例70的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex70}~中，第一象限椭圆扇区随哈密顿流顺时针移动，角宽与半径范围保持，面积应按雅可比积分而非外接矩形估计。
-\SolutionFigure{ex70}{例70的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex70}，解答图\ref{fig:solution-ex70}展示缩放相平面中的扇区随振子流作顺时针转动；沿流密度和面积保持不变，固定相点处的密度却可能随扇区经过而改变。
+ 在本题模型中，第一象限椭圆扇区随哈密顿流顺时针移动，角宽与半径范围保持，面积应按雅可比积分而非外接矩形估计。
+
 \Step{方程与推导}
 用 $q=A\cos\theta,p=-m\omega A\sin\theta$，从 $(A,\theta)$ 到 $(q,p)$ 的雅可比绝对值为 $m\omega A$。初态区域 $0\le A\le A_0,\theta_1\le\theta\le\theta_2$ 的面积
 \[
 \mathcal A=\int_0^{A_0}\int_{\theta_1}^{\theta_2}m\omega A\dd\theta\dd A
 =\frac12m\omega A_0^2(\theta_2-\theta_1).
 \]
+\SolutionFigure{ex70}{例70的分析与计算过程}
+
 演化使 $\theta\mapsto\theta+\omega t$，角宽不变，因此面积不变。第一象限中的扇形也是同一计算的特例；物理角度与缩放相坐标角度应区分。
 
 \subsubsection*{第一象限椭圆初区的完整积分}
@@ -2869,8 +3155,10 @@ Hamilton 方程要求 $\dot\vartheta=-\omega$，所以 $\vartheta(t)=\vartheta_0
 \example{显式欧拉法与辛欧拉法的区别}
 \label{ex:c5-71}
 \QuestionStatement{对谐振子 $\dot q=p/m,\dot p=-m\omega^2q$，比较步长 $h>0$ 的显式欧拉法和先动量、后位置的辛欧拉法。求两更新矩阵、行列式、能量性质；证明辛欧拉法的修正二次不变量并确定其正定稳定条件。}{ex71}{例71的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex71}~中，两个更新顺序给出不同的平面线性映射；先动量后位置相当于两次剪切，能保存有向相面积。
-\SolutionFigure{ex71}{例71的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex71}，解答图\ref{fig:solution-ex71}展示单位相区在两种离散更新下的像；行列式体现单步面积变化，但面积守恒本身仍不足以保证数值稳定。
+ 在本题模型中，两个更新顺序给出不同的平面线性映射；先动量后位置相当于两次剪切，能保存有向相面积。
+
 \Step{方程与推导}
 对谐振子 $\dot q=p/m,\dot p=-m\omega^2q$，普通显式欧拉法同时用旧值更新：$q_{n+1}=q_n+hp_n/m$、$p_{n+1}=p_n-hm\omega^2q_n$。它的矩阵行列式为 $1+h^2\omega^2>1$，每步扩张相面积；直接代入能量也得 $H_{n+1}=(1+h^2\omega^2)H_n$，误差长期持续增长。
 
@@ -2879,6 +3167,8 @@ Hamilton 方程要求 $\dot\vartheta=-\omega$，所以 $\vartheta(t)=\vartheta_0
 p_{n+1}=p_n-hm\omega^2q_n,\qquad
 q_{n+1}=q_n+\frac hm p_{n+1}.
 \]
+\SolutionFigure{ex71}{例71的分析与计算过程}
+
 矩阵为
 \[
 A_h=\begin{pmatrix}1-h^2\omega^2&h/m\\-hm\omega^2&1\end{pmatrix},
@@ -2953,14 +3243,18 @@ I[\psi]=\int\left[\frac{K^2}{2m}(\nabla\psi)^2+(V-E)\psi^2\right]\dd^3x,
 
 \example{库仑势的量子能级}
 \label{ex:c5-72}
-\QuestionStatement{电子--质子非相对论相对运动的约化质量为 $\mu$，势 $V=-\kappa/r$，$\kappa=e^2/(4\pi\varepsilon_0)$。从定态薛定谔方程的径向正则、可归一化条件推导氢原子能级，列量子数及基态尺度，再由能级差求各谱线系列及电离限。}{ex72}{例72的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex72}~中，负能级在电离限下逐渐密集；原点正则和远处衰减共同限制径向级数，使能量由连续值变为离散值。
-\SolutionFigure{ex72}{例72的分析与计算过程}
+\QuestionStatement{电子--质子非相对论相对运动的约化质量为 $\mu$，势 $V=-\kappa/r$，$\kappa=e^2/(4\pi\varepsilon_0)$。从定态薛定谔方程的径向正则、可归一化条件推导氢原子能级，列量子数及基态尺度，再由能级差求各谱线系列及电离限。忽略精细结构、外场及自旋相关能量；径向波函数在原点正则，且三维波函数在全空间可归一化。}{ex72}{例72的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex72}，解答图\ref{fig:solution-ex72}展示满足原点正则和远处衰减的两种径向函数；只有合适的离散参数才能同时满足两端条件，函数节点并非经典转折点。
+ 在本题模型中，负能级在电离限下逐渐密集；原点正则和远处衰减共同限制径向级数，使能量由连续值变为离散值。
+
 \Step{方程与推导}
 电子与质子的相对运动用约化质量 $\mu=m_em_p/(m_e+m_p)$ 描述。非相对论、忽略精细结构与外场的势为 $V=-\kappa/r$，$\kappa=e^2/(4\pi\varepsilon_0)$。令 $\psi=R_l(r)Y_{lm}(\theta,\phi)$，球谐函数的角本征值为 $l(l+1)$，径向函数 $u=rR_l$ 满足
 \[
 u''+\left[\frac{2\mu}{\hbar^2}\left(E+\frac\kappa r\right)-\frac{l(l+1)}{r^2}\right]u=0.
 \]
+\SolutionFigure{ex72}{例72的分析与计算过程}
+
 束缚态 $E<0$，取 $\chi=\sqrt{-2\mu E}/\hbar$、$\rho=2\chi r$，以原点的正则行为与远处的衰减行为写 $u=\rho^{l+1}e^{-\rho/2}F(\rho)$。代入后得到
 \[
 \rho F''+(2l+2-\rho)F'+
@@ -3031,8 +3325,10 @@ S_t+\frac{(\nabla S)^2}{2m}+V-\frac{\hbar^2}{2m}\frac{\nabla^2A}{A}=0,
 \example{量子不确定关系的独立证明}
 \label{ex:c5-73}
 \LongQuestionStatement{归一化态 $|\psi\rangle$ 中，自伴算符 $\widehat A,\widehat B$ 的二阶矩及所需乘积期望存在。以柯西--施瓦茨不等式推导标准差的对易子下界，并应用于位置与动量。说明该证明与经典泊松括号反例采用的统计结构有何不同。}{ex73}{例73的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex73}~中，位置、动量分布的宽度是同一量子态的二阶矩；它们通过态向量内积和不可交换算符联系。
-\SolutionFigure{ex73}{例73的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex73}，解答图\ref{fig:solution-ex73}展示最小不确定高斯态的位置、动量分布；一般不等式的来源是态空间的复内积结构，不能用经典相点统计直接替换。
+ 在本题模型中，位置、动量分布的宽度是同一量子态的二阶矩；它们通过态向量内积和不可交换算符联系。
+
 \Step{方程与推导}
 归一化态 $|\psi\rangle$ 中，设两个自伴算符 $\widehat A,\widehat B$ 的相关二阶矩存在。取 $|f\rangle=(\widehat A-\langle A\rangle)|\psi\rangle$、$|g\rangle=(\widehat B-\langle B\rangle)|\psi\rangle$。柯西--施瓦茨不等式给
 \[
@@ -3040,6 +3336,8 @@ S_t+\frac{(\nabla S)^2}{2m}+V-\frac{\hbar^2}{2m}\frac{\nabla^2A}{A}=0,
 \ge|\langle f|g\rangle|^2
 \ge|\operatorname{Im}\langle f|g\rangle|^2.
 \]
+\SolutionFigure{ex73}{例73的分析与计算过程}
+
 自伴性使 $2i\operatorname{Im}\langle f|g\rangle=\langle[\widehat A,\widehat B]\rangle$，故
 \[
 \Delta A\Delta B\ge\frac12\left|\langle[\widehat A,\widehat B]\rangle\right|.
@@ -3078,8 +3376,12 @@ K(q_b,t_b;q_a,t_a)=\int_{q_a}^{q_b}\mathcal Dq\,\exp\left(\frac{i}{\hbar}S[q]\ri
 
 \example{两个通道的干涉}
 \label{ex:c5-74}
-\QuestionStatement{双缝到屏上同一点的复振幅为 $\psi_1,\psi_2$。求总强度与干涉项，并讨论等模振幅、相位差和路径信息。另区分位置概率密度 $|\psi|^2$ 与传播子 $K$，写出传播子对初态的作用。}{ex74}{例74的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex74}~中，两条路径在同一屏点叠加复振幅，路径差改变相位差；交叉项不能在叠加前当作两独立概率相加。
+\QuestionStatement{双缝到屏上同一点的复振幅为 $\psi_1,\psi_2$。求总强度与干涉项，并讨论等模振幅、相位差和路径信息。另区分位置概率密度 $|\psi|^2$ 与传播子 $K$，写出传播子对初态的作用。两束相干、同频且偏振相容，$\psi_1,\psi_2$ 已包含传播相位；若路径信息使两路径与可区分探测态关联，须同时考虑该关联的影响。}{ex74}{例74的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex74}，解答图\ref{fig:solution-ex74}展示复平面中的振幅首尾合成与相位差；干涉交叉项来自两个复振幅的内积，概率密度与传播核承担不同作用。
+ 在本题模型中，两条路径在同一屏点叠加复振幅，路径差改变相位差；交叉项不能在叠加前当作两独立概率相加。
+
+
 \SolutionFigure{ex74}{例74的分析与计算过程}
 \Step{方程与推导}
 两缝到屏上同一点的振幅为 $\psi_1,\psi_2$，总强度正比于 $|\psi_1+\psi_2|^2=|\psi_1|^2+|\psi_2|^2+2\operatorname{Re}(\psi_1^*\psi_2)$。若两振幅模相同，$I\propto4|\psi_1|^2\cos^2(\Delta\phi/2)$，相位差与路径差、波长相关。加入能分辨路径的测量会改变对应态与交叉项，不能沿用未测量时的同一振幅表达式。
@@ -3126,8 +3428,10 @@ B={}&\left[\int_\Omega\mathcal L_{u_t}\delta u\dd^dx\right]_{t_1}^{t_2}
 \example{定端弦的小横振动}
 \label{ex:c5-75}
 \QuestionStatement{长 $l$ 的均匀柔弦线密度 $\rho_l>0$、预张力 $\mathcal T>0$，两端固定，横向位移 $u(x,t)$、斜率小。由弦元伸长建立拉格朗日密度和边界项，求波速、振型及满足初形 $f(x)$、初速度 $g(x)$ 的一般解，并给自由端和非均匀参数的推广。}{ex75}{例75的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex75}~中，两端位移为零选择正弦振型，内部曲率通过张力给横向加速度；初形和初速度各确定一组时间系数。
-\SolutionFigure{ex75}{例75的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex75}，解答图\ref{fig:solution-ex75}展示弦元两端沿切线的张力及其竖直分量差；势能来自斜率平方，边界项则区分固定端位移条件和自由端斜率条件。
+ 在本题模型中，两端位移为零选择正弦振型，内部曲率通过张力给横向加速度；初形和初速度各确定一组时间系数。
+
 \Step{方程与推导}
 弦长 $l$，线密度 $\rho_l$，张力 $\mathcal T$，横向位移 $u(x,t)$，假定斜率 $|u_x|\ll1$。弦元长 $\dd s=\sqrt{1+u_x^2}\dd x\simeq(1+u_x^2/2)\dd x$，伸长作功给势能密度 $\mathcal T u_x^2/2$。因此
 \[
@@ -3135,6 +3439,8 @@ B={}&\left[\int_\Omega\mathcal L_{u_t}\delta u\dd^dx\right]_{t_1}^{t_2}
 \quad\rho_lu_{tt}-\mathcal T u_{xx}=0,
 \quad c=\sqrt{\mathcal T/\rho_l}.
 \]
+\SolutionFigure{ex75}{例75的分析与计算过程}
+
 固定两端 $u(0,t)=u(l,t)=0$，模式 $u_n=A_n\sin(n\pi x/l)\cos(\omega_nt+\delta_n)$，$\omega_n=n\pi c/l$。一般初形 $u(x,0)=f(x)$ 和初速度 $u_t(x,0)=g(x)$ 由正弦级数决定：
 \[
 A_n^{(c)}=\frac2l\int_0^lf(x)\sin\frac{n\pi x}{l}\dd x,
@@ -3175,10 +3481,14 @@ u(x,t)=\sum_{n=1}^{\infty}
 \example{驻波能量与波长的精确关系}
 \label{ex:c5-76}
 \QuestionStatement{定端均匀弦长 $l$、质量 $M=\rho_ll$，单模 $u=A\sin(k_nx)\cos(\omega_nt+\delta)$，$k_n=n\pi/l,\omega_n=ck_n$。求动能、势能和总能量关于波长 $\lambda_n=2l/n$ 的关系；分别求沿弦正则动量和弦材横向机械动量，说明端点反力的作用。}{ex76}{例76的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex76}~中，振型节点固定，位移与速度的时间相位相差四分之一周期；空间平方积分使动能和势能系数完全相同。
-\SolutionFigure{ex76}{例76的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex76}，解答图\ref{fig:solution-ex76}展示驻波位移极值与平衡形状时的两种状态；前者动能为零、后者弹性势能为零，各弦元速度的正负还决定机械横向动量。
+ 在本题模型中，振型节点固定，位移与速度的时间相位相差四分之一周期；空间平方积分使动能和势能系数完全相同。
+
 \Step{方程与推导}
-取一条长度 $l$、总质量 $M=\rho_ll$ 的定端弦，单模为 \[u=A\sin(k_nx)\cos(\omega_nt+\delta).,\]$k_n=n\pi/l$，$\omega_n=ck_n$。将空间积分 $\int_0^l\sin^2k_nx\dd x=\int_0^l\cos^2k_nx\dd x=l/2$ 代入，得到
+取一条长度 $l$、总质量 $M=\rho_ll$ 的定端弦，单模为 \[u=A\sin(k_nx)\cos(\omega_nt+\delta).,\]
+\SolutionFigure{ex76}{例76的分析与计算过程}
+$k_n=n\pi/l$，$\omega_n=ck_n$。将空间积分 $\int_0^l\sin^2k_nx\dd x=\int_0^l\cos^2k_nx\dd x=l/2$ 代入，得到
 \[
 T=\frac14MA^2\omega_n^2\sin^2(\omega_nt+\delta),\qquad
 V=\frac14MA^2\omega_n^2\cos^2(\omega_nt+\delta).
@@ -3235,15 +3545,19 @@ $\dd T=\rho_su_t^2\dd x\dd y/2$。
 
 \example{均匀鼓膜}
 \label{ex:c5-77}
-\QuestionStatement{均匀薄膜面密度 $\rho_s$、面张力 $\mathcal T_s$，横向位移 $u(x,y,t)$、斜率小。由面积增量求拉格朗日密度和波动方程，再求矩形定边膜的频率，并写圆形定边膜的径向方程及本征值条件。}{ex77}{例77的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex77}~中，矩形膜两组固定边分别选择一个正弦因子；面元斜率的两个方向同时贡献弹性势能。
-\SolutionFigure{ex77}{例77的分析与计算过程}
+\QuestionStatement{均匀薄膜面密度 $\rho_s$、面张力 $\mathcal T_s$，横向位移 $u(x,y,t)$、斜率小。由面积增量求拉格朗日密度和波动方程，再求矩形定边膜的频率，并写圆形定边膜的径向方程及本征值条件。矩形膜的范围取 $0<x<a,0<y<b$，$a,b>0$，四条边位移均为零。圆膜作为另一个模型，半径记为 $a$，要求原点正则且圆周位移为零。}{ex77}{例77的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex77}，解答图\ref{fig:solution-ex77}展示矩形膜和圆膜的代表性节点线；固定边要求位移为零，分离角阶与径向贝塞尔零点共同选择圆膜频率。
+ 在本题模型中，矩形膜两组固定边分别选择一个正弦因子；面元斜率的两个方向同时贡献弹性势能。
+
 \Step{方程与推导}
 面质量密度 $\rho_s$，均匀面张力 $\mathcal T_s$（单位长度上的拉力），小横向位移 $u(x,y,t)$。面积元变化 $\sqrt{1+u_x^2+u_y^2}-1\simeq(u_x^2+u_y^2)/2$，故
 \[
 \mathcal L=\frac12\rho_su_t^2-\frac12\mathcal T_s(u_x^2+u_y^2),
 \quad u_{tt}=c^2(u_{xx}+u_{yy}),\quad c^2=\mathcal T_s/\rho_s.
 \]
+\SolutionFigure{ex77}{例77的分析与计算过程}
+
 矩形定边膜 $0<x<a,0<y<b$ 的模式为 $\sin(n\pi x/a)\sin(m\pi y/b)$，频率 $\omega_{nm}=\pi c\sqrt{n^2/a^2+m^2/b^2}$。圆膜半径 $a$，拉普拉斯算符应写为 $u_{rr}+u_r/r+u_{\phi\phi}/r^2$，径向函数为相应贝塞尔函数，定边条件选择其零点。圆膜频率一般不是整数倍关系。
 
 \Step{圆膜的贝塞尔本征条件} 取 $u=R(r)e^{i\ell\phi}e^{-i\omega t}$，单值性给整数 $\ell$。径向方程为 $r^2R''+rR'+[(\omega r/c)^2-\ell^2]R=0$，在原点有限的支为 $J_{|\ell|}(\omega r/c)$。定边半径 $a$ 要求 $J_{|\ell|}(\omega a/c)=0$。若其第 $s$ 个正零点记 $j_{|\ell|,s}$，则 $\omega_{\ell s}=cj_{|\ell|,s}/a$；正负角阶给简并的正弦、余弦角分布。
@@ -3253,14 +3567,18 @@ $\dd T=\rho_su_t^2\dd x\dd y/2$。
 
 \example{各向同性弹性体的纵横波}
 \label{ex:c5-78}
-\LongQuestionStatement{均匀各向同性弹性体体密度 $\rho_m$、拉梅系数 $\lambda,\mu$，小位移场 $\vect u$，小应变 $\epsilon_{ij}=(\partial_i u_j+\partial_j u_i)/2$。由动能和应变能密度建立场方程，并以平面波分解求纵波、横波速度及材料条件。}{ex78}{例78的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex78}~中，纵向位移平行传播方向，横向位移与其垂直；只有纵向分量贡献体积压缩，故两波速不同。
-\SolutionFigure{ex78}{例78的分析与计算过程}
+\LongQuestionStatement{均匀各向同性弹性体体密度 $\rho_m$、拉梅系数 $\lambda,\mu$，小位移场 $\vect u$，小应变 $\epsilon_{ij}=(\partial_i u_j+\partial_j u_i)/2$。由动能和应变能密度建立场方程，并以平面波分解求纵波、横波速度及材料条件。设 $\rho_m>0$，无体力与耗散；材料条件应分别检查体积形变与剪切形变的能量正定性，不能只检查一个传播方向。}{ex78}{例78的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex78}，解答图\ref{fig:solution-ex78}展示位移平行、垂直波矢的两类弹性波；两种投影分别选出体积压缩和剪切响应，材料稳定条件不能只看一个波速为实数。
+ 在本题模型中，纵向位移平行传播方向，横向位移与其垂直；只有纵向分量贡献体积压缩，故两波速不同。
+
 \Step{方程与推导}
 位移场 $\vect u(\vect x,t)$，体密度 $\rho_m$，小应变 $\epsilon_{ij}=(\partial_i u_j+\partial_j u_i)/2$，拉梅系数 $\lambda,\mu$。取
 \[
 \mathcal L=\frac12\rho_m\dot{\vect u}^{\,2}-\frac\lambda2(\nabla\cdot\vect u)^2-\mu\epsilon_{ij}\epsilon_{ij}.
 \]
+\SolutionFigure{ex78}{例78的分析与计算过程}
+
 场方程给出 $\rho_m\vect u_{tt}=(\lambda+\mu)\nabla(\nabla\cdot\vect u)+\mu\nabla^2\vect u$。纵向平面波频率满足 $\omega^2=(\lambda+2\mu)k^2/\rho_m$，横向波满足 $\omega^2=\mu k^2/\rho_m$。常数、各向同性、小应变是该简单方程的条件。
 
 \Step{应力变分与纵横投影} 应变能密度 $U=\lambda(\epsilon_{kk})^2/2+\mu\epsilon_{ij}\epsilon_{ij}$ 给 $\sigma_{ij}=\lambda\epsilon_{kk}\delta_{ij}+2\mu\epsilon_{ij}$。空间分部积分得 $\rho_m\ddot u_i=\partial_j\sigma_{ij}$，常系数时化为文中式。令 $\vect u=\vect a e^{i(\vect k\cdot\vect x-\omega t)}$，得到 $\rho_m\omega^2\vect a=\mu k^2\vect a+(\lambda+\mu)\vect k(\vect k\cdot\vect a)$。平行与垂直 $\vect k$ 投影分别给两种波速。稳定各向同性材料通常要求 $\mu>0$、体积模量 $\lambda+2\mu/3>0$，并有 $\rho_m>0$。
@@ -3268,7 +3586,11 @@ $\dd T=\rho_su_t^2\dd x\dd y/2$。
 \example{声波的线性化}
 \label{ex:c5-79}
 \QuestionStatement{均匀静止、无黏流体平衡密度 $\rho_0$，小扰动 $\delta\rho,\vect v,\delta P$，绝热状态关系 $\delta P=c_s^2\delta\rho$。线性化质量与动量方程，消去速度求声波方程，说明波速、无旋速度势及近似的适用条件。}{ex79}{例79的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex79}~中，压缩区与稀疏区交替，压强梯度驱动流速；对连续方程求时间导数后可用动量方程消去速度。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex79}，解答图\ref{fig:solution-ex79}展示流体元受到的压强差与其速度、密度变化；质量连续方程和动量方程必须联立，声速还来自绝热本构关系。
+ 在本题模型中，压缩区与稀疏区交替，压强梯度驱动流速；对连续方程求时间导数后可用动量方程消去速度。
+
+
 \SolutionFigure{ex79}{例79的分析与计算过程}
 \Step{方程与推导}
 静止均匀流体中 $\rho=\rho_0+\delta\rho$，压强变化 $\delta P=c_s^2\delta\rho$，忽略二次项。连续方程 $\delta\rho_t+\rho_0\nabla\cdot\vect v=0$，欧拉方程 $\rho_0\vect v_t=-\nabla\delta P$。对第一式再求时间导数，代入第二式得到 $\delta\rho_{tt}-c_s^2\nabla^2\delta\rho=0$。$c_s^2=(\partial P/\partial\rho)_s$ 取决于绝热状态方程。无旋流 $\vect v=\nabla\phi$ 可用对应的二次场作用量表示；它与弦波有相同的波动结构而不同的物理变量。
@@ -3277,8 +3599,12 @@ $\dd T=\rho_su_t^2\dd x\dd y/2$。
 
 \example{理想流体表面重力波与热扩散的区别}
 \label{ex:c5-80}
-\QuestionStatement{深度 $h$ 的无黏、不可压、无旋流体，平衡自由面 $z=0$、底面 $z=-h$。速度势 $\phi$、小表面位移 $\eta$ 满足底面无穿透及线性运动学、动力学条件。求重力波色散关系、深浅水极限；再比较均匀介质热扩散方程的时间结构和温差平方的衰减。}{ex80}{例80的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex80}~中，底面无穿透选取双曲余弦的深度分布；自由面上的垂向流速与压力条件把表面位移联系到速度势。
+\QuestionStatement{深度 $h$ 的无黏、不可压、无旋流体，平衡自由面 $z=0$、底面 $z=-h$。速度势 $\phi$、小表面位移 $\eta$ 满足底面无穿透及线性运动学、动力学条件。求重力波色散关系、深浅水极限；再比较均匀介质热扩散方程的时间结构和温差平方的衰减。重力加速度为 $g$，忽略表面张力。热扩散另取常量质量密度 $\rho_m>0$、比热 $c_v>0$、热导率 $\kappa>0$，无热源，并在固定有限区域采用周期或绝热边界；$\overline T$ 表示守恒的空间平均温度。}{ex80}{例80的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex80}，解答图\ref{fig:solution-ex80}展示水层底面及线性自由面的不同边界条件；两表面条件消元后给出重力波色散，扩散则只有一阶时间衰减而非这类振荡。
+ 在本题模型中，底面无穿透选取双曲余弦的深度分布；自由面上的垂向流速与压力条件把表面位移联系到速度势。
+
+
 \SolutionFigure{ex80}{例80的分析与计算过程}
 \Step{方程与推导}
 无黏、不可压、无旋流体取速度势 $\phi$，内部 $\nabla^2\phi=0$。静水深 $h$，平面自由表面位移 $\eta$，底面 $\phi_z=0$，线性自由表面条件 $\eta_t=\phi_z$、$\phi_t+g\eta=0$。平面波 ansatz 给出 $\omega^2=gk\tanh(kh)$；深水为 $gk$，浅水为 $ghk^2$。该波不同于无色散弦波。
@@ -3290,14 +3616,18 @@ $\dd T=\rho_su_t^2\dd x\dd y/2$。
 
 \example{以势为场变量推导两条有源方程}
 \label{ex:c5-81}
-\QuestionStatement{以 $\vect E=-\nabla\phi-\partial_t\vect A,\vect B=\nabla\times\vect A$ 为定义，取电磁拉格朗日密度 $\mathcal L=\varepsilon_0E^2/2-B^2/(2\mu_0)-\rho_e\phi+\vect j\cdot\vect A$。分别变分两势并写出体项、边界项，恢复四条麦克斯韦方程；讨论规范变换、源连续方程与场能流。}{ex81}{例81的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex81}~中，电场和磁场先由两个势定义，另外两条无源方程成为恒等式；独立势变分给出有源方程和相应边界项。
-\SolutionFigure{ex81}{例81的分析与计算过程}
+\QuestionStatement{以 $\vect E=-\nabla\phi-\partial_t\vect A,\vect B=\nabla\times\vect A$ 为定义，取电磁拉格朗日密度 $\mathcal L=\varepsilon_0E^2/2-B^2/(2\mu_0)-\rho_e\phi+\vect j\cdot\vect A$。分别变分两势并写出体项、边界项，恢复四条麦克斯韦方程；讨论规范变换、源连续方程与场能流。源 $\rho_e,\vect j$ 给定且足够光滑。先完整保留分部积分的边界项，仅在提取体场方程时令边界势变分为零或选用紧支撑变分。}{ex81}{例81的条件与模型}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex81}，解答图\ref{fig:solution-ex81}展示场作用量的体区域、边界及外法向；对标势、矢势分别分部积分后，边界项的处理与体场方程是两项不同要求。
+ 在本题模型中，电场和磁场先由两个势定义，另外两条无源方程成为恒等式；独立势变分给出有源方程和相应边界项。
+
 \Step{方程与推导}
 采用 SI 单位，$\vect E=-\nabla\phi-\partial_t\vect A$，$\vect B=\nabla\times\vect A$，固定外部电荷、流密度满足 $\rho_e{}_t+\nabla\cdot\vect j=0$。拉格朗日密度为
 \[
 \mathcal L_{\rm EM}=\frac{\varepsilon_0}2\vect E^2-\frac1{2\mu_0}\vect B^2-\rho_e\phi+\vect j\cdot\vect A.
 \]
+\SolutionFigure{ex81}{例81的分析与计算过程}
+
 先取时空边界上的变分为零。变分 $\phi$：$\delta\vect E=-\nabla\delta\phi$，所以 $\delta S=\int(\varepsilon_0\nabla\cdot\vect E-\rho_e)\delta\phi\dd^3x\dd t$，得到 $\nabla\cdot\vect E=\rho_e/\varepsilon_0$。
 
 再变分 $\vect A$，有 $\delta\vect E=-\partial_t\delta\vect A$、$\delta\vect B=\nabla\times\delta\vect A$，分部积分后
@@ -3469,7 +3799,11 @@ $\partial_y B_z-\partial_z B_y-c^{-2}\partial_tE_x=\mu_0j_x$，其余两式循�
 \example{平移、转动与时间平移}
 \label{ex:c5-82}
 \QuestionStatement{有限自由度自治系统采用诺特量 $\mathcal J=\sum_i p_i\xi_i-\mathcal E\tau$（无额外边界函数）。分别对空间平移、无穷小转动、时间平移写出生成变量和守恒量，说明约束及外场对相应对称性的要求。}{ex82}{例82的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex82}~中，平移箭头指定线动量方向，绕轴转动指定角动量分量，时间平移对应能量；对称方向须被约束和外场共同保留。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex82}，解答图\ref{fig:solution-ex82}展示三类连续变换的几何作用及其生成方向；相应守恒量成立前，必须检查约束和外场也具有同一对称性。
+ 在本题模型中，平移箭头指定线动量方向，绕轴转动指定角动量分量，时间平移对应能量；对称方向须被约束和外场共同保留。
+
+
 \SolutionFigure{ex82}{例82的分析与计算过程}
 \Step{方程与推导}
 空间平移 $\xi=\vect a,\tau=0$ 给出动量沿 $\vect a$ 的分量；空间转动 $\xi=\vect\alpha\times\vect r$ 给出 $\vect\alpha\cdot(\vect r\times\vect p)$；时间平移 $\xi=0,\tau=1$ 给出 $-\mathcal E$。守恒量乘非零常数仍守恒，整体负号不改变结论。约束若破坏相应对称性，不能仍使用该方向的机械动量守恒。
@@ -3514,13 +3848,17 @@ j^\mu=\sum_a\pi_a^\mu(\Delta_a-\xi^\nu\partial_\nu\varphi_a)
 \example{复标量场的连续相位变换}
 \label{ex:c5-83}
 \QuestionStatement{取 $c=\hbar=1$、度规 $\eta=\operatorname{diag}(1,-1,-1,-1)$，复标量场密度 $\mathcal L=\partial_\mu\phi^*\partial^\mu\phi-m^2\phi^*\phi$。由整体连续相位变换求诺特流，并用两条场方程直接证明局部守恒，区分整体和局域相位变换。}{ex83}{例83的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex83}~中，复场在复平面上整体转相位，模长不变；对场及共轭场分别求导得到同一守恒流的两部分。
-\SolutionFigure{ex83}{例83的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex83}，解答图\ref{fig:solution-ex83}展示复场与共轭场的反向整体转相；两种独立变分贡献组成同一守恒流，局域相位变换会引入额外导数项。
+ 在本题模型中，复场在复平面上整体转相位，模长不变；对场及共轭场分别求导得到同一守恒流的两部分。
+
 \Step{方程与推导}
 采用 $c=\hbar=1$，$\mathcal L=\partial_\mu\phi^*\partial^\mu\phi-m^2\phi^*\phi$。整体相位变化 $\phi\mapsto e^{i\varepsilon}\phi,\phi^*\mapsto e^{-i\varepsilon}\phi^*$，$\Delta\phi=i\phi,\Delta\phi^*=-i\phi^*$。诺特流
 \[
 j^\mu=i(\phi\partial^\mu\phi^*-\phi^*\partial^\mu\phi).
 \]
+\SolutionFigure{ex83}{例83的分析与计算过程}
+
 用场方程 $(\Box+m^2)\phi=0$ 及其共轭直接求 $\partial_\mu j^\mu$，交叉一阶导数抵消，剩余 $i(\phi\Box\phi^*-\phi^*\Box\phi)=0$，再次验证守恒。
 
 整体相位对称性产生这一守恒荷。局域相位变换 $\varepsilon=\varepsilon(x)$ 需引入规范场、协变导数等结构；局域规范冗余对应更强的恒等式和约束，不能与一个独立的全局物理对称性混为一谈。
@@ -3566,7 +3904,11 @@ E=\int T^{00}\dd^3x,\qquad P^i=\frac1c\int T^{0i}\dd^3x.
 \example{弦场的能量密度再现}
 \label{ex:c5-84}
 \QuestionStatement{均匀弦场 $\mathcal L=\rho_lu_t^2/2-\mathcal T u_x^2/2$，采用 $x^0=t$。由正则能量--动量张量求能量密度、能流和沿弦动量密度，直接证明局部能量方程；对有限固定端弦讨论总能量与空间平移条件。}{ex84}{例84的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex84}~中，一段弦的能量变化由两端能流差决定；能流方向由局部斜率与横向速度的乘积给出。
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex84}，解答图\ref{fig:solution-ex84}展示弦上有限区间的能量收支；局部能量方程中的通量差积成边界能流，固定端使能流为零却不保证空间平移对称性。
+ 在本题模型中，一段弦的能量变化由两端能流差决定；能流方向由局部斜率与横向速度的乘积给出。
+
+
 \SolutionFigure{ex84}{例84的分析与计算过程}
 \Step{方程与推导}
 用 $x^0=t$、$\mathcal L=\rho_lu_t^2/2-\mathcal T u_x^2/2$，$T^0{}_0=\rho_lu_t^2-\mathcal L=\rho_lu_t^2/2+\mathcal T u_x^2/2$。$T^x{}_0=-\mathcal T u_xu_t$ 为能流；$T^0{}_x=\rho_lu_tu_x$ 与按主动空间平移定义的正则动量相差整体方向约定。对固定两端问题，边界破坏连续平移对称性，因此不能无条件推断整个有限弦的沿弦正则动量守恒。
@@ -3577,13 +3919,17 @@ E=\int T^{00}\dd^3x,\qquad P^i=\frac1c\int T^{0i}\dd^3x.
 \example{把局部守恒写成流体方程}
 \label{ex:c5-85}
 \QuestionStatement{非相对论理想绝热流体密度 $\rho_m$、速度 $\vect v$、压强 $P$、内能密度 $e$，外力密度 $\vect f$。从局部守恒推导质量、欧拉动量和总能量方程。另由共动系各向同性张量构造相对论理想流体 $T^{\mu\nu}$，列实验系分量、守恒式，并说明扣除静质量能后的低速极限。}{ex85}{例85的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex85}~中，控制体各面的质量通量和压强应力共同进入局部守恒；展开动量输运后，密度导数项由质量方程消去。
-\SolutionFigure{ex85}{例85的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex85}，解答图\ref{fig:solution-ex85}展示固定流体控制体中的质量通量、压力功及外力；能量通量不能只写成内能密度乘速度，相对论低速极限还需先扣除静质量能。
+ 在本题模型中，控制体各面的质量通量和压强应力共同进入局部守恒；展开动量输运后，密度导数项由质量方程消去。
+
 \Step{方程与推导}
 非相对论理想流体密度 $\rho_m$、速度 $\vect v$、压强 $P$、内能密度 $e$。质量守恒为
 \[
 \partial_t\rho_m+\nabla\cdot(\rho_m\vect v)=0.
 \]
+\SolutionFigure{ex85}{例85的分析与计算过程}
+
 动量密度 $\rho_m v_i$，无黏动量流 $\Pi_{ij}=\rho_m v_iv_j+P\delta_{ij}$，外力密度 $f_i$，所以
 \[
 \partial_t(\rho_m v_i)+\partial_j(\rho_m v_iv_j+P\delta_{ij})=f_i.
@@ -3718,14 +4064,18 @@ m\left[g_{kj}\ddot q^j+\partial_ig_{kj}\dot q^i\dot q^j
 \example{半径为 \texorpdfstring{$R$}{R} 的球面自由质点}
 \label{ex:c5-86}
 \QuestionStatement{质量 $m$ 的自由质点限制在半径 $R$ 的固定光滑球面上，不受其他切向力。采用通常球坐标 $(\theta,\phi)$，由度规和 Christoffel 联络求运动方程及第一积分，再用空间角动量说明轨道是大圆及极坐标奇点的含义。}{ex86}{例86的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-ex86}~中，球面切向速度的两个分量由度规计量；半径反力不产生绕球心力矩，空间角动量把轨道限制在过心平面。
-\SolutionFigure{ex86}{例86的分析与计算过程}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-ex86}，解答图\ref{fig:solution-ex86}展示球心、轨道大圆及角动量法向；法向加速度维持球面约束，球面联络方程在坐标极点的奇性不表示空间轨道奇异。
+ 在本题模型中，球面切向速度的两个分量由度规计量；半径反力不产生绕球心力矩，空间角动量把轨道限制在过心平面。
+
 \Step{方程与推导}
 度规为 $g_{\theta\theta}=R^2,g_{\phi\phi}=R^2\sin^2\theta$。非零联络为 $\Gamma^\theta_{\phi\phi}=-\sin\theta\cos\theta$，$\Gamma^\phi_{\theta\phi}=\Gamma^\phi_{\phi\theta}=\cot\theta$，故
 \[
 \ddot\theta-\sin\theta\cos\theta\dot\phi^2=0,
 \quad\ddot\phi+2\cot\theta\dot\theta\dot\phi=0.
 \]
+\SolutionFigure{ex86}{例86的分析与计算过程}
+
 第二式可积分为 $\sin^2\theta\dot\phi=C$，第一式配合动能守恒确定速度。因为约束反力沿半径，总角动量 $\vect L=\vect r\times m\vect v$ 守恒，$\vect L\cdot\vect r=0$ 表明轨道在一个过球心的固定平面内，因此是大圆。
 
 \Step{从度规计算联络} 用 $\Gamma^i_{jk}=\frac12g^{i\ell}(\partial_jg_{\ell k}+\partial_kg_{\ell j}-\partial_\ell g_{jk})$，只有 $\partial_\theta g_{\phi\phi}=2R^2\sin\theta\cos\theta$ 非零。于是 $\Gamma^\theta_{\phi\phi}=-\sin\theta\cos\theta$，$\Gamma^\phi_{\theta\phi}=\cot\theta$。代 $\ddot q^i+\Gamma^i_{jk}\dot q^j\dot q^k=0$ 时，后一项有两个相同的混合指标项，因而方位角式系数为2。能量 $T=mR^2(\dot\theta^2+\sin^2\theta\dot\phi^2)/2$ 守恒，与角动量平面共同给匀速大圆运动。
@@ -3809,13 +4159,88 @@ T&=\frac12M v_C^2+\frac12\sum_a m_a v_a'^2.
 \TeachingFigure{c5-diagram-62}{同一力学模型可沿受力、广义坐标与正则状态三条路径组织}
 
 
-\section{综合练习与解答}\label{sec:exercises}
+\clearpage\section{综合练习}\label{sec:exercises}
 \subsection{约束、虚功与反力}
 
 \exercise{移动圆周上的实位移}
 \label{tr:c5-1}
 \QuestionStatement{质量 $m$ 的质点限制在以恒速 $v$ 沿 $+x$ 平移的圆周 $(x-vt)^2+y^2=a^2$ 上，法向反力为 $N\vect n$，$\vect n$ 取外法向。分别写虚位移与实位移约束，求反力的虚功和真实功率，说明二者不同的原因。}{tr01}{训练题1的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr01}~中，圆心沿水平箭头移动；同一时刻的切向虚位移垂直反力，真实位移还包含圆心平移。
+\exercise{约束函数缩放与乘数}
+\label{tr:c5-2}
+\QuestionStatement{质点在球面 $f=x^2+y^2+z^2-a^2=0$ 上，反力写为 $\vect R=\lambda\nabla f$。将约束改写为 $\widetilde f=f/(2a)$ 后，求新乘数与原乘数的关系、量纲，以及反力的有向法向分量。}{tr02}{训练题2的条件与模型}
+\exercise{单面绳约束与倒立驻值}
+\label{tr:c5-3}
+\QuestionStatement{质量 $m$ 的小球以长 $l$ 的轻绳连接固定点 $O$，仅受重力。以从竖直向下量起的角 $\theta$ 表示势能 $V=-mgl\cos\theta$。判断 $\theta=\pi$ 能否为真实静平衡；与可推可拉轻杆比较，并说明拉力和稳定性条件。}{tr03}{训练题3的条件与模型}
+
+\subsection{拉格朗日方程与能量积分}
+
+\exercise{滑块摆方程中的抵消}
+\label{tr:c5-4}
+\QuestionStatement{质量 $m_1$ 的水平弹簧滑块悬挂长 $l$、球质量 $m_2$ 的单摆，坐标为滑块位移 $x$ 和从竖直向下量起的角 $\phi$。从 $L_{\dot\phi}=m_2l\dot x\cos\phi+m_2l^2\dot\phi$ 求时间导数及 $L_\phi$，解释角方程中速度交叉项的抵消。}{tr04}{训练题4的条件与模型}
+\exercise{匀转直管中的功率}
+\label{tr:c5-5}
+\QuestionStatement{光滑水平直管绕一端以角速率 $\omega>0$ 转动，质量 $m$ 的球初始距轴 $a$ 且相对静止，在未离管阶段 $r=a\cosh\omega t$。求真实动能变化率、横向反力及其功率，并写出维持匀转装置供能的关系。}{tr05}{训练题5的条件与模型}
+\exercise{一阶速度项是否影响能量}
+\label{tr:c5-6}
+\QuestionStatement{一维系统 $L=m\dot q^2/2+b(q)\dot q-V(q)$，$m>0$，$b,V$ 无显含时间。求共轭动量、速度反解、广义能量、哈密顿函数及运动方程；以全导数解释一次速度项的作用。}{tr06}{训练题6的条件与模型}
+
+\subsection{变分与小振动}
+
+\exercise{固定端点与自然边界条件}
+\label{tr:c5-7}
+\QuestionStatement{求泛函 $I[y]=\int_0^1(y'^2/2-y)\,\dd x$ 的驻值曲线，其中 $y(0)=0$ 固定、$y(1)$ 自由。完整写出欧拉方程、自然边界条件及积分常数，并判断二阶变化的符号。}{tr07}{训练题7的条件与模型}
+\exercise{小振动频率的坐标不变性}
+\label{tr:c5-8}
+\QuestionStatement{系统二次拉格朗日函数 $L_2=a_0\dot q^2/2-kq^2/2$，$a_0,k>0$。用非零常数 $c$ 改为 $Q=cq$，分别求新动能系数、势能系数和频率，证明频率与坐标尺度无关。}{tr08}{训练题8的条件与模型}
+\exercise{二维系统的质量正交}
+\label{tr:c5-9}
+\QuestionStatement{二自由度系统 $M=\operatorname{diag}(m,2m)$、$K=k\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$，$m,k>0$。求两频率和振幅向量，给出质量内积归一化并证明正交；写出正规坐标及模式运动。}{tr09}{训练题9的条件与模型}
+\exercise{重根情况下余子式法的限制}
+\label{tr:c5-10}
+\QuestionStatement{二维系统 $M=mI,K=kI$，$m,k>0$。求久期方程的重根及零空间，判断伴随矩阵一列能否提供两个独立模式；选出一组质量正交模式并写通解。}{tr10}{训练题10的条件与模型}
+
+\subsection{正则结构与哈密顿--雅可比理论}
+
+\exercise{时间相关动量平移}
+\label{tr:c5-11}
+\QuestionStatement{时间相关第二类母函数 $F_2(q,P,t)=qP+f(q,t)$，$f$ 光滑。求新旧变量和新哈密顿函数，并直接消去新变量验证新旧正则方程相容，说明 $f_t$ 的必要性。}{tr11}{训练题11的条件与模型}
+\exercise{一个显含时间的运动积分}
+\label{tr:c5-12}
+\QuestionStatement{自由粒子 $H=p^2/(2m)$。求 $G(q,p,t)=q-pt/m$ 的全时间导数，验证其守恒，计算 $\{G,p\}$；说明显含时间积分与新的独立初始数据之间的关系。}{tr12}{训练题12的条件与模型}
+\exercise{由主函数恢复恒力运动}
+\label{tr:c5-13}
+\QuestionStatement{恒力模型 $H=p^2/(2m)+Fq$，$F$ 为常数（真实力为 $-F$）。以 $S=W(q,E)-Et$ 求主函数、时间参数关系，并按初值 $(q_0,p_0)$ 恢复轨道，说明转折点动量支与 $F=0$ 的极限。}{tr13}{训练题13的条件与模型}
+\exercise{正则变换是否使哈密顿函数更简单}
+\label{tr:c5-14}
+\QuestionStatement{谐振子 $H=p^2/(2m)+m\omega^2q^2/2$ 作正则缩放 $Q=aq,P=p/a$，$a\ne0$。求 $K$，再令 $a=\sqrt{m\omega}$，求相轨道及圆面积，并说明作用量--角变换后的形式。}{tr14}{训练题14的条件与模型}
+
+\subsection{相空间、场论与几何}
+
+\exercise{自由粒子的相体积剪切}
+\label{tr:c5-15}
+\QuestionStatement{自由粒子映射 $q=q_0+p_0t/m,p=p_0$。初始矩形 $0<q_0<a,0<p_0<b$，$a,b>0$，求时刻 $t>0$ 的四个顶点、边界及面积；用雅可比与几何法分别证明结论。}{tr15}{训练题15的条件与模型}
+\exercise{定态密度不意味着所有概率分布相同}
+\label{tr:c5-16}
+\QuestionStatement{谐振子相空间中取 $\rho=Ce^{-\beta H}$，$\beta>0$，求归一化常数并判断是否定态。另取 $H\le E_0$ 的有限椭圆内仅第一象限有非零密度的初区，半轴 $a=\sqrt{2E_0/(m\omega^2)},b=m\omega a$，求其随流运动，区分固定相点密度与沿轨道密度。第二个初态具体取第一象限椭圆区内均匀密度 $\rho_0>0$、区外密度零，并要求总概率为1；不能把随流常量误作固定相点处恒定。}{tr16}{训练题16的条件与模型}
+\exercise{弦模式的总能量}
+\label{tr:c5-17}
+\QuestionStatement{定端均匀弦长 $l$、线密度 $\rho_l$、张力 $\mathcal T$，模式 $u=A\sin(n\pi x/l)\cos\omega_nt$，$\omega_n=(n\pi/l)\sqrt{\mathcal T/\rho_l}$。完整积分动能和势能，求总能量及其随振幅、模式序数的关系。}{tr17}{训练题17的条件与模型}
+\exercise{诺特流的边界与区域守恒}
+\label{tr:c5-18}
+\QuestionStatement{固定空间区域 $\Omega$ 中，荷密度与流满足 $\partial_tj^0+\nabla\cdot\vect j=0$。边界外法向为 $\vect n$，允许出流。求区域总荷 $Q(t)$ 的变化，给出全局守恒的通量条件；区分局部守恒与开区域总荷不变。}{tr18}{训练题18的条件与模型}
+\exercise{球面赤道与极坐标奇点}
+\label{tr:c5-19}
+\QuestionStatement{半径 $R$ 的光滑球面自由质点，初值 $\theta(0)=\pi/2,\dot\theta(0)=0,\phi(0)=\phi_0,\dot\phi(0)=\Omega$。求轨道和速度，验证两测地线方程，并以空间坐标说明赤道轨道和极点坐标奇点。}{tr19}{训练题19的条件与模型}
+\exercise{经典极限的条件}
+\label{tr:c5-20}
+\QuestionStatement{波函数局部写为 $\psi=Ae^{iS/\hbar}$，振幅变化尺度 $l_A$，经典动量量级 $p=|\nabla S|$，质量 $m$。比较量子势与经典动能的量级，求可忽略量子势的条件，说明节点与转折点附近失效的原因。在进行局部尺度比较的区域内先假定 $A>0$、$A$ 足够光滑且 $p>0$；真正的波函数节点指 $A=0$，并非仅指实部过零。}{tr20}{训练题20的条件与模型}
+\clearpage\section*{综合练习详解}\addcontentsline{toc}{section}{综合练习详解}
+\Needspace{12\baselineskip}\subsubsection*{第1题详解：移动圆周上的实位移}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr01}，解答图\ref{fig:solution-tr01}展示移动约束上的切向虚位移、法向反力及圆心速度；反力虚功为零，并不意味着反力对含平动贡献的真实速度做功为零。
+ 在本题模型中，圆心沿水平箭头移动；同一时刻的切向虚位移垂直反力，真实位移还包含圆心平移。
+
+
 \SolutionFigure{tr01}{训练题1的分析与计算过程}
 \Step{方程与推导}
 固定 $t$ 时 $(x-vt)\delta x+y\delta y=0$，虚位移为圆周切向。实位移满足 $(x-vt)(\dd x-v\dd t)+y\dd y=0$，有圆心移动项。设法向单位矢量 $\vect n=((x-vt),y)/a$，反力为 $N\vect n$，则虚功为零，而实际功率为 $N\vect n\cdot\vect v_{
@@ -3823,213 +4248,260 @@ T&=\frac12M v_C^2+\frac12\sum_a m_a v_a'^2.
 
 \Step{分离切向与牵连速度} 令 $\vect r=(vt,0)+a(\cos\theta,\sin\theta)$，虚位移为 $a(-\sin\theta,\cos\theta)\delta\theta$；真实速度多出 $(v,0)$。反力与前者点积为零，与后者点积只剩 $Nv\cos\theta$。若 $v=0$ 或当时 $n_x=0$，实际功率也为零，但这只是特定情形。
 
-\exercise{约束函数缩放与乘数}
-\label{tr:c5-2}
-\QuestionStatement{质点在球面 $f=x^2+y^2+z^2-a^2=0$ 上，反力写为 $\vect R=\lambda\nabla f$。将约束改写为 $\widetilde f=f/(2a)$ 后，求新乘数与原乘数的关系、量纲，以及反力的有向法向分量。}{tr02}{训练题2的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr02}~中，球面外法向与半径同向；改变约束函数的尺度只改变梯度长度，不改变真实反力。
+
+\Needspace{12\baselineskip}\subsubsection*{第2题详解：约束函数缩放与乘数}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr02}，解答图\ref{fig:solution-tr02}展示同一球面的两种约束梯度；梯度长度改变时，乘数的数值和量纲必须相应改变，物理反力本身不变。
+ 在本题模型中，球面外法向与半径同向；改变约束函数的尺度只改变梯度长度，不改变真实反力。
+
+
 \SolutionFigure{tr02}{训练题2的分析与计算过程}
 \Step{方程与推导}
 $\nabla\widetilde f=\nabla f/(2a)$，同一反力要求 $\widetilde\lambda=2a\lambda$。原乘数单位为力除以长度，新乘数单位为力。球面外法向 $\vect n=\vect r/a$，有 $R_n=2a\lambda=\widetilde\lambda$。不是任意乘数都等于反力大小。
 
 \Step{以同一真实力比较乘数} 两种写法分别为 $2\lambda\vect r$ 和 $\widetilde\lambda\vect r/a$。由于球面 $a>0$、$\vect r\ne0$，逐分量相等给 $\widetilde\lambda=2a\lambda$。有向分量可为正或负，反力大小为 $|2a\lambda|$；不能将有向乘数未经取绝对值便称为力的大小。
 
-\exercise{单面绳约束与倒立驻值}
-\label{tr:c5-3}
-\QuestionStatement{质量 $m$ 的小球以长 $l$ 的轻绳连接固定点 $O$，仅受重力。以从竖直向下量起的角 $\theta$ 表示势能 $V=-mgl\cos\theta$。判断 $\theta=\pi$ 能否为真实静平衡；与可推可拉轻杆比较，并说明拉力和稳定性条件。}{tr03}{训练题3的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr03}~中，倒立绳球的重力和绳张力都指向下方，无法静力平衡；换刚杆后可由向上推力提供平衡。
+
+\Needspace{12\baselineskip}\subsubsection*{第3题详解：单面绳约束与倒立驻值}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr03}，解答图\ref{fig:solution-tr03}展示倒立位置轻绳与刚杆能提供的反力方向；势能的数学驻点不能单独保证单面约束下存在真实静平衡。
+ 在本题模型中，倒立绳球的重力和绳张力都指向下方，无法静力平衡；换刚杆后可由向上推力提供平衡。
+
+
 \SolutionFigure{tr03}{训练题3的分析与计算过程}
 \Step{方程与推导}
 此位置在悬点正上方，重力与绳拉力均向下，没有向上真实力平衡，因此绳必须松弛。形式上的 $V'=0$ 没有通过拉力非负条件。若用可压的刚性杆，杆向上推力可以实现倒立平衡，但它不稳定。这说明约束类型与驻值条件必须同时检查。
 
 \Step{绳长限制和势能二阶项} 绳的几何条件实际上是 $|\vect r|\le l$，只有张紧阶段可取等号，且张力 $T\ge0$。倒立静止径向方程给 $T=-mg$，违反单面约束条件。改刚杆后允许轴向压缩推力，但令 $\theta=\pi+\eta$，有 $V=mgl-mgl\eta^2/2+O(\eta^4)$，任意小偏离降低势能，故不稳定。
-\subsection{拉格朗日方程与能量积分}
+\Needspace{12\baselineskip}\subsubsection*{第4题详解：滑块摆方程中的抵消}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr04}，解答图\ref{fig:solution-tr04}展示摆球速度的两份来源及其非正交合成；对动能求导时必须保留随摆角变化的速度耦合，之后再检查交叉项的抵消。
+ 在本题模型中，悬点速度在摆切线方向上的投影随角度改变，时间导数与动能的角度偏导含同一交叉项。
 
-\exercise{滑块摆方程中的抵消}
-\label{tr:c5-4}
-\QuestionStatement{质量 $m_1$ 的水平弹簧滑块悬挂长 $l$、球质量 $m_2$ 的单摆，坐标为滑块位移 $x$ 和从竖直向下量起的角 $\phi$。从 $L_{\dot\phi}=m_2l\dot x\cos\phi+m_2l^2\dot\phi$ 求时间导数及 $L_\phi$，解释角方程中速度交叉项的抵消。}{tr04}{训练题4的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr04}~中，悬点速度在摆切线方向上的投影随角度改变，时间导数与动能的角度偏导含同一交叉项。
+
 \SolutionFigure{tr04}{训练题4的分析与计算过程}
 \Step{方程与推导}
 时间导数含 $-m_2l\dot x\dot\phi\sin\phi$，而 $L_\phi=-m_2l\dot x\dot\phi\sin\phi-m_2gl\sin\phi$ 含相同项。在 $\dd L_{\dot\phi}/\dd t-L_\phi$ 中它们相减抵消，剩余 $m_2l^2\ddot\phi+m_2l\ddot x\cos\phi+m_2gl\sin\phi=0$。如果漏求动能对 $\phi$ 的偏导，就会错误保留该项。
 
 \Step{乘积法则逐项写出} $\dd L_{\dot\phi}/\dd t=m_2l\ddot x\cos\phi-m_2l\dot x\dot\phi\sin\phi+m_2l^2\ddot\phi$。取 $L$ 中角度相关的动能交叉项和重力项，得 $L_\phi=-m_2l\dot x\dot\phi\sin\phi-m_2gl\sin\phi$。两式相减后除以 $m_2l>0$，即为图中最终方程。角度来自竖直向下这一约定决定重力项符号。
 
-\exercise{匀转直管中的功率}
-\label{tr:c5-5}
-\QuestionStatement{光滑水平直管绕一端以角速率 $\omega>0$ 转动，质量 $m$ 的球初始距轴 $a$ 且相对静止，在未离管阶段 $r=a\cosh\omega t$。求真实动能变化率、横向反力及其功率，并写出维持匀转装置供能的关系。}{tr05}{训练题5的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr05}~中，反力沿管的横向，与牵连速度同向；它对相对径向位移不作功，却向球输送真实能量。
-\SolutionFigure{tr05}{训练题5的分析与计算过程}
+
+\Needspace{12\baselineskip}\subsubsection*{第5题详解：匀转直管中的功率}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr05}，解答图\ref{fig:solution-tr05}展示横向反力与相对、牵连速度的几何关系；管内自由滑动时反力的相对功率为零，但维持转速的装置仍向珠子传递能量。
+ 在本题模型中，反力沿管的横向，与牵连速度同向；它对相对径向位移不作功，却向球输送真实能量。
+
 \Step{方程与推导}
 $E=m(\dot r^2+\omega^2r^2)/2$，利用 $\ddot r=\omega^2r$，$\dot E=2m\omega^2r\dot r$。横向反力 
 \[N=m(r\ddot\phi+2\dot r\dot\phi)=2m\omega\dot r,\]
+\SolutionFigure{tr05}{训练题5的分析与计算过程}
+
 其作用点的横向速度 $\omega r$，功率 $N\omega r$ 正好等于前式。径向运动看似受离心驱动，真实能量来自维持管匀转的装置。
 
 \Step{用显式时间解表达功率} $\dot r=a\omega\sinh\omega t$，故 $N=2ma\omega^2\sinh\omega t$，
 \[\dot E=2ma^2\omega^3\cosh\omega t\sinh\omega t.\]
 对球，管约束力矩为 $Nr$；维持角速率的驱动提供功率 $Nr\omega$。此处管的理想驱动忽略自身惯性和损耗，若计管的动能则应把它一并纳入总能量。
 
-\exercise{一阶速度项是否影响能量}
-\label{tr:c5-6}
-\QuestionStatement{一维系统 $L=m\dot q^2/2+b(q)\dot q-V(q)$，$m>0$，$b,V$ 无显含时间。求共轭动量、速度反解、广义能量、哈密顿函数及运动方程；以全导数解释一次速度项的作用。}{tr06}{训练题6的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr06}~中，相平面纵坐标在每个位置平移 $b(q)$；机械速度取决于 $p-b$，不能把新的共轭动量直接除以质量。
+
+\Needspace{12\baselineskip}\subsubsection*{第6题详解：一阶速度项是否影响能量}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr06}，解答图\ref{fig:solution-tr06}展示共轭动量与机械动量的差；一次速度项平移相空间纤维，却可写为坐标函数的全时间导数，因此不改变本题牛顿运动。
+ 在本题模型中，相平面纵坐标在每个位置平移 $b(q)$；机械速度取决于 $p-b$，不能把新的共轭动量直接除以质量。
+
+
 \SolutionFigure{tr06}{训练题6的分析与计算过程}
 \Step{方程与推导}
 $p=m\dot q+b(q)$，$H=(p-b)^2/(2m)+V$，广义能量 $\mathcal E=m\dot q^2/2+V$。拉格朗日方程中 $b'(q)\dot q$ 两次出现并抵消，得到 $m\ddot q+V'=0$。一维 $b(q)\dot q$ 是 $\dd[\int b(q)\dd q]/\dd t$；它改变动量而不改变轨道。多维的一形式若不是全微分，则可产生真实的陀螺或磁场项。
 
 \Step{全导数与正则方程消元} $\mathcal E=\dot q(m\dot q+b)-L=m\dot q^2/2+V$，一次速度项恰好消去。令 $B(q)=\int^q b(u)\dd u$，则 $b\dot q=\dd B/\dd t$，固定端点作用量只改变边界常数。正则式为 $\dot q=(p-b)/m$，$\dot p=(p-b)b'/m-V'$；对 $p=m\dot q+b$ 求导后 $b'\dot q$ 再次相消，得到 $m\ddot q=-V'$。
-\subsection{变分与小振动}
+\Needspace{12\baselineskip}\subsubsection*{第7题详解：固定端点与自然边界条件}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr07}，解答图\ref{fig:solution-tr07}展示固定左端与可竖直变分的右端；边界项中自由的端点变分不能被提前设为零，它给出额外的自然边界条件。
+ 在本题模型中，左端位置固定，右端仅在竖向自由；右端任意变分使斜率为零，而不是把该端位置额外固定。
 
-\exercise{固定端点与自然边界条件}
-\label{tr:c5-7}
-\QuestionStatement{求泛函 $I[y]=\int_0^1(y'^2/2-y)\,\dd x$ 的驻值曲线，其中 $y(0)=0$ 固定、$y(1)$ 自由。完整写出欧拉方程、自然边界条件及积分常数，并判断二阶变化的符号。}{tr07}{训练题7的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr07}~中，左端位置固定，右端仅在竖向自由；右端任意变分使斜率为零，而不是把该端位置额外固定。
+
 \SolutionFigure{tr07}{训练题7的分析与计算过程}
 \Step{方程与推导}
 欧拉方程 $y''+1=0$，一般解 $y=-x^2/2+Cx+D$。$y(0)=0$ 给 $D=0$。端点1的边界项为 $y'(1)\delta y(1)$，变分任意，故 $y'(1)=0$，得到 $C=1$，$y=x-x^2/2$。若错误地令端点1变分也为零，会漏掉决定 $C$ 的条件。
 
 \Step{一阶边界项及二阶变化} 直接变分，$\delta I=[y'\delta y]_0^1-\int_0^1(y''+1)\delta y\dd x$。左端变分为零，右端任意，分别给内部式与 $y'(1)=0$。对驻值曲线加任意满足 $\eta(0)=0$ 的扰动，$I[y+\eta]-I[y]=\frac12\int_0^1\eta'^2\dd x\ge0$；等号要求常数扰动并满足左端零，故只能 $\eta=0$，是严格全局最小。
 
-\exercise{小振动频率的坐标不变性}
-\label{tr:c5-8}
-\QuestionStatement{系统二次拉格朗日函数 $L_2=a_0\dot q^2/2-kq^2/2$，$a_0,k>0$。用非零常数 $c$ 改为 $Q=cq$，分别求新动能系数、势能系数和频率，证明频率与坐标尺度无关。}{tr08}{训练题8的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr08}~中，坐标轴尺度改变时，同一物理振幅的数字变化；动能与势能的二次系数按同一比例变换。
+
+\Needspace{12\baselineskip}\subsubsection*{第8题详解：小振动频率的坐标不变性}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr08}，解答图\ref{fig:solution-tr08}展示同一振动在两种坐标尺度中的时间曲线；动能、势能系数必须一起变换，不能只改其中一个后比较频率。
+ 在本题模型中，坐标轴尺度改变时，同一物理振幅的数字变化；动能与势能的二次系数按同一比例变换。
+
+
 \SolutionFigure{tr08}{训练题8的分析与计算过程}
 \Step{方程与推导}
 $L_2=(a_0/c^2)\dot Q^2/2-(k/c^2)Q^2/2$，所以 $\omega^2=(k/c^2)/(a_0/c^2)=k/a_0$。只变势能系数而忘记动能系数会得到错误频率。坐标量纲改变时两个系数的量纲也同时改变。
 
 \Step{方程与物理周期} 原式为 $a_0\ddot q+kq=0$。以 $Q=cq$ 乘回有 $a_0\ddot Q+kQ=0$；若直接从变换后的 $L_2$ 求导，两项均多同一 $1/c^2$，消去后相同。周期均为 $2\pi\sqrt{a_0/k}$，非零 $c$ 的符号只改变坐标正方向。
 
-\exercise{二维系统的质量正交}
-\label{tr:c5-9}
-\QuestionStatement{二自由度系统 $M=\operatorname{diag}(m,2m)$、$K=k\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$，$m,k>0$。求两频率和振幅向量，给出质量内积归一化并证明正交；写出正规坐标及模式运动。}{tr09}{训练题9的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr09}~中，两块质量不同，普通坐标长度不再是正确的模式内积；质量矩阵决定两振幅向量的正交权重。
+
+\Needspace{12\baselineskip}\subsubsection*{第9题详解：二维系统的质量正交}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr09}，解答图\ref{fig:solution-tr09}展示质量加权坐标中的正交振型；先用质量内积归一化，再以振型矩阵投影，才能得到互不耦合的正规坐标。
+ 在本题模型中，两块质量不同，普通坐标长度不再是正确的模式内积；质量矩阵决定两振幅向量的正交权重。
+
+
 \SolutionFigure{tr09}{训练题9的分析与计算过程}
 \Step{方程与推导}
 令 $\lambda=m\omega^2/k$，久期方程 $(2-\lambda)(2-2\lambda)-1=0$，即 $2\lambda^2-6\lambda+3=0$，根 $\lambda_\pm=(3\pm\sqrt3)/2$。取 $a_\pm=(1,2-\lambda_\pm)$。两向量的 $M$ 内积为 $m[1+2(2-\lambda_+)(2-\lambda_-)]=m(1-1)=0$。质量归一化后的模式及运动展开如下。
 
 \Step{归一化与完整模式解} 记 $a_\pm=(1,2-\lambda_\pm)^{\mathsf T}$，$N_\pm=\sqrt{m[1+2(2-\lambda_\pm)^2]}$，定义 $e_\pm=a_\pm/N_\pm$。则 $e_i^{\mathsf T}Me_j=\delta_{ij}$，$q=e_+Q_++e_-Q_-$，$Q_\pm=e_\pm^{\mathsf T}Mq$。代入二次型得 $L_2=\frac12\sum_\pm(\dot Q_\pm^2-\omega_\pm^2Q_\pm^2)$，故 $Q_\pm=Q_{\pm0}\cos\omega_\pm t+\dot Q_{\pm0}\sin\omega_\pm t/\omega_\pm$。未归一化的 $a_\pm^{\mathsf T}Mq$ 不能直接作为这一单位质量展开的坐标。
 
-\exercise{重根情况下余子式法的限制}
-\label{tr:c5-10}
-\QuestionStatement{二维系统 $M=mI,K=kI$，$m,k>0$。求久期方程的重根及零空间，判断伴随矩阵一列能否提供两个独立模式；选出一组质量正交模式并写通解。}{tr10}{训练题10的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr10}~中，二维各向同性振子的两个坐标方向等价；在重根处整个平面都是本征子空间，单列余子式不能选出基。
+
+\Needspace{12\baselineskip}\subsubsection*{第10题详解：重根情况下余子式法的限制}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr10}，解答图\ref{fig:solution-tr10}展示简并本征空间中的两组可选基；重根不意味着只剩一个模式，也不能用伴随矩阵中重复或为零的一列代替独立基。
+ 在本题模型中，二维各向同性振子的两个坐标方向等价；在重根处整个平面都是本征子空间，单列余子式不能选出基。
+
+
 \SolutionFigure{tr10}{训练题10的分析与计算过程}
 \Step{方程与推导}
 $\omega^2=k/m$ 时 $K-\omega^2M$ 为零矩阵，伴随矩阵也全为零。零空间为整个平面，应选任意两条 $M$ 正交独立方向，例如坐标轴。余子式法要求秩仅亏1；重根时若机械套用，反而会得到零向量。
 
 \Step{二维本征空间的选择} 久期行列式为 $(k-m\omega^2)^2$。重根处任选 $e_1=(1,0)/\sqrt m,e_2=(0,1)/\sqrt m$，使 $e_i^{\mathsf T}Me_j=\delta_{ij}$。每个原坐标独立满足 $\ddot q_i+(k/m)q_i=0$，因此 $q_i=q_{i0}\cos\omega t+\dot q_{i0}\sin\omega t/\omega$。任何常量正交旋转后的基同样可用，重根不减少模式数。
-\subsection{正则结构与哈密顿--雅可比理论}
+\Needspace{12\baselineskip}\subsubsection*{第11题详解：时间相关动量平移}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr11}，解答图\ref{fig:solution-tr11}展示时间相关动量平移在两时刻的位置；相点坐标不变并不代表哈密顿函数不变，附加时间偏导项是方程相容的必要部分。
+ 在本题模型中，动量平移既可随位置也可随时间改变；相空间变换图中的竖向位移改变时间导数，须由 $f_t$ 抵消。
 
-\exercise{时间相关动量平移}
-\label{tr:c5-11}
-\QuestionStatement{时间相关第二类母函数 $F_2(q,P,t)=qP+f(q,t)$，$f$ 光滑。求新旧变量和新哈密顿函数，并直接消去新变量验证新旧正则方程相容，说明 $f_t$ 的必要性。}{tr11}{训练题11的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr11}~中，动量平移既可随位置也可随时间改变；相空间变换图中的竖向位移改变时间导数，须由 $f_t$ 抵消。
+
 \SolutionFigure{tr11}{训练题11的分析与计算过程}
 \Step{方程与推导}
 $p=P+f_q,Q=q$，$K=H(Q,P+f_Q,t)+f_t$。这与拉格朗日函数加全导数改变共轭动量的结构一致。额外 $f_t$ 使新旧正则方程在时间相关变换下相容；若 $f$ 与时间无关，该项消失。
 
 \Step{时间偏导的抵消} $\dot Q=K_P=H_p$，$\dot P=-K_Q=-H_q-H_p f_{QQ}-f_{tQ}$。另一方面 $p=P+f_Q$ 给 $\dot p=\dot P+f_{QQ}\dot Q+f_{Qt}=-H_q$，混合偏导相等使最后两项抵消。省掉 $f_t$ 后会残留 $f_{Qt}$，从而破坏原动力学。
 
-\exercise{一个显含时间的运动积分}
-\label{tr:c5-12}
-\QuestionStatement{自由粒子 $H=p^2/(2m)$。求 $G(q,p,t)=q-pt/m$ 的全时间导数，验证其守恒，计算 $\{G,p\}$；说明显含时间积分与新的独立初始数据之间的关系。}{tr12}{训练题12的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr12}~中，自由粒子相流沿水平方向剪切；从当前位置减去已行距离 $pt/m$ 就得到不变的初始位置。
+
+\Needspace{12\baselineskip}\subsubsection*{第12题详解：一个显含时间的运动积分}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr12}，解答图\ref{fig:solution-tr12}展示自由粒子世界线及其初始截距；显含时间的运动积分仍可沿轨道恒定，但它只是重写已有初始数据。
+ 在本题模型中，自由粒子相流沿水平方向剪切；从当前位置减去已行距离 $pt/m$ 就得到不变的初始位置。
+
+
 \SolutionFigure{tr12}{训练题12的分析与计算过程}
 \Step{方程与推导}
 $G_t=-p/m$，$\{G,H\}=p/m$，两者相加为零；$\{G,p\}=1$。泊松定理给出的这个常数虽为运动积分，却没有提供新的独立初始数据。将“运动积分”局限为与 $H$ 括号为零会漏掉 $G$。
 
 \Step{沿真实轨道代入} 自由运动为 $p=p_0,q=q_0+p_0t/m$，因此 $G=q_0$。括号 $\{G,p\}=G_q=1$，是与初值无关的常数函数；其梯度为零，不能增加独立积分。全导数规则 $\dot G=G_t+\{G,H\}$ 必须保留显含时间项。
 
-\exercise{由主函数恢复恒力运动}
-\label{tr:c5-13}
-\QuestionStatement{恒力模型 $H=p^2/(2m)+Fq$，$F$ 为常数（真实力为 $-F$）。以 $S=W(q,E)-Et$ 求主函数、时间参数关系，并按初值 $(q_0,p_0)$ 恢复轨道，说明转折点动量支与 $F=0$ 的极限。}{tr13}{训练题13的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr13}~中，真实力沿势能增加的反方向，动量随时间线性改变；相轨道在转折点由正动量支接到负支。
-\SolutionFigure{tr13}{训练题13的分析与计算过程}
+
+\Needspace{12\baselineskip}\subsubsection*{第13题详解：由主函数恢复恒力运动}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr13}，解答图\ref{fig:solution-tr13}展示恒力能量曲线的两条动量支及其拼接；转折点后仍沿同一相轨道运动，特性函数不能始终只取正平方根。
+ 在本题模型中，真实力沿势能增加的反方向，动量随时间线性改变；相轨道在转折点由正动量支接到负支。
+
 \Step{方程与推导}
 分离方程给 $W_q=\pm\sqrt{2m(E-Fq)}$，因此
 \[
 W(q,E)=\int^q\pm\sqrt{2m(E-Fu)}\dd u,\qquad
 \beta=S_E=\int^q\frac{\pm m\dd u}{\sqrt{2m(E-Fu)}}-t.
 \]
+\SolutionFigure{tr13}{训练题13的分析与计算过程}
+
 第二式给时间与位置关系。直接把初值常数整理为 $p=p_0-Ft$、$q=q_0+p_0t/m-Ft^2/(2m)$，代回 $H$ 可验证能量不变。转折点应改变动量根号的符号，不能让一个固定正根覆盖整个运动。
 
 \Step{主函数积分与转折衔接} $F\ne0$ 时，在符号 $\sigma=\operatorname{sgn}p$ 固定的支上，$W=-\sigma[2m(E-Fq)]^{3/2}/(3mF)$，略去只与参数有关的常数。于是 $W_E=-p/F$，$\beta=-p/F-t$，即 $p=-F(t+\beta)$；由初值 $\beta=-p_0/F$ 恢复恒力解。$F=0$ 时单独取 $W=pq,E=p^2/(2m)$，恢复匀速运动，不能把含 $1/F$ 的表达直接代零。
 
-\exercise{正则变换是否使哈密顿函数更简单}
-\label{tr:c5-14}
-\QuestionStatement{谐振子 $H=p^2/(2m)+m\omega^2q^2/2$ 作正则缩放 $Q=aq,P=p/a$，$a\ne0$。求 $K$，再令 $a=\sqrt{m\omega}$，求相轨道及圆面积，并说明作用量--角变换后的形式。}{tr14}{训练题14的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr14}~中，对位置和动量作互逆缩放，把椭圆的两半轴统一；圆面积仍等于原相椭圆面积。
+
+\Needspace{12\baselineskip}\subsubsection*{第14题详解：正则变换是否使哈密顿函数更简单}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr14}，解答图\ref{fig:solution-tr14}展示正则缩放前后的相椭圆与相圆；坐标和动量作互逆尺度变化，所以面积及作用量保持不变。
+ 在本题模型中，对位置和动量作互逆缩放，把椭圆的两半轴统一；圆面积仍等于原相椭圆面积。
+
+
 \SolutionFigure{tr14}{训练题14的分析与计算过程}
 \Step{方程与推导}
 $K=a^2P^2/(2m)+m\omega^2Q^2/(2a^2)$。所选 $a$ 给 $K=\omega(P^2+Q^2)/2$，把椭圆轨道变成圆形。它仍是两条耦合的一阶方程；进一步用作用量--角变量才把 $K$ 化为 $\omega J$，使角坐标循环。不同变换可以服务于图像、尺度或积分求解，不必只追求一个目标。
 
 \Step{圆面积与作用量} $Q^2+P^2=2E/\omega$，圆半径为 $\sqrt{2E/\omega}$，面积为 $2\pi E/\omega$。因缩放雅可比为1，它与原椭圆面积相等。作用量 $J=(2\pi)^{-1}\oint p\dd q=E/\omega$，进一步改用角变量 $\vartheta$ 后 $K=\omega J$，$\dot J=0,\dot\vartheta=\omega$；原点 $E=0$ 时角无定义。
-\subsection{相空间、场论与几何}
+\Needspace{12\baselineskip}\subsubsection*{第15题详解：自由粒子的相体积剪切}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr15}，解答图\ref{fig:solution-tr15}展示自由流对初始矩形的剪切；四个顶点沿各自恒定动量移动，面积不变而形状和固定位置上的覆盖范围改变。
+ 在本题模型中，上下边动量不变，较高动量的顶边移动得更多；斜边是随流物质边界，面积应沿斜边围成的区域计算。
 
-\exercise{自由粒子的相体积剪切}
-\label{tr:c5-15}
-\QuestionStatement{自由粒子映射 $q=q_0+p_0t/m,p=p_0$。初始矩形 $0<q_0<a,0<p_0<b$，$a,b>0$，求时刻 $t>0$ 的四个顶点、边界及面积；用雅可比与几何法分别证明结论。}{tr15}{训练题15的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr15}~中，上下边动量不变，较高动量的顶边移动得更多；斜边是随流物质边界，面积应沿斜边围成的区域计算。
-\SolutionFigure{tr15}{训练题15的分析与计算过程}
 \Step{方程与推导}
 雅可比矩阵为 
 \[\begin{pmatrix}1&t/m\\0&1\end{pmatrix},\]
+\SolutionFigure{tr15}{训练题15的分析与计算过程}
+
 行列式1。区域变成边界 $q-pt/m=0,a$、$p=0,b$ 的平行四边形，面积仍为 $ab$，其水平宽度的外接矩形可增加。外接面积与随流区域面积不是同一量。
 
 \Step{顶点和直接几何面积} 四顶点由初区四角映射，依次为 \[(0,0),\quad(a,0),\quad(a+bt/m,b),\quad(bt/m,b).\]两条水平边仍长 $a$、竖直间距为 $b$，所以平行四边形面积为 $ab$；也可积分 $\int_0^b[(a+pt/m)-(pt/m)]\dd p=ab$。外接矩形面积为 $(a+bt/m)b$，它包含不属于物质初区的空白。
 
-\exercise{定态密度不意味着所有概率分布相同}
-\label{tr:c5-16}
-\QuestionStatement{谐振子相空间中取 $\rho=Ce^{-\beta H}$，$\beta>0$，求归一化常数并判断是否定态。另取 $H\le E_0$ 的有限椭圆内仅第一象限有非零密度的初区，半轴 $a=\sqrt{2E_0/(m\omega^2)},b=m\omega a$，求其随流运动，区分固定相点密度与沿轨道密度。}{tr16}{训练题16的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr16}~中，完整能量壳上的指数分布对转动不变，单个象限的初区则随轨道旋转，沿流密度仍保持。
+
+\Needspace{12\baselineskip}\subsubsection*{第16题详解：定态密度不意味着所有概率分布相同}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr16}，解答图\ref{fig:solution-tr16}展示缩放相平面中的扇区随振子流作顺时针转动；沿流密度和面积保持不变，固定相点处的密度却可能随扇区经过而改变。
+ 在本题模型中，完整能量壳上的指数分布对转动不变，单个象限的初区则随轨道旋转，沿流密度仍保持。
+
+
 \SolutionFigure{tr16}{训练题16的分析与计算过程}
 \Step{方程与推导}
 第一种分布 $\{\rho,H\}=C(-\beta)e^{-\beta H}\{H,H\}=0$，故定态，$C$ 由归一化决定。第二种分布随相点绕轨道转动，固定位置处密度发生改变；沿流密度仍保持。刘维尔定理不把任意初态立即变成热平衡。
 
 \Step{归一化与相区转动} 高斯积分给 $\int e^{-\beta H}\dd q\dd p=\sqrt{2\pi/(\beta m\omega^2)}\sqrt{2\pi m/\beta}=2\pi/(\beta\omega)$，因此 $C=\beta\omega/(2\pi)$。任意初密度满足 $\rho_t(q,p)=\rho_0(\Phi_{-t}(q,p))$；在缩放相坐标 $Q=\sqrt{m\omega}q,P=p/\sqrt{m\omega}$ 中，象限区域的两条径向边顺时针旋转 $\omega t$，边界处的跃变也随流移动。相流保面积不意味着每个固定相点的密度不随时间改变。
 
-\exercise{弦模式的总能量}
-\label{tr:c5-17}
-\QuestionStatement{定端均匀弦长 $l$、线密度 $\rho_l$、张力 $\mathcal T$，模式 $u=A\sin(n\pi x/l)\cos\omega_nt$，$\omega_n=(n\pi/l)\sqrt{\mathcal T/\rho_l}$。完整积分动能和势能，求总能量及其随振幅、模式序数的关系。}{tr17}{训练题17的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr17}~中，定端正弦振型的平方空间积分为 $l/2$；动能与势能的时间互补使总能量保持不变。
-\SolutionFigure{tr17}{训练题17的分析与计算过程}
+
+\Needspace{12\baselineskip}\subsubsection*{第17题详解：弦模式的总能量}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr17}，解答图\ref{fig:solution-tr17}展示驻波位移极值与平衡形状时的两种状态；前者动能为零、后者弹性势能为零，各弦元速度的正负还决定机械横向动量。
+ 在本题模型中，定端正弦振型的平方空间积分为 $l/2$；动能与势能的时间互补使总能量保持不变。
+
 \Step{方程与推导}
 $u_t=-A\omega_n\sin(n\pi x/l)\sin\omega_nt$，$u_x=A(n\pi/l)\cos(n\pi x/l)\cos\omega_nt$。两平方在 $0,l$ 上的积分均为 $l/2$，且 $\mathcal T(n\pi/l)^2=\rho_l\omega_n^2$，所以 $E=\rho_llA^2\omega_n^2/4$，时间因子相加为1。固定幅度时高阶模式能量较高；给定相同能量时振幅反比于频率。
 \newpage
 
 \Step{两项积分与模式序数} 
 \[T=\frac12\rho_lA^2\omega_n^2\sin^2\omega_nt\int_0^l\sin^2(n\pi x/l)\dd x,\]
+\SolutionFigure{tr17}{训练题17的分析与计算过程}
+
 
 \[V=\frac12\mathcal T A^2(n\pi/l)^2\cos^2\omega_nt\int_0^l\cos^2(n\pi x/l)\dd x.\]
 各积分为 $l/2$；由 $\mathcal T(n\pi/l)^2=\rho_l\omega_n^2$，两项系数相同。固定 $A$ 时 $E\propto n^2$；固定 $E$ 时 $A\propto1/n$。
 
-\exercise{诺特流的边界与区域守恒}
-\label{tr:c5-18}
-\QuestionStatement{固定空间区域 $\Omega$ 中，荷密度与流满足 $\partial_tj^0+\nabla\cdot\vect j=0$。边界外法向为 $\vect n$，允许出流。求区域总荷 $Q(t)$ 的变化，给出全局守恒的通量条件；区分局部守恒与开区域总荷不变。}{tr18}{训练题18的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr18}~中，边界外法向规定正出流，区域内总荷的减少量恰等于净流出量；局部无源并不关闭边界。
+
+\Needspace{12\baselineskip}\subsubsection*{第18题详解：诺特流的边界与区域守恒}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr18}，解答图\ref{fig:solution-tr18}展示固定区域的外法向通量；局部连续方程只保证流失量与边界通量相配，开区域中的总荷一般不保持常量。
+ 在本题模型中，边界外法向规定正出流，区域内总荷的减少量恰等于净流出量；局部无源并不关闭边界。
+
+
 \SolutionFigure{tr18}{训练题18的分析与计算过程}
 \Step{方程与推导}
 积分与散度定理给 $\dot Q=-\oint\vect j\cdot\vect n\dd S$，正净出流使 $Q$ 减少。局部守恒说明荷没有在体积内凭空产生或消失，不意味着某个开区域的荷不变。闭系统或包含全部流出部分的更大系统才可能有相应总荷守恒。
 
 \Step{积分守恒式的符号} 固定区域可把时间导数移入体积分，$\dot Q=\int_\Omega\partial_tj^0\dd V=-\int_\Omega\nabla\cdot\vect j\dd V$。散度定理给外法向通量；若净出流为常数 $\Phi>0$，则在该通量成立的时间段内 $Q(t)=Q(0)-\Phi t$。总荷保持的条件是边界净通量为零；逐点零通量是充分但非必要条件。
 
-\exercise{球面赤道与极坐标奇点}
-\label{tr:c5-19}
-\QuestionStatement{半径 $R$ 的光滑球面自由质点，初值 $\theta(0)=\pi/2,\dot\theta(0)=0,\phi(0)=\phi_0,\dot\phi(0)=\Omega$。求轨道和速度，验证两测地线方程，并以空间坐标说明赤道轨道和极点坐标奇点。}{tr19}{训练题19的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr19}~中，赤道是过球心平面的截线，速度沿其切向；极点处方位角不唯一与真实运动奇异是不同问题。
+
+\Needspace{12\baselineskip}\subsubsection*{第19题详解：球面赤道与极坐标奇点}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr19}，解答图\ref{fig:solution-tr19}展示球心、轨道大圆及角动量法向；法向加速度维持球面约束，球面联络方程在坐标极点的奇性不表示空间轨道奇异。
+ 在本题模型中，赤道是过球心平面的截线，速度沿其切向；极点处方位角不唯一与真实运动奇异是不同问题。
+
+
 \SolutionFigure{tr19}{训练题19的分析与计算过程}
 \Step{方程与推导}
 第一测地线方程因 $\cos\theta=0$ 给 $\ddot\theta=0$；第二式给 $\ddot\phi=0$，所以 $\phi=\phi_0+\Omega t$，是匀速赤道大圆。极点处 $\phi$ 方向不唯一，$\cot\theta$ 的发散属于球坐标奇点；改用不奇异的局部坐标或空间矢量轨道即可描述通过极点的运动。
 
 \Step{空间速度和法向加速度} 写 $\vect r=R(\cos(\phi_0+\Omega t),\sin(\phi_0+\Omega t),0)$，得 $|\vect v|=R|\Omega|$、$\ddot{\vect r}=-\Omega^2\vect r$，加速度完全法向，切向为零。总角动量沿固定 $z$ 轴；$\Omega=0$ 退化为静止点。任一经过极点的大圆同样可用旋转后的空间正交基写出，无需在极点强行指定唯一 $\phi$。
 
-\exercise{经典极限的条件}
-\label{tr:c5-20}
-\QuestionStatement{波函数局部写为 $\psi=Ae^{iS/\hbar}$，振幅变化尺度 $l_A$，经典动量量级 $p=|\nabla S|$，质量 $m$。比较量子势与经典动能的量级，求可忽略量子势的条件，说明节点与转折点附近失效的原因。}{tr20}{训练题20的条件与模型}
-\solution \Step{坐标、方向与模型关系} 图~\ref{fig:solution-tr20}~中，振幅包络和快速变化相位有不同空间尺度；波长远短于包络尺度时，量子势才可相对经典动能忽略。
+
+\Needspace{12\baselineskip}\subsubsection*{第20题详解：经典极限的条件}
+\solution \Step{坐标、方向与模型关系}
+结合题图\ref{fig:question-tr20}，解答图\ref{fig:solution-tr20}展示缓变包络与快速相位振荡的空间尺度；只有包络变化远慢于相位变化且远离真实节点、动量转折点，量子势的量级估计才一致。
+ 在本题模型中，振幅包络和快速变化相位有不同空间尺度；波长远短于包络尺度时，量子势才可相对经典动能忽略。
+
+
 \SolutionFigure{tr20}{训练题20的分析与计算过程}
 \Step{方程与推导}
 量子势量级为 $\hbar^2/(2ml_A^2)$，动能量级为 $p^2/(2m)$。其比为 $(\hbar/(pl_A))^2$，因此需 $pl_A\gg\hbar$。仅说“宏观”不足以代替这一尺度比较；节点处 $A\to0$ 或转折处 $p\to0$ 时该估计失效，需更精细近似。
 
 \Step{尺度比较的物理内容} 量子势为 $Q_{\rm quantum}=-\hbar^2\nabla^2A/(2mA)$。若 $|\nabla^2A/A|\sim l_A^{-2}$，与 $T=p^2/(2m)$ 的比值为 $(\hbar/pl_A)^2$。因此包络尺度须远大于约化德布罗意波长 $\hbar/p$。当节点附近 $A$ 很小或转折点 $p$ 很小时，两个尺度估计失去一致性，不能继续用该条件宣称经典近似成立。
+
+
 \end{document}

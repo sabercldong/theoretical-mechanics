@@ -1,6 +1,3 @@
-\begin{tikzpicture}
-\node[inner sep=0,anchor=center] at(-3.5,0){\adjustbox{max width=6.2cm,max height=4.8cm}{\input{题图/ex19.tex}}};
-\node[anchor=center,align=center,inner sep=0] (eq1) at(3.7,1){\adjustbox{max width=6.4cm}{$\displaystyle \tfrac7{10}m\rho^2\dot\theta^2=mg\rho(1-\cos\theta)$}};
-\draw[force](3.7,.45)--(3.7,-.45);
-\node[anchor=center,align=center,inner sep=0] (eq2) at(3.7,-1){\adjustbox{max width=6.4cm}{$\displaystyle N=\tfrac{mg}{7}(17\cos\theta-10)$}};
+\begin{tikzpicture}[>=Stealth,line width=.65pt,every node/.style={font=\small,inner sep=2pt}]
+\draw[guide](0,0)circle(2.3);\coordinate(P)at(1.5,2.143);\draw(P)circle(.32);\draw[force](P)--++(.57,.81)node[above]{$N$};\draw[force](P)--++(-.81,.57)node[left]{$f_s$};\draw[force](P)--++(0,-1.2)node[below]{$mg$};\draw[guide](0,0)--(P);\node at(.3,-3.8){接触要求 $N\ge0$，纯滚动还要求 $|f_s|\le\mu_sN$};
 \end{tikzpicture}

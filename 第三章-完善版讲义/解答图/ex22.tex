@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\foreach \row in {0,...,4}{\pgfmathtruncatemacro{\last}{4-\row}\foreach \j in {0,...,\last}{\draw({.38*(2*\j+\row)},{.38+.65818*\row})circle(.38);}}\draw(-.5,0)--(3.6,0);\draw[->,thick](-.85,.38)--(-.38,.38)node[midway,above]{$F$};\draw[->,thick](3.9,.38)--(3.42,.38)node[midway,above]{$F$};\node at(1.5,-.65){第（3）问：底层侧推截面};
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect f_{ij}=N_{ij}\vect n_{ij}+\tau_{ij}\vect t_{ij}$\\[6pt]$\Downarrow$\\[6pt]$\sum\vect F_i=0,\quad\sum\vect M_i=0$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\foreach\x/\y in {-1/0,1/0,0/1.732}\draw[thick](\x,\y)circle(1);\node at(0,1.732){$i$};\draw[guide,->](0,1.732)--(3.2,1.732);\begin{scope}[xshift=4.5cm,yshift=1.732cm]\draw[thick](0,0)circle(.7);\draw[force](0,0)--(.7,1.212)node[right]{$N_{iL}$};\draw[force](0,0)--(-.7,1.212)node[left]{$N_{iR}$};\draw[force](0,0)--(0,-1.4)node[right]{$mg$};\draw[force](-.4,-.45)--(-1.1,-.05)node[left]{$\tau_{iL}$};\end{scope}\node at(2,-1.8){接触法向经过圆心；切向力还须参加圆心矩平衡};
 \end{tikzpicture}

@@ -1,6 +1,3 @@
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,every node/.style={font=\small,inner sep=1.5pt,text=black},line width=.65pt]
-\fill(0,0)circle(2pt)node[below]{$A$};\fill(2.3,1)circle(2pt)node[right]{$B$};\draw[very thick](0,0)--(2.3,1)node[midway,below]{$l$};\draw[->](2.3,1)--(1.8,2.15)node[above]{$\vect v_B-\vect v_A$};\draw[dashed](0,0)circle(2.51);
-
-\coordinate(AnalysisTop)at($(current bounding box.north east)+(.85,0)$);
-\node[anchor=north west,align=left,font=\small] at(AnalysisTop){\textbf{约束与计算}\\[6pt]$\vect r\cdot\vect r=l^2$\\[6pt]$\Downarrow$\\[6pt]$\vect r\cdot(\vect v_B-\vect v_A)=0$};
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small,inner sep=2pt},line width=.65pt]
+\draw[very thick](0,0)--(3,0);\fill(0,0)circle(2pt)node[below=1.5pt]{$A$};\fill(3,0)circle(2pt)node[below=1.5pt]{$B$};\draw[force](3,0)--(3,1.8)node[right]{$\vect v_B-\vect v_A$};\draw(2.75,0)--(2.75,.25)--(3,.25);\draw[<->](0,-.6)--(3,-.6)node[midway,below]{$l$};\node at(1.6,2.4){相对速度可非零，但沿连线的分量必须为零};
 \end{tikzpicture}

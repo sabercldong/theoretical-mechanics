@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\draw[pattern=north east lines](-.3,1.8)rectangle(-.1,3.2);\draw[ink](0,2.5)--(.4,2.5);
+\draw[thick,ink]plot coordinates{(.4,2.5)(.55,2.7)(.7,2.3)(.85,2.7)(1,2.3)(1.15,2.7)(1.3,2.3)(1.45,2.5)(1.8,2.5)};
+\draw[fill=soft](1.8,2.1)rectangle(2.6,2.9);\node at(2.2,2.5){$M$};\draw[muted](0,2)--(4,2);
+\draw[guide](2.2,2.1)--(2.2,-.4);\draw[thick,ink](2.2,2.1)--(3.2,.3)node[midway,right]{$l$};\fill[ink](3.2,.3)circle(3pt)node[right=5pt]{$m$};
+\draw[->](2.2,1.4)arc(-90:-60.95:.7);\node at(2.45,1.2){$\theta$};\draw[force](3.2,.3)--(3.2,-.7)node[right]{$mg$};\draw[force](3.2,.3)--(2.75,1.11)node[midway,right=3pt]{$T$};
+\node at(1,3.1){$k$};\draw[->](2.8,2.6)--(4.3,2.6)node[right]{$X$};
+\end{tikzpicture}
